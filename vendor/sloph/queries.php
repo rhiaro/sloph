@@ -66,6 +66,14 @@ LIMIT 100
   return $q;
 }
 
+function query_construct_all($limit){
+  $q = "CONSTRUCT { ?s ?p ?o . }
+WHERE { ?s ?p ?o . }
+LIMIT $limit
+";
+  return $q;
+}
+
 function query_select_s($limit){
   $q = "SELECT DISTINCT ?s WHERE {
   ?s ?p ?o .
@@ -74,6 +82,73 @@ LIMIT $limit
 ";
   return $q;
 }
+
+function query_select_all($limit){
+  $q = "SELECT * WHERE {
+  ?s ?p ?o .
+}
+LIMIT $limit
+";
+  return $q;
+}
+
+function query_select_s_where($vals, $limit=10, $sort=null){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s WHERE { \n";
+  foreach($vals as $predicate => $val){
+    $q .= "?s $predicate $val .\n";
+  }
+  $q .= "} ";
+  if(isset($sort)){
+    $q .= "\nORDER BY DESC(?$sort)";
+  }
+  if($limit > 0){
+    $q .= "\nLIMIT $limit";
+  }
+  return $q;
+}
+
+/* The count is unpredictable.. messed up when ?o is an array...
+function query_select_vars($vars, $vals, $limit=10, $sort=null){
+  $q = get_prefixes();
+  $q .= "SELECT ?s ?".implode($vars, ' ?')." WHERE { \n";
+  foreach($vars as $predicate => $var){
+    $q .= "?s $predicate ?$var .\n";
+  }
+  foreach($vals as $predicate => $val){
+    $q .= "?s $predicate $val .\n";
+  }
+  $q .= "} ";
+  if(isset($sort)){
+    $q .= "\nORDER BY DESC(?$sort)";
+  }
+  if($limit > 0){
+    $q .= "\nLIMIT $limit";
+  }
+  return $q;
+}
+
+function query_construct_vars($vars, $vals, $limit=10, $sort=null){
+  $limit = $limit * count($vars);
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { ?s ?p ?o . } WHERE { \n
+    ?s ?p ?o . \n";
+  foreach($vars as $predicate => $var){
+    $q .= "?s $predicate ?$var .\n";
+  }
+  foreach($vals as $predicate => $val){
+    $q .= "?s $predicate $val .\n";
+  }
+  $q .= "} ";
+  if(isset($sort)){
+    $q .= "\nORDER BY DESC(?$sort)";
+  }
+  if($limit > 0){
+    $q .= "\nLIMIT $limit";
+  }
+  return $q;
+}
+*/
 
 function query_select_hasPrimaryTopic($uri){
   $q = get_prefixes();
