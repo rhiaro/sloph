@@ -15,11 +15,11 @@ function feed_consume($ep){
   return $posts;
 }
 
-function feed_acquire($ep, $tag=null){
+function feed_acquire($ep, $filters=array()){
 
   $vals = array("rdf:type" => "blog:Acquisition", "as:published" => "?date");
-  if($tag){
-    $vals["as:tag"] = "\"".$tag."\"";
+  foreach($filters as $pred => $val){
+    $vals[$pred] = $val;
   }
   // TODO date
   
@@ -48,6 +48,7 @@ function feed_arrive($ep){
 
 if(isset($_GET['feed'])){
   $feed = $_GET['feed'];
+  $filters = array();
   switch($feed){
     case "consume":
       $posts = feed_consume($ep);
@@ -55,10 +56,12 @@ if(isset($_GET['feed'])){
 
     case "stuff":
       if(isset($_GET['tag'])){
-        $posts = feed_acquire($ep, $_GET['tag']);
-      }else{
-        $posts = feed_acquire($ep);
+        $filters['as:tag'] = "\"".urldecode($_GET['tag'])."\"";
       }
+      if(isset($_GET['cost'])){
+        $filters['blog:cost'] = "\"".urldecode($_GET['cost'])."\"";
+      }
+      $posts = feed_acquire($ep, $filters);
       break;
 
     case "checkin":
@@ -109,10 +112,15 @@ if(isset($_GET['feed'])){
            1px 1px 0 #000;
         font-family: Arial, sans-serif;
       }
+      .cost a, .cost a:visited {
+        color: inherit; text-decoration: inherit;
+      }
       .desc {
         background-color: #c1dec0;
         opacity: 0.8;
         padding: 0.2em;
+        text-decoration: inherit;
+        color: black;
       }
       li p, li span {
         display: none;
@@ -135,8 +143,8 @@ if(isset($_GET['feed'])){
         <li<?=isset($post[$_PREF['as']."image"]) ? " style=\"background-image: url('".$post[$_PREF['as']."image"][0]['value']."');\"" : ""?>>
           <article>
             <p class="date"><?=$date->format('D jS M H:i')?></p>
-            <p><span class="desc"><?=$post[$_PREF['as']."summary"][0]['value']?></span></p>
-            <p class="cost"><?=$post[$_PREF['blog']."cost"][0]['value']?></p>
+            <p><a href="<?=$uri?>" class="desc"><?=$post[$_PREF['as']."summary"][0]['value']?></a></p>
+            <p class="cost"><a href="?feed=stuff&cost=<?=urlencode($post[$_PREF['blog']."cost"][0]['value'])?>"><?=$post[$_PREF['blog']."cost"][0]['value']?></a></p>
             <p>
               <?foreach($post[$_PREF['as']."tag"] as $tag):?>
                 <span class="tag"><a href="?feed=stuff&tag=<?=urlencode($tag['value'])?>"><?=$tag['value']?></a></span>
