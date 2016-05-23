@@ -1,7 +1,6 @@
 <?
 session_start();
-include_once("lib/ARC2/ARC2.php");
-include_once("lib/storesetup.php");
+include_once("vendor/init.php");
 
 /* request handling */
 $ep->go();
