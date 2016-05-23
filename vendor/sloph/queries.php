@@ -100,7 +100,7 @@ function query_select_s_where($vals, $limit=10, $sort=null){
   }
   $q .= "} ";
   if(isset($sort)){
-    $q .= "\nORDER BY DESC(?$sort)";
+    $q .= "\nORDER BY ASC(?$sort)";
   }
   if($limit > 0){
     $q .= "\nLIMIT $limit";
