@@ -143,7 +143,7 @@ if(isset($_GET['feed'])){
         <li<?=isset($post[$_PREF['as']."image"]) ? " style=\"background-image: url('".$post[$_PREF['as']."image"][0]['value']."');\"" : ""?>>
           <article>
             <p class="date"><?=$date->format('D jS M H:i')?></p>
-            <p><a href="<?=$uri?>" class="desc"><?=$post[$_PREF['as']."summary"][0]['value']?></a></p>
+            <p><a href="resource.php?resource=<?=$uri?>" class="desc"><?=$post[$_PREF['as']."summary"][0]['value']?></a></p>
             <p class="cost"><a href="?feed=stuff&cost=<?=urlencode($post[$_PREF['blog']."cost"][0]['value'])?>"><?=$post[$_PREF['blog']."cost"][0]['value']?></a></p>
             <p>
               <?foreach($post[$_PREF['as']."tag"] as $tag):?>
