@@ -32,17 +32,31 @@ if(isset($_GET['resource'])){
   }else{
     $post = $r[$resource];
   }
+
+  if(isset($_GET['ct'])){
+    $ct = $_GET['ct'];
+  }else{
+    $ct = "text/html";
+  }
+  
+  // Conneg
+  $graph = new EasyRdf_Graph($resource);
+  try{
+    $format = EasyRdf_Format::getFormat($ct);
+    if($format->getSerialiserClass()){
+      $graph->parse($r, 'php', $resource);
+      $out = $graph->serialise($ct);
+      header('Content-Type: '.$format->getDefaultMimeType());
+      echo $out;
+      exit;
+    }
+  }catch(Exception $e){
+    //
+  }
+
 }else{
   $message["Beyond the final frontier"] = "You shouldn't be here.";
 }
-
-if(isset($_GET['ct'])){
-  $ct = $_GET['ct'];
-}else{
-  $ct = "text/html";
-}
-
-// TODO: conneg
 
 ?>
 <!doctype html>
