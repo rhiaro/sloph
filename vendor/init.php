@@ -1,4 +1,5 @@
 <?
+require_once("easyrdf/easyrdf/lib/EasyRdf.php");
 include_once("ARC2/ARC2.php");
 include_once("dbsettings.php");
 
@@ -47,6 +48,9 @@ $_PREF = array(
 $_NS = array_flip($_PREF);
 // TODO: sioc is wrong
 // TODO: deal with dublin core
+foreach($_PREF as $prefix => $uri){
+  EasyRdf_Namespace::set($prefix, $uri);
+}
 
 include_once("sloph/queries.php");
 
