@@ -51,7 +51,7 @@ if(isset($_GET['resource'])){
       exit;
     }
   }catch(Exception $e){
-    if($ct == "activity"){
+    if($ct == "activity" || $ct == "activity+json" || $ct == "as2" || $ct == "as"){
       header('Content-Type: application/activity+json');
       echo graph_to_as2($graph);
       exit;
