@@ -38,20 +38,24 @@ if(isset($_GET['resource'])){
   }else{
     $ct = "text/html";
   }
-  
+
   // Conneg
   $graph = new EasyRdf_Graph($resource);
+  $graph->parse($r, 'php', $resource);
   try{
     $format = EasyRdf_Format::getFormat($ct);
     if($format->getSerialiserClass()){
-      $graph->parse($r, 'php', $resource);
       $out = $graph->serialise($ct);
       header('Content-Type: '.$format->getDefaultMimeType());
       echo $out;
       exit;
     }
   }catch(Exception $e){
-    //
+    if($ct == "activity"){
+      header('Content-Type: application/activity+json');
+      echo graph_to_as2($graph);
+      exit;
+    }
   }
 
 }else{
