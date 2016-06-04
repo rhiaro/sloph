@@ -2,7 +2,7 @@
 session_start();
 require_once('vendor/init.php');
 
-$q = query_select_s(100);
+$q = query_select_s_desc(100);
 $r = execute_query($ep, $q);
 if($r){
   $posts = construct_uris($ep, select_to_list($r, array("uri")));
@@ -18,7 +18,7 @@ if($r){
     <h1>Sloph</h1>
     <?foreach($posts as $uri => $post):?>
       <article>
-        <h2><?=$uri?></h2>
+        <h2><a href="resource.php?resource=<?=$uri?>"><?=$uri?></a></h2>
         <?foreach($post as $k => $vs):?>
           <p><strong><?=$k?>: </strong>
            <?foreach($vs as $v):?>

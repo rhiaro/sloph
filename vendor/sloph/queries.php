@@ -83,6 +83,19 @@ LIMIT $limit
   return $q;
 }
 
+function query_select_s_desc($limit){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s WHERE {
+  ?s ?p ?o .
+  OPTIONAL { ?s as:published ?d . }
+  OPTIONAL { ?s dc:created ?d . }
+}
+ORDER BY DESC(?d)
+LIMIT $limit
+";
+  return $q;
+}
+
 function query_select_all($limit){
   $q = "SELECT * WHERE {
   ?s ?p ?o .
