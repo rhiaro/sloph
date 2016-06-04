@@ -74,7 +74,23 @@ function graph_to_as2($graph){
   $cmp = \ML\JsonLD\JsonLD::compact($out, "https://www.w3.org/ns/activitystreams");
   $str = \ML\JsonLD\JsonLD::toString($cmp, true);
 
-  // TODO: flatten @value
+  // Cleanup..
+  $ar = json_decode($str, true);
+  foreach($ar as $pred => $obj){
+    // Flatten @value
+    if(is_array($obj)){
+      if(isset($obj["@value"])){
+        $ar[$pred] = $obj["@value"];
+      }
+    }
+    // Kill errant as prefixes
+    if(stripos($pred, "as:") !== false){
+      $newpred = str_replace("as:", "", $pred);
+      $ar[$newpred] = $ar[$pred];
+      unset($ar[$pred]);
+    }
+  }
+  $str = json_encode($ar, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
   return $str;
 }
