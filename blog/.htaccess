@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase blog
+RewriteCond %{HTTP_HOST}  ^blog\.rhiaro\.co\.uk
+RewriteRule .*   http://blog.rhiaro.co.uk/resource.php?resource=http://%{HTTP_HOST}%{REQUEST_URI} [L]
