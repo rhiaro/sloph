@@ -10,7 +10,7 @@ foreach($files as $file){
     $graph = new EasyRdf_Graph();
     $graph->parse($ttl, 'ttl');
     //var_dump($graph);
-    $posts[] = $graph->serialise('php');
+    $posts = array_merge($posts, $graph->serialise('php'));
   }catch(Exception $e){
     echo $file;
   }
