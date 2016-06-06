@@ -1,0 +1,627 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/574e1c4d6f40d> dcterms:created "2016-05-31T19:20:38-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-05-31T19:20:38-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574e1c4d6f40d> .
+
+
+
+<http://blog.rhiaro.co.uk/574e1e0d02539> dcterms:created "2016-05-31T19:28:06-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/exercise> ;
+    as:published "2016-05-31T19:28:06-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574e1e0d02539> .
+
+
+
+<http://blog.rhiaro.co.uk/574e32785d298> dcterms:created "2016-05-31T20:55:16-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/other> ;
+    as:published "2016-05-31T20:55:16-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574e32785d298> .
+
+
+
+<http://blog.rhiaro.co.uk/574e54d62b229> dcterms:created "2016-05-31T23:21:53-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-05-31T23:21:53-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574e54d62b229> .
+
+
+
+<http://blog.rhiaro.co.uk/574e59d78458d> dcterms:created "2016-05-31T23:34:08-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/home> ;
+    as:published "2016-05-31T23:34:08-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574e59d78458d> .
+
+
+
+<http://blog.rhiaro.co.uk/574e5e1f767e3> a blog:Acquisition ;
+    dcterms:created "2016-06-01T00:00:58-04:00"^^<xsd:dateTime> ;
+    blog:cost "$7.12" ;
+    as:published "2016-06-01T00:00:58-04:00" ;
+    as:summary "Smoothie (Trident)" ;
+    as:tag "food",
+        "restaurant",
+        "trident" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574e5e1f767e3> .
+
+
+
+<http://blog.rhiaro.co.uk/miso-soup-with> a blog:Consumption ;
+    dcterms:created "2016-06-01T00:01:51-04:00"^^<xsd:dateTime> ;
+    as:name "Miso soup with tofu and seaweed. Homemade fries with daiya and chili sauce" ;
+    as:published "2016-06-01T00:01:51-04:00" ;
+    as:tag "potato",
+        "soup" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/miso-soup-with> .
+
+
+
+<http://blog.rhiaro.co.uk/fresh-squeezed> a blog:Consumption ;
+    dcterms:created "2016-06-01T08:30:17-04:00"^^<xsd:dateTime> ;
+    as:name "Fresh squeezed orange juice by Liz" ;
+    as:published "2016-06-01T08:30:17-04:00" ;
+    as:tag "juice" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/fresh-squeezed> .
+
+
+
+<http://blog.rhiaro.co.uk/574edbd016444> dcterms:created "2016-06-01T08:57:49-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-01T08:57:49-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574edbd016444> .
+
+
+
+<http://blog.rhiaro.co.uk/574ee14b2051f> dcterms:created "2016-06-01T09:21:10-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/office> ;
+    as:published "2016-06-01T09:21:10-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574ee14b2051f> .
+
+
+
+<http://blog.rhiaro.co.uk/574f06c080100> dcterms:created "2016-06-01T12:00:51-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-01T12:00:51-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574f06c080100> .
+
+
+
+<http://blog.rhiaro.co.uk/574f1de482431> dcterms:created "2016-06-01T13:39:41-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/office> ;
+    as:published "2016-06-01T13:39:41-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574f1de482431> .
+
+
+
+<http://blog.rhiaro.co.uk/574f4b9507743> dcterms:created "2016-06-01T21:54:45+01:00"^^xsd:dateTime ;
+    as:published "2016-06-01T21:54:45+01:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574f4b9507743> .
+
+
+
+<http://blog.rhiaro.co.uk/574f5aef05d00> dct:created "2016-06-01T23:00:15+01:00"^^<xsd:dateTime> ;
+    blog:like_of <https://tommorris.org/posts/9433> ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574f5aef05d00> .
+
+
+
+<http://blog.rhiaro.co.uk/574f6a7785038> dcterms:created "2016-06-01T18:30:23-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-01T18:30:23-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574f6a7785038> .
+
+
+
+<http://blog.rhiaro.co.uk/574f69f5e0184> dcterms:created "2016-06-01T19:04:19-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/home> ;
+    as:published "2016-06-01T19:04:19-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/574f69f5e0184> .
+
+
+
+<http://blog.rhiaro.co.uk/1-slice-leftover> a blog:Consumption ;
+    dcterms:created "2016-06-01T19:10:04-04:00"^^<xsd:dateTime> ;
+    as:name "1 slice leftover pizza" ;
+    as:published "2016-06-01T19:10:04-04:00" ;
+    as:tag "leftovers",
+        "pizza" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/1-slice-leftover> .
+
+
+
+<http://blog.rhiaro.co.uk/wholewheat> a blog:Consumption ;
+    dcterms:created "2016-06-01T22:49:06-04:00"^^<xsd:dateTime> ;
+    as:name "Wholewheat spaghetti, tomato, courgette, mushrooms, celery, various peppers, seitan" ;
+    as:published "2016-06-01T22:49:06-04:00" ;
+    as:tag "spaghetti",
+        "vegetables" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/wholewheat> .
+
+
+
+<http://blog.rhiaro.co.uk/corn-tortillas-fried> a blog:Consumption ;
+    dcterms:created "2016-06-02T09:24:51-04:00"^^<xsd:dateTime> ;
+    as:name "Corn tortillas, fried in coconut oil, tofu, mushrooms, spinach, coffee" ;
+    as:published "2016-06-02T09:24:51-04:00" ;
+    as:tag "coffee",
+        "tofu" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/corn-tortillas> .
+
+<http://blog.rhiaro.co.uk/5750551e14573> dcterms:created "2016-06-02T11:47:37-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/office> ;
+    as:published "2016-06-02T11:47:37-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/5750551e14573> .
+
+
+
+<http://blog.rhiaro.co.uk/57505bee6d4c2> dcterms:created "2016-06-02T12:16:41-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-02T12:16:41-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57505bee6d4c2> .
+
+
+
+<http://blog.rhiaro.co.uk/5750720f3dcfa> a blog:Acquisition ;
+    dcterms:created "2016-06-02T12:30:27-04:00"^^<xsd:dateTime> ;
+    blog:cost "$4.12" ;
+    as:published "2016-06-02T12:30:27-04:00" ;
+    as:summary "Rhubarb juice (Clover)" ;
+    as:tag "clover",
+        "food",
+        "restaurant" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/5750720f3dcfa> .
+
+
+
+<http://blog.rhiaro.co.uk/rhubarb-juice> a blog:Consumption ;
+    dcterms:created "2016-06-02T12:30:37-04:00"^^<xsd:dateTime> ;
+    as:name "Rhubarb juice (Clover)" ;
+    as:published "2016-06-02T12:30:37-04:00" ;
+    as:tag "clover",
+        "juice" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/rhubarb-juice> .
+
+
+
+<http://blog.rhiaro.co.uk/575084eb1502c> dcterms:created "2016-06-02T13:11:17-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/office> ;
+    as:published "2016-06-02T13:11:17-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/575084eb1502c> .
+
+
+
+<http://blog.rhiaro.co.uk/575084f8f1ea8> dcterms:created "2016-06-02T15:11:40-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-02T15:11:40-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/575084f8f1ea8> .
+
+
+
+<http://blog.rhiaro.co.uk/coffee-tomato> a blog:Consumption ;
+    dcterms:created "2016-06-02T21:01:27-07:00"^^<xsd:dateTime> ;
+    as:name "Coffee, tomato juice, blue potato chips, leftover pasta and veg" ;
+    as:published "2016-06-02T21:01:27-07:00" ;
+    as:tag "flight",
+        "food",
+        "free",
+        "jetblue",
+        "leftovers",
+        "snacks" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/coffee-tomato> .
+
+
+
+<http://blog.rhiaro.co.uk/57531f60e78c0> dcterms:created "2016-06-02T23:34:43-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/other> ;
+    as:published "2016-06-02T23:34:43-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57531f60e78c0> .
+
+
+
+<http://blog.rhiaro.co.uk/5751296b95eeb> dcterms:created "2016-06-03T02:53:13-04:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/other> ;
+    as:published "2016-06-03T02:53:13-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/5751296b95eeb> .
+
+
+
+<http://blog.rhiaro.co.uk/banana-6> a blog:Consumption ;
+    dcterms:created "2016-06-03T00:02:08-07:00"^^<xsd:dateTime> ;
+    as:name "Banana" ;
+    as:published "2016-06-03T00:02:08-07:00" ;
+    as:tag "fruit" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/banana> .
+
+
+
+<http://blog.rhiaro.co.uk/updated-working> dct:created "2016-06-03T08:34:57+01:00"^^<xsd:dateTime> ;
+    sioc:content "Updated working draft of Social Web Protocols published ahead of the Social Web WG face-to-face next week: https://www.w3.org/TR/social-web-protocols/ This describes and explains the various specs the WG is working on. Far from done, but we're making progress.." ;
+    sioc:topic "activitypub",
+        "decentralised",
+        "micropub",
+        "phd",
+        "protocols",
+        "social",
+        "socialwg",
+        "solid",
+        "swwg",
+        "web",
+        "webmention" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/updated-working> .
+
+
+
+<http://blog.rhiaro.co.uk/tacos-black-beans-lettuce> a blog:Consumption ;
+    dcterms:created "2016-06-03T07:45:06-07:00"^^<xsd:dateTime> ;
+    as:name "Tacos: black beans, lettuce, habanero, daiya" ;
+    as:published "2016-06-03T07:45:06-07:00" ;
+    as:tag "aaronpk",
+        "anomalily",
+        "tacos" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/tacos-black-beans> .
+
+
+
+<http://blog.rhiaro.co.uk/5751ebb4caf05> a blog:Acquisition ;
+    dcterms:created "2016-06-03T12:27:06-07:00"^^<xsd:dateTime> ;
+    blog:cost "$2.50" ;
+    as:published "2016-06-03T12:27:06-07:00" ;
+    as:summary "Number 20" ;
+    as:tag "bus",
+        "portland",
+        "transport",
+        "travel" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/5751ebb4caf05> .
+
+
+
+<http://blog.rhiaro.co.uk/5751ebe15ad59> a blog:Acquisition ;
+    dcterms:created "2016-06-03T12:56:35-07:00"^^<xsd:dateTime> ;
+    blog:cost "$14" ;
+    as:published "2016-06-03T12:56:35-07:00" ;
+    as:summary "Wrap, smoothie (Kure)" ;
+    as:tag "food",
+        "kure",
+        "takeaway" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/5751ebe15ad59> .
+
+
+
+<http://blog.rhiaro.co.uk/57531f86e8c85> dcterms:created "2016-06-03T13:00:00-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/event> ;
+    as:published "2016-06-03T13:00:00-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57531f86e8c85> .
+
+
+
+<http://blog.rhiaro.co.uk/5751ec5568977> dcterms:created "2016-06-03T13:00:01-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/event> ;
+    as:published "2016-06-03T13:00:01-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/5751ec5568977> .
+
+
+
+<http://blog.rhiaro.co.uk/smoothie-with> a blog:Consumption ;
+    dcterms:created "2016-06-03T13:40:54-07:00"^^<xsd:dateTime> ;
+    as:name "Smoothie with green things, dates, matcha, spinach, vanilla (Kure)" ;
+    as:published "2016-06-03T13:40:54-07:00" ;
+    as:tag "kure",
+        "smoothie" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/smoothie-with> .
+
+
+
+<http://blog.rhiaro.co.uk/collard-wrap-with> a blog:Consumption ;
+    dcterms:created "2016-06-03T15:12:15-07:00"^^<xsd:dateTime> ;
+    as:name "Collard wrap with pumpkin seed, carrot, peppers, onion (Kure)" ;
+    as:published "2016-06-03T15:12:15-07:00" ;
+    as:tag "kure",
+        "vegetables" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/collard-wrap-with> .
+
+
+
+<http://blog.rhiaro.co.uk/575221bfee366> dcterms:created "2016-06-03T17:32:50-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-03T17:32:50-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/575221bfee366> .
+
+
+
+<http://blog.rhiaro.co.uk/575229bad9a2a> dcterms:created "2016-06-03T18:07:01-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/food> ;
+    as:published "2016-06-03T18:07:01-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/575229bad9a2a> .
+
+
+
+<http://blog.rhiaro.co.uk/57531fc208a31> dcterms:created "2016-06-03T18:12:00-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-03T18:12:00-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57531fc208a31> .
+
+
+
+<http://blog.rhiaro.co.uk/vegan-chili> a blog:Consumption ;
+    dcterms:created "2016-06-03T18:14:31-07:00"^^<xsd:dateTime> ;
+    as:name "Vegan chili cheese dog (Ground Kontrol)" ;
+    as:published "2016-06-03T18:14:31-07:00" ;
+    as:tag "ground kontrol",
+        "hotdog" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/vegan-chili> .
+
+
+
+<http://blog.rhiaro.co.uk/57531fd858e5b> dcterms:created "2016-06-03T18:23:00-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/food> ;
+    as:published "2016-06-03T18:23:00-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57531fd858e5b> .
+
+
+
+<http://blog.rhiaro.co.uk/57532061bdd05> dcterms:created "2016-06-03T18:54:34-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-03T18:54:34-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57532061bdd05> .
+
+
+
+<http://blog.rhiaro.co.uk/57523cabe3c12> dcterms:created "2016-06-03T18:56:34-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-03T18:56:34-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57523cabe3c12> .
+
+
+
+<http://blog.rhiaro.co.uk/57523c93126df> dcterms:created "2016-06-03T19:27:27-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/other> ;
+    as:published "2016-06-03T19:27:27-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57523c93126df> .
+
+
+
+<http://blog.rhiaro.co.uk/575248794ce01> a blog:Acquisition ;
+    dcterms:created "2016-06-03T19:30:05-07:00"^^<xsd:dateTime> ;
+    blog:cost "$1" ;
+    as:published "2016-06-03T19:30:05-07:00" ;
+    as:summary "Ice cream (Salt & Straw)" ;
+    as:tag "& straw",
+        "food",
+        "salt",
+        "takeaway" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/575248794ce01> .
+
+
+
+<http://blog.rhiaro.co.uk/57523ef8e9932> dcterms:created "2016-06-03T19:37:42-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-03T19:37:42-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57523ef8e9932> .
+
+
+
+<http://blog.rhiaro.co.uk/57531ff8ecf86> dcterms:created "2016-06-03T19:45:23-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/food> ;
+    as:published "2016-06-03T19:45:23-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57531ff8ecf86> .
+
+
+
+<http://blog.rhiaro.co.uk/5752480aaf650> dcterms:created "2016-06-03T20:16:18-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/other> ;
+    as:published "2016-06-03T20:16:18-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/5752480aaf650> .
+
+
+
+<http://blog.rhiaro.co.uk/strawberry> a blog:Consumption ;
+    dcterms:created "2016-06-03T20:16:41-07:00"^^<xsd:dateTime> ;
+    as:name "Strawberry coconut ice cream (Salt & Straw)" ;
+    as:published "2016-06-03T20:16:41-07:00" ;
+    as:tag "ice cream",
+        "salt & straw" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/strawberry> .
+
+
+
+<http://blog.rhiaro.co.uk/575320189f236> dcterms:created "2016-06-03T22:34:56-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-03T22:34:56-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/575320189f236> .
+
+
+
+<http://blog.rhiaro.co.uk/57532023c1bb4> dcterms:created "2016-06-03T22:56:56-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/other> ;
+    as:published "2016-06-03T22:56:56-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57532023c1bb4> .
+
+
+
+<http://blog.rhiaro.co.uk/57512b5d8e940> a blog:Acquisition ;
+    dcterms:created "2016-06-03T23:20:26-07:00"^^<xsd:dateTime> ;
+    blog:cost "$1 (+$2 found at BOS)" ;
+    as:published "2016-06-03T23:20:26-07:00" ;
+    as:summary "Number 75" ;
+    as:tag "bus",
+        "portland",
+        "travel" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57512b5d8e940> .
+
+
+
+<http://blog.rhiaro.co.uk/5752f3e994ad2> dcterms:created "2016-06-04T08:29:33-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-04T08:29:33-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/5752f3e994ad2> .
+
+
+
+<http://blog.rhiaro.co.uk/5752f74b0d33e> dcterms:created "2016-06-04T08:44:06-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/event> ;
+    as:published "2016-06-04T08:44:06-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/5752f74b0d33e> .
+
+
+
+<http://blog.rhiaro.co.uk/575321436f189> dcterms:created "2016-06-04T08:45:32-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/event> ;
+    as:published "2016-06-04T08:45:32-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/575321436f189> .
+
+
+
+<http://blog.rhiaro.co.uk/muffin-with> a blog:Consumption ;
+    dcterms:created "2016-06-04T09:11:10-07:00"^^<xsd:dateTime> ;
+    as:name "Muffin with hummus, peppery bagel, coffee" ;
+    as:published "2016-06-04T09:11:10-07:00" ;
+    as:tag "bread",
+        "coffee",
+        "iwc2016" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/muffin-with> .
+
+
+
+<http://blog.rhiaro.co.uk/57533d2214e12> a blog:Acquisition ;
+    dcterms:created "2016-06-04T12:40:52-07:00"^^<xsd:dateTime> ;
+    blog:cost "$5" ;
+    as:published "2016-06-04T12:40:52-07:00" ;
+    as:summary "Half tofu sandwich and fries (Boke Dokie)" ;
+    as:tag "bokie dokie",
+        "food",
+        "food truck",
+        "iwc2016",
+        "takeaway",
+        "veganstraightedge" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57533d2214e12> .
+
+
+
+<http://blog.rhiaro.co.uk/57533d47ee8e6> a blog:Acquisition ;
+    dcterms:created "2016-06-04T12:42:16-07:00"^^<xsd:dateTime> ;
+    blog:cost "$3.50" ;
+    as:published "2016-06-04T12:42:16-07:00" ;
+    as:summary "Bubble tea (food truck)" ;
+    as:tag "food",
+        "food truck",
+        "iwc2016",
+        "takeaway",
+        "veganstraightedge" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57533d47ee8e6> .
+
+
+
+<http://blog.rhiaro.co.uk/tofu-sandwich> a blog:Consumption ;
+    dcterms:created "2016-06-04T13:00:00-07:00"^^<xsd:dateTime> ;
+    as:name "Tofu sandwich, fries, taro coconut bubble tea" ;
+    as:published "2016-06-04T13:00:00-07:00" ;
+    as:tag "bread",
+        "bubble tea",
+        "fries",
+        "tofu" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/tofu-sandwich> .
+
+
+
+<http://blog.rhiaro.co.uk/57537176e293a> dcterms:created "2016-06-04T17:25:22-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-04T17:25:22-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57537176e293a> .
+
+
+
+<http://blog.rhiaro.co.uk/575383b5175dd> dcterms:created "2016-06-04T18:22:29-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/food> ;
+    as:published "2016-06-04T18:22:29-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/575383b5175dd> .
+
+
+
+<http://blog.rhiaro.co.uk/57538432b1a9f> a blog:Acquisition ;
+    dcterms:created "2016-06-04T18:28:36-07:00"^^<xsd:dateTime> ;
+    blog:cost "$12.50" ;
+    as:published "2016-06-04T18:28:36-07:00" ;
+    as:summary "Dinner (Veggie Grill)" ;
+    as:tag "food",
+        "iwc2016",
+        "restaurant",
+        "veggie grill" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57538432b1a9f> .
+
+
+
+<http://blog.rhiaro.co.uk/vegan-chicken> a blog:Consumption ;
+    dcterms:created "2016-06-04T18:43:04-07:00"^^<xsd:dateTime> ;
+    as:name "Vegan chicken, potatoes, kale, gravy (Veggie Grill)" ;
+    as:published "2016-06-04T18:43:04-07:00" ;
+    as:tag "iwc2016",
+        "potato",
+        "veggie grill" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/vegan-chicken> .
+
+
+
+<http://blog.rhiaro.co.uk/57531fe6a65ff> dcterms:created "2016-06-04T18:48:23-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-04T18:48:23-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57531fe6a65ff> .
+
+
+
+<http://blog.rhiaro.co.uk/575394bfe22f2> dcterms:created "2016-06-04T19:55:48-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-04T19:55:48-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/575394bfe22f2> .
+
+
+
+<http://blog.rhiaro.co.uk/5753a7cfa02eb> dcterms:created "2016-06-04T21:17:16-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/other> ;
+    as:published "2016-06-04T21:17:16-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/5753a7cfa02eb> .
+
+
+
+<http://blog.rhiaro.co.uk/57544712a0b01> dcterms:created "2016-06-05T08:36:47-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/transit> ;
+    as:published "2016-06-05T08:36:47-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57544712a0b01> .
+
+
+
+<http://blog.rhiaro.co.uk/57544ad3dd1d3> dcterms:created "2016-06-05T08:52:24-07:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/event> ;
+    as:published "2016-06-05T08:52:24-07:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57544ad3dd1d3> .
+
+
+
+<http://blog.rhiaro.co.uk/bagel-with-hummus> a blog:Consumption ;
+    dcterms:created "2016-06-05T09:07:46-07:00"^^<xsd:dateTime> ;
+    as:name "Bagel with hummus" ;
+    as:published "2016-06-05T09:07:46-07:00" ;
+    as:tag "bread",
+        "iwc2016" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/bagel-with-hummus> .
+
+
+
+<http://blog.rhiaro.co.uk/coffee-10> a blog:Consumption ;
+    dcterms:created "2016-06-05T09:08:14-07:00"^^<xsd:dateTime> ;
+    as:name "Coffee" ;
+    as:published "2016-06-05T09:08:14-07:00" ;
+    as:tag "coffee" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/coffee> .
+
