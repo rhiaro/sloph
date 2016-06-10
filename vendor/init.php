@@ -90,6 +90,7 @@ function graph_to_as2($graph){
       unset($ar[$pred]);
     }
   }
+  // TODO: Do something about @graph when multiple posts are returned
   $str = json_encode($ar, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
   return $str;
