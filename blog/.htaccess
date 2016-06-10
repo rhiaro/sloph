@@ -1,4 +1,16 @@
 RewriteEngine On
 RewriteBase blog
+
+RewriteCond %{HTTP_ACCEPT} ^.*application/json.* [OR]
+RewriteCond %{HTTP_ACCEPT} ^.*application/ld\+json.* [OR]
+RewriteCond %{HTTP_ACCEPT} ^.*application/activity\+json.*
+
+RewriteRule ^(.*?)/?$ resource.php?resource=http://%{HTTP_HOST}%{REQUEST_URI}&ct=as2 [QSA,L]
+
+RewriteCond %{HTTP_ACCEPT} ^.*text/turtle.* [OR]
+RewriteCond %{HTTP_ACCEPT} ^.*application/n3.*
+
+RewriteRule ^(.*?)/?$ resource.php?resource=http://%{HTTP_HOST}%{REQUEST_URI}&ct=ttl [QSA,L]
+
 RewriteCond %{HTTP_HOST}  ^blog\.rhiaro\.co\.uk
-RewriteRule .*   http://blog.rhiaro.co.uk/resource.php?resource=http://%{HTTP_HOST}%{REQUEST_URI} [L]
+RewriteRule ^(.*?)/?$ resource.php?resource=http://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
