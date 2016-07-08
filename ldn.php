@@ -17,8 +17,13 @@ function write($data, $date=null, $slug=null){
 
 function supported_content_type($ct){
   $supported = false;
-  $cts = array("application/ld+json", "application/activity+json");
-  if(in_array($ct, $cts)){
+  $sent = explode(",", $ct);
+  foreach($sent as $k => $s){
+    $sent[$k] = trim($s);
+  }
+  $cts = array("application/ld+json", "application/activity+json", "text/html");
+  $match = array_intersect($sent, $cts);
+  if(count($match) > 0){
     $supported = true;
   }
   return $supported;
@@ -57,7 +62,7 @@ if(isset($msg) && !empty($msg)){
         $notifs[] = array("@id" => "http://rhiaro.co.uk/inbox/".$file);
       }
     }
-    $inbox = array("@context" => "http://www.w3.org/ns/ldp", "@type" => "ldp:Inbox", "ldp:contains" => $notifs);
+    $inbox = array("@context" => "http://www.w3.org/ns/ldp#", "@type" => "ldp:Inbox", "ldp:contains" => $notifs);
     $inboxjson = json_encode($inbox, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     header("Content-Type: application/ld+json");
     echo $inboxjson;
