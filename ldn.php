@@ -62,7 +62,7 @@ if(isset($msg) && !empty($msg)){
         $notifs[] = array("@id" => "http://rhiaro.co.uk/inbox/".$file);
       }
     }
-    $inbox = array("@context" => "http://www.w3.org/ns/ldp#", "@type" => "ldp:Inbox", "ldp:contains" => $notifs);
+    $inbox = array("@context" => "http://www.w3.org/ns/ldp#", "@id" => "", "@type" => "ldp:Inbox", "ldp:contains" => $notifs);
     $inboxjson = json_encode($inbox, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     header("Content-Type: application/ld+json");
     echo $inboxjson;
