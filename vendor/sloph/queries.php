@@ -58,6 +58,11 @@ function get_prefixes(){
   return $q;
 }
 
+function query_load($file, $graph="http://blog.rhiaro.co.uk#"){
+  $q = "LOAD <$file> INTO <$graph>";
+  return $q;
+}
+
 function query_construct($uri){
   $q = "CONSTRUCT { <$uri> ?p ?o . }
 WHERE { <$uri> ?p ?o . }
@@ -74,12 +79,13 @@ LIMIT $limit
   return $q;
 }
 
-function query_select_s($limit){
+function query_select_s($limit=0){
   $q = "SELECT DISTINCT ?s WHERE {
   ?s ?p ?o .
-}
-LIMIT $limit
-";
+}";
+  if($limit > 0){
+    $q .= "LIMIT $limit";
+  }
   return $q;
 }
 
