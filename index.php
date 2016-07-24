@@ -2,25 +2,14 @@
 session_start();
 require_once('vendor/init.php');
 
-$files = scandir("data");
 $posts = array();
-foreach($files as $file){
-  try{
-    $ttl = file_get_contents("data/".$file);
-    $graph = new EasyRdf_Graph();
-    $graph->parse($ttl, 'ttl');
-    //var_dump($graph);
-    $posts = array_merge($posts, $graph->serialise('php'));
-  }catch(Exception $e){
-    echo $file;
-  }
-}
+$graph = new EasyRdf_Graph();
 
-// $q = query_select_s_desc(100);
-// $r = execute_query($ep, $q);
-// if($r){
-//   $posts = construct_uris($ep, select_to_list($r, array("uri")));
-// }
+$q = query_select_s_desc(100);
+$r = execute_query($ep, $q);
+if($r){
+  $posts = construct_uris($ep, select_to_list($r, array("uri")));
+}
 
 ?>
 <!doctype html>
