@@ -1,5 +1,8 @@
 <?
 
+require_once("pushoverkeys.php");
+require_once("pushover.php");
+
 function write($data, $date=null, $slug=null){
   $base = $_SERVER["HTTP_HOST"];
   if(!$slug) $slug = uniqid();
@@ -48,6 +51,7 @@ if(isset($msg) && !empty($msg)){
     header("HTTP/1.1 415 Unsupported Media Type");
   }else{
     $path = write(json_decode($msg, true), date("ymd-His"));
+    send_push("New notification", $token, $user);
     header("HTTP/1.1 201 Created");
     header("Location: https://rhiaro.co.uk/$path");
   }
