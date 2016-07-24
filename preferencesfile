@@ -1,0 +1,38 @@
+{
+  "@context": ["http://vocab.amy.gy/prefs#", {"sal": "http://apps.rhiaro.co.uk/salvage/terms#"}],
+  "applications": 
+  [{
+    "@id": "http://apps.rhiaro.co.uk/salvage",
+    "sal:weeklyBudget": "100",
+    "sal:monthlyBudget": "450",
+    "sal:feed": {
+        "@id": "http://rhiaro.co.uk/stuff"
+      },
+    "sal:categories": [
+      {
+        "sal:name": "Food",
+        "sal:tags": ["food", "groceries", "restaurant", "takeaway"]
+      },
+      {
+        "sal:name": "Medical",
+        "sal:tags": ["medical"]
+      },
+      {
+        "sal:name": "Travel",
+        "sal:tags": ["travel", "transport"]
+      },
+      {
+        "sal:name": "Household",
+        "sal:tags": ["household"]
+      },
+      {
+        "sal:name": "All",
+        "sal:tags": []
+      },
+      {
+        "sal:name": "Split with csarven",
+        "sal:tags": ["csarven"]
+      }
+    ]
+  }]
+}
