@@ -68,34 +68,22 @@ foreach($_PREF as $prefix => $uri){
   EasyRdf_Namespace::set($prefix, $uri);
 }
 
-function graph_to_as2($graph){
-
-  $out = $graph->serialise("application/ld+json");
-  $cmp = \ML\JsonLD\JsonLD::compact($out, "https://www.w3.org/ns/activitystreams");
-  $str = \ML\JsonLD\JsonLD::toString($cmp, true);
-
-  // Cleanup..
-  $ar = json_decode($str, true);
-  foreach($ar as $pred => $obj){
-    // Flatten @value
-    if(is_array($obj)){
-      if(isset($obj["@value"])){
-        $ar[$pred] = $obj["@value"];
-      }
-    }
-    // Kill errant as prefixes
-    if(stripos($pred, "as:") !== false){
-      $newpred = str_replace("as:", "", $pred);
-      $ar[$newpred] = $ar[$pred];
-      unset($ar[$pred]);
-    }
-  }
-  // TODO: Do something about @graph when multiple posts are returned
-  $str = json_encode($ar, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-
-  return $str;
-}
+/* ActivityStreams 2.0 handling (needs work probably) */
+require_once('easyrdf/easyrdf/lib/EasyRdf/Serialiser/ActivityStreams.php');
+EasyRdf_Format::register(
+    'as2',
+    'ActivityStreams 2.0',
+    'http://www.w3.org/TR/activitystreams-core/',
+    array(
+        'application/ld+json' => 0.9,
+        'application/activity+json' => 1.0,
+        'application/json' => 0.8
+    ),
+    array('jsonld', 'json')
+);
+EasyRdf_Format::registerSerialiser('as2', 'EasyRdf_Serialiser_ActivityStreams');
 
 include_once("sloph/queries.php");
+include_once("sloph/ldp.php");
 
 ?>
