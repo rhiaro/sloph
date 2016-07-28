@@ -32,8 +32,13 @@ function get($ep, $uri, $ct="text/html"){
       $return["header"] = "Content-Type: ".$format->getDefaultMimeType();
       $return["content"] = $out;
     }else{
-      $return["header"] = "HTTP/1.1 415 Unsupported Media Type";
-      $return["content"] = "$ct is not a supported media type.";
+      if($ct == "text/html"){
+        $return["header"] = "HTTP/1.1 200 OK";
+        $return["content"] = $graph->dump();
+      }else{
+        $return["header"] = "HTTP/1.1 415 Unsupported Media Type";
+        $return["content"] = "$ct is not a supported media type.";
+      }
     }
   }else{
     $return["header"] = "HTTP/1.1 404 Not Found";
