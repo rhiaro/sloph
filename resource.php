@@ -4,14 +4,9 @@ require_once('vendor/init.php');
 
 if(isset($_GET['resource'])){
   $resource = urldecode($_GET['resource']);
+  $headers = apache_request_headers();
+  $ct = $headers["Accept"];
 
-  if(isset($_GET['ct'])){
-    $ct = $_GET['ct'];
-  }else{
-    $ct = "text/html";
-  }
-
-  // Conneg
   $result = get($ep, $resource, $ct);
   header($result['header']);
   echo $result['content'];

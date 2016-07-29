@@ -83,7 +83,8 @@ EasyRdf_Format::register(
 );
 EasyRdf_Format::registerSerialiser('as2', 'EasyRdf_Serialiser_ActivityStreams');
 
-include_once("sloph/queries.php");
-include_once("sloph/ldp.php");
+require_once("AcceptHeader.php");
+require_once("sloph/queries.php");
+require_once("sloph/ldp.php");
 
 ?>
