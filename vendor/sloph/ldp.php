@@ -20,13 +20,12 @@ function get_resource($ep, $uri){
   return $graph;
 }
 
-function get($ep, $uri, $ct="text/html"){
+function get($ep, $uri, $content_type="text/html"){
   
   $return = array("header" => null, "content" => null, "errors" => null);
-
-  $acceptheaders = new AcceptHeader($ct);
-  
+  $acceptheaders = new AcceptHeader($content_type); 
   $graph = get_resource($ep, $uri);
+
   if(!$graph->isEmpty()){
     foreach($acceptheaders as $accept){
       try{
@@ -55,6 +54,22 @@ function get($ep, $uri, $ct="text/html"){
     $return["content"] = "No such resource exists.";
   }
   return $return;
+}
+
+function globb($ep, $container, $content_type){
+
+  $return = array("header" => null, "content" => null, "errors" => null);
+  $acceptheaders = new AcceptHeader($content_type); 
+  $graph = get_resource($ep, $uri);
+
+  $container_types = array("ldp:Container", "as:Collection");
+
+  if(array_intersect($container_types, $graph->types)){
+    
+  }
+
+  return $return;
+
 }
 
 ?>
