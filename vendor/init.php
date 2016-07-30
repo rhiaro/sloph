@@ -75,8 +75,8 @@ EasyRdf_Format::register(
     'ActivityStreams 2.0',
     'http://www.w3.org/TR/activitystreams-core/',
     array(
-        'application/ld+json' => 0.9,
         'application/activity+json' => 1.0,
+        'application/ld+json' => 0.9,
         'application/json' => 0.8
     ),
     array('jsonld', 'json')
