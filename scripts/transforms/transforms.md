@@ -1,0 +1,355 @@
+[x] Move properties from raw to rendered
+
+```
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+ ?fancy ?p ?o .
+ ?s ?p2 ?fancy .
+} where {
+ ?raw foaf:isPrimaryTopicOf ?fancy .
+ ?raw ?p ?o .
+ ?s ?p2 ?raw .
+}
+```
+
+```
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+delete {
+    ?s foaf:isPrimaryTopicOf ?s .
+    ?s foaf:primaryTopic ?s .
+    ?s foaf:primaryTopic ?o .
+} WHERE {
+    ?s foaf:isPrimaryTopicOf ?s .
+    ?s foaf:primaryTopic ?s .
+    ?s foaf:primaryTopic ?o .
+}
+```
+
+```
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+delete {
+    ?s ?p ?o .
+} where {
+    ?s foaf:isPrimaryTopicOf ?fancy .
+    ?s ?p ?o .
+}
+
+```
+
+[x] dc:creator to as:actor
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dct: <http://purl.org/dc/elements/1.1/> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s as:actor ?o .
+} where {
+    ?s dct:creator ?o . 
+}
+```
+
+```
+@prefix dct: <http://purl.org/dc/elements/1.1/> .
+delete {
+    ?s dct:creator ?o .
+}
+```
+
+[x] dc:created to as:published
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s as:published ?o .
+} where {
+    ?s dc:created ?o . 
+}
+```
+
+```
+@prefix dc: <http://purl.org/dc/terms/> .
+delete {
+    ?s dc:created ?o .
+}
+```
+
+[x] dc:modified to as:updated
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s as:updated ?o .
+} where {
+    ?s dc:modified ?o . 
+}
+```
+
+```
+@prefix dc: <http://purl.org/dc/terms/> .
+delete {
+    ?s dc:modified ?o .
+}
+```
+
+[x] dc:title to as:name
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s as:name ?o .
+} where {
+    ?s dc:title ?o . 
+}
+```
+
+```
+@prefix dc: <http://purl.org/dc/terms/> .
+delete {
+    ?s dc:title ?o .
+}
+```
+
+[x] sioc:content to as:content
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s as:content ?content .
+} where {
+    ?s sioc:content ?content . 
+}
+```
+
+```
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+delete {
+    ?s sioc:content ?o .
+}
+```
+
+[ ] foaf:depection to as:image
+[ ] foaf:homepage to as:url
+
+[x] sioc:topic to as:tag
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s as:tag ?o .
+} where {
+    ?s sioc:topic ?o . 
+}
+```
+
+```
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+delete {
+    ?s sioc:topic ?o .
+}
+```
+
+
+[x] blog:like_of to as:object and a Like
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+insert into <http://blog.rhiaro.co.uk#> {
+    ?post a as:Like .
+    ?post as:object ?object .
+} where {
+    ?post blog:like_of ?object .   
+}
+```
+
+```
+@prefix blog: <http://vocab.amy.so/blog#> .
+delete {
+    ?post blog:like_of ?object .
+}
+```
+
+[x] blog:share_of to as:object and a Announce
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+insert into <http://blog.rhiaro.co.uk#> {
+    ?post a as:Announce .
+    ?post as:object ?object .
+} where {
+    ?post blog:share_of ?object .   
+}
+```
+
+```
+@prefix blog: <http://vocab.amy.so/blog#> .
+delete {
+    ?post blog:share_of ?object .
+}
+```
+
+[x] blog:bookmark_of to as:object and a Add with as:target <??>
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+insert into <http://blog.rhiaro.co.uk#> {
+    <https://rhiaro.co.uk/bookmarks/> a as:Collection ;
+                                      as:name "Bookmarks" .
+}
+```
+ 
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+insert into <http://blog.rhiaro.co.uk#> {
+    ?post a as:Add .
+    ?post as:object ?object .
+    ?post as:target <https://rhiaro.co.uk/bookmarks/> .
+} where {
+    ?post blog:bookmark_of ?object .   
+}
+```
+
+```
+@prefix blog: <http://vocab.amy.so/blog#> .
+delete {
+    ?post blog:bookmark_of ?object .
+}
+```
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+insert into <http://blog.rhiaro.co.uk#> {
+    <https://rhiaro.co.uk/bookmarks/> as:items ?bm .
+} where {
+    ?post a as:Add .
+    ?post as:object ?bm .
+    ?post as:target <https://rhiaro.co.uk/bookmarks/> .
+}
+```
+
+Note.. to display bookmarks in all their glory...
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+select ?url ?name ?content ?date ?tag where {
+    <https://rhiaro.co.uk/bookmarks/> as:items ?url .
+    ?add a as:Add .
+    ?add as:target <https://rhiaro.co.uk/bookmarks/> .
+    ?add as:object ?url .
+    optional { ?add as:name ?name . }
+    optional { ?add as:content ?content . }
+    optional { ?add as:published ?date . }
+    optional { ?add as:tag ?tag .  }
+}
+```
+
+[x] Fix Accepts and Events
+    -> TODO: update seeulator to send an accept and an event or something.. and I think Accept inReplyTo is fine in the case without Invite
+    -> This got a bit out of hand, give up and use `events.sparql`
+
+> Checkin: 20160729-1946
+
+[x] Add a as:Activity to blog:Consumption and blog:Acquisition
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s a as:Activity .
+} where {
+    { ?s a blog:Consumption . } UNION { ?s a blog:Acquisition . }
+}
+```
+
+[x] Add a as:Arrive to checkins
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s a as:Arrive .
+} where {
+    { ?s as:location <http://rhiaro.co.uk/location/transit> }
+    UNION
+    { ?s as:location <http://rhiaro.co.uk/location/other> }
+    UNION
+    { ?s as:location <http://rhiaro.co.uk/location/home> }
+    UNION
+    { ?s as:location <http://rhiaro.co.uk/location/meeting> }
+    UNION
+    { ?s as:location <http://rhiaro.co.uk/location/seminar> }
+    UNION
+    { ?s as:location <http://rhiaro.co.uk/location/office> }
+    UNION
+    { ?s as:location <http://rhiaro.co.uk/location/volunteer> }
+    UNION
+    { ?s as:location <http://rhiaro.co.uk/location/food> }
+    UNION
+    { ?s as:location <http://rhiaro.co.uk/location/exercise> }
+    UNION
+    { ?s as:location <http://rhiaro.co.uk/location/event> }
+}
+```
+
+[x] Add a as:Place to /location/s
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+insert into <http://blog.rhiaro.co.uk#> {
+    ?loc a as:Place .
+} where {
+    ?s a as:Arrive .
+    ?s as:location ?loc .
+}
+```
+
+> Checkin: 20160730-1112
+
+[ ] All content from markdown to html
+
+[ ] people to as:Profile or as:Person or as:Actor
+[ ] Add a as:Article if as:name and no other type
+[ ] Add a as:Note if no name and no other type
+-> I think I need a script+UI for type adding
+
+[ ] All tags to proper as:Objects
+    -> uri() not a thing in 1.0
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    uri(fn:concat("http://uri2.com/#", "tag")) a as:Object .
+    uri(fn:concat("http://uri2.com/#", "tag")) as:name ?tag .
+    ?post as:tag uri(fn:concat("http://uri2.com/#", "tag")) .
+} where {
+    ?post as:tag ?tag .    
+}
+```
+
+[ ] Put everything in its own graph
+-> I think I need a script+UI for graph sorting..
+
+[ ] Make Collections for
+* Travel
+* Calendar
+* stuff
+* years (contains month collections only?)
+* months
+* where
+* food
+* All replies on individual posts
+* mentions (contains individual post reply collections + homepage mentions?)

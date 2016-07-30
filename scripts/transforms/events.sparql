@@ -1,0 +1,185 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix ns2: <http://xmlns.com/foaf/0.1/> .
+@prefix ns3: <http://vocab.amy.so/blog#> .
+@prefix ns4: <http://rdfs.org/sioc/types#> .
+
+
+insert into <http://blog.rhiaro.co.uk#> {
+
+<http://rhiaro.co.uk/2016/05/chi-2016> rdf:type as:Accept ;
+                                    as:name "Going to CHI 2016" ;
+                                    as:published "2016-05-06T18:21:37-07:00" ;
+                                    as:content "A big human-computer interaction academic conference. I have my name on a paper about pro-social deception";
+                                    as:object <http://chi2016.acm.org/wp/> . 
+<http://chi2016.acm.org/wp/> rdf:type as:Event ;
+                              as:startTime "2016-05-07T09:00:00-07:00" ;
+                                    as:endTime "2016-05-12T17:00:00-07:00" ;
+                                    as:location <http://dbpedia.org/resource/San_Jose,_California> ;
+                                    ns3:cost "$500" ;
+                                    
+                                    as:tag "academia" ,
+                                            "attendee" ,
+                                            "ca2016" ,
+                                            "chi2016" ,
+                                            "conference" ,
+                                            "event" ,
+                                            "phd" ,
+                                            "rsvp" ,
+                                            "san jose" ,
+                                            "speaker" ;
+                                    as:name "CHI 2016"  .
+
+<http://rhiaro.co.uk/2016/05/indieweb-summit> rdf:type as:Accept ;
+                                           as:published "2016-05-06T18:23:02-07:00" ;
+                                           as:name "Going to Indieweb Summit 2016" ;
+                                           as:content "Maybe I'll rebuild my website from scratch again." ;
+                                           as:object <http://2016.indieweb.org/> .
+
+<http://2016.indieweb.org/> rdf:type as:Event ;
+                                          as:startTime "2016-06-03T19:00:00-07:00" ;
+                                           as:endTime "2016-06-05T18:00:00-07:00" ;
+                                           as:location <http://dbpedia.org/resource/Portland,_Oregon> ;
+                                           ns3:cost "$0" ;
+                                           as:tag "attendee" ,
+                                                   "decentralised social web" ,
+                                                   "event" ,
+                                                   "hackathon" ,
+                                                   "hacking" ,
+                                                   "indieweb" ,
+                                                   "indiewebcamp" ,
+                                                   "portland" ,
+                                                   "rsvp" ,
+                                                   "social web" ,
+                                                   "usa" ;
+                                           as:name "Indieweb Summit 2016"   .
+
+<http://rhiaro.co.uk/2016/05/hwc-la> rdf:type as:Accept ;
+                                  as:published "2016-05-06T19:07:10-07:00" ;
+                                  as:name "Going to HWC LA" ;
+                                  as:content "Since I'm in town" ;
+                                  as:object <https://indiewebcamp.com/events/2016-05-18-homebrew-website-club#RSVP> .
+
+<https://indiewebcamp.com/events/2016-05-18-homebrew-website-club#RSVP> rdf:type as:Event ;
+                                   as:startTime "2016-05-18T18:30:00-07:00" ;
+                                  as:endTime "2016-05-18T19:30:00-07:00" ;
+                                  as:location <http://dbpedia.org/resource/Los_Angeles> ;
+                                  as:tag "attendee" ,
+                                          "event" ,
+                                          "hackathon" ,
+                                          "hacking" ,
+                                          "hwc" ,
+                                          "indieweb" ,
+                                          "indiewebcamp" ,
+                                          "los angeles" ,
+                                          "rsvp" ;
+                                  as:name "HWC LA"    .
+
+<http://rhiaro.co.uk/2016/05/iwc-leaders> rdf:type as:Accept ;
+                                       as:published "2016-05-18T16:30:04-07:00" ;
+                                       as:name "Going to IWC Leaders Summit"; 
+                                       as:object <https://indiewebcamp.com/2016/Leaders> .
+
+<https://indiewebcamp.com/2016/Leaders> rdf:type as:Event ;
+                                       as:startTime "2016-06-03T12:00:00-07:00" ;
+                                       as:endTime "2016-06-03T17:30:00-07:00" ;
+                                       as:location <http://dbpedia.org/resource/Portland,_Oregon> ;
+                                       as:tag "attendee" ,
+                                               "event" ,
+                                               "hacking" ,
+                                               "hwc" ,
+                                               "indiewebcamp" ,
+                                               "iwc" ,
+                                               "phd" ,
+                                               "rsvp" ,
+                                               "social web" ;
+                                       as:name "IWC Leaders Summit" .
+
+<http://rhiaro.co.uk/2016/05/decentralized-web> rdf:type as:Accept ;
+                                             as:published "2016-05-18T16:39:17-07:00" ;
+                                             as:object <http://www.decentralizedweb.net/> ;
+                                             as:name "Going to Decentralized Web Summit" .
+
+<http://www.decentralizedweb.net/> rdf:type as:Event ;
+                                             as:startTime "2016-06-08T09:00:00-07:00" ;
+                                             as:endTime "2016-06-08T18:00:00-07:00" ;
+                                             as:location <http://dbpedia.org/resource/San_Francisco> ;
+                                             as:tag "attendee" ,
+                                                     "conference" ,
+                                                     "crosscloud" ,
+                                                     "decentralisation" ,
+                                                     "decentralised social web" ,
+                                                     "decentralised web" ,
+                                                     "event" ,
+                                                     "hackathon" ,
+                                                     "indieweb" ,
+                                                     "phd" ,
+                                                     "rsvp" ,
+                                                     "social web" ;
+                                             as:name "Decentralized Web Summit"  .
+
+<http://rhiaro.co.uk/2016/06/w3c-blockchain> rdf:type as:Accept ;
+                                          as:published "2016-06-30T13:10:22-04:00" ;
+                                          as:object <https://www.w3.org/2016/04/blockchain-workshop/> ;
+                                          as:name "Going to W3C Blockchain workshop" .
+
+<https://www.w3.org/2016/04/blockchain-workshop/> rdf:type as:Event ;
+                                          as:startTime "2016-06-29T08:30:00-04:00" ;
+                                          as:endTime "2016-06-30T18:00:00-04:00" ;
+                                          as:location <http://dbpedia.org/resource/MIT_Media_Lab> ;
+                                          as:tag "attendee" ,
+                                                  "blockchain" ,
+                                                  "decentralisation" ,
+                                                  "event" ,
+                                                  "hacking" ,
+                                                  "mit" ,
+                                                  "rsvp" ,
+                                                  "w3c" ;
+                                          as:name "W3C Blockchain workshop"  .
+
+<http://rhiaro.co.uk/2016/07/dataverse> rdf:type as:Accept ;
+                                     as:published "2016-07-11T11:13:48-04:00" ;
+                                     as:object <http://projects.iq.harvard.edu/dcm2016> ;
+                                     as:name "Going to Dataverse Community Meeting" .
+
+<http://projects.iq.harvard.edu/dcm2016> rdf:type as:Event ;                                     
+                                     as:startTime "2016-07-11T09:00:00-04:00" ;
+                                     as:endTime "2016-07-12T18:00:00-04:00" ;
+                                     as:location <http://dbpedia.org/resource/Harvard_Medical_School> ;
+                                     as:tag "academia" ,
+                                             "attendee" ,
+                                             "data" ,
+                                             "data science" ,
+                                             "dataverse" ,
+                                             "dokieli" ,
+                                             "event" ,
+                                             "libraries" ,
+                                             "linkedresearch" ,
+                                             "metadata" ,
+                                             "phd" ,
+                                             "publishing" ,
+                                             "rsvp" ,
+                                             "solid" ;
+                                     as:name "Dataverse Community Meeting" .
+
+<http://rhiaro.co.uk/2016/02/mltalks-series> rdf:type as:Accept ;
+                                          as:published "2016-02-29T17:10:29-05:00" ;
+                                          as:object <https://www.media.mit.edu/events/2016/03/03/mltalks-series-sherry-turkle-conversation-mitch-resnick> ;
+                                          as:name "Going to MLTalks Series: Sherry Turkle in Conversation with Mitch Resnick" .
+
+<https://www.media.mit.edu/events/2016/03/03/mltalks-series-sherry-turkle-conversation-mitch-resnick> rdf:type as:Event ;
+                                          as:startTime "2016-03-03T15:00:00-05:00" ;
+                                          as:endTime "2016-03-03T16:30:00-05:00" ;
+                                          as:location <http://dbpedia.org/resource/MIT_Media_Lab> ;
+                                         as:tag "attendee" ,
+                                                  "event" ,
+                                                  "media lab" ,
+                                                  "mit" ,
+                                                  "phd" ,
+                                                  "rsvp" ,
+                                                  "sherry turkle" ,
+                                                  "social" ,
+                                                  "social media" ;
+                                          as:name "MLTalks Series: Sherry Turkle in Conversation with Mitch Resnick" .
+}
