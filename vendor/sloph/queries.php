@@ -93,7 +93,7 @@ function query_select_s_desc($limit){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {
   ?s ?p ?o .
-  ?s dct:created ?d .
+  ?s as:published ?d .
 }
 ORDER BY DESC(?d)
 LIMIT $limit
@@ -123,6 +123,16 @@ function query_select_s_where($vals, $limit=10, $sort=null){
   if($limit > 0){
     $q .= "\nLIMIT $limit";
   }
+  return $q;
+}
+
+function query_select_container_and_contents($container){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?c ?s ?p ?o WHERE {
+  ?c a ldp:Container .
+  ?c ldp:contains ?s .
+  ?s ?p ?o .
+";
   return $q;
 }
 
