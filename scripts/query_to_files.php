@@ -2,14 +2,12 @@
 require_once('../vendor/init.php');
 
 function write($data, $fn){
-  $base = $_SERVER["HTTP_HOST"];
-  if(!$slug) $slug = uniqid();
-  if(!$date) $date = date("ymd-His");
     
-  $log = "data/$fn.ttl";
+  $log = "datahttps/$fn.ttl";
 
   $h = fopen($log, 'w');
   fwrite($h, $data);
+  var_dump($h);
   fclose($h);
   return $log;
 }
@@ -24,10 +22,15 @@ if($r){
   foreach($uris as $uri){
     if(is_string($uri)){
       $fn = mb_ereg_replace("([^\w\s\d\-_~,;\[\]\(\).])", '_', $uri);
-      if(!file_exists("data/$fn.ttl")){
+      if(!file_exists("datahttps/$fn.ttl")){
         $q = query_construct($uri);
         $t = execute_query($ep, $q);
-        if($t){   
+        if($t){ 
+          foreach($t as $uri => $stuff){
+            $https = str_replace("http://rhiaro.co.uk", "https://rhiaro.co.uk", $uri);
+            unset($t[$uri]);
+            $t[$https] = $stuff;
+          }
           $graph = new EasyRdf_Graph();
           $graph->parse($t, 'php');
           $f = write($graph->serialise('text/turtle'), $fn);
