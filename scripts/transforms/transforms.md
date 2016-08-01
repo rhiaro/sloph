@@ -319,6 +319,32 @@ insert into <http://blog.rhiaro.co.uk#> {
 
 > Checkin: 20160730-1112
 
+[x] Make everything https 
+
+`sed -i 's/http:\/\/rhiaro.co.uk/https:\/\/rhiaro.co.uk/g' *.ttl`
+
+> Checkin: 20160801-1019
+
+[x] sioc:reply_of to as:inReplyTo
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s as:inReplyTo ?content .
+} where {
+    ?s sioc:reply_of ?content . 
+}
+```
+
+```
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+delete {
+    ?s sioc:reply_of ?o .
+}
+```
+
 [ ] All content from markdown to html
 
 [ ] people to as:Profile or as:Person or as:Actor
@@ -340,9 +366,6 @@ insert into <http://blog.rhiaro.co.uk#> {
 }
 ```
 
-[ ] Put everything in its own graph
--> I think I need a script+UI for graph sorting..
-
 [ ] Make Collections for
 * Travel
 * Calendar
@@ -353,3 +376,6 @@ insert into <http://blog.rhiaro.co.uk#> {
 * food
 * All replies on individual posts
 * mentions (contains individual post reply collections + homepage mentions?)
+
+[ ] Put everything in its own graph
+-> I think I need a script+UI for graph sorting..
