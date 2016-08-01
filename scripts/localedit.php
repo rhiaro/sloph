@@ -20,6 +20,24 @@ function remove_empty($haystack){
   return $haystack;
 }
 
+function plustype($i=0){
+  $types = array(
+      "http://www.w3.org/ns/activitystreams#" => array("Actor", "Person", "Note", "Article", "Profile", "Organization", "Event", "Arrive", "Activity", "Object", "Like", "Announce", "Add", "Travel", "Accept", "Place", "Collection"),
+      "http://vocab.amy.so/blog#" => array("Consumption", "Acquisition")
+    );
+  $out = '<p><label><strong>+ type</strong>: </label>';
+  $out .= '  <select name="http://www.w3.org/1999/02/22-rdf-syntax-ns#type['.$i.'][value]">';
+  foreach($types as $base => $frags){
+    foreach($frags as $type){
+      $out .= '    <option value="'.$base.$type.'">'.$type.'</option>';
+    }
+  }
+  $out .= '    <option value="">none</option>';
+  $out .= '  </select>';
+  $out .= '<input type="hidden" name="http://www.w3.org/1999/02/22-rdf-syntax-ns#type['.$i.'][type]" value="uri" /></p>';
+  return $out;
+}
+
 if(count($_POST) > 0){
   $newgraph = new EasyRdf_Graph($_POST['uri']);
   $uri = $_POST['uri'];
@@ -63,6 +81,7 @@ $posts = construct_uris($ep, $uris);
       input, textarea { max-width: 100%; border: 1px solid silver; padding: 0.4em; }
       textarea { width: 72em; height: 16em; }
       .info { background-color: #abcdef; padding: 0.4em; font-family: sans-serif; }
+      hr { border: 2px solid #abcdef; }
     </style>
   </head>
   <body>
@@ -80,6 +99,9 @@ $posts = construct_uris($ep, $uris);
             </pre>
           </div>
         <?endif?>
+        <?if(!isset($post['http://www.w3.org/1999/02/22-rdf-syntax-ns#type'])):?>
+          <?=plustype()?>
+        <?endif?>
         <?foreach($post as $k => $vs):?>
           <p><label><?=$k?>: </label>
            <?foreach($vs as $i => $v):?>
@@ -93,8 +115,12 @@ $posts = construct_uris($ep, $uris);
                 <input name="<?=$k?>[<?=$i?>][datatype]" type="text" value="<?=$v["datatype"]?>" />
               <?endif?>
           <?endforeach?>
-            <p>
-              <label>new: </label>
+          </p>
+          <p>
+            <?if($k == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"):?>
+              <?=plustype($i+1);?>
+            <?else:?>
+              <label><strong>+</strong></label>
               <input type="text" name="<?=$k?>[<?=count($vs)?>][value]" style="width: 8em;" />
               <select name="<?=$k?>[<?=count($vs)?>][type]">
                 <option value="literal">lit</option>
@@ -104,7 +130,7 @@ $posts = construct_uris($ep, $uris);
                 <option value="">none</option>
                 <option value="http://www.w3.org/2001/XMLSchema#dateTime">dateTime</option>
               </select>
-            </p>
+            <?endif?>
           </p>
         <?endforeach?>
       </form>
