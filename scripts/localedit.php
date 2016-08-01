@@ -27,12 +27,12 @@ function plustype($i=0){
     );
   $out = '<p><label><strong>+ type</strong>: </label>';
   $out .= '  <select name="http://www.w3.org/1999/02/22-rdf-syntax-ns#type['.$i.'][value]">';
+  $out .= '    <option value="">none</option>';
   foreach($types as $base => $frags){
     foreach($frags as $type){
       $out .= '    <option value="'.$base.$type.'">'.$type.'</option>';
     }
   }
-  $out .= '    <option value="">none</option>';
   $out .= '  </select>';
   $out .= '<input type="hidden" name="http://www.w3.org/1999/02/22-rdf-syntax-ns#type['.$i.'][type]" value="uri" /></p>';
   return $out;
