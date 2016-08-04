@@ -187,4 +187,17 @@ function query_select_hasPrimaryTopic($uri){
   return $q;
 }
 
+/* Setting */
+
+function query_delete($uri){
+  $q = "DELETE { <$uri> ?p ?o . }";
+  return $q;
+}
+
+function query_insert($turtle){
+  $q = get_prefixes();
+  $q .= "INSERT INTO <http://blog.rhiaro.co.uk#> { ".$turtle." }";
+  return $q;
+}
+
 ?>
