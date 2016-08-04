@@ -137,9 +137,6 @@ delete {
 }
 ```
 
-[ ] foaf:depection to as:image
-[ ] foaf:homepage to as:url
-
 [x] sioc:topic to as:tag
 
 ```
@@ -159,7 +156,6 @@ delete {
     ?s sioc:topic ?o .
 }
 ```
-
 
 [x] blog:like_of to as:object and a Like
 
@@ -344,6 +340,76 @@ delete {
     ?s sioc:reply_of ?o .
 }
 ```
+
+> Checkin: 20160801-1347
+
+[x] foaf:name to as:name
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+ ?s as:name ?o .
+} where {
+ ?s foaf:name ?o .
+}
+```
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+delete {
+    ?s foaf:name ?o .
+}
+```
+
+[x] foaf:depiction to as:image
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+ ?s as:image ?o .
+} where {
+ ?s foaf:depiction ?o .
+}
+```
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+delete {
+    ?s foaf:depiction ?o .
+}
+```
+
+[x] foaf:homepage to as:url
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+ ?s as:url ?o .
+} where {
+ ?s foaf:homepage ?o .
+}
+```
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+delete {
+    ?s foaf:homepage ?o .
+}
+```
+
+> Checkin: 20160801-1506
 
 [ ] All content from markdown to html
 
