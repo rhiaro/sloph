@@ -40,27 +40,35 @@ function plustype($i=0){
 
 function delete($ep, $uri){
   $q = query_delete($uri);
-  //$r = execute_query($ep, $q);
-  return $q;
+  $r = execute_query($ep, $q);
+  return $r;
 }
 
 function insert($ep, $turtle){
   $q = query_insert($turtle);
-  //$r = execute_query($ep, $q);
-  return $q;
+  $r = execute_query($ep, $q);
+  return $r;
 }
 
-if(count($_POST['data']) > 0){
+if(isset($_POST['data']) && count($_POST['data']) > 0){
   $_POST = $_POST['data'];
   $newgraph = new EasyRdf_Graph($_POST['uri']);
   $uri = $_POST['uri'];
   unset($_POST['uri']);
   $rdfphp[$uri] = remove_empty($_POST);
   $newgraph->parse($rdfphp, 'php');
-  var_dump($_POST);
   $turtle = $newgraph->serialise('ntriples');
-  var_dump($turtle);
-  $result[$uri] = $turtle . "\n-------\n" . delete($ep, $uri) . "\n-------\n" . insert($ep, $turtle);
+  $del = delete($ep, $uri);
+  if($del){
+    $ins = insert($ep, $turtle);
+    if($ins){
+      $result[$uri] = "Updated";
+    }else{
+      $result[$uri] = "Error: could not insert";
+    }
+  }else{
+    $result[$uri] = "Error: could not delete";
+  }
 }
 
 if(!isset($_SESSION['uris'])){
