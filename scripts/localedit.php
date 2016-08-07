@@ -38,6 +38,56 @@ function plustype($i=0){
   return $out;
 }
 
+function plusproperty(){
+  $properties = array(
+      "http://www.w3.org/ns/activitystreams#" => array("name", "published", "updated", "summary", "content", "startTime", "endTime", "image", "inReplyTo", "location", "tag", "url", "to", "bto", "cc", "bcc", "duration", "actor", "object", "target", "origin", "result", "items"),
+      "http://vocab.amy.so/blog#" => array("cost")
+    );
+  $out = '<p>';
+  $out .= '  <label><select name="data[new]">';
+  foreach($properties as $base => $props){
+    foreach($props as $prop){
+      $out .= '    <option value="'.$base.$prop.'">'.$prop.'</option>';
+    }
+  }
+  $out .= '  </select></label>';
+  $out .= '  <input type="text" name="data[newvalue]" />';
+  $out .= '  <select name="data[newtype]">';
+  $out .= '    <option value="literal">lit</option>
+                <option value="uri">uri</option>
+              </select>
+              <select name="data[newdatatype]">
+                <option value="">none</option>
+                <option value="http://www.w3.org/2001/XMLSchema#dateTime">dateTime</option>
+              </select>';
+  $out .= '</p>';
+  return $out;
+}
+
+function process_new($data){
+  $prop = $data['new'];
+  $val = $data['newvalue'];
+  $type = $data['newtype'];
+  if(isset($data['newdatatype']) && !empty($data['newdatatype'])){
+    $datatype = $data['newdatatype'];
+  }
+  if(isset($data[$prop])){
+    $i = count($data[$prop]);
+  }else{
+    $i = 0;
+  }
+  $data[$prop][$i]['value'] = $val;
+  $data[$prop][$i]['type'] = $type;
+  if(isset($datatype)){
+    $data[$prop[$i]['datatype']] = $datatype;
+  }
+  unset($data['new']);
+  unset($data['newvalue']);
+  unset($data['newtype']);
+  unset($data['newdatatype']);
+  return $data;
+}
+
 function delete($ep, $uri){
   $q = query_delete($uri);
   $r = execute_query($ep, $q);
@@ -51,7 +101,7 @@ function insert($ep, $turtle){
 }
 
 if(isset($_POST['data']) && count($_POST['data']) > 0){
-  $_POST = $_POST['data'];
+  $_POST = process_new($_POST['data']);
   $newgraph = new EasyRdf_Graph($_POST['uri']);
   $uri = $_POST['uri'];
   unset($_POST['uri']);
@@ -157,6 +207,7 @@ $posts = construct_uris($ep, $uris);
             <?endif?>
           </p>
         <?endforeach?>
+        <?=plusproperty()?>
       </form>
       <hr/>
     <?endforeach?>
