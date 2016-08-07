@@ -1,6 +1,7 @@
 <?
 session_start();
 require_once('../vendor/init.php');
+require_once('Parsedown.php');
 
 if(isset($_GET['reset'])){ unset($_SESSION[$_GET['reset']]); }
 
@@ -18,6 +19,12 @@ function remove_empty($haystack){
     }
   }
   return $haystack;
+}
+
+function markdown_to_html($md){
+  $Parsedown = new Parsedown();
+  $html = $Parsedown->text($md);
+  return $html;
 }
 
 function plustype($i=0){
@@ -180,7 +187,7 @@ $posts = construct_uris($ep, $uris);
           <p><label><?=$k?>: </label>
            <?foreach($vs as $i => $v):?>
               <?if(strlen($v['value']) > 120):?>
-                <textarea name="data[<?=$k?>][<?=$i?>][value]"><?=$v['value']?></textarea>
+                <textarea name="data[<?=$k?>][<?=$i?>][value]"><?=($k != "http://www.w3.org/ns/activitystreams#name") ? markdown_to_html($v['value']) : $v['value']?></textarea>
               <?else:?>
                 <input name="data[<?=$k?>][<?=$i?>][value]" type="text" value="<?=$v['value']?>" style="width: <?=strlen($v['value']) * 8?>px; max-width: 100%" />
               <?endif?>
