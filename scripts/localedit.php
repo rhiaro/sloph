@@ -29,8 +29,8 @@ function markdown_to_html($md){
 
 function plustype($i=0){
   $types = array(
-      "http://www.w3.org/ns/activitystreams#" => array("Actor", "Person", "Note", "Article", "Profile", "Organization", "Event", "Arrive", "Activity", "Object", "Like", "Announce", "Add", "Travel", "Accept", "Place", "Collection"),
-      "http://vocab.amy.so/blog#" => array("Consumption", "Acquisition")
+      "http://www.w3.org/ns/activitystreams#" => array("Actor", "Person", "Note", "Article", "Profile", "Organization", "Event", "Arrive", "Activity", "Object", "Like", "Announce", "Add", "Travel", "Accept", "Place", "Relationship", "Collection"),
+      "http://vocab.amy.so/blog#" => array("Consumption", "Acquisition", "Sleep")
     );
   $out = '<p><label><strong>+ type</strong>: </label>';
   $out .= '  <select name="data[http://www.w3.org/1999/02/22-rdf-syntax-ns#type]['.$i.'][value]">';
@@ -47,7 +47,7 @@ function plustype($i=0){
 
 function plusproperty(){
   $properties = array(
-      "http://www.w3.org/ns/activitystreams#" => array("name", "published", "updated", "summary", "content", "startTime", "endTime", "image", "inReplyTo", "location", "tag", "url", "to", "bto", "cc", "bcc", "duration", "actor", "object", "target", "origin", "result", "items"),
+      "http://www.w3.org/ns/activitystreams#" => array("name", "published", "updated", "summary", "content", "startTime", "endTime", "image", "inReplyTo", "location", "tag", "url", "to", "bto", "cc", "bcc", "duration", "actor", "object", "target", "origin", "result", "items", "relationship"),
       "http://vocab.amy.so/blog#" => array("cost")
     );
   $out = '<p>';
