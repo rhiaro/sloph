@@ -411,12 +411,124 @@ delete {
 
 > Checkin: 20160801-1506
 
-[ ] All content from markdown to html
 
+[x] blog:mentions -> Relationship
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+insert into <http://blog.rhiaro.co.uk#> {
+    ? a as:Relationship .
+    ? as:subject ?post .
+    ? as:object ?object .
+    ? as:relationship as:href .
+    ? as:published ?pub .
+} where {
+    ?post blog:mentions ?object .
+    ?post as:published ?pub .   
+}
+```
+
+```
+scripts/transforms.php transform_mentions();
+```
+
+
+[x] Convert Llogposts
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?post a blog:Sleep .
+}where{
+    ?post a blog:LlogPost .
+    ?post as:tag "sleep" .
+}
+
+```
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?post a blog:Consumption .
+    ?post as:name ?c .
+}where{
+    ?post a blog:LlogPost .
+    ?post as:tag "eat" .
+    ?post as:content ?c .
+}
+
+```
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+delete {
+    ?post as:startTime ?st .
+    ?post as:endTime ?et .
+    ?post as:content ?c .
+    ?post a blog:LlogPost .
+}where{
+    ?post a blog:Consumption .
+    ?post as:endTime ?et .
+    ?post as:content ?c .
+    ?post as:startTime ?st .
+
+}
+
+```
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+delete {
+    ?post a blog:LlogPost .
+}where{
+    ?post a blog:Sleep .
+}
+
+```
+
+[x] blog:follow_of -> Follow
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+insert into <http://blog.rhiaro.co.uk#> {
+    ?post a as:Follow .
+    ?post as:object ?object .
+} where {
+    ?post blog:follow_of ?object .   
+}
+```
+
+```
+@prefix blog: <http://vocab.amy.so/blog#> .
+delete {
+    ?post blog:follow_of ?object .
+    ?post as:content ?c .
+}where{
+    ?post a as:Follow .
+    ?post as:content ?c .
+}
+```
+
+> Checkin 20160807-2349
+
+[x] -> I think I need a script+UI for type adding
 [ ] people to as:Profile or as:Person or as:Actor
 [ ] Add a as:Article if as:name and no other type
 [ ] Add a as:Note if no name and no other type
--> I think I need a script+UI for type adding
+
+> Checkin: up to http://llog.rhiaro.co.uk/1429108500-2 offset=440 at 20160808-0002
+
+[ ] All content from markdown to html
 
 [ ] All tags to proper as:Objects
     -> uri() not a thing in 1.0
