@@ -8,11 +8,23 @@ if(isset($_GET['resource'])){
   $ct = $headers["Accept"];
 
   $result = get($ep, $resource, $ct);
-  header($result['header']);
-  echo $result['content'];
+  $header = $result['header'];
+  $content = $result['content'];
 
 }else{
   $message["Beyond the final frontier"] = "You shouldn't be here.";
 }
 
+$resource = $content->resource();
+if(!$resource->get('view:css')){
+  $resource->addLiteral('view:css', get_style($resource).".css");
+}
+// $resource->addLiteral('view:banality', 1);
+// $resource->addLiteral('view:intimacy', 1);
+// $resource->addLiteral('view:tastiness', 3);
+// $resource->addLiteral('view:wanderlust', 1);
+// $resource->addLiteral('view:informative', 1);
+include 'views/top.php';
+include 'views/end.php';
 ?>
+
