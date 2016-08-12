@@ -37,7 +37,7 @@ function get($ep, $uri, $content_type="text/html"){
         }else{
           if($accept["raw"] == "text/html"){
             $return["header"] = "HTTP/1.1 200 OK";
-            $return["content"] = $graph->dump();
+            $return["content"] = $graph;
           }else{
             $return["header"] = "HTTP/1.1 415 Unsupported Media Type";
             $return["content"] = "{$accept["raw"]} is not a supported media type.";
