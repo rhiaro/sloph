@@ -128,8 +128,20 @@ if(isset($_POST['data']) && count($_POST['data']) > 0){
   }
 }
 
+$q = query_select_s();
+if(isset($_GET['flag'])){
+  if($_GET['flag'] == "doublecontents"){
+    $q = "PREFIX as: <http://www.w3.org/ns/activitystreams#> .
+SELECT ?s WHERE {
+  ?s as:content ?con1 .
+  ?s as:content ?con2 .
+  filter(?con1 != ?con2) .
+}";
+  }
+  
+}
+
 if(!isset($_SESSION['uris'])){
-  $q = query_select_s();
   $r = execute_query($ep, $q);
   if($r){
     $_SESSION['uris'] = select_to_list($r, array("uri"));
@@ -187,9 +199,9 @@ $posts = construct_uris($ep, $uris);
           <p><label><?=$k?>: </label>
            <?foreach($vs as $i => $v):?>
               <?if(strlen($v['value']) > 120):?>
-                <textarea name="data[<?=$k?>][<?=$i?>][value]"><?=($k != "http://www.w3.org/ns/activitystreams#name") ? markdown_to_html($v['value']) : $v['value']?></textarea>
+                <textarea name="data[<?=$k?>][<?=$i?>][value]"><?=htmlentities($v['value'])?></textarea>
               <?else:?>
-                <input name="data[<?=$k?>][<?=$i?>][value]" type="text" value="<?=$v['value']?>" style="width: <?=strlen($v['value']) * 8?>px; max-width: 100%" />
+                <input name="data[<?=$k?>][<?=$i?>][value]" type="text" value="<?=htmlentities($v['value'])?>" style="width: <?=strlen($v['value']) * 8?>px; max-width: 100%" />
               <?endif?>
               <input name="data[<?=$k?>][<?=$i?>][type]" type="hidden" value="<?=$v["type"]?>" />
               <?if(isset($v["datatype"])):?>
