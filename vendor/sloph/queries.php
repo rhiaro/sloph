@@ -1,5 +1,7 @@
 <?
 
+require_once('views.php');
+
 /* Running queries */
 
 function execute_query($ep, $query){
@@ -55,11 +57,6 @@ function get_prefixes(){
     $q .= "PREFIX $prefix: <$ns>
 ";
   }
-  return $q;
-}
-
-function query_load($file, $graph="http://blog.rhiaro.co.uk#"){
-  $q = "LOAD <$file> INTO <$graph>";
   return $q;
 }
 
@@ -120,6 +117,22 @@ function query_select_s_where($vals, $limit=10, $sort=null){
   if(isset($sort)){
     $q .= "\nORDER BY ASC(?$sort)";
   }
+  if($limit > 0){
+    $q .= "\nLIMIT $limit";
+  }
+  return $q;
+}
+
+function query_select_s_views($score, $limit=10){
+  $q = get_prefixes();
+  $ps = score_predicates();
+  
+  $q .= "SELECT DISTINCT ?s WHERE { \n";
+  foreach($ps as $i => $p){
+    $q .= "  OPTIONAL { ?s ?$p ?v$i } \n";
+    $q .= "  FILTER( ?v$i >= ".$score[$p]." ) \n";
+  }
+  $q .= "}\n";
   if($limit > 0){
     $q .= "\nLIMIT $limit";
   }
@@ -188,6 +201,11 @@ function query_select_hasPrimaryTopic($uri){
 }
 
 /* Setting */
+
+function query_load($file, $graph="http://blog.rhiaro.co.uk#"){
+  $q = "LOAD <$file> INTO <$graph>";
+  return $q;
+}
 
 function query_delete($uri){
   $q = "DELETE { <$uri> ?p ?o . }";
