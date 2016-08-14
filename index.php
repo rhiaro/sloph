@@ -2,34 +2,33 @@
 session_start();
 require_once('vendor/init.php');
 
-$posts = array();
-$graph = new EasyRdf_Graph();
+$headers = apache_request_headers();
+$ct = $headers["Accept"];
+$result = get_container_dynamic($ep, "query_select_s_desc", array(500), $ct);
+$header = $result['header'];
+$content = $result['content'];
 
-$q = query_select_s_desc(100);
-$r = execute_query($ep, $q);
-if($r){
-  $posts = construct_uris($ep, select_to_list($r, array("uri")));
+try {
+  if(gettype($content) == "string"){
+    header($header);
+    echo $content;
+  }else{
+    $resource = $content->resource($_SERVER['REQUEST_URI']);
+    include 'views/top.php';
+    var_dump($resource); // HERENOW
+    // $items = $resource->all('as:items');
+    // var_dump($items);
+    //     $result = get($ep, $uri, "text/html");
+    //     $content = $result['content'];
+    //     $resource = $content->resource();
+    //     include 'views/article.php';
+
+
+    include 'views/end.php';
+
+  }
+}catch(Exception $e){
+  var_dump($e);
 }
 
 ?>
-<!doctype html>
-<html>
-  <head>
-    <title>Sloph</title>
-  </head>
-  <body>
-    <h1>Sloph</h1>
-    <?foreach($posts as $uri => $post):?>
-      <article>
-        <h2><a href="<?=$uri?>"><?=$uri?></a></h2>
-        <?foreach($post as $k => $vs):?>
-          <p><strong><?=$k?>: </strong>
-           <?foreach($vs as $v):?>
-              <?=var_dump($v)?>, 
-           <?endforeach?>
-          </p>
-        <?endforeach?>
-      </article>
-    <?endforeach?>
-  </body>
-</html>
