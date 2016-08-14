@@ -20,35 +20,43 @@ function get_resource($ep, $uri){
   return $graph;
 }
 
-function get($ep, $uri, $content_type="text/html"){
-  
+function conneg($acceptheaders, $graph){
+
   $return = array("header" => null, "content" => null, "errors" => null);
-  $acceptheaders = new AcceptHeader($content_type); 
+
+  foreach($acceptheaders as $accept){
+    try{
+      $format = EasyRdf_Format::getFormat($accept["raw"]);
+      if($format->getSerialiserClass()){
+        $out = $graph->serialise($accept["raw"]);
+        $return["header"] = "Content-Type: ".$format->getDefaultMimeType();
+        $return["content"] = $out;
+      }else{
+        if($accept["raw"] == "text/html"){
+          $return["header"] = "HTTP/1.1 200 OK";
+          $return["content"] = $graph;
+        }else{
+          $return["header"] = "HTTP/1.1 415 Unsupported Media Type";
+          $return["content"] = "{$accept["raw"]} is not a supported media type.";
+        }
+      }
+      break;
+    }catch(EasyRdf_Exception $e){
+      $return["header"] = "HTTP/1.1 415 Unsupported Media Type";
+      $return["content"] = "{$accept["raw"]} is not a supported media type.";
+    }
+  }
+  return $return;
+
+}
+
+function get($ep, $uri, $content_type="text/html"){
+
+  $acceptheaders = new AcceptHeader($content_type);
   $graph = get_resource($ep, $uri);
 
   if(!$graph->isEmpty()){
-    foreach($acceptheaders as $accept){
-      try{
-        $format = EasyRdf_Format::getFormat($accept["raw"]);
-        if($format->getSerialiserClass()){
-          $out = $graph->serialise($accept["raw"]);
-          $return["header"] = "Content-Type: ".$format->getDefaultMimeType();
-          $return["content"] = $out;
-        }else{
-          if($accept["raw"] == "text/html"){
-            $return["header"] = "HTTP/1.1 200 OK";
-            $return["content"] = $graph;
-          }else{
-            $return["header"] = "HTTP/1.1 415 Unsupported Media Type";
-            $return["content"] = "{$accept["raw"]} is not a supported media type.";
-          }
-        }
-        break;
-      }catch(EasyRdf_Exception $e){
-        $return["header"] = "HTTP/1.1 415 Unsupported Media Type";
-        $return["content"] = "{$accept["raw"]} is not a supported media type.";
-      }
-    }
+    $return = conneg($acceptheaders, $graph);
   }else{
     $return["header"] = "HTTP/1.1 404 Not Found";
     $return["content"] = "No such resource exists.";
@@ -56,7 +64,32 @@ function get($ep, $uri, $content_type="text/html"){
   return $return;
 }
 
-function globb($ep, $container, $content_type){
+function get_container_dynamic($ep, $query, $params, $content_type="text/html"){
+  
+  $return = array("header" => null, "content" => null, "errors" => null);
+  $acceptheaders = new AcceptHeader($content_type);
+
+  $current = new EasyRdf_Graph();
+  $resource = new EasyRdf_Resource($_SERVER['REQUEST_URI'], $current);
+  $resource->addLiteral('as:name', "tampering with arrangements");
+  $resource->addType('as:Collection');
+  $resource->addType('ldp:Container');
+
+  $q = call_user_func_array($query, $params);
+  $r = execute_query($ep, $q);
+
+  if($r){
+    $uris = select_to_list($r, array("uri"));
+    foreach($uris as $uri){
+      $resource->addResource("as:items", $uri);
+      $resource->addResource("ldp:contains", $uri);
+    }
+  }
+  $return = conneg($acceptheaders, $current);
+  return $return;
+}
+
+function get_container($ep, $container, $content_type){
 
   $return = array("header" => null, "content" => null, "errors" => null);
   $acceptheaders = new AcceptHeader($content_type); 
