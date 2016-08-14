@@ -16,20 +16,21 @@ if(isset($_GET['resource'])){
 }
 
 $resource = $content->resource();
+// $resource->addLiteral('view:banality', 3);
+// $resource->addLiteral('view:intimacy', 3);
+// $resource->addLiteral('view:tastiness', 3);
+// $resource->addLiteral('view:wanderlust', 3);
+// $resource->addLiteral('view:informative', 3);
 if(!$resource->get('view:css')){
   $resource->addLiteral('view:css', 'views/'.get_style($resource).".css");
 }
-// $resource->addLiteral('view:banality', 1);
-// $resource->addLiteral('view:intimacy', 1);
-// $resource->addLiteral('view:tastiness', 3);
-// $resource->addLiteral('view:wanderlust', 1);
-// $resource->addLiteral('view:informative', 1);
 include 'views/top.php';
 ?>
   <article>
     <h1><?=$resource->get('as:name')?></h1>
     <?=$resource->get('as:content')?>
     <p><em><?=$resource->type()?></em></p>
+
   </article>
 <?
 include 'views/end.php';
