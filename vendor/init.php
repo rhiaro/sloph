@@ -85,52 +85,8 @@ EasyRdf_Format::register(
 EasyRdf_Format::registerSerialiser('as2', 'EasyRdf_Serialiser_ActivityStreams');
 
 require_once("AcceptHeader.php");
+require_once("sloph/views.php");
 require_once("sloph/queries.php");
 require_once("sloph/ldp.php");
-
-function get_style($resource){
-   if($resource->get('view:banality')){ $banal = $resource->get('view:banality')->getValue(); }else{ $banal = 0; }
-   if($resource->get('view:intimacy')){ $intimate = $resource->get('view:intimacy')->getValue(); }else{ $intimate = 0; }
-   if($resource->get('view:tastiness')){ $tasty = $resource->get('view:tastiness')->getValue(); }else{ $tasty = 0; }
-   if($resource->get('view:wanderlust')){ $wander = $resource->get('view:wanderlust')->getValue(); }else{ $wander = 0; }
-   if($resource->get('view:informative')){ $inform = $resource->get('view:informative')->getValue(); }else{ $inform = 0; }
-
-  $score = array($banal, $intimate, $tasty, $wander, $inform);
-
-// $food = array(5,3,5,0,0);
-// $lyric = array(5,5,0,0,0);
-// $wg = array(0,0,0,0,4);
-// $phd = array(0,1,0,0,5);
-// $trek = array(4,4,0,0,0);
-// $checkin = array(5,3,0,4,0);
-// $feels = array(0,5,0,0,1);
-
-  $styles = array(
-       "base" => array(0,0,0,0,0)
-      ,"banal" => array(3,0,0,0,0)
-      ,"intimate" => array(0,3,0,0,0)
-      ,"tasty" => array(0,0,3,0,0)
-      ,"wander" => array(0,0,0,3,0)
-      ,"inform" => array(0,0,0,0,3)
-    );
-
-  foreach($styles as $name => $numbers){
-    
-    if($numbers == $score){
-      return $name;
-    }else{
-      foreach($numbers as $i => $n){
-        if($score[$i] >= $n){
-          $s[$name] = $styles[$name];
-        }else{
-          unset($s[$name]);
-          break;
-        }
-      }
-    }
-  }
-  arsort($s);
-  return key($s);
-}
 
 ?>
