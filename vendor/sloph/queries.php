@@ -140,6 +140,16 @@ function query_select_s_views($score, $limit=10){
   return $q;
 }
 
+/* Specific queries */
+
+function query_for_places(){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { ?s ?p ?o . } WHERE {
+  ?s a as:Place . ?s ?p ?o .
+}";
+  return $q;
+}
+
 function query_select_container_and_contents($container){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?c ?s ?p ?o WHERE {
