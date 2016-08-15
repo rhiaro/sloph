@@ -1,5 +1,39 @@
 <?
 
+function get_icon($resource){
+  $icons = array(
+       "asext:Consume" => "&#127860;"
+      ,"asext:Acquire" => "&#128230;"
+      ,"asext:Sleep" => "&#128164;"
+      ,"as:Article" => "&#128478;"
+      ,"as:Note" => "&#128493;"
+      ,"as:Like" => "&#10030;"
+      ,"as:Add" => "&#43;"
+      ,"as:Announce" => "&#11246;"
+      ,"as:Arrive" => ""
+      ,"as:Follow" => "&#128483;"
+      ,"as:Event" => "&#128467;"
+      ,"as:Accept" => "&#128467;"
+      ,"as:Invite" => "&#128467;"
+    );
+  foreach($icons as $type => $icon){
+    if($resource->isA($type)){
+      return $icon;
+    }
+  }
+}
+
+function get_locations($ep){
+  $q = query_for_places();
+  $r = execute_query($ep, $q);
+  if($r){
+    $g = new EasyRdf_Graph();
+    $g->parse($r, 'php');
+    return $g;
+  }
+  return null;
+}
+
 function score_predicates(){
   return array(
       'view:banality'
