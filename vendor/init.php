@@ -60,7 +60,8 @@ $_PREF = array(
         ,'mf2' => 'http://microformats.org/profile/'
         ,'ldp' => 'http://www.w3.org/ns/ldp#'
         ,'solid' => 'http://www.w3.org/ns/solid#'
-        ,'view' => 'https://rhiaro.co.uk/view#'
+        ,'view' => 'https://terms.rhiaro.co.uk/view#'
+        ,'asext' => 'https://terms.rhiaro.co.uk/as#'
       );
 $_NS = array_flip($_PREF);
 // TODO: sioc is wrong
