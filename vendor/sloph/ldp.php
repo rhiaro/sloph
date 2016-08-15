@@ -64,13 +64,13 @@ function get($ep, $uri, $content_type="text/html"){
   return $return;
 }
 
-function get_container_dynamic($ep, $query, $params, $content_type="text/html"){
+function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/html"){
   
   $return = array("header" => null, "content" => null, "errors" => null);
   $acceptheaders = new AcceptHeader($content_type);
 
   $current = new EasyRdf_Graph();
-  $resource = new EasyRdf_Resource($_SERVER['REQUEST_URI'], $current);
+  $resource = new EasyRdf_Resource($uri, $current);
   $resource->addLiteral('as:name', "tampering with arrangements");
   $resource->addType('as:Collection');
   $resource->addType('ldp:Container');
@@ -80,11 +80,13 @@ function get_container_dynamic($ep, $query, $params, $content_type="text/html"){
 
   if($r){
     $uris = select_to_list($r, array("uri"));
-    foreach($uris as $uri){
-      $resource->addResource("as:items", $uri);
-      $resource->addResource("ldp:contains", $uri);
+    foreach($uris as $u){
+      $resource->addResource("as:items", $u);
+      $resource->addResource("ldp:contains", $u);
+      // TODO: add each resource to graph.
     }
   }
+  
   $return = conneg($acceptheaders, $current);
   return $return;
 }
