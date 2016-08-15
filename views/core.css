@@ -1,0 +1,8 @@
+/* Boxes */
+.box {
+  width: 32px; height: 32px;
+  margin: 2px;
+  float: left;
+  color: white;
+  font-weight: bold; text-align: center; font-size: 2em;
+}
