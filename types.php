@@ -17,10 +17,18 @@ $typemap = array("checkins" => "as:Arrive"
                 ,"bookmarks" => "as:Add"
                 ,"reposts" => "as:Announce"
                 ,"rsvps" => "as:Accept"
+                ,"articles" => "as:Article"
+                ,"notes" => "as:Note"
+                ,"places" => "as:Place"
+                ,"follows" => "as:Follow"
   );
 
-$vals = array("rdf:type" => $typemap[$_GET['type']], "as:published" => "?date");
-$result = get_container_dynamic($ep, $relUri, "query_select_s_where", array($vals, 0, "date"), $ct);
+if($_GET['type'] == "places"){
+  $vals = array("rdf:type" => $typemap[$_GET['type']], "as:name" => "?sort");
+}else{
+  $vals = array("rdf:type" => $typemap[$_GET['type']], "as:published" => "?sort");
+}
+$result = get_container_dynamic($ep, $relUri, "query_select_s_where", array($vals, 0, "sort"), $ct);
 $header = $result['header'];
 $content = $result['content'];
 
