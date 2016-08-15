@@ -521,6 +521,54 @@ delete {
 
 > Checkin 20160807-2349
 
+[x] Change Consumption and Acquisition to Consume and Acquire and blog namespace
+
+```
+prefix blog: <http://vocab.amy.so/blog#> .
+prefix asext: <https://terms.rhiaro.co.uk/as#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s a asext:Consume .
+}where{
+    ?s a blog:Consumption.
+}
+```
+
+```
+prefix blog: <http://vocab.amy.so/blog#> .
+prefix asext: <https://terms.rhiaro.co.uk/as#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s a asext:Acquire .
+}where{
+    ?s a blog:Acquisition.
+}
+```
+
+```
+prefix blog: <http://vocab.amy.so/blog#> .
+prefix asext: <https://terms.rhiaro.co.uk/as#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s asext:cost ?c .
+}where{
+    ?s blog:cost ?c .
+}
+```
+
+```
+prefix blog: <http://vocab.amy.so/blog#> .
+prefix asext: <https://terms.rhiaro.co.uk/as#> .
+
+delete {
+    ?s1 a blog:Acquisition .
+    ?s2 a blog:Consumption .
+    ?s3 blog:cost ?c .
+}
+```
+
+> Checkin: 20160815-1613
+ 
 [x] -> I think I need a script+UI for type adding
 [ ] people to as:Profile or as:Person or as:Actor
 [ ] Add a as:Article if as:name and no other type
