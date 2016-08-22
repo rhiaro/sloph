@@ -99,6 +99,20 @@ ORDER BY DESC(?d)";
   return $q;
 }
 
+function query_select_s_and_type_desc($limit=0){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s ?t WHERE {
+  ?s ?p ?o .
+  OPTIONAL { ?s a ?t }
+  ?s as:published ?d .
+}
+ORDER BY DESC(?d)";
+  if($limit > 0){
+    $q .= "\nLIMIT $limit";
+  }
+  return $q;
+}
+
 function query_select_all($limit){
   $q = "SELECT * WHERE {
   ?s ?p ?o .
