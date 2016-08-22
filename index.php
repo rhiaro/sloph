@@ -33,10 +33,8 @@ try {
           $result = get($ep, $uri);
           $content = $result['content'];
           $resource = $content->resource($uri);
-          $types = $resource->types();
-          foreach($types as $t){
-            $last_of_each[$t] = $resource;
-          }
+          $last_of_each[$type] = $resource;
+          
         }
       }
 
