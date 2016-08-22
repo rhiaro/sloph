@@ -5,7 +5,7 @@ require_once('vendor/init.php');
 $headers = apache_request_headers();
 $relUri = $_SERVER['REQUEST_URI'];
 $ct = $headers["Accept"];
-$result = get_container_dynamic($ep, $relUri, "query_select_s_desc", array(500), $ct);
+$result = get_container_dynamic($ep, $relUri, "query_select_s_and_type_desc", array(1000), $ct);
 $header = $result['header'];
 $content = $result['content'];
 
@@ -17,27 +17,40 @@ try {
     $resource = $content->resource($relUri);
     $items = $content->all($relUri, 'as:items');
 
-    $full = array();
+    $last_of_each = array();
     $all = array();
-    $majortypes = array("as:Article", "as:Note", "as:Add", "as:Like");
 
     foreach($items as $item){
+
       $uri = $item->getUri();
-      $result = get($ep, $uri);
-      $header = $result['header'];
-      $content = $result['content'];
-      $resource = $content->resource($uri);
-
-      $types = $resource->types();
-      if(empty($types) || array_intersect($majortypes, $types)){
-        $full[] = $resource;
+      $types = $item->types();
+      if(empty($types)){
+        $types = array("as:Object");
+        $item->addResource("rdf:type", "as:Object");
+      }
+      foreach($types as $type){
+        if(!isset($last_of_each[$type]) && $type != "as:Activity"){
+          $result = get($ep, $uri);
+          $content = $result['content'];
+          $resource = $content->resource($uri);
+          $types = $resource->types();
+          foreach($types as $t){
+            $last_of_each[$t] = $resource;
+          }
+        }
       }
 
-      if(!isset($currentlocation) && $resource->isA('as:Arrive')){
-        $currentlocation = $resource->get('as:location');
+      if($item->isA('as:Arrive')){
+        $res = get($ep, $uri);
+        $arrive = $res['content']->resource($uri);
+        $item->addResource("as:location", $arrive->get("as:location"));
+        if(!isset($currentlocation)){
+          $currentlocation = $item->get("as:location");
+        }
       }
 
-      $all[] = $resource;
+      $all[] = $item;
+
     }
 
     /* Views stuff */
@@ -54,7 +67,7 @@ try {
     include 'views/top.php';
     include 'views/header.php';
 
-    foreach($full as $resource){
+    foreach($last_of_each as $resource){
       include 'views/article.php';
     }
 
