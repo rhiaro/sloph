@@ -568,6 +568,10 @@ delete {
 ```
 
 > Checkin: 20160815-1613
+
+[x] All content from markdown to html
+
+> Checkin: 20160822-1957
  
 [x] -> I think I need a script+UI for type adding
 [ ] people to as:Profile or as:Person or as:Actor
@@ -578,10 +582,6 @@ delete {
 > Checkin: up to http://llog.rhiaro.co.uk/1429108500-2 offset=440 at 20160808-0002
 > 
 > Checkin: up to http://llog.rhiaro.co.uk/1430007600-2 offset=500 at 20160808-0948
-
-[ ] All content from markdown to html
-
-> http://localhost/scripts/localedit.php?reset=uris&flag=doublecontents#https://rhiaro.co.uk/2015/05/iiiiiiiii-may
 
 [ ] All tags to proper as:Objects
     -> uri() not a thing in 1.0
