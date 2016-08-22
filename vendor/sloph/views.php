@@ -3,18 +3,20 @@
 function get_icon($resource){
   $icons = array(
        "asext:Consume" => "&#127860;"
-      ,"asext:Acquire" => "&#128230;"
+      ,"asext:Acquire" => "&#128176;"
       ,"asext:Sleep" => "&#128164;"
       ,"as:Article" => "&#128478;"
       ,"as:Note" => "&#128493;"
       ,"as:Like" => "&#10030;"
       ,"as:Add" => "&#43;"
-      ,"as:Announce" => "&#11246;"
+      ,"as:Announce" => "&#128257;"
       ,"as:Arrive" => ""
       ,"as:Follow" => "&#128483;"
       ,"as:Event" => "&#128467;"
       ,"as:Accept" => "&#128467;"
       ,"as:Invite" => "&#128467;"
+      ,"as:Travel" => "&#128099;"
+      ,"as:Object" => "&#133;"
     );
   foreach($icons as $type => $icon){
     if($resource->isA($type)){

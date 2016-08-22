@@ -1,6 +1,6 @@
 <article>
 
-  <?if(empty($resource->types()) || $resource->isA('as:Event') || $resource->isA('as:Place') || $resource->isA('as:Article')):?>
+  <?if($resource->isA('as:Object') || $resource->isA('as:Event') || $resource->isA('as:Place') || $resource->isA('as:Article')):?>
     <h1><?=$resource->get('as:name')?></h1>
   <?endif?>
   
