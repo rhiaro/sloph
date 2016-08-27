@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^(.*?)/?$ resource.php?resource=https://rhiaro.co.uk%{REQUEST_URI} [QSA,L]

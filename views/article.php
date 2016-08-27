@@ -8,7 +8,7 @@
   <?=$resource->get('as:content')?>
   
   <p><?=$resource->join('as:tag', ", ")?></p>
-  <p><datetime><a href="<?=$resource->getUri()?>"><?=$resource->get('as:published')?></a></datetime></p>
+  <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk/", "", $resource->getUri())?>"><?=$resource->get('as:published')?></a></datetime></p>
   
   <p><em><?=var_dump($resource->types())?></em></p>
 
