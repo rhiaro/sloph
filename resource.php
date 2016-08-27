@@ -29,12 +29,21 @@ try {
       $resource->addLiteral('view:wanderlust', 4);
     }
 
+    if($resource->isA("as:Travel")){
+      // Temporary for journeys
+      $resource->addLiteral('view:banality', 3);
+      $resource->addLiteral('view:intimacy', 5);
+      $resource->addLiteral('view:wanderlust', 5);
+    }
+
     $resource = set_views($ep, $resource);
     include 'views/top.php';
     include 'views/nav.php';
 
     if($resource->isA("as:Arrive")){
       include 'views/checkin.php';
+    }elseif($resource->isA("as:Travel") && $resource->get('as:origin') && $resource->get('as:target')){
+      include 'views/travel.php';
     }else{
       include 'views/article.php';
     }

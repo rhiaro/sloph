@@ -62,6 +62,8 @@ $_PREF = array(
         ,'solid' => 'http://www.w3.org/ns/solid#'
         ,'view' => 'https://terms.rhiaro.co.uk/view#'
         ,'asext' => 'https://terms.rhiaro.co.uk/as#'
+        ,'dbp' => 'http://dbpedia.org/property/'
+        ,'geo' => 'http://www.w3.org/2003/01/geo/wgs84_pos#'
       );
 $_NS = array_flip($_PREF);
 // TODO: sioc is wrong

@@ -1,5 +1,7 @@
 <?
 
+include 'views/geo.php';
+
 function get_icon($resource){
   foreach($resource->types() as $type){
     $t = get_icon_from_type($type);
@@ -17,12 +19,12 @@ function get_icon_from_type($type){
       ,"as:Like" => "&#10030;"
       ,"as:Add" => "&#43;"
       ,"as:Announce" => "&#128257;"
-      ,"as:Arrive" => ""
+      ,"as:Arrive" => "&#11165;"
       ,"as:Follow" => "&#128483;"
       ,"as:Event" => "&#128467;"
       ,"as:Accept" => "&#128467;"
       ,"as:Invite" => "&#128467;"
-      ,"as:Travel" => "&#128099;"
+      ,"as:Travel" => "&#10239;"
       ,"as:Object" => "&#133;"
     );
   if(isset($icons[$type])){
@@ -101,6 +103,7 @@ function get_style($resource){
       ,"wander" => array("view:wanderlust" => 3)
       ,"scholar" => array("view:informative" => 3)
       ,"checkin" => array("view:wanderlust" => 4, "view:banality" => 5, "view:intimacy" => 5)
+      ,"travel" => array("view:wanderlust" => 5, "view:banality" => 3, "view:intimacy" => 5)
     );
 
   $s = array();

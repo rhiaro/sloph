@@ -1,0 +1,31 @@
+.map {
+  text-align: center;
+  overflow: hidden;
+  max-width: 50%; min-width: 50%; width: 50%;
+  float: left;
+  white-space: nowrap;
+}
+.map-holder { position: relative; min-height: 256px; }
+.map-holder div:nth-child(1){
+  position: absolute; left: calc(50% - 384px); top: 0px;
+}
+.map-holder div:nth-child(2){
+  position: absolute; left: calc(50% - 128px); top: 0px;
+}
+.map-holder div:nth-child(3){
+  position: absolute; left: calc(50% + 128px); top: 0px;
+}
+
+.map-holder div {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: middle middle;
+  height: 256px; width: 256px;
+  display: inline-block;
+}
+.arrow {
+  margin-top: 128px; 
+  text-align: center; 
+  font-size: 3em; 
+  position: absolute; left: calc(50% - .75em);
+}
