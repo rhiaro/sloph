@@ -41,12 +41,17 @@ foreach($resource->types() as $type){
 ?>
 
 <nav>
-  <p><a class="left" href="<?=str_replace("https://rhiaro.co.uk", "", $prev->getUri())?>">Prev</a></p>
-  <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next->getUri())?>">Next</a></p>
-  <?foreach($next_types as $type => $next_one):?>
-    <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next_one->getUri())?>">Next <?=get_icon_from_type($type)?></a></p>
-  <?endforeach?>
+  <?if(isset($next)):?>
+    <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next->getUri())?>">Next</a></p>
+  <?endif?>
+  <?if(isset($prev)):?>
+    <p><a class="left" href="<?=str_replace("https://rhiaro.co.uk", "", $prev->getUri())?>">Prev</a></p>
+  <?endif?>
+
   <?foreach($prev_types as $type => $prev_one):?>
     <p><a class="left" href="<?=str_replace("https://rhiaro.co.uk", "", $prev_one->getUri())?>">Prev <?=get_icon_from_type($type)?></a></p>
+  <?endforeach?>
+  <?foreach($next_types as $type => $next_one):?>
+    <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next_one->getUri())?>">Next <?=get_icon_from_type($type)?></a></p>
   <?endforeach?>
 </nav>
