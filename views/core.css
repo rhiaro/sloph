@@ -34,3 +34,15 @@ nav a:hover {
 }
 nav a.left { float: left; }
 nav a.right { float: right; }
+
+.tags a {
+  font-size: 0.8em;
+  text-decoration: none;
+  padding: 0.4em;
+  display: inline-block;
+  color: inherit;
+  border: 1px solid #ccc;
+}
+.tags a:hover {
+  background-color: #ccc;
+}

@@ -27,6 +27,7 @@
     </datetime>
     <?=$resource->get('asext:cost') ? " at a cost of ".$resource->get('asext:cost') : ""?>
   </p>
+  <? include('tags.php'); ?>
 
   <div class="map">
     <div class="map-holder">
@@ -34,7 +35,7 @@
       <div style="background-image: url('<?=$from_map?>')"></div>
       <div style="background-image: url('<?=next_tile_x($from_map)?>')"></div>
     </div>
-    <p>Leaving <?=$from_name?> at <?=$from_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?></p>
+    <p>Leaving <a href="<?=$resource->get('as:origin')?>"><?=$from_name?></a> at <?=$from_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?></p>
   </div>
   <div class="map">
     <div class="map-holder">
@@ -42,16 +43,12 @@
       <div style="background-image: url('<?=$to_map?>')"></div>
       <div style="background-image: url('<?=next_tile_x($to_map)?>')"></div>
     </div>
-    <p>Arriving in <?=$to_name?> at <?=$to_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?></p>
+    <p>Arriving in <a href="<?=$resource->get('as:target')?>"><?=$to_name?></a> at <?=$to_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?></p>
   </div>
   <hr/>
   <p class="arrow"><?=get_travel_icon_from_tags($resource->all('as:tag'))?></p>
 
   <?=$resource->get('as:summary')?>
   <?=$resource->get('as:content')?>
-  
-  <p><?=$resource->join('as:tag', ", ")?></p>
-  
-  <p><em><?=$resource->dump()?></em></p>
 
 </article>

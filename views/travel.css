@@ -29,3 +29,10 @@
   font-size: 5em; 
   position: absolute; left: calc(50% - .75em);
 }
+
+a, a:visited {
+  color: inherit;
+}
+a:hover {
+  opacity: 0.6;
+}
