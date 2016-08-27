@@ -41,6 +41,8 @@ foreach($resource->types() as $type){
 ?>
 
 <nav>
+  <a href="/"><img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" /></a>
+
   <?if(isset($next)):?>
     <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next->getUri())?>">Next</a></p>
   <?endif?>

@@ -21,7 +21,7 @@ nav {
   text-align: center;
   overflow: hidden;
 }
-nav a {
+nav p a {
   display: inline-block;
   padding: 0.4em; margin: 0.4em;
   background-color: white; opacity: 0.6;
@@ -34,6 +34,17 @@ nav a:hover {
 }
 nav a.left { float: left; }
 nav a.right { float: right; }
+nav a img {
+  margin-bottom: -2em; 
+  opacity: 0.6;
+  margin-left: auto; margin-right: auto;
+  float: none;
+  width: 32px; height: 32px;
+  margin-bottom: -2em;
+}
+nav a:hover img {
+  opacity: 1;
+}
 
 .tags a {
   font-size: 0.8em;
