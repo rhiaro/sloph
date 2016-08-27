@@ -5,7 +5,7 @@
   $location = $locations->resource($resource->get('as:location'));
   $date = new DateTime($resource->get('as:published'));
 
-  $q = query_select_s_next_of_type($resource->getUri());
+  $q = query_select_s_next_of_type($resource->getUri(), 'as:Arrive');
   $nextres = execute_query($ep, $q);
   if(!empty($nextres['rows'])){
     $next = get($ep, $nextres['rows'][0]['s']);

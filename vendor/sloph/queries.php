@@ -168,14 +168,13 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_next_of_type($uri){
+function query_select_s_next_of_type($uri, $type){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
   $q .= "  ?s as:published ?d . \n";
-  $q .= "  ?s a ?t . \n";
+  $q .= "  ?s a $type . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
-  $q .= "  <$uri> a ?t . \n";
   $q .= "  FILTER ( ?d > ?d2 ) . \n";
   $q .= "}
 ORDER BY ASC(?d)
@@ -198,14 +197,13 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_prev_of_type($uri){
+function query_select_s_prev_of_type($uri, $type){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
   $q .= "  ?s as:published ?d . \n";
-  $q .= "  ?s a ?t . \n";
+  $q .= "  ?s a $type . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
-  $q .= "  <$uri> a ?t . \n";
   $q .= "  FILTER ( ?d < ?d2 ) . \n";
   $q .= "}
 ORDER BY DESC(?d)
