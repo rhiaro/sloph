@@ -21,11 +21,14 @@ try {
     echo $content;
   }else{
     $resource = $content->resource();
-    // $resource->addLiteral('view:banality', 3);
-    // $resource->addLiteral('view:intimacy', 3);
-    // $resource->addLiteral('view:tastiness', 3);
-    // $resource->addLiteral('view:wanderlust', 3);
-    // $resource->addLiteral('view:informative', 3);
+    
+    if($resource->isA("as:Arrive")){
+      // Temporary for checkins
+      $resource->addLiteral('view:banality', 5);
+      $resource->addLiteral('view:intimacy', 5);
+      $resource->addLiteral('view:wanderlust', 4);
+    }
+
     $resource = set_views($ep, $resource);
     include 'views/top.php';
 
