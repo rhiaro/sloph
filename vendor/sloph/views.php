@@ -5,7 +5,7 @@ function get_icon($resource){
        "asext:Consume" => "&#127860;"
       ,"asext:Acquire" => "&#128176;"
       ,"asext:Sleep" => "&#128164;"
-      ,"as:Article" => "&#128478;"
+      ,"as:Article" => "&#128196;"
       ,"as:Note" => "&#128493;"
       ,"as:Like" => "&#10030;"
       ,"as:Add" => "&#43;"
@@ -44,6 +44,26 @@ function score_predicates(){
     , 'view:wanderlust'
     , 'view:informative'
   );
+}
+
+function set_views($ep, $resource){
+  
+  if(!$resource->get('view:css')){
+    $resource->addLiteral('view:stylesheet', 'views/'.get_style($resource).".css");
+  }
+
+  // Background colour for places and checkins
+  if($resource->get('view:color') && !$resource->get('view:css')){
+    $resource->addLiteral('view:css', "body { background-color: ".$resource->get('view:color')."; }\n");
+  }
+  if($resource->isA('as:Arrive')){
+    $loc = get($ep, $resource->get('as:location'));
+    $loc = $loc['content'];
+    $resource->addLiteral('view:css', "body { background-color: ".$loc->get($resource->get('as:location'), 'view:color')."; }\n");
+  }
+
+
+  return $resource;
 }
 
 function get_style($resource){

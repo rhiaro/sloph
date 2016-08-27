@@ -3,7 +3,7 @@ session_start();
 require_once('vendor/init.php');
 
 if(isset($_GET['resource'])){
-  $resource = urldecode($_GET['resource']);
+  $resource = $_GET['resource'];
   $headers = apache_request_headers();
   $ct = $headers["Accept"];
 
@@ -26,11 +26,15 @@ try {
     // $resource->addLiteral('view:tastiness', 3);
     // $resource->addLiteral('view:wanderlust', 3);
     // $resource->addLiteral('view:informative', 3);
-    if(!$resource->get('view:css')){
-      $resource->addLiteral('view:css', 'views/'.get_style($resource).".css");
-    }
+    $resource = set_views($ep, $resource);
     include 'views/top.php';
-    include 'views/article.php';
+
+    if($resource->isA("as:Arrive")){
+      include 'views/checkin.php';
+    }else{
+      include 'views/article.php';
+    }
+
     include 'views/end.php';
   }
 }catch(Exception $e){
