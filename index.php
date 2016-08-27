@@ -34,7 +34,6 @@ try {
           $content = $result['content'];
           $resource = $content->resource($uri);
           $last_of_each[$type] = $resource;
-          
         }
       }
 
@@ -64,13 +63,20 @@ try {
 
     include 'views/top.php';
     include 'views/header.php';
+    ?>
 
+    <div class="boxes">
+      <img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" class="box" />
+      <?
+      foreach($all as $resource){
+        include 'views/boxes.php';
+      }
+      ?>
+    </div>
+    
+    <?
     foreach($last_of_each as $resource){
       include 'views/article.php';
-    }
-
-    foreach($all as $resource){
-      include 'views/boxes.php';
     }
 
     include 'views/end.php';
