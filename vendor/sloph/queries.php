@@ -154,6 +154,36 @@ function query_select_s_views($score, $limit=10){
   return $q;
 }
 
+function query_select_s_next($uri){
+  $q = get_prefixes();
+
+  $q .= "SELECT ?s WHERE { \n";
+  $q .= "  ?s as:published ?d . \n";
+  $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= "  FILTER ( ?d > ?d2 ) . \n";
+  $q .= "}
+ORDER BY ASC(?d)
+LIMIT 1
+";
+  return $q;
+}
+
+function query_select_s_next_of_type($uri){
+  $q = get_prefixes();
+
+  $q .= "SELECT ?s WHERE { \n";
+  $q .= "  ?s as:published ?d . \n";
+  $q .= "  ?s a ?t . \n";
+  $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= "  <$uri> a ?t . \n";
+  $q .= "  FILTER ( ?d > ?d2 ) . \n";
+  $q .= "}
+ORDER BY ASC(?d)
+LIMIT 1
+";
+  return $q;
+}
+
 /* Specific queries */
 
 function query_for_places(){
