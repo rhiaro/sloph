@@ -1,4 +1,42 @@
 body {
   font-family: Arial;
   color: brown;
+  text-align: center;
+}
+
+article {
+  width: 100%; max-width: 512px;
+}
+
+article div {
+  background-color: brown;
+  border: 8px solid brown;
+  padding: 0.2em;
+}
+article div p {
+  background-color: white;
+  padding: 0; margin: 0;
+}
+article div p {
+  font-size: 2em;
+  padding: 0.4em;
+}
+article div span {
+  display: block; 
+  background-color: white;
+  font-size: 6em;
+}
+article div img {
+  width: 100%;
+  max-width: 512px;
+}
+
+.tags {
+  text-align: left;
+}
+
+datetime, datetime a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
 }

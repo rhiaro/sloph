@@ -125,7 +125,7 @@ function get_style($resource){
        "base" => array()
       ,"banal" => array("view:banality" => 3)
       ,"intimate" => array("view:intimacy" => 3)
-      ,"tasty" => array("view:tastiness" => 3)
+      ,"tasty" => array("view:tastiness" => 5)
       ,"wander" => array("view:wanderlust" => 3)
       ,"scholar" => array("view:informative" => 3)
       ,"checkin" => array("view:wanderlust" => 4, "view:banality" => 5, "view:intimacy" => 5)
