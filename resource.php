@@ -31,6 +31,7 @@ try {
 
     $resource = set_views($ep, $resource);
     include 'views/top.php';
+    include 'views/nav.php';
 
     if($resource->isA("as:Arrive")){
       include 'views/checkin.php';
