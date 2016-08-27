@@ -93,6 +93,7 @@ function get_style($resource){
       ,"tasty" => array("view:tastiness" => 3)
       ,"wander" => array("view:wanderlust" => 3)
       ,"scholar" => array("view:informative" => 3)
+      ,"checkin" => array("view:wanderlust" => 4, "view:banality" => 5, "view:intimacy" => 5)
     );
 
   $s = array();
