@@ -45,7 +45,7 @@
     <p>Arriving in <?=$to_name?> at <?=$to_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?></p>
   </div>
   <hr/>
-  <p class="arrow"><?=get_icon_from_type('as:Travel')?></p>
+  <p class="arrow"><?=get_travel_icon_from_tags($resource->all('as:tag'))?></p>
 
   <?=$resource->get('as:summary')?>
   <?=$resource->get('as:content')?>

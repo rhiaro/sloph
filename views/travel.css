@@ -26,6 +26,6 @@
 .arrow {
   margin-top: 128px; 
   text-align: center; 
-  font-size: 3em; 
+  font-size: 5em; 
   position: absolute; left: calc(50% - .75em);
 }

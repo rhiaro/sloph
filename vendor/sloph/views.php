@@ -34,6 +34,32 @@ function get_icon_from_type($type){
   }
 }
 
+function get_travel_icon($tag){
+  $icons = array(
+     "bus" => "&#128652;"
+    ,"car" => "&#128664;"
+    ,"plane" => "&#9992;"
+    ,"boat" => "&#128741;"
+    ,"walk" => "&#128694;"
+    ,"train" => "&#128645;"
+  );
+  if(isset($icons[$tag])){
+    return $icons[$tag];
+  }else{
+    return false;
+  }
+}
+
+function get_travel_icon_from_tags($tags){
+  foreach($tags as $tag){
+    $icon = get_travel_icon($tag->getValue());
+    if($icon){
+      return $icon;
+    }
+  }
+  return get_icon_from_type('as:Travel');
+}
+
 function get_locations($ep){
   $q = query_for_places();
   $r = execute_query($ep, $q);
