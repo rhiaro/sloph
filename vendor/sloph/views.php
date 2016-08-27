@@ -1,6 +1,13 @@
 <?
 
 function get_icon($resource){
+  foreach($resource->types() as $type){
+    $t = get_icon_from_type($type);
+    if($t) { return $t; }
+  }
+}
+
+function get_icon_from_type($type){
   $icons = array(
        "asext:Consume" => "&#127860;"
       ,"asext:Acquire" => "&#128176;"
@@ -18,10 +25,10 @@ function get_icon($resource){
       ,"as:Travel" => "&#128099;"
       ,"as:Object" => "&#133;"
     );
-  foreach($icons as $type => $icon){
-    if($resource->isA($type)){
-      return $icon;
-    }
+  if(isset($icons[$type])){
+    return $icons[$type];
+  }else{
+    return false;
   }
 }
 

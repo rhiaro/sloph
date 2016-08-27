@@ -43,7 +43,7 @@ if(!array_intersect($resource->types(), $prev->types())){
   <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next->getUri())?>">Next</a></p>
   <?foreach($resource->types() as $type):?>
     <!-- FIXME: The limit on the query means even when there are multiple types it only gets one back -->
-    <p><a class="left" href="<?=str_replace("https://rhiaro.co.uk", "", $prev_type->getUri())?>">Prev <?=$type?></a></p>
-    <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next_type->getUri())?>">Next <?=$type?></a></p>
+    <p><a class="left" href="<?=str_replace("https://rhiaro.co.uk", "", $prev_type->getUri())?>">Prev <?=get_icon_from_type($type)?></a></p>
+    <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next_type->getUri())?>">Next <?=get_icon_from_type($type)?></a></p>
   <?endforeach?>
 </nav>
