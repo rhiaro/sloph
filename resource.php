@@ -20,7 +20,13 @@ try {
     header($header);
     echo $content;
   }else{
+    
+
     $resource = $content->resource();
+    if(isset($_GET['debug'])){
+      var_dump($resource);
+      echo "<hr/>".$resource->dump();
+    }
     
     if($resource->isA("as:Arrive")){
       // Temporary for checkins
@@ -55,6 +61,8 @@ try {
       include 'views/travel.php';
     }elseif($resource->isA("asext:Consume") || $resource->isA("asext:Acquire")){
       include 'views/stuff.php';
+    }elseif($resource->isA("as:Invite") || $resource->isA("as:Accept") || $resource->isA("as:Event")){
+      include 'views/event.php';
     }else{
       include 'views/article.php';
     }
