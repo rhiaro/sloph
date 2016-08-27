@@ -12,3 +12,33 @@ h1 {
   text-align: center;
   font-family: serif;
 }
+
+datetime {
+  display: block;
+  text-align: right;
+}
+datetime a {
+  color: inherit;
+}
+
+.object, .object:visited, .object:hover {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.6em;
+  font-size: 2em;
+  display: block;
+  opacity: 1;
+}
+.like {
+  background-color: #fff6a4; opacity: 0.6;
+}
+.bookmark {
+  background-color: #b4e6ee; opacity: 0.6;
+}
+.repost {
+  background-color: #f6a400; opacity: 0.6;
+}
+.object span {
+  font-size: 3em;
+  line-height: -1;
+}

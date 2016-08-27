@@ -4,7 +4,11 @@ include 'views/geo.php';
 
 function get_icon($resource){
   foreach($resource->types() as $type){
-    $t = get_icon_from_type($type);
+    if($resource->isA("as:Add") && $resource->get("as:target") == "https://rhiaro.co.uk/bookmarks/"){
+      $t = "&#128278;";
+    }else{
+      $t = get_icon_from_type($type);
+    }
     if($t) { return $t; }
   }
 }

@@ -47,7 +47,9 @@ try {
     include 'views/top.php';
     include 'views/nav.php';
 
-    if($resource->isA("as:Arrive")){
+    if($resource->isA("as:Add") || $resource->isA("as:Like") || $resource->isA("as:Announce")){
+      include 'views/link.php';
+    }elseif($resource->isA("as:Arrive")){
       include 'views/checkin.php';
     }elseif($resource->isA("as:Travel") && $resource->get('as:origin') && $resource->get('as:target')){
       include 'views/travel.php';
