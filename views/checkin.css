@@ -1,0 +1,15 @@
+article {
+  max-width: 60%;
+  margin-top: 2em;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+article a, article a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+article a:hover {
+  background-color: white;
+}
