@@ -24,7 +24,7 @@ try {
 
     $resource = $content->resource();
     if(isset($_GET['debug'])){
-      var_dump($resource);
+      // var_dump($resource);
       echo "<hr/>".$resource->dump();
     }
     
@@ -55,7 +55,7 @@ try {
 
     if($resource->isA("as:Add") || $resource->isA("as:Like") || $resource->isA("as:Announce")){
       include 'views/link.php';
-    }elseif($resource->isA("as:Arrive")){
+    }elseif($resource->isA("as:Arrive")){ 
       include 'views/checkin.php';
     }elseif($resource->isA("as:Travel") && $resource->get('as:origin') && $resource->get('as:target')){
       include 'views/travel.php';
@@ -65,6 +65,11 @@ try {
       include 'views/event.php';
     }else{
       include 'views/article.php';
+    }
+
+    if(isset($_GET['debug'])){
+      // var_dump($resource);
+      echo "<hr/>".$resource->dump();
     }
 
     include 'views/end.php';

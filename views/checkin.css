@@ -1,3 +1,4 @@
+@import url('polaroid.css'); /* HERENOW - how to get different css for specific checkins?*/
 article {
   max-width: 60%;
   margin-top: 2em;
