@@ -59,7 +59,7 @@ function get($ep, $uri, $content_type="text/html"){
     $return = conneg($acceptheaders, $graph);
   }else{
     $return["header"] = "HTTP/1.1 404 Not Found";
-    $return["content"] = "No such resource exists.";
+    $return["content"] = false;
   }
   return $return;
 }
