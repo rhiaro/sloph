@@ -75,6 +75,46 @@ function get_locations($ep){
   return null;
 }
 
+function time_ago($date){
+  if(gettype($date) != "DateTime"){
+    $date = new DateTime($date);
+  }
+  $duration = $date->diff(new DateTime());
+  $ago = array();
+  if($duration->y > 0){ 
+    $y = $duration->y . " year"; 
+    if($duration->y > 1){ $y .=  "s"; }
+    $ago[] = $y;
+  }
+  if($duration->m > 0){ 
+    $y = $duration->m . " month"; 
+    if($duration->m > 1){ $y .=  "s"; }
+    $ago[] = $y;
+  }
+  if($duration->d > 0){ 
+    $y = $duration->d . " day"; 
+    if($duration->d > 1){ $y .=  "s"; }
+    $ago[] = $y;
+  }
+  if($duration->h > 0){ 
+    $y = $duration->h . " hour"; 
+    if($duration->h > 1){ $y .=  "s"; }
+    $ago[] = $y;
+  }
+  if($duration->i > 0){ 
+    $y = $duration->i . " minute"; 
+    if($duration->i > 1){ $y .=  "s"; }
+    $ago[] = $y;
+  }
+  if($duration->s > 0){ 
+    $y = $duration->s . " second"; 
+    if($duration->s > 1){ $y .=  "s"; }
+    $ago[] = $y;
+  }
+  $ago[count($ago)-1] = " and ".$ago[count($ago)-1] . " ago";
+  return implode(", ", $ago);
+}
+
 function score_predicates(){
   return array(
       'view:banality'
