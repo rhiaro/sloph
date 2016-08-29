@@ -98,7 +98,9 @@ function set_views($ep, $resource){
   if($resource->isA('as:Arrive')){
     $loc = get($ep, $resource->get('as:location'));
     $loc = $loc['content'];
-    $resource->addLiteral('view:css', "body { background-color: ".$loc->get($resource->get('as:location'), 'view:color')."; }\n");
+    if($loc){
+      $resource->addLiteral('view:css', "body { background-color: ".$loc->get($resource->get('as:location'), 'view:color')."; }\n");  
+    }
   }
 
 
