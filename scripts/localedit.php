@@ -138,8 +138,10 @@ SELECT ?s WHERE {
   ?s as:content ?con2 .
   filter(?con1 != ?con2) .
 }";
-  }
-  
+  } 
+}
+if(isset($_GET['uri'])){
+  $_SESSION['uris'] = array($_GET['uri']);
 }
 
 if(!isset($_SESSION['uris'])){
