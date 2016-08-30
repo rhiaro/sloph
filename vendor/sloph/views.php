@@ -1,7 +1,5 @@
 <?
 
-include 'views/geo.php';
-
 function get_icon($resource){
   foreach($resource->types() as $type){
     if($resource->isA("as:Add") && $resource->get("as:target") == "https://rhiaro.co.uk/bookmarks/"){
@@ -123,6 +121,27 @@ function time_ago($date){
   }
   $ago[count($ago)-1] = " and ".$ago[count($ago)-1] . " ago";
   return implode(", ", $ago);
+}
+
+function lat_lon_to_map($lat, $lon, $zoom=8){
+  $x = floor((($lon + 180) / 360) * pow(2, $zoom));
+  $y = floor((1 - log(tan(deg2rad($lat)) + 1 / cos(deg2rad($lat))) / pi()) /2 * pow(2, $zoom));
+  //$map = "http://b.tile.openstreetmap.org/$zoom/$x/$y.png";
+  $map = "http://a.basemaps.cartocdn.com/light_all/$zoom/$x/$y.png";
+  return $map;
+}
+
+function next_tile_x($tile){
+  $url = explode("/", $tile);
+  $xpos = count($url) - 2;
+  $url[$xpos] = $url[$xpos] + 1;
+  return implode("/", $url);
+}
+function prev_tile_x($tile){
+  $url = explode("/", $tile);
+  $xpos = count($url) - 2;
+  $url[$xpos] = $url[$xpos] - 1;
+  return implode("/", $url);
 }
 
 function score_predicates(){
