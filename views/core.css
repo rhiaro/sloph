@@ -80,6 +80,9 @@ nav a:hover img {
 #me a:hover {
   color: white;
 }
+#me time{
+  display: inline;
+}
 #me time a, #me time a:visited {
   padding: 0.2em;
   text-decoration: none;
