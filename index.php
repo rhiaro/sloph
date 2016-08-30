@@ -82,9 +82,9 @@ try {
       ?>
     </div>
     
-    <div id="me" class="clearfix">
+    <div id="me" class="clearfix" resource="#me" typeof="as:Person">
       <h1>
-        <img src="https://rhiaro.co.uk/stash/dp.png" alt="rhiaro" />
+        <img src="https://rhiaro.co.uk/stash/dp.png" alt="rhiaro" rel="as:image" />
          ... tmi ...
       </h1>
       <div class="w1of2">
@@ -97,10 +97,10 @@ try {
         <nav><p><a href="<?=$latest_posts[9]->getUri()?>">Next</a></p></nav>
       </div>
       <div class="w1of2">
-        <p>IRL I am Amy</p>
-        <p>On twitter I am @rhiaro</p>
-        <p>On github I am rhiaro</p>
-        <p>By email I am amy at rhiaro.co.uk</p>
+        <p>IRL I am <span property="as:name">Amy</span></p>
+        <p>On twitter I am <a href="https://twitter.com/rhiaro" rel="me">@rhiaro</a></p>
+        <p>On github I am <a href="https://github.com/rhiaro" rel="me">rhiaro</a></p>
+        <p>By email I am <a href="mailto:amy@rhiaro.co.uk" rel="me">amy@rhiaro.co.uk</a></p>
       <?
       foreach($last_of_derp as $resource){
         include 'views/profile_post.php';
