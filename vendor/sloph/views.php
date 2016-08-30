@@ -75,6 +75,16 @@ function get_locations($ep){
   return null;
 }
 
+function get_name($ep, $uri){
+  $resource = get($ep, $uri);
+  if($resource['content']){
+    return $resource->get($uri, 'as:name');
+  }else{
+    // todo: deref other uris and look for various name properties
+    return str_replace("http://dbpedia.org/resource/", "", $uri);
+  }
+}
+
 function time_ago($date){
   if(gettype($date) != "DateTime"){
     $date = new DateTime($date);

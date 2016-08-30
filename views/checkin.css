@@ -1,11 +1,12 @@
-@import url('polaroid.css'); /* HERENOW - how to get different css for specific checkins?*/
+@import url('polaroid.css'); /*  - how to get different css for specific checkins?*/
 article {
   max-width: 60%;
   margin-top: 2em;
   text-align: center;
+}
+article p {
   font-size: 1.6em;
 }
-
 article a, article a:visited {
   text-decoration: none;
   color: inherit;

@@ -8,7 +8,9 @@
   <?=$resource->get('as:content')?>
   
   <? include('tags.php'); ?>
-  <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk/", "", $resource->getUri())?>"><?=$resource->get('as:published')?></a></datetime></p>
+  <?
+  $date = new DateTime($resource->get('as:published'));
+  ?>
+  <p><time><a href="<?=str_replace("https://rhiaro.co.uk/", "", $resource->getUri())?>"><?=$date->format("d M Y, H:i (e)")?></a></time></p>
   
-
 </article>

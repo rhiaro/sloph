@@ -17,7 +17,8 @@ try {
     $resource = $content->resource($relUri);
     $items = $content->all($relUri, 'as:items');
 
-    $last_of_each = array();
+    $last_of_derp = array();
+    $latest_posts = array();
     $all = array();
 
     foreach($items as $item){
@@ -29,11 +30,18 @@ try {
         $item->addResource("rdf:type", "as:Object");
       }
       foreach($types as $type){
-        if(!isset($last_of_each[$type]) && $type != "as:Activity"){
+        if(!isset($last_of_derp[$type]) && $type != "as:Activity"){
           $result = get($ep, $uri);
           $content = $result['content'];
           $resource = $content->resource($uri);
-          $last_of_each[$type] = $resource;
+          $last_of_derp[$type] = $resource;
+        }
+
+        if(($type == "as:Article" || $type == "as:Note") && count($latest_posts) <= 9){
+          $result = get($ep, $uri);
+          $content = $result['content'];
+          $resource = $content->resource($uri);
+          $latest_posts[] = $resource;
         }
       }
 
@@ -56,7 +64,7 @@ try {
     }
 
     $locations = get_locations($ep);
-    $wherestyle = "body { background-color: ".$locations->get($currentlocation, 'view:color')."}";
+    $wherestyle = "body, #me a:hover { background-color: ".$locations->get($currentlocation, 'view:color')."}\n";
     if(!$resource->get('view:css')){
       $resource->addLiteral('view:css', $wherestyle);
     }
@@ -66,7 +74,7 @@ try {
     ?>
 
     <div class="boxes">
-      <img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" class="box" />
+      <a href="#me"><img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" class="box" /></a>
       <?
       foreach($all as $resource){
         include 'views/boxes.php';
@@ -74,11 +82,33 @@ try {
       ?>
     </div>
     
-    <?
-    foreach($last_of_each as $resource){
-      include 'views/article.php';
-    }
+    <div id="me" class="clearfix">
+      <h1>
+        <img src="https://rhiaro.co.uk/stash/dp.png" alt="rhiaro" />
+         ... tmi ...
+      </h1>
+      <div class="w1of2">
 
+        <?for($i=0; $i < 9; $i++){
+          $resource = $latest_posts[$i];
+          include 'views/article.php'; 
+        }
+        ?>
+        <nav><p><a href="<?=$latest_posts[9]->getUri()?>">Next</a></p></nav>
+      </div>
+      <div class="w1of2">
+        <p>IRL I am Amy</p>
+        <p>On twitter I am @rhiaro</p>
+        <p>On github I am rhiaro</p>
+        <p>By email I am amy at rhiaro.co.uk</p>
+      <?
+      foreach($last_of_derp as $resource){
+        include 'views/profile_post.php';
+      }
+      ?>
+      </div>
+    </div>
+    <?
     include 'views/end.php';
 
   }

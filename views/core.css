@@ -1,3 +1,11 @@
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
 /* Boxes */
 .boxes {
   overflow:hidden;
@@ -46,6 +54,37 @@ nav a:hover img {
   opacity: 1;
 }
 
+#me {
+  background-color: white;
+  opacity: 0.8;
+  padding: 1em; margin: 1em; margin-top: 32px;
+}
+#me h1 {
+  font-size: 1.2em; text-align: left;
+  font-family: serif;
+  line-height: 1.6;
+  font-style: italic;
+}
+#me h1 img {
+  width: 64px; margin-top: calc(-32px - 2em);
+  border: 3px solid white;
+}
+#me article {
+  width: 98%;
+  border-bottom: 1px solid #eee;
+}
+#me a, #me a:visited {
+  text-decoration: underline;
+  color: inherit;
+}
+#me a:hover {
+  color: white;
+}
+#me time a, #me time a:visited {
+  padding: 0.2em;
+  text-decoration: none;
+}
+
 .tags a {
   font-size: 0.8em;
   text-decoration: none;
@@ -56,4 +95,24 @@ nav a:hover img {
 }
 .tags a:hover {
   background-color: #ccc;
+}
+
+/* Grid */
+.w1of1, .w1of2, .w1of3, .w1of4, .w1of5,
+.w2of3, .w3of4, .w2of5, .w3of5, .w4of5 {
+    width: 100%;
+    word-wrap: break-word;
+}
+@media screen and (min-width: 768px){
+
+  .w1of2 { width: 50%; float: left; }
+  .w1of3 { width: 33%; float: left; }
+  .w1of4 { width: 25%; float: left; }
+  .w1of5 { width: 20%; float: left; }
+  .w2of3 { width: 66%; float: left; }
+  .w3of4 { width: 75%; float: left; }
+  .w2of5 { width: 40%; float: left; }
+  .w3of5 { width: 60%; float: left; }
+  .w4of5 { width: 80%; float: left; }
+
 }
