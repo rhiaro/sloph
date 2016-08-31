@@ -17,7 +17,7 @@ if($resource->isA('as:Announce')){
     <p>
       <a class="object<?=$linkclass?>" href="<?=$resource->get('as:object')?>">
         <span><?=get_icon($resource)?></span>
-        <?=$resource->get('as:name') ? $resource->get('as:name') : $resource->get('as:object') ?>
+        <span><?=$resource->get('as:name') ? $resource->get('as:name') : $resource->get('as:object') ?></span>
       </a>
     </p>
 

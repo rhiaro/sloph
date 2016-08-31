@@ -8,7 +8,7 @@ article {
   margin-top: 1em; margin-bottom: 1em;
   overflow: hidden;
 }
-article p {
+article p, article li {
   font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
   line-height: 1.58;
   font-weight: 400;
@@ -44,9 +44,9 @@ time a {
   text-decoration: none;
   color: inherit;
   padding: 0.6em;
-  font-size: 2em;
+  font-size: 1.4em;
   display: block;
-  opacity: 1;
+  opacity: 1; line-height: 1;
 }
 .like {
   background-color: #fff6a4; opacity: 0.6;
@@ -57,9 +57,8 @@ time a {
 .repost {
   background-color: #f6a400; opacity: 0.6;
 }
-.object span {
-  font-size: 3em;
-  line-height: -1;
+.object span:first-of-type {
+  font-size: 3em; line-height: 0.8;
 }
 .tags {
   font-family: sans-serif;
