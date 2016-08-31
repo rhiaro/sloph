@@ -6,7 +6,7 @@
   $map = lat_lon_to_map($lat, $lon, 7);
 ?>
 <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk", "", $resource->getUri())?>"><?=$date->format("l \\t\h\\e jS \o\\f F \a\\t g:ia (e)")?></a></datetime></p>
-<div>
+<div class="map">
   <img src="<?=$map?>" />
   <p><?=$dbpedia->get($resource->get('as:location'), 'foaf:name')->getValue()?></p>
   <?=$resource->get('as:name') ? "<p>".$resource->get('as:name')."</p>" : "" ?>

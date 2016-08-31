@@ -119,3 +119,7 @@ nav a:hover img {
   .w4of5 { width: 80%; float: left; }
 
 }
+
+article img {
+  width: 100%; max-width: 100%;
+}
