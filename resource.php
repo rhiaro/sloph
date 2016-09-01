@@ -53,21 +53,7 @@ try {
     include 'views/top.php';
     include 'views/nav.php';
 
-    if($resource->isA("as:Add") || $resource->isA("as:Like") || $resource->isA("as:Announce")){
-      include 'views/link.php';
-    }elseif($resource->isA("as:Arrive")){ 
-      include 'views/checkin.php';
-    }elseif($resource->isA("as:Travel") && $resource->get('as:origin') && $resource->get('as:target')){
-      include 'views/travel.php';
-    }elseif($resource->isA("asext:Consume") || $resource->isA("asext:Acquire")){
-      include 'views/stuff.php';
-    }elseif($resource->isA("as:Invite") || $resource->isA("as:Accept") || $resource->isA("as:Event")){
-      include 'views/event.php';
-    }elseif($resource->isA("as:Collection")){
-      include 'views/collection.php';
-    }else{
-      include 'views/article.php';
-    }
+    include 'views/'.view_router($resource).'.php';
 
     if(isset($_GET['debug'])){
       // var_dump($resource);

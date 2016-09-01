@@ -38,12 +38,12 @@ function get_icon_from_type($type){
 
 function get_travel_icon($tag){
   $icons = array(
-     "bus" => "&#128652;"
-    ,"car" => "&#128664;"
-    ,"plane" => "&#9992;"
-    ,"boat" => "&#128741;"
-    ,"walk" => "&#128694;"
-    ,"train" => "&#128645;"
+     "https://rhiaro.co.uk/tags/bus" => "&#128652;"
+    ,"https://rhiaro.co.uk/tags/car" => "&#128664;"
+    ,"https://rhiaro.co.uk/tags/plane" => "&#9992;"
+    ,"https://rhiaro.co.uk/tags/boat" => "&#128741;"
+    ,"https://rhiaro.co.uk/tags/walk" => "&#128694;"
+    ,"https://rhiaro.co.uk/tags/train" => "&#128645;"
   );
   if(isset($icons[$tag])){
     return $icons[$tag];
@@ -54,9 +54,11 @@ function get_travel_icon($tag){
 
 function get_travel_icon_from_tags($tags){
   foreach($tags as $tag){
-    $icon = get_travel_icon($tag->getValue());
-    if($icon){
-      return $icon;
+    if(get_class($tag) == "EasyRdf_Resource"){
+      $icon = get_travel_icon($tag->getUri());
+      if($icon){
+        return $icon;
+      }
     }
   }
   return get_icon_from_type('as:Travel');
@@ -249,5 +251,24 @@ function get_style($resource){
   }
   arsort($s);
   return key($s);
+}
+
+function view_router($resource){
+
+    if($resource->isA("as:Add") || $resource->isA("as:Like") || $resource->isA("as:Announce") || $resource->isA("as:Follow")){
+      return 'link';
+    }elseif($resource->isA("as:Arrive")){ 
+      return 'checkin';
+    }elseif($resource->isA("as:Travel") && $resource->get('as:origin') && $resource->get('as:target')){
+      return 'travel';
+    }elseif($resource->isA("asext:Consume") || $resource->isA("asext:Acquire")){
+      return 'stuff';
+    }elseif($resource->isA("as:Invite") || $resource->isA("as:Accept") || $resource->isA("as:Event")){
+      return 'event';
+    }elseif($resource->isA("as:Collection")){
+      return 'collection';
+    }else{
+      return 'article';
+    }
 }
 ?>
