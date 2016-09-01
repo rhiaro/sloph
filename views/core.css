@@ -90,8 +90,8 @@ nav a:hover img {
 
 .tags a {
   font-size: 0.8em;
-  text-decoration: none;
-  padding: 0.4em;
+  text-decoration: none!important;
+  padding: 0.4em; margin: 0.4em 0.2em;
   display: inline-block;
   color: inherit;
   border: 1px solid #ccc;

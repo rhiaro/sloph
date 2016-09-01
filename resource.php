@@ -20,11 +20,9 @@ try {
     header($header);
     echo $content;
   }else{
-    
 
     $resource = $content->resource();
     if(isset($_GET['debug'])){
-      // var_dump($resource);
       echo "<hr/>".$resource->dump();
     }
     
@@ -49,6 +47,8 @@ try {
       $resource->addLiteral('view:tastiness', 5);
     }
 
+    $tags = get_tags($ep);
+
     $resource = set_views($ep, $resource);
     include 'views/top.php';
     include 'views/nav.php';
@@ -63,6 +63,8 @@ try {
       include 'views/stuff.php';
     }elseif($resource->isA("as:Invite") || $resource->isA("as:Accept") || $resource->isA("as:Event")){
       include 'views/event.php';
+    }elseif($resource->isA("as:Collection")){
+      include 'views/collection.php';
     }else{
       include 'views/article.php';
     }

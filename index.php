@@ -69,6 +69,8 @@ try {
       $resource->addLiteral('view:css', $wherestyle);
     }
 
+    $tags = get_tags($ep);
+
     include 'views/top.php';
     include 'views/header.php';
     ?>
@@ -106,6 +108,14 @@ try {
         include 'views/profile_post.php';
       }
       ?>
+      <h3>The 128 things I write about most are:</h3>
+      <? $i = 0; ?>
+      <p class="tags"><?foreach($tags as $uri => $tag):?>
+       <?if($i < 128):?>
+         <a href="<?=$uri?>"><?=$tag['name']?> (<?=$tag['count']?>)</a>
+         <? $i++; ?>
+       <?endif?>
+      <?endforeach?></p>
       </div>
     </div>
     <?

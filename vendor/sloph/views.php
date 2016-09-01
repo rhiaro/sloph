@@ -144,6 +144,27 @@ function prev_tile_x($tile){
   return implode("/", $url);
 }
 
+function get_tags($ep){
+  $q = query_select_tags();
+  $res = execute_query($ep, $q);
+  // var_dump($res);
+  $tags = array(); $i = 0;
+  foreach($res['rows'] as $tag){
+    if($tag["tag type"] == "uri"){
+      $uri = $tag["tag"];
+      if(isset($tag["name"])){
+        $tags[$uri]['name'] = $tag["name"];
+      }else{
+        $tags[$uri]['name'] = $tag["tag"];
+      }
+      $tags[$uri]['count'] = $tag["c"];
+    }
+  }
+  return $tags;
+}
+
+/* Scoring */
+
 function score_predicates(){
   return array(
       'view:banality'

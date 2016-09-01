@@ -90,8 +90,29 @@ function double_content($ep){
     }
   }
 }
+
+function tags_to_collections($ep){
+  $tags = get_tags($ep);
+  foreach($tags as $uri => $tag){
+    $q = get_prefixes();
+    $q .= "INSERT INTO <https://rhiaro.co.uk/tags/> {
+  <$uri> a as:Collection .
+  <$uri> as:name \"{$tag['name']}\" .
+  ?post as:tag <$uri> .
+  <$uri> as:items ?post .
+} WHERE {
+  ?post as:tag \"{$tag['name']}\" .
+}";
+    var_dump(htmlentities($q));
+    echo "<hr/>";
+    $r = execute_query($ep, $q);
+    var_dump($r);
+    echo "<hr/>";
+  }
+}
+
 // transform_mentions($ep);
 //transform_content_to_html($ep);
-double_content($ep);
-
+//double_content($ep);
+//tags_to_collections($ep);
 ?>

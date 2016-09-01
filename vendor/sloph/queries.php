@@ -232,6 +232,17 @@ function query_select_container_and_contents($container){
   return $q;
 }
 
+function query_select_tags(){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?tag ?name COUNT(?p) AS ?c WHERE {
+  ?p as:tag ?tag .
+  OPTIONAL { ?tag as:name ?name . } 
+}
+GROUP BY ?tag
+ORDER BY DESC(?c)";
+  return $q;
+}
+
 /* The count is unpredictable.. messed up when ?o is an array...
 function query_select_vars($vars, $vals, $limit=10, $sort=null){
   $q = get_prefixes();
