@@ -161,6 +161,7 @@ function query_select_s_next($uri){
   $q .= "  ?s as:published ?d . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
   $q .= "  FILTER ( ?d > ?d2 ) . \n";
+  $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
 ORDER BY ASC(?d)
 LIMIT 1
@@ -176,6 +177,7 @@ function query_select_s_next_of_type($uri, $type){
   $q .= "  ?s a $type . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
   $q .= "  FILTER ( ?d > ?d2 ) . \n";
+  $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
 ORDER BY ASC(?d)
 LIMIT 1
@@ -190,6 +192,7 @@ function query_select_s_prev($uri){
   $q .= "  ?s as:published ?d . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
   $q .= "  FILTER ( ?d < ?d2 ) . \n";
+  $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
 ORDER BY DESC(?d)
 LIMIT 1
@@ -205,6 +208,7 @@ function query_select_s_prev_of_type($uri, $type){
   $q .= "  ?s a $type . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
   $q .= "  FILTER ( ?d < ?d2 ) . \n";
+  $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
 ORDER BY DESC(?d)
 LIMIT 1
