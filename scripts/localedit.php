@@ -108,7 +108,21 @@ function insert($ep, $turtle){
   return $r;
 }
 
-if(isset($_POST['data']) && count($_POST['data']) > 0){
+if(isset($_POST['savenew'])){
+  $uri = $_POST['uri'];
+  $rdfphp[$uri] = process_new($_POST['data']);
+  $newgraph = new EasyRdf_Graph($uri);
+  $newgraph->parse($rdfphp, 'php');
+  $turtle = $newgraph->serialise('ntriples');
+  $ins = insert($ep, $turtle);
+  if($ins){
+    $result[$uri] = "Updated";
+    header('Location: ?uri='.$uri);
+  }else{
+    $result[$uri] = "Error: could not insert";
+  }
+}
+elseif(isset($_POST['data']) && count($_POST['data']) > 0){
   $_POST = process_new($_POST['data']);
   $newgraph = new EasyRdf_Graph($_POST['uri']);
   $uri = $_POST['uri'];
@@ -128,6 +142,7 @@ if(isset($_POST['data']) && count($_POST['data']) > 0){
     $result[$uri] = "Error: could not delete";
   }
 }
+
 
 $q = query_select_s();
 if(isset($_GET['flag'])){
@@ -233,6 +248,17 @@ $posts = construct_uris($ep, $uris);
       </form>
       <hr/>
     <?endforeach?>
+
+    <form id="new" method="post">
+      <p>
+        <label for="uri">URI: </label>
+        <input type="text" name="uri" value="https://rhiaro.co.uk/yyyy/mm/<?=uniqid()?>" /> 
+        <input type="submit" value="Create" name="savenew"/>
+      </p>
+      <?=plustype()?>
+      <?=plusproperty()?>
+    </form>
+
     <div class="info">
       <p>Resources <?=$offset?> to <?=$offset+$length?> of <?=count($_SESSION['uris'])?> | <a href="?offset=<?=$offset-$length?>">prev</a> | <a href="?offset=<?=$offset+$length?>">next</a> | <a href="?reset=uris">reset</a></p>
     </div>
