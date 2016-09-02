@@ -16,6 +16,7 @@
   $dbpedia->load($target);
 
   if($dbpedia->get($origin, 'foaf:name')){ $from_name = $dbpedia->get($origin, 'foaf:name')->getValue(); }
+  elseif($dbpedia->get($origin, 'rdfs:label')){ $from_name = $dbpedia->get($origin, 'rdfs:label')->getValue(); }
   else{ $from_name = str_replace("http://dbpedia.org/resource/", "", $origin); }
   $from_date = new DateTime($resource->get('as:startTime'));
   $from_lat = $dbpedia->get($origin, 'geo:lat')->getValue();
@@ -23,6 +24,7 @@
   $from_map = lat_lon_to_map($from_lat, $from_lon);
 
   if($dbpedia->get($target, 'foaf:name')){ $to_name = $dbpedia->get($target, 'foaf:name')->getValue(); }
+  elseif($dbpedia->get($target, 'rdfs:label')){ $to_name = $dbpedia->get($target, 'rdfs:label')->getValue(); }
   else{ $to_name = str_replace("http://dbpedia.org/resource/", "", $target); }
   $to_date = new DateTime($resource->get('as:endTime'));
   $to_lat = $dbpedia->get($target, 'geo:lat')->getValue();
