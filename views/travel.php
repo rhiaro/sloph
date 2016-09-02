@@ -15,12 +15,15 @@
   $dbpedia->load($origin);
   $dbpedia->load($target);
 
-  $from_name = $dbpedia->get($origin, 'foaf:name')->getValue();
+  if($dbpedia->get($origin, 'foaf:name')){ $from_name = $dbpedia->get($origin, 'foaf:name')->getValue(); }
+  else{ $from_name = str_replace("http://dbpedia.org/resource/", "", $origin); }
   $from_date = new DateTime($resource->get('as:startTime'));
   $from_lat = $dbpedia->get($origin, 'geo:lat')->getValue();
   $from_lon = $dbpedia->get($origin, 'geo:long')->getValue();
   $from_map = lat_lon_to_map($from_lat, $from_lon);
-  $to_name = $dbpedia->get($target, 'foaf:name')->getValue();
+
+  if($dbpedia->get($target, 'foaf:name')){ $to_name = $dbpedia->get($target, 'foaf:name')->getValue(); }
+  else{ $to_name = str_replace("http://dbpedia.org/resource/", "", $target); }
   $to_date = new DateTime($resource->get('as:endTime'));
   $to_lat = $dbpedia->get($target, 'geo:lat')->getValue();
   $to_lon = $dbpedia->get($target, 'geo:long')->getValue();
