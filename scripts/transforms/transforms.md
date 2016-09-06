@@ -572,18 +572,77 @@ delete {
 [x] All content from markdown to html
 
 > Checkin: 20160822-1957
+
+[x] blog:startLocation and endLocation to as2
+
+```
+prefix as: <http://www.w3.org/ns/activitystreams#> .
+prefix blog: <http://vocab.amy.so/blog#> .
+
+insert into <http://blog.rhiaro.co.uk#> {
+    ?s as:origin ?start .
+    ?s as:target ?end .
+} where {
+    ?s blog:startLocation ?start .
+    ?s blog:endLocation ?end .
+}
+```
+
+```
+prefix as: <http://www.w3.org/ns/activitystreams#> .
+prefix blog: <http://vocab.amy.so/blog#> .
+
+delete {
+    ?s blog:startLocation ?start .
+    ?s blog:endLocation ?end .
+}
+```
+
+> 20160822-2200
  
 [x] -> I think I need a script+UI for type adding
-[ ] people to as:Profile or as:Person or as:Actor
-[ ] Add a as:Article if as:name and no other type
-[ ] Add a as:Note if no name and no other type
-[ ] Old posts... to Travel, Arrive, etc
+[x] people to as:Profile or as:Person or as:Actor
+[x] Add a as:Article if as:name and no other type
+[x] Add a as:Note if no name and no other type
+[x] Old posts... to Travel, Arrive, etc
 
 > Checkin: up to http://llog.rhiaro.co.uk/1429108500-2 offset=440 at 20160808-0002
 > 
 > Checkin: up to http://llog.rhiaro.co.uk/1430007600-2 offset=500 at 20160808-0948
+> Checkin: up to http://localhost/scripts/localedit.php?offset=1000 at 20160822-2144
+> Checkin: up to http://localhost/scripts/localedit.php?offset=1440#https://rhiaro.co.uk/2015/08/1438965189 at 20160822-2229
+> 
+> http://localhost/scripts/localedit.php?offset=1480#https://rhiaro.co.uk/2015/08/1440787009
+> 
+> Checkin 20160905-1938 All missing types added
 
-[ ] All tags to proper as:Objects
+[ ] terms for blog:state
+
+[x] read-of -> asext:Read
+
+```
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+prefix asext: <https://terms.rhiaro.co.uk/as#> .
+insert into <http://blog.rhiaro.co.uk#> {
+    ?post a asext:Read .
+    ?post as:object ?object .
+} where {
+    ?post blog:read-of ?object .   
+}
+```
+
+```
+@prefix blog: <http://vocab.amy.so/blog#> .
+prefix asext: <https://terms.rhiaro.co.uk/as#> .
+delete {
+    ?post blog:read-of ?object .
+}where{
+    ?post a asext:Read .
+}
+```
+
+[x] All tags to proper as:Objects
     -> uri() not a thing in 1.0
 ```
 @prefix as: <http://www.w3.org/ns/activitystreams#> .
@@ -596,6 +655,14 @@ insert into <http://blog.rhiaro.co.uk#> {
     ?post as:tag ?tag .    
 }
 ```
+
+> Checkin: 20160901-1707
+
+[ ] Remove all doubled publish dates
+
+`http://localhost/scripts/localedit.php?flag=doubledate&reset=uris`
+
+[ ] Fix merged posts
 
 [ ] Make Collections for
 * Travel

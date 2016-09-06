@@ -153,7 +153,14 @@ SELECT ?s WHERE {
   ?s as:content ?con2 .
   filter(?con1 != ?con2) .
 }";
-  } 
+  }elseif($_GET['flag'] == "doubledate"){
+    $q = "PREFIX as: <http://www.w3.org/ns/activitystreams#> .
+SELECT ?s WHERE {
+  ?s as:published ?con1 .
+  ?s as:published ?con2 .
+  filter(?con1 != ?con2) .
+}";
+  }
 }
 if(isset($_GET['uri'])){
   $_SESSION['uris'] = array($_GET['uri']);
@@ -180,6 +187,19 @@ if(isset($_GET['length']) && is_numeric($_GET['length'])){
 $uris = array_slice($_SESSION['uris'], $offset, $length);
 $posts = array();
 $posts = construct_uris($ep, $uris);
+
+if($_GET['flag'] == "notype"){
+  $untyped_uris = array();
+  $untyped_posts = array();
+  foreach($posts as $uri => $post){
+    if(!isset($post['http://www.w3.org/1999/02/22-rdf-syntax-ns#type'])){
+      $untyped_uris[] = $uri;
+      $untyped_posts[$uri] = $post;
+    }
+  }
+  $_SESSION['uris'] = $untyped_uris;
+  $posts = $untyped_posts;
+}
 
 ?>
 <!doctype html>
@@ -221,9 +241,9 @@ $posts = construct_uris($ep, $uris);
               <?else:?>
                 <input name="data[<?=$k?>][<?=$i?>][value]" type="text" value="<?=htmlentities($v['value'])?>" style="width: <?=strlen($v['value']) * 8?>px; max-width: 100%" />
               <?endif?>
-              <input name="data[<?=$k?>][<?=$i?>][type]" type="hidden" value="<?=$v["type"]?>" />
+              <input name="data[<?=$k?>][<?=$i?>][type]" type="hidden" value="<?=$v["type"]?>" style="width: <?=strlen($v['datatype']) * 8?>px; max-width: 100%" />
               <?if(isset($v["datatype"])):?>
-                <input name="data[<?=$k?>][<?=$i?>][datatype]" type="text" value="<?=$v["datatype"]?>" />
+                <input name="data[<?=$k?>][<?=$i?>][datatype]" type="text" value="<?=$v["datatype"]?>" style="width: <?=strlen($v['datatype']) * 8?>px; max-width: 100%" />
               <?endif?>
           <?endforeach?>
           </p>
