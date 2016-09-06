@@ -658,11 +658,13 @@ insert into <http://blog.rhiaro.co.uk#> {
 
 > Checkin: 20160901-1707
 
-[ ] Remove all doubled publish dates
+[x] Remove all doubled publish dates
 
 `http://localhost/scripts/localedit.php?flag=doubledate&reset=uris`
 
-[ ] Fix merged posts
+[x] Fix merged posts
+
+> Checkin 20160906-1050
 
 [ ] Make Collections for
 * Travel
