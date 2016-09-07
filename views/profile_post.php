@@ -16,7 +16,7 @@
   <?elseif($resource->isA('as:Announce')):?>
   The last thing I reposted was <a href="<?=$resource->getUri()?>"><?=$resource->get('as:name') ? $resource->get('as:name') : $resource->get('as:object')?></a>
   <?elseif($resource->isA('as:Note')):?>
-    The last thing I scribbled was about <em><?=$resource->get('as:tag')?></em>,
+    The last thing I scribbled was about <em><?=$tags[$resource->get('as:tag')->getUri()]["name"]?></em>,
   <?elseif($resource->isA('as:Article')):?>
   The last article I wrote was <strong><?=$resource->get('as:name')?></strong>
   <?elseif($resource->isA('as:Travel')):?>
