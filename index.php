@@ -64,9 +64,11 @@ try {
     }
 
     $locations = get_locations($ep);
-    $wherestyle = "body, #me a:hover { background-color: ".$locations->get($currentlocation, 'view:color')."}\n";
-    if(!$resource->get('view:css')){
-      $resource->addLiteral('view:css', $wherestyle);
+    if($locations){
+      $wherestyle = "body, #me a:hover { background-color: ".$locations->get($currentlocation, 'view:color')."}\n";
+      if(!$resource->get('view:css')){
+        $resource->addLiteral('view:css', $wherestyle);
+      }
     }
 
     $tags = get_tags($ep);
