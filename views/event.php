@@ -1,5 +1,4 @@
 <?
-echo $resource->dump();
 if($resource->isA('as:Accept') || $resource->isA('as:Invite')){
 
   if($resource->get('as:object')){
