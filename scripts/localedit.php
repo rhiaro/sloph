@@ -87,7 +87,7 @@ function process_new($data){
   $data[$prop][$i]['value'] = $val;
   $data[$prop][$i]['type'] = $type;
   if(isset($datatype)){
-    $data[$prop[$i]['datatype']] = $datatype;
+    $data[$prop][$i]['datatype'] = $datatype;
   }
   unset($data['new']);
   unset($data['newvalue']);
