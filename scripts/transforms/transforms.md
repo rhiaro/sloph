@@ -1,3 +1,7 @@
+[x] Make everything https 
+
+`sed -i 's/http:\/\/rhiaro.co.uk/https:\/\/rhiaro.co.uk/g' *.ttl`
+
 [x] Move properties from raw to rendered
 
 ```
@@ -9,7 +13,7 @@ insert into <http://blog.rhiaro.co.uk#> {
 } where {
  ?raw foaf:isPrimaryTopicOf ?fancy .
  ?raw ?p ?o .
- ?s ?p2 ?raw .
+ optional { ?s ?p2 ?raw . }
 }
 ```
 
@@ -21,8 +25,8 @@ delete {
     ?s foaf:primaryTopic ?o .
 } WHERE {
     ?s foaf:isPrimaryTopicOf ?s .
-    ?s foaf:primaryTopic ?s .
-    ?s foaf:primaryTopic ?o .
+    optional { ?s foaf:primaryTopic ?s . }
+    optional { ?s foaf:primaryTopic ?o . }
 }
 ```
 
@@ -279,25 +283,25 @@ insert into <http://blog.rhiaro.co.uk#> {
 insert into <http://blog.rhiaro.co.uk#> {
     ?s a as:Arrive .
 } where {
-    { ?s as:location <http://rhiaro.co.uk/location/transit> }
+    { ?s as:location <https://rhiaro.co.uk/location/transit> }
     UNION
-    { ?s as:location <http://rhiaro.co.uk/location/other> }
+    { ?s as:location <https://rhiaro.co.uk/location/other> }
     UNION
-    { ?s as:location <http://rhiaro.co.uk/location/home> }
+    { ?s as:location <https://rhiaro.co.uk/location/home> }
     UNION
-    { ?s as:location <http://rhiaro.co.uk/location/meeting> }
+    { ?s as:location <https://rhiaro.co.uk/location/meeting> }
     UNION
-    { ?s as:location <http://rhiaro.co.uk/location/seminar> }
+    { ?s as:location <https://rhiaro.co.uk/location/seminar> }
     UNION
-    { ?s as:location <http://rhiaro.co.uk/location/office> }
+    { ?s as:location <https://rhiaro.co.uk/location/office> }
     UNION
-    { ?s as:location <http://rhiaro.co.uk/location/volunteer> }
+    { ?s as:location <https://rhiaro.co.uk/location/volunteer> }
     UNION
-    { ?s as:location <http://rhiaro.co.uk/location/food> }
+    { ?s as:location <https://rhiaro.co.uk/location/food> }
     UNION
-    { ?s as:location <http://rhiaro.co.uk/location/exercise> }
+    { ?s as:location <https://rhiaro.co.uk/location/exercise> }
     UNION
-    { ?s as:location <http://rhiaro.co.uk/location/event> }
+    { ?s as:location <https://rhiaro.co.uk/location/event> }
 }
 ```
 
@@ -315,9 +319,6 @@ insert into <http://blog.rhiaro.co.uk#> {
 
 > Checkin: 20160730-1112
 
-[x] Make everything https 
-
-`sed -i 's/http:\/\/rhiaro.co.uk/https:\/\/rhiaro.co.uk/g' *.ttl`
 
 > Checkin: 20160801-1019
 
