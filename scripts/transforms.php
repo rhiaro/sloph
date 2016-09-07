@@ -91,8 +91,27 @@ function double_content($ep){
   }
 }
 
+function get_string_tags($ep){
+  $q = query_select_tags();
+  $res = execute_query($ep, $q);
+  // var_dump($res);
+  $tags = array(); $i = 0;
+  foreach($res['rows'] as $tag){
+    if($tag["tag type"] == "literal"){
+      $uri = "https://rhiaro.co.uk/tags/".urlencode($tag["tag"]);
+      if(isset($tag["name"])){
+        $tags[$uri]['name'] = $tag["name"];
+      }else{
+        $tags[$uri]['name'] = $tag["tag"];
+      }
+    }
+  }
+  return $tags;
+}
+
 function tags_to_collections($ep){
-  $tags = get_tags($ep);
+  $tags = get_string_tags($ep);
+  
   foreach($tags as $uri => $tag){
     $q = get_prefixes();
     $q .= "INSERT INTO <https://rhiaro.co.uk/tags/> {
@@ -114,5 +133,5 @@ function tags_to_collections($ep){
 // transform_mentions($ep);
 //transform_content_to_html($ep);
 //double_content($ep);
-//tags_to_collections($ep);
+// tags_to_collections($ep);
 ?>

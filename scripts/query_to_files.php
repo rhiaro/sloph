@@ -3,7 +3,7 @@ require_once('../vendor/init.php');
 
 function write($data, $fn){
     
-  $log = "datahttps/$fn.ttl";
+  $log = "newdumpssince29july/$fn.ttl";
 
   $h = fopen($log, 'w');
   fwrite($h, $data);
@@ -22,7 +22,7 @@ if($r){
   foreach($uris as $uri){
     if(is_string($uri)){
       $fn = mb_ereg_replace("([^\w\s\d\-_~,;\[\]\(\).])", '_', $uri);
-      if(!file_exists("datahttps/$fn.ttl")){
+      if(!file_exists("newdumpssince29july/$fn.ttl")){
         $q = query_construct($uri);
         $t = execute_query($ep, $q);
         if($t){ 
