@@ -26,6 +26,9 @@ function conneg($acceptheaders, $graph){
 
   foreach($acceptheaders as $accept){
     try{
+      if($accept["raw"] == "*/*" || !isset($accept["raw"]) || $accept["raw"] == ""){
+        $accept["raw"] = "application/ld+json";
+      }
       $format = EasyRdf_Format::getFormat($accept["raw"]);
       if($format->getSerialiserClass()){
         $out = $graph->serialise($accept["raw"]);
