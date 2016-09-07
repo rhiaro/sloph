@@ -7,8 +7,8 @@
     $origin = $resource->get('as:origin')->getValue();
     $target = $resource->get('as:target')->getValue();
   }else{
-    var_dump($resource->get('as:origin'));
-    var_dump($resource->get('as:target'));
+    // var_dump($resource->get('as:origin'));
+    // var_dump($resource->get('as:target'));
   }
   // TODO: check my own store first
   $dbpedia = new EasyRdf_Graph();
