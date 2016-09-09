@@ -50,9 +50,7 @@ try {
 
         if($type == $ns->expand("as:Arrive")){
           $color = $locations->get($item[$ns->expand("as:location")][0]['value'], 'view:color');
-          if(!isset($currentlocation)){
-            $currentlocation = $item[$ns->expand("as:location")][0]['value'];
-          }
+          $currentlocation = $item[$ns->expand("as:location")][0]['value'];
         }
       }
 
@@ -92,7 +90,6 @@ try {
     //   $all[] = $item;
 
     }
-
     if($locations){
       $wherestyle = "body, #me a:hover { background-color: ".$locations->get($currentlocation, 'view:color')."}\n";
       if(!$resource->get('view:css')){
