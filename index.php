@@ -95,7 +95,11 @@ try {
          ... brb ...
       </h1>
       <?foreach($items as $uri => $item):?>
-        <p><a href="<?=$uri?>"><?=$uri?></a></p>
+        <span class="box" style="background-color: #ccc">
+          <?foreach($item["http://www.w3.org/1999/02/22-rdf-syntax-ns#type"] as $t):?>
+            <a href="<?=$uri?>"><?=get_icon_from_type(EasyRdf_Namespace::shorten($t['value']))?></a>
+          <?endforeach?>
+        </span>
       <?endforeach?>
       <!--<div class="w1of2">
 
