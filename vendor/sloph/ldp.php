@@ -191,6 +191,7 @@ function make_slug($resource){
 }
 
 function path_for_type($resource){
+
   if($resource->isA("as:Place")){
     return "locations/";
   }elseif($resource->isA("as:Profile") || $resource->isA("as:Person") || $resource->isA("as:Organization")){
@@ -257,8 +258,23 @@ function decide_when_to_stop($full_slug, $max=16){
 /* Posting                */
 /**************************/
 
-function post($data, $target, $slug){
-
+function post($ep, $resource, $target=null, $slug=null){
+  if(!isset($target)){
+    $target = path_for_type($resource);
+  }
+  $uri = make_uri($ep, $resource, $target);
+  $final = new EasyRdf_Graph($uri);
+  $ps = $resource->properties();
+  foreach($ps as $p){
+    $vs = $resource->all($p);
+    foreach($vs as $v){
+      $final->add($uri, $p, $v);
+    }
+  }
+  $turtle = $final->serialise('ntriples');
+  $q = query_insert($turtle);
+  $r = execute_query($ep, $q);
+  return $r;
 }
 
 ?>
