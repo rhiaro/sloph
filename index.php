@@ -22,7 +22,17 @@ try {
     // $all = array();
 
     $items = $content->toRdfPhp();
+    $items = array_reverse($items);
     $ns = new EasyRdf_Namespace();
+
+    /* Views stuff */
+    if(!$resource->get('view:stylesheet')){
+      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
+    }
+
+    $locations = get_locations($ep);
+    $color = "transparent";
+    $tags = get_tags($ep);
 
     foreach($items as $uri => $item){
 
@@ -38,10 +48,15 @@ try {
           $latest_posts[] = $uri;
         }
 
-        if($type == $ns->expand("as:Arrive") && !isset($currentlocation)){
-          $currentlocation = $item[$ns->expand("as:location")][0]['value'];
+        if($type == $ns->expand("as:Arrive")){
+          $color = $locations->get($item[$ns->expand("as:location")][0]['value'], 'view:color');
+          if(!isset($currentlocation)){
+            $currentlocation = $item[$ns->expand("as:location")][0]['value'];
+          }
         }
       }
+
+      $items[$uri]['color'] = $color;
 
     //   $uri = $item->getUri();
     //   $types = $item->types();
@@ -78,21 +93,14 @@ try {
 
     }
 
-    /* Views stuff */
-    if(!$resource->get('view:stylesheet')){
-      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
-    }
-
-    $locations = get_locations($ep);
     if($locations){
       $wherestyle = "body, #me a:hover { background-color: ".$locations->get($currentlocation, 'view:color')."}\n";
       if(!$resource->get('view:css')){
         $resource->addLiteral('view:css', $wherestyle);
       }
     }
-    $color = "transparent";
 
-    $tags = get_tags($ep);
+    $items = array_reverse($items);
 
     include 'views/top.php';
     include 'views/header.php';
@@ -109,10 +117,7 @@ try {
       <?foreach($items as $uri => $item):?>
         <?foreach($item["http://www.w3.org/1999/02/22-rdf-syntax-ns#type"] as $t):?>
           <?if($t['value'] != EasyRdf_Namespace::expand("as:Activity")):?>
-            <?if(isset($item[$ns->expand("as:location")])):?>
-              <? $color = $locations->get($item[$ns->expand("as:location")][0]['value'], 'view:color'); ?>
-            <?endif?>
-            <a href="<?=$uri?>"><div class="box" style="background-color: <?=$color?>">
+            <a href="<?=$uri?>"><div class="box" style="background-color: <?=$item["color"]?>">
               <?=get_icon_from_type(EasyRdf_Namespace::shorten($t['value']), array("as:Arrive"))?>
             </div></a>
           <?endif?>
