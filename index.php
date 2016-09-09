@@ -40,11 +40,11 @@ try {
 
       foreach($types as $t){
         $type = $t['value'];
-        if(!isset($last_of_derp[$type]) && $type != $ns->expand("as:Activity") && $type != $ns->expand("as:Collection") && $type != EasyRdf_Namespace::expand("ldp:Container")){
+        if($type != $ns->expand("as:Activity") && $type != $ns->expand("as:Collection") && $type != EasyRdf_Namespace::expand("ldp:Container")){
           $last_of_derp[$ns->shorten($type)] = $uri;
         }
 
-        if($type == $ns->expand("as:Article") || $type == $ns->expand("as:Note") && count($latest_posts) <= 9){
+        if($type == $ns->expand("as:Article") || $type == $ns->expand("as:Note")){
           $latest_posts[] = $uri;
         }
 
@@ -98,6 +98,7 @@ try {
     }
 
     $items = array_reverse($items);
+    $latest_posts = array_reverse(array_slice($latest_posts, count($latest_posts)-9, 9));
 
     include 'views/top.php';
     include 'views/header.php';
