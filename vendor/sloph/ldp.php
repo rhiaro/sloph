@@ -89,11 +89,14 @@ function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/h
     $uris = select_to_list($r, array("uri"));
 
     foreach($uris["rows"] as $u){
-      // TODO FIXME: this is hardcoded to expect result vars ?s and ?t
+      // TODO FIXME: this is hardcoded to expect result vars ?s and ?t and now ?l
       $resource->addResource("as:items", $u['s']);
       $resource->addResource("ldp:contains", $u['s']);
       if(isset($u['t'])){
         $current->addResource($u['s'], "rdf:type", $u['t']);
+      }
+      if(isset($u['l'])){
+        $current->addResource($u['s'], "as:location", $u['l']);
       }
     }
   }

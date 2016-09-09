@@ -101,9 +101,10 @@ ORDER BY DESC(?d)";
 
 function query_select_s_and_type_desc($limit=0){
   $q = get_prefixes();
-  $q .= "SELECT DISTINCT ?s ?t WHERE {
+  $q .= "SELECT DISTINCT ?s ?t ?l WHERE {
   ?s ?p ?o .
   OPTIONAL { ?s a ?t }
+  OPTIONAL { ?s as:location ?l }
   ?s as:published ?d .
 }
 ORDER BY DESC(?d)";

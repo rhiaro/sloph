@@ -22,23 +22,24 @@ try {
     // $all = array();
 
     $items = $content->toRdfPhp();
+    $ns = new EasyRdf_Namespace();
 
     foreach($items as $uri => $item){
 
-      $types = $item[EasyRdf_Namespace::expand("rdf:type")];
+      $types = $item[$ns->expand("rdf:type")];
 
       foreach($types as $t){
         $type = $t['value'];
-        if(!isset($last_of_derp[$type]) && $type != EasyRdf_Namespace::expand("as:Activity")){
-          $last_of_derp[$type] = $uri;
+        if(!isset($last_of_derp[$type]) && $type != $ns->expand("as:Activity") && $type != $ns->expand("as:Collection") && $type != EasyRdf_Namespace::expand("ldp:Container")){
+          $last_of_derp[$ns->shorten($type)] = $uri;
         }
 
-        if($type == EasyRdf_Namespace::expand("as:Article") || $type == EasyRdf_Namespace::expand("as:Note") && count($latest_posts) <= 9){
+        if($type == $ns->expand("as:Article") || $type == $ns->expand("as:Note") && count($latest_posts) <= 9){
           $latest_posts[] = $uri;
         }
 
-        if($type == EasyRdf_Namespace::expand("as:Arrive")){
-
+        if($type == $ns->expand("as:Arrive") && !isset($currentlocation)){
+          $currentlocation = $item[$ns->expand("as:location")][0]['value'];
         }
       }
 
@@ -82,13 +83,13 @@ try {
       $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
     }
 
-    // $locations = get_locations($ep);
-    // if($locations){
-    //   $wherestyle = "body, #me a:hover { background-color: ".$locations->get($currentlocation, 'view:color')."}\n";
-    //   if(!$resource->get('view:css')){
-    //     $resource->addLiteral('view:css', $wherestyle);
-    //   }
-    // }
+    $locations = get_locations($ep);
+    if($locations){
+      $wherestyle = "body, #me a:hover { background-color: ".$locations->get($currentlocation, 'view:color')."}\n";
+      if(!$resource->get('view:css')){
+        $resource->addLiteral('view:css', $wherestyle);
+      }
+    }
 
     $tags = get_tags($ep);
 
@@ -105,11 +106,17 @@ try {
       // }
       ?>
       <?foreach($items as $uri => $item):?>
-        <span class="box" style="background-color: #ccc">
-          <?foreach($item["http://www.w3.org/1999/02/22-rdf-syntax-ns#type"] as $t):?>
-            <a href="<?=$uri?>"><?=get_icon_from_type(EasyRdf_Namespace::shorten($t['value']))?></a>
-          <?endforeach?>
-        </span>
+        <?foreach($item["http://www.w3.org/1999/02/22-rdf-syntax-ns#type"] as $t):?>
+          <?if($t['value'] != EasyRdf_Namespace::expand("as:Activity")):?>
+            <?if(isset($item[$ns->expand("as:location")])):?>
+              <a href="<?=$uri?>"><div class="box" style="background-color: <?=$locations->get($item[$ns->expand("as:location")][0]['value'], 'view:color')?>"></div></a>
+            <?else:?>
+              <a href="<?=$uri?>"><div class="box">
+                <?=get_icon_from_type(EasyRdf_Namespace::shorten($t['value']))?>
+              </div></a>
+            <?endif?>
+          <?endif?>
+        <?endforeach?>
       <?endforeach?>
     </div>
     
@@ -122,24 +129,17 @@ try {
         <?foreach($latest_posts as $post):?>
           <p><a href="<?=$post?>"><?=$post?></a></p>
         <?endforeach?>
-        <?
-        // for($i=0; $i < 9; $i++){
-        //   $resource = $latest_posts[$i];
-        //   include 'views/article.php'; 
-        // }
-        ?>
-        <!-- <nav><p><a href="<?=$latest_posts[9]->getUri()?>">Next</a></p></nav> -->
+
       </div>
       <div class="w1of2">
         <p>IRL I am <span property="as:name">Amy</span></p>
         <p>On twitter I am <a href="https://twitter.com/rhiaro" rel="me">@rhiaro</a></p>
         <p>On github I am <a href="https://github.com/rhiaro" rel="me">rhiaro</a></p>
         <p>By email I am <a href="mailto:amy@rhiaro.co.uk" rel="me">amy@rhiaro.co.uk</a></p>
-      <?
-      foreach($last_of_derp as $resource){
-        include 'views/profile_post.php';
-      }
-      ?>
+      <?foreach($last_of_derp as $type => $resource):?>
+        <p><a href="<?=$resource?>"><?=$resource?></a></p>
+        <?//include 'views/profile_post.php';      ?>
+      <?endforeach?>
       <h3>The 128 things I write about most are:</h3>
       <? $i = 0; ?>
       <p class="tags"><?foreach($tags as $uri => $tag):?>
@@ -149,7 +149,7 @@ try {
        <?endif?>
       <?endforeach?></p>
       </div>
-    </div>-->
+    </div>
     <?
     include 'views/end.php';
 
