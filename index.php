@@ -15,83 +15,89 @@ try {
     echo $content;
   }else{
     $resource = $content->resource($relUri);
-    $items = $content->all($relUri, 'as:items');
+    // $items = $content->all($relUri, 'as:items');
 
-    $last_of_derp = array();
-    $latest_posts = array();
-    $all = array();
+    // $last_of_derp = array();
+    // $latest_posts = array();
+    // $all = array();
 
-    foreach($items as $item){
+    $items = $content->toRdfPhp();
 
-      $uri = $item->getUri();
-      $types = $item->types();
-      if(empty($types)){
-        $types = array("as:Object");
-        $item->addResource("rdf:type", "as:Object");
-      }
-      foreach($types as $type){
-        if(!isset($last_of_derp[$type]) && $type != "as:Activity"){
-          $result = get($ep, $uri);
-          $content = $result['content'];
-          $resource = $content->resource($uri);
-          $last_of_derp[$type] = $resource;
-        }
+    // foreach($items as $uri => $item){
 
-        if(($type == "as:Article" || $type == "as:Note") && count($latest_posts) <= 9){
-          $result = get($ep, $uri);
-          $content = $result['content'];
-          $resource = $content->resource($uri);
-          $latest_posts[] = $resource;
-        }
-      }
+    //   $uri = $item->getUri();
+    //   $types = $item->types();
+    //   if(empty($types)){
+    //     $types = array("as:Object");
+    //     $item->addResource("rdf:type", "as:Object");
+    //   }
+    //   foreach($types as $type){
+    //     if(!isset($last_of_derp[$type]) && $type != "as:Activity"){
+    //       $result = get($ep, $uri);
+    //       $content = $result['content'];
+    //       $resource = $content->resource($uri);
+    //       $last_of_derp[$type] = $resource;
+    //     }
 
-      if($item->isA('as:Arrive')){
-        $res = get($ep, $uri);
-        $arrive = $res['content']->resource($uri);
-        $item->addResource("as:location", $arrive->get("as:location"));
-        if(!isset($currentlocation)){
-          $currentlocation = $item->get("as:location");
-        }
-      }
+    //     if(($type == "as:Article" || $type == "as:Note") && count($latest_posts) <= 9){
+    //       $result = get($ep, $uri);
+    //       $content = $result['content'];
+    //       $resource = $content->resource($uri);
+    //       $latest_posts[] = $resource;
+    //     }
+    //   }
 
-      $all[] = $item;
+    //   if($item->isA('as:Arrive')){
+    //     $res = get($ep, $uri);
+    //     $arrive = $res['content']->resource($uri);
+    //     $item->addResource("as:location", $arrive->get("as:location"));
+    //     if(!isset($currentlocation)){
+    //       $currentlocation = $item->get("as:location");
+    //     }
+    //   }
 
-    }
+    //   $all[] = $item;
+
+    // }
 
     /* Views stuff */
     if(!$resource->get('view:stylesheet')){
       $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
     }
 
-    $locations = get_locations($ep);
-    if($locations){
-      $wherestyle = "body, #me a:hover { background-color: ".$locations->get($currentlocation, 'view:color')."}\n";
-      if(!$resource->get('view:css')){
-        $resource->addLiteral('view:css', $wherestyle);
-      }
-    }
+    // $locations = get_locations($ep);
+    // if($locations){
+    //   $wherestyle = "body, #me a:hover { background-color: ".$locations->get($currentlocation, 'view:color')."}\n";
+    //   if(!$resource->get('view:css')){
+    //     $resource->addLiteral('view:css', $wherestyle);
+    //   }
+    // }
 
     $tags = get_tags($ep);
 
     include 'views/top.php';
     include 'views/header.php';
+
     ?>
 
-    <div class="boxes">
+<!--    <div class="boxes">
       <a href="#me"><img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" class="box" /></a>
       <?
       foreach($all as $resource){
         include 'views/boxes.php';
       }
       ?>
-    </div>
+    </div> -->
     
     <div id="me" class="clearfix" resource="#me" typeof="as:Person">
       <h1>
         <img src="https://rhiaro.co.uk/stash/dp.png" alt="rhiaro" rel="as:image" />
-         ... tmi ...
+         ... brb ...
       </h1>
-      <div class="w1of2">
+      <?foreach($items as $uri => $item):?>
+        <p><a href="<?=$uri?>"><?=$uri?></a></p>
+      <?endforeach?>
+      <!--<div class="w1of2">
 
         <?for($i=0; $i < 9; $i++){
           $resource = $latest_posts[$i];
@@ -119,7 +125,7 @@ try {
        <?endif?>
       <?endforeach?></p>
       </div>
-    </div>
+    </div>-->
     <?
     include 'views/end.php';
 
