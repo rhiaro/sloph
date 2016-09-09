@@ -14,10 +14,10 @@
 }
 .box {
   width: 32px; height: 32px;
-  margin: 2px;
+  margin: 2px; padding: 2px;
   float: left;
   color: white;
-  font-weight: bold; text-align: center; font-size: 2em;
+  font-weight: bold; text-align: center; font-size: 1.6em;
 }
 
 article {

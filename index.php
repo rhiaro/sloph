@@ -5,7 +5,7 @@ require_once('vendor/init.php');
 $headers = apache_request_headers();
 $relUri = $_SERVER['REQUEST_URI'];
 $ct = $headers["Accept"];
-$result = get_container_dynamic($ep, $relUri, "query_select_s_and_type_desc", array(1000), $ct);
+$result = get_container_dynamic($ep, $relUri, "query_select_s_and_type_desc", array(1600), $ct);
 $header = $result['header'];
 $content = $result['content'];
 
@@ -90,6 +90,7 @@ try {
         $resource->addLiteral('view:css', $wherestyle);
       }
     }
+    $color = "transparent";
 
     $tags = get_tags($ep);
 
@@ -109,12 +110,11 @@ try {
         <?foreach($item["http://www.w3.org/1999/02/22-rdf-syntax-ns#type"] as $t):?>
           <?if($t['value'] != EasyRdf_Namespace::expand("as:Activity")):?>
             <?if(isset($item[$ns->expand("as:location")])):?>
-              <a href="<?=$uri?>"><div class="box" style="background-color: <?=$locations->get($item[$ns->expand("as:location")][0]['value'], 'view:color')?>"></div></a>
-            <?else:?>
-              <a href="<?=$uri?>"><div class="box">
-                <?=get_icon_from_type(EasyRdf_Namespace::shorten($t['value']))?>
-              </div></a>
+              <? $color = $locations->get($item[$ns->expand("as:location")][0]['value'], 'view:color'); ?>
             <?endif?>
+            <a href="<?=$uri?>"><div class="box" style="background-color: <?=$color?>">
+              <?=get_icon_from_type(EasyRdf_Namespace::shorten($t['value']), array("as:Arrive"))?>
+            </div></a>
           <?endif?>
         <?endforeach?>
       <?endforeach?>

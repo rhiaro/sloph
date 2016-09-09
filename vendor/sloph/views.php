@@ -11,7 +11,7 @@ function get_icon($resource){
   }
 }
 
-function get_icon_from_type($type){
+function get_icon_from_type($type, $skip=array()){
   $icons = array(
        "asext:Consume" => "&#127860;"
       ,"asext:Acquire" => "&#128176;"
@@ -29,7 +29,7 @@ function get_icon_from_type($type){
       ,"as:Travel" => "&#10239;"
       ,"as:Object" => "&#133;"
     );
-  if(isset($icons[$type])){
+  if(isset($icons[$type]) && !in_array($type, $skip)){
     return $icons[$type];
   }else{
     return false;
