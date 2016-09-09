@@ -1,5 +1,9 @@
 <?
 
+/**************************/
+/* Getting                */
+/*************************/
+
 function get_resource($ep, $uri){
   
   $r = array();
@@ -111,6 +115,149 @@ function get_container($ep, $container, $content_type){
   }
 
   return $return;
+
+}
+
+/**************************/
+/* URIs                   */
+/**************************/
+
+
+function make_uri($ep, $resource, $path=null, $unique=true){
+
+  $base = "https://rhiaro.co.uk/";
+
+  if(!isset($path)){
+    $path = path_for_type($resource);
+  }
+
+  $done = false;
+  $max = 16;
+  $fullslug = make_slug($resource);
+  while(!$done){
+    $slug = decide_when_to_stop($fullslug, $max);
+    $uri = $base.$path.$slug;
+    
+    if(!$unique){ // Sometimes you want the first URI generated from post metadata.
+      $done = true;
+      return $uri;
+    }else{
+      // echo "Trying: $uri<br/>";
+      if(is_unique($ep, $uri)){
+          // echo "Success! Unique.<br/>----<br/>";
+          $done = true;
+          return $uri;
+      }else{
+        // echo "Not unique, add another word.<br/>";
+        $max = $max + 4;
+        // echo "Increase max to $max<br/>";
+        if($max >= strlen($fullslug) && strlen($slug) == strlen($fullslug)){
+            $done = true;
+            // echo "No words left in: $fullslug, add a number.<br/>";
+            return increment_slug($ep, $base, $path, $slug, 2);
+        }
+      }
+    }
+  }
+
+}
+
+function increment_slug($ep, $base, $path, $slug, $i=2){
+  $done = false;
+  while(!$done){
+    $uri = $base.$path.$slug."-".$i;
+    if(is_unique($ep, $uri)){
+      $done = true;
+      return $uri;
+    }else{
+      $i = $i+1;
+    }
+  }
+}
+
+function make_slug($resource){
+  if($resource->get("as:name") && $resource->get("as:name")->getValue() != ""){
+    $string = $resource->get("as:name")->getValue();
+  }elseif($resource->get("as:summary") && $resource->get("as:summary")->getValue() != ""){
+    $string = strip_tags($resource->get("as:summary")->getValue());
+  }elseif($resource->get("as:content") && $resource->get("as:content")->getValue() != ""){
+    $string = strip_tags($resource->get("as:content")->getValue());
+  }else{
+    $string = uniqid();
+  }
+
+  $slug = substr(strtolower(str_replace(" ", "-", preg_replace("/[^\w\d \-]/ui", '',strip_tags($string)))), 0);
+  return remove_stopwords($slug);
+}
+
+function path_for_type($resource){
+  if($resource->isA("as:Place")){
+    return "locations/";
+  }elseif($resource->isA("as:Profile") || $resource->isA("as:Person") || $resource->isA("as:Organization")){
+    return "contacts/";
+  }elseif($resource->get("as:published")){
+    $date = new DateTime($resource->get("as:published"));
+    return $date->format("Y/m/");
+  }elseif($resource->get("as:startTime")){
+    $date = new DateTime($resource->get("as:startTime"));
+    return $date->format("Y/m/");
+  }
+  return "";
+}
+
+function is_unique($ep, $uri){
+  $q = "SELECT ?o WHERE { <$uri> ?p ?o } LIMIT 1";
+  $res = $ep->query($q);
+  if(empty($res['result']['rows'])){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function remove_stopwords($string){
+  $stopwords = array("a", "all", "am", "an", "and", "are", "as", "at", "be","but", "by", "etc", "for", "go", "had", "has", "hasnt", "have", "he", "her", "hers", "him", "his", "how", "ie", "if", "in", "into", "is", "it", "its", "me", "my",  "nor", "not", "now", "of", "on", "or", "she", "so", "such", "than", "that", "the", "their", "them", "then", "these", "they", "this", "those", "to", "was", "which", "while", "will", "the", "your", "putting", "you", "might", "i");
+
+  $words = explode("-", $string);
+  $filtered = array();
+  foreach($words as $word){
+    if(!in_array(strtolower($word), $stopwords)){
+      array_push($filtered, $word);
+    }
+  }
+  return implode("-", $filtered);
+}
+
+function decide_when_to_stop($full_slug, $max=16){
+  $words = explode("-", $full_slug);
+  $slug = array();
+  foreach($words as $word){
+      
+    if(empty($slug) && strlen($word) >= $max){
+      // Add words from the title to the slug
+      //echo "Adding $word<br/>";
+      array_push($slug, $word);
+    }else{
+      // Until max is reached
+      $current = implode("-", $slug);
+      if(strlen($current) + strlen($word) <= $max){
+        //echo "Adding $word<br/>";
+        array_push($slug, $word);
+      }else{
+        //echo "No room for $word, break<br/>";
+        break;
+      }
+    }
+    //echo "deciding; max: $max, slug:".implode("-",$slug).", sluglen: ".strlen(implode("-",$slug))."<br/>";
+  }
+  return implode("-", $slug);
+}
+
+/**************************/
+/* Posting                */
+/**************************/
+
+function post($data, $target, $slug){
 
 }
 
