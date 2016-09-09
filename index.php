@@ -108,11 +108,11 @@ try {
         <img src="https://rhiaro.co.uk/stash/dp.png" alt="rhiaro" rel="as:image" />
          ... tampering ...
       </h1>
-      <div class="w1of2">
+      <div class="w1of2" id="latest">
         <?foreach($latest_posts as $uri => $resource):?>
           <? include 'views/article.php'; ?>
         <?endforeach?>
-        <nav><p><a href="<?=$next?>">Next</a></p></nav>
+        <nav id="prevnav"><p><a href="<?=$next?>" id="prev" rel="prev">Prev</a></p></nav>
       </div>
       <div class="w1of2">
         <p>IRL I am <span property="as:name">Amy</span></p>
@@ -132,6 +132,46 @@ try {
       <?endforeach?></p>
       </div>
     </div>
+    <script>
+
+      (function() {
+        var httpRequest;
+        var posts = document.getElementById("latest");
+        var prevLink = document.getElementById("prev");
+        var prevUri = prevLink.href;
+        prevLink.onclick = function(e) { e.preventDefault(); makeRequest('vendor/sloph/page.php?start='+prevUri); };
+
+        function makeRequest(url) {
+          httpRequest = new XMLHttpRequest();
+
+          if (!httpRequest) {
+            alert('Giving up :( Cannot create an XMLHTTP instance');
+            return false;
+          }
+          httpRequest.onreadystatechange = alertContents;
+          httpRequest.open('GET', url);
+          httpRequest.send();
+        }
+
+        function alertContents() {
+          if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {
+              var prevNav = document.getElementById("prevnav");
+              var newNav = prevNav.cloneNode(true);
+              var res = JSON.parse(httpRequest.responseText);
+              prevNav.parentNode.removeChild(prevNav);
+              newNav.querySelector("#prev").href = res.prev;
+              posts.insertAdjacentHTML('beforeEnd', res.html);
+              posts.appendChild(newNav);
+              newNav.querySelector("#prev").onclick = function(e) { e.preventDefault(); makeRequest('vendor/sloph/page.php?start='+res.prev); };
+            } else {
+              console.log('There was a problem with the request.');
+            }
+          }
+        }
+      })();
+
+    </script>
     <?
     include 'views/end.php';
 
