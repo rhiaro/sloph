@@ -16,7 +16,10 @@ if(isset($_GET['resource'])){
 }
 
 try {
-  if(gettype($content) == "string"){
+  if(!$content){
+    header($header);
+    echo $header;
+  }elseif(gettype($content) == "string"){
     header($header);
     echo $content;
   }else{
