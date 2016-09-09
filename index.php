@@ -17,13 +17,30 @@ try {
     $resource = $content->resource($relUri);
     // $items = $content->all($relUri, 'as:items');
 
-    // $last_of_derp = array();
-    // $latest_posts = array();
+    $last_of_derp = array();
+    $latest_posts = array();
     // $all = array();
 
     $items = $content->toRdfPhp();
 
-    // foreach($items as $uri => $item){
+    foreach($items as $uri => $item){
+
+      $types = $item[EasyRdf_Namespace::expand("rdf:type")];
+
+      foreach($types as $t){
+        $type = $t['value'];
+        if(!isset($last_of_derp[$type]) && $type != EasyRdf_Namespace::expand("as:Activity")){
+          $last_of_derp[$type] = $uri;
+        }
+
+        if($type == EasyRdf_Namespace::expand("as:Article") || $type == EasyRdf_Namespace::expand("as:Note") && count($latest_posts) <= 9){
+          $latest_posts[] = $uri;
+        }
+
+        if($type == EasyRdf_Namespace::expand("as:Arrive")){
+
+        }
+      }
 
     //   $uri = $item->getUri();
     //   $types = $item->types();
@@ -58,7 +75,7 @@ try {
 
     //   $all[] = $item;
 
-    // }
+    }
 
     /* Views stuff */
     if(!$resource->get('view:stylesheet')){
@@ -80,20 +97,13 @@ try {
 
     ?>
 
-<!--    <div class="boxes">
+    <div class="boxes">
       <a href="#me"><img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" class="box" /></a>
       <?
-      foreach($all as $resource){
-        include 'views/boxes.php';
-      }
+      // foreach($all as $resource){
+      //   include 'views/boxes.php';
+      // }
       ?>
-    </div> -->
-    
-    <div id="me" class="clearfix" resource="#me" typeof="as:Person">
-      <h1>
-        <img src="https://rhiaro.co.uk/stash/dp.png" alt="rhiaro" rel="as:image" />
-         ... brb ...
-      </h1>
       <?foreach($items as $uri => $item):?>
         <span class="box" style="background-color: #ccc">
           <?foreach($item["http://www.w3.org/1999/02/22-rdf-syntax-ns#type"] as $t):?>
@@ -101,14 +111,24 @@ try {
           <?endforeach?>
         </span>
       <?endforeach?>
-      <!--<div class="w1of2">
-
-        <?for($i=0; $i < 9; $i++){
-          $resource = $latest_posts[$i];
-          include 'views/article.php'; 
-        }
+    </div>
+    
+    <div id="me" class="clearfix" resource="#me" typeof="as:Person">
+      <h1>
+        <img src="https://rhiaro.co.uk/stash/dp.png" alt="rhiaro" rel="as:image" />
+         ... brb ...
+      </h1>
+      <div class="w1of2">
+        <?foreach($latest_posts as $post):?>
+          <p><a href="<?=$post?>"><?=$post?></a></p>
+        <?endforeach?>
+        <?
+        // for($i=0; $i < 9; $i++){
+        //   $resource = $latest_posts[$i];
+        //   include 'views/article.php'; 
+        // }
         ?>
-        <nav><p><a href="<?=$latest_posts[9]->getUri()?>">Next</a></p></nav>
+        <!-- <nav><p><a href="<?=$latest_posts[9]->getUri()?>">Next</a></p></nav> -->
       </div>
       <div class="w1of2">
         <p>IRL I am <span property="as:name">Amy</span></p>
