@@ -1,6 +1,7 @@
 <?
 // TODO: There must be a less insane way to include these
 require_once("JsonLD/Exception/JsonLdException.php");
+require_once("JsonLD/Quad.php");
 require_once("JsonLD/Processor.php");
 require_once("JsonLD/FileGetContentsLoader.php");
 require_once("JsonLD/RemoteDocument.php");

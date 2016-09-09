@@ -159,6 +159,11 @@ require_once "EasyRdf/Parser/Ntriples.php";
 require_once "EasyRdf/Parser/Json.php";
 
 /**
+ * @see EasyRdf_Parser_JsonLd
+ */
+require_once "EasyRdf/Parser/JsonLd.php";
+
+/**
  * @see EasyRdf_Parser_Rdfa
  */
 require_once "EasyRdf/Parser/Rdfa.php";
