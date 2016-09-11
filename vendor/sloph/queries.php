@@ -247,6 +247,37 @@ LIMIT $count
   return $q;
 }
 
+// HERENOW
+function query_select_s_next_of_type_count($uri, $count=10){
+  $q = get_prefixes();
+
+  $q .= "SELECT DISTINCT ?s WHERE { \n";
+  $q .= "  ?s as:published ?d . \n";
+  $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= "  FILTER ( ?d > ?d2 ) . \n";
+  $q .= "  FILTER ( <$uri> != ?s ) . \n";
+  $q .= "}
+ORDER BY ASC(?d)
+LIMIT $count
+";
+  return $q;
+}
+
+function query_select_s_prev_of_type_count($uri, $count=10){
+  $q = get_prefixes();
+
+  $q .= "SELECT DISTINCT ?s WHERE { \n";
+  $q .= "  ?s as:published ?d . \n";
+  $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= "  FILTER ( ?d < ?d2 ) . \n";
+  $q .= "  FILTER ( <$uri> != ?s ) . \n";
+  $q .= "}
+ORDER BY DESC(?d)
+LIMIT $count
+";
+  return $q;
+}
+
 /* Specific queries */
 
 function query_for_places(){
