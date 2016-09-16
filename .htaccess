@@ -1,13 +1,18 @@
-Header set Access-Control-Expose-Headers "Link, Location, Accept-Post, Content-Type"
-Header set Access-Control-Allow-Headers "Link, Location, Accept-Post, Content-Type, Slug"
-Header set Access-Control-Allow-Origin "*"
-Header set Link "<https://rhiaro.co.uk/pub.php>; rel=\"micropub\""
-Header set Link "<https://rhiaro.co.uk/pub.php>; rel=\"outbox\""
-Header add Link "<https://webmention.io/rhiaro.co.uk/webmention>; rel=\"webmention\""
-Header add Link "<https://indieauth.com/auth>; rel=\"authorization_endpoint\""
-Header add Link "<https://tokens.indieauth.com/token>; rel=\"token_endpoint\""
-Header add Link "<https://rhiaro.co.uk/inbox.php>; rel=\"http://www.w3.org/ns/ldp#inbox\""
-Header add Link "<https://rhiaro.co.uk/preferencesfile>; rel=\"http://www.w3.org/ns/pim/space#preferencesFile\""
+SetEnvIfNoCase ORIGIN (.*) ORIGIN=$1
+Header set Access-Control-Allow-Origin "%{ORIGIN}e" env=ORIGIN
+Header set Access-Control-Allow-Credentials "true"
+Header set Access-Control-Allow-Methods "POST, GET, HEAD, OPTIONS, TRACE"
+Header set Access-Control-Allow-Headers "Link, Location, Accept-Post, Content-Type, Slug, Origin"
+Header set Access-Control-Expose-Headers "User, Location, Link, Vary, Last-Modified, ETag, Accept-Patch, Accept-Post, Updates-Via, Allow, Content-Length"
+Header set Vary "Origin, Accept-Encoding"
+
+Header set Link '<https://rhiaro.co.uk/pub.php>; rel="micropub"'
+Header add Link '<https://rhiaro.co.uk/pub.php>; rel="outbox"'
+Header add Link '<https://webmention.io/rhiaro.co.uk/webmention>; rel="webmention"'
+Header add Link '<https://indieauth.com/auth>; rel="authorization_endpoint"'
+Header add Link '<https://tokens.indieauth.com/token>; rel="token_endpoint"'
+Header add Link '<https://rhiaro.co.uk/ldn.php>; rel="http://www.w3.org/ns/ldp#inbox"'
+Header add Link '<https://rhiaro.co.uk/preferencesfile>; rel="http://www.w3.org/ns/pim/space#preferencesFile"'
 
 RewriteEngine on
 RewriteBase /
