@@ -95,3 +95,8 @@ aside time>span{
   line-height: 1.4;
   font-size: 1.2em;
 }
+
+blockquote {
+  border-left: 8px solid #ccc;
+  padding-left: 2em; margin-left: 0px;
+}

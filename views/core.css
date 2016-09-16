@@ -88,6 +88,13 @@ nav a:hover img {
   text-decoration: none;
 }
 
+#latest a img {
+  max-width: 100%;
+  width: 264px;
+  padding: 4px; border: 1px solid #ccc;
+  text-decoration: none;
+}
+
 .tags a {
   font-size: 0.8em;
   text-decoration: none!important;
@@ -121,5 +128,5 @@ nav a:hover img {
 }
 
 article img {
-  width: 100%; max-width: 100%;
+  max-width: 100%;
 }

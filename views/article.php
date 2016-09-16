@@ -8,9 +8,15 @@
   <?=$resource->get('as:content')?>
   
   <? include('tags.php'); ?>
-  <?
-  $date = new DateTime($resource->get('as:published'));
-  ?>
-  <p><time><a href="<?=str_replace("https://rhiaro.co.uk", "", $resource->getUri())?>"><?=$date->format("d M Y, H:i (e)")?></a></time></p>
+
+  <?if($resource->get('as:published')):?>
+    <? $date = new DateTime($resource->get('as:published')); ?>
+    <p><time><a href="<?=str_replace("https://rhiaro.co.uk", "", $resource->getUri())?>"><?=$date->format("d M Y, H:i (e)")?></a></time></p>
+  <?endif?>
+
+  <?if($resource->get('as:updated')):?>
+    <? $date = new DateTime($resource->get('as:updated')); ?>
+    <p><em>Last modified: </em><time><a href="<?=str_replace("https://rhiaro.co.uk", "", $resource->getUri())?>"><?=$date->format("d M Y, H:i (e)")?></a></time></p>
+  <?endif?>
   
 </article>
