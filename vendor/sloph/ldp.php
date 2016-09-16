@@ -31,7 +31,9 @@ function conneg($acceptheaders, $graph){
   foreach($acceptheaders as $accept){
     try{
       if($accept["raw"] == "*/*" || !isset($accept["raw"]) || $accept["raw"] == ""){
-        $accept["raw"] = "application/ld+json";
+        //$accept["raw"] = "application/ld+json";
+        // Switching to default text/html because of indieauth.com issue #126 for now
+        $accept["raw"] = "text/html";
       }
       $format = EasyRdf_Format::getFormat($accept["raw"]);
       if($format->getSerialiserClass()){
@@ -196,7 +198,7 @@ function make_slug($resource){
 function path_for_type($resource){
 
   if($resource->isA("as:Place")){
-    return "locations/";
+    return "location/";
   }elseif($resource->isA("as:Profile") || $resource->isA("as:Person") || $resource->isA("as:Organization")){
     return "contacts/";
   }elseif($resource->get("as:published")){
