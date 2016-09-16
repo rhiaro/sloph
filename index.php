@@ -103,9 +103,9 @@ try {
       <?endforeach?>
     </div>
     
-    <div id="me" class="clearfix" resource="#me" typeof="as:Person">
+    <div id="me" class="clearfix" resource="#me" rel="foaf:primaryTopic" typeof="as:Person">
       <h1>
-        <img src="https://rhiaro.co.uk/stash/dp.png" alt="rhiaro" rel="as:image" />
+        <img src="https://rhiaro.co.uk/stash/dp.png" alt="rhiaro" rel="as:image foaf:depiction foaf:img" />
          ... tampering ...
       </h1>
       <div class="w1of2" id="latest">
@@ -115,10 +115,11 @@ try {
         <nav id="prevnav"><p><a href="<?=$next?>" id="prev" rel="prev">Prev</a></p></nav>
       </div>
       <div class="w1of2">
-        <p>IRL I am <span property="as:name">Amy</span></p>
+        <p>IRL I am <span property="as:name foaf:name">Amy</span></p>
         <p>On twitter I am <a href="https://twitter.com/rhiaro" rel="me">@rhiaro</a></p>
         <p>I store code on <a href="https://github.com/rhiaro" rel="me">github</a> and <a href="https://bitbucket.org/rhiaro">bitbucket</a></p>
         <p>By email I am <a href="mailto:amy@rhiaro.co.uk" rel="me">amy@rhiaro.co.uk</a></p>
+        <a href="https://rhiaro.co.uk/ldn.php" rel="ldp:inbox"></a>
       <?foreach($last_of_type as $type => $resource):?>
         <? include 'views/profile_post.php';      ?>
       <?endforeach?>
@@ -145,7 +146,7 @@ try {
           httpRequest = new XMLHttpRequest();
 
           if (!httpRequest) {
-            alert('Giving up :( Cannot create an XMLHTTP instance');
+            console.log('Giving up :( Cannot create an XMLHTTP instance');
             return false;
           }
           httpRequest.onreadystatechange = alertContents;
