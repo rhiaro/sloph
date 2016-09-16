@@ -120,13 +120,23 @@
 $test = array(
           array(
             "name" => "Event 1",
-            "startTime" => new DateTime("2016-09-06T09:00:00-0400"),
-            "endTime" => new DateTime("2016-09-06T12:30:00-0400"),
+            "startTime" => new DateTime("2016-09-17T09:00:00-0400"),
+            "endTime" => new DateTime("2016-09-17T12:30:00-0400"),
           ),
           array(
             "name" => "I like big butts",
-            "startTime" => new DateTime("2016-09-09T14:00:00-0400"),
-            "endTime" => new DateTime("2016-09-09T17:45:00-0400"),
+            "startTime" => new DateTime("2016-09-14T14:00:00-0400"),
+            "endTime" => new DateTime("2016-09-14T17:45:00-0400"),
+          ),
+          array(
+            "name" => "Multi day",
+            "startTime" => new DateTime("2016-09-13T09:00:00-0400"),
+            "endTime" => new DateTime("2016-09-14T17:00:00-0400"),
+          ),
+          array(
+            "name" => "Flight",
+            "startTime" => new DateTime("2016-09-16T23:30:00-0400"),
+            "endTime" => new DateTime("2016-09-16T02:00:00-0400"),
           )
   );
 
@@ -153,7 +163,7 @@ $hours = array_merge(range($today->format("G")-1, 23), range(1, $today->format("
       <th></th>
       <?foreach($this_week as $day):?>
       <th>
-        <span class="day<?=isset($day["today"]) ? " active" : ""?>"><?=$day["date"]->format("N")?></span>
+        <span class="day<?=isset($day["today"]) ? " active" : ""?>"><?=$day["date"]->format("d")?></span>
         <span class="long"><?=$day["date"]->format("l")?></span>
         <span class="short"><?=$day["date"]->format("D")?></span>
       </th>
@@ -164,22 +174,13 @@ $hours = array_merge(range($today->format("G")-1, 23), range(1, $today->format("
     <?foreach($hours as $hour):?>
       <tr>
         <td class="hour<?=$today->format("G") == $hour ? " active" : ""?>" rowspan="4" id=<?=$hour?>><span><?=$hour?>:00</span></td>
-        <?foreach($this_week as $day):?>
-          <?foreach($test as $event):?>
-            <?if($event["startTime"]->format("N") == $day["date"]->format("N")):?>
-              <?if($event["startTime"]->format("G") <= $hour && $event["endTime"]->format("G") >= $hour):?>
-                <?=$event["name"]?>
-              <?endif?>
-            <?endif?>
-          <?endforeach?>
-        <?endforeach?>
       </tr>
       <?for($i=15;$i<=45;$i+=15):?>
         <tr>
           <?foreach($this_week as $day):?>
             <td>
               <?foreach($test as $event):?>
-                <?if($event["startTime"]->format("N") == $day["date"]->format("N")):?>
+                <?if($event["startTime"]->format("d") <= $day["date"]->format("d") && $event["endTime"]->format("d") >= $day["date"]->format("d")):?>
                   <?if($event["startTime"]->format("G") <= $hour && $event["endTime"]->format("G") >= $hour):?>
                     <?=$event["name"]?>
                   <?endif?>
