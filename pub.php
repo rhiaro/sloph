@@ -40,19 +40,20 @@ function write($data, $date=null, $slug=null){
 $headers = apache_request_headers();
 if(isset($headers['Authorization'])) {
   $token = $headers['Authorization'];
-
+  
   /* !!!!! */
   if($token == "tigoasdf"){
     $response = array("me"=>"https://rhiaro.co.uk/#me", "scope"=>"post", "issued_by"=>"localhost");
-  }else
+  }else{
   /* !!!!! */  
 
     $response = verify_token($token);
-    $me = @$response['me'];
-    $iss = @$response['issued_by'];
-    $client = @$response['client_id'];
-    $scope = @$response['scope'];
   }
+  $me = @$response['me'];
+  $iss = @$response['issued_by'];
+  $client = @$response['client_id'];
+  $scope = @$response['scope'];
+
 }else{
   header("HTTP/1.1 403 Forbidden");
   echo "403: No authorization header set.";
@@ -79,29 +80,49 @@ if(empty($response)){
   if(isset($post) && !empty($post)){
   
   // Get content-type header
-    var_dump($headers); // HERENOW
-  // if it's form-encoded
-  //   convert to json-ld
-  // if it's activity+json
-  //   add default context
+  if($headers["Content-type"] == "application/x-www-form-urlencoded"){
+    // if it's form-encoded convert to json-ld
+    // TODO: actual conversion
+    if(!isset($post["@context"])){ $post["@context"] = "https://rhiaro.co.uk/vocab"; }
+    if(isset($post['access_token'])) unset($post['access_token']);
+  
+  }elseif($headers["Content-type"] == "application/activity+json"){
+    // if it's activity+json add default context
+    if(!isset($post["@context"])){ $post["@context"] = "http://www.w3.org/ns/activitystreams#"; }
+  
+  }elseif($headers["Content-type"] == "application/ld+json"){
+    // pass
+  }else{
+    header("HTTP/1.1 415 Unsupported Media Type");
+    echo "415: Unsupported media type";
+    exit;
+  }
+  
+  // Find slug
+  $slug = null;
+  if(isset($post['slug'])){ 
+    $slug = urlencode($post['slug']); 
+    unset($post['slug']);
+  }elseif(isset($headers['Slug'])){ $slug = urlencode($headers['Slug']); }
+
   // parse and validate
+  var_dump($post); // HERENOW this is turning into JSON weirdly
+  $data = json_encode($post);
+  $g = new EasyRdf_Graph();
+  $g->parse(json_encode($data), "jsonld");
+  $r = $g->resources();
+  $resource = array_pop($r);
+  var_dump(post($ep, $resource));
+
+  // Convert back to JSON
+  // echo $data;
+
+  // make post uri
   // insert
 
   /*  
-    if($type_json){
-      $post = json_decode($post, true);
-      // assume it's as2
-      if(!isset($post["@context"])){ $post["@context"] = "http://www.w3.org/ns/activitystreams#"; }
-    }else{
-      // assume it's microformats
-      if(!isset($post["@context"])){ $post["@context"] = "http://rhiaro.co.uk/vocab"; }
-      if(isset($post['access_token'])) unset($post['access_token']);
-    }
+    
   
-    // Find slug
-    $slug = null;
-    if(isset($post['slug'])){ $slug = urlencode($_POST['slug']); }
-    elseif(isset($headers['Slug'])){ $slug = urlencode($headers['Slug']); }
       
     // Find published key and value
     $published = find_published($post);
@@ -150,21 +171,7 @@ if(empty($response)){
       }
     }
     
-    // Convert back to JSON
-    $data = json_encode($post, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     
-    $turtlepath = write($data, date("ymd-His", strtotime($pub)), str_replace("http://blog.rhiaro.co.uk/", "", $uri));
-    if($turtlepath){
-      echo $turtlepath;
-      $res = insert($ep, "/".$turtlepath);
-      
-      header("HTTP/1.1 201 Created");
-      header("Location: $uri");
-    }else{
-      echo "Write fail :(\n";
-      header("HTTP/1.1 500 Internal Server Error");
-
-    }
     
     var_dump($response);
     echo "\n----\n";
