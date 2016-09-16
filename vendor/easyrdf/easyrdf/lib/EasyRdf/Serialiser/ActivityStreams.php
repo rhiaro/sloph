@@ -125,11 +125,11 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
         $compact_options = array(
             'useNativeTypes' => $use_native_types,
             'compactArrays' => true,
-            'optimize' => true,
-            'base' => $graph->getUri()
+            'optimize' => false
         );
 
         $data = \ML\JsonLD\JsonLD::compact($data, $compact_context, $compact_options);
+        $data->{'@context'} = "http://www.w3.org/ns/activitystreams#"; // Not sure about this, could screw up with other vocabs..
 
         return \ML\JsonLD\JsonLD::toString($data);
     }
