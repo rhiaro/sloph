@@ -88,6 +88,20 @@ EasyRdf_Format::register(
 );
 EasyRdf_Format::registerSerialiser('as2', 'EasyRdf_Serialiser_ActivityStreams');
 
+/* Substitute for EasyRdf objects because for some reason they're slow.
+   This expects an EasyRdf PHP serialisation.
+*/
+function get_values($graph, $p, $s=null){
+  if(!isset($s)){
+    $s = array_keys($graph)[0];
+  }
+  return $graph[$s][$p]['value'];
+}
+function get_value($graph, $p, $s=null){
+  $vs = get_values($graph, $s, $p);
+  return $vs[0];
+}
+
 require_once("AcceptHeader.php");
 require_once("sloph/views.php");
 require_once("sloph/queries.php");
