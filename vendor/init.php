@@ -67,6 +67,7 @@ $_PREF = array(
         ,'geo' => 'http://www.w3.org/2003/01/geo/wgs84_pos#'
       );
 $_NS = array_flip($_PREF);
+$ns = new EasyRdf_Namespace();
 // TODO: sioc is wrong
 // TODO: deal with dublin core
 foreach($_PREF as $prefix => $uri){
@@ -92,21 +93,36 @@ EasyRdf_Format::registerSerialiser('as2', 'EasyRdf_Serialiser_ActivityStreams');
    This expects an EasyRdf PHP serialisation.
 */
 function get_values($graph, $p, $s=null){
+  global $ns;
   if(!isset($s)){
-    $s = array_keys($graph)[0];
+    $s = get_uri($graph);
   }
-  return $graph[$s][$p]['value'];
+  $vs = array();
+  if(isset($graph[$s][$ns->expand($p)])){
+    foreach($graph[$s][$ns->expand($p)] as $v){
+      $vs[] = $v['value'];
+    }
+    return $vs;
+  }else{
+    return null;
+  }
 }
 function get_value($graph, $p, $s=null){
-  $vs = get_values($graph, $s, $p);
-  return $vs[0];
+  $vs = get_values($graph, $p, $s);
+  if(is_array($vs)) { return $vs[0]; }
+  else return $vs;
 }
-function is_a($graph, $type, $s=null){
-  $vs = get_values($graph, 'rdf:type', $s);
-  if(in_array($vs, $type)){
+function has_type($graph, $type, $s=null){
+  global $ns;
+  $vs = get_values($graph, $ns->expand("rdf:type"), $s);
+  if(in_array($type, $vs)){
     return true;
+  }else{
+    return false;
   }
-  return false;
+}
+function get_uri($graph){
+  return $s = array_keys($graph)[0];
 }
 
 require_once("AcceptHeader.php");
