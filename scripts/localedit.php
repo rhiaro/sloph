@@ -3,6 +3,8 @@ session_start();
 require_once('../vendor/init.php');
 require_once('Parsedown.php');
 
+$now = new DateTime();
+
 if(isset($_GET['reset'])){ unset($_SESSION[$_GET['reset']]); }
 
 function remove_empty($haystack){
@@ -272,7 +274,7 @@ if($_GET['flag'] == "notype"){
     <form id="new" method="post">
       <p>
         <label for="uri">URI: </label>
-        <input type="text" name="uri" value="https://rhiaro.co.uk/yyyy/mm/<?=uniqid()?>" /> 
+        <input type="text" name="uri" value="https://rhiaro.co.uk/<?=$now->format("Y")?>/<?=$now->format("m")?>/<?=uniqid()?>" /> 
         <input type="submit" value="Create" name="savenew"/>
       </p>
       <?=plustype()?>
