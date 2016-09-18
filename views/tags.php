@@ -1,8 +1,8 @@
-<?if($resource->allResources('as:tag')):?>
+<?if(get_values($resource, 'as:tag')):?>
   <p class="tags"><strong>&#127991;</strong> 
-    <?foreach($resource->allResources('as:tag') as $tag):?>
+    <?foreach(get_values($resource, 'as:tag') as $tag):?>
       <?if(isset($tags)):?>
-        <a href="<?=$tag->getUri()?>"><?=$tags[$tag->getUri()]["name"]?></a>
+        <a href="<?=$tag?>"><?=$tags[$tag]["name"]?></a>
       <?endif?>
     <?endforeach?>
   </p>

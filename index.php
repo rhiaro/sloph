@@ -22,7 +22,6 @@ try {
 
     $items = $content->toRdfPhp();
     $items = array_reverse($items);
-    $ns = new EasyRdf_Namespace();
 
     /* Views stuff */
     if(!$resource->get('view:stylesheet')){
@@ -30,9 +29,10 @@ try {
     }
 
     $locations = get_locations($ep);
+    $locations = $locations->toRdfPhp();
     $color = "transparent";
     $tags = get_tags($ep);
-
+    
     foreach($items as $uri => $item){
 
       $types = $item[$ns->expand("rdf:type")];
@@ -48,8 +48,8 @@ try {
         }
 
         if($type == $ns->expand("as:Arrive")){
-          $color = $locations->get($item[$ns->expand("as:location")][0]['value'], 'view:color');
-          $currentlocation = $item[$ns->expand("as:location")][0]['value'];
+          $color = get_value($locations, 'view:color', get_value(array($uri => $item), "as:location"));
+          $currentlocation = get_value(array($uri => $item), $ns->expand("as:location"));
         }
       }
 
@@ -57,7 +57,7 @@ try {
 
     }
     if($locations){
-      $wherestyle = "body, #me a:hover { background-color: ".$locations->get($currentlocation, 'view:color')."}\n";
+      $wherestyle = "body, #me a:hover { background-color: ".get_value($locations, 'view:color', $currentlocation)."}\n";
       if(!$resource->get('view:css')){
         $resource->addLiteral('view:css', $wherestyle);
       }
@@ -73,21 +73,22 @@ try {
     foreach($latest_post_uris as $uri){
       $result = get($ep, $uri);
       $content = $result['content'];
-      $resource = $content->resource($uri);
-      $latest_posts[$uri] = $resource;
+      $resource = $content->toRdfPhp();
+      $latest_posts[] = $resource;
     }
     foreach($last_of_derp as $type => $uri){
       $result = get($ep, $uri);
       $content = $result['content'];
-      $resource = $content->resource($uri);
-      $last_of_type[$type] = $resource;
+      $resource = $content->toRdfPhp();
+      $last_of_type[$type] = array_shift($resource);
     }
 
     ?>
 
     <div class="boxes">
-      <a href="#me"><img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" class="box" /></a>
+      <a href="#me"><img src="https://rhiaro.co.uk/stash/dp.png" alt="AG" class="box" /></a>
       <?
+      // TODO: switch boxes template with below
       // foreach($all as $resource){
       //   include 'views/boxes.php';
       // }
@@ -109,12 +110,12 @@ try {
          ... tampering ...
       </h1>
       <div class="w1of2" id="latest">
-        <?foreach($latest_posts as $uri => $resource):?>
+        <?foreach($latest_posts as $resource):?>
           <? include 'views/article.php'; ?>
         <?endforeach?>
         <nav id="prevnav"><p><a href="<?=$next?>" id="prev" rel="prev">Prev</a></p></nav>
       </div>
-      <div class="w1of2">
+<!--       <div class="w1of2">
         <p>IRL I am <span property="as:name foaf:name">Amy</span></p>
         <p>On twitter I am <a href="https://twitter.com/rhiaro" rel="me">@rhiaro</a></p>
         <p>I store code on <a href="https://github.com/rhiaro" rel="me">github</a> and <a href="https://bitbucket.org/rhiaro">bitbucket</a></p>
@@ -132,8 +133,8 @@ try {
        <?endif?>
       <?endforeach?></p>
       </div>
-    </div>
-    <script>
+    </div> 
+ -->    <script>
 
       (function() {
         var httpRequest;
