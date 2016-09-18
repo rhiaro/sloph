@@ -101,6 +101,13 @@ function get_value($graph, $p, $s=null){
   $vs = get_values($graph, $s, $p);
   return $vs[0];
 }
+function is_a($graph, $type, $s=null){
+  $vs = get_values($graph, 'rdf:type', $s);
+  if(in_array($vs, $type)){
+    return true;
+  }
+  return false;
+}
 
 require_once("AcceptHeader.php");
 require_once("sloph/views.php");
