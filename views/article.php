@@ -6,7 +6,7 @@
   <?=get_value($resource, 'as:summary')?>
   <?=get_value($resource, 'as:content')?>
   
-  <? include('tags.php'); ?>
+  <? //include('tags.php'); ?>
   <?if(get_value($resource, 'as:published')):?>
     <? $date = new DateTime(get_value($resource, 'as:published')); ?>
     <p><time><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("d M Y, H:i (e)")?></a></time></p>

@@ -23,11 +23,6 @@ try {
     $items = $content->toRdfPhp();
     $items = array_reverse($items);
 
-    /* Views stuff */
-    if(!$resource->get('view:stylesheet')){
-      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
-    }
-
     $locations = get_locations($ep);
     $locations = $locations->toRdfPhp();
     $color = "transparent";
@@ -56,12 +51,21 @@ try {
       $items[$uri]['color'] = $color;
 
     }
+
+    /* Views stuff */
+    if(!$resource->get('view:stylesheet')){
+      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
+    }
     if($locations){
       $wherestyle = "body, #me a:hover { background-color: ".get_value($locations, 'view:color', $currentlocation)."}\n";
       if(!$resource->get('view:css')){
         $resource->addLiteral('view:css', $wherestyle);
       }
     }
+
+    // Don't need this to be an EasyRdf Resource any more
+    $g = $resource->getGraph();
+    $resource = $g->toRdfPhp();
 
     include 'views/top.php';
     include 'views/header.php';
@@ -115,7 +119,7 @@ try {
         <?endforeach?>
         <nav id="prevnav"><p><a href="<?=$next?>" id="prev" rel="prev">Prev</a></p></nav>
       </div>
-<!--       <div class="w1of2">
+      <div class="w1of2">
         <p>IRL I am <span property="as:name foaf:name">Amy</span></p>
         <p>On twitter I am <a href="https://twitter.com/rhiaro" rel="me">@rhiaro</a></p>
         <p>I store code on <a href="https://github.com/rhiaro" rel="me">github</a> and <a href="https://bitbucket.org/rhiaro">bitbucket</a></p>
@@ -134,7 +138,7 @@ try {
       <?endforeach?></p>
       </div>
     </div> 
- -->    <script>
+    <script>
 
       (function() {
         var httpRequest;

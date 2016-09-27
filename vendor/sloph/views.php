@@ -179,19 +179,19 @@ function score_predicates(){
 
 function set_views($ep, $resource){
   
-  if(!$resource->get('view:css')){
-    $resource->addLiteral('view:stylesheet', 'views/'.get_style($resource).".css");
+  if(!$resource->resource()->get('view:css')){
+    $resource->resource()->addLiteral('view:stylesheet', 'views/'.get_style($resource->resource()).".css");
   }
 
   // Background colour for places and checkins
-  if($resource->get('view:color') && !$resource->get('view:css')){
-    $resource->addLiteral('view:css', "body { background-color: ".$resource->get('view:color')."; }\n");
+  if($resource->resource()->get('view:color') && !$resource->resource()->get('view:css')){
+    $resource->addLiteral('view:css', "body { background-color: ".$resource->resource()->get('view:color')."; }\n");
   }
-  if($resource->isA('as:Arrive')){
-    $loc = get($ep, $resource->get('as:location'));
+  if($resource->resource()->isA('as:Arrive')){
+    $loc = get($ep, $resource->resource()->resource()->get('as:location'));
     $loc = $loc['content'];
     if($loc){
-      $resource->addLiteral('view:css', "body { background-color: ".$loc->get($resource->get('as:location'), 'view:color')."; }\n");  
+      $resource->resource()->addLiteral('view:css', "body { background-color: ".$loc->get($resource->resource()->get('as:location'), 'view:color')."; }\n");  
     }
   }
 
@@ -255,17 +255,17 @@ function get_style($resource){
 
 function view_router($resource){
 
-    if($resource->isA("as:Add") || $resource->isA("as:Like") || $resource->isA("as:Announce") || $resource->isA("as:Follow")){
+    if(has_type($resource, "as:Add") || has_type($resource, "as:Like") || has_type($resource, "as:Announce") || has_type($resource, "as:Follow")){
       return 'link';
-    }elseif($resource->isA("as:Arrive")){ 
+    }elseif(has_type($resource, "as:Arrive")){ 
       return 'checkin';
-    }elseif($resource->isA("as:Travel") && $resource->get('as:origin') && $resource->get('as:target')){
+    }elseif(has_type($resource, "as:Travel") && get_value($resource, 'as:origin') && get_value($resource, 'as:target')){
       return 'travel';
-    }elseif($resource->isA("asext:Consume") || $resource->isA("asext:Acquire")){
+    }elseif(has_type($resource, "asext:Consume") || has_type($resource, "asext:Acquire")){
       return 'stuff';
-    }elseif($resource->isA("as:Invite") || $resource->isA("as:Accept") || $resource->isA("as:Event")){
+    }elseif(has_type($resource, "as:Invite") || has_type($resource, "as:Accept") || has_type($resource, "as:Event")){
       return 'event';
-    }elseif($resource->isA("as:Collection")){
+    }elseif(has_type($resource, "as:Collection")){
       return 'collection';
     }else{
       return 'article';

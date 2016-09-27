@@ -115,6 +115,7 @@ function get_value($graph, $p, $s=null){
 function has_type($graph, $type, $s=null){
   global $ns;
   $vs = get_values($graph, $ns->expand("rdf:type"), $s);
+  $type = $ns->expand($type);
   if(in_array($type, $vs)){
     return true;
   }else{
