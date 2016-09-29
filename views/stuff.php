@@ -1,22 +1,22 @@
 <?
-$date = new DateTime($resource->get('as:published'));
+$date = new DateTime(get_value($resource, 'as:published'));
 ?>
 <article>
-  <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk", "", $resource->getUri())?>"><?=$date->format("l \\t\h\\e jS \o\\f F \a\\t g:ia (e)")?></a></datetime></p>
+  <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("l \\t\h\\e jS \o\\f F \a\\t g:ia (e)")?></a></datetime></p>
   <div>
-    <?if($resource->get('as:image')):?>
-      <img src="<?=$resource->get('as:image')->getUri()?>" />
+    <?if(get_value($resource, 'as:image')):?>
+      <img src="<?=get_uri(get_value($resource, 'as:image'))?>" />
     <?else:?>
-      <?if($resource->isA('asext:Acquire')):?>
+      <?if(has_type($resource, 'asext:Acquire')):?>
         <span>&#128717;</span>
       <?else:?>
         <span>&#128523;</span>
       <?endif?>
     <?endif?>
-    <?=$resource->get('as:name') ? "<p>".$resource->get('as:name')."</p>" : "" ?>
-    <?=$resource->get('as:summary') ? "<p>".$resource->get('as:summary')."</p>" : "" ?>
-    <?=$resource->get('as:content') ? "<p>".$resource->get('as:content')."</p>" : "" ?>
-    <?=$resource->get('asext:cost') ? "<p><strong>".$resource->get('asext:cost')."</strong></p>" : "" ?>
+    <?=get_value($resource, 'as:name') ? "<p>".get_value($resource, 'as:name')."</p>" : "" ?>
+    <?=get_value($resource, 'as:summary') ? "<p>".get_value($resource, 'as:summary')."</p>" : "" ?>
+    <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
+    <?=get_value($resource, 'asext:cost') ? "<p><strong>".get_value($resource, 'asext:cost')."</strong></p>" : "" ?>
   </div>
 
   <? include('tags.php'); ?>
