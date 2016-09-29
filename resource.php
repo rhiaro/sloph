@@ -25,38 +25,41 @@ if($_SERVER['REQUEST_METHOD'] === "GET" || $_SERVER['REQUEST_METHOD'] === "HEAD"
       header($header);
       echo $content;
     }else{
+      // $content = $content->resource();
 
-      $resource = $content->resource();
       if(isset($_GET['debug'])){
-        echo "<hr/>".$resource->dump();
+        echo "<hr/>".$content->dump();
       }
       
-      if($resource->isA("as:Arrive")){
+      if($content->isA($content->resource(), "as:Arrive")){
         // Temporary for checkins
-        $resource->addLiteral('view:banality', 5);
-        $resource->addLiteral('view:intimacy', 5);
-        $resource->addLiteral('view:wanderlust', 4);
+        $content->addLiteral($content->resource(), 'view:banality', 5);
+        $content->addLiteral($content->resource(), 'view:intimacy', 5);
+        $content->addLiteral($content->resource(), 'view:wanderlust', 4);
       }
 
-      if($resource->isA("as:Travel")){
+      if($content->isA($content->resource(), "as:Travel")){
         // Temporary for journeys
-        $resource->addLiteral('view:banality', 3);
-        $resource->addLiteral('view:intimacy', 5);
-        $resource->addLiteral('view:wanderlust', 5);
+        $content->addLiteral($content->resource(), 'view:banality', 3);
+        $content->addLiteral($content->resource(), 'view:intimacy', 5);
+        $content->addLiteral($content->resource(), 'view:wanderlust', 5);
       }
 
-      if($resource->isA("asext:Consume") || $resource->isA("asext:Acquire")){
+      if($content->isA($content->resource(), "asext:Consume") || $content->isA($content->resource(), "asext:Acquire")){
         // Temporary for food logs
-        $resource->addLiteral('view:banality', 5);
-        $resource->addLiteral('view:intimacy', 3);
-        $resource->addLiteral('view:tastiness', 5);
+        $content->addLiteral($content->resource(), 'view:banality', 5);
+        $content->addLiteral($content->resource(), 'view:intimacy', 3);
+        $content->addLiteral($content->resource(), 'view:tastiness', 5);
       }
 
       $tags = get_tags($ep);
 
-      $resource = set_views($ep, $resource);
+      $content = set_views($ep, $content);
+
+      $resource = $content->toRdfPhp();
       include 'views/top.php';
       include 'views/nav.php';
+      //echo "<hr/>";
 
       include 'views/'.view_router($resource).'.php';
 

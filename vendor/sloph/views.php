@@ -85,6 +85,45 @@ function get_name($ep, $uri){
   }
 }
 
+function nav($ep, $resource, $dir="next", $type=null){
+
+  $out = array();
+
+  if(isset($type)){
+
+    if(substr($type, 0, 4) == "http"){
+      $type = EasyRdf_Namespace::shorten($type);
+    }
+
+    if($type != 'as:Activity'){ // Crude but effective. 
+
+      if($dir == "next"){
+        $q = query_select_s_next_of_type(get_uri($resource), $type);
+      }elseif($dir == "prev"){
+        $q = query_select_s_prev_of_type(get_uri($resource), $type);
+      }
+    }else{
+      return null;
+    }
+
+  }else{
+    $type = 0;
+    if($dir == "next"){
+      $q = query_select_s_next(get_uri($resource));
+    }elseif($dir == "prev"){
+      $q = query_select_s_prev(get_uri($resource));
+    }
+    $res = execute_query($ep, $q);
+  }
+  
+  $res = execute_query($ep, $q);
+  if(!empty($res['rows'])){
+    $out[$type] = $res['rows'][0]['s'];
+  }
+
+  return $out;
+}
+
 function time_ago($date){
   if(gettype($date) != "DateTime"){
     $date = new DateTime($date);

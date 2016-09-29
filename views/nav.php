@@ -1,41 +1,20 @@
 <?
-// Get next resource by date
-$q = query_select_s_next($resource->getUri());
-$nextres = execute_query($ep, $q);
-if(!empty($nextres['rows'])){
-  $next = get($ep, $nextres['rows'][0]['s']);
-  $next = $next['content'];
-}
+// Get next/prev resource by date
+$next = nav($ep, $resource, "next");
+$prev = nav($ep, $resource, "prev");
 // Get next resource by date of the same type
 $next_types = array();
-foreach($resource->types() as $type){
-  if($type != 'as:Activity'){ // Crude but effective.
-    $q = query_select_s_next_of_type($resource->getUri(), $type);
-    $nextres = execute_query($ep, $q);
-    if(!empty($nextres['rows'])){
-      $next_type = get($ep, $nextres['rows'][0]['s']);
-      $next_types[$type] = $next_type['content'];
-    }
-  }
-}
-
-// Get prev resource by date
-$q = query_select_s_prev($resource->getUri());
-$prevres = execute_query($ep, $q);
-if(!empty($prevres['rows'])){
-  $prev = get($ep, $prevres['rows'][0]['s']);
-  $prev = $prev['content'];
-}
-// Get prev resource by date of the same type
 $prev_types = array();
-foreach($resource->types() as $type){
-  if($type != 'as:Activity'){ // Crude but effective.
-    $q = query_select_s_prev_of_type($resource->getUri(), $type);
-    $prevres = execute_query($ep, $q);
-    if(!empty($prevres['rows'])){
-      $prev_type = get($ep, $prevres['rows'][0]['s']);
-      $prev_types[$type] = $prev_type['content'];
-    }
+$this_types = get_values($resource, $ns->expand("rdf:type"));
+
+foreach($this_types as $type){
+  $n = nav($ep, $resource, "next", $type);
+  $p = nav($ep, $resource, "prev", $type);
+  if($n){
+    $next_types = array_merge($next_types, $n);
+  }
+  if($p){
+    $prev_types = array_merge($prev_types, $p);
   }
 }
 ?>
@@ -43,17 +22,17 @@ foreach($resource->types() as $type){
 <nav>
   <a href="/"><img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" /></a>
 
-  <?if(isset($next)):?>
-    <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next->getUri())?>">Next</a></p>
+  <?if($next):?>
+    <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next[0])?>">Next</a></p>
   <?endif?>
-  <?if(isset($prev)):?>
-    <p><a class="left" href="<?=str_replace("https://rhiaro.co.uk", "", $prev->getUri())?>">Prev</a></p>
+  <?if($prev):?>
+    <p><a class="left" href="<?=str_replace("https://rhiaro.co.uk", "", $prev[0])?>">Prev</a></p>
   <?endif?>
 
   <?foreach($prev_types as $type => $prev_one):?>
-    <p><a class="left" href="<?=str_replace("https://rhiaro.co.uk", "", $prev_one->getUri())?>">Prev <?=get_icon_from_type($type)?></a></p>
+    <p><a class="left" href="<?=str_replace("https://rhiaro.co.uk", "", $prev_one)?>">Prev <?=get_icon_from_type($type)?></a></p>
   <?endforeach?>
   <?foreach($next_types as $type => $next_one):?>
-    <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next_one->getUri())?>">Next <?=get_icon_from_type($type)?></a></p>
+    <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next_one)?>">Next <?=get_icon_from_type($type)?></a></p>
   <?endforeach?>
 </nav>
