@@ -1,29 +1,29 @@
 <?
-$date = new DateTime($resource->get('as:published'));
+$date = new DateTime(get_value($resource, 'as:published'));
 $linkclass = "";
-if($resource->isA('as:Like')){
+if(has_type($resource, 'as:Like')){
   $linkclass .= " like";
 }
-if($resource->isA('as:Add')){
+if(has_type($resource, 'as:Add')){
   $linkclass .= " bookmark";
 }
-if($resource->isA('as:Announce')){
+if(has_type($resource, 'as:Announce')){
   $linkclass .= " repost";
 }
 ?>
 <article>
-  <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk", "", $resource->getUri())?>"><?=$date->format("l \\t\h\\e jS \o\\f F \a\\t g:ia (e)")?></a></datetime></p>
+  <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("l \\t\h\\e jS \o\\f F \a\\t g:ia (e)")?></a></datetime></p>
   <div>
     <p>
-      <a class="object<?=$linkclass?>" href="<?=$resource->get('as:object')?>">
+      <a class="object<?=$linkclass?>" href="<?=get_value($resource, 'as:object')?>">
         <span><?=get_icon($resource)?></span>
-        <span><?=$resource->get('as:name') ? $resource->get('as:name') : $resource->get('as:object') ?></span>
+        <span><?=get_value($resource, 'as:name') ? get_value($resource, 'as:name') : get_value($resource, 'as:object') ?></span>
       </a>
     </p>
 
-    <?=$resource->get('as:summary') ? "<p>".$resource->get('as:summary')."</p>" : "" ?>
-    <?=$resource->get('as:content') ? "<p>".$resource->get('as:content')."</p>" : "" ?>
-    <?=$resource->get('asext:cost') ? "<p><strong>".$resource->get('asext:cost')."</strong></p>" : "" ?>
+    <?=get_value($resource, 'as:summary') ? "<p>".get_value($resource, 'as:summary')."</p>" : "" ?>
+    <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
+    <?=get_value($resource, 'asext:cost') ? "<p><strong>".get_value($resource, 'asext:cost')."</strong></p>" : "" ?>
   </div>
 
   <? include('tags.php'); ?>

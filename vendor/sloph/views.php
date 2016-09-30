@@ -1,8 +1,11 @@
 <?
 
 function get_icon($resource){
-  foreach($resource->types() as $type){
-    if($resource->isA("as:Add") && $resource->get("as:target") == "https://rhiaro.co.uk/bookmarks/"){
+  $types = get_values($resource, "rdf:type");
+  foreach($types as $type){
+    $ns = new EasyRdf_Namespace();
+    $type = $ns->shorten($type);
+    if(has_type($resource, "as:Add") && has_type($resource, "as:target") == "https://rhiaro.co.uk/bookmarks/"){
       $t = "&#128278;";
     }else{
       $t = get_icon_from_type($type);
