@@ -217,23 +217,22 @@ function score_predicates(){
 }
 
 function set_views($ep, $resource){
-  
-  if(!$resource->resource()->get('view:css')){
-    $resource->resource()->addLiteral('view:stylesheet', 'views/'.get_style($resource->resource()).".css");
+
+  if(!$resource->get($resource, 'view:css')){
+    $resource->addLiteral('view:stylesheet', 'views/'.get_style($resource).".css");
   }
 
   // Background colour for places and checkins
-  if($resource->resource()->get('view:color') && !$resource->resource()->get('view:css')){
-    $resource->addLiteral('view:css', "body { background-color: ".$resource->resource()->get('view:color')."; }\n");
+  if($resource->get('view:color') && !$resource->get('view:css')){
+    $resource->addLiteral('view:css', "body { background-color: ".$resource->get('view:color')."; }\n");
   }
-  if($resource->resource()->isA('as:Arrive')){
-    $loc = get($ep, $resource->resource()->resource()->get('as:location'));
+  if($resource->isA('as:Arrive')){
+    $loc = get($ep, $resource->get('as:location'));
     $loc = $loc['content'];
     if($loc){
-      $resource->resource()->addLiteral('view:css', "body { background-color: ".$loc->get($resource->resource()->get('as:location'), 'view:color')."; }\n");  
+      $resource->addLiteral('view:css', "body { background-color: ".$loc->get($resource->get('as:location'), 'view:color')."; }\n");  
     }
   }
-
 
   return $resource;
 }

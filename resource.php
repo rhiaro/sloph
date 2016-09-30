@@ -54,9 +54,9 @@ if($_SERVER['REQUEST_METHOD'] === "GET" || $_SERVER['REQUEST_METHOD'] === "HEAD"
 
       $tags = get_tags($ep);
 
-      $content = set_views($ep, $content);
-
-      $resource = $content->toRdfPhp();
+      $resource = set_views($ep, $content->resource());
+      $g = $resource->getGraph();
+      $resource = $g->toRdfPhp();
       include 'views/top.php';
       include 'views/nav.php';
       //echo "<hr/>";

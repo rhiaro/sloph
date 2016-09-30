@@ -2,24 +2,26 @@
   if(!isset($locations)){
     $locations = get_locations($ep);
   }
-  $location = $locations->resource($resource->get('as:location'));
-  $date = new DateTime($resource->get('as:published'));
+  $location_uri = get_value($resource, 'as:location');
+  $locations = $locations->toRdfPhp();
+  $location = array($location_uri => $locations[$location_uri]);
 
-  $q = query_select_s_next_of_type($resource->getUri(), 'as:Arrive');
-  $nextres = execute_query($ep, $q);
-  if(!empty($nextres['rows'])){
-    $next = get($ep, $nextres['rows'][0]['s']);
-    $next = $next['content'];
-    $nextdate = new DateTime($next->get($nextres['rows'][0]['s'], 'as:published'));
+  $date = new DateTime(get_value($resource, 'as:published'));
+
+  $n = nav($ep, $resource, "next", "as:Arrive");
+  if($n){
+    $next = get($ep, $n["as:Arrive"]);
+    $next = $next['content']->toRdfPhp();
+    $nextdate = new DateTime(get_value($next, 'as:published'));
     $duration = $date->diff($nextdate);
   }else{
     $duration = $date->diff(new DateTime());
   }
 ?>
 <article>
-  <?if($location->get('blog:pastLabel')):?>
+  <?if(get_value($location, 'blog:pastLabel')):?>
     <p> 
-      rhiaro <a href="<?=$resource->get('as:location')?>"><?=isset($nextdate) ? $location->get('blog:pastLabel') : $location->get('blog:presentLabel')?></a> for 
+      rhiaro <a href="<?=get_value($resource, 'as:location')?>"><?=isset($nextdate) ? get_value($location, 'blog:pastLabel') : get_value($location, 'blog:presentLabel')?></a> for 
       <?=($duration->y > 0) ? $duration->y . " years, " : ""?>
       <?=($duration->m > 0) ? $duration->m . " months, " : ""?>
       <?=($duration->d > 0) ? $duration->d . " days, " : ""?>
