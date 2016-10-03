@@ -3,7 +3,6 @@
      $type = EasyRdf_Namespace::shorten($type);
   ?>
   <p><span><?=get_icon_from_type($type)?></span> 
-  <?=$type?>
   <?if($type == 'asext:Consume'):?>
     The last thing I ate was <?=get_value(array($uri=>$resource),  'as:name')?>, 
   <?elseif($type == 'asext:Acquire'):?>
