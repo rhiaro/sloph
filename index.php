@@ -5,7 +5,11 @@ require_once('vendor/init.php');
 $headers = apache_request_headers();
 $relUri = $_SERVER['REQUEST_URI'];
 $ct = $headers["Accept"];
-$result = get_container_dynamic($ep, $relUri, "query_select_s_and_type_desc", array(1600), $ct);
+$acceptheaders = new AcceptHeader($ct);
+$graph = get_container_dynamic($ep, $relUri, "query_select_s_and_type_desc", array(1600), $ct);
+$me = get_resource($ep, "https://rhiaro.co.uk/#me");
+$out = merge_graphs(array($graph, $me));
+$result = conneg($acceptheaders, $out);
 $header = $result['header'];
 $content = $result['content'];
 
@@ -14,6 +18,9 @@ try {
     header($header);
     echo $content;
   }else{
+    $me = $content->resource("https://rhiaro.co.uk/#me");
+    $me = $me->toRdfPhp();
+
     $resource = $content->resource($relUri);
 
     $last_of_derp = array();
@@ -84,7 +91,7 @@ try {
       $result = get($ep, $uri);
       $content = $result['content'];
       $resource = $content->toRdfPhp();
-      $last_of_type[$type] = array_shift($resource);
+      $last_of_type[$type] = array($uri => array_shift($resource));
     }
 
     ?>

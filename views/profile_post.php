@@ -1,9 +1,9 @@
-<p><span><?=get_icon_from_type(get_value(array($uri=>$resource),  'rdf:type'))?></span> 
-<? //var_dump(get_values(array($uri=>$resource), 'rdf:type')); ?>
+<?foreach($resource as $uri => $resource):?>
+  <p><span><?=get_icon_from_type(get_value(array($uri=>$resource),  'rdf:type'))?></span> 
   <?if(has_type(array($uri=>$resource),  'asext:Consume')):?>
-  The last thing I ate was <?=get_value(array($uri=>$resource),  'as:name')?>, 
+    The last thing I ate was <?=get_value(array($uri=>$resource),  'as:name')?>, 
   <?elseif(has_type(array($uri=>$resource),  'asext:Acquire')):?>
-  The last thing I acquired was <?=get_value(array($uri=>$resource),  'as:summary')?>, 
+    The last thing I acquired was <?=get_value(array($uri=>$resource),  'as:summary')?>, 
   <?elseif(has_type(array($uri=>$resource),  'as:Arrive')):?>
     <?if(get_value($locations, get_value(array($uri=>$resource),  'as:location'), 'blog:presentLabel')):?>
     I am <a href="<?=get_value(array($uri=>$resource),  'as:location')?>"><?=$locations->get(get_value(array($uri=>$resource),  'as:location'), 'blog:presentLabel')?></a> since 
@@ -11,7 +11,7 @@
     I checked into <a href="<?=get_value(array($uri=>$resource),  'as:location')?>"><?=get_value(array($uri=>$resource),  'as:location')?></a>, 
     <?endif?>
   <?elseif(has_type(array($uri=>$resource),  'as:Like')):?>
-  The last thing I liked was <a href="<?=get_uri($resource) ?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a>
+  The last thing I liked was <a href="<?=get_value(array($uri=>$resource),  'as:object')?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a>
   <?elseif(has_type(array($uri=>$resource),  'as:Add')):?>
   The last thing I saved was <a href="<?=get_uri($resource) ?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a> to <?=get_value(array($uri=>$resource),  'as:target')?>
   <?elseif(has_type(array($uri=>$resource),  'as:Announce')):?>
@@ -37,4 +37,8 @@
     ?>
     The last event I RSVP'd to was <strong><?=$event->get('as:name') ? $event->get('as:name') : $event->getUri() ?></strong>, taking place from <?=$start->format("d F")?> to <?=$end->format("d F")?> at <?=get_name($ep, $event->get('as:location'))?>,  
   <?endif?>
- <time><a href="<?=get_uri($resource) ?>"><?=time_ago(get_value(array($uri=>$resource),  'as:published'))?></a></time></p>
+
+  <?if(get_value(array($uri=>$resource),  'as:published')):?>
+    <time><a href="<?=$uri?>"><?=time_ago(get_value(array($uri=>$resource),  'as:published'))?></a></time></p>
+  <?endif?>
+<?endforeach?>
