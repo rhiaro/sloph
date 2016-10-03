@@ -1,28 +1,32 @@
 <?foreach($resource as $uri => $resource):?>
-  <p><span><?=get_icon_from_type(get_value(array($uri=>$resource),  'rdf:type'))?></span> 
-  <?if(has_type(array($uri=>$resource),  'asext:Consume')):?>
+  <? $type = get_value(array($uri=>$resource),  'rdf:type');
+     $type = EasyRdf_Namespace::shorten($type);
+  ?>
+  <p><span><?=get_icon_from_type($type)?></span> 
+  <?=$type?>
+  <?if($type == 'asext:Consume'):?>
     The last thing I ate was <?=get_value(array($uri=>$resource),  'as:name')?>, 
-  <?elseif(has_type(array($uri=>$resource),  'asext:Acquire')):?>
+  <?elseif($type == 'asext:Acquire'):?>
     The last thing I acquired was <?=get_value(array($uri=>$resource),  'as:summary')?>, 
-  <?elseif(has_type(array($uri=>$resource),  'as:Arrive')):?>
-    <?if(get_value($locations, get_value(array($uri=>$resource),  'as:location'), 'blog:presentLabel')):?>
-    I am <a href="<?=get_value(array($uri=>$resource),  'as:location')?>"><?=$locations->get(get_value(array($uri=>$resource),  'as:location'), 'blog:presentLabel')?></a> since 
+  <?elseif($type == 'as:Arrive'):?>
+    <?if(get_value($locations, 'blog:presentLabel', get_value(array($uri=>$resource),  'as:location'))):?>
+    I am <a href="<?=get_value(array($uri=>$resource),  'as:location')?>"><?=get_value($locations, 'blog:presentLabel', get_value(array($uri=>$resource),  'as:location'))?></a> since 
     <?else:?>
     I checked into <a href="<?=get_value(array($uri=>$resource),  'as:location')?>"><?=get_value(array($uri=>$resource),  'as:location')?></a>, 
     <?endif?>
-  <?elseif(has_type(array($uri=>$resource),  'as:Like')):?>
+  <?elseif($type == 'as:Like'):?>
   The last thing I liked was <a href="<?=get_value(array($uri=>$resource),  'as:object')?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a>
-  <?elseif(has_type(array($uri=>$resource),  'as:Add')):?>
+  <?elseif($type == 'as:Add'):?>
   The last thing I saved was <a href="<?=get_uri($resource) ?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a> to <?=get_value(array($uri=>$resource),  'as:target')?>
-  <?elseif(has_type(array($uri=>$resource),  'as:Announce')):?>
+  <?elseif($type == 'as:Announce'):?>
   The last thing I reposted was <a href="<?=get_uri($resource) ?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a>
-  <?elseif(has_type(array($uri=>$resource),  'as:Note')):?>
+  <?elseif($type == 'as:Note'):?>
     The last thing I scribbled was about <em><?=$tags[get_value(array($uri=>$resource),  'as:tag')]["name"]?></em>,
-  <?elseif(has_type(array($uri=>$resource),  'as:Article')):?>
+  <?elseif($type == 'as:Article'):?>
   The last article I wrote was <strong><?=get_value(array($uri=>$resource),  'as:name')?></strong>
-  <?elseif(has_type(array($uri=>$resource),  'as:Travel')):?>
+  <?elseif($type == 'as:Travel'):?>
   The last trip I planned was from <?=get_name($ep, get_value(array($uri=>$resource),  'as:origin'))?> on <?=get_value(array($uri=>$resource),  'as:startTime')?> to <?=get_name($ep, get_value(array($uri=>$resource),  'as:target'))?> at <?=get_value(array($uri=>$resource),  'as:endTime')?> 
-  <?elseif(has_type(array($uri=>$resource),  'as:Accept')):?>
+  <?elseif($type == 'as:Accept'):?>
     <?
       $event = get($ep, get_value(array($uri=>$resource),  'as:object'));
       $event = $event['content'];
