@@ -76,7 +76,6 @@ function get($ep, $uri, $content_type="text/html"){
 function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/html"){
   
   $return = array("header" => null, "content" => null, "errors" => null);
-  $acceptheaders = new AcceptHeader($content_type);
 
   $current = new EasyRdf_Graph();
   $resource = new EasyRdf_Resource($uri, $current);
@@ -103,8 +102,7 @@ function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/h
     }
   }
   
-  $return = conneg($acceptheaders, $current);
-  return $return;
+  return $current;
 }
 
 function get_container($ep, $container, $content_type){
