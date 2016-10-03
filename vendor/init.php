@@ -126,6 +126,17 @@ function get_uri($graph){
   return $s = array_keys($graph)[0];
 }
 
+function merge_graphs($array_of_graphs){
+  $phps = array();
+  foreach($array_of_graphs as $g){
+    $php = $g->toRdfPhp();
+    $phps = array_merge_recursive($phps, $php);
+  }
+  $graph = new EasyRdf_Graph();
+  $graph->parse($phps, 'php');
+  return $graph;
+}
+
 require_once("AcceptHeader.php");
 require_once("sloph/views.php");
 require_once("sloph/queries.php");
