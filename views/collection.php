@@ -1,10 +1,11 @@
-<h1><?=$resource->get('as:name')?> (<?=$resource->countValues('as:items')?>)</h1>
+<? $items = get_values($resource, 'as:items'); ?>
+<h1><?=get_value($resource, 'as:name')?> (<?=count($items)?>)</h1>
 <ul>
   <?
-  foreach($resource->all('as:items') as $item){
-    $r = get($ep, $item->getUri());
+  foreach($items as $item){
+    $r = get($ep, $item);
     $resource = $r['content'];
-    $resource = $resource->resource($item->getUri());
+    $resource = $resource->toRdfPhp();
     include 'views/'.view_router($resource).'.php';
   }
   ?>
