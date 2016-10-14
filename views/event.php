@@ -1,31 +1,37 @@
 <?
-if($resource->isA('as:Accept') || $resource->isA('as:Invite')){
+if(has_type($resource, 'as:Accept') || has_type($resource, 'as:Invite')){
 
-  if($resource->get('as:object')){
-    $eventurl = $resource->get('as:object');
-  }elseif($resource->get('as:inReplyTo')){
-    $eventurl = $resource->get('as:inReplyTo');
+  if(get_value($resource, 'as:object')){
+    $eventurl = get_value($resource, 'as:object');
+  }elseif(get_value($resource, 'as:inReplyTo')){
+    $eventurl = get_value($resource, 'as:inReplyTo');
   }
   $event = get($ep, $eventurl);
   $event = $event['content'];
+  var_dump($event);
   if(gettype($event) != "string"){
-    $event = $event->resource($eventurl);
+    $event = $event->toRdfPhp();
     
-    if($event->get('as:name')){ $h = $event->get('as:name'); }
-    if($event->get('as:startTime')){ $start = new DateTime($event->get('as:startTime')); }
-    if($event->get('as:endTime')){ $end = new DateTime($event->get('as:endTime')); }
-    if($event->get('as:location')){ $location = $event->get('as:location'); }
+    if(get_value($event, 'as:name')){ $h = get_value($event, 'as:name'); }
+    if(get_value($event, 'as:startTime')){ $start = new DateTime(get_value($event, 'as:startTime')); }
+    if(get_value($event, 'as:endTime')){ $end = new DateTime(get_value($event, 'as:endTime')); }
+    if(get_value($event, 'as:location')){ $location = get_value($event, 'as:location'); }
   }else{
     $event = false;
   }
 
+}elseif(has_type($resource, 'as:Event')){
+  $eventurl = get_uri($resource);
+  $event = $resource;
 }
-if(!isset($h)){ $h = $resource->get('as:name'); }
-if(!isset($start)){ $start = new DateTime($resource->get('as:startTime')); }
-if(!isset($end)){ $end = new DateTime($resource->get('as:endTime')); }
-if(!isset($location)){ $location = $resource->get('as:location'); }
 
-$date = new DateTime($resource->get('as:published'));
+
+if(!isset($h)){ $h = get_value($resource, 'as:name'); }
+if(!isset($start)){ $start = new DateTime(get_value($resource, 'as:startTime')); }
+if(!isset($end)){ $end = new DateTime(get_value($resource, 'as:endTime')); }
+if(!isset($location)){ $location = get_value($resource, 'as:location'); }
+
+$date = new DateTime(get_value($resource, 'as:published'));
 ?>
 
 <article>
@@ -61,14 +67,14 @@ $date = new DateTime($resource->get('as:published'));
   <p><a href="<?=$eventurl?>">Event website</a></p>
 
   <?if($event):?>
-    <?=$event->get('as:summary')?>
-    <?=$event->get('as:content')?>
+    <?=get_value($event, 'as:summary')?>
+    <?=get_value($event, 'as:content')?>
   <?endif?>
 
   <h3>RSVP</h3>
-  <?=$resource->get('as:name')?>
-  <?=$resource->get('as:summary')?>
-  <?=$resource->get('as:content')?>
+  <?=get_value($resource, 'as:name')?>
+  <?=get_value($resource, 'as:summary')?>
+  <?=get_value($resource, 'as:content')?>
   <p><time><a href="<?=str_replace("https://rhiaro.co.uk", "", $resource->getUri())?>"><?=$date->format("D j M Y g:ia (e)")?></a></time></p>
 
 
