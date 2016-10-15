@@ -57,11 +57,9 @@ function get_travel_icon($tag){
 
 function get_travel_icon_from_tags($tags){
   foreach($tags as $tag){
-    if(get_class($tag) == "EasyRdf_Resource"){
-      $icon = get_travel_icon($tag->getUri());
-      if($icon){
-        return $icon;
-      }
+    $icon = get_travel_icon($tag);
+    if($icon){
+      return $icon;
     }
   }
   return get_icon_from_type('as:Travel');
