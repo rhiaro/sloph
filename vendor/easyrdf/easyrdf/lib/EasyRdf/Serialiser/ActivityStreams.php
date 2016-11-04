@@ -73,7 +73,9 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
         $nodes = array(); // cache for id-to-node association
 
         foreach ($graph->toRdfPhp() as $resource => $properties) {
+
             if($graph->getUri() == $resource){ // Only return one resource
+                
                 if (array_key_exists($resource, $nodes)) {
                     $node = $nodes[$resource];
                 } else {
@@ -111,6 +113,9 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
                         }
                     }
                 }
+            }else{
+                // TODO: Attempt to nest things if multiple resources in the graph
+                //       Actually I should probably do this after JSON-LD serialisation, not here.
             }
         }
 

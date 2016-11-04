@@ -3,12 +3,12 @@ session_start();
 require_once('vendor/init.php');
 
 $headers = apache_request_headers();
-$relUri = $_SERVER['REQUEST_URI'];
+$relUri = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $ct = $headers["Accept"];
 $acceptheaders = new AcceptHeader($ct);
 $graph = get_container_dynamic($ep, $relUri, "query_select_s_and_type_desc", array(1600), $ct);
 $me = get_resource($ep, "https://rhiaro.co.uk/#me");
-$out = merge_graphs(array($graph, $me));
+$out = merge_graphs(array($graph, $me), $relUri);
 $result = conneg($acceptheaders, $out);
 $header = $result['header'];
 $content = $result['content'];

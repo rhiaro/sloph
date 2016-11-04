@@ -126,13 +126,13 @@ function get_uri($graph){
   return $s = array_keys($graph)[0];
 }
 
-function merge_graphs($array_of_graphs){
+function merge_graphs($array_of_graphs, $graph_uri = null){
   $phps = array();
   foreach($array_of_graphs as $g){
     $php = $g->toRdfPhp();
     $phps = array_merge_recursive($phps, $php);
   }
-  $graph = new EasyRdf_Graph();
+  $graph = new EasyRdf_Graph($graph_uri);
   $graph->parse($phps, 'php');
   return $graph;
 }

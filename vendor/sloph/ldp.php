@@ -76,7 +76,7 @@ function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/h
   
   $return = array("header" => null, "content" => null, "errors" => null);
 
-  $current = new EasyRdf_Graph();
+  $current = new EasyRdf_Graph($uri);
   $resource = new EasyRdf_Resource($uri, $current);
   $resource->addLiteral('as:name', "tampering with arrangements");
   $resource->addType('as:Collection');
