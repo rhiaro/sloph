@@ -31,9 +31,8 @@ function conneg($acceptheaders, $graph){
   foreach($acceptheaders as $accept){
     try{
       if($accept["raw"] == "*/*" || !isset($accept["raw"]) || $accept["raw"] == ""){
-        //$accept["raw"] = "application/ld+json";
-        // Switching to default text/html because of indieauth.com issue #126 for now
-        $accept["raw"] = "text/html";
+        $accept["raw"] = "application/ld+json";
+        // $accept["raw"] = "text/html";
       }
       $format = EasyRdf_Format::getFormat($accept["raw"]);
       if($format->getSerialiserClass()){
