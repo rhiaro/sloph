@@ -56,7 +56,7 @@
       <p>Leaving <a href="<?=get_value($resource, 'as:origin')?>"><?=$from_name?></a> at <?=$from_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?></p>
     </div>
     <div class="map">
-      <?if($err):?>
+      <?if(!$err):?>
         <div class="map-holder">
           <div style="background-image: url('<?=prev_tile_x($to_map)?>')"></div>
           <div style="background-image: url('<?=$to_map?>')"></div>
