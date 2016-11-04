@@ -8,7 +8,7 @@ if(has_type($resource, 'as:Accept') || has_type($resource, 'as:Invite')){
   }
   $event = get($ep, $eventurl);
   $event = $event['content'];
-  var_dump($event);
+  // var_dump($event);
   if(gettype($event) != "string"){
     $event = $event->toRdfPhp();
     
