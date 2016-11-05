@@ -12,14 +12,18 @@
     if($dbpedia->get($origin, 'foaf:name')){ $from_name = $dbpedia->get($origin, 'foaf:name')->getValue(); }
     elseif($dbpedia->get($origin, 'rdfs:label')){ $from_name = $dbpedia->get($origin, 'rdfs:label')->getValue(); }
     else{ $from_name = str_replace("http://dbpedia.org/resource/", "", $origin); }
-    $from_lat = $dbpedia->get($origin, 'geo:lat')->getValue();
-    $from_lon = $dbpedia->get($origin, 'geo:long')->getValue();
+    if($dbpedia->get($origin, 'geo:lat')) $from_lat = $dbpedia->get($origin, 'geo:lat')->getValue();
+    else $from_lat = 0;
+    if($dbpedia->get($origin, 'geo:long')) $from_lon = $dbpedia->get($origin, 'geo:long')->getValue();
+    else $from_lon = 0;
 
     if($dbpedia->get($target, 'foaf:name')){ $to_name = $dbpedia->get($target, 'foaf:name')->getValue(); }
     elseif($dbpedia->get($target, 'rdfs:label')){ $to_name = $dbpedia->get($target, 'rdfs:label')->getValue(); }
     else{ $to_name = str_replace("http://dbpedia.org/resource/", "", $target); }
-    $to_lat = $dbpedia->get($target, 'geo:lat')->getValue();
-    $to_lon = $dbpedia->get($target, 'geo:long')->getValue();
+    if($dbpedia->get($target, 'geo:lat')) $to_lat = $dbpedia->get($target, 'geo:lat')->getValue();
+    else $to_lat = 0;
+    if($dbpedia->get($target, 'geo:long')) $to_lon = $dbpedia->get($target, 'geo:long')->getValue();
+    else $to_lon = 0;
   }catch(EasyRdf_Exception $e){
     $err = true;
     $from_name = str_replace("http://dbpedia.org/resource/", "", $origin);
