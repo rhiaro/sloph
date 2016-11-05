@@ -120,6 +120,24 @@ function get_container($ep, $container, $content_type){
 
 }
 
+function get_and_sort($ep, $resources, $by="as:published"){
+    $full = array();
+    foreach($resources as $resource){
+      $r = get($ep, $resource);
+      $item = $r['content'];
+      $item = $item->toRdfPhp();
+      $full = array_merge($full, $item);
+    }
+    $dates = array();
+    foreach($full as $uri => $r){
+      $dates[strtotime(get_value(array($uri => $r), $by))] = $uri;
+    }
+    krsort($dates);
+    $order = array_flip($dates);
+    $sorted = array_replace($order, $full);
+    return $sorted;
+  }
+
 /**************************/
 /* URIs                   */
 /**************************/
