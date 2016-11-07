@@ -1,11 +1,16 @@
 <?
   if(!isset($locations)){
     $locations = get_locations($ep);
+    $locations = $locations->toRdfPhp();
   }
   $location_uri = get_value($resource, 'as:location');
-  $locations = $locations->toRdfPhp();
-  $location = array($location_uri => $locations[$location_uri]);
 
+  if(isset($locations[$location_uri])){
+    $location = array($location_uri => $locations[$location_uri]);
+  }else{
+    $location = $location_uri;
+  }
+  
   $date = new DateTime(get_value($resource, 'as:published'));
 
   $n = nav($ep, $resource, "next", "as:Arrive");
