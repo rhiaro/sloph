@@ -44,6 +44,12 @@
 require_once "EasyRdf/Exception.php";
 
 /**
+ * @see EasyRdf_Http_Exception
+ */
+require_once "EasyRdf/Http/Exception.php";
+
+
+/**
  * @see EasyRdf_Format
  */
 require_once "EasyRdf/Format.php";
