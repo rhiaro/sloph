@@ -75,7 +75,7 @@ $date = new DateTime(get_value($resource, 'as:published'));
   <?=get_value($resource, 'as:name')?>
   <?=get_value($resource, 'as:summary')?>
   <?=get_value($resource, 'as:content')?>
-  <p><time><a href="<?=str_replace("https://rhiaro.co.uk", "", $resource->getUri())?>"><?=$date->format("D j M Y g:ia (e)")?></a></time></p>
+  <p><time><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("D j M Y g:ia (e)")?></a></time></p>
 
 
   <? include('tags.php'); ?>
