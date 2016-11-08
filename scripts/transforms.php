@@ -109,8 +109,26 @@ function get_string_tags($ep){
   return $tags;
 }
 
-function tags_to_collections($ep){
-  $tags = get_string_tags($ep);
+function get_uri_tags($ep){
+  $q = query_select_tags();
+  $res = execute_query($ep, $q);
+  // var_dump($res);
+  $tags = array(); $i = 0;
+  foreach($res['rows'] as $tag){
+    if($tag["tag type"] == "uri"){
+      $uri = $tag["tag"];
+      if(isset($tag["name"])){
+        $tags[$uri]['name'] = $tag["name"];
+      }else{
+        $tags[$uri]['name'] = urldecode(str_replace("https://rhiaro.co.uk/tags/", "", $tag["tag"]));
+      }
+    }
+  }
+  return $tags;
+}
+
+function tags_to_collections($ep){ // not stable
+  $tags = get_uri_tags($ep);
   
   foreach($tags as $uri => $tag){
     $q = get_prefixes();
@@ -120,7 +138,7 @@ function tags_to_collections($ep){
   ?post as:tag <$uri> .
   <$uri> as:items ?post .
 } WHERE {
-  ?post as:tag \"{$tag['name']}\" .
+  ?post as:tag <$uri> .
 }";
     var_dump(htmlentities($q));
     echo "<hr/>";
@@ -130,8 +148,23 @@ function tags_to_collections($ep){
   }
 }
 
+function update_tag_collections($ep){
+  $q = get_prefixes();
+  $q .= "INSERT INTO <https://rhiaro.co.uk/tags/> {
+  ?tag a as:Collection .
+  ?tag as:items ?post .
+} WHERE {
+  ?post as:tag ?tag .
+}";
+  var_dump(htmlentities($q));
+  echo "<hr/>";
+  $r = execute_query($ep, $q);
+  var_dump($r);
+  echo "<hr/>";
+}
 // transform_mentions($ep);
 //transform_content_to_html($ep);
 //double_content($ep);
-// tags_to_collections($ep);
+ //tags_to_collections($ep); 
+//update_tag_collections($ep);
 ?>
