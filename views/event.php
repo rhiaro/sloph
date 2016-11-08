@@ -1,6 +1,7 @@
 <?
+unset($event); unset($h); unset($start); unset($end); unset($location); // Reset for in collections
 if(has_type($resource, 'as:Accept') || has_type($resource, 'as:Invite')){
-
+  
   if(get_value($resource, 'as:object')){
     $eventurl = get_value($resource, 'as:object');
   }elseif(get_value($resource, 'as:inReplyTo')){
@@ -8,23 +9,20 @@ if(has_type($resource, 'as:Accept') || has_type($resource, 'as:Invite')){
   }
   $event = get($ep, $eventurl);
   $event = $event['content'];
-  // var_dump($event);
-  if(gettype($event) != "string"){
+  
+  if($event && gettype($event) != "string"){
     $event = $event->toRdfPhp();
     
     if(get_value($event, 'as:name')){ $h = get_value($event, 'as:name'); }
     if(get_value($event, 'as:startTime')){ $start = new DateTime(get_value($event, 'as:startTime')); }
     if(get_value($event, 'as:endTime')){ $end = new DateTime(get_value($event, 'as:endTime')); }
     if(get_value($event, 'as:location')){ $location = get_value($event, 'as:location'); }
-  }else{
-    $event = false;
   }
 
 }elseif(has_type($resource, 'as:Event')){
   $eventurl = get_uri($resource);
   $event = $resource;
 }
-
 
 if(!isset($h)){ $h = get_value($resource, 'as:name'); }
 if(!isset($start)){ $start = new DateTime(get_value($resource, 'as:startTime')); }
