@@ -167,4 +167,11 @@ function update_tag_collections($ep){
 //double_content($ep);
  //tags_to_collections($ep); 
 //update_tag_collections($ep);
+
+// FIXING TAG TODOS
+// are some of the tag colls in a different graph now??
+// are ones with +s in getting urldecoded by get()?
+// what's up with the order sometimes?
+// should delete all literal tags
+// should make sure tags that aren't my urls are actually not collections, but it doesn't really matter
 ?>
