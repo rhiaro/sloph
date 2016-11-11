@@ -75,9 +75,9 @@ LIMIT $limit
   return $q;
 }
 
-function query_select_s($limit=0){
+function query_select_s($limit=0, $graph="http://blog.rhiaro.co.uk#"){
   $q = "SELECT DISTINCT ?s WHERE {
-  ?s ?p ?o .
+  GRAPH <$graph> { ?s ?p ?o . }
 }";
   if($limit > 0){
     $q .= "LIMIT $limit";
@@ -85,10 +85,10 @@ function query_select_s($limit=0){
   return $q;
 }
 
-function query_select_s_desc($limit=0){
+function query_select_s_desc($limit=0, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {
-  ?s ?p ?o .
+  GRAPH <$graph> { ?s ?p ?o . }
   ?s as:published ?d .
 }
 ORDER BY DESC(?d)";
@@ -98,10 +98,10 @@ ORDER BY DESC(?d)";
   return $q;
 }
 
-function query_select_s_and_type_desc($limit=0){
+function query_select_s_and_type_desc($limit=0, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s ?t ?l WHERE {
-  ?s ?p ?o .
+  GRAPH <$graph> { ?s ?p ?o . }
   OPTIONAL { ?s a ?t }
   OPTIONAL { ?s as:location ?l }
   ?s as:published ?d .
@@ -113,9 +113,9 @@ ORDER BY DESC(?d)";
   return $q;
 }
 
-function query_select_all($limit){
+function query_select_all($limit, $graph="http://blog.rhiaro.co.uk#"){
   $q = "SELECT * WHERE {
-  ?s ?p ?o .
+  GRAPH <$graph> { ?s ?p ?o . }
 }
 LIMIT $limit
 ";
