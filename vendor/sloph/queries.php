@@ -63,7 +63,6 @@ function get_prefixes(){
 function query_construct($uri){
   $q = "CONSTRUCT { <$uri> ?p ?o . }
 WHERE { <$uri> ?p ?o . }
-LIMIT 100
 ";
   return $q;
 }
