@@ -125,8 +125,11 @@ function get_and_sort($ep, $resources, $by="as:published"){
     foreach($resources as $resource){
       $r = get($ep, $resource);
       $item = $r['content'];
-      $item = $item->toRdfPhp();
-      $full = array_merge($full, $item);
+      if($item) { 
+        $item = $item->toRdfPhp(); 
+        $full = array_merge($full, $item);
+      }
+      // else { var_dump($resource); }
     }
     $dates = array();
     foreach($full as $uri => $r){
