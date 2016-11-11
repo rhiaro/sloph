@@ -680,3 +680,44 @@ insert into <http://blog.rhiaro.co.uk#> {
 
 [ ] Put everything in its own graph
 -> I think I need a script+UI for graph sorting..
+
+```
+foreach(post where substr($uri, 0, 21) != "https://rhiaro.co.uk/":
+  
+  1insert into <$uri> {
+    <$uri> ?p ?o .
+  }
+
+  delete from <http://blog.rhiaro.co.uk#> {
+    <$uri> ?p ?o .
+  }
+```
+
+[ ] Move other peoples' posts out of my graph #21 // HERENOW
+
+```
+insert into <https://rhiaro.co.uk/incoming/> 
+{ <http://wirres.net/article/articleview/8697/1/51/> ?p ?o . }
+where { graph ?g { <http://wirres.net/article/articleview/8697/1/51/> ?p ?o . } }
+
+delete from <http://blog.rhiaro.co.uk#> 
+{ <http://wirres.net/article/articleview/8697/1/51/> ?p ?o . }
+```
+
+[x] Fix rhiaro
+
+```
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns0: <http://www.w3.org/ns/activitystreams#> .
+
+insert into <https://rhiaro.co.uk/#me> {
+
+<https://rhiaro.co.uk/#me> rdf:type ns0:Profile ;
+                        ns0:name "Amy Guy" ;
+                        ns0:image <https://twitter.com/rhiaro/profile_image?size=original> ,
+                                  <https://webmention.io/avatar/twitter.com/41b920ce806077f84fa4f364225ab7a7d7f257846b17f73840317d76597a1edd.png> ,
+                                  <https://webmention.io/avatar/twitter.com/db387eb43790e49d67e4d78dfbda85674e669bd59211bb75e73ce4c4555f8eee.png> ;
+                        ns0:url <https://rhiaro.co.uk/> .
+
+}
+```
