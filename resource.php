@@ -6,6 +6,7 @@ if($_SERVER['REQUEST_METHOD'] === "GET" || $_SERVER['REQUEST_METHOD'] === "HEAD"
 
   if(isset($_GET['resource'])){
     $resource = $_GET['resource'];
+    $resource = str_replace(" ", "+", $resource); // pesky url decoding
     $headers = apache_request_headers();
     $ct = $headers["Accept"];
 
