@@ -154,12 +154,14 @@ function query_select_s_views($score, $limit=10){
   return $q;
 }
 
-function query_select_s_next($uri){
+function query_select_s_next($uri, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
+  $q .= " GRAPH <$graph> {";
   $q .= "  ?s as:published ?d . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= " }";
   $q .= "  FILTER ( ?d > ?d2 ) . \n";
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
@@ -169,13 +171,15 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_next_of_type($uri, $type){
+function query_select_s_next_of_type($uri, $type, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
+  $q .= " GRAPH <$graph> {";
   $q .= "  ?s as:published ?d . \n";
   $q .= "  ?s a $type . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= " }";
   $q .= "  FILTER ( ?d > ?d2 ) . \n";
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
@@ -185,12 +189,14 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_prev($uri){
+function query_select_s_prev($uri, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
+  $q .= " GRAPH <$graph> {";
   $q .= "  ?s as:published ?d . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= " }";
   $q .= "  FILTER ( ?d < ?d2 ) . \n";
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
@@ -200,13 +206,15 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_prev_of_type($uri, $type){
+function query_select_s_prev_of_type($uri, $type, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
+  $q .= " GRAPH <$graph> {";
   $q .= "  ?s as:published ?d . \n";
   $q .= "  ?s a $type . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= " }";
   $q .= "  FILTER ( ?d < ?d2 ) . \n";
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
@@ -216,12 +224,14 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_next_count($uri, $count=10){
+function query_select_s_next_count($uri, $count=10, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
 
   $q .= "SELECT DISTINCT ?s WHERE { \n";
+  $q .= " GRAPH <$graph> {";
   $q .= "  ?s as:published ?d . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= " }";
   $q .= "  FILTER ( ?d > ?d2 ) . \n";
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
@@ -231,12 +241,14 @@ LIMIT $count
   return $q;
 }
 
-function query_select_s_prev_count($uri, $count=10){
+function query_select_s_prev_count($uri, $count=10, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
 
   $q .= "SELECT DISTINCT ?s WHERE { \n";
+  $q .= " GRAPH <$graph> {";
   $q .= "  ?s as:published ?d . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= " }";
   $q .= "  FILTER ( ?d < ?d2 ) . \n";
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
@@ -247,12 +259,14 @@ LIMIT $count
 }
 
 // HERENOW
-function query_select_s_next_of_type_count($uri, $count=10){
+function query_select_s_next_of_type_count($uri, $count=10, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
 
   $q .= "SELECT DISTINCT ?s WHERE { \n";
+  $q .= " GRAPH <$graph> {";
   $q .= "  ?s as:published ?d . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= " }";
   $q .= "  FILTER ( ?d > ?d2 ) . \n";
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
@@ -262,12 +276,14 @@ LIMIT $count
   return $q;
 }
 
-function query_select_s_prev_of_type_count($uri, $count=10){
+function query_select_s_prev_of_type_count($uri, $count=10, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
 
   $q .= "SELECT DISTINCT ?s WHERE { \n";
+  $q .= " GRAPH <$graph> {";
   $q .= "  ?s as:published ?d . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
+  $q .= " }";
   $q .= "  FILTER ( ?d < ?d2 ) . \n";
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
