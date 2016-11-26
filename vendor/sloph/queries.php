@@ -16,20 +16,24 @@ function execute_query($ep, $query){
 
 /* Combining and munging queries */
 
-function select_to_list($result, $types=array()){
+function select_to_list($result, $types=array(), $key=null){
   if(!is_array($types) || !isset($types) || empty($types)) { $types = false; }
+  
+  if($key === null) { $var = $result['variables'][0]; }
+  else { $var = $key; }
   
   $list = array();
 
-  if(count($result['variables']) == 1){
-    $var = $result['variables'][0];
+  if(in_array($var, $result['variables'])){
+    
     foreach($result['rows'] as $row){
       if(!$types || ($types && in_array($row[$var." type"], $types))){
         $list[] = $row[$var];
       }
     }
+
   }else{
-    return $result;
+    return false;
   }
   return $list;
 }
@@ -83,7 +87,11 @@ function query_select_s($limit=0, $graph="http://blog.rhiaro.co.uk#"){
     $graph = "<$graph>";
   }
 
-  $q = "SELECT DISTINCT ?s WHERE {
+  $q = "SELECT DISTINCT ?s ";
+  if($graph == "?g"){
+    $q .= "?g ";
+  }
+  $q .= "WHERE {
   GRAPH $graph { ?s ?p ?o . }
 }";
   if($limit > 0){

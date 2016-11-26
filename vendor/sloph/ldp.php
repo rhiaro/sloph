@@ -86,9 +86,9 @@ function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/h
   $r = execute_query($ep, $q);
 
   if($r){
-    $uris = select_to_list($r, array("uri"));
+    // $uris = select_to_list($r, array("uri"));
 
-    foreach($uris["rows"] as $u){
+    foreach($r["rows"] as $u){
       // TODO FIXME: this is hardcoded to expect result vars ?s and ?t and now ?l
       $resource->addResource("as:items", $u['s']);
       $resource->addResource("ldp:contains", $u['s']);
