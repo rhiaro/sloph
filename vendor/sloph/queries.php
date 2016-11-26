@@ -76,8 +76,15 @@ LIMIT $limit
 }
 
 function query_select_s($limit=0, $graph="http://blog.rhiaro.co.uk#"){
+  
+  if($graph === null){
+    $graph = "?g";
+  }else{
+    $graph = "<$graph>";
+  }
+
   $q = "SELECT DISTINCT ?s WHERE {
-  GRAPH <$graph> { ?s ?p ?o . }
+  GRAPH $graph { ?s ?p ?o . }
 }";
   if($limit > 0){
     $q .= "LIMIT $limit";
