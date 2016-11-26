@@ -145,8 +145,7 @@ elseif(isset($_POST['data']) && count($_POST['data']) > 0){
   }
 }
 
-
-$q = query_select_s();
+$q = query_select_s(0, null);
 if(isset($_GET['flag'])){
   if($_GET['flag'] == "doublecontents"){
     $q = "PREFIX as: <http://www.w3.org/ns/activitystreams#> .
@@ -171,7 +170,14 @@ if(isset($_GET['uri'])){
 if(!isset($_SESSION['uris'])){
   $r = execute_query($ep, $q);
   if($r){
-    $_SESSION['uris'] = select_to_list($r, array("uri"));
+
+    $_SESSION['uris'] = select_to_list($r, array("uri"), "s");
+
+    if(!isset($_SESSION['graphs'])){
+      foreach($r['rows'] as $row){
+        $_SESSION['graphs'][$row['s']] = $row['g'];
+      }
+    }
   }
 }
 
@@ -223,7 +229,10 @@ if($_GET['flag'] == "notype"){
     </div>
     <?foreach($posts as $uri => $post):?>
       <form id="<?=$uri?>" method="post" action="#<?=$uri?>">
-        <p><a href="<?=$uri?>"><?=$uri?></a> <input type="submit" value="Save"/></p>
+        <p>
+          <a href="<?=$uri?>"><?=$uri?></a> <input type="submit" value="Save"/>
+        </p>
+        <p><?=$_SESSION['graphs'][$uri]?></p>
         <input type="hidden" value="<?=$uri?>" name="data[uri]" />
         <?if(isset($result[$uri])):?>
           <div style="overflow:hidden; width: 100%;">
