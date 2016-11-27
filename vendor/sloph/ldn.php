@@ -16,8 +16,9 @@ function on_get($ep){
   return $content;
 }
 
-function on_post(){
-
+function on_post($ep, $data){
+  var_dump($data);
+  return "asdf";
 }
 
 /*** Validating input ***/
@@ -49,7 +50,10 @@ function valid_data($data){
 /*** Other stuff ***/
 
 function this_form($post){
-  $json = array("@context" => "https://www.w3.org/ns/activitystreams", "generator" => "https://rhiaro.co.uk/sloph", "content" => "");
+  $json = array("@context" => "https://www.w3.org/ns/activitystreams"
+              , "generator" => "https://rhiaro.co.uk/sloph"
+              , "published" => date(DATE_ATOM)
+              , "content" => "");
   $json['content'] = $post['content'];
   $json = json_encode($json, JSON_UNESCAPED_SLASHES);
   return $json;
@@ -61,13 +65,54 @@ function webmentionio($json){
   return $json;
 }
 
-if(isset($_POST) && !empty($_POST)){
-  var_dump(this_form($_POST));
-}else{
+/*** And... action ***/
+
+header("Accept-Post: application/ld+json");
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+  $body = file_get_contents('php://input');
+  $headers = apache_request_headers();
+  $ct = $headers["Accept"];
+
+  if(isset($_POST) && !empty($_POST)){
+  
+    $data = this_form($_POST);
+    // TODO return back to form
+  
+  }elseif(isset($body) && !empty($body)){
+
+    $data = $body;
+
+    if(!supported_content_type($ct)){
+      header("HTTP/1.1 415 Unsupported Media Type");
+      echo "Try again with JSON-LD\n";
+      die();
+    }
+    if(!valid_data($body)){
+      header("HTTP/1.1 400 Bad Request");
+      echo "This is not valid JSON-LD\n";
+      die();
+    }
+
+  }else{
+    header("HTTP/1.1 400 Bad Request");
+    echo "No request body :(\n";
+    die();
+  }
+
+  $uri = on_post($ep, $data);
+  header("HTTP/1.1 201 Created");
+  header("Location: $uri");
+
+}elseif($_SERVER['REQUEST_METHOD'] === 'GET'){
+  
   $content = on_get($ep);
   if(gettype($content) == "string"){
+    
     header($header);
     echo $content;
+  
   }else{
     $contains = $content->toRdfPhp();
     include '../../views/incoming.php';
