@@ -44,13 +44,13 @@ function conneg($acceptheaders, $graph){
           $return["header"] = "HTTP/1.1 200 OK";
           $return["content"] = $graph;
         }else{
-          $return["header"] = "HTTP/1.1 415 Unsupported Media Type";
+          $return["header"] = "HTTP/1.1 406 Not Acceptable";
           $return["content"] = "{$accept["raw"]} is not a supported media type.";
         }
       }
       break;
     }catch(EasyRdf_Exception $e){
-      $return["header"] = "HTTP/1.1 415 Unsupported Media Type";
+      $return["header"] = "HTTP/1.1 406 Not Acceptable";
       $return["content"] = "{$accept["raw"]} is not a supported media type.";
     }
   }
