@@ -408,4 +408,20 @@ function query_insert($turtle){
   return $q;
 }
 
+function query_add_to_graph($uri, $graph, $from="?g"){
+
+  if($from != "?g"){
+    $from = "<$from>";
+  }
+
+  $q = "INSERT INTO <$graph> { <$uri> ?p ?o . } 
+WHERE { GRAPH $from { <$uri> ?p ?o . } }";
+  return $q;
+}
+
+function query_remove_from_graph($uri, $graph){
+  $q = "DELETE FROM <$graph> { <$uri> ?p ?o . } ";
+  return $q;
+}
+
 ?>
