@@ -175,12 +175,13 @@ if(!isset($_SESSION['uris'])){
 
     if(!isset($_SESSION['graphs'])){
       foreach($r['rows'] as $row){
-        $_SESSION['graphs'][$row['s']] = $row['g'];
+        $_SESSION['graphs'][$row['s']][] = $row['g'];
       }
     }
   }
 }
 
+    var_dump($_SESSION['graphs']);
 if(isset($_GET['offset']) && is_numeric($_GET['offset'])){
   $offset = $_GET['offset'];
 }else{
@@ -232,7 +233,10 @@ if($_GET['flag'] == "notype"){
         <p>
           <a href="<?=$uri?>"><?=$uri?></a> <input type="submit" value="Save"/>
         </p>
-        <p><?=$_SESSION['graphs'][$uri]?></p>
+        <p><input type="text" name="graph" id="graph" /></p>
+        <?foreach($_SESSION['graphs'][$uri] as $g):?>
+          <p><?=$g?> <input type="checkbox" name="keepgraph" id="keepgraph" title="keep current graph" /> </p>
+        <?endforeach?>
         <input type="hidden" value="<?=$uri?>" name="data[uri]" />
         <?if(isset($result[$uri])):?>
           <div style="overflow:hidden; width: 100%;">
