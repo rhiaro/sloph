@@ -14,7 +14,6 @@ $date = new DateTime(get_value($resource, 'as:published'));
       <?endif?>
     <?endif?>
     <?=get_value($resource, 'as:name') ? "<p>".get_value($resource, 'as:name')."</p>" : "" ?>
-    <?=get_value($resource, 'as:summary') ? "<p>".get_value($resource, 'as:summary')."</p>" : "" ?>
     <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
     <?=get_value($resource, 'asext:cost') ? "<p><strong>".get_value($resource, 'asext:cost')."</strong></p>" : "" ?>
   </div>
