@@ -4,9 +4,9 @@
   ?>
   <p><span><?=get_icon_from_type($type)?></span> 
   <?if($type == 'asext:Consume'):?>
-    The last thing I ate was <?=get_value(array($uri=>$resource),  'as:name')?>, 
+    The last thing I ate was <?=get_value(array($uri=>$resource),  'as:content')?>, 
   <?elseif($type == 'asext:Acquire'):?>
-    The last thing I acquired was <?=get_value(array($uri=>$resource),  'as:summary')?>, 
+    The last thing I acquired was <?=get_value(array($uri=>$resource),  'as:content')?>, for <?=get_value(array($uri=>$resource),  'asext:cost')?>, 
   <?elseif($type == 'as:Arrive'):?>
     <?if(get_value($locations, 'blog:presentLabel', get_value(array($uri=>$resource),  'as:location'))):?>
     I am <a href="<?=get_value(array($uri=>$resource),  'as:location')?>"><?=get_value($locations, 'blog:presentLabel', get_value(array($uri=>$resource),  'as:location'))?></a> since 
