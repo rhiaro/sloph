@@ -7,7 +7,7 @@
     <p><em>@ <a class="u-in-reply-to" href="<?=get_value($resource, 'as:inReplyTo')?>">In reply to this</a>:</em></p>
   <?endif?>
   
-  <div class="p-summary"><?=get_value($resource, 'as:summary')?></div>
+  <div class="p-summary" style="display: none"><?=get_value($resource, 'as:summary')?></div>
   <div class="e-content"><?=get_value($resource, 'as:content')?></div>
   
   <? include('tags.php'); ?>
