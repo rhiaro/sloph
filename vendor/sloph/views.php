@@ -77,13 +77,17 @@ function get_locations($ep){
 }
 
 function get_name($ep, $uri){
+
   $resource = get($ep, $uri);
   if($resource['content']){
-    return $resource->get($uri, 'as:name');
-  }else{
-    // todo: deref other uris and look for various name properties
-    return str_replace("http://dbpedia.org/resource/", "", $uri);
+    $r = $resource['content']->toRdfPhp();
+    $name = get_value($r, 'as:name');
+    if(!empty($name)){
+      return $name;
+    }
   }
+  // todo: deref other uris and look for various name properties
+  return str_replace("http://dbpedia.org/resource/", "", $uri);
 }
 
 function nav($ep, $resource, $dir="next", $type=null){
