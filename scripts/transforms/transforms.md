@@ -680,3 +680,54 @@ insert into <http://blog.rhiaro.co.uk#> {
 
 [ ] Put everything in its own graph
 -> I think I need a script+UI for graph sorting..
+
+[ ] Fix Consume and Acquire
+
+```
+@prefix ext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+INSERT INTO <http://blog.rhiaro.co.uk#> {
+    ?s as:content ?n .
+}
+WHERE {
+    ?s a ext:Consume .
+    ?s as:name ?n .
+}
+```
+
+```
+@prefix ext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+DELETE {
+    ?s as:name ?old .
+} WHERE {
+    ?s a ext:Consume .
+    ?s as:name ?old .
+}
+```
+
+```
+@prefix ext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+INSERT INTO <http://blog.rhiaro.co.uk#> {
+    ?s as:content ?c .
+}WHERE{
+    ?s a ext:Acquire .
+    ?s as:summary ?c .
+}
+```
+
+```
+@prefix ext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+DELETE {
+    ?s as:summary ?old .
+} WHERE {
+    ?s a ext:Acquire .
+    ?s as:summary ?old .
+}
+```
+
+[ ] Add as:summary to everything without as:name
+
+I think I need script for this

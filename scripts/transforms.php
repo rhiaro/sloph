@@ -127,15 +127,13 @@ function get_uri_tags($ep){
   return $tags;
 }
 
-function tags_to_collections($ep){ // not stable
-  $tags = get_uri_tags($ep);
+function tags_to_collections($ep){
+  $tags = get_tags($ep);
   
   foreach($tags as $uri => $tag){
     $q = get_prefixes();
     $q .= "INSERT INTO <https://rhiaro.co.uk/tags/> {
   <$uri> a as:Collection .
-  <$uri> as:name \"{$tag['name']}\" .
-  ?post as:tag <$uri> .
   <$uri> as:items ?post .
 } WHERE {
   ?post as:tag <$uri> .
@@ -148,30 +146,171 @@ function tags_to_collections($ep){ // not stable
   }
 }
 
-function update_tag_collections($ep){
-  $q = get_prefixes();
-  $q .= "INSERT INTO <https://rhiaro.co.uk/tags/> {
-  ?tag a as:Collection .
-  ?tag as:items ?post .
-} WHERE {
-  ?post as:tag ?tag .
-}";
-  var_dump(htmlentities($q));
-  echo "<hr/>";
-  $r = execute_query($ep, $q);
-  var_dump($r);
-  echo "<hr/>";
+function wipe_tag_collections($ep){
+  $tags = get_tags($ep);
+  foreach($tags as $uri => $tag){
+    $q = get_prefixes();
+    $q .= "DELETE { <$uri> as:items ?post }
+WHERE { <$uri> as:items ?post }";
+    $r = execute_query($ep, $q);
+    var_dump($r);
+    echo "<hr/>";
+  }
 }
+
+function move_graph($ep, $from, $to){
+  $q = query_select_s(0, $from);
+  $r = execute_query($ep, $q);
+  $others = array();
+  foreach($r["rows"] as $uri){
+    if(stripos($uri["s"], "https://rhiaro.co.uk/") === false){
+      $others[] = $uri["s"];
+    }
+  }
+  foreach($others as $o){
+    $q_ins = get_prefixes();
+    $q_ins .= "insert into <$to> 
+{ <$o> ?p ?o . }
+where { graph <$from> { <$o> ?p ?o . } }";
+    echo "<strong>$o</strong><br/>";
+    //$r_ins = execute_query($ep, $q_ins);
+    echo "<pre>";
+    var_dump(htmlentities($q_ins));
+    echo "</pre>";
+    echo "<br/></br/>";
+
+    $q_del = get_prefixes();
+    $q_del .= "delete from <$from> 
+{ <$o> ?p ?o . }";
+    //$r_del = execute_query($ep, $q_del);
+    echo "<pre>";
+    var_dump(htmlentities($q_del));
+    echo "</pre>";
+    echo "<hr/>";
+  }
+
+}
+
+function generate_summary($ep, $resource){
+
+  $places = execute_query($ep, query_for_places());
+
+  $as = "http://www.w3.org/ns/activitystreams#";
+  $ex = "https://terms.rhiaro.co.uk/as#";
+  $s = "Amy";
+  $types = get_values($resource, 'rdf:type');
+  
+  echo current(array_keys($resource))."<br/>";
+  var_dump($types); echo "<br/>";
+
+  if(is_array($types)){
+
+    if(in_array($as."Arrive", $types)){
+      $place = get_value($resource, 'as:location');
+      if(!empty($place) && array_key_exists($place, $places)){
+        $where = get_value(array($place => $places[$place]), 'blog:pastLabel');
+        if(!empty($where)){
+          $s .= " ".$where;
+        }else{
+          $s = " arrived at ".get_name($place);
+        }
+      }else{
+        $s = false;
+      }
+    }elseif(in_array($ex."Acquire", $types)){
+      $content = get_value($resource, 'as:content');
+      $cost = get_value($resource, 'asext:cost');
+      $s .= " acquired $content for $cost";
+    }elseif(in_array($ex."Consume", $types)){
+      $content = get_value($resource, 'as:content');
+      $s .= " consumed $content";
+    }elseif(in_array($as."Add", $types)){
+      $object = get_value($resource, 'as:object');
+      $target = get_value($resource, 'as:target');
+      $s .= " added $object to $target";
+    }elseif(in_array($as."Like", $types)){
+      $object = get_value($resource, 'as:object');
+      $s .= " liked $object";
+    }elseif(in_array($as."Announce", $types)){
+      $object = get_value($resource, 'as:object');
+      $target = get_value($resource, 'as:target');
+      $s .= " shared $object";
+      if(!empty($target)){
+        $s .= " with $target";
+      }
+    }elseif(in_array($as."Note", $types)){
+      $tags = get_values($resource, 'as:tag');
+      if(!empty($tags)){
+        $tag_str = array();
+        foreach($tags as $turi){
+          if(strpos($turi, "http") !== false){
+            $tagr = execute_query($ep, query_construct($turi));
+            $tagn = get_value($tagr, 'as:name');
+            if(!empty($tagn)){
+              $tag_str[] = $tagn;
+            }
+          }
+        }
+        if(count($tag_str) > 1){
+          $tag_str[count($tag_str)-1] = "&amp; ".$tag_str[count($tag_str)-1];
+          $tags = implode($tag_str, ", ");
+        }else{
+          $tags = "something";
+        }
+      }else{
+        $tags = "something";
+      }
+      $s .= " wrote about $tags";
+    
+    }elseif(in_array($as."Travel", $types)){
+      $origin = get_name($ep, get_value($resource, 'as:origin'));
+      $target = get_name($ep, get_value($resource, 'as:target'));
+
+      $s .= " planned a trip from $origin to $target";
+    }elseif(in_array($as."Accept", $types)){
+      $object = get_value($resource, 'as:object');
+      $s .= " RSVP'd to $object";
+    }else{
+      return false;
+    }
+  }else{
+    return false;
+  }
+
+  return $s;
+}
+
+function add_summary($ep){
+
+  $q = get_prefixes();
+
+  $res = execute_query($ep, query_select_s());
+  $uris = select_to_list($res);
+  foreach($uris as $uri){
+    if(stripos($uri, "rhiaro.co.uk/") > 0){
+      $r = execute_query($ep, query_construct($uri));
+      $s = generate_summary($ep, $r);
+      if($s){
+        $q .= "INSERT INTO <http://blog.rhiaro.co.uk#> { <$uri> as:summary \"$s\" . }";
+        echo htmlentities($q);
+        $r = execute_query($ep, $q);
+        var_dump($r);
+      }else{
+        echo "skipped";
+      }
+      echo "<hr/>";
+    }
+    $q = get_prefixes();
+  }
+  
+
+}
+
 // transform_mentions($ep);
 //transform_content_to_html($ep);
 //double_content($ep);
- //tags_to_collections($ep); 
-//update_tag_collections($ep);
-
-// FIXING TAG TODOS
-// are some of the tag colls in a different graph now??
-// are ones with +s in getting urldecoded by get()?
-// what's up with the order sometimes?
-// should delete all literal tags
-// should make sure tags that aren't my urls are actually not collections, but it doesn't really matter
+// wipe_tag_collections($ep);
+//tags_to_collections($ep); 
+// move_graph($ep, "http://blog.rhiaro.co.uk#", "https://rhiaro.co.uk/incoming/");
+add_summary($ep);
 ?>
