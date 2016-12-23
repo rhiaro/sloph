@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/GeoffHuggins>
-  foaf:name "GeoffHuggins" ;
-  foaf:homepage <https://twitter.com/GeoffHuggins> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/91b9c7f482d9499a5d494e25cc8943a638e4922e369f1039b7de7e9a0926caf0.jpeg> .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/magictowers>
-  foaf:name "Diego Torres" ;
-  foaf:homepage <https://twitter.com/magictowers> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/8cdb2825d64095ef6cf870b987576095d50dad27be4132970c19cbd173958452.jpeg> .
-

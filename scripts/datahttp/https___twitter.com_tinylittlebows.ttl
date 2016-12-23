@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/tinylittlebows>
-  foaf:name "Lauren Paints" ;
-  foaf:homepage <https://twitter.com/tinylittlebows> ;
-  foaf:depiction <https://twitter.com/tinylittlebows/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/34b2cf9f213d1f2b40dce00d71dc04c137d95466084a3f4a73c618b5b667584b.jpeg> .
-

@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/06/online>
-  as:published "2016-06-12T01:07:49+01:00"^^xsd:dateTime ;
-  as:tag "orwell", "data", "privacy", "surveillance", "advertising", "facebook", "life" ;
-  as:content "Online advertising right now can't decide whether I'm single and looking to hook up or pregnant. Small victory I guess. I blame whatever my facebook friends are doing." .
-

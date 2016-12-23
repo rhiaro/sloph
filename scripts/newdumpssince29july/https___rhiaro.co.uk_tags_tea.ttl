@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/tea>
-  a as:Collection ;
-  as:name "tea" ;
-  as:items <https://rhiaro.co.uk/2016/08/apricot-froyo>, <https://rhiaro.co.uk/2016/08/scrambled-tofu>, <https://rhiaro.co.uk/2016/08/iced-mate-lemon>, <https://rhiaro.co.uk/2016/08/peppermint-tea>, <https://rhiaro.co.uk/2016/08/wrap-with-carrots>, <https://rhiaro.co.uk/2016/08/fried-tofu>, <https://rhiaro.co.uk/2016/08/peanut-butter>, <https://rhiaro.co.uk/2016/08/smoky-tea>, <https://rhiaro.co.uk/2016/08/chilli-brown-rice>, <https://rhiaro.co.uk/2016/08/fried-dumplings>, <https://rhiaro.co.uk/2016/08/tacos-with> .
-

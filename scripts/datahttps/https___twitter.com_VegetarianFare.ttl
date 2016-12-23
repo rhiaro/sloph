@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/VegetarianFare>
-  foaf:name "Vegetarian Fare" ;
-  foaf:homepage <https://twitter.com/VegetarianFare> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/8c557b7ebf3d1633ae75448604bc96fb67252428104832947d55a06f4b6c6359.jpeg> .
-

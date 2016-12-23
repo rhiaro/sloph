@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://about.me/andyd>
-  foaf:name "Andy Davidson" ;
-  foaf:homepage <http://about.me/andyd> ;
-  foaf:depiction <https://twitter.com/andyd/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/55266511e776d142563add25861a9d6e02c4d84317ec6246d5d85f97f818310c.jpeg> .
-

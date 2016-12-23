@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/ice+cream>
-  a as:Collection ;
-  as:name "ice cream" ;
-  as:items <https://rhiaro.co.uk/2016/08/hemp-ice-cream>, <https://rhiaro.co.uk/2016/08/miso-noodles-veg>, <https://rhiaro.co.uk/2016/08/beet-coconut>, <https://rhiaro.co.uk/2016/08/vegetable-flax>, <https://rhiaro.co.uk/2016/09/coconut-pecan-ice> .
-

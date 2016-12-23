@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://www.camerongray.me/>
-  foaf:name "Cameron Gray" ;
-  foaf:homepage <http://www.camerongray.me/> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/043530b63f74534f7877793d8f97cbebdef7c8f82dc027cc024bcf0d8c6a8541.jpeg> .
-

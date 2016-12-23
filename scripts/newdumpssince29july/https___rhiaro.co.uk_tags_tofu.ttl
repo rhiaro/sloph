@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/tofu>
-  a as:Collection ;
-  as:name "tofu" ;
-  as:items <https://rhiaro.co.uk/2016/08/curry-tofu-brown>, <https://rhiaro.co.uk/2016/08/peanut-noodles>, <https://rhiaro.co.uk/2016/08/scrambled-tofu>, <https://rhiaro.co.uk/2016/08/wrap-with-carrots>, <https://rhiaro.co.uk/2016/08/fried-tofu>, <https://rhiaro.co.uk/2016/08/tofu-scramble>, <https://rhiaro.co.uk/2016/08/tofu-crabby-cakes>, <https://rhiaro.co.uk/2016/08/tofu-rice-bun>, <https://rhiaro.co.uk/2016/08/vegan-egg-cheese>, <https://rhiaro.co.uk/2016/08/tacos-with>, <https://rhiaro.co.uk/2016/09/pasta-with-tofu>, <https://rhiaro.co.uk/2016/09/rice-noodles-with>, <https://rhiaro.co.uk/2016/09/scrambled-tofu> .
-

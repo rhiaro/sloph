@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/php>
-  a as:Collection ;
-  as:name "php" ;
-  as:items <https://rhiaro.co.uk/2016/08/php-poop-love>, <https://rhiaro.co.uk/2016/08/feeling-when-late> .
-

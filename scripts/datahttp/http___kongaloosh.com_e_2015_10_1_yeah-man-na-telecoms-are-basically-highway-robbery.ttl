@@ -1,8 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix blog: <http://vocab.amy.so/blog#> .
-
-<http://kongaloosh.com/e/2015/10/1/yeah-man-na-telecoms-are-basically-highway-robbery>
-  dcterms:created "2015-11-11T16:51:24+00:00"^^xsd:datetime ;
-  blog:mentions <http://rhiaro.co.uk/2015/10/usa-mobile-plans> .
-

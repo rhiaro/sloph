@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/2016/07/dataverse>
-  a as:Accept ;
-  as:published "2016-07-11T11:13:48-04:00" ;
-  as:name "Going to Dataverse Community Meeting" ;
-  as:object <http://projects.iq.harvard.edu/dcm2016> .
-

@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/boston>
-  a as:Collection ;
-  as:name "boston" ;
-  as:items <https://rhiaro.co.uk/2016/07/579cbb2c013f6>, <https://rhiaro.co.uk/2016/07/579e7348e11ea>, <https://rhiaro.co.uk/2016/08/bus-from-boston>, <https://rhiaro.co.uk/2016/08/flight-from>, <https://rhiaro.co.uk/2016/08/57c36d8f03371> .
-

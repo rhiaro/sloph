@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/RikMende>
-  foaf:name "Rick Mendes" ;
-  foaf:homepage <https://twitter.com/RikMende> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/ca411a1a7e192c985fb5fba4f37741cb433fd4668fa0691f667f0c885673e4a8.jpeg> .
-

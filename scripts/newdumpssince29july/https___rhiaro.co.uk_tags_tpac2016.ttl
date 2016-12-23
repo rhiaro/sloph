@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/tpac2016>
-  a as:Collection ;
-  as:name "tpac2016" ;
-  as:items <https://rhiaro.co.uk/2016/08/train-from>, <https://rhiaro.co.uk/2016/08/flight-from> .
-

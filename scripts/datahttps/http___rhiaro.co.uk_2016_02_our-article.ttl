@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/02/our-article>
-  as:published "2016-02-11T15:54:12+00:00"^^xsd:dateTime ;
-  as:tag "reject", "publications", "ldow2016", "csarven.ca", "dokieli", "www2016", "papers", "linked research", "phd", "linked data" ;
-  as:content "Our article on building tooling to publish and consume (and own) your LinkedResearch, plus LDOW2016 reviews, up at [csarven.ca/dokieli](http://csarven.ca/dokieli)" .
-

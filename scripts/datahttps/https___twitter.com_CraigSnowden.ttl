@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/CraigSnowden>
-  foaf:name "Craig Snowden" ;
-  foaf:homepage <https://twitter.com/CraigSnowden> ;
-  foaf:depiction <https://twitter.com/CraigSnowden/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/de18208d9cc4b79f53ee944181f65978bf1b95270ae67677a2f21a650162b4b3.jpeg> .
-

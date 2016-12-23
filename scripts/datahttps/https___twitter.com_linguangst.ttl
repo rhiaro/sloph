@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/linguangst>
-  foaf:name "lindsay blackwell" ;
-  foaf:homepage <https://twitter.com/linguangst> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/3694ed334feb9fa81dc00b8179499edd9cb7f9f49a62a01aa36f4a2acea9efe9.jpeg> .
-

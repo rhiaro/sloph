@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://known.kevinmarks.com/profile/kevinmarks>
-  foaf:name "Kevin Marks" ;
-  foaf:homepage <http://known.kevinmarks.com/profile/kevinmarks> ;
-  foaf:depiction <http://known.kevinmarks.com/file/9255656669173b7867ab839ee6556f9e> .
-

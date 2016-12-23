@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/dmitriz>
-  a as:Collection ;
-  as:name "dmitriz" ;
-  as:items <https://rhiaro.co.uk/2016/08/hemp-ice-cream> .
-

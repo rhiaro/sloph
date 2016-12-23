@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/tinyblob>
-  foaf:name "aaron" ;
-  foaf:homepage <https://twitter.com/tinyblob> ;
-  foaf:depiction <https://twitter.com/tinyblob/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/3da5313073eb426ff94dd2ab4545c1e47f09444a6f6c757250dd6b1228e542ec.jpeg> .
-

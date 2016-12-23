@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/pizza>
-  a as:Collection ;
-  as:name "pizza" ;
-  as:items <https://rhiaro.co.uk/2016/08/homemade-fries>, <https://rhiaro.co.uk/2016/08/pizza-with-daiya->, <https://rhiaro.co.uk/2016/08/2-slices-leftover>, <https://rhiaro.co.uk/2016/08/1-slice-leftover>, <https://rhiaro.co.uk/2016/08/quarter-pizza>, <https://rhiaro.co.uk/2016/09/pizza-with> .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/ShakeawayLand>
-  foaf:name "Shakeaway" ;
-  foaf:homepage <https://twitter.com/ShakeawayLand> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/f5e6cfa0ab775dee295dfaeadc49f8b3a9d7272d203f94841339db0bcde86dcc.jpeg> .
-

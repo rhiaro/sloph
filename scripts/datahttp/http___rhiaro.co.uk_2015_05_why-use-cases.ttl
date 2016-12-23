@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/05/why-use-cases> sioc:has_reply <https://aaronparecki.com/likes/2015/05/21/3/> .

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/harry_reeder>
-  foaf:name "Harry Reeder" ;
-  foaf:homepage <https://twitter.com/harry_reeder> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/1a1de6925d7c5958551729f1a86353712a725d5fc4997a5ecaed1312732ef590.png> .
-

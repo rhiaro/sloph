@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/tacos>
-  a as:Collection ;
-  as:name "tacos" ;
-  as:items <https://rhiaro.co.uk/2016/08/tacos-corn>, <https://rhiaro.co.uk/2016/08/coffee-tacos-corn>, <https://rhiaro.co.uk/2016/08/iced-coffee-tacos>, <https://rhiaro.co.uk/2016/08/two-corn>, <https://rhiaro.co.uk/2016/08/tacos-with>, <https://rhiaro.co.uk/2016/08/tacos-black-beans>, <https://rhiaro.co.uk/2016/09/corn-tortillas> .
-

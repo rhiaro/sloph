@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/Twinkletoeonly>
-  foaf:name "Shree Waghorn" ;
-  foaf:homepage <https://twitter.com/Twinkletoeonly> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/f8a4e8bc0b38be1594724bc261f30ba80cd83e87498df827e881081e154431de.jpeg> .
-

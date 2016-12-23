@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/robinberjon>
-  foaf:name "Robin Berjon" ;
-  foaf:homepage <https://twitter.com/robinberjon> ;
-  foaf:depiction <https://twitter.com/robinberjon/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/fc9c853ca76d3e234b6e13955e9826fb181a8367b988548a4b42f450c4185478.jpeg> .
-

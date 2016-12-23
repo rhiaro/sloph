@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/vegetables>
-  a as:Collection ;
-  as:name "vegetables" ;
-  as:items <https://rhiaro.co.uk/2016/07/brown-rice-black>, <https://rhiaro.co.uk/2016/07/greens-almonds>, <https://rhiaro.co.uk/2016/08/macaroni-black>, <https://rhiaro.co.uk/2016/08/rice-noodles>, <https://rhiaro.co.uk/2016/08/wrap-with-lettuce>, <https://rhiaro.co.uk/2016/08/wholewheat>, <https://rhiaro.co.uk/2016/08/homemade-fries>, <https://rhiaro.co.uk/2016/08/peanut-noodles>, <https://rhiaro.co.uk/2016/08/cabbage-potato>, <https://rhiaro.co.uk/2016/08/scrambled-tofu>, <https://rhiaro.co.uk/2016/08/mac-cheese-with>, <https://rhiaro.co.uk/2016/08/wrap-with-carrots>, <https://rhiaro.co.uk/2016/08/fried-tofu>, <https://rhiaro.co.uk/2016/08/tofu-scramble>, <https://rhiaro.co.uk/2016/08/brown-rice-chilli>, <https://rhiaro.co.uk/2016/08/pizza-with-daiya->, <https://rhiaro.co.uk/2016/08/potatoes-kale>, <https://rhiaro.co.uk/2016/08/lentils-potatoes>, <https://rhiaro.co.uk/2016/08/curry-vegetables>, <https://rhiaro.co.uk/2016/08/black-bean-curry>, <https://rhiaro.co.uk/2016/09/pasta-with-tofu>, <https://rhiaro.co.uk/2016/09/pasta-kale-tomato>, <https://rhiaro.co.uk/2016/09/barley-kale>, <https://rhiaro.co.uk/2016/09/pizza-with>, <https://rhiaro.co.uk/2016/09/scrambled-tofu> .
-

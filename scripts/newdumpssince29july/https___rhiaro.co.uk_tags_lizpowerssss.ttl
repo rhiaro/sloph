@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/lizpowerssss>
-  a as:Collection ;
-  as:name "lizpowerssss" ;
-  as:items <https://rhiaro.co.uk/2016/08/57a5e7c793074> .
-

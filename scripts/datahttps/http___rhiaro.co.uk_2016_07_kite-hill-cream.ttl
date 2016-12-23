@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/07/kite-hill-cream>
-  as:published "2016-07-16T01:19:02+01:00"^^xsd:dateTime ;
-  as:tag "food", "vegan" ;
-  as:content "Kite Hill cream cheese is better than Daiya cream cheese on every count (taste, texture, spreadability) except Daiya melts spectacularly." .
-

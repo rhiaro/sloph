@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://pointgigs.com/>
-  foaf:name "pointgigs" ;
-  foaf:homepage <http://pointgigs.com/> ;
-  foaf:depiction <https://twitter.com/pointgigs/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/ab9ed2af3269a0cbc084fcf5dbd2b7ae768940e8b6c103a1139f6f197500b6f4.jpeg> .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://people.w3.org/mike/>
-  foaf:name "Michael[tm] Smith" ;
-  foaf:homepage <https://people.w3.org/mike/> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/0a628eb5279979d5c56eed52ce38bea95fe6fba54f2cc85989e31a406d666f65.jpeg> .
-

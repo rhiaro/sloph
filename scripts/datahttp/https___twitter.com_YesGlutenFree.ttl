@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/YesGlutenFree>
-  foaf:name "Yes Gluten-Free!" ;
-  foaf:homepage <https://twitter.com/YesGlutenFree> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/1d0f7dd785b86640ab4750dcd39ba6292c8ba8e1c3ff59193d301373aeaa59a7.jpeg> .
-

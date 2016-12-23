@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/TheHowAndTheWhy>
-  foaf:name "The How & The Why" ;
-  foaf:homepage <https://twitter.com/TheHowAndTheWhy> ;
-  foaf:depiction <https://twitter.com/TheHowAndTheWhy/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/2d89d59f5cbacaeea160400c2ad0dd5be6a71fde37fff4b0399fa2e8dc4bd81f.jpeg> .
-

@@ -1,9 +1,0 @@
-@prefix asext: <https://terms.rhiaro.co.uk/as#> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/2016/08/tacos-corn-2>
-  a asext:Consume ;
-  as:name "Tacos: corn tortillas, black beans, lettuce, cucumber, peppers, cream cheese " ;
-  as:published "2016-08-04T18:30:36-04:00" ;
-  as:tag <https://rhiaro.co.uk/tags/tacos> .
-

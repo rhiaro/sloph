@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/trader+joes>
-  a as:Collection ;
-  as:name "trader joes" ;
-  as:items <https://rhiaro.co.uk/2016/08/57a6304e06d74>, <https://rhiaro.co.uk/2016/08/57ae4c37a605f> .
-

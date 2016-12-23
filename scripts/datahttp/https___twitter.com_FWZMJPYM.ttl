@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/FWZMJPYM>
-  foaf:name "Buy FÓllÓwÉrs 1k=$12" ;
-  foaf:homepage <https://twitter.com/FWZMJPYM> ;
-  foaf:depiction <https://twitter.com/FWZMJPYM/profile_image?size=original> .
-

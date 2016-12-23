@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/07/bugs>
-  as:published "2016-07-05T15:20:06+01:00"^^xsd:dateTime ;
-  as:tag "fml", "life", "hacking" ;
-  as:content "All is bugs." .
-

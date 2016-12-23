@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/01/okay-well-just>
-  as:published "2016-01-02T16:50:45+00:00"^^xsd:dateTime ;
-  as:tag "chromebook", "php", "hacking" ;
-  as:content "Okay well I just crashed my Chromebook with a mistyped PHP `for` loop." .
-

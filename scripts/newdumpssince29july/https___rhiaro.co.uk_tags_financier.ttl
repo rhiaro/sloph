@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/financier>
-  a as:Collection ;
-  as:name "financier" ;
-  as:items <https://rhiaro.co.uk/2016/08/57b875115e9b5> .
-

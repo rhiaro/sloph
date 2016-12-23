@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/nicolagreco>
-  foaf:name "Nicola Greco" ;
-  foaf:homepage <https://twitter.com/nicolagreco> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/9f3debec2935b7666e7e3d6ef44379d4db638752b4647491fed7f4f0769e04f0.jpeg> .
-

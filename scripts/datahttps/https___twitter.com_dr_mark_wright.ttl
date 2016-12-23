@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/dr_mark_wright>
-  foaf:name "mark wright" ;
-  foaf:homepage <https://twitter.com/dr_mark_wright> ;
-  foaf:depiction <https://twitter.com/dr_mark_wright/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/958cc991976457b7713fda2104cb8c9414d19209f2946c8e49ff4fe7ef7d7bc2.jpeg> .
-

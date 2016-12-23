@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://werd.io/profile/benwerd>
-  foaf:name "Ben Werdmüller" ;
-  foaf:homepage <http://werd.io/profile/benwerd> ;
-  foaf:depiction <http://werd.io/file/551f0363bed7de1108cbe716> .
-

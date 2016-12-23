@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/07/digital-memories> sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/626499855783981056/785209428>, <http://known.kevinmarks.com/2015/i-was-just-listening-to-programmesp02xy80y-about-how-we-reconstruct>, <https://twitter.com/rhiaro/status/626506270720323584>, <https://twitter.com/tfgrahame/status/626505442324254720>, <https://petermolnar.eu/re-digital-memories/> .

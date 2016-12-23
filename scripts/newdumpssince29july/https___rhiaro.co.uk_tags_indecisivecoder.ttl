@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/indecisivecoder>
-  a as:Collection ;
-  as:name "indecisivecoder" ;
-  as:items <https://rhiaro.co.uk/2016/08/57b875115e9b5>, <https://rhiaro.co.uk/2016/08/57b88722283a9>, <https://rhiaro.co.uk/2016/08/fried-dumplings> .
-

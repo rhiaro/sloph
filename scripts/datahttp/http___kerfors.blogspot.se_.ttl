@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://kerfors.blogspot.se/>
-  foaf:name "Kerstin Forsberg" ;
-  foaf:homepage <http://kerfors.blogspot.se/> ;
-  foaf:depiction <https://twitter.com/kerfors/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/bca7d71ed9471586e58ac67670f2734e484f759c8298b47a56bca89d70bee42e.jpeg> .
-

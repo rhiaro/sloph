@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/_silvialc>
-  foaf:name "Silvia Colombo" ;
-  foaf:homepage <https://twitter.com/_silvialc> ;
-  foaf:depiction <https://twitter.com/_silvialc/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/8196f4e33bb66dfd24ad020341164e391d15fe25d2d78c37cb4656ce8151b99e.jpeg> .
-

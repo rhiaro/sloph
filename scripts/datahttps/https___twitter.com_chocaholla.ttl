@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/chocaholla>
-  foaf:name "Kimberley Miller" ;
-  foaf:homepage <https://twitter.com/chocaholla> ;
-  foaf:depiction <https://twitter.com/chocaholla/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/651a7820bc25dd7a0b05fe2ac10eec507242c97e9cfae31aabe1f72f50806f3e.jpeg> .
-

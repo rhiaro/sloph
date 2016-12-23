@@ -1,9 +1,0 @@
-@prefix blog: <http://vocab.amy.so/blog#> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://petermolnar.eu/wordpress-post-format-discovery/>
-  blog:mentions <https://rhiaro.co.uk/2015/09/post-type> ;
-  as:published "2015-10-30T10:37:45+00:00"^^xsd:datetime ;
-  as:actor <https://petermolnar.eu/> .
-

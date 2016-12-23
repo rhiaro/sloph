@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/phd>
-  a as:Collection ;
-  as:name "phd" ;
-  as:items <https://rhiaro.co.uk/2016/07/hemingway-editor>, <https://rhiaro.co.uk/2016/07/history-url-path>, <https://rhiaro.co.uk/2016/08/published-big>, <https://rhiaro.co.uk/2016/08/real-elsevier> .
-

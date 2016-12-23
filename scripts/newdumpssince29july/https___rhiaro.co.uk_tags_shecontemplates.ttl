@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/shecontemplates>
-  a as:Collection ;
-  as:name "shecontemplates" ;
-  as:items <https://rhiaro.co.uk/2016/08/57ac623e08c6e>, <https://rhiaro.co.uk/2016/08/half-blueberry> .
-

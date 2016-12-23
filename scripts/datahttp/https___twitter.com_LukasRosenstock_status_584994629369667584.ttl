@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<https://twitter.com/LukasRosenstock/status/584994629369667584> sioc:reply_of <http://blog.rhiaro.co.uk/blog-post-content> .

@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/mother+fools>
-  a as:Collection ;
-  as:name "mother fools" ;
-  as:items <https://rhiaro.co.uk/2016/08/almond-milk>, <https://rhiaro.co.uk/2016/08/57b5ed6141d42> .
-

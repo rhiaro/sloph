@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/06/aggressively>
-  as:published "2016-06-09T19:22:21+01:00"^^xsd:dateTime ;
-  as:tag "decentralisation" ;
-  as:content "\"aggressively decentralised\"" .
-

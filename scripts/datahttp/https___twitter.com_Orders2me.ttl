@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/Orders2me>
-  foaf:name "Orders2.me" ;
-  foaf:homepage <https://twitter.com/Orders2me> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/a11ef69d34ec84567669dbef1a2d7c257a264102f26052667ea93e497703881c.png> .
-

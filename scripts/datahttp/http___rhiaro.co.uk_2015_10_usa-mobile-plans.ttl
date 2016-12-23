@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/10/usa-mobile-plans> sioc:has_reply <https://twitter.com/annbass/status/650227107449073664>, <http://kongaloosh.com/e/2015/10/1/yeah-man-na-telecoms-are-basically-highway-robbery> .

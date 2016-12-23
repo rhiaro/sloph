@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/07/can-tell-been>
-  as:published "2016-07-11T01:15:42+01:00"^^xsd:dateTime ;
-  as:tag "salvage", "procrastabaking", "thesis", "academia", "phd", "life" ;
-  as:content "You can tell it's been a thesis writing sort of weekend. I made two types of cookies, went for a run, and finished a [budgeting app](https://apps.rhiaro.co.uk/salvage) that reads my [/stuff](https://rhiaro.co.uk/stuff) feed and tells me when I've bought too much." .
-

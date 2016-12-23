@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/academiadiva>
-  foaf:name "Jade Sleeman" ;
-  foaf:homepage <https://twitter.com/academiadiva> ;
-  foaf:depiction <https://twitter.com/academiadiva/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/db2fd2ac14bfd5f2c6f0ed0d86f9d3379aad5af9b6ed3af04a7af1362b2ebf5d.jpeg> .
-

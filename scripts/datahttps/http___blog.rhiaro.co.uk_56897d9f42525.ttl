@@ -1,3 +1,0 @@
-@prefix blog: <http://vocab.amy.so/blog#> .
-
-<http://blog.rhiaro.co.uk/56897d9f42525> blog:cost "Â£110" .

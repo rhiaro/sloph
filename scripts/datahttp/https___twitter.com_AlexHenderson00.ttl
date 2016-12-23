@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/AlexHenderson00>
-  foaf:name "Alex Henderson" ;
-  foaf:homepage <https://twitter.com/AlexHenderson00> ;
-  foaf:depiction <https://twitter.com/AlexHenderson00/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/78aa83919e573880bedb4773ddfccc81036ac18c73e0ac5647467d9677218d2f.jpeg> .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://identi.ca/cwebber>
-  foaf:name "Chris Webber" ;
-  foaf:homepage <https://identi.ca/cwebber> ;
-  foaf:depiction <https://identi.ca/uploads/cwebber/2014/9/5/vi4xWw_thumb.png> .
-

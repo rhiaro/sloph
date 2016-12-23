@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://jarofgreen.co.uk/>
-  foaf:name "James Baster" ;
-  foaf:homepage <http://jarofgreen.co.uk/> ;
-  foaf:depiction <https://twitter.com/jarofgreen/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/793d103fe107330be537b787752eb842b2b895e6f14b08055eb3cfd11a732a1e.jpeg> .
-

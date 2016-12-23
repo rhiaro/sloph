@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://transformap.co/>
-  foaf:name "TransforMap" ;
-  foaf:homepage <http://transformap.co/> ;
-  foaf:depiction <https://twitter.com/transformap/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/8d7c7d029f1545fd6811ff18ff0e452c497fa71e026e1631a99c3d10df4a58ef.png> .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/olberger>
-  foaf:name "Olivier Berger" ;
-  foaf:homepage <https://twitter.com/olberger> ;
-  foaf:depiction <https://twitter.com/olberger/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/75d6a1c467e1c08d5a2e1af907d76b1eeaa1b09a7cb2821d8baabff44bb72283.png> .
-

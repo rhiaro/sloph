@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/notifications>
-  a as:Collection ;
-  as:name "notifications" ;
-  as:items <https://rhiaro.co.uk/2016/08/chris-webber> .
-

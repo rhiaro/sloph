@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/02/w3c-kettle-one>
-  as:published "2016-02-05T17:37:29+00:00"^^xsd:dateTime ;
-  as:tag "ux", "life" ;
-  as:content "The W3C kettle is one of the more high tech ones I've encountered, so naturally the UX isn't great and I have to re-learn how to boil water every time." .
-

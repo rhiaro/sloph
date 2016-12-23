@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/02/perpetual>
-  as:published "2016-02-29T21:05:18+00:00"^^xsd:dateTime ;
-  as:tag "academia", "research", "linked", "http://twitter.com/nicolagreco", "https://nicola.io" ;
-  as:content "Perpetual optimist [Nicola](https://nicola.io) acknowledges that paper is static and non-interactive, *except* if you 'print off 100000 pages and flip it like this to make it animate'" .
-

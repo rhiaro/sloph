@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://kin.works/>
-  foaf:name "Ben Seven" ;
-  foaf:homepage <http://kin.works/> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/97331a7c2729eff40a2d56a3f8732ef16018fab34291ef29b7467affd0b286f5.jpeg> .
-

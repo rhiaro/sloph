@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/04/dmitrihttpstwittercomcodenamedmitri>
-  as:published "2016-04-12T15:14:49+01:00"^^xsd:dateTime ;
-  as:tag "social", "web", "solid", "www2016" ;
-  as:content "[Dmitri](https://twitter.com/codenamedmitri): We owe some thanks to facebook et al for laying the groundwork of UX for data access and sharing" .
-

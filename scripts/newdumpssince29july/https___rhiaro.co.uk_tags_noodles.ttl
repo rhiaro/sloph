@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/noodles>
-  a as:Collection ;
-  as:name "noodles" ;
-  as:items <https://rhiaro.co.uk/2016/08/rice-noodles>, <https://rhiaro.co.uk/2016/08/miso-noodles-veg>, <https://rhiaro.co.uk/2016/08/peanut-noodles>, <https://rhiaro.co.uk/2016/08/curry-noodles-red>, <https://rhiaro.co.uk/2016/08/fried-dumplings>, <https://rhiaro.co.uk/2016/09/rice-noodles-with> .
-

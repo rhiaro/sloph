@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/chowhoundgta>
-  foaf:name "Food in Toronto" ;
-  foaf:homepage <https://twitter.com/chowhoundgta> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/0bb068aa456cf7bfbc2be969a1a9d80d1db2e937c6dca2c8aa5895142c80ba12.png> .
-

@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/my+thai>
-  a as:Collection ;
-  as:name "my thai" ;
-  as:items <https://rhiaro.co.uk/2016/08/curry-noodles-red>, <https://rhiaro.co.uk/2016/08/57aa92d8e65e2> .
-

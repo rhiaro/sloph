@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/06/today-discovered>
-  as:published "2016-06-25T18:04:30+01:00"^^xsd:dateTime ;
-  as:tag "food", "vegan", "foodparsed.com", "cloverfoodlab.com", "kohlrabi" ;
-  as:content "Today I discovered kohlrabi is good, acquired through [Clover](https://www.cloverfoodlab.com/) farm share and cooked by [Elaine](http://foodparsed.com)" .
-

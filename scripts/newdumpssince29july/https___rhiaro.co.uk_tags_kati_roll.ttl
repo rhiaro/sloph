@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/kati+roll>
-  a as:Collection ;
-  as:name "kati roll" ;
-  as:items <https://rhiaro.co.uk/2016/08/veggie-peanuts>, <https://rhiaro.co.uk/2016/08/57b8cf95318f4> .
-

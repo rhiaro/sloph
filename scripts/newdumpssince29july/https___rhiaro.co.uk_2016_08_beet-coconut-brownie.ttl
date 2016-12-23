@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix asext: <https://terms.rhiaro.co.uk/as#> .
-
-<https://rhiaro.co.uk/2016/08/beet-coconut-brownie>
-  a as:Activity, asext:Consume ;
-  as:name "Beet coconut brownie, iced coffee" ;
-  as:published "2016-08-06T08:42:54-04:00" ;
-  as:tag <https://rhiaro.co.uk/tags/coffee>, <https://rhiaro.co.uk/tags/cake> .
-

@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/voyager>
-  a as:Collection ;
-  as:name "voyager" ;
-  as:items <https://rhiaro.co.uk/2016/08/well-kes>, <https://rhiaro.co.uk/2016/08/may-apparent>, <https://rhiaro.co.uk/2016/08/--everybody>, <https://rhiaro.co.uk/2016/08/okay-seven-nine>, <https://rhiaro.co.uk/2016/08/x-irrelevant> .
-

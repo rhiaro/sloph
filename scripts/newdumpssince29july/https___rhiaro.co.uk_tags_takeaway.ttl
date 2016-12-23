@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/takeaway>
-  a as:Collection ;
-  as:name "takeaway" ;
-  as:items <https://rhiaro.co.uk/2016/08/57b7afbe8058c>, <https://rhiaro.co.uk/2016/08/57b875115e9b5>, <https://rhiaro.co.uk/2016/08/57b88722283a9>, <https://rhiaro.co.uk/2016/08/57b8cf95318f4>, <https://rhiaro.co.uk/2016/08/57b9b8f592a33>, <https://rhiaro.co.uk/2016/08/57b9dec1ed1dc>, <https://rhiaro.co.uk/2016/08/57ba0b26a3dd8>, <https://rhiaro.co.uk/2016/09/57cb3be3b3bd0> .
-

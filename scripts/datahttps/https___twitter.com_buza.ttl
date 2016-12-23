@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/buza>
-  foaf:name "Kyle Buza" ;
-  foaf:homepage <https://twitter.com/buza> ;
-  foaf:depiction <https://twitter.com/buza/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/d0f189094de3b2b713552c063f4a945b66a6d8970264fb003e101c0743057729.png> .
-

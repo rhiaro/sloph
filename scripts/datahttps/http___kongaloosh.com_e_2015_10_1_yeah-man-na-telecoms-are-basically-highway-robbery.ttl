@@ -1,8 +1,0 @@
-@prefix blog: <http://vocab.amy.so/blog#> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<http://kongaloosh.com/e/2015/10/1/yeah-man-na-telecoms-are-basically-highway-robbery>
-  blog:mentions <https://rhiaro.co.uk/2015/10/usa-mobile-plans> ;
-  as:published "2015-11-11T16:51:24+00:00"^^xsd:datetime .
-

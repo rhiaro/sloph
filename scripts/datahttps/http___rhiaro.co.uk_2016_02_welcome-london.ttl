@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/02/welcome-london>
-  as:published "2016-02-26T17:32:35+00:00"^^xsd:dateTime ;
-  as:tag "travel", "london" ;
-  as:content "Welcome to London Waterloo, none of the Tube ticket machines are taking cards and 2/3 ATMs are out of service. At rush hour. Guess I'll just stay a while." .
-

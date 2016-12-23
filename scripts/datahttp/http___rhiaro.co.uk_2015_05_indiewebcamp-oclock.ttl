@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/05/indiewebcamp-oclock> sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/596937187398148096/11628>, <https://brid-gy.appspot.com/like/twitter/rhiaro/596937187398148096/507922769>, <https://brid-gy.appspot.com/like/twitter/rhiaro/596937187398148096/37075610> .

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://www.alasdairjggray.co.uk/>
-  foaf:name "Alasdair J G Gray" ;
-  foaf:homepage <http://www.alasdairjggray.co.uk/> ;
-  foaf:depiction <https://twitter.com/gray_alasdair/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/8fb2adf74fe9a21a8805add3834b67fff9c1b11c845d925a0013d6dc839f47c3.jpeg> .
-

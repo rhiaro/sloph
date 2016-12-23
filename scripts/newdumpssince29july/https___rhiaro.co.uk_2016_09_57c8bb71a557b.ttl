@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/09/57c8bb71a557b>
-  a as:Like ;
-  as:published "2016-09-02T00:36:17+01:00"^^xsd:dateTime ;
-  as:object <https://twitter.com/espectalll123/status/771456899850133505> .
-

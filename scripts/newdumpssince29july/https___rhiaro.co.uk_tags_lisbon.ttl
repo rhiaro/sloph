@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/lisbon>
-  a as:Collection ;
-  as:name "lisbon" ;
-  as:items <https://rhiaro.co.uk/2016/08/flight-from> .
-

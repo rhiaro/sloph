@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/macleodan>
-  foaf:name "River MacLeod" ;
-  foaf:homepage <https://twitter.com/macleodan> ;
-  foaf:depiction <https://twitter.com/macleodan/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/2faaf4d8f5d7a7c215af860f7e79ac0b49597d943a427c418d27d6df0e5a81f9.png> .
-

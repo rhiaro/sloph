@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/ali_raza995>
-  foaf:name "Syed Ali Raza" ;
-  foaf:homepage <https://twitter.com/ali_raza995> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/93b7394affbb2898f31c9b18e0a5468ac035a60cb4b12aaedd9c98d0724551e9.jpeg> .
-

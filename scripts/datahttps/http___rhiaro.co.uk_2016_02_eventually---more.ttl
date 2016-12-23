@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/02/eventually---more>
-  as:published "2016-02-29T22:32:57+00:00"^^xsd:dateTime ;
-  as:tag "http://nicola.io", "life" ;
-  as:content "\"This 'eventually' is *now*\" - more supreme wisdom from [Nicola](https://nicola.io)" .
-

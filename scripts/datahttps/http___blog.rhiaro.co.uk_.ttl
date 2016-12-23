@@ -1,3 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<http://blog.rhiaro.co.uk/> as:content "" .

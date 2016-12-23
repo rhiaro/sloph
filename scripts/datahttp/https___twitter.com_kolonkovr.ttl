@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/kolonkovr>
-  foaf:name "Vivian Navarro" ;
-  foaf:homepage <https://twitter.com/kolonkovr> ;
-  foaf:depiction <https://twitter.com/kolonkovr/profile_image?size=original> .
-

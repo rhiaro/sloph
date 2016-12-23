@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/wrap>
-  a as:Collection ;
-  as:name "wrap" ;
-  as:items <https://rhiaro.co.uk/2016/08/wrap-with-lettuce>, <https://rhiaro.co.uk/2016/08/wrap-with-refried>, <https://rhiaro.co.uk/2016/08/wrap-with>, <https://rhiaro.co.uk/2016/08/curry-lettuce>, <https://rhiaro.co.uk/2016/08/wrap-with-curry>, <https://rhiaro.co.uk/2016/08/wrap-with-carrots>, <https://rhiaro.co.uk/2016/08/tofu-crabby-cakes>, <https://rhiaro.co.uk/2016/08/wrap-with-greens>, <https://rhiaro.co.uk/2016/08/leftover-buffalo> .
-

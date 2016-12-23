@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://www.emilio.ferrara.name/>
-  foaf:name "Emilio Ferrara" ;
-  foaf:homepage <http://www.emilio.ferrara.name/> ;
-  foaf:depiction <https://twitter.com/jabawack/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/29a35d124d1ac868288f866ee23d4dc3ffaf3ee722a9c897dd415ced90b0330f.jpeg> .
-

@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/05/got-lost-mit>
-  as:published "2016-05-31T01:53:19+01:00"^^xsd:dateTime ;
-  as:tag "puppies", "mit", "life" ;
-  as:content "Got lost in MIT again but discovered a puppy therapy lab and a 5 storey metal sculpture of an atomic structure so net win" .
-

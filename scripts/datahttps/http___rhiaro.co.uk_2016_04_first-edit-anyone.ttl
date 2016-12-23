@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/04/first-edit-anyone>
-  as:published "2016-04-11T20:07:31+01:00"^^xsd:dateTime ;
-  as:tag "www2016", "cgutteridge", "poo", "socm2016", "wikipedia" ;
-  as:content "\"The first edit anyone makes on wikipedia is to write 'poo'\" - pearls of wisdom from [@cgutteridge](http://twitter.com/cgutteridge)" .
-

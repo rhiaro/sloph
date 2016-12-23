@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/httprange14>
-  a as:Collection ;
-  as:name "httprange14" ;
-  as:items <https://rhiaro.co.uk/2016/07/history-url-path>, <https://rhiaro.co.uk/2016/09/hold-phone> .
-

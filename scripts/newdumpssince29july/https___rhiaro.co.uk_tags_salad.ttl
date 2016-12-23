@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/salad>
-  a as:Collection ;
-  as:name "salad" ;
-  as:items <https://rhiaro.co.uk/2016/07/corn-tortillas>, <https://rhiaro.co.uk/2016/08/curry-tofu-brown>, <https://rhiaro.co.uk/2016/08/grilled-corn>, <https://rhiaro.co.uk/2016/08/wrap-with-refried>, <https://rhiaro.co.uk/2016/08/homemade-fries>, <https://rhiaro.co.uk/2016/08/wrap-with>, <https://rhiaro.co.uk/2016/08/wrap-with-carrots>, <https://rhiaro.co.uk/2016/08/tempeh-mayo-kale>, <https://rhiaro.co.uk/2016/08/salad-mush>, <https://rhiaro.co.uk/2016/08/chips-salsa>, <https://rhiaro.co.uk/2016/08/tofu-crabby-cakes>, <https://rhiaro.co.uk/2016/08/wrap-with-greens>, <https://rhiaro.co.uk/2016/08/aubergine-tomato>, <https://rhiaro.co.uk/2016/08/fried-dumplings>, <https://rhiaro.co.uk/2016/08/tacos-with>, <https://rhiaro.co.uk/2016/08/potatoes-kale>, <https://rhiaro.co.uk/2016/08/curry-meatballs>, <https://rhiaro.co.uk/2016/08/mashed-potato>, <https://rhiaro.co.uk/2016/08/homemade-wheat>, <https://rhiaro.co.uk/2016/08/bagel-with>, <https://rhiaro.co.uk/2016/09/seitan-veg-burger>, <https://rhiaro.co.uk/2016/09/corn-tortillas>, <https://rhiaro.co.uk/2016/09/pasta-with-tofu>, <https://rhiaro.co.uk/2016/09/rice-noodles-with>, <https://rhiaro.co.uk/2016/09/salad-seitan> .
-

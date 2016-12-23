@@ -1,8 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix blog: <http://vocab.amy.so/blog#> .
-
-<http://kongaloosh.com/e/2015/11/10/yeah-my-micropub-endpoint-was-the-first-thing-i-built-so-that-i-could-just-use-quill-instead-of-making-my-own-forms>
-  dcterms:created "2015-11-11T16:53:13+00:00"^^xsd:datetime ;
-  blog:mentions <http://rhiaro.co.uk/2015/11/tried-quill> .
-

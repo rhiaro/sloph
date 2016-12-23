@@ -1,8 +1,0 @@
-@prefix blog: <http://vocab.amy.so/blog#> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/testlink3.html>
-  blog:mentions <https://rhiaro.co.uk/2015/05/socialwg3-summary> ;
-  as:published "2015-05-10T12:30:28+01:00"^^xsd:datetime .
-

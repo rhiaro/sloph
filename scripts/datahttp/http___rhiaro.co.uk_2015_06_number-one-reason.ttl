@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/06/number-one-reason> sioc:has_reply <https://twitter.com/JCGoilo/status/615903599718232064>, <https://twitter.com/lutzid/status/615823108449169408>, <https://twitter.com/MarieVC/status/615816496963547136>, <https://twitter.com/johnnieingram/status/615817605761253376>, <https://twitter.com/cryomaniac/status/615816976812916736> .

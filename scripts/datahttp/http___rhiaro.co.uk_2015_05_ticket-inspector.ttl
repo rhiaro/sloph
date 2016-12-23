@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/05/ticket-inspector> sioc:has_reply <https://twitter.com/pointgigs/status/599887123802497026>, <https://brid-gy.appspot.com/like/twitter/rhiaro/599885948365733889/18191576> .

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://www.bhive.ca/moreinfo>
-  foaf:name "#SaveTheBees" ;
-  foaf:homepage <http://www.bhive.ca/moreinfo> ;
-  foaf:depiction <https://twitter.com/BhiveC321/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/bc06c2f8431e5f34b42bd61e12276793e640e9269087a467b6192c363d72490c.jpeg> .
-

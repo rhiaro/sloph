@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://sites.google.com/site/lukeshr/>
-  foaf:name "Luke" ;
-  foaf:homepage <https://sites.google.com/site/lukeshr/> ;
-  foaf:depiction <https://twitter.com/lukeshr/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/b9d13dc3c167efefebfca859a38bfbb1893325375393cbfbdc3a72df03b7e739.jpeg> .
-

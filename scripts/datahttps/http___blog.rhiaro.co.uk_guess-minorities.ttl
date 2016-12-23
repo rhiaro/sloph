@@ -1,5 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<http://blog.rhiaro.co.uk/guess-minorities> as:content """I guess minorities who have been discriminated against in tech just weren't PASSIONATE enough.
-
-> ""Passion is a gender neutralizing force"â€”Mayer on how passion can improve women's inclusion in computing."""" .

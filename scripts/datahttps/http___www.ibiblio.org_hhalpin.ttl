@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://www.ibiblio.org/hhalpin>
-  foaf:name "harryhalpin" ;
-  foaf:homepage <http://www.ibiblio.org/hhalpin> ;
-  foaf:depiction <https://twitter.com/harryhalpin/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/877243c17a34fe8fe08f7f38aa0ccb11e97fd0c02a614fea259f03524de7cc1d.jpeg> .
-

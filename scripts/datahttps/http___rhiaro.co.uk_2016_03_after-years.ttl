@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/03/after-years>
-  as:published "2016-03-25T08:18:08+00:00"^^xsd:dateTime ;
-  as:tag "travel", "doha" ;
-  as:location <geo:25.32459,51.52816;u=8.5> ;
-  as:content "After years of traveling with a metal fork, Doha airport were finally the ones to confiscate it." .
-

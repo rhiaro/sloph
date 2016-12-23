@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/08/may-apparent>
-  a as:Note ;
-  as:published "2016-08-25T00:49:58+01:00"^^xsd:dateTime ;
-  as:tag "life", "trek", "voyager", "star", "sevenofnine", <https://rhiaro.co.uk/tags/life>, <https://rhiaro.co.uk/tags/voyager>, <https://rhiaro.co.uk/tags/star>, <https://rhiaro.co.uk/tags/trek>, <https://rhiaro.co.uk/tags/sevenofnine> ;
-  as:content "<p>It may not be apparent, but I am often amused by human behavior.</p>" .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/indecisivecoder>
-  foaf:name "Maithu Venkatesh" ;
-  foaf:homepage <https://twitter.com/indecisivecoder> ;
-  foaf:depiction <https://twitter.com/indecisivecoder/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/bf8faa2f06db980d6649199a51b3d270c8d943247333b381d1ffe3543721e6c9.jpeg> .
-

@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/02/56b379e4497b8>
-  a as:Like ;
-  as:published "2016-02-04T16:18:44+00:00"^^xsd:dateTime ;
-  as:object <http://dbpedia.org/resource/Paul_Feyerabend> .
-

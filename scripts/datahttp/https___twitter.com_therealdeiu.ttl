@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/therealdeiu>
-  foaf:name "Andrei Sambra" ;
-  foaf:homepage <https://twitter.com/therealdeiu> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/75a0988435c8942021157415a667766abca2057ab79ea2cfd7230f69f18c5722.jpeg> .
-

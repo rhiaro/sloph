@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/03/many-mit-computer>
-  as:published "2016-03-21T11:46:58+00:00"^^xsd:dateTime ;
-  as:tag "" ;
-  as:content "How many MIT computer scientists does it take to write on an interactive whiteboard with marker pen?" .
-

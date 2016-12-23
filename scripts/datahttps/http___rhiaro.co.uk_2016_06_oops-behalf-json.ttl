@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/06/oops-behalf-json>
-  as:published "2016-06-25T16:16:56+01:00"^^xsd:dateTime ;
-  as:tag "github", "jsonld", "rdf", "hacking" ;
-  as:content "Oops on behalf of JSON-LD I apologise to github users @context @graph @value @id @type etc..." .
-

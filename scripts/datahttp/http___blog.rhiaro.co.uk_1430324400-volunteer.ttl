@@ -1,8 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<http://blog.rhiaro.co.uk/1430324400-volunteer>
-  dcterms:created "2015-04-29T17:20:00+01:00"^^xsd:dateTime ;
-  as:location <http://rhiaro.co.uk/location/volunteer> .
-

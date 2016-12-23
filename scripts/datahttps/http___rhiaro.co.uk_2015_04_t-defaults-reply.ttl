@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2015/04/t-defaults-reply>
-  as:published "2015-04-04T12:17:12+0100"^^xsd:datetime ;
-  as:name "t defaults and reply" ;
-  as:content "test defaults and reply" ;
-  as:actor <https://rhiaro.co.uk/about#me> .
-

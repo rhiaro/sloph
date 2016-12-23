@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/03/56d8c7c298bd3>
-  a as:Arrive ;
-  as:published "2016-03-03T18:04:29-05:00"^^xsd:dateTime ;
-  as:location <https://rhiaro.co.uk/location/other> .
-

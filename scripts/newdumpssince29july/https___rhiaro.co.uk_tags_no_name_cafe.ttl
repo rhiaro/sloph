@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/no+name+cafe>
-  a as:Collection ;
-  as:name "no name cafe" ;
-  as:items <https://rhiaro.co.uk/2016/07/579b97247c715>, <https://rhiaro.co.uk/2016/07/oreo-froyo-oolong>, <https://rhiaro.co.uk/2016/08/apricot-froyo>, <https://rhiaro.co.uk/2016/08/57a5e80dd11e8> .
-

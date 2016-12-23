@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://wwelves.org/perpetual-tripper>
-  foaf:name "â˜® elf Pavlik â˜®" ;
-  foaf:homepage <https://wwelves.org/perpetual-tripper> ;
-  foaf:depiction <https://twitter.com/elfpavlik/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/0cfc17c03d0886b1ede60c1f72eee0371c3dde51a63ddbb2d631ff29d6782c9d.jpeg> .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/JohnSilvanos>
-  foaf:name "Juha Leinonen" ;
-  foaf:homepage <https://twitter.com/JohnSilvanos> ;
-  foaf:depiction <https://twitter.com/JohnSilvanos/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/b652ff416c3ff34570bcac671a01d70a9b7bb194d14a961c7a194b06acbf3da9.jpeg> .
-

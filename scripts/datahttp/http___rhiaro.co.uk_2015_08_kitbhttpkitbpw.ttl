@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/08/kitbhttpkitbpw> sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/637342820857212929/14741253>, <https://kylewm.com/2015/08/don-t-you-hate-when-you-spend-8-years-making-all> .

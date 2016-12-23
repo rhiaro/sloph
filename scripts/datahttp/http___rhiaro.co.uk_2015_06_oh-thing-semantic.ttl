@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/06/oh-thing-semantic> sioc:has_reply <https://twitter.com/rhiaro/status/609467845597114368>, <https://twitter.com/CraigSnowden/status/609441580634800132>, <https://twitter.com/linkedktk/status/609342249109954560> .

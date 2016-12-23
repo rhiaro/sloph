@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://wirres.net/>
-  foaf:name "felix schwenzel" ;
-  foaf:homepage <http://wirres.net/> ;
-  foaf:depiction <https://webmention.io/avatar/root.wirres.net/7dba00bcadaac7510b53486c0cc2aa4f1aa0df62a85381bb54d328d8fb39c85c.jpeg> .
-

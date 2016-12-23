@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/shearer12345_j>
-  foaf:name "John Shearer" ;
-  foaf:homepage <https://twitter.com/shearer12345_j> ;
-  foaf:depiction <https://twitter.com/shearer12345_j/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/cc6bbef06c9378e78376a607f2d129e01702a71bf999c9a3b0b97d0c3951c8b8.jpeg> .
-

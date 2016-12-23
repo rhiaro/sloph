@@ -1,6 +1,0 @@
-@prefix ns3: <http://localhost/> .
-
-ns3:kitb
-  ns3:butts "More many' quotes \"?\"??", "Don't butts \"kids\"!" ;
-  ns3:total "\"butts\"" .
-

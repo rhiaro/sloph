@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://burnap.org/>
-  foaf:name "Pete Burnap" ;
-  foaf:homepage <http://burnap.org/> ;
-  foaf:depiction <https://twitter.com/pbFeed/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/dc4df43fd4d11465c6d2b90955956ac796fc829af9b6db38f33458954a5c708a.jpeg> .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/ladyaeva>
-  foaf:name "Aeva (⚤+⚡=⚥)", "Aeva's Monster ˎoOˏ" ;
-  foaf:homepage <https://twitter.com/ladyaeva> ;
-  foaf:depiction <https://twitter.com/ladyaeva/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/3cfb25f0f1b5afb6c1647860660ff1cf1ec6b60c139b1c0a8a36b5606d0b547d.png> .
-

@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/08/began-30-hour>
-  a as:Note ;
-  as:published "2016-08-13T08:19:56+01:00"^^xsd:dateTime ;
-  as:tag "travel", "us0816", "greyhound", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/travel>, <https://rhiaro.co.uk/tags/greyhound> ;
-  as:content "<p>Began my 30 hour journey to Madison tonight and still haven't left Boston. Greyhound to NYC an hour late and counting.</p>" .
-

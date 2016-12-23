@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/08/bus-broken-down>
-  a as:Note ;
-  as:published "2016-08-13T11:22:55+01:00"^^xsd:dateTime ;
-  as:tag "life", "travel", "fml", "greyhound", "us0816", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/travel>, <https://rhiaro.co.uk/tags/greyhound>, <https://rhiaro.co.uk/tags/life>, <https://rhiaro.co.uk/tags/fml> ;
-  as:content "<p>Bus is broken down. I'd like to go back in time to when I picked the 0215 over the 0200 because I didn't want to wait around longer than 3 hours.</p>" .
-

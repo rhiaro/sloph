@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/keen_io>
-  foaf:name "Keen IO" ;
-  foaf:homepage <https://twitter.com/keen_io> ;
-  foaf:depiction <https://twitter.com/keen_io/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/1f825d76239026bac6b5f8b88ca4f602d72a27c396f468b2931e840773cc3f7c.png> .
-

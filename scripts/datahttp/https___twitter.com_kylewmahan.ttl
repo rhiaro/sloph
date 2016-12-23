@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/kylewmahan>
-  foaf:name "Kyle Mahan" ;
-  foaf:homepage <https://twitter.com/kylewmahan> ;
-  foaf:depiction <https://twitter.com/kylewmahan/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/26d649fd1d329f85fbf93d17af3af8e38433d68f7b91c42a7396d89ca8293653.jpeg> .
-

@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/06/omg-lot-tabs-open> sioc:has_reply <https://twitter.com/PhD_Connect/status/611138749662121984> .

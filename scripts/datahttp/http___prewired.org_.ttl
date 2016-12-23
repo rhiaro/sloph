@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://prewired.org/>
-  foaf:name "Prewired" ;
-  foaf:homepage <http://prewired.org/> ;
-  foaf:depiction <https://twitter.com/Prewired/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/58252ced7e2054044a4d52fba5e8f7a75065e39640af5a08ef06865e9d64f342.png> .
-

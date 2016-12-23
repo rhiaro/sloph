@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/05/instincts-took> sioc:has_reply <https://twitter.com/CraigSnowden/status/602627839637098497>, <https://brid-gy.appspot.com/like/twitter/rhiaro/602471473287139328/785209428> .

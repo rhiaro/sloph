@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/indigi_>
-  foaf:name "Paweł Piotrowski" ;
-  foaf:homepage <https://twitter.com/indigi_> ;
-  foaf:depiction <https://twitter.com/indigi_/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/075706baab23062b7708fa1ec75cf75bb932eae1e3b14b6fde8e06f8fb494e3f.jpeg> .
-

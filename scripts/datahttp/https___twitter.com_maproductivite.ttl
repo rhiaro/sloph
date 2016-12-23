@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/maproductivite>
-  foaf:name "maproductivite" ;
-  foaf:homepage <https://twitter.com/maproductivite> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/b3a8357b491127d8d056d52762102629416028012b7ec0f843aa236fd7ceec5b.png> .
-

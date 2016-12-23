@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/05/well-bust-w3c> sioc:has_reply <https://aaronparecki.com/likes/2015/05/21/1/>, <https://brid-gy.appspot.com/like/twitter/rhiaro/601319165773877248/13239592>, <https://brid-gy.appspot.com/like/twitter/rhiaro/601319165773877248/281950081>, <https://brid-gy.appspot.com/like/twitter/rhiaro/601319165773877248/13236482>, <https://twitter.com/VOLUM3_PRINTING/status/601319750715707392>, <https://twitter.com/claudio_venezia/status/601321587804151808>, <https://twitter.com/licciardi/status/601320026835136512>, <https://twitter.com/m_guerini/status/601319530116308992> .

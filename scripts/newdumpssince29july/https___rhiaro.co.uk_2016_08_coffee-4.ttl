@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix asext: <https://terms.rhiaro.co.uk/as#> .
-
-<https://rhiaro.co.uk/2016/08/coffee-4>
-  a as:Activity, asext:Consume ;
-  as:name "Coffee" ;
-  as:published "2016-08-27T07:30:17-04:00" ;
-  as:tag <https://rhiaro.co.uk/tags/coffee> .
-

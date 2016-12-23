@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://british-hci2015.org/>
-  foaf:name "British HCI 2015" ;
-  foaf:homepage <http://british-hci2015.org/> ;
-  foaf:depiction <https://twitter.com/HCI_2015/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/91e81fac61417c6d96de38d27ccd1641be170ceacb9cbd7429a8be65bccde668.jpeg> .
-

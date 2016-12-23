@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/08/got-like-10-new>
-  a as:Note ;
-  as:published "2016-08-14T02:31:27+01:00"^^xsd:dateTime ;
-  as:tag "life", "greyhound", "complaining", "followers", "media", "social", "solid", "twitter", <https://rhiaro.co.uk/tags/greyhound>, <https://rhiaro.co.uk/tags/life>, <https://rhiaro.co.uk/tags/social>, <https://rhiaro.co.uk/tags/solid>, <https://rhiaro.co.uk/tags/complaining>, <https://rhiaro.co.uk/tags/followers>, <https://rhiaro.co.uk/tags/media>, <https://rhiaro.co.uk/tags/twitter> ;
-  as:content "<p>I got like 10 new followers during my Greyhound ordeal this morning. Maybe more likely that's actually due to the recent Solid media flurry than me complaining about buses, though.</p>" .
-

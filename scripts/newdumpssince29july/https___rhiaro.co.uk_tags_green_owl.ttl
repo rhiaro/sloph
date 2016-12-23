@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/green+owl>
-  a as:Collection ;
-  as:name "green owl" ;
-  as:items <https://rhiaro.co.uk/2016/08/tofu-crabby-cakes> .
-

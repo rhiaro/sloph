@@ -1,9 +1,0 @@
-@prefix asext: <https://terms.rhiaro.co.uk/as#> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/2016/07/slice-homemade-2>
-  a asext:Consume, as:Activity ;
-  as:name "Slice of homemade beetroot bread" ;
-  as:published "2016-07-31T17:53:29-04:00" ;
-  as:tag <https://rhiaro.co.uk/tags/bread> .
-

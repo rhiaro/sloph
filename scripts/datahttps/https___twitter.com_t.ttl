@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/t>
-  foaf:name "Tantek Ã‡elik" ;
-  foaf:homepage <https://twitter.com/t> ;
-  foaf:depiction <https://twitter.com/t/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/38f635b64f6add618dfb72c1f115322b8c92777ddc5efd2784806c2d3f20df2e.jpeg> .
-

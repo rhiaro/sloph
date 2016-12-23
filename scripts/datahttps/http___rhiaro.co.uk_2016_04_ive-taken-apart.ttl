@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/04/ive-taken-apart>
-  as:published "2016-04-22T16:51:25+01:00"^^xsd:dateTime ;
-  as:tag "technology", "chromebook", "life" ;
-  as:content "I've taken apart my Chromebook and everything is so tiny, how does data even fit?" .
-

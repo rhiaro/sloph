@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://jcgoilo.wordpress.com/>
-  foaf:name "J-C Goilo" ;
-  foaf:homepage <http://jcgoilo.wordpress.com/> ;
-  foaf:depiction <https://twitter.com/JCGoilo/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/8db7f6cd663c5ccd74bea7cb9206f93d37c90cc83f488ad49af3ac48c245bcea.jpeg> .
-

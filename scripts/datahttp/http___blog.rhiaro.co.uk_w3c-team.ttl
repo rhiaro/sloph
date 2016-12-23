@@ -1,14 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<http://blog.rhiaro.co.uk/w3c-team>
-  dcterms:title """W3C Team""" ;
-  dcterms:created "2016-07-21T00:30:03+01:00"^^xsd:dateTime ;
-  sioc:content "I am officially part of the W3C Team and co-staff contact for the Social Web WG. Look, [there I am](https://www.w3.org/People/#rhiaro)!" ;
-  sioc:topic "cv", "employment", "experience", "resume", "socialwg", "standards", "w3c", "web" ;
-  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/w3c-team> ;
-  as:startTime "2016-07-06T08:41:00-0400"^^xsd:datetime .
-

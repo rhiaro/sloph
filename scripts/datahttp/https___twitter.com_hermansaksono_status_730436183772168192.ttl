@@ -1,3 +1,0 @@
-@prefix blog: <http://vocab.amy.so/blog#> .
-
-<https://twitter.com/hermansaksono/status/730436183772168192> blog:share_of <http://blog.rhiaro.co.uk/guess-minorities> .

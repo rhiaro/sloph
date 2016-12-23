@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/02/can-get-free>
-  as:published "2016-02-28T10:47:01+00:00"^^xsd:dateTime ;
-  as:tag "travel", "coffee", "pret", "Gatwick" ;
-  as:content "You can get a free coffee from Pret at Gatwick Airport by brandishing your phone and saying you 'signed up for the free coffee thing'" .
-

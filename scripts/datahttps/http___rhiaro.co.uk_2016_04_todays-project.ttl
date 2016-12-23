@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/04/todays-project>
-  as:published "2016-04-28T03:13:16+01:00"^^xsd:dateTime ;
-  as:tag "project", "coding", "linked", "dokieli", "github", "css", "html", "research", "hacking" ;
-  as:content "Today's project was updating the [dokieli](https://dokie.li) homepage to make it not a wall of text" .
-

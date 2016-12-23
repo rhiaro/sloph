@@ -1,3 +1,0 @@
-@prefix ns3: <http://localhost/> .
-
-<http://localhost/butts> ns3:master "Kit \"KitB\" Butts" .

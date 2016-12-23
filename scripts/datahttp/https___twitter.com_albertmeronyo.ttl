@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/albertmeronyo>
-  foaf:name "Albert Meroño" ;
-  foaf:homepage <https://twitter.com/albertmeronyo> ;
-  foaf:depiction <https://twitter.com/albertmeronyo/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/ff3842e4ec966efc519e3ffb97a81bb545936a952fb1e46fb3b9605465a84a98.jpeg> .
-

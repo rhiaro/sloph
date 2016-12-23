@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/IlaTiddi>
-  foaf:name "Ilaria Td" ;
-  foaf:homepage <https://twitter.com/IlaTiddi> ;
-  foaf:depiction <https://twitter.com/IlaTiddi/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/7b28b1b02a9a314292a61e5d81731b3af3539b1bf2d9dcbe068ab246f35a2ce8.jpeg> .
-

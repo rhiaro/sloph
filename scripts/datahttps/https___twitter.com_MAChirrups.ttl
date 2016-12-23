@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/MAChirrups>
-  foaf:name "Michael Anslow" ;
-  foaf:homepage <https://twitter.com/MAChirrups> ;
-  foaf:depiction <https://twitter.com/MAChirrups/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/ec41e1ec2b3bf1a13ba5221fe486e777ac6a12f9a89cbdd0242a5560df8ba690.png> .
-

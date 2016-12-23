@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/07/indiewebcamp-edinburgh-closes> sioc:has_reply <http://matrix.org/blog/2015/07/29/micropub-support-as-an-application-service/>, <https://brid-gy.appspot.com/like/twitter/rhiaro/625368298100781056/508927647>, <https://brid-gy.appspot.com/like/twitter/rhiaro/625368298100781056/785209428>, <https://twitter.com/AlexKKearney/status/625386676395896834>, <https://twitter.com/IndieWebCampUK/status/625371213481803776> .

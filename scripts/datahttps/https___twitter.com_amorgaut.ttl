@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/amorgaut>
-  foaf:name "Alexandre Morgaut" ;
-  foaf:homepage <https://twitter.com/amorgaut> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/2daeb84da6a7830e118b08be566f6acadb5d1f4e3db878abe98b212db3bae905.png> .
-

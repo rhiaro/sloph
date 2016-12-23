@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/beans>
-  a as:Collection ;
-  as:name "beans" ;
-  as:items <https://rhiaro.co.uk/2016/07/corn-tortillas>, <https://rhiaro.co.uk/2016/07/brown-rice-black>, <https://rhiaro.co.uk/2016/07/homemade-chilli>, <https://rhiaro.co.uk/2016/07/greens-almonds>, <https://rhiaro.co.uk/2016/08/beet-bread-with>, <https://rhiaro.co.uk/2016/08/macaroni-black>, <https://rhiaro.co.uk/2016/08/grilled-corn>, <https://rhiaro.co.uk/2016/08/wrap-with-lettuce>, <https://rhiaro.co.uk/2016/08/baked-beans-cream>, <https://rhiaro.co.uk/2016/08/wrap-with-refried>, <https://rhiaro.co.uk/2016/08/coffee-tacos-corn>, <https://rhiaro.co.uk/2016/08/iced-coffee-tacos>, <https://rhiaro.co.uk/2016/08/two-corn>, <https://rhiaro.co.uk/2016/08/wholewheat-muffin>, <https://rhiaro.co.uk/2016/08/brown-rice-chilli>, <https://rhiaro.co.uk/2016/08/chilli-brown-rice>, <https://rhiaro.co.uk/2016/08/tacos-with>, <https://rhiaro.co.uk/2016/08/mashed-potato>, <https://rhiaro.co.uk/2016/08/homemade-wheat>, <https://rhiaro.co.uk/2016/08/tacos-black-beans>, <https://rhiaro.co.uk/2016/08/black-bean-curry>, <https://rhiaro.co.uk/2016/09/corn-tortillas> .
-

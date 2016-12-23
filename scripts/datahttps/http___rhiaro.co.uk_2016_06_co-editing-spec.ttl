@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/06/co-editing-spec>
-  as:published "2016-06-20T16:35:20+01:00"^^xsd:dateTime ;
-  as:tag "specifications", "spec", "recommendations", "protocols", "phd", "w3c", "standards" ;
-  as:content "Co-editing a spec with a W3C Rec pedant who expertly dismantles other specs based on tiny discrepancies/ambiguities.. takes about four times as long, but ultimately should be bulletproof." .
-

@@ -1,3 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-
-<http://blog.rhiaro.co.uk> dcterms:modified "1380585600", "1420460322", "1426882365" .

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/kasei>
-  foaf:name "Gregory Williams" ;
-  foaf:homepage <https://twitter.com/kasei> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/be8fbedec5689640348c4324ae1b0cd1c7b6901968e051fb0b476efdec3803a7.jpeg> .
-

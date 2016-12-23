@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/AppintheAir>
-  foaf:name "App in the Air" ;
-  foaf:homepage <https://twitter.com/AppintheAir> ;
-  foaf:depiction <https://twitter.com/AppintheAir/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/0ff9896a92fa61cf813eb5a3c9164d2ba91331c3974f8f21eb282d16a413684c.png> .
-

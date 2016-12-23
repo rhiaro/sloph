@@ -1,9 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<http://blog.rhiaro.co.uk/56ff29d64eb5a>
-  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/04/56ff29d64eb5a> ;
-  as:location <http://rhiaro.co.uk/location/home> ;
-  as:published "2016-04-01T21:39:12-04:00"^^xsd:dateTime .
-

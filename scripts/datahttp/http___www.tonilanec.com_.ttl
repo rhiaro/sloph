@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://www.tonilanec.com/>
-  foaf:name "Toni Lane Casserly" ;
-  foaf:homepage <http://www.tonilanec.com/> ;
-  foaf:depiction <https://twitter.com/tonilanec/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/d0a34123514ddc3d9c4c1b14ecb2c9a3d0e60f18799af7d79a73dfe6c34abd6a.jpeg> .
-

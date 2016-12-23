@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://webseitz.fluxent.com/wiki>
-  foaf:name "Bill Seitz" ;
-  foaf:homepage <http://webseitz.fluxent.com/wiki> ;
-  foaf:depiction <https://twitter.com/BillSeitz/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/a9f11bdb1562c85b8c8a921ecfca3ecdb204667276a53d7adaf5920f819e72e2.png> .
-

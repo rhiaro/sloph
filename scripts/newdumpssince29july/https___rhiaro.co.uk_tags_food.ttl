@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/food>
-  a as:Collection ;
-  as:name "food" ;
-  as:items <https://rhiaro.co.uk/2016/07/579b97247c715>, <https://rhiaro.co.uk/2016/07/made-bread-today>, <https://rhiaro.co.uk/2016/08/57a3ac73b92bd>, <https://rhiaro.co.uk/2016/08/57a3f9304f7f6>, <https://rhiaro.co.uk/2016/08/57a5e80dd11e8>, <https://rhiaro.co.uk/2016/08/57a5e7c793074>, <https://rhiaro.co.uk/2016/08/57aa92d8e65e2>, <https://rhiaro.co.uk/2016/08/57aa930b1e744>, <https://rhiaro.co.uk/2016/08/57ac625deefae>, <https://rhiaro.co.uk/2016/08/57ac623e08c6e>, <https://rhiaro.co.uk/2016/08/57acc9ba633db>, <https://rhiaro.co.uk/2016/08/57b0771dbdf05>, <https://rhiaro.co.uk/2016/08/57b0df0abefd8>, <https://rhiaro.co.uk/2016/08/57b1e921c9bb4>, <https://rhiaro.co.uk/2016/08/57b29c5483ef2>, <https://rhiaro.co.uk/2016/08/57b5ed38ce3e7>, <https://rhiaro.co.uk/2016/08/57b5ed6141d42>, <https://rhiaro.co.uk/2016/08/57b7afbe8058c>, <https://rhiaro.co.uk/2016/08/57b875115e9b5>, <https://rhiaro.co.uk/2016/08/57b88722283a9>, <https://rhiaro.co.uk/2016/08/57b8cf95318f4>, <https://rhiaro.co.uk/2016/08/57b9b8f592a33>, <https://rhiaro.co.uk/2016/08/57b9dec1ed1dc>, <https://rhiaro.co.uk/2016/08/57ba0b26a3dd8>, <https://rhiaro.co.uk/2016/08/57ba53d532ecb>, <https://rhiaro.co.uk/2016/08/57bb140fca736>, <https://rhiaro.co.uk/2016/08/57bb41f688677>, <https://rhiaro.co.uk/2016/08/57bbcb5ad1d2f>, <https://rhiaro.co.uk/2016/08/57c6d9cbae0ea>, <https://rhiaro.co.uk/2016/09/57cb3be3b3bd0> .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/th0ma5>
-  foaf:name "Thomas Winningham" ;
-  foaf:homepage <https://twitter.com/th0ma5> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/0a8e02187f7d38ee00f3e4b5c8466ffb5ba3ec32350be4f3529603328017b576.jpeg> .
-

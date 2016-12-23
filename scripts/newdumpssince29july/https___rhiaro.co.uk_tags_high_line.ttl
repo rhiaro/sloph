@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/high+line>
-  a as:Collection ;
-  as:name "high line" ;
-  as:items <https://rhiaro.co.uk/2016/08/pink-lemonade-ice>, <https://rhiaro.co.uk/2016/08/57ba0b26a3dd8> .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://veganstraightedge.com/>
-  foaf:name "Shane Becker" ;
-  foaf:homepage <http://veganstraightedge.com/> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/ff8865c08331abfd4bdeef5505069a2c73a03d5b16f470a9da4bf901ff6cc258.png> .
-

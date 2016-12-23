@@ -1,9 +1,0 @@
-@prefix blog: <http://vocab.amy.so/blog#> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://kylewm.com/2015/08/don-t-you-hate-when-you-spend-8-years-making-all>
-  blog:mentions <https://rhiaro.co.uk/2015/08/kitbhttpkitbpw> ;
-  as:published "2015-08-29T22:56:58+01:00"^^xsd:datetime ;
-  as:actor <https://kylewm.com/> .
-

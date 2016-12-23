@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/stamp>
-  a as:Collection ;
-  as:name "stamp" ;
-  as:items <https://rhiaro.co.uk/2016/08/57a91514b67cd> .
-

@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/10/sos-urgent-send> sioc:has_reply <http://known.kevinmarks.com/2015/find-an-indian-grocers---they-usually-have-well-priced-uk>, <https://kylewm.com/2015/10/i-ve-gotten-vegemite-at-whole-foods-though-i-overhead>, <https://twitter.com/DearDonald/status/655079416645726208>, <https://twitter.com/noii/status/655080589469622273>, <https://twitter.com/mattl/status/655071615672123392>, <http://rhiaro.co.uk/2015/10/googling> .

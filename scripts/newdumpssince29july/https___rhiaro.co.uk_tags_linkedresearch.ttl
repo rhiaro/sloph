@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/linkedresearch>
-  a as:Collection ;
-  as:name "linkedresearch" ;
-  as:items <https://rhiaro.co.uk/2016/08/real-elsevier> .
-

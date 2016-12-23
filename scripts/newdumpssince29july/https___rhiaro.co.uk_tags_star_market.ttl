@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/star+market>
-  a as:Collection ;
-  as:name "star market" ;
-  as:items <https://rhiaro.co.uk/2016/08/57a914f1e45ad>, <https://rhiaro.co.uk/2016/08/57bcfbea12377> .
-

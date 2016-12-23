@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://mat.tl/>
-  foaf:name "Vampire Mattl" ;
-  foaf:homepage <http://mat.tl/> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/9b27271b85ba0306b62322b10f648914c54a17bfa4ced8318bca111b26c572e6.jpeg> .
-

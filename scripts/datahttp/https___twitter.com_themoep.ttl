@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/themoep>
-  foaf:name "jakobleier" ;
-  foaf:homepage <https://twitter.com/themoep> ;
-  foaf:depiction <https://twitter.com/themoep/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/1ab215478e9a9494702fa60684134382e382b3d760e07a95173a1f28db618b64.jpeg> .
-

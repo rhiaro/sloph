@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/cryomaniac>
-  foaf:name "Mark Britten" ;
-  foaf:homepage <https://twitter.com/cryomaniac> ;
-  foaf:depiction <https://twitter.com/cryomaniac/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/631aaf68bbe9753387584dd1156c94aa4c62dc42e414632887bf481130ad8f9a.jpeg> .
-

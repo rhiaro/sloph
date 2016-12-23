@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/05/coffee-croatia> sioc:has_reply <https://twitter.com/BhiveC321/status/605294350231343104>, <https://twitter.com/lmatteis/status/604240449080070144>, <https://brid-gy.appspot.com/like/twitter/rhiaro/604216545217110016/2985307680> .

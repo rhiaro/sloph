@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/rachelmercer>
-  foaf:name "rachelmercer" ;
-  foaf:homepage <https://twitter.com/rachelmercer> ;
-  foaf:depiction <https://twitter.com/rachelmercer/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/8861f9fa17fd465f8b31b9594d92ff2f672314b85bba3f3c07e1f4e7978020a2.jpeg> .
-

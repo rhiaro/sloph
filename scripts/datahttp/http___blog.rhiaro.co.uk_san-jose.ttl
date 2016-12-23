@@ -1,18 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://blog.rhiaro.co.uk/san-jose>
-  dcterms:title """San Jose""" ;
-  dcterms:created "2016-05-13T21:00Z-0700"^^xsd:dateTime ;
-  sioc:content """I didn't have high expectations for San Jose, so it was fine. The weather was good all week and vegan food was easy to come by. The middle of Downtown is nice enough, and the university campus is pretty and green, but otherwise kind of... not desolate, but industrial I guess. Contrived. Everything was closed or not serving food by 9 or 10pm, which was inconvenient. The Martin Luther King Jr Library is a good place to work; quite, plenty of desk space, and nice views of the city from the higher floors.
-
-I ate... a vegan hotdog at Original Gravity; various Asian food at Vegetarian House (twice, friendly, taro smoothie!); rice and beans burrito at Iguanas Burritozilla (twice); bubble tea from Boba Bar (soy milk options) and ThirsTea (all made with non-diairy creamer, bonus points for punning); fresh watermelon juice from the place next to Boba Bar; delicious healthful hearty meals and amazing Mayan chocolate pie from Good Karma (twice); sushi from Fuji Sushi; coffee from Social Policy.
-
-I [ran](https://rnkpr.com/ad00nv3) the length of Guadalupe Park, and wandered around the rose garden. It was sometimes isolated, and sometimes the highway was audible or visible.
-
-CHI post later..""" ;
-  sioc:topic "ca2016", "jose", "san", "travel", "usa", "vegan" ;
-  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/san-jose> .
-

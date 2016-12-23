@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://www.learningsparql.com/>
-  foaf:name "Learning SPARQL" ;
-  foaf:homepage <http://www.learningsparql.com/> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/dd902e2f1b3273e09ca9c9eb3708e1e8cb2938f2436f9d2f485c97172d372f32.jpeg> .
-

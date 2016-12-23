@@ -1,8 +1,0 @@
-{
-  "@context": "http://www.w3.org/ns/activitystreams#",
-  "name": "A message",
-  "summary": "This is a message.",
-  "content": "A message about something interesting lorem ipsum ponds are great.",
-  "actor": { "@id": "http://rhiaro.co.uk#" },
-  "published": "2016-07-06T12:29:00"
-}

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://indiewebcamp.com/2014/UK>
-  foaf:name "IndieWebCampUK" ;
-  foaf:homepage <http://indiewebcamp.com/2014/UK> ;
-  foaf:depiction <https://twitter.com/IndieWebCampUK/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/0a9d82e9a272d22f5475cacf7708683f22e190921d5adfd7d89e2047230df552.png> .
-

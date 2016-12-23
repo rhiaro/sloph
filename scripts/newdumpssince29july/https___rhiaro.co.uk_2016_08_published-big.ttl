@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/08/published-big>
-  a as:Note ;
-  as:published "2016-08-24T14:50:30+01:00"^^xsd:dateTime ;
-  as:tag "web", "phd", "social", "solid", "activitypub", "socialwg", "decentralised", "protocols", "swwg", "webmention", "micropub", <https://rhiaro.co.uk/tags/web>, <https://rhiaro.co.uk/tags/phd>, <https://rhiaro.co.uk/tags/activitypub>, <https://rhiaro.co.uk/tags/socialwg>, <https://rhiaro.co.uk/tags/social>, <https://rhiaro.co.uk/tags/solid>, <https://rhiaro.co.uk/tags/decentralised>, <https://rhiaro.co.uk/tags/micropub>, <https://rhiaro.co.uk/tags/protocols>, <https://rhiaro.co.uk/tags/swwg>, <https://rhiaro.co.uk/tags/webmention> ;
-  as:content "<p>Published a big update to <a href=\"https://www.w3.org/TR/social-web-protocols/\">Social Web Protocols</a>. Read if you want to understand what the <a href=\"http://w3.org/wiki/Socialwg/\">W3C Social Web WG</a> is up to.</p>" .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/pumba_lt>
-  foaf:name "Martynas Jusevicius" ;
-  foaf:homepage <https://twitter.com/pumba_lt> ;
-  foaf:depiction <https://twitter.com/pumba_lt/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/31b283425e61ee4f45f60dde59c579f78e957d59fc54a0a91fd13fde05a53edb.jpeg> .
-

@@ -1,9 +1,0 @@
-@prefix asext: <https://terms.rhiaro.co.uk/as#> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/2016/07/brown-rice-black-2>
-  a asext:Consume, as:Activity ;
-  as:name "Brown rice, black beans, dandelion greens, beet greens, celery, parsley, basil, roasted almonds" ;
-  as:published "2016-07-30T19:24:12-04:00" ;
-  as:tag <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/nuts>, <https://rhiaro.co.uk/tags/beans>, <https://rhiaro.co.uk/tags/rice> .
-

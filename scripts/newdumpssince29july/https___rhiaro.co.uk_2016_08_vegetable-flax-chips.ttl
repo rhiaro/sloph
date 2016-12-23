@@ -1,9 +1,0 @@
-@prefix asext: <https://terms.rhiaro.co.uk/as#> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/2016/08/vegetable-flax-chips>
-  a asext:Consume, as:Activity ;
-  as:name "Vegetable flax chips and salsa; soy milk with ice cream" ;
-  as:published "2016-08-06T19:49:17-04:00" ;
-  as:tag <https://rhiaro.co.uk/tags/snack>, <https://rhiaro.co.uk/tags/ice+cream> .
-

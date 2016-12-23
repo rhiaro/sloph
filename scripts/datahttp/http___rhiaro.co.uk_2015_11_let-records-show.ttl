@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/11/let-records-show> sioc:has_reply <https://kylewm.com/2015/11/aw-haha-i-wish-i-could-take-credit-they-ve-always>, <https://snarfed.org/> .

@@ -1,8 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix blog: <http://vocab.amy.so/blog#> .
-
-<http://blog.exascale.info/2015/05/www2015.html>
-  dcterms:created "2015-08-09T22:48:07+01:00"^^xsd:datetime ;
-  blog:mentions <http://rhiaro.co.uk/2015/05/www2015> .
-

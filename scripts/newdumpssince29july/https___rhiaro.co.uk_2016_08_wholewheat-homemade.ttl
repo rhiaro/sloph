@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix asext: <https://terms.rhiaro.co.uk/as#> .
-
-<https://rhiaro.co.uk/2016/08/wholewheat-homemade>
-  a as:Activity, asext:Consume ;
-  as:name "Wholewheat homemade tortilla, mushrooms, celery, jalapeno, habanero, daiya, cream cheese" ;
-  as:published "2016-08-28T13:50:29-04:00" ;
-  as:tag <https://rhiaro.co.uk/tags/bread>, <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/chilli> .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://petermolnar.eu/>
-  foaf:name "Peter Molnar" ;
-  foaf:homepage <https://petermolnar.eu/> ;
-  foaf:depiction <https://rhiaro.co.uk/incoming.php>, <https://webmention.io/avatar/petermolnar.eu/ae3781f808d646698b71943551fafba3ddb9b7cbb74674107a0d7b722f030c7f.jpeg> .
-

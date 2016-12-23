@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/BrownsEdinburgh>
-  foaf:name "Browns Edinburgh" ;
-  foaf:homepage <https://twitter.com/BrownsEdinburgh> ;
-  foaf:depiction <https://twitter.com/BrownsEdinburgh/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/adf6c3fc1fc2b3cf449072201e8bd31e7f13bc9458b30c002abd25f90ae00379.png> .
-

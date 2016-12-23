@@ -1,16 +1,0 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://blog.rhiaro.co.uk/san-diego-03>
-  dcterms:title """San Diego 03""" ;
-  dcterms:created "2016-05-23T21:03:17-07:00"^^xsd:dateTime ;
-  sioc:content """We took a scenic drive through the desert, through Ramona, St Ysabel, Julian, and a bit of the Anza-Borrego Desert State Park. The desert here is piles of rocks, lots of scrub and occasional cacti. The roads twisted between foothills or cut straight through the sides. We [walked](https://runkeeper.com/user/rhiaro/activity/793127541) a little away from the road and had lunch in the sun with some stunning views; then stopped in quaint Julian - famous for apples - on the way back for apple pie (their traditional apple and all suga-rfree varieties are vegan). I chose boysenberry and apple.
-
-We're both exhausted, despite having been sitting in a car for most of the day. I guess watching miles of foothills roll by took it's toll. 
-
-We had dinner at Sipz, a mostly vegan Asian fusion restaurant in Clairmont. Miso soup, edamame, BBQ 'pork' bun, dragon roll (very saucy), spicy basil with not-chicken and brown rice. Most of that is for breakfast. The had some great desserts I wanted to try, but no space.""" ;
-  sioc:topic "ca2016", "couchsurfing", "desert", "diego", "san", "vegan" ;
-  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/san-diego-03> .
-

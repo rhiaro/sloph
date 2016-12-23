@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/jgjay>
-  foaf:name "Gavin James" ;
-  foaf:homepage <https://twitter.com/jgjay> ;
-  foaf:depiction <https://twitter.com/jgjay/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/ce8cdd4d5c4dc504e8603222d108dcf15a082ccf4b89f43cb6eae210cb5d7450.jpeg> .
-

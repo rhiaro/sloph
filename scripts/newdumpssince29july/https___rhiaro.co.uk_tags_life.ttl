@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/life>
-  a as:Collection ;
-  as:name "life" ;
-  as:items <https://rhiaro.co.uk/2016/08/feeling-when-late>, <https://rhiaro.co.uk/2016/08/--everybody>, <https://rhiaro.co.uk/2016/08/okay-seven-nine>, <https://rhiaro.co.uk/2016/08/may-apparent>, <https://rhiaro.co.uk/2016/08/got-like-10-new>, <https://rhiaro.co.uk/2016/08/bus-broken-down>, <https://rhiaro.co.uk/2016/08/there-ping-pong>, <https://rhiaro.co.uk/2016/08/well-kes>, <https://rhiaro.co.uk/2016/08/im-one-month>, <https://rhiaro.co.uk/2016/08/w3c-parents-early>, <https://rhiaro.co.uk/2016/07/anything-could>, <https://rhiaro.co.uk/2016/08/x-irrelevant>, <https://rhiaro.co.uk/2016/08/pokemon-palettes> .
-

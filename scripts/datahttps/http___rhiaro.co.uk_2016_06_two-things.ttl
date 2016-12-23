@@ -1,9 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/06/two-things>
-  sioc:reply_of <https://rhiaro.co.uk/2016/06/online> ;
-  as:published "2016-06-12T01:15:28+01:00"^^xsd:dateTime ;
-  as:content "Not that those two things are mutually exclusive of course" .
-

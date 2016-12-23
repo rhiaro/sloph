@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/02/part-wants-move>
-  as:published "2016-02-13T17:21:22+00:00"^^xsd:dateTime ;
-  as:tag "llog", "bitbucket", "decentralisation", "github", "ownyourdata", "slogd", "hacking" ;
-  as:content "Part of me wants to move my site to github so commits count towards a streak etc, and that's where pretty much everything else I'm working on regularly is, but really I should keep it on bitbucket in the name of decentralisation, and manage my own 'streak' and contributions list on my site, aggregating commits from both places." .
-

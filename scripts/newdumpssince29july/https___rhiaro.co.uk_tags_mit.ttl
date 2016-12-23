@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/mit>
-  a as:Collection ;
-  as:name "mit" ;
-  as:items <https://rhiaro.co.uk/2016/08/there-ping-pong> .
-

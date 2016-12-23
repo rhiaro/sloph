@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/11/moment-when-think> sioc:has_reply <https://twitter.com/camerongray1515/status/665279582791168001> .

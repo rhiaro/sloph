@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://www.misfitwedding.com/>
-  foaf:name "Misfit Wedding" ;
-  foaf:homepage <http://www.misfitwedding.com/> ;
-  foaf:depiction <https://twitter.com/MisfitWedding/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/12648677f2693242d02e05c66cd2d8f0a98f4f568a2dfeb5fc2be6b24f37090d.png> .
-

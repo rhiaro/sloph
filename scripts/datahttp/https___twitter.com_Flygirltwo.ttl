@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/Flygirltwo>
-  foaf:name "Farida Vis" ;
-  foaf:homepage <https://twitter.com/Flygirltwo> ;
-  foaf:depiction <https://twitter.com/Flygirltwo/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/8f44c0d7e5fd455d788a5988b0c31e8da10cb64e868fd9bcac5f1b46a519e74c.jpeg> .
-

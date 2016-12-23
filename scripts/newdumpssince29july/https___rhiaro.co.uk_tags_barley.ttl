@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/barley>
-  a as:Collection ;
-  as:name "barley" ;
-  as:items <https://rhiaro.co.uk/2016/09/barley-kale> .
-

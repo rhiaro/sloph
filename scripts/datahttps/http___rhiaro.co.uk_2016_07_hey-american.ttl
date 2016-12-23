@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/07/hey-american>
-  as:published "2016-07-12T13:15:36+01:00"^^xsd:dateTime ;
-  as:tag "brexit", "politics", "boston", "uk", "life" ;
-  as:content "Hey American friends who ask where I'm from and think it's funny that it's Boston, my hometown is so racist it made it into the [New York Times](http://mobile.nytimes.com/2016/07/10/world/europe/brexit-immigrants-great-britain-eu.html)" .
-

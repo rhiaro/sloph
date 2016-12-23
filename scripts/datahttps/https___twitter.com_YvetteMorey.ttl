@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/YvetteMorey>
-  foaf:name "yvette morey" ;
-  foaf:homepage <https://twitter.com/YvetteMorey> ;
-  foaf:depiction <https://twitter.com/YvetteMorey/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/5ce67d89ca073b004d5f111dbe361043ff89f47530178352a4bbaa6fb7b3688d.jpeg> .
-

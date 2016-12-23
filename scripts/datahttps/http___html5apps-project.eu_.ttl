@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://html5apps-project.eu/>
-  foaf:name "HTML5 Apps" ;
-  foaf:homepage <http://html5apps-project.eu/> ;
-  foaf:depiction <https://twitter.com/AppsHTML5/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/d5599a383e50eedceb847d4500709882f528eac96db5b508532d4767dde3334d.png> .
-

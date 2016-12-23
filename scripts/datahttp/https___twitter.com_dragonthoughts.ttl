@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/dragonthoughts>
-  foaf:name "David Clarke" ;
-  foaf:homepage <https://twitter.com/dragonthoughts> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/97e2d1f2ba178203b76d8a21abf2359f5b50bf032479b3a4875743d1f427f098.gif> .
-

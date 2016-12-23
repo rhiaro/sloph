@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://rad.inf.ed.ac.uk/people/nardelli>
-  foaf:name "Nantas Nardelli" ;
-  foaf:homepage <http://rad.inf.ed.ac.uk/people/nardelli> ;
-  foaf:depiction <https://twitter.com/nntsn/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/e3317987eb464cf81d70d83f09afa92dba27561313fb3885b424dc345d1726e9.jpeg> .
-

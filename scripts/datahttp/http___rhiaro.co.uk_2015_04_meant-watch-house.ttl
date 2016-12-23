@@ -1,3 +1,0 @@
-@prefix sioc: <http://rdfs.org/sioc/types#> .
-
-<http://rhiaro.co.uk/2015/04/meant-watch-house> sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/585229697631580161/15090636>, <https://brid-gy.appspot.com/like/twitter/rhiaro/585229697631580161/10399172>, <https://twitter.com/jasnell/status/585230021431844866>, <https://brid-gy.appspot.com/like/twitter/rhiaro/585229697631580161/235193328> .

@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/06/im-craving-pink>
-  as:published "2016-06-23T19:09:57+01:00"^^xsd:dateTime ;
-  as:tag "referendum", "politics", "vegan", "uk", "food", "life" ;
-  as:content "I'm craving pink wafers, and I feel like it's probably something to do with the EU Referendum." .
-

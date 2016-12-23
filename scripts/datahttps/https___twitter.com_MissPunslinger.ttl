@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/MissPunslinger>
-  foaf:name "Kirsten MacGregor" ;
-  foaf:homepage <https://twitter.com/MissPunslinger> ;
-  foaf:depiction <https://twitter.com/MissPunslinger/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/0e7fdd3695063026387cbaf7f05e11f66b71e8ee3c0cc708c5e1d705ee7f0f70.jpeg> .
-

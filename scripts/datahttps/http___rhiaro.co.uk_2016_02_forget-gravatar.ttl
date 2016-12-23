@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/02/forget-gravatar>
-  as:published "2016-02-11T23:22:02+00:00"^^xsd:dateTime ;
-  as:content "Forget gravatar, ResearchGate just straight up Google image searches your name so you don't have to make the effort to upload an avatar on registration o.O" .
-

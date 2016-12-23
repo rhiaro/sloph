@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/transport>
-  a as:Collection ;
-  as:name "transport" ;
-  as:items <https://rhiaro.co.uk/2016/07/579cbb2c013f6>, <https://rhiaro.co.uk/2016/08/57b63ef8ce150>, <https://rhiaro.co.uk/2016/08/57c36d8f03371> .
-

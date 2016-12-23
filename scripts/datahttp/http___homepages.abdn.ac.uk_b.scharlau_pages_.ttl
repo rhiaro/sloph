@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://homepages.abdn.ac.uk/b.scharlau/pages/>
-  foaf:name "Bruce Scharlau" ;
-  foaf:homepage <http://homepages.abdn.ac.uk/b.scharlau/pages/> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/f59d982f192045c02f4cebbd932067f75ac2d85d08093993a81855c37e9ae5aa.jpeg> .
-

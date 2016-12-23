@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://genderneutraltoiletsch.blogspot.com/>
-  foaf:name "Rae Knowler" ;
-  foaf:homepage <http://genderneutraltoiletsch.blogspot.com/> ;
-  foaf:depiction <https://twitter.com/RaeKnowler/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/af3a91fa01fbb9c224b286cbfef8a14900687568ae3bfa7d129a6ee3d3772bec.jpeg> .
-

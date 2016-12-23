@@ -1,6 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://twitter.com/hermansaksono/status/730436183772168192>
-  a as:Announce ;
-  as:object <http://blog.rhiaro.co.uk/guess-minorities>, <https://rhiaro.co.uk/2016/05/guess-minorities> .
-

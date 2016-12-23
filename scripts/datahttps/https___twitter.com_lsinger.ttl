@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/lsinger>
-  foaf:name "Leif Singer" ;
-  foaf:homepage <https://twitter.com/lsinger> ;
-  foaf:depiction <https://twitter.com/lsinger/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/3488d1f6b9c49d75ef3132c3b913f006ff16a5ada6ca0a7086784ce5271c6598.jpeg> .
-

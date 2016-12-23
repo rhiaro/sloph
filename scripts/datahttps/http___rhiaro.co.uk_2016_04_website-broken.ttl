@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/04/website-broken>
-  as:published "2016-04-30T18:30:54+01:00"^^xsd:dateTime ;
-  as:tag "fml", "life", "slogd", "hacking" ;
-  as:content "My website is broken." .
-

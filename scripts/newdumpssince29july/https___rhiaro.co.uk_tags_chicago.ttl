@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/chicago>
-  a as:Collection ;
-  as:name "chicago" ;
-  as:items <https://rhiaro.co.uk/2016/08/train-from-dc>, <https://rhiaro.co.uk/2016/08/train-from>, <https://rhiaro.co.uk/2016/08/57b63ef8ce150>, <https://rhiaro.co.uk/2016/08/bus-from-madison>, <https://rhiaro.co.uk/2016/08/57b7afbe8058c> .
-

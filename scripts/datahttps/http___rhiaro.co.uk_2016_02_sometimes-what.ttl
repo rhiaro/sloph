@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/02/sometimes-what>
-  as:published "2016-02-17T17:38:09+00:00"^^xsd:dateTime ;
-  as:tag "life" ;
-  as:content "Sometimes what people are talking about at lunch is what I happened to read about from twitter that morning and then I can feel well informed and a useful member of the conversation." .
-

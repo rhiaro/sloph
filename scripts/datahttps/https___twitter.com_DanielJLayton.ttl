@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/DanielJLayton>
-  foaf:name "Daniel J. Layton" ;
-  foaf:homepage <https://twitter.com/DanielJLayton> ;
-  foaf:depiction <https://twitter.com/DanielJLayton/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/147b3d1d58e7e91df0ba79e7d7e543fdc051f2d5156c35a3945d90043eae4e12.jpeg> .
-

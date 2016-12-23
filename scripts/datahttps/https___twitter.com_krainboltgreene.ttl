@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/krainboltgreene>
-  foaf:name "Kurtis" ;
-  foaf:homepage <https://twitter.com/krainboltgreene> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/f1389a9de0225bc475fb9e061a5257047a400bda56fc4cb89df2a5363ec1858c.jpeg> .
-

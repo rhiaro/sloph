@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://erikstl.withknown.com/profile/erik>
-  foaf:name "Erik Bates" ;
-  foaf:homepage <https://erikstl.withknown.com/profile/erik> ;
-  foaf:depiction <https://erikstl.withknown.com/file/c27c2eed776a411f4d898d7e10a2d87b/thumb.jpg>, <https://webmention.io/avatar/erikstl.withknown.com/23db587f1182d75230a876636c3baa53032bc1e96ad673c0699ce112faefad81.jpeg> .
-

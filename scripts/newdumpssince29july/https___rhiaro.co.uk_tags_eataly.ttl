@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/eataly>
-  a as:Collection ;
-  as:name "eataly" ;
-  as:items <https://rhiaro.co.uk/2016/08/57b9dec1ed1dc> .
-

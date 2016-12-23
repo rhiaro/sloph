@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/pabloparedesn>
-  foaf:name "Pablo Paredes N." ;
-  foaf:homepage <https://twitter.com/pabloparedesn> ;
-  foaf:depiction <https://twitter.com/pabloparedesn/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/b9968eca1a3610194eff7ad062f973ec32bd905e5537cb6d9199f918eaafced3.jpeg> .
-

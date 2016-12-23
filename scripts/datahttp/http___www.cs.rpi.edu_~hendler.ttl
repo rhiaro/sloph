@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://www.cs.rpi.edu/~hendler>
-  foaf:name "jahendler" ;
-  foaf:homepage <http://www.cs.rpi.edu/~hendler> ;
-  foaf:depiction <https://twitter.com/jahendler/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/7ef7928465a54ab2b9ae303642b7e7b80838acef15971c2e1924194aa02c01d0.jpeg> .
-

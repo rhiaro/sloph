@@ -1,10 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/07/w3c-team>
-  as:published "2016-07-21T00:30:03+01:00"^^xsd:dateTime ;
-  as:tag "experience", "employment", "cv", "resume", "web", "w3c", "socialwg", "standards" ;
-  as:name """W3C Team""" ;
-  as:startTime "2016-07-06T08:41:00-0400"^^xsd:datetime ;
-  as:content "I am officially part of the W3C Team and co-staff contact for the Social Web WG. Look, [there I am](https://www.w3.org/People/#rhiaro)!" .
-

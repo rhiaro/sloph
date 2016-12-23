@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/06/ensign-kim>
-  as:published "2016-06-15T04:27:31+01:00"^^xsd:dateTime ;
-  as:tag "voyager", "trek", "star", "life" ;
-  as:content "Ensign Kim is clearly the master of leaving the ship by \"unconventional means\", at least once a week, stop acting surprised Tuvok." .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/VeganEventsScot>
-  foaf:name "VeganEvents Scotland" ;
-  foaf:homepage <https://twitter.com/VeganEventsScot> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/fd598ba34a4058e52507b110d5284adf00efaddc1ce39c323dc2015b23d06a4d.jpeg> .
-

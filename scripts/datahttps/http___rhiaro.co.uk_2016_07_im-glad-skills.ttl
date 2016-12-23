@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/07/im-glad-skills>
-  as:published "2016-07-21T20:36:16+01:00"^^xsd:dateTime ;
-  as:tag "tweet", "mit", "csarven", "life" ;
-  as:content "I'm glad my skills are being put to good use at MIT: helping my colleagues rewrite silly tweets into proper English." .
-

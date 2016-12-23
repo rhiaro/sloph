@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://rhiaro.co.uk/>
-  foaf:name "just a guy", "Amy Guy" ;
-  foaf:homepage <https://rhiaro.co.uk/> ;
-  foaf:depiction <https://twitter.com/rhiaro/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/db387eb43790e49d67e4d78dfbda85674e669bd59211bb75e73ce4c4555f8eee.png>, <https://webmention.io/avatar/twitter.com/41b920ce806077f84fa4f364225ab7a7d7f257846b17f73840317d76597a1edd.png> .
-

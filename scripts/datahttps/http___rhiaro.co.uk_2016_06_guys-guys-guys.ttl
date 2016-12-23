@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/06/guys-guys-guys>
-  as:published "2016-06-08T20:30:05+01:00"^^xsd:dateTime ;
-  as:tag "dwebsummit", "diversity" ;
-  as:content "\"you guys you guys you guys\" I want an airhorn for use of gendered language on the crowd at [dwebsummit](https://decentralizedweb.net)" .
-

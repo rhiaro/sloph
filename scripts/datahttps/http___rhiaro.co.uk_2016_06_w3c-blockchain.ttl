@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/2016/06/w3c-blockchain>
-  a as:Accept ;
-  as:published "2016-06-30T13:10:22-04:00" ;
-  as:name "Going to W3C Blockchain workshop" ;
-  as:object <https://www.w3.org/2016/04/blockchain-workshop/> .
-

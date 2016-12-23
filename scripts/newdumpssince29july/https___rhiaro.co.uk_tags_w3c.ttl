@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/w3c>
-  a as:Collection ;
-  as:name "w3c" ;
-  as:items <https://rhiaro.co.uk/2016/08/im-one-month>, <https://rhiaro.co.uk/2016/08/w3c-parents-early> .
-

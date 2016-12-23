@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/junehomer>
-  foaf:name "June Homer" ;
-  foaf:homepage <https://twitter.com/junehomer> ;
-  foaf:depiction <https://twitter.com/junehomer/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/4b59af4e7cce1714f3f0641fccf757cae44ab9582ccb711cfbb3ca40484a86aa.jpeg> .
-

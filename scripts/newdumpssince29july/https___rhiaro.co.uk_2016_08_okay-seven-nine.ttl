@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/08/okay-seven-nine>
-  a as:Note ;
-  as:published "2016-08-25T03:48:46+01:00"^^xsd:dateTime ;
-  as:tag "life", "star", "trek", "voyager", "sevenofnine", <https://rhiaro.co.uk/tags/life>, <https://rhiaro.co.uk/tags/voyager>, <https://rhiaro.co.uk/tags/star>, <https://rhiaro.co.uk/tags/trek>, <https://rhiaro.co.uk/tags/sevenofnine> ;
-  as:content "<p>Okay Seven of Nine is my new idol. Every time I start typing a quote she says something better. I can't keep up.</p>" .
-

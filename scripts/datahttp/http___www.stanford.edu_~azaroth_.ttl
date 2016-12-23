@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://www.stanford.edu/~azaroth/>
-  foaf:name "Rob Sanderson" ;
-  foaf:homepage <http://www.stanford.edu/~azaroth/> ;
-  foaf:depiction <https://webmention.io/avatar/twitter.com/94031874c0626295c91c63995c2b8ec5fc29e7faba5380726348b7d513d06378.jpeg> .
-

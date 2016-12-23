@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/watts_lj>
-  foaf:name "Lynelle" ;
-  foaf:homepage <https://twitter.com/watts_lj> ;
-  foaf:depiction <https://twitter.com/watts_lj/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/66483f4e1a045214cc9943c994bd1a6f75ceca9159b34c17ae4386ee3509f043.jpeg> .
-

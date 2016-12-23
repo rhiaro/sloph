@@ -1,9 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix asext: <https://terms.rhiaro.co.uk/as#> .
-
-<https://rhiaro.co.uk/2016/08/tacos-corn-3>
-  a as:Activity, asext:Consume ;
-  as:name "Tacos: corn tortillas, kale, mushrooms, tomato, jalapeno, cucumber, tempeh; coffee" ;
-  as:published "2016-08-12T09:26:40-04:00" ;
-  as:tag <https://rhiaro.co.uk/tags/coffee>, <https://rhiaro.co.uk/tags/tacos> .
-

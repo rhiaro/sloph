@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/07/decided-try>
-  as:published "2016-07-05T23:19:49+01:00"^^xsd:dateTime ;
-  as:tag "food", "life" ;
-  as:content "Decided to try actually saving money for a couple of months so I'm going to see how long I can go without doing a grocery shop and easy only stuff I have already. So mostly things I can make with flour (which is a lot actually) and lentils. Also, roommates' food with a pledge to replace next week :)" .
-

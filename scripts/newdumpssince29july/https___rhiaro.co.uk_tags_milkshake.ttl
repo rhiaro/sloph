@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/milkshake>
-  a as:Collection ;
-  as:name "milkshake" ;
-  as:items <https://rhiaro.co.uk/2016/08/cuban-sandwich> .
-

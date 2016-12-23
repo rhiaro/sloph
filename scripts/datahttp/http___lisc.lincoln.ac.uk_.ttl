@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://lisc.lincoln.ac.uk/>
-  foaf:name "Shaun Lawson" ;
-  foaf:homepage <http://lisc.lincoln.ac.uk/> ;
-  foaf:depiction <https://twitter.com/shaunlawson/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/a1ee6e4c05a092ba126cfd26334ebdcc7517590eb9ae037a5c7eb1ab227c2de3.png> .
-

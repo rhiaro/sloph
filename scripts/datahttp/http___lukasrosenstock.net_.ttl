@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://lukasrosenstock.net/>
-  foaf:name "Lukas Rosenstock" ;
-  foaf:homepage <http://lukasrosenstock.net/> ;
-  foaf:depiction <https://twitter.com/LukasRosenstock/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/6eba7deb3517d7be7188abc3f6196ebe8b75c4c4692cac070141a03fceb3035b.jpeg> .
-

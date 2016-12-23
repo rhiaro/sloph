@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<https://twitter.com/sherriff_mr>
-  foaf:name "Ben Sherriff" ;
-  foaf:homepage <https://twitter.com/sherriff_mr> ;
-  foaf:depiction <https://twitter.com/sherriff_mr/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/cdaefd41bdf83674f790647500ac5101945ea8b7df575a05987ee85afb884967.png> .
-

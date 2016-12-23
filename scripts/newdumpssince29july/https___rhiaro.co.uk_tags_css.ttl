@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://rhiaro.co.uk/tags/css>
-  a as:Collection ;
-  as:name "css" ;
-  as:items <https://rhiaro.co.uk/2016/08/pokemon-palettes> .
-

@@ -1,7 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-
-<https://aaronparecki.com/bookmarks/2015/04/12/1/activitystreams-indieweb>
-  a as:Add ;
-  as:target <https://rhiaro.co.uk/bookmarks/> ;
-  as:object <https://rhiaro.co.uk/2015/04/post-and-activity-types>, <http://blog.rhiaro.co.uk/post-and-activity-types> .
-

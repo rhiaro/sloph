@@ -1,8 +1,0 @@
-@prefix as: <http://www.w3.org/ns/activitystreams#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<https://rhiaro.co.uk/2016/06/after-7-days>
-  as:published "2016-06-11T18:56:02+01:00"^^xsd:dateTime ;
-  as:tag "selfcarematters", "hammock", "indiewebcamp", "phd", "socialwg", "life" ;
-  as:content "After 7 days straight of meetings, conferences, fieldwork, I'm taking the weekend off. Napping and cleaning apartment and watching stuff and maybe a teeny tiny bit of internetting, and concentrating really hard on not feeling guilty about not leaving the hammock." .
-

@@ -1,7 +1,0 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-<http://charlottegodley.co.uk/>
-  foaf:name "Charlotte Godley" ;
-  foaf:homepage <http://charlottegodley.co.uk/> ;
-  foaf:depiction <https://twitter.com/charwarz/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/f1d16cfb3ad050962e25ea614c76bc9eb31b7ee7beafe72a9d6f90fa171c639d.jpeg> .
-
