@@ -10,7 +10,8 @@ function on_get($ep, $ct=null){
     $ct = $headers["Accept"];
   }
   $acceptheaders = new AcceptHeader($ct);
-  $contains = get_container_dynamic($ep, "https://rhiaro.co.uk/incoming/", "query_select_s", array(0, "https://rhiaro.co.uk/incoming/#moderation"), $ct);
+  $contains = get_container_dynamic($ep, "https://rhiaro.co.uk/incoming/#moderation", "query_select_s", array(0, "https://rhiaro.co.uk/incoming/#moderation"), $ct);
+  var_dump($contains); // HERENOW
   $result = conneg($acceptheaders, $contains);
   
   return $result;
@@ -33,13 +34,22 @@ function on_post($ep, $data){
       $updated->parse(array($s => $ar[$s]), 'php', $s);
     }
   }
-  var_dump($updated->toRdfPhp());
   // Insert all sent triples into notification graph
   //  $uri { s p o }
-  
-  // Insert notification into moderation graph
-  //  #moderation { #moderation as:item $uri }
-
+  $triples = $updated->serialise('ntriples');
+  $q1 = query_insert($triples, $uri);  
+  $res1 = execute_query($ep, $q1);
+  if($res1){
+    // Insert notification into moderation graph
+    //  #moderation { #moderation as:item $uri }
+    $modg = "https://rhiaro.co.uk/incoming/#moderation";
+    $triples2 = "
+<$modg> <http://www.w3.org/ns/ldp#contains> <$uri> .
+<$modg> <http://www.w3.org/ns/activitystreams#items> <$uri> . ";
+    $q2 = query_insert($triples2, $modg);
+    $res2 = execute_query($ep, $q2);
+    var_dump($res2);
+  }
   // Return Location
   return $uri;
 }
