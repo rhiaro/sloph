@@ -129,8 +129,7 @@ class EasyRdf_Serialiser_JsonLd extends EasyRdf_Serialiser
             // compact form
             $compact_context = isset($options['context']) ? $options['context'] : null;
             $compact_options = array(
-                'useNativeTypes' => $use_native_types,
-                'base' => $graph->getUri()
+                'useNativeTypes' => $use_native_types
             );
 
             $data = \ML\JsonLD\JsonLD::compact($data, $compact_context, $compact_options);
