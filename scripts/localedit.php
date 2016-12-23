@@ -237,6 +237,7 @@ if($_GET['flag'] == "notype"){
         <?foreach($_SESSION['graphs'][$uri] as $g):?>
           <p><?=$g?> <input type="checkbox" name="keepgraph" id="keepgraph" title="keep current graph" /> </p>
         <?endforeach?>
+
         <input type="hidden" value="<?=$uri?>" name="data[uri]" />
         <?if(isset($result[$uri])):?>
           <div style="overflow:hidden; width: 100%;">
