@@ -26,6 +26,8 @@ function get_resource($ep, $uri){
 
 function conneg($acceptheaders, $graph){
 
+  global $_CONTEXT;
+
   $return = array("header" => null, "content" => null, "errors" => null);
 
   foreach($acceptheaders as $accept){
@@ -36,7 +38,14 @@ function conneg($acceptheaders, $graph){
       }
       $format = EasyRdf_Format::getFormat($accept["raw"]);
       if($format->getSerialiserClass()){
-        $out = $graph->serialise($accept["raw"]);
+
+        // For JSON-LD
+        $options = array("compact" => true
+                        ,"context" => $_CONTEXT
+
+          );
+
+        $out = $graph->serialise($accept["raw"], $options);
         $return["header"] = "Content-Type: ".$format->getDefaultMimeType();
         $return["content"] = $out;
       }else{
