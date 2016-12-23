@@ -681,7 +681,7 @@ insert into <http://blog.rhiaro.co.uk#> {
 [ ] Put everything in its own graph
 -> I think I need a script+UI for graph sorting..
 
-[ ] Fix Consume and Acquire
+[x] Fix Consume and Acquire
 
 ```
 @prefix ext: <https://terms.rhiaro.co.uk/as#> .
@@ -728,6 +728,6 @@ DELETE {
 }
 ```
 
-[ ] Add as:summary to everything without as:name
+[x] Add as:summary to everything without as:name
 
 I think I need script for this
