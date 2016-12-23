@@ -138,6 +138,26 @@ function merge_graphs($array_of_graphs, $graph_uri = null){
   return $graph;
 }
 
+function get_subject_uris($graph){
+  $subjects = array();
+  $ar = $graph->toRdfPhp();
+  foreach($ar as $s => $po){
+    $subjects[] = $s;
+  }
+  return $subjects;
+}
+
+function get_subject_resources($graph){
+  $uris = get_subject_uris($graph);
+  $ar = $graph->toRdfPhp();
+  $out = new EasyRdf_Graph($graph->getUri());
+  foreach($uris as $s){
+    $r = $graph->resource($s);
+    $out->parse(array($s => $ar[$s]), 'php', $s);
+  }
+  return $out;
+}
+
 require_once("AcceptHeader.php");
 require_once("sloph/views.php");
 require_once("sloph/queries.php");
