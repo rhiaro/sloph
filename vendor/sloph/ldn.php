@@ -3,10 +3,12 @@ require_once('../init.php');
 
 /*** LDN ***/
 
-function on_get($ep){
+function on_get($ep, $ct=null){
   
-  $headers = apache_request_headers();
-  $ct = $headers["Accept"];
+  if($ct === null){
+    $headers = apache_request_headers();
+    $ct = $headers["Accept"];
+  }
   $acceptheaders = new AcceptHeader($ct);
   $contains = get_container_dynamic($ep, "https://rhiaro.co.uk/incoming/", "query_select_s", array(0, "https://rhiaro.co.uk/incoming/"), $ct);
   $result = conneg($acceptheaders, $contains);
@@ -76,11 +78,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   if(isset($_POST) && !empty($_POST)){
   
     $data = this_form($_POST);
-    // TODO return back to form
+    $was_form = true;
   
   }elseif(isset($body) && !empty($body)){
 
     $data = $body;
+    $was_form = false;
 
     if(!supported_content_type($ct)){
       header("HTTP/1.1 415 Unsupported Media Type");
@@ -100,8 +103,17 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   }
 
   $uri = on_post($ep, $data);
-  header("HTTP/1.1 201 Created");
-  header("Location: $uri");
+  
+  if(!$was_form){
+    header("HTTP/1.1 201 Created");
+    header("Location: $uri");
+  }else{
+    $content = on_get($ep, "text/html");
+    $content = $content['content'];
+    $contains = $content->toRdfPhp();
+    $sent = true;
+    include '../../views/incoming.php';
+  }
 
 }elseif($_SERVER['REQUEST_METHOD'] === 'GET'){
   

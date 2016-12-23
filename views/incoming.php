@@ -26,6 +26,10 @@
       <p>This is the API endpoint to which I receive notifications. Notifications which are hosted publicly and externally are listed here. Notifications which aren't go through manual moderation and may or may not be listed publicly. A full list of notifications can be retreived with the appropriate <code>Authorization</code> header.</p>
       <p>Notifications are processed and published according to <a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a> for receiving.</p>
 
+      <?if(isset($sent) && $sent):?>
+        <p class="win"><em>Thanks! Your message has been queued for moderation.</em></p>
+      <?endif?>
+
       <form method="post">
         <p>
           <label for="content">Leave a message</label>
