@@ -10,15 +10,38 @@ function on_get($ep, $ct=null){
     $ct = $headers["Accept"];
   }
   $acceptheaders = new AcceptHeader($ct);
-  $contains = get_container_dynamic($ep, "https://rhiaro.co.uk/incoming/", "query_select_s", array(0, "https://rhiaro.co.uk/incoming/"), $ct);
+  $contains = get_container_dynamic($ep, "https://rhiaro.co.uk/incoming/", "query_select_s", array(0, "https://rhiaro.co.uk/incoming/#moderation"), $ct);
   $result = conneg($acceptheaders, $contains);
   
   return $result;
 }
 
 function on_post($ep, $data){
-  var_dump($data);
-  return "asdf";
+  $notification = new EasyRdf_Graph();
+  $notification->parse($data, 'jsonld');
+  $ar = $notification->toRdfPhp();
+  // Generate notification URI
+  $uri = "https://rhiaro.co.uk".str_replace(".", "", uniqid("/n/", true));
+  $updated = new EasyRdf_Graph($uri);
+  // If notification contains bnode subjects, replace with the graph uri
+  $subject_uris = get_subject_uris($notification);
+  foreach($subject_uris as $s){
+    $r = $notification->resource($s);
+    if($r->isBNode()){
+      $updated->parse(array($uri => $ar[$s]), 'php', $uri);
+    }else{
+      $updated->parse(array($s => $ar[$s]), 'php', $s);
+    }
+  }
+  var_dump($updated->toRdfPhp());
+  // Insert all sent triples into notification graph
+  //  $uri { s p o }
+  
+  // Insert notification into moderation graph
+  //  #moderation { #moderation as:item $uri }
+
+  // Return Location
+  return $uri;
 }
 
 /*** Validating input ***/
