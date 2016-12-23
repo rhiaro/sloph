@@ -21,11 +21,12 @@ $g = new EasyRdf_Graph();
 $html = "";
 $uris = $res['rows'];
 
-
 foreach($uris as $r){
   $result = get($ep, $r['s']);
   $content = $result['content'];
   $resource = $content->resource($r['s']);
+
+  var_dump(view_router($resource));
 
   ob_start();
   include '../../views/'.view_router($resource).'.php';
