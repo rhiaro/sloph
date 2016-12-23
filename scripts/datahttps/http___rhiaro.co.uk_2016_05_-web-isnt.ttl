@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/-web-isnt>
+  a as:Announce ;
+  as:published "2016-05-01T21:34:09+01:00"^^xsd:dateTime ;
+  as:tag "web development", "progressive enhancement", "web design", "medium", "life", "hacking" ;
+  as:content """> "The Web isnâ€™t uniformâ€”itâ€™s countless flowing layers, each affecting user experiences in its own way."
+
+&mdash; [The Web isnâ€™t uniform](https://medium.com/@fox/the-web-isn-t-uniform-fd67eb631501)""" ;
+  as:object <https://medium.com/@fox/the-web-isn-t-uniform-fd67eb631501> .
+

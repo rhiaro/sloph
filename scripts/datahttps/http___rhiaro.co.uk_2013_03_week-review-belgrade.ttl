@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/03/week-review-belgrade>
+  as:published "2013-03-24T15:28:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "digital methods", "digital creatives", "digital media", "new media", "belgrade", "resonate", "week in review", "serbia" ;
+  as:name "Week in review: Belgrade" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-5566755934157742271" ;
+  as:content """**18th - 24th March**  
+**  
+**I went to Belgrade for Resonate.io, and wrote about it [here](http://blog.rhiaro.co.uk/2013/04/resonate-new-media-festival.html).
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-14T20:32:03.212Z"^^xsd:datetime .
+

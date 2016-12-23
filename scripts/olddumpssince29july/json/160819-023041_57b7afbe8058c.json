@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Dinner and drink (Native Foods)",
+    "blog:cost": "$15",
+    "as:tag": [
+        "native foods",
+        "us0816",
+        "food",
+        "takeaway",
+        "chicago"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-08-18T20:30:41-05:00",
+    "@id": "http://blog.rhiaro.co.uk/57b7afbe8058c",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/57b7afbe8058c"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-18T20:30:41-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

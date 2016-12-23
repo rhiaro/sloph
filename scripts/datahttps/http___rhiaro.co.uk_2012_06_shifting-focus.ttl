@@ -1,0 +1,70 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2012/06/shifting-focus>
+  as:published "2012-06-13T17:02:00.001Z"^^xsd:datetime ;
+  as:tag blog:Done, "msc", "icpLog", "icp", "Palimpsest", "interactive fiction", "IF", "interdisciplinary creative practices", "emily short" ;
+  as:name "Shifting focus (from readers to authors)" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2898853773436372000" ;
+  as:content """  
+By sheer coincidence, I find myself neck-deep in creating a custom Interactive
+Fiction engine during a year in which all kinds of new engines for authoring
+and enjoying interactive narrative are popping up. Many of these by
+established programming and literary experts in the IF community.  
+  
+It feels like every week [Emily Short](http://emshort.wordpress.com/) posts a
+review of something new. Most of the ones I've seen recently are more of a
+Choose Your Own Adventure format than parser-based. Nonetheless, there is a
+lot I can learn about world modelling and code-free authoring from these
+systems. Not all of them are open to the public for creating though. All of
+them seem to be open to Emily Short, however, and she is doing a great job of
+describing and reviewing her experiences.  
+  
+It occurred to me a while ago that creating the interface for authoring pieces
+for Palimpsest is potentially more interesting and important than examining
+the reader experience when it's all done. Readers are much more fickle, and
+those who spend time writing and creating are by definition the committed and
+passionate. I'm not saying the readers aren't. But a solid interface for
+authoring is going to make it much more likely that good experiences for
+readers are to be created. If I rush through the design and build of the
+software itself so that I can focus on filling it with content then quizzing
+readers about the immersiveness of their experiences - as was my original plan
+- there's a good chance I won't spend nearly enough time testing with authors
+(as I'll be doing the authoring) and will miss the opportunity to allow people
+to create immersive or particularly engaging experiences, jeopardising the
+outcomes of the user study stuff in the end anyway.  
+  
+I only have about two months left to work on this in the context of my MSc.
+Whilst I need something substantial to fill my final report with, I'm certain
+I'll be continuing to develop this in the future, and I'll only end up having
+to redo bits from scratch if I cut corners the first time.  
+  
+I also have to think about what I want to get out of my MSc, and how I want to
+use the opportunities I have studying in an art department compared to what
+would be expected of me studying in a computing department.  
+  
+I jumped on the idea of 'user study stuff' because I know how to do this in
+terms of software, and I know how to write a lot about it.  Not that I don't
+find the immersion thing interesting, but overall I think it would be more
+valuable to both myself and any eventual users of Palimpsest if I produced
+documentation of detailed musings about the perhaps unfinished or forever-
+ongoing development of a custom engine and authoring interface for Interactive
+Fiction, rather than gloss over that to fill my report with lots of nice
+statistics and quotes and analyses about reader experiences that are
+ultimately invalid anyway.  
+  
+And I can _do_ this for an 'art' project, where the journey is equally, if not
+more, important than the outcomes.  Where for a 'computing' project, the
+documentation of the journey has in my experience generally been intended to
+be a build up to an overarching theoretical or practical conclusion.  
+  
+So next up, look out for a discussion of the various engines for different
+flavours of interactive narrative that have been popping up / I've been
+noticing recently, coming soon to a blog near you!  (This one.  This is the
+blog it'll be coming to.  Not any old blog near you).
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:11:17.420Z"^^xsd:datetime .
+

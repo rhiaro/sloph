@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/1436349229>
+  a as:Announce ;
+  as:published "2015-07-08T10:53:49+0100"^^xsd:datetime ;
+  as:tag "women in tech" ;
+  as:content """<!---
+share-of: https://twitter.com/JeniT/status/618682125877948416
+tags: women in tech
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/JeniT/status/618682125877948416> .
+

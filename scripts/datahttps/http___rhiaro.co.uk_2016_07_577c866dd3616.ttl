@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/577c866dd3616>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-07-06T00:17:22-04:00", "2016-07-06T00:17:22-04:00"^^xsd:dateTime ;
+  as:tag "groceries", "star market" ;
+  blog:cost "$20.83" ;
+  as:summary "Groceries (Star Market)" .
+

@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Half tempeh, avocado, daiya, salad bagel; half meatball wrap; peppermint hot chocolate (O2l",
+    "as:tag": [
+        "bread",
+        "hot chocolate",
+        "O2"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-02-06T10:30:34-05:00",
+    "@id": "http://blog.rhiaro.co.uk/half-tempeh",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/half-tempeh"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-06T10:30:34-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

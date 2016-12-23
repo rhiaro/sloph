@@ -1,0 +1,26 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/cold-sleety>
+  dcterms:created "2015-10-25T09:00:00+0000"^^xsd:datetime ;
+  sioc:content """<!---
+location: http://dbpedia.org/resource/Sapporo
+latitude: 43.0686
+longitude: 141.3508
+tags: travel,japan,sapporo,conference
+published: 25 October 2015, 18:00 JST
+-->
+
+Cold and sleety in Sapporo, but fortunately could walk 2km to hotel in underground mall tunnel directly from station. Naturally.
+""" ;
+  sioc:topic "conference", "sapporo", "japan", "travel" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/10/cold-sleety> ;
+  as:location <http://dbpedia.org/resource/Sapporo> ;
+  as:latitude "43.0686" ;
+  as:longitude "141.3508" ;
+  blog:tmpcontent "Cold and sleety in Sapporo, but fortunately could walk 2km to hotel in underground mall tunnel directly from station. Naturally." .
+

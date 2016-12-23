@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Coffee (Linda's Seabreeze Cafe)",
+    "blog:cost": "$2",
+    "as:tag": [
+        "coffee",
+        "restaurant",
+        "ca2016"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-13T13:24:05-07:00",
+    "@id": "http://blog.rhiaro.co.uk/5736381846b96",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/5736381846b96"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-13T13:24:05-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

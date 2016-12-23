@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/srinaths>
+  foaf:name "srinaths" ;
+  foaf:homepage <https://twitter.com/srinaths> ;
+  foaf:depiction <https://twitter.com/srinaths/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/0e83269b6d9126baeb112f511ca6395c954b404872960cf6fe669ae844d4dbc3.png> .
+

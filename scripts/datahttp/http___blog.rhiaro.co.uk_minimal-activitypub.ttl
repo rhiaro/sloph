@@ -1,0 +1,23 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/minimal-activitypub>
+  dcterms:title """Minimal ActivityPub update client""" ;
+  dcterms:created "2016-05-30T23:28:56-04:00"^^xsd:dateTime ;
+  sioc:content """Today I finished [morph](https://apps.rhiaro.co.uk/morph), a client for posting ActivityStreams2 Update activities to an endpoint. The server handles this update activity however it wants, but the obvious thing to do is take the `object` of the activity and make the indicated changes.
+
+So far it:
+
+* Doesn't have proper authentication, just a field to enter in a key that the server uses to verify me.
+* Doesn't do endpoint discovery, so I have to type that in as well.
+* Only understands how to display ActivityStreams2 Collections, and only knows how to edit items within the Collections.
+* Specifically only knows how to add `name`, `published` and `tags` to items in a Collection.
+
+Will be expanding its object editing abilities soon.
+
+[Code on github](https://github.com/rhiaro/morph). See also: [Minimal ActivityPub update endpoint](http://rhiaro.co.uk/2016/05/minimal).""" ;
+  sioc:topic "activitypub", "activitystreams", "activitystreams2", "as2", "client", "cv", "hacking", "json", "morph", "photos", "php", "resume", "social", "socialwg", "swwg" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/minimal-activitypub> .
+

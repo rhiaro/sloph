@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://rhiaro.co.uk/2015/09/daleks-announcing> sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/645139923062943744/5848122>, <https://twitter.com/LukasRosenstock/status/645165374183505920> .

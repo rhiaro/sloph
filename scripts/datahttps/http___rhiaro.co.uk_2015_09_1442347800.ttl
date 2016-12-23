@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/1442347800>
+  a as:Add ;
+  as:published "2015-09-15T21:10:00+0100"^^xsd:datetime ;
+  as:tag "social web", "profiles", "phd", "collaboration", "interoperability", "federation", "business", "cscw" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 15th September 2015, 21:10 Europe/London
+bookmark-of: http://www.forbes.com/sites/davidcarr/2015/04/27/how-social-should-social-collaboration-be/
+tags: phd,social web,collaboration,interoperability,federation,business,cscw,profiles
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://www.forbes.com/sites/davidcarr/2015/04/27/how-social-should-social-collaboration-be/> .
+

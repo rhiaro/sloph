@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/dmitri-describes>
+  a as:Note ;
+  as:published "2016-08-08T22:36:00+01:00"^^xsd:dateTime ;
+  as:tag <http://computingjoy.com/>, "hacking", "javascript", <https://rhiaro.co.uk/tags/hacking>, <https://rhiaro.co.uk/tags/javascript> ;
+  as:content "<p><a href=\"http://computingjoy.com/\">Dmitri</a> describes a day writing JavaScript as an &quot;INSANE JOURNEY&quot; and it almost makes me want to try.</p>" .
+

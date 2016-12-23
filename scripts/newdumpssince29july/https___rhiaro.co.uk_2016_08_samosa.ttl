@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/samosa>
+  a as:Activity, asext:Consume ;
+  as:name "Samosa" ;
+  as:published "2016-08-19T22:26:32-04:00"^^xsd:dateTime, "2016-08-19T22:26:32-04:00" ;
+  as:tag "snack", <https://rhiaro.co.uk/tags/snack> .
+

@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/bookmarks/>
+  a as:Collection ;
+  as:name "Bookmarks" ;
+  as:items <https://eager.io/blog/the-history-of-the-url-path-fragment-query-auth/>, <http://pokepalettes.com/>, <http://www.hemingwayapp.com/> .
+

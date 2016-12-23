@@ -1,0 +1,37 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "Online social interactions: a lens on humans and a world for humans",
+    "blog:rsvp": "yes",
+    "as:tag": [
+        "rsvp",
+        "event",
+        "attendee",
+        "phd",
+        "social web",
+        "social media",
+        "social network analysis",
+        "csail",
+        "social interactions",
+        "social science"
+    ],
+    "as:published": "2016-04-04T15:06:26-04:00",
+    "as:startTime": "2016-04-04T16:00:00-04:00",
+    "as:endTime": "2016-04-07T17:00:00-04:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:location": {
+        "@id": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology"
+    },
+    "@id": "http://blog.rhiaro.co.uk/online-social",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/online-social"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-04T15:06:26-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

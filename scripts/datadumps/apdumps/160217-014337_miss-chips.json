@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "content": "I MISS CHIPS",
+    "in-reply-to": "http://rhiaro.co.uk/2016/02/im-edinburgh-15",
+    "category": [
+        "life",
+        "food",
+        "travel",
+        "usa"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-17T01:43:37+00:00",
+    "@id": "http://blog.rhiaro.co.uk/miss-chips",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/miss-chips"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-17T01:43:37+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

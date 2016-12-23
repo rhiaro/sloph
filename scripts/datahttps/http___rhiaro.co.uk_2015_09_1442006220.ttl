@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/1442006220>
+  a as:Add ;
+  as:published "2015-09-11T22:17:00+0100"^^xsd:datetime ;
+  as:tag "worse is better", "software engineering", "principles" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 11th September 2015, 22:17 Europe/London
+bookmark-of: http://www.jwz.org/doc/worse-is-better.html
+tags: software engineering, worse is better,principles
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://www.jwz.org/doc/worse-is-better.html> .
+

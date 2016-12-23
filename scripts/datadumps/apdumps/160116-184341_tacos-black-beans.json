@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Tacos; black beans, lettuce, vegan cream cheese, jalapenos, habaneros",
+    "as:tag": [
+        "tacos"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-01-16T13:43:41-05:00",
+    "@id": "http://blog.rhiaro.co.uk/tacos-black-beans",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/tacos-black-beans"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-16T13:43:41-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

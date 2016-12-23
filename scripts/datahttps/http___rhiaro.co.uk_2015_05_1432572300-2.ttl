@@ -1,0 +1,23 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/05/1432572300-2>
+  as:latitude "43.51198" ;
+  as:longitude "16.43697" ;
+  as:published "2015-05-25T17:45:00+0100"^^xsd:datetime ;
+  as:tag "travel", "journey", "ferry", "croatia", "boat", "beach" ;
+  as:startTime "2015-05-25T16:30:00+0100"^^xsd:datetime ;
+  as:endTime "2015-05-25T17:45:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Å olta" ;
+  blog:endLocation "http://dbpedia.org/resource/Split" ;
+  as:content """<!---
+tags: travel,ferry,boat,journey,croatia,beach
+published: 24th May 2015, 22:30 Europe/Berlin
+start: 25th May 2015, 17:30 Europe/Berlin
+end: 25th May 2015, 18:45 Europe/Berlin
+startLocation: http://dbpedia.org/resource/Å olta
+endLocation: http://dbpedia.org/resource/Split
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/dagenham>
+  dcterms:created "2015-07-19T10:28:50+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+location: http://dbpedia.org/resource/Dagenham
+tags: laurel,london
+-->
+
+Dagenham, celebration, steampunk.""" ;
+  sioc:topic "laurel", "london" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/dagenham> ;
+  as:location <http://dbpedia.org/resource/Dagenham> ;
+  as:latitude "51.52681" ;
+  as:longitude "0.00434" ;
+  blog:tmpcontent "Dagenham, celebration, steampunk." .
+

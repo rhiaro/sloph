@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/chocolate>
+  a as:Collection ;
+  as:name "chocolate" ;
+  as:items <https://rhiaro.co.uk/2016/08/raspberry-dark>, <https://rhiaro.co.uk/2016/08/espresso-dark>, <https://rhiaro.co.uk/2016/08/awful-coffee>, <https://rhiaro.co.uk/2016/08/chocolate>, <https://rhiaro.co.uk/2016/09/coconut-pecan-ice> .
+

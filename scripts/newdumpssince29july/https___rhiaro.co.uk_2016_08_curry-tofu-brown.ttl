@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/curry-tofu-brown>
+  a as:Activity, asext:Consume ;
+  as:name "Curry tofu, brown rice and salad" ;
+  as:published "2016-08-02T12:21:44-04:00"^^xsd:dateTime, "2016-08-02T12:21:44-04:00" ;
+  as:tag "curry", "rice", "salad", "tofu", <https://rhiaro.co.uk/tags/salad>, <https://rhiaro.co.uk/tags/tofu>, <https://rhiaro.co.uk/tags/curry>, <https://rhiaro.co.uk/tags/rice> .
+

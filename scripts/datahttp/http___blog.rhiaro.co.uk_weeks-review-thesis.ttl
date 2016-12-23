@@ -1,0 +1,32 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/weeks-review-thesis>
+  dcterms:title "Weeks in Review: Thesis proposal" ;
+  dcterms:created "2013-08-04T14:59:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-09-19T10:13:44.138Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7027603982367622066" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """**29th July - 4th August**  
+**  
+**Discussed my ideas and work so far with Dave Robertson, my second supervisor, in two meetings this week.  
+  
+[Here's a summary of some of my thoughts](http://blog.rhiaro.co.uk/2013/08
+/vague-thoughts-about-content-creators.html).  
+  
+**5th - 11th August**  
+**  
+**I worked on my thesis proposal.  But it was also [Young Rewired State week](http://blog.rhiaro.co.uk/2013/08/young-rewired-state-in-edinburgh-yrs2013.html)!  
+**  
+****12th - 18th August**  
+**  
+**Finally (belatedly) handed in my thesis proposal.  (My review is scheduled for the 22nd August).
+
+""" ;
+  sioc:topic blog:Doing, "week in review", "thesis proposal", "semantic web", "phd", "amateur creative digital content" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/08/weeks-review-thesis> .
+

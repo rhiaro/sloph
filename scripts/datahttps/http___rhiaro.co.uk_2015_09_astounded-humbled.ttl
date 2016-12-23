@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/09/astounded-humbled>
+  blog:tmpcontent "Astounded and humbled by [eMax's](http://hip.cat/emax/) epic sleep-deprived multi-paper writing skills. When I grow up, I want to be just like him. I am privileged to coauthor with him and [DMR](http://www.mo-seph.com/)." ;
+  as:published "2015-09-25T18:48:59+0100"^^xsd:datetime ;
+  as:tag "acwri", "academia", "emax", "writing", "phd", "chi2016" ;
+  as:content """<!---
+tags: phd,chi2016,emax,academia,writing,acwri
+-->
+
+Astounded and humbled by [eMax's](http://hip.cat/emax/) epic sleep-deprived multi-paper writing skills. When I grow up, I want to be just like him. I am privileged to coauthor with him and [DMR](http://www.mo-seph.com/).""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/647468597745426435/55247494>, <https://brid-gy.appspot.com/like/twitter/rhiaro/647468597745426435/88408565>, <https://twitter.com/emax/status/647471018580291584>, <https://brid-gy.appspot.com/like/twitter/rhiaro/647468597745426435/5848122>, <https://twitter.com/emax/status/647469187904991232>, <https://twitter.com/rhiaro/status/647469311074914304> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

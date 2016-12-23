@@ -1,0 +1,29 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/10/tpac>
+  sioc:reply_of <http://www.w3.org/2015/10/TPAC/> ;
+  blog:tmpcontent """# TPAC
+
+W3C Technical Plenary, in particular for a Social Web breakout session on the Wednesday.""" ;
+  as:published "2015-10-07T22:24:42+0100"^^xsd:datetime ;
+  as:tag "w3c", "phd", "conference", "event", "rsvp", "mit" ;
+  as:name "TPAC" ;
+  as:startTime "2015-10-26T00:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-10-30T09:00:00+0000"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Sapporo> ;
+  as:content """<!---
+reply-to: www.w3.org/2015/10/TPAC/
+tags: event,rsvp,conference,w3c,phd,mit
+start: 26 October 2015, 09:00 JST
+end: 30 October 2015, 18:00 JST
+location: http://dbpedia.org/resource/Sapporo
+-->
+
+# TPAC
+
+W3C Technical Plenary, in particular for a Social Web breakout session on the Wednesday.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

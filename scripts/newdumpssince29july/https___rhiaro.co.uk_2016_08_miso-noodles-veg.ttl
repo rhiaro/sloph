@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/miso-noodles-veg>
+  a as:Activity, asext:Consume ;
+  as:name "Miso noodles and veg; chocolate soya ice cream" ;
+  as:published "2016-08-02T21:54:23-04:00"^^xsd:dateTime, "2016-08-02T21:54:23-04:00" ;
+  as:tag "ice cream", "leftovers", "noodles", <https://rhiaro.co.uk/tags/leftovers>, <https://rhiaro.co.uk/tags/noodles>, <https://rhiaro.co.uk/tags/ice+cream> .
+

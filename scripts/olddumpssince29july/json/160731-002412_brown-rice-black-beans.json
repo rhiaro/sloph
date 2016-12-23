@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Brown rice, black beans, dandelion greens, beet greens, celery, parsley, basil, roasted almonds",
+    "as:tag": [
+        "rice",
+        "beans",
+        "vegetables",
+        "nuts"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-07-30T19:24:12-04:00",
+    "@id": "http://blog.rhiaro.co.uk/brown-rice-black-beans",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/07/brown-rice-black"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-07-30T19:24:12-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

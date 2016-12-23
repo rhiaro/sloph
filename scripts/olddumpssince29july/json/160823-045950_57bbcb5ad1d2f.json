@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Socks and chocolate",
+    "blog:cost": "$0 (Mum)",
+    "as:tag": [
+        "mum",
+        "food",
+        "clothes"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-08-22T23:59:50-04:00",
+    "@id": "http://blog.rhiaro.co.uk/57bbcb5ad1d2f",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/57bbcb5ad1d2f"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-22T23:59:50-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

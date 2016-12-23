@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/johnnieingram/status/615817605761253376>
+  sioc:reply_of <https://rhiaro.co.uk/2015/06/number-one-reason> ;
+  as:published "2015-06-30T10:42:13+01:00"^^xsd:datetime ;
+  as:name "@rhiaro And not forgetting Reason Number Two: twitter.com/PennyRed/statuâ€¦" ;
+  as:content """[@rhiaro][1] And not forgetting Reason Number Two: [twitter.com/PennyRed/statuâ€¦][2]
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/PennyRed/status/613707140683956225
+""" ;
+  as:actor <http://www.johnnieingram.co.uk/> .
+

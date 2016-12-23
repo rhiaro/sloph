@@ -1,0 +1,18 @@
+{
+    "h": "entry",
+    "content": "The W3C kettle is one of the more high tech ones I've encountered, so naturally the UX isn't great and I have to re-learn how to boil water every time.",
+    "category": [
+        "life",
+        "ux"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-05T17:37:29+00:00",
+    "@id": "http://blog.rhiaro.co.uk/w3c-kettle-one",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/w3c-kettle-one"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-05T17:37:29+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,28 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1432304400>
+  dcterms:created "2015-05-22T15:20:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 21st May 2015, 13:53 Europe/Berlin
+start: 22nd May 2015, 14:16 Europe/Berlin
+end: 22nd May 2015, 16:20 Europe/Berlin
+startLocation: http://dbpedia.org/resource/Faenza
+endLocation: http://dbpedia.org/resource/Ancona
+tags: travel,train,journey,italy
+-->""" ;
+  sioc:topic "travel", "train", "journey", "italy" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/1432304400> ;
+  as:startTime "2015-05-22T13:16:00+0100"^^xsd:datetime ;
+  as:endTime "2015-05-22T15:20:00+0100"^^xsd:datetime ;
+  as:latitude "43.78192" ;
+  as:longitude "11.24968" ;
+  blog:startLocation "http://dbpedia.org/resource/Faenza" ;
+  blog:endLocation "http://dbpedia.org/resource/Ancona" .
+

@@ -1,0 +1,22 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1428265440>
+  a blog:LlogPost ;
+  as:published "2015-04-05T21:24:00+0100"^^xsd:datetime ;
+  as:tag "quantified self", "food", "eat", "life" ;
+  as:startTime "2015-04-05T21:24:00+0100"^^xsd:datetime ;
+  as:endTime "2015-04-05T21:24:00+0100"^^xsd:datetime ;
+  as:content """
+<!--- 
+start: 5th April 2015, 21:24
+end: 5th April 2015, 21:24
+type: LlogPost
+tags: eat,food,quantified self,life
+list: done
+-->
+
+Wide selection of not-meats and salad and pickles and hummus and cakes and fancy lemonades""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

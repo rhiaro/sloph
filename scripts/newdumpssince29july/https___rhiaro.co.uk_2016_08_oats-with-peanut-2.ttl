@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/oats-with-peanut-2>
+  a asext:Consume, as:Activity ;
+  as:name "Oats with peanut butter and flaxseed; coffee" ;
+  as:published "2016-08-23T08:16:28-04:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/oats>, <https://rhiaro.co.uk/tags/coffee> .
+

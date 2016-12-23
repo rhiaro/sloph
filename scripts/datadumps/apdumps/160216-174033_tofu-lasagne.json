@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Tofu lasagne, bread",
+    "as:tag": [
+        "bread",
+        "lasagne"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-02-16T12:40:33-05:00",
+    "@id": "http://blog.rhiaro.co.uk/tofu-lasagne",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/tofu-lasagne"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-16T12:40:33-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,30 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/11/standards-star>
+  blog:tmpcontent """# Standards and Star Trek
+
+This is part of an ongoing series of notes about Star Trek episodes that remind me in some way of interactions with W3C Working Groups.
+
+## On issue closing and edit wars
+
+In TNG S1E26 ("The Neutral Zone"), a man from the late 21st century is found cryogenically frozen. He is awoken aboard the Enterprise, and soon becomes frustrated that he can't speak to the Captain (who is busy diffusing a dangerous situation with the Romulans). He uses a communications panel to call the Captain, who isn't best pleased. When reprimanded for unauthorised use of the panel, he says "If they are so important, why don't they need an 'executive key'?" to which Picard replies "Aboard a starship, that is not necessary. We are all capable of exercising self-control."""" ;
+  as:published "2015-11-27T23:40:48+0000"^^xsd:datetime ;
+  as:tag "star trek", "w3c", "standards", "life" ;
+  as:name "Standards and Star Trek" ;
+  as:content """<!---
+tags: life,standards,star trek,w3c
+-->
+
+# Standards and Star Trek
+
+This is part of an ongoing series of notes about Star Trek episodes that remind me in some way of interactions with W3C Working Groups.
+
+## On issue closing and edit wars
+
+In TNG S1E26 ("The Neutral Zone"), a man from the late 21st century is found cryogenically frozen. He is awoken aboard the Enterprise, and soon becomes frustrated that he can't speak to the Captain (who is busy diffusing a dangerous situation with the Romulans). He uses a communications panel to call the Captain, who isn't best pleased. When reprimanded for unauthorised use of the panel, he says "If they are so important, why don't they need an 'executive key'?" to which Picard replies "Aboard a starship, that is not necessary. We are all capable of exercising self-control."""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/670386882501459968/1583811> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

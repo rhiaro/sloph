@@ -1,0 +1,10 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/thishttpwww2016netproceedingscompanionp793pdf>
+  sioc:reply_of <https://rhiaro.co.uk/2016/04/mind-blown> ;
+  as:published "2016-04-11T20:02:56+01:00"^^xsd:dateTime ;
+  as:tag "social", "phd", "machines", "www2016", "socm2016", "buddhism" ;
+  as:content "[This](http://www2016.net/proceedings/companion/p793.pdf)" .
+

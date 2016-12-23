@@ -1,0 +1,20 @@
+{
+    "h": "entry",
+    "content": "It's aaaaalways a permissions error.",
+    "category": [
+        "hacking",
+        "fml",
+        "permissions",
+        "linux"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-05-28T16:14:39+01:00",
+    "@id": "http://blog.rhiaro.co.uk/aaaaalways",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/aaaaalways"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-28T16:14:39+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

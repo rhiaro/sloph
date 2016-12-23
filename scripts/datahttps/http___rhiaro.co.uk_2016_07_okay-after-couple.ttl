@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/okay-after-couple>
+  as:published "2016-07-13T03:08:57+01:00"^^xsd:dateTime ;
+  as:tag "voyager", "trek", "star", "life" ;
+  as:content "Okay so after a couple of serious (but good episodes) we're back to regular programming: Tuvok and Neelix are combined by the transporter." .
+

@@ -1,0 +1,23 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/what-50c-13>
+  dcterms:created "2015-05-13T20:41:46+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,hostel,food
+-->
+
+WHAT 50c for 13 minutes of hob use in hostel?!
+
+*cooks everything I can find as fast as possible*""" ;
+  sioc:topic "travel", "hostel", "food" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/what-50c-13> ;
+  blog:tmpcontent """WHAT 50c for 13 minutes of hob use in hostel?!
+
+*cooks everything I can find as fast as possible*""" .
+

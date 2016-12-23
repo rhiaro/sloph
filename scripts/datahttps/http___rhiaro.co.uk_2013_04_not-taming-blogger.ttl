@@ -1,0 +1,30 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/04/not-taming-blogger>
+  as:published "2013-04-02T20:46:00.001Z"^^xsd:datetime ;
+  as:tag "learning", blog:Doing, "web development", "hacking" ;
+  as:name "Not taming Blogger after all" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-1900084843425069832" ;
+  as:content """Change of plan.  Trying to run the whole thing with Blogger templates did not
+result in a happy time.  So the main site pulls and manipulates the Blogger
+RSS feed, with [Simple Pie](http://simplepie.org/) making that easy.  
+  
+I then simplified the actual Blogger template and made it match and stuff.
+The general intention now is that individual posts and comments will be
+viewed, if necessary, via Blogger, in a kind of archive-y way, but the content
+organised as I see fit exists on the main site as the primary port of call.  
+  
+But _my goodness_ does Blogger automatically add some crap into its templates.
+I delete stuff and it comes right back.  Pointless classes, and divs, and
+general unnecessary bulky markup.  I give up with trying to strip all that
+out.  
+  
+By the way, [the source code for the site is
+here](https://bitbucket.org/rhiaro/rhiaroco).  Share and share alike, yada.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-02T23:30:33.625Z"^^xsd:datetime .
+

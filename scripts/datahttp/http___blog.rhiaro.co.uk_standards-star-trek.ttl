@@ -1,0 +1,37 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/standards-star-trek> dc:creator <http://rhiaro.co.uk/about#me> ;
+    dcterms:created "2015-11-27T23:41:26+0000"^^xsd:datetime ;
+    dcterms:title "Standards and Star Trek" ;
+    sioc:content """<!---
+tags: life,standards,star trek,w3c
+-->
+
+# Standards and Star Trek
+
+This is part of an ongoing series of notes about Star Trek episodes that remind me in some way of interactions with W3C Working Groups.
+
+## On maintaining a sense of humour in dire situations
+
+In TNG S1E7 ("Contagion") a computer virus attempts to rewrite the software of the Enterprise. Geordi: "We have two completely incompatible computer systems trying to interact!" Sound familiar? A potential consequence is complete destruction of the Enterprise, as happened to the USS Yamato shortly before. Later, during multiple systems failures and faced with imminent Romulan attack, the shields are going up and down and weapons systems are going on and off, Troi smirks: "In another time and another place this could be funny." Riker adds "In case it should become necessary to fight, do you suppose you could find me some rocks to throw at them?\"""" ;
+    sioc:topic "life",
+        "standards",
+        "star trek",
+        "w3c" ;
+    blog:tmpcontent """# Standards and Star Trek
+
+This is part of an ongoing series of notes about Star Trek episodes that remind me in some way of interactions with W3C Working Groups.
+
+## On maintaining a sense of humour in dire situations
+
+In TNG S1E7 ("Contagion") a computer virus attempts to rewrite the software of the Enterprise. Geordi: "We have two completely incompatible computer systems trying to interact!" Sound familiar? A potential consequence is complete destruction of the Enterprise, as happened to the USS Yamato shortly before. Later, during multiple systems failures and faced with imminent Romulan attack, the shields are going up and down and weapons systems are going on and off, Troi smirks: "In another time and another place this could be funny." Riker adds "In case it should become necessary to fight, do you suppose you could find me some rocks to throw at them?\"""" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/11/standards-star-trek> .

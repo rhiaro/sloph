@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/Amene_Sh>
+  foaf:name "Ameneh Shamekhi" ;
+  foaf:homepage <https://twitter.com/Amene_Sh> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/0208448dd3d8f51ef3f94e954e380d1acf4989ae102c1ed9359b91b1d51b3905.jpeg> .
+

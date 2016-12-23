@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/php-poop-love>
+  a as:Note ;
+  as:published "2016-08-04T22:15:07+01:00"^^xsd:dateTime ;
+  as:tag "fml", "hacking", "php", "sloph", <https://rhiaro.co.uk/tags/hacking>, <https://rhiaro.co.uk/tags/fml>, <https://rhiaro.co.uk/tags/php>, <https://rhiaro.co.uk/tags/sloph> ;
+  as:content "<p>PHP, you are a poop, but I love you anyway.</p>" .
+

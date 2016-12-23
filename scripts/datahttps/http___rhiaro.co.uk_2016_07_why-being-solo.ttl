@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/why-being-solo>
+  a as:Add ;
+  as:published "2016-07-23T15:03:32+01:00"^^xsd:dateTime ;
+  as:tag "polyamoury", "poly", "relationships", "life" ;
+  as:name "Why Being Solo and Poly Has Made Me a Happiness Evangelist - The Toast - The Toast" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:object <http://the-toast.net/2015/11/17/on-being-solo-poly/> .
+

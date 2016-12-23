@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2016/04/5719409d4951e>
+  a as:Travel ;
+  as:published "2016-04-21T17:03:57-04:00", "2016-04-21T17:03:57-04:00"^^xsd:dateTime ;
+  as:tag "boston", "ca2016", "flight", "jetblue", "journey", "plane", "san diego", "travel", "usa" ;
+  as:startTime "2016-05-23T22:14:00-07:00" ;
+  as:endTime "2016-05-24T06:44:00-04:00" ;
+  blog:cost "$196.10" ;
+  as:origin <http://dbpedia.org/resource/San_Diego> ;
+  as:target <http://dbpedia.org/resource/Boston> .
+

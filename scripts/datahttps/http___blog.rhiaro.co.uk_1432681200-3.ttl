@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1432681200-3>
+  as:published "2015-05-26T08:00:00+02:00"^^xsd:datetime ;
+  as:tag "travel", "bus", "journey", "croatia", "zadar", "spilt" ;
+  as:startTime "2015-05-27T08:00:00+02:00"^^xsd:datetime ;
+  as:endTime "2015-05-27T11:15:00+02:00"^^xsd:datetime ;
+  blog:startLocation <http://dbpedia.org/resource/Split> ;
+  blog:endLocation <http://dbpedia.org/resource/Zadar> .
+

@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/deb_max>
+  foaf:name "debbie maxwell" ;
+  foaf:homepage <https://twitter.com/deb_max> ;
+  foaf:depiction <https://twitter.com/deb_max/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/154cf18818b7a53702607c71cf556b2007f46038a0767ddc61747f3ffed37959.jpeg> .
+

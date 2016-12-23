@@ -1,0 +1,13 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/after-years-traveling>
+  dcterms:created "2016-03-25T08:18:08+00:00"^^xsd:dateTime ;
+  sioc:content "After years of traveling with a metal fork, Doha airport were finally the ones to confiscate it." ;
+  sioc:topic "doha", "travel" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/03/after-years> ;
+  as:location <geo:25.32459,51.52816;u=8.5> .
+

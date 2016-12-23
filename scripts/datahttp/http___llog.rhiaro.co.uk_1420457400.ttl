@@ -1,0 +1,24 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://llog.rhiaro.co.uk/1420457400>
+  a blog:LlogPost ;
+  dcterms:created "2015-01-05T11:30:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+start: 5th January 2015, 11:15
+end: 5th January 2015, 11:30
+type: LlogPost
+tags: eat,food,lunch,coffee
+list: done
+-->
+
+Orange juice. Coffee (level 5 coffee machine). White bread roll with tattie scone, veggie sausage and fried tomato (Snax).""" ;
+  sioc:topic "eat", "food", "lunch", "coffee", "quantified self", "life" ;
+  as:startTime "2015-01-05T11:15:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-05T11:30:00+0000"^^xsd:datetime .
+

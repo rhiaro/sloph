@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/wholewheat>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-02T09:45:08-04:00"^^xsd:dateTime, "2016-07-03T10:34:34-04:00"^^xsd:dateTime, "2016-07-03T10:34:34-04:00", "2016-07-02T09:45:08-04:00" ;
+  as:tag "bread", "coffee", "fruit" ;
+  as:name "Wholewheat muffins with peanut butter; coffee", "Wholewheat muffins with peanut butter, avocado, tomatoes, watermelon; coffee" .
+

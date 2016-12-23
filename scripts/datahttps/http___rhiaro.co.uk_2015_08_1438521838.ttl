@@ -1,0 +1,16 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/1438521838>
+  as:latitude "52.4789" ;
+  as:longitude "-1.90929" ;
+  a as:Announce ;
+  as:published "2015-08-02T14:23:58+0100"^^xsd:datetime ;
+  as:tag "prewired", "foc2015", "yrs" ;
+  as:content """<!---
+tags: foc2015,yrs,prewired
+share-of: https://twitter.com/Prewired/status/627831170974224384
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/Prewired/status/627831170974224384> .
+

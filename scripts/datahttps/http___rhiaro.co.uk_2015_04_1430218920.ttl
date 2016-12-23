@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/04/1430218920>
+  a as:Like ;
+  as:published "2015-04-28T12:02:00+0100"^^xsd:datetime ;
+  as:tag "" ;
+  as:content """<!--- 
+published: 28th April 2015, 12:02
+like-of: http://tirania.org/blog/archive/2011/Feb-17.html
+tags: 
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://tirania.org/blog/archive/2011/Feb-17.html> .
+

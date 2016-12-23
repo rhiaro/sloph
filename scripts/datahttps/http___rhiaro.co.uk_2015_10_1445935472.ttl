@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/10/1445935472>
+  a as:Like ;
+  as:published "2015-10-27T08:44:32+0000"^^xsd:datetime ;
+  as:tag "w3c", "tpac2015", "naps" ;
+  as:content """<!---
+like-of: https://twitter.com/therealdeiu/status/658834077991182336
+tags: tpac2015,w3c,naps
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/therealdeiu/status/658834077991182336> .
+

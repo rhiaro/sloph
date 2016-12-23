@@ -1,0 +1,51 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2010/09/volunteer-poop>
+  blog:tmpcontent """# Volunteer poop-cleaner
+
+## Weirfield Wildlife Hospital, Lincoln
+
+This is one of the best things I've ever done. Noteable achievements include:
+
+* Weighing literally hundreds of hedgehogs.
+* Carrying an adult swan and throwing him into a pond.
+* Chasing hoards of ducklings around the hospital floor.
+* Being covered in squirrels.
+* Being dive-bombed by an insane magpie.
+* Handfeeding many baby things.
+* Discovering what noise stoats make.
+* Catching pigeons.
+* Putting a baby fox and a baby squirrel in an incubator together and watching them cuddle up omfgcutenessexplosion.
+* Adopting [this bird](http://tigo.rhiaro.co.uk).""" ;
+  as:published "2010-09-01T00:00:00+0100"^^xsd:datetime ;
+  as:tag "resume", "cv", "volunteer", "work", "lincoln", "animals", "wildlife", "weirfield", "poop" ;
+  as:name "Volunteer poop-cleaner" ;
+  as:startTime "2010-09-01T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2011-05-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st September 2010
+start: September 2010
+end: May 2011
+tags: weirfield,wildlife,volunteer,work,poop,animals,lincoln,cv,resume
+-->
+
+# Volunteer poop-cleaner
+
+## Weirfield Wildlife Hospital, Lincoln
+
+This is one of the best things I've ever done. Noteable achievements include:
+
+* Weighing literally hundreds of hedgehogs.
+* Carrying an adult swan and throwing him into a pond.
+* Chasing hoards of ducklings around the hospital floor.
+* Being covered in squirrels.
+* Being dive-bombed by an insane magpie.
+* Handfeeding many baby things.
+* Discovering what noise stoats make.
+* Catching pigeons.
+* Putting a baby fox and a baby squirrel in an incubator together and watching them cuddle up omfgcutenessexplosion.
+* Adopting [this bird](http://tigo.rhiaro.co.uk).""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/seitan--tofu>
+  as:latitude "43.51199" ;
+  as:longitude "16.4371" ;
+  blog:tmpcontent "Seitan > tofu" ;
+  as:published "2015-05-26T20:40:11+0100"^^xsd:datetime ;
+  as:tag "food", "vegan" ;
+  as:content """<!---
+tags: food,vegan
+-->
+
+Seitan > tofu""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

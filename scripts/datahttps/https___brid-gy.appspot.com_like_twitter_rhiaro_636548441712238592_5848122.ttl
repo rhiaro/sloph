@@ -1,0 +1,9 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brid-gy.appspot.com/like/twitter/rhiaro/636548441712238592/5848122>
+  blog:mentions <https://rhiaro.co.uk/2015/08/6-cities-holding> ;
+  as:published "2015-08-29T22:56:51+01:00"^^xsd:datetime ;
+  as:actor <https://twitter.com/emax> .
+

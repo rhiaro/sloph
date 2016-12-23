@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/56cbb6b2490f7>
+  a as:Travel ;
+  dcterms:created "2016-02-22T12:59:00+00:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56cbb6b2490f7> ;
+  as:startTime "2016-02-22T13:00:00+00:00" ;
+  as:endTime "2016-02-22T13:45:00+00:00" ;
+  blog:cost "&pound;8.30" ;
+  as:published "2016-02-22T12:59:00+00:00" ;
+  as:tag "edinburgh", "glasgow", "journey", "scotland", "train", "travel", "uk" ;
+  as:origin <http://dbpedia.org/resource/Glasgow> ;
+  as:target <http://dbpedia.org/resource/Edinburgh> .
+

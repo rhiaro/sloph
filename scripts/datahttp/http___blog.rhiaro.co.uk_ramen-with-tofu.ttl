@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/ramen-with-tofu>
+  a blog:Consumption ;
+  dcterms:created "2016-06-06T13:15:07-07:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/ramen-with-tofu> ;
+  as:published "2016-06-06T13:15:07-07:00" ;
+  as:tag "tofu", "tea", "noodles", "vegetables" ;
+  as:name "Ramen with tofu and vegetables. Green tea." .
+

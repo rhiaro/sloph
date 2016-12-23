@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/01/ta-marker>
+  blog:tmpcontent """# TA and Marker, Semantic Web Systems
+
+## School of Informatics, University of Edinburgh
+
+Same as last year, but with twice as many students. Tirelessly answered student emails, made a few supplementary materials, mostly got the feedback sent on time; was nominated for a Best Teaching Award ^^ Oh, also organised a hands-on workshop this year, because I generally disagree with lectures.""" ;
+  as:published "2015-01-01T09:00:00+0000"^^xsd:datetime ;
+  as:tag "sws", "informatics", "sparql", "cv", "resume", "teaching", "semantic web", "edinburgh", "rdf", "linked data" ;
+  as:name "TA and Marker, Semantic Web Systems" ;
+  as:startTime "2015-01-01T00:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-04-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st January 2015, 09:00
+start: January 2015
+end: April 2015
+tags: cv,resume,teaching,edinburgh,informatics,sws,semantic web,linked data,rdf,sparql
+-->
+
+# TA and Marker, Semantic Web Systems
+
+## School of Informatics, University of Edinburgh
+
+Same as last year, but with twice as many students. Tirelessly answered student emails, made a few supplementary materials, mostly got the feedback sent on time; was nominated for a Best Teaching Award ^^ Oh, also organised a hands-on workshop this year, because I generally disagree with lectures.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

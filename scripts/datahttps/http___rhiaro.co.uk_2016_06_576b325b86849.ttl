@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/576b325b86849>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-06-22T20:45:00-04:00", "2016-06-22T20:45:00-04:00"^^xsd:dateTime ;
+  as:tag "boston burger company", "food", "restaurant" ;
+  blog:cost "$18" ;
+  as:summary "Burger, half fries (Boston Burger Company)" .
+

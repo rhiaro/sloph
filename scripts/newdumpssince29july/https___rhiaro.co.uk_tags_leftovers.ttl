@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/leftovers>
+  a as:Collection ;
+  as:name "leftovers" ;
+  as:items <https://rhiaro.co.uk/2016/07/lasagne-lentils>, <https://rhiaro.co.uk/2016/08/macaroni-black>, <https://rhiaro.co.uk/2016/08/miso-noodles-veg>, <https://rhiaro.co.uk/2016/08/curry-lettuce>, <https://rhiaro.co.uk/2016/08/wrap-with-curry>, <https://rhiaro.co.uk/2016/08/leftover-curry>, <https://rhiaro.co.uk/2016/08/pasta-vegetables>, <https://rhiaro.co.uk/2016/08/chilli-brown-rice>, <https://rhiaro.co.uk/2016/08/2-slices-leftover>, <https://rhiaro.co.uk/2016/08/1-slice-leftover>, <https://rhiaro.co.uk/2016/08/curry-vegetables>, <https://rhiaro.co.uk/2016/08/lasagne>, <https://rhiaro.co.uk/2016/09/pasta-kale-tomato> .
+

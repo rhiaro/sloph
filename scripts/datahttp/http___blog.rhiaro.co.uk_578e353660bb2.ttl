@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/578e353660bb2>
+  a blog:Acquisition ;
+  dcterms:created "2016-07-17T15:50:32-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/578e353660bb2> ;
+  blog:cost "$1.50" ;
+  as:published "2016-07-17T15:50:32-04:00" ;
+  as:summary "Laundry" ;
+  as:tag "household", "laundry" .
+

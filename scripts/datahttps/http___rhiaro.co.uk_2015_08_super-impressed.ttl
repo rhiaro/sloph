@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/08/super-impressed>
+  blog:tmpcontent "Super impressed with over 50% female keynote speakers at [IFIP2015 summer school on privacy and identity management](http://www.ifip-summerschool.org) :D" ;
+  as:published "2015-08-19T10:07:27+0100"^^xsd:datetime ;
+  as:tag "ifip2015", "ifip15", "ifip", "summer school", "event", "conference", "diversity", "gender" ;
+  as:content """<!---
+tags: ifip,ifip15,ifip2015,gender,diversity,conference,event,summer school
+-->
+
+Super impressed with over 50% female keynote speakers at [IFIP2015 summer school on privacy and identity management](http://www.ifip-summerschool.org) :D""" ;
+  sioc:has_reply <https://twitter.com/iainsme/status/633947982774312960>, <https://brid-gy.appspot.com/like/twitter/rhiaro/633928560814747652/117553058>, <https://brid-gy.appspot.com/like/twitter/rhiaro/633928560814747652/857843125>, <https://brid-gy.appspot.com/like/twitter/rhiaro/633928560814747652/25805235>, <https://brid-gy.appspot.com/like/twitter/rhiaro/633928560814747652/7297172> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

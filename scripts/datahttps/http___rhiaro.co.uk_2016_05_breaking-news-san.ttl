@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/breaking-news-san>
+  as:published "2016-05-20T23:02:33+01:00"^^xsd:dateTime ;
+  as:tag "travel", "ca2016", "diego", "san" ;
+  as:location <geo:32.7315,-117.1502;u=2.5999999046325684> ;
+  as:content "Breaking news: San Diego is awesome. More on this later." .
+

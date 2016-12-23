@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/dating-species>
+  a as:Add ;
+  as:published "2016-07-23T15:40:50+01:00"^^xsd:dateTime ;
+  as:tag "relationships", "life" ;
+  as:name "Are You Dating Your Species?" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content "> Scare Them Away To Find The Right Ones" ;
+  as:object <http://reidaboutsex.com/are-you-dating-your-species/> .
+

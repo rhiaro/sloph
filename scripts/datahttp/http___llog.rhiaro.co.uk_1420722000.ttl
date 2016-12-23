@@ -1,0 +1,24 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://llog.rhiaro.co.uk/1420722000>
+  a blog:LlogPost ;
+  dcterms:created "2015-01-08T13:00:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+start: 8th January 2015, 12:45
+end: 8th January 2015, 13:00
+type: LlogPost
+tags: eat,food,lunch,coffee,quantified self,life
+list: done
+-->
+
+Coffee. Sandwiches on seaweed sourdough or wholewheat bread, with vegan cheese, vegan 'deli meat' (whatever that is), spinach, vegan mayo, hot sauce. Orange juice.""" ;
+  sioc:topic "eat", "food", "lunch", "coffee", "quantified self", "life" ;
+  as:startTime "2015-01-08T12:45:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-08T13:00:00+0000"^^xsd:datetime .
+

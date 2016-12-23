@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Salad mush: cucumber, daiya, not-mayo, red cabbage; pita bread",
+    "as:tag": [
+        "bread",
+        "salad"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-13T15:45:43-04:00",
+    "@id": "http://blog.rhiaro.co.uk/salad-mush",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/salad-mush"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-13T15:45:43-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

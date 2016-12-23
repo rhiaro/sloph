@@ -1,0 +1,18 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/04/i-think-over-rising>
+  a sioc:Comment ;
+  as:published "2013-04-14T10:03:36.454Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7004549869575938435" ;
+  as:content """I think over rising on your second rise was to blame - 2 and half hours is a
+bit much!  
+I find it best to cover loosely with oiled cling film, but some people just
+use a damp tea towel.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/04960655292677856287> ;
+  as:updated "2013-04-14T10:03:36.454Z"^^xsd:datetime .
+

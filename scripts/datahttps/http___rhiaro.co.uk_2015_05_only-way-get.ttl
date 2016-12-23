@@ -1,0 +1,20 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/only-way-get>
+  sioc:reply_of <https://twitter.com/deusbrackers/status/601333168050872320> ;
+  as:latitude "43.78177" ;
+  as:longitude "11.24958" ;
+  blog:tmpcontent "if the only way to get anything done in academia is to be a pawn for industry, fuck that. It's not the case - research for general public good is funded, tho probably not nearly enough. It's depressing that that is entirely not reflected in today's conference sessions" ;
+  as:published "2015-05-21T11:37:31+0100"^^xsd:datetime ;
+  as:tag "www2015", "advertising", "academia", "tech", "industry" ;
+  as:content """<!---
+tags: www2015,academia,advertising,industry,tech
+reply-to: https://twitter.com/deusbrackers/status/601333168050872320
+-->
+
+if the only way to get anything done in academia is to be a pawn for industry, fuck that. It's not the case - research for general public good is funded, tho probably not nearly enough. It's depressing that that is entirely not reflected in today's conference sessions""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

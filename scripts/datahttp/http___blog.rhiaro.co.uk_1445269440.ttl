@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1445269440>
+  dcterms:created "2015-10-19T16:44:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 19th October 2015, 16:44 Europe/London
+bookmark-of: https://vaniea.com/publications.html
+tags: privacy,security,identity,profiles,phd,reading,vaniea,edinburgh
+-->
+
+""" ;
+  sioc:topic "privacy", "security", "identity", "profiles", "phd", "reading", "vaniea", "edinburgh" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/10/1445269440> ;
+  blog:bookmark_of <https://vaniea.com/publications.html> .
+

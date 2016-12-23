@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Espresso (Social Policy)",
+    "as:tag": [
+        "coffee",
+        "social policy",
+        "ca2016"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-12T14:35:50-07:00",
+    "@id": "http://blog.rhiaro.co.uk/espresso-social",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/espresso-social"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-12T14:35:50-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

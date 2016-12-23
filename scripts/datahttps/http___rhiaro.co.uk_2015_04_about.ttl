@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/04/about>
+  a as:Save, as:Add ;
+  as:published "2015-04-14T18:37:00+0100"^^xsd:datetime ;
+  as:tag "socialwg", "activitystreams", "as2", "json", "tests" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!--- 
+published: 14th April 2015, 18:37
+bookmark-of: https://as-test-harness.mybluemix.net/#about
+tags: activitystreams,as2,socialwg,tests,json
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://as-test-harness.mybluemix.net/#about> .
+

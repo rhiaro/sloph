@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2007/03/open-university-short>
+  blog:tmpcontent """# Open University short course
+
+## T189, Digital Photography
+
+Memories of working through these course materials in the maths computer room during free periods at high school are triggered by eating chocolate chips and brazil nuts out of a plastic sandwich bag, and listening to The Shins.""" ;
+  as:published "2007-03-01T00:00:00+0000"^^xsd:datetime ;
+  as:tag "resume", "cv", "education", "open university", "digital photography" ;
+  as:name "Open University short course" ;
+  as:startTime "2007-03-01T00:00:00+0000"^^xsd:datetime ;
+  as:endTime "2007-05-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 01 March 2007
+start: March 2007
+end: May 2007
+tags: education,open university,digital photography,cv,resume
+-->
+
+# Open University short course
+
+## T189, Digital Photography
+
+Memories of working through these course materials in the maths computer room during free periods at high school are triggered by eating chocolate chips and brazil nuts out of a plastic sandwich bag, and listening to The Shins.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,14 @@
+@prefix : <_:> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/579befd5d0c62> dcterms:created "2016-07-29T20:07:47-04:00"^^xsd:dateTime ;
+    as:location <https://rhiaro.co.uk/location/home> ;
+    as:published "2016-07-29T20:07:47-04:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <https://rhiaro.co.uk/2016/07/579befd5d0c62> .
+

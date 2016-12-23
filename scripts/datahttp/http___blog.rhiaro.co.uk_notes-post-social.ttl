@@ -1,0 +1,74 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/notes-post-social>
+  dcterms:title "Notes post social-informatics seminar talk" ;
+  dcterms:created "2015-06-19T11:35:35+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: soc-inf,social web,seminar,notes,phd,social science,methodology
+reply-to: http://rhiaro.co.uk/2015/06/what-profile
+-->
+
+# Notes post social-informatics seminar talk
+
+methodology: iterative, inductive
+
+ResearchGate > Academia.edu
+
+Research in use of avatars
+
+Where the good enough boundary lies for managing?
+When is it dangerous, when serendipitous. What 'matters'?
+No perfect model of social management/access control.
+
+Easier to look at different systems doing the same thing in different ways
+(things of a similar species)
+
+Profiles shaped strongly by the needs of the service providers
+Problems of their own survival are also played out in this space
+Difficulties people may have managing profiles are sometimes down to easily fixable poor design things
+Interests of people fight with interests of service
+
+Github
+
+Definition of ownership
+
+ACNE and other diseases communities on twitter - people create second accounts to participate
+
+"epidemic communication patterns" - Robin Williams""" ;
+  sioc:topic "soc-inf", "social web", "seminar", "notes", "phd", "social science", "methodology" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/06/what-profile> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/06/notes-post-social> ;
+  blog:tmpcontent """# Notes post social-informatics seminar talk
+
+methodology: iterative, inductive
+
+ResearchGate > Academia.edu
+
+Research in use of avatars
+
+Where the good enough boundary lies for managing?
+When is it dangerous, when serendipitous. What 'matters'?
+No perfect model of social management/access control.
+
+Easier to look at different systems doing the same thing in different ways
+(things of a similar species)
+
+Profiles shaped strongly by the needs of the service providers
+Problems of their own survival are also played out in this space
+Difficulties people may have managing profiles are sometimes down to easily fixable poor design things
+Interests of people fight with interests of service
+
+Github
+
+Definition of ownership
+
+ACNE and other diseases communities on twitter - people create second accounts to participate
+
+"epidemic communication patterns" - Robin Williams""" .
+

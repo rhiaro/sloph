@@ -1,0 +1,22 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2010/11/oh-want-tea-room>
+  as:published "2010-11-25T14:03:00.003Z"^^xsd:datetime ;
+  as:tag "arctic buzzard", "birds of prey", "buzzard", "rough legged buzzard", "wildlife hospital", "Weirfield", blog:Done ;
+  as:name "â€œOh, you might not want to go in the tea room just yet..." ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6063989156064030920" ;
+  as:content """â€œThereâ€™s a buzzard in there.  Heâ€™s shit on everything.â€  
+  
+Turned out to be an arctic buzzard.  Way off course, seemingly struggling to
+walk or fly, and not in a good mood.  One to add to my list of animals I have
+seen, but shouldnâ€™t ever have had chance too.  
+  
+Edit: Look, itâ€™s famous now! <http://www.thisislincolnshire.co.uk/news/ARCTIC-
+BUZZARD-COMES-COLD/article-2943752-detail/article.html>
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2010-12-29T02:29:46.226Z"^^xsd:datetime .
+

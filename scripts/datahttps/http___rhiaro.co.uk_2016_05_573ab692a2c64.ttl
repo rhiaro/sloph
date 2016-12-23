@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573ab692a2c64>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-16T23:12:49-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "food", "restaurant", "swingers" ;
+  blog:cost "$24" ;
+  as:summary "Dinner (Swinger's)" .
+

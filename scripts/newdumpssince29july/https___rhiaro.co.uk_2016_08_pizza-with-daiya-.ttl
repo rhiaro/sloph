@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/pizza-with-daiya->
+  a as:Activity, asext:Consume ;
+  as:name "Pizza with daiya and ( olives & mushrooms ) or ( chilli peppers and broccoli ); root beer" ;
+  as:published "2016-08-17T19:05:22-05:00"^^xsd:dateTime, "2016-08-17T19:05:22-05:00" ;
+  as:tag "pizza", "soda", "us0816 cwebber", "vegetables", <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/pizza>, <https://rhiaro.co.uk/tags/soda>, <https://rhiaro.co.uk/tags/us0816+cwebber> .
+

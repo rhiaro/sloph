@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "2 bagels with jam",
+    "as:tag": [
+        "ca2016",
+        "chi2016",
+        "bread"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-07T11:41:06-07:00",
+    "@id": "http://blog.rhiaro.co.uk/2-bagels-with-jam",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/2-bagels-with-jam"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-07T11:41:06-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

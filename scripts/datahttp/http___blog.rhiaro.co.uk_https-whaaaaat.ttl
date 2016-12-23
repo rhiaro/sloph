@@ -1,0 +1,29 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/https-whaaaaat>
+  dcterms:title "HTTPS: whaaaaat" ;
+  dcterms:created "2015-12-08T00:19:29+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """
+<!---
+tags: https,ssl,hacking,nginx,docker
+-->
+
+# HTTPS: whaaaaat
+
+Following on from [a terrible experience](/2015/12/https-what), I discovered that indeed Gold had taken over port 443. As soon as I kicked it off, I could launch the nginx proxy container with `-p 80:80` *and* `-p 443:443`. So now the proxy knows where to find the key and cert, and is trying to load the subdomain over https, but is getting connection refused. The proxy docs say this might happen "if the container does not have a usable cert" so now I have to find out what is wrong with my cert?
+
+Is it permissions? It's usually permissions. Nginx might reject things if they key is world readable? Tried setting to 0600 for the key and cert. No dice.
+
+What next?
+
+""" ;
+  sioc:topic "hacking", "https", "ssl", "nginx", "docker" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/12/https-whaaaaat> ;
+  blog:tmpcontent "# HTTPS: whaaaaat" .
+

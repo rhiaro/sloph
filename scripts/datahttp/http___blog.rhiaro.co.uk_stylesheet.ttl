@@ -1,0 +1,514 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/stylesheet>
+  dcterms:title "Stylesheet organisation" ;
+  dcterms:created "2012-05-17T16:25:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T00:11:02.726Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-979096441285034894" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """About a year and a half ago I realised I needed to get a grip on how to
+organise my CSS.  I established a template, which I proceeded to change
+drastically with every new project.  I noticed recently that I've been reusing
+a version for the past few projects, with at the most only minor amendments to
+the general structure.  I also noticed how quickly I'm rolling out initial
+designs using this template.  
+  
+I have finally reached the point where I figured out what I consistently reuse
+across projects, and finally have a stylesheet structure that makes such
+intuitive sense to me I can dart around and make changes with my eyes closed.
+I find my stylesheets are much smaller, but even as they grow, I still know
+exactly where everything is.  I wish I had some statistics to quote about the
+amount of time spent scrolling through CSS looking for things.  I'm confident
+it is much reduced.  
+  
+Some aspects of my workflow I developed through intuition; I made changes that
+felt right to me at the time, without really consulting anyone else's best
+practices.  Other things I picked up from here and there.  Every now and again
+I'd search for 'the right way' of doing this and find processes and systems
+that didn't gel with me (a primary example of this being the number of pre-
+built grid systems I tried and hated).  Eventually I would give up under the
+sheer number of contradicting points of view, but I probably picked up some
+subconscious inspiration on the way.  
+  
+I hadn't thought much of this until [Chris
+Eppstein](http://twitter.com/chriseppstein) talked about this at
+[FOWD](http://http//futureofwebdesign.com/london-2012/) today.  A lot of the
+suggestions he demo'd are very similar to parts of my system (conceptually at
+least; he was discussing SASS and mine is raw CSS).  So I figured it's reached
+the point it is worth sharing.  
+  
+First things first, I start with a basic
+[Initializr](http://www.blogger.com/www.initializr.com) stylesheet; a couple
+of minor tweaks, but then I largely accept the helper classes and IE fixes and
+hacks (no need to read this; it's just here for completeness):  
+  
+  
+
+    
+    
+    /* ======================================================================  
+    HTML5 Boilerplate CSS: h5bp.com/css  
+    ========================================================================== */  
+      
+    article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }  
+    audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }  
+    audio:not([controls]) { display: none; }  
+    [hidden] { display: none; }  
+      
+    html { height: 100%, font-size: 62.5%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }  
+    html, button, input, select, textarea { font-family: sans-serif; color: #222; }  
+    body { height: 100%; margin: 0; padding: 0; font-size: 1em; }  
+      
+    ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }  
+    ::selection { background: #fe57a1; color: #fff; text-shadow: none; }  
+      
+    a { color: #00e; }  
+    a:visited { color: #551a8b; }  
+    a:hover { color: #06e; }  
+    a:focus { outline: thin dotted; }  
+    a:hover, a:active { outline: 0; }  
+      
+    abbr[title] { border-bottom: 1px dotted; }  
+    b, strong { font-weight: bold; }  
+    blockquote { margin: 1em 40px; }  
+    dfn { font-style: italic; }  
+    hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }  
+    ins { background: #ff9; color: #000; text-decoration: none; }  
+    mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }  
+    pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }  
+    pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }  
+    q { quotes: none; }  
+    q:before, q:after { content: ""; content: none; }  
+    small { font-size: 85%; }  
+      
+    sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }  
+    sup { top: -0.5em; }  
+    sub { bottom: -0.25em; }  
+      
+    ul, ol { margin: 1em 0; padding: 0 0 0 40px; }  
+    dd { margin: 0 0 0 40px; }  
+    nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }  
+      
+    img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }  
+      
+    svg:not(:root) { overflow: hidden; }  
+      
+    figure { margin: 0; }  
+      
+    form { margin: 0; }  
+    fieldset { border: 0; margin: 0; padding: 0; }  
+    label { cursor: pointer; }  
+    legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }  
+    button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }  
+    button, input { line-height: normal; }  
+    button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }  
+    button[disabled], input[disabled] { cursor: default; }  
+    input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }  
+    input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }  
+    input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }  
+    button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }  
+    textarea { overflow: auto; vertical-align: top; resize: vertical; }  
+    input:valid, textarea:valid {  }  
+    input:invalid, textarea:invalid { background-color: #f0dddd; }  
+      
+    table { border-collapse: collapse; border-spacing: 0; }  
+    td { vertical-align: top; }  
+      
+    .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }  
+      
+    /* ===============  
+        ALL: IE Fixes  
+       =============== */  
+      
+    .ie7 #title{ padding-top:20px; }  
+      
+    /*******************************************/  
+    /*                                         */  
+    /* My styles go here!                      */  
+    /*                                         */  
+    /*******************************************/  
+      
+    /* =============================================================================  
+       Non-Semantic Helper Classes  
+       ========================================================================== */  
+      
+    .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }  
+    .ir br { display: none; }  
+    .hidden { display: none !important; visibility: hidden; }  
+    .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }  
+    .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }  
+    .invisible { visibility: hidden; }  
+    .clearfix:before, .clearfix:after { content: ""; display: table; }  
+    .clearfix:after { clear: both; }  
+    .clearfix { *zoom: 1; }  
+      
+    /* =============================================================================  
+       Print Styles  
+       ========================================================================== */  
+       
+    @media print {  
+      * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */  
+      a, a:visited { text-decoration: underline; }  
+      a[href]:after { content: " (" attr(href) ")"; }  
+      abbr[title]:after { content: " (" attr(title) ")"; }  
+      .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */  
+      pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }  
+      thead { display: table-header-group; } /* h5bp.com/t */  
+      tr, img { page-break-inside: avoid; }  
+      img { max-width: 100% !important; }  
+      @page { margin: 0.5cm; }  
+      p, h2, h3 { orphans: 3; widows: 3; }  
+      h2, h3 { page-break-after: avoid; }  
+    }  
+    
+
+  
+My template is inserted into the appropriate point of the Initializr
+stylesheet.  I divide into five sections:  
+  
+
+    
+    
+    /* 0 Accessibility */  
+      
+    /* 1 Typography */  
+      
+    /* 2 Colours & borders */  
+      
+    /* 3 Spacing & layout */  
+      
+    /* 4 Images & video */  
+    
+
+  
+I start each section with empty media query clauses for 480px and up, 768px
+and up, 1024px and up, and 1200px and up.  By the time a project is done each
+section will typically have from one to six media query breakpoints in it,
+according to requirements.  
+  
+0\\\\. Accessibility  
+  
+A staple of this so far is:  
+  
+
+    
+    
+    /**   
+     0 Accessibility  
+    **/  
+    .no-css {  
+     /* This class hides stuff that needs to be around for screenreaders or users with no CSS, but not in normal circumstances */  
+     position: absolute; left: -1000px;  
+    }  
+    
+
+  
+Which I chuck in when I use visuals to enhance some content, to hide an
+appropriately positioned textual equivalent.  
+  
+There's probably more useful stuff that should be here. I'm working on it.
+(Suggestions welcome!).  
+  
+1\\\\. Typography  
+  
+Not a lot going on here. Some obvious placeholders, plus a couple of classes I
+found myself needing over and over, which should be self explanatory (.win and
+.fail are applied to success or error messages; usually a form submission is
+involved).  
+  
+
+    
+    
+    /**  
+     1 Typography  
+    **/  
+      
+    h1 {}  
+    h2 {}  
+    h3 {}  
+    h4 {}  
+      
+    p {}  
+    a { text-decoration: inherit; }  
+    a:hover { text-decoration: underline; }  
+      
+    .note {  
+      font-size: 1em;  
+      font-weight: bold;  
+      text-align: right;  
+    }  
+      
+    .wee {  
+      font-size: 0.8em;  
+    }  
+      
+    .win, .fail {}  
+      
+    
+
+  
+In typography, I strictly only include font stuff like faces, sizes,
+alignment, decoration and enhancements like text-decoration, font-weight.  
+  
+2\\\\. Colours and borders  
+  
+Border styles go here because they need to be defined before the border
+colours are. Otherwise, just colours go here:  
+  
+
+    
+    
+    /* Borders */  
+      .win, .fail { border: 2px solid; }  
+      
+    /* Dark */  
+      .dark { color: #2d2d2d;}  
+      .dark-bg { background-color: #2d2d2d; }  
+      .darker{ color: #000; }  
+      .darker-bg { background-color: #000; }  
+      
+    /* Primary Color */  
+      .color1 { color: green; }  
+      .color1-bg { background-color: green; }  
+      .color1-border { border-color: green; }  
+      .color1-texture { }  
+      
+    /* Secondary Color */  
+      .color2 { color: yellow; }  
+      .color2-bg { background-color: yellow; }  
+      .color2-border { border-color: yellow; }  
+      .color2-texture { }  
+        
+    /* Tertiary Color */  
+      .color3 { color: red; }  
+      .color3-bg { background-color: red; }  
+      .color3-border { border-color: red; }  
+      .color3-texture { }  
+      
+    /* Light */  
+      .light { color: #ccc; }  
+      .light-bg { background-color: #ccc; }  
+      .lighter { color: #fff; }  
+      .lighter-bg { background-color: #fff; }  
+      
+    .note { color: silver; }  
+      
+    .win {  
+      background-color: #E6EFC2;  
+      color:#264409;  
+      border-color:#C6D880;  
+    }  
+      
+    .fail {  
+      background:#FBE3E4;  
+      color:#8a1f11;  
+      border-color:#FBC2C4;  
+    }  
+    
+
+  
+After border styles, I start with the colour scheme, creating classes for text
+colours, background colours and border colours. It's unusual to need to go
+beyond a tertiary colour, and typically I only have primary and secondary.
+This leaves me with classes I can apply to any elements in my html templates,
+making it really quick and easy to experiment with different colour
+combinations. The color*-texture classes come in handy when I have textured
+backgrounds that match the colour scheme, and would include the background
+image (a repeating square of noise texture for example) and a background-
+colour as a backup.  
+  
+Most of the time I don't want to be applying classes to _everything_ to add
+colour though. I list elements that I'm confident aren't going to change in
+the mark-up which need colours applying to them, for example:  
+  
+
+    
+    
+    /**  
+        2 Colours and borders  
+    **/  
+      
+    /* Primary colour */  
+      .color1, body { color: green; }  
+      .color1-bg, nav, footer { background-color: green; }  
+      
+    /* Secondary Color */  
+      .color2, nav { color: yellow; }  
+      .color2-bg, body { background-color: yellow; }  
+      
+    /* ...etc... */  
+    
+
+  
+I'm a fan of using off-white and off-black, so these are what I originally
+picked for my .light and .dark classes, which are always handy to have.
+Sometimes pure black and white are necessary too though, so the .lighter and
+.darker classes were born.  
+  
+You can see .note, .win and .fail show up here too.  
+  
+This pretty much means this is as long as the colours section will ever get. I
+don't apply colours anywhere else in the stylesheet, and it helps to ensure I
+stick to a colour scheme and don't get carried away with exceptions.
+Obviously, this also makes it super easy to change the colour scheme uniformly
+in a couple of seconds.  
+  
+3\\\\. Spacing and grid  
+  
+As I already mentioned, I have poked around with some of the existing flexible
+grid frameworks but none of them grabbed me. They all seemed to have too much.
+The minimalist system I came up with has answered all of my needs so far,
+although I wouldn't claim it's suitable for _every_ project in the world. It's
+also subject to tweaks, depending on the project of the moment.  
+  
+I stick with Initializr's .wrapper class, which is 100% width until the
+viewport reaches 1024px, when it snaps to 900px wide. This is my default
+because it's been the most frequently appropriate so far. I have an ongoing
+project at the moment where the target audience are largely gamers, so
+capitalising on the excessive screen real estate they'll probably have means I
+stripped out this restriction in favour of a full width multi-column layout
+when the device allows.  
+  
+I haven't yet had a need to go above five columns for my grid. I express my
+class names like fractions, and start off with only the 1/2, 1/3 and 2/3 ones
+taking up the correct proportion of the screen, with the others defaulting to
+100%. This then changes for wider-than-small viewports, as you can see.  
+  
+There are a few navigation list related things in there that I often find
+myself duplicating across projects (like a default centre-aligned stacked menu
+which progresses to a floating horizontal version). I pad my a elements (as
+opposed to their containing li elements) to enlarge the touch area for links.
+Plus some nth-child stuff for three column layouts, for keeping consistent row
+heights when the column heights are different.  
+  
+
+    
+    
+    /**   
+     3 Spacing & Grid  
+    **/  
+      
+    .wrapper {  
+     width: 100%;  
+    }  
+      
+    /* Grid */  
+    .w1of2 { width: 50%; float: left; }  
+    .w1of3 { width: 33%; float: left; }  
+    .w2of3 { width: 66%; float; left; }  
+    .w1of1, .w1of4, .w1of5,  
+    .w3of4, .w2of5, .w3of5, .w4of5 {  
+     width: 100%;  
+    }  
+      
+    .inner {  
+     padding: 1em;  
+    }  
+      
+    nav {  
+     max-width: 100%;  
+    }  
+      
+    nav a {  
+     display: block;  
+     padding: 0.8em;  
+    }  
+      
+    .inline { display: inline; }  
+      
+    .win, .fail {  
+      padding: 0.2em;  
+      display: block;  
+    }  
+      
+      
+    /* 3.1  */  
+     @media screen and (min-width: 479px){  
+        
+      nav li { float: left; }  
+     }  
+      
+    /* 3.2  */  
+     @media screen and (min-width: 768px){  
+      .w1of2 { width: 50%; float: left; }  
+      .w1of3 { width: 33%; float: left; }  
+      .w1of4 { width: 25%; float: left; }  
+      .w1of5 { width: 20%; float: left; }  
+      .w2of3 { width: 66%; float: left; }  
+      .w3of4 { width: 75%; float: left; }  
+      .w2of5 { width: 40%; float: left; }  
+      .w3of5 { width: 60%; float: left; }  
+      .w4of5 { width: 80%; float: left; }  
+      
+      .w1of3:nth-child(odd) { clear: none; }  
+      .w1of3:nth-child(3n-2) { clear: both; }  
+     }  
+      
+    /* 3.3  */  
+     @media screen and (min-width: 1024px){  
+      .wrapper {  
+       width: 900px;  
+       margin-left: auto; margin-right: auto;  
+      }  
+     }  
+    
+
+  
+Everything that goes in this section is to do with spacing: padding, margins,
+positioning, floating, wrapping... et cetera.  
+  
+4\\\\. Images and video  
+  
+Most projects call for tweaks to images that may or may not fit into the other
+sections of the stylesheet. Nonetheless, my brain copes better with I group
+them all together. Flexible YouTube video embed lives here too.  
+  
+
+    
+    
+    /**   
+     4.0 Images and video  
+    **/  
+      
+    .vid-holder {  
+     position: relative;  
+     padding-bottom: 56.25%;  
+     padding-top: 30px;  
+     height: 0;  
+     overflow: hidden;  
+    }  
+      
+    .vid-holder iframe,    
+    .vid-holder object,    
+    .vid-holder embed {  
+     position: absolute;  
+     top: 0;  
+     left: 0;  
+     width: 100%;  
+     height: 100%;  
+    }  
+      
+    /* Full width images on bigger than small screens are dumb. Reset this. */  
+    @media screen and (max-width: 478px){  
+      .w1of1 img, .w1of2 img, .w1of3 img, .w1of4 img, .w1of5 img,  
+      .w2of3 img, .w3of4 img, .w2of5 img, .w3of5 img, .w4of5 img {  
+        width: 100%;  
+      }  
+    }  
+    
+
+  
+And that's what I start all projects with. [Here is it all
+assembled](http://rhiaro.co.uk/demo/), with a few of the classes throw into
+the mark-up so you can see what's going on. If (when) I end up doing another
+major update, I shall probably write about it again.
+
+""" ;
+  sioc:topic blog:Doing, "web dev", "stylesheet organisation", "learning", "hacking", "frontend", "fowd", "css", "clean css", "#cleanstyles" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2012/05/stylesheet> .
+

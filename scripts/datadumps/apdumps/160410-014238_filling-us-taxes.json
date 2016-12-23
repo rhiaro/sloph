@@ -1,0 +1,19 @@
+{
+    "h": "entry",
+    "content": "Filling US taxes is enough motivation to never live in this country again.",
+    "category": [
+        "life",
+        "USA",
+        "taxes"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-10T01:42:38+01:00",
+    "@id": "http://blog.rhiaro.co.uk/filling-us-taxes",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/filling-us-taxes"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-10T01:42:38+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

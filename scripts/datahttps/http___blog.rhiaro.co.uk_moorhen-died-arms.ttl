@@ -1,0 +1,20 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/moorhen-died-arms> as:content """It was sad indeed.  Plus the hoard of ducklings is now down to seven.  (There
+were nine, last time I was in, and they started at ten).  Apparently they can
+die from being too wet.  Who knew.  
+  
+I also encountered this morning: a pigeon who held his head upside down and
+walked in circles.  He had issues.  And a flightless canary, who seems healthy
+in all other aspects.  Maybe heâ€™s just awkward.  But because of this, it
+doesnâ€™t look like heâ€™s fit for the outside aviary.  If I didnâ€™t think Tigo
+would eat him, Iâ€™d adopt him in a second.  
+  
+Speaking of Tigo, he seems to be exhibiting nesting behaviour:  
+[images]  
+I think he might be hormonal.  It would certainly explain the sudden increase
+in biting.  
+  
+PS. Yesterdayâ€™s prophecy came true.  Quelle surprise.
+
+""" .

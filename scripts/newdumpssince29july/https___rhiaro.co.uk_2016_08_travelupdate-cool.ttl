@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/travelupdate-cool>
+  a as:Note ;
+  as:published "2016-08-14T01:02:11+01:00"^^xsd:dateTime ;
+  as:tag "travel", "bus", "greyhound", "us0816", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/travel>, <https://rhiaro.co.uk/tags/bus>, <https://rhiaro.co.uk/tags/greyhound> ;
+  as:content """<p>...travelupdate... cool highway bro</p>
+<p><img src="https://pbs.twimg.com/media/CpvD18kWAAA21UA.jpg" alt="bus" /></p>""" ;
+  as:inReplyTo <https://rhiaro.co.uk/2016/08/bus-broken-down> .
+

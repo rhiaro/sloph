@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/smoothie-banana>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-01-23T09:18:22-05:00"^^xsd:dateTime, "2016-01-23T09:18:22-05:00" ;
+  as:tag "fruit" ;
+  as:name "Smoothie (banana, peach, raspberry, almond milk)" .
+

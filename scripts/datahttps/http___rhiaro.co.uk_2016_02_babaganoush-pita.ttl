@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/babaganoush-pita>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-02-14T13:03:38-05:00"^^xsd:dateTime, "2016-02-14T13:03:38-05:00" ;
+  as:tag "bread", "jaffa" ;
+  as:name "Babaganoush pita, vine leaves (Jaffa)" .
+

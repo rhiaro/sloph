@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/mivesto/status/591993792170962944>
+  a as:Announce ;
+  as:published "2015-04-25T16:54:53+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@elfpavlik][1]: "Implicit vs explicit object types" by @rhiaro rhiaro.co.uk/2015/04/post-aâ€¦ see: [#hEntry #Activity] cc: [#IndieWeb #ActivityStreams #LinkedData]
+
+[1]: https://twitter.com/elfpavlik
+""" ;
+  as:actor <http://www.mivesto.de/agavi/agavi-faq.html> ;
+  as:object <https://rhiaro.co.uk/2015/04/post-and-activity-types> .
+

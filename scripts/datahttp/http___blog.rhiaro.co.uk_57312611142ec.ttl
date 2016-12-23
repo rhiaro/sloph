@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/57312611142ec>
+  dcterms:created "2016-05-10T01:06:41+01:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/57312611142ec> ;
+  blog:like_of <https://twitter.com/benki/status/729823023360966656> .
+

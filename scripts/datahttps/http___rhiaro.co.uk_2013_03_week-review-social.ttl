@@ -1,0 +1,62 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/03/week-review-social>
+  as:published "2013-03-15T21:41:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "semantic web", "social computing", "social computation", "annotation", "online communities", "week in review", "social informatics" ;
+  as:name "Week in review: mostly social computing" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8782926183634866478" ;
+  as:content """**4th - 10th March**  
+**  
+**I played with the Tell Me Scotland SPARQL endpoint to put Scottish public notices on an OpenStreetMap: <https://rhiaro.co.uk/publicnotices/map.php>.  It works intermittently, as the TMS endpoint is a 'proof of concept'.  Okay, that's not PhD related, but it's still interesting.  
+  
+I went to the 5th OKFN Edinburgh meetup at Napier.  Look, evidence, I'm [in
+the picture](http://scot.okfn.org/2013/03/14/opendataedb-at-edinburgh-napier-
+university/)!  
+  
+[Dave Robertson](http://www.inf.ed.ac.uk/people/staff/Dave_Robertson.html)
+asked me hard questions about how I'll turn my vague research interests and
+intentions to make something useful into a PhD with genuine contributions to
+knowledge and I floundered a bit, but he agreed to be my second supervisor
+nonetheless.  I hadn't properly thought about it in those terms, and I'm still
+figuring it out with like, words.  (As opposed to a gut feeling).  I'd always
+planned to plough ahead enthusiastically and hope for the best.  That's how I
+approach everything, actually.  
+  
+I started reading Community-Based Annotation for the Semantic Web by Matthew
+Rowe (2007); I think it was a first-year PhD review, and I was primarily
+reference-harvesting.  More on that next week.  
+  
+I attended a Social Informatics Cluster meeting, and heard about the [Smart
+Society](http://smart-society-project.eu/) project; very much in its figuring
+out stages, but worth following as it appears to have many diverse goals, and
+various crowd-computation related outcomes might be relevant to what I'm
+doing.  
+  
+I went to an ESALA lunchtime talk entitled 'Data Objects', by Ian Gwilt of
+Sheffield Hallam.  I have to admit, I was expecting something more technical
+and internet-of-things-y.  Actually data objects are primarily tangible
+visualisaitons; 3D printed, carved out of wood or sculpted from bronze.  The
+research was about how people reacted to and understood data differently when
+it was presented in different forms.  Interesting, and they got some very
+pretty artefacts out of it, but not directly relevant so I don't have room in
+my head to store it unfortunately.  
+  
+I attended the new Social Computing interest group kick-off meeting,
+coordinated by Dave Murray-Rust.  Everyone introduced themselves, and we
+arranged a time slot for future meetings.  It looks like I'll be presenting
+there at some point in the probably not-so-distant future (it was decided that
+everyone should).  There were a very diverse bunch of people there, and
+'social computing' hasn't been defined officially for the group yet.  Quite a
+few people are attending to essentially see what all the fuss is about.  I'm
+hopeful that there will be a hardcore technical leaning, because that's where
+most of the gaps in my knowledge are.  Well, I'm more gaps than knowledge
+about everything, but that's where I feel particularly vulnerable.  
+  
+  
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:06:12.090Z"^^xsd:datetime .
+

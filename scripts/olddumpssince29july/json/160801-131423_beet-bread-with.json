@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Beet bread with cream cheese and refried beans; coffee",
+    "as:tag": [
+        "bread",
+        "beans",
+        "coffee"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-01T08:14:23-04:00",
+    "@id": "http://blog.rhiaro.co.uk/beet-bread-with",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/beet-bread-with"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-01T08:14:23-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

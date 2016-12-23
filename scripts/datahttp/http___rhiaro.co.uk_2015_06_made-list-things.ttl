@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://rhiaro.co.uk/2015/06/made-list-things> sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/611143080297820160/16432951>, <https://twitter.com/PhD_Connect/status/611143776552271873> .

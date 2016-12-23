@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/pancakes-made-elaine>
+  a blog:Consumption ;
+  dcterms:created "2016-06-11T15:04:53-07:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/pancakes-made> ;
+  as:published "2016-06-11T15:04:53-07:00" ;
+  as:tag "coffee", "foodparsed.com", "pancakes" ;
+  as:name "Pancakes made by Elaine, with peanut butter. Coffee" .
+

@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2016/02/56ca1f759796d>
+  a as:Travel ;
+  as:published "2016-02-21T15:33:14-05:00", "2016-02-21T15:33:14-05:00"^^xsd:dateTime ;
+  as:tag "journey", "sociam", "southampton", "train", "travel", "uk" ;
+  as:startTime "2016-02-24T09:34:00+00:00" ;
+  as:endTime "2016-02-21T09:58:00+00:00" ;
+  blog:cost "&pound;2.80" ;
+  as:origin <http://dbpedia.org/resource/Southampton> ;
+  as:target <http://dbpedia.org/resource/Brockenhurst> .
+

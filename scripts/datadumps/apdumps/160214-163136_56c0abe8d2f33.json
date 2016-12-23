@@ -1,0 +1,23 @@
+{
+    "h": "entry",
+    "bookmark-of": "https://medium.com/@randileeharper/putting-out-the-twitter-trashfire-3ac6cb1af3e#.xobo0zujk",
+    "category": [
+        "twitter",
+        "randileeharper",
+        "abuse",
+        "online",
+        "identity",
+        "social",
+        "media"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-14T16:31:36+00:00",
+    "@id": "http://blog.rhiaro.co.uk/56c0abe8d2f33",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56c0abe8d2f33"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-14T16:31:36+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

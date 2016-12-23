@@ -1,0 +1,22 @@
+{
+    "h": "entry",
+    "bookmark-of": "http://inkdroid.org/",
+    "category": [
+        "ed summers",
+        "linked data",
+        "knowledge management",
+        "social science",
+        "privacy",
+        "identity"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-02T16:22:11+00:00",
+    "@id": "http://blog.rhiaro.co.uk/56b0d7b324f77",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56b0d7b324f77"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-02T16:22:11+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

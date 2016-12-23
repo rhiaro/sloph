@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/jamaican-chilli>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-05-20T16:10:33-07:00"^^xsd:dateTime, "2016-05-20T16:10:33-07:00" ;
+  as:tag "ca2016", "chilli", "juice", "rice" ;
+  as:name "Jamaican chilli and rice, beet juice" .
+

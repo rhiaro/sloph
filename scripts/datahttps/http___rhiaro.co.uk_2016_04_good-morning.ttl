@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/good-morning>
+  as:published "2016-04-11T14:30:01+01:00"^^xsd:dateTime ;
+  as:tag "phd", "conference", "www2016", "socm2016" ;
+  as:content "Good morning, announcing my presence at &#35;www2016 and &#35;socm2016" .
+

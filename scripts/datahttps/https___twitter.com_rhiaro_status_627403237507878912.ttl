@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/rhiaro/status/627403237507878912>
+  sioc:reply_of <https://rhiaro.co.uk/2015/07/waiting-bus> ;
+  as:published "2015-08-01T09:59:23+01:00"^^xsd:datetime ;
+  as:name "@nevali I've been looking out for you!" ;
+  as:content """[@nevali][1] I've been looking out for you!
+
+[1]: https://twitter.com/nevali
+""" ;
+  as:actor <https://rhiaro.co.uk/> .
+

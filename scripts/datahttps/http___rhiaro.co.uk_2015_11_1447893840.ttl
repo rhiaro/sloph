@@ -1,0 +1,22 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/11/1447893840>
+  as:published "2015-11-19T00:44:00+0000"^^xsd:datetime ;
+  as:tag "socialwg", "indiewebcamp", "travel", "journey", "plane", "usa" ;
+  as:startTime "2015-11-30T22:43:00+0000"^^xsd:datetime ;
+  as:endTime "2015-12-01T05:22:00+0000"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Boston" ;
+  blog:endLocation "http://dbpedia.org/resource/San_Francisco" ;
+  blog:cost "518 USD" ;
+  as:content """<!---
+tags: plane,journey,travel,usa,socialwg,indiewebcamp
+start: 30 November 2015, 17:43 EST
+end: 30 November 2015, 21:22 PST
+cost: 518 USD
+startLocation: http://dbpedia.org/resource/Boston
+endLocation: http://dbpedia.org/resource/San_Francisco
+published: 18 November 2015, 19:44 EST
+-->""" .
+

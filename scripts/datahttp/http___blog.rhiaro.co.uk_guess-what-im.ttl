@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/guess-what-im>
+  dcterms:created "2016-01-19T21:24:32+00:00"^^xsd:dateTime ;
+  sioc:content "I guess what I'm trying to say is I'm much less hungry after meals where more than only the side salad is vegan." ;
+  sioc:topic "food", "life", "vegan" ;
+  sioc:reply_of <http://rhiaro.co.uk/2016/01/progressive> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/guess-what-im> .
+

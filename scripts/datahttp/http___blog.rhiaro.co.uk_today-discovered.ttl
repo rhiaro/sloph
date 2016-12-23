@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/today-discovered>
+  dcterms:created "2016-06-25T18:04:30+01:00"^^xsd:dateTime ;
+  sioc:content "Today I discovered kohlrabi is good, acquired through [Clover](https://www.cloverfoodlab.com/) farm share and cooked by [Elaine](http://foodparsed.com)" ;
+  sioc:topic "cloverfoodlab.com", "food", "foodparsed.com", "kohlrabi", "vegan" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/today-discovered> .
+

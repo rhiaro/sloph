@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/watermelon-3>
+  a as:Activity, asext:Consume ;
+  as:name "Watermelon" ;
+  as:published "2016-08-31T12:58:25-04:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/fruit> .
+

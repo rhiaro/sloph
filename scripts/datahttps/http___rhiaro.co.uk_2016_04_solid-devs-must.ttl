@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/solid-devs-must>
+  as:published "2016-04-12T16:40:56+01:00"^^xsd:dateTime ;
+  as:tag "solid", "www2016" ;
+  as:content "Solid devs must learn to love restarting the browser. " .
+

@@ -1,0 +1,41 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2011/09/msc-research>
+  blog:tmpcontent """# MSc by research Interdisciplinary Creative Practices
+
+## <span class="h-card p-org">Edinburgh College of Art, University of Edinburgh</span>
+
+Core classes taught concepts from architecture, philosophy, art, sociology, media theory, political sciences, choreography, design, history, literature... and who knows what else. My eyes were opened to a million new ways of thinking about the world. I started to understand 'research by practice' and the value of play. There was still a lot of artsy crap I couldn't accept, but it was mostly okay. I took electives inside my comfort zone, from the School of Informatics (Advanced Natural Language Processing and Multi-agent Semantic Web Systems). I worked on group projects with an awesome and diverse bunch of people from whom I learnt a lot.
+
+### Thesis: *Location-aware literature*
+
+(I cleverly wrote this thesis in Google Docs, but I might translate it to HTML and link to it one day).
+
+I worked with a couple of people in the English Literature department to build Palimpsest, a web app (with Python and JavaScript on Google AppEngine) that shows you historical texts based on your location as you walk around a city. I spent most time on the authoring interface, for plotting texts onto a map. The project is still going, though it's morphed now and outgrown the code I wrote. I'd intended to develop this into a full blown interactive fiction engine and authoring system that let you draw the world map onto a real map, so that players could navigate the story by moving around IRL. I didn't pull that off, but I mocked it up.""" ;
+  as:published "2011-09-01T09:00:00+0100"^^xsd:datetime ;
+  as:tag "academia", "resume", "cv", "python", "education", "university of edinburgh", "msc", "icp", "nlp", "geolocation", "edinburgh college of art", "interactive fiction", "interdisciplinary creative practices", "text adventures", "google appengine" ;
+  as:name "MSc by research Interdisciplinary Creative Practices" ;
+  as:startTime "2011-09-01T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2012-08-17T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st September 2011, 09:00 BST
+start: 1st September 2011
+end: 17 August 2012
+tags: education,academia,msc,interdisciplinary creative practices,icp,university of edinburgh,edinburgh college of art,interactive fiction,text adventures,geolocation,google appengine,python,nlp,cv,resume
+-->
+
+# MSc by research Interdisciplinary Creative Practices
+
+## <span class="h-card p-org">Edinburgh College of Art, University of Edinburgh</span>
+
+Core classes taught concepts from architecture, philosophy, art, sociology, media theory, political sciences, choreography, design, history, literature... and who knows what else. My eyes were opened to a million new ways of thinking about the world. I started to understand 'research by practice' and the value of play. There was still a lot of artsy crap I couldn't accept, but it was mostly okay. I took electives inside my comfort zone, from the School of Informatics (Advanced Natural Language Processing and Multi-agent Semantic Web Systems). I worked on group projects with an awesome and diverse bunch of people from whom I learnt a lot.
+
+### Thesis: *Location-aware literature*
+
+(I cleverly wrote this thesis in Google Docs, but I might translate it to HTML and link to it one day).
+
+I worked with a couple of people in the English Literature department to build Palimpsest, a web app (with Python and JavaScript on Google AppEngine) that shows you historical texts based on your location as you walk around a city. I spent most time on the authoring interface, for plotting texts onto a map. The project is still going, though it's morphed now and outgrown the code I wrote. I'd intended to develop this into a full blown interactive fiction engine and authoring system that let you draw the world map onto a real map, so that players could navigate the story by moving around IRL. I didn't pull that off, but I mocked it up.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

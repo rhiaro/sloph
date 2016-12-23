@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/06/omg-lot-tabs-open>
+  blog:tmpcontent "Omg I have a lot of tabs open. When do I decide I can ignore all SN profiles studies conducted before 2012? Could also filter out 'myspace', 'digital natives' and 'college students'." ;
+  as:published "2015-06-17T12:45:56+0100"^^xsd:datetime ;
+  as:tag "phd", "social networks", "academia", "research", "studies" ;
+  as:content """<!---
+tags: phd,social networks,academia,studies,research
+-->
+
+Omg I have a lot of tabs open. When do I decide I can ignore all SN profiles studies conducted before 2012? Could also filter out 'myspace', 'digital natives' and 'college students'.""" ;
+  sioc:has_reply <https://twitter.com/PhD_Connect/status/611138749662121984> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

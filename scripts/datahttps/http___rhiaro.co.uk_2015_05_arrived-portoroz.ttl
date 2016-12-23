@@ -1,0 +1,21 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/05/arrived-portoroz>
+  as:latitude "45.52089" ;
+  as:longitude "13.58994" ;
+  blog:tmpcontent "Arrived in Portoroz for ESWC2015! Hostel on the top of the hill, naturally. Anyone for dinner?" ;
+  as:published "2015-05-30T18:54:44+0100"^^xsd:datetime ;
+  as:tag "travel", "slovenia", "portoroz", "eswc2015" ;
+  as:location <http://dbpedia.org/resource/Portoroz> ;
+  as:content """<!---
+tags: travel,eswc2015,slovenia,portoroz
+location: http://dbpedia.org/resource/Portoroz
+-->
+
+Arrived in Portoroz for ESWC2015! Hostel on the top of the hill, naturally. Anyone for dinner?""" ;
+  sioc:has_reply <https://twitter.com/eswc_conf/status/604789953671929857>, <https://twitter.com/gray_alasdair/status/604749394244694017>, <https://twitter.com/rhiaro/status/604710955474415616>, <https://twitter.com/rhiaro/status/604711011959062529>, <https://twitter.com/cryomaniac/status/604708357774184449>, <https://twitter.com/Ricardo_Usbeck/status/604708365089042432> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

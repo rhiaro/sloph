@@ -1,0 +1,52 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/standards-star-trek-3>
+  blog:tmpcontent """# Standards and Star Trek
+
+## On staying in scope
+
+S3E13, Deja Q...
+
+Q: "Simple: Change the gravitational constant of the universe."
+
+Geordi: "What?"
+
+Q: "Change the gravitational constant of the universe, thereby altering the mass of the asteroid."
+
+Geordi: "Redefine gravity. And how the hell am I supposed to do that?"
+
+Q: "You just DO it. GAHH! Where's that doctor, anyway?"
+
+Data: "Geordi is trying to say that changing the gravitational constant of the universe is beyond our capabilities."
+
+Q: "Well, then... never mind."""" ;
+  as:published "2015-12-19T22:28:53+0000"^^xsd:datetime ;
+  as:tag "scope", "star trek", "standards" ;
+  as:name "Standards and Star Trek" ;
+  as:content """<!---
+tags: standards,star trek,scope
+-->
+
+# Standards and Star Trek
+
+## On staying in scope
+
+S3E13, Deja Q...
+
+Q: "Simple: Change the gravitational constant of the universe."
+
+Geordi: "What?"
+
+Q: "Change the gravitational constant of the universe, thereby altering the mass of the asteroid."
+
+Geordi: "Redefine gravity. And how the hell am I supposed to do that?"
+
+Q: "You just DO it. GAHH! Where's that doctor, anyway?"
+
+Data: "Geordi is trying to say that changing the gravitational constant of the universe is beyond our capabilities."
+
+Q: "Well, then... never mind."""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

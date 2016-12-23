@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://rhiaro.co.uk/2015/06/okay-private> sioc:has_reply <https://twitter.com/DrDanielASmith/status/611919882347659264>, <https://twitter.com/johnnieingram/status/611881734368555008>, <https://twitter.com/johnnieingram/status/611881676805963776> .

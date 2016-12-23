@@ -1,0 +1,70 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/post-oz>
+  dcterms:title "Post-Oz: Some conclusions" ;
+  dcterms:created "2013-07-04T22:11:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-07-04T22:11:02.988Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-1620265304664866442" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """So I got behind with the blogging.  As in, I didn't do any.  I will rectify
+that over upcoming days!  But for now, I will reflect on my Pre-Oz quests.  
+  
+**1\\\\. Find the resting place of my Uncle David.**  
+**  
+** Achieved, debatabley.  I found the Herb Garden, South Yarra, which was part of Melbourne's amazing Botanic Gardens (and conveniently pretty much across the road from where Jamie lived).  However, it has never been legal to scatter ashes there, and there definitely aren't any headstones.  It doesn't mean he wasn't scattered there though.  So I took lots of pictures.  That's the best I could do.  It _is_ beautiful.  
+  
+**2\\\\. Forge ties between Edinburgh and Melbourne Open Knowledge Foundations.**  
+**  
+** Well, I went to #govHack and had an amazing time.  Pete and I discovered we'd already been to one of [Flanders](http://twitter.com/dfflanders)' hacks in the UK, and another hack that had derived from it (Dev8D and DevXS).  So we were well received.  Also because we'd travelled 11,000 miles to be there.  And I got to know some things about Australian data.  Stay posted for the official blog.  
+  
+**Check out some of the places my Mum and her family lived.**  
+**  
+** I found a caravan park in Palm Cove where she lived 38 years ago, and the creek where she learned to swim!  The change in the town from how she described it was immense, but walking the same beach she walked as a child was a really surreal experience.  I also dangled my feet in Mossman Gorge in the Daintree rainforest before I even knew that she used to swim there.   
+  
+I saw a sign to Toowoomba near Brisbane, where she lived too.  
+  
+**Maybe attempt to bump into relatives or family friends.**  
+**  
+** Wasn't expecting to achieve this.  But I saw my cousin in Perth!  That was awesome.  And it was very good of him to pick us up from the airport, give us a super fast tour of Perth at night and let us sleep on his floor for a few hours, before returning us to the airport for 5am.  Thanks Luke!  
+  
+It almost made up for the ..ahem.. additional expenses incurred.  
+  
+**See Ayres Rock.**  
+**  
+** Check!  It wasn't all that.  
+  
+But the road tripping was amazing.  
+  
+**See the main cities on the east coast, like Brisbane, Sydney and Canberra.**  
+**  
+** Check!  But only just.  Brisbane and Canberra _need_ more visits.  I wrung quite a lot out of Sydney, made new friends (one of whom was feathered), ate some really tasty food, and learned to love the Domestic Airport.  
+  
+**Two freelance projects, due on 5th June and 1st July.**  
+**  
+** Succeeded the first (with some hiccups) and failed at the second (pending..).  
+**  
+** **Finish my PhD literature review...**  
+**  
+** Haha.  That was ambitious.  It didn't get a look-in.  I feel bad.  There was no wifi though!  Anywhere!  
+**  
+** **Make a poster for the Semantic Web Summer School.**  
+**  
+** I didn't do that whilst travelling, but it _is_ done now.  
+  
+  
+Meanwhile, whilst you wait for my full blog posts, here are our tweets, nicely
+collated:  
+  
+  
+[[View the story "JamieAmyPete Adventures #travel" on
+Storify](//storify.com/rhiaro/jamieamypete-adventures-travel)]
+
+""" ;
+  sioc:topic blog:Done, "travel", "australia" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/07/post-oz> .
+

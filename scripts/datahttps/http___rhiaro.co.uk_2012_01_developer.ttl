@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2012/01/developer>
+  blog:tmpcontent """# Developer and research assistant, Community Hacking Project
+
+## Edinburgh College of Art, University of Edinburgh
+
+Created a location-constrained community noticeboard as part of a hyperlocal digital newspaper (via a Wordpress plugin). The cool part is, you read and write to the noticeboard through scanning a QR code that's on a giant wooden [totem pole](http://www.communityhacking.org/category/totem-pole/) in the middle of a field. I can't take responsibility for the totem pole.""" ;
+  as:published "2012-01-01T09:00:00+0000"^^xsd:datetime ;
+  as:tag "php", "resume", "cv", "mysql", "work", "university of edinburgh", "wordpress plugin", "geolocation", "community hacking", "ladders to the cloud", "chris speed", "research assistant", "wester hailes", "totem pole", "qr codes" ;
+  as:name "Developer and research assistant, Community Hacking Project" ;
+  as:startTime "2012-01-01T00:00:00+0000"^^xsd:datetime ;
+  as:endTime "2012-07-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 01 January 2012, 09:00
+start: January 2012
+end: July 2012
+tags: wordpress plugin,php,geolocation,mysql,community hacking,ladders to the cloud,chris speed,university of edinburgh,work,research assistant,wester hailes,totem pole,qr codes,cv,resume
+-->
+
+# Developer and research assistant, Community Hacking Project
+
+## Edinburgh College of Art, University of Edinburgh
+
+Created a location-constrained community noticeboard as part of a hyperlocal digital newspaper (via a Wordpress plugin). The cool part is, you read and write to the noticeboard through scanning a QR code that's on a giant wooden [totem pole](http://www.communityhacking.org/category/totem-pole/) in the middle of a field. I can't take responsibility for the totem pole.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

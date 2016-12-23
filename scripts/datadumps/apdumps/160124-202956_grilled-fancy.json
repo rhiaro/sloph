@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Grilled fancy bread with tofurky sausage, cream cheese, hot sauce, daiya, tomatoes, rocket, apple",
+    "as:tag": [
+        "bread",
+        "tofu"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-01-24T15:29:56-05:00",
+    "@id": "http://blog.rhiaro.co.uk/grilled-fancy",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/grilled-fancy"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-24T15:29:56-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,60 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/standards-star-trek-3> dc:creator <http://rhiaro.co.uk/about#me> ;
+    dcterms:created "2015-12-19T22:28:53+0000"^^xsd:datetime ;
+    dcterms:title "Standards and Star Trek" ;
+    sioc:content """<!---
+tags: standards,star trek,scope
+-->
+
+# Standards and Star Trek
+
+## On staying in scope
+
+S3E13, Deja Q...
+
+Q: "Simple: Change the gravitational constant of the universe."
+
+Geordi: "What?"
+
+Q: "Change the gravitational constant of the universe, thereby altering the mass of the asteroid."
+
+Geordi: "Redefine gravity. And how the hell am I supposed to do that?"
+
+Q: "You just DO it. GAHH! Where's that doctor, anyway?"
+
+Data: "Geordi is trying to say that changing the gravitational constant of the universe is beyond our capabilities."
+
+Q: "Well, then... never mind.\"""" ;
+    sioc:topic "scope",
+        "standards",
+        "star trek" ;
+    blog:tmpcontent """# Standards and Star Trek
+
+## On staying in scope
+
+S3E13, Deja Q...
+
+Q: "Simple: Change the gravitational constant of the universe."
+
+Geordi: "What?"
+
+Q: "Change the gravitational constant of the universe, thereby altering the mass of the asteroid."
+
+Geordi: "Redefine gravity. And how the hell am I supposed to do that?"
+
+Q: "You just DO it. GAHH! Where's that doctor, anyway?"
+
+Data: "Geordi is trying to say that changing the gravitational constant of the universe is beyond our capabilities."
+
+Q: "Well, then... never mind.\"""" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/12/standards-star-trek-3> .

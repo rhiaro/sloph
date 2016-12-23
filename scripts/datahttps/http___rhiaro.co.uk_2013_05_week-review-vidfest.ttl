@@ -1,0 +1,33 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/05/week-review-vidfest>
+  as:published "2013-05-26T23:13:00.003Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "events", "convention", "amateur creative digital content", "content creators", "week in review", "mcm", "london expo", "film and comic con" ;
+  as:name "Week in review: VidFest" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6612882439652945717" ;
+  as:content """**20th - 26th May**  
+**  
+**Continued to work on literature review.  Nothing much to report.  
+  
+Went to MCM Expo in London and managed to find time (around non-stop merch
+selling for TomSka and Eddsworld) to ask between 30 and 40 content creators -
+a wide variety of ages, experience, types of content - about their process and
+collaborative practices.  The thing they all had in common (I randomly picked
+people as they were waiting in the two hour long queue to get autographs from
+Tom) was that they all do what they do because the _love_ it, want to
+entertain people, and if the could earn a living from it too that would be
+amazing; but that's not why they do it.  For many it's the dream, but not one
+they expect realistically to achieve.  
+  
+_That_ is why this is important to me.  Because everybody _should_ be able to
+make a living from doing what they love*, and the technology exists to allow
+it.  How _exciting_.  
+  
+* Unless they're really bad at it.  There's only so much technology can do.  But they should definitely have the chance to get good before caving in to a ninetofive that they're not totally passionate about.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-05-26T23:13:57.522Z"^^xsd:datetime .
+

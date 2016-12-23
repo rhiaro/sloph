@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/tofu-mutter>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-06-07T13:26:21-07:00"^^xsd:dateTime, "2016-06-07T13:26:21-07:00" ;
+  as:tag "tofu", "rice", "food truck", "curry" ;
+  as:name "Tofu mutter, basmati rice, spicy pickles (food truck)" .
+

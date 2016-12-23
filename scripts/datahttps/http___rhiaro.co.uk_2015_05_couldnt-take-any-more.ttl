@@ -1,0 +1,28 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/couldnt-take-any-more>
+  as:latitude "43.51209" ;
+  as:longitude "16.437" ;
+  blog:tmpcontent """i couldn't take it any more so i went back to the sea
+
+'cos that's where fishes go when fishes get the sense to flee
+
+![where fishes go](https://rhiaro.co.uk/photos/1505croatia/sea1.jpg)
+![where fishes go](https://rhiaro.co.uk/photos/1505croatia/sea2.jpg)""" ;
+  as:published "2015-05-23T17:02:00+0100"^^xsd:datetime ;
+  as:tag "travel", "croatia", "beach", "sea", "where fishes go" ;
+  as:content """<!---
+tags: travel,croatia,sea,beach,where fishes go
+published: 23rd May 2015, 18:02 Europe/Berlin
+-->
+
+i couldn't take it any more so i went back to the sea
+
+'cos that's where fishes go when fishes get the sense to flee
+
+![where fishes go](https://rhiaro.co.uk/photos/1505croatia/sea1.jpg)
+![where fishes go](https://rhiaro.co.uk/photos/1505croatia/sea2.jpg)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

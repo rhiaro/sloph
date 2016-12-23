@@ -1,0 +1,20 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/09/1442919502>
+  as:published "2015-09-22T11:58:22+0100"^^xsd:datetime ;
+  as:tag "travel", "bus", "journey", "uk", "london", "oxford", "coach" ;
+  as:startTime "2015-09-22T11:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-09-22T13:20:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/London" ;
+  blog:endLocation "http://dbpedia.org/resource/Oxford" ;
+  as:content """<!---
+start: 22 September 2015, 11:00 bst
+end: 22 September 2015, 13:20 bst
+startLocation: http://dbpedia.org/resource/London
+endLocation: http://dbpedia.org/resource/Oxford
+tags: journey,travel,uk,london,oxford,bus,coach
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/1433948160>
+  a as:Add ;
+  as:published "2015-06-10T15:56:00+0100"^^xsd:datetime ;
+  as:tag "phd", "guide", "experiment", "research", "thesis" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 10th June 2015, 15:56 Europe/London
+bookmark-of: https://explorable.com/research-designs
+tags: phd, thesis, research, experiment, guide
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://explorable.com/research-designs> .
+

@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/beet-coconut>
+  a as:Activity, asext:Consume ;
+  as:name "Beet coconut brownie, FoMu s'mores ice cream" ;
+  as:published "2016-08-05T22:40:28-04:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/ice+cream>, <https://rhiaro.co.uk/tags/cake>, "coffee", "Ice cream", "ice cream", "cake" .
+

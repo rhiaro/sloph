@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/wrap-with-lettuce>
+  a as:Activity, asext:Consume ;
+  as:name "Wrap with lettuce, kale, cucumber, green pepper, refried beans, daiya" ;
+  as:published "2016-08-03T12:18:19-04:00"^^xsd:dateTime, "2016-08-03T12:18:19-04:00" ;
+  as:tag "beans", "vegetables", "wrap", <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/beans>, <https://rhiaro.co.uk/tags/wrap> .
+

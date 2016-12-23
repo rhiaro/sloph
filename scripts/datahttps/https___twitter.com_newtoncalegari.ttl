@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/newtoncalegari>
+  foaf:name "Newton Calegari" ;
+  foaf:homepage <https://twitter.com/newtoncalegari> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/8ec3a5e4308c7aeb2425d545c1b1ca42d8117614454053a21f9b2bba8da3b281.jpeg> .
+

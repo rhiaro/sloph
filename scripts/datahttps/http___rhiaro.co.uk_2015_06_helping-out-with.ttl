@@ -1,0 +1,26 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/helping-out-with>
+  sioc:reply_of <http://www.bcs.org/content/ConWebDoc/54652> ;
+  as:latitude "55.94614" ;
+  as:longitude "-3.20079" ;
+  blog:tmpcontent "Helping out with a BCS world record attempt for the most people making Android apps at one time..." ;
+  as:published "2015-06-13T09:00:00+0100"^^xsd:datetime ;
+  as:tag "event", "rsvp", "bcs", "android", "world record attempt", "app inventor" ;
+  as:startTime "2015-06-13T10:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-06-13T15:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+reply-to: http://www.bcs.org/content/ConWebDoc/54652
+tags: rsvp,event,app inventor,android,bcs,world record attempt
+published: 13th June 2015, 09:00
+start: 13th June 2015, 10:00
+end: 13th June 2015, 15:00
+-->
+
+Helping out with a BCS world record attempt for the most people making Android apps at one time...""" ;
+  sioc:has_reply <https://twitter.com/girlgeekscot/status/609667511194382337> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1428838380>
+  a blog:LlogPost ;
+  as:published "2015-04-12T12:33:00+0100"^^xsd:datetime ;
+  as:tag "quantified self", "food", "eat", "life" ;
+  as:startTime "2015-04-12T12:33:00+0100"^^xsd:datetime ;
+  as:endTime "2015-04-12T12:33:00+0100"^^xsd:datetime ;
+  as:content """<!--- 
+start: 12th April 2015, 12:33
+end: 12th April 2015, 12:33
+type: LlogPost
+tags: eat,food,quantified self,life
+list: done
+-->
+
+Chocolate raspberry tart, vanilla black tea (Anteaques)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

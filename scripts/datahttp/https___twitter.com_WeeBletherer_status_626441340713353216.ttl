@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://twitter.com/WeeBletherer/status/626441340713353216>
+  dcterms:title "reposts this." ;
+  dcterms:created "2015-07-29T18:17:09+01:00"^^xsd:datetime ;
+  dc:creator <http://www.edinburgh.gov.uk/> ;
+  sioc:content """RT [@rhiaro][1]: OH: "Got Github working. It's amazing!!" #foc2015 rhiaro.co.uk/2015/07/oh-got… (thanks @mikemcquaid!)
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  blog:share_of <http://rhiaro.co.uk/2015/07/oh-got-github> .
+

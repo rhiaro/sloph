@@ -1,0 +1,31 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/04/week-review-upcatching>
+  as:published "2013-04-14T20:31:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "week in review" ;
+  as:name "Week in review: upcatching" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-771743287431866030" ;
+  as:content """**8th - 14th April**  
+**  
+**Wednesday: returned from brief sojourn at my mum's; TechMeetup.  
+Thursday: 2nd UK Ontology Networks Workshop (link to notes to follow).  
+Friday: missed Social Computing seminar as (I found out later) they changed
+rooms after I got there (8 minutes late, still not the latest).  
+The rest: rewrote my literature review outline (still not happy, but need to
+stop agonising over it as it still doesn't contain anything substantial).
+Read a largely irrelevant paper about cultural computing (notes may or may not
+follow).  Discovered [a book I
+want](http://www.routledge.com/books/details/9780415782654/) and have asked
+the University Library to get.  Only the first page of [the chapter I
+want](http://eprints.qut.edu.au/47272/) is available to preview (I've made
+enquiries to the author of the chapter, too).  Started reading [Socially
+Mediated Publicness: An Introduction by danah
+boyd](http://www.tandfonline.com/doi/full/10.1080/08838151.2012.705200); notes
+will follow.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-14T20:32:53.306Z"^^xsd:datetime .
+

@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/semanticfire>
+  a as:Collection ;
+  as:name "semanticfire" ;
+  as:items <https://rhiaro.co.uk/2016/08/57aa92d8e65e2>, <https://rhiaro.co.uk/2016/08/57aa930b1e744> .
+

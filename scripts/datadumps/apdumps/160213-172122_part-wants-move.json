@@ -1,0 +1,23 @@
+{
+    "h": "entry",
+    "content": "Part of me wants to move my site to github so commits count towards a streak etc, and that's where pretty much everything else I'm working on regularly is, but really I should keep it on bitbucket in the name of decentralisation, and manage my own 'streak' and contributions list on my site, aggregating commits from both places.",
+    "category": [
+        "hacking",
+        "slogd",
+        "github",
+        "bitbucket",
+        "decentralisation",
+        "llog",
+        "ownyourdata"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-13T17:21:22+00:00",
+    "@id": "http://blog.rhiaro.co.uk/part-wants-move",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/part-wants-move"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-13T17:21:22+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

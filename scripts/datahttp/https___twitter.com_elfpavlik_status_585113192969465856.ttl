@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://twitter.com/elfpavlik/status/585113192969465856>
+  dcterms:title "reposts this." ;
+  dcterms:created "2015-04-06T17:13:50+01:00"^^xsd:datetime ;
+  dc:creator <https://wwelves.org/perpetual-tripper> ;
+  sioc:content """RT [@rhiaro][1]: It's what you've all been waiting for! My blog posts now available as RDF! rhiaro.co.uk/2015/04/blog-p… (and plain markdown) #indieweb #linkedData
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  blog:share_of <http://blog.rhiaro.co.uk/blog-post-content>, <http://rhiaro.co.uk/2015/04/blog-post-content> .
+

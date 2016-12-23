@@ -1,0 +1,56 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/vegan-chocolate>
+  dcterms:title "Vegan chocolate fudge pie" ;
+  dcterms:created "2015-11-29T21:57:19+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: pie,chocolate,tofu,vegan,baking,mbaking,chocolatecoveredkatie,recipe
+-->
+
+# Vegan chocolate fudge pie
+
+I adapted [Chocolate Covered Katie's chocolate fudge pie recipe](http://chocolatecoveredkatie.com/2011/09/06/the-ultimate-chocolate-fudge-pie/) - not much, and only in the sense that I couldn't measure everything properly and she leaves several ingredients to the baker's discretion.
+
+![Chocolate pie top](http://img.amy.gy/files/food/151129_chocpie1.jpg)
+
+Crust: whole wheat flour, coconut sugar, vegetable oil.
+
+Filling: tofu (less than the recipe), melted coconut oil + cocoa (melted chocolate substitute), more cocoa, coconut sugar, coconut milk, drizzle of maple syrup. (Omitted salt and vanilla).
+
+![Chocolate pie with tea](http://img.amy.gy/files/food/151129_chocpie2.jpg)
+
+As promised on Katie's blog... really good. It set perfectly after about half an hour in the fridge. And before it set, it worked great as mousse.
+
+![Chocolate pie](http://img.amy.gy/files/food/151129_chocpie3.jpg)
+
+![Chocolate pie](http://img.amy.gy/files/food/151129_chocpie4.jpg)
+
+Thanks to [Liz](https://twitter.com/lizpowersss) for the decorative sprinkling of coconut creamer.""" ;
+  sioc:topic "pie", "chocolate", "tofu", "vegan", "baking", "mbaking", "chocolatecoveredkatie", "recipe" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/11/vegan-chocolate> ;
+  blog:tmpcontent """# Vegan chocolate fudge pie
+
+I adapted [Chocolate Covered Katie's chocolate fudge pie recipe](http://chocolatecoveredkatie.com/2011/09/06/the-ultimate-chocolate-fudge-pie/) - not much, and only in the sense that I couldn't measure everything properly and she leaves several ingredients to the baker's discretion.
+
+![Chocolate pie top](http://img.amy.gy/files/food/151129_chocpie1.jpg)
+
+Crust: whole wheat flour, coconut sugar, vegetable oil.
+
+Filling: tofu (less than the recipe), melted coconut oil + cocoa (melted chocolate substitute), more cocoa, coconut sugar, coconut milk, drizzle of maple syrup. (Omitted salt and vanilla).
+
+![Chocolate pie with tea](http://img.amy.gy/files/food/151129_chocpie2.jpg)
+
+As promised on Katie's blog... really good. It set perfectly after about half an hour in the fridge. And before it set, it worked great as mousse.
+
+![Chocolate pie](http://img.amy.gy/files/food/151129_chocpie3.jpg)
+
+![Chocolate pie](http://img.amy.gy/files/food/151129_chocpie4.jpg)
+
+Thanks to [Liz](https://twitter.com/lizpowersss) for the decorative sprinkling of coconut creamer.""" .
+

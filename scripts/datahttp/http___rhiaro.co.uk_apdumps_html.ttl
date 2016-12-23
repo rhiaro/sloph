@@ -1,0 +1,3 @@
+@prefix ns4: <http://rhiaro.co.uk/apdumps/> .
+
+<http://rhiaro.co.uk/apdumps/html> ns4:head <http://rhiaro.co.uk/apdumps/meta http-equiv="content-type" content="text/html;charset=utf-8"> .

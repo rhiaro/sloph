@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/fml>
+  a as:Collection ;
+  as:name "fml" ;
+  as:items <https://rhiaro.co.uk/2016/08/php-poop-love>, <https://rhiaro.co.uk/2016/08/bus-broken-down>, <https://rhiaro.co.uk/2016/08/2nd-peterpan>, <https://rhiaro.co.uk/2016/08/replacement> .
+

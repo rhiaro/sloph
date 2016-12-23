@@ -1,0 +1,11 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://known.kevinmarks.com/2015/the-real-excitement-is-how-fluid-responding-feels>
+  sioc:reply_of <https://rhiaro.co.uk/2015/07/way-too-excited> ;
+  as:published "2015-07-13T08:07:27+01:00"^^xsd:datetime ;
+  as:name "The real excitement is how fluid responding feels" ;
+  as:content "The real excitement is how fluid responding feels" ;
+  as:actor <http://known.kevinmarks.com/profile/kevinmarks> .
+

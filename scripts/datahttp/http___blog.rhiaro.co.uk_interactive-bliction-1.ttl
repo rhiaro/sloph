@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/interactive-bliction-1>
+  dcterms:title "Interactive-Bliction: > Start" ;
+  dcterms:created "2011-09-23T00:13:00.001Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T01:51:16.099Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8586276599968873303" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """You find yourself in the house, because you have been drawn to it. Not like
+others, who went because they'd heard tales of haunting and wanted to prove
+their worth, or those who blazed in with tape measures and calculators and
+felt a right to value and analyse. Your friends are not of the type to make or
+take dares, and they stay away from the looming building. They didn't know of
+your fascination. And they would have done their best to distract you, had
+they. You don't want distraction. You want to follow your instinct. It has
+taken several years, and so much staring from afar, so much day-dreaming.  
+  
+> Cross the threshold  
+  
+Floorboards creak as you take that first tentative step onto the porch. Dry
+leaves and partially disintegrated police tape crackle underfoot. A wrinkled,
+yellowed sign had been stuck to the door, and now hangs from one corner only.
+It warns of falling masonry and unsafe walls, but you know the house is as
+sturdy as the day it had been built. You feel it in your gut.  
+  
+The place hasn't been properly sealed off for years. A rusted chain is thrust
+around one of the oversize brassy door knobs, but there's no padlock in sight.
+You have distant memories of the doors being nailed shut with enormous planks
+of wood, but they are long gone.  
+  
+> Enter  
+  
+Your fingers touch the rough wood of the door, and immediately become one with
+it. That is, a small splinter embeds itself within you, and you grimace. Then,
+one deep breath later, you push.  
+  
+You're expecting a creak, but none comes. The door swings smoothly, as if
+recently oiled (but you know that's not the case. You just know). There light
+within comes only from the doorway, your silhouette looks blankly up at you
+from the floor. You can make out the shapes of broken furniture, clutter, in
+this hallway with no windows. As your eyes adjust, both they and your nose
+pick up the layers of dust that coat everything. There were people in here
+just last week - you'd seen the van outside, ghost hunters, filming a
+'documentary' - and yet nothing was disturbed. Yours were the only footprints
+in the grime on the floor.  
+  
+Gradually, your eyes adjust to the gloom, and a broad staircase has
+materialised in front of you. It looks grand, far grander than you expected
+from everything else you knew - felt - about the house. It, too, is coated
+with dust, and the steps are broad in width, but look narrow in breadth. Like
+you might have to climb them on tiptoe. In the wall to your left, a door hangs
+off its hinges, and beyond the frame you can see only darkness. To the right
+of the staircase, in the dim distance, you can make out another door. It's
+smaller, and firmly closed. It's hard to tell from where you stand, but you
+think you can make out intricate patterns carved into the wood. Or maybe it's
+just cobwebs.  
+  
+You snuffle involuntarily as the dust tickles your nose. You've come this far;
+not much point in standing around in the doorway all day.  
+  
+> _  
+  
+  
+  
+_[So now you decide what I write next. Comment or tweet at me, and I'll go
+with a majority. If no-one is reading this, I'll go with what I feel like when
+the time comes. For the unfamiliar, reasonable commands would be things like
+'go forwards', 'go left', 'go right'. Nothing too taxing there.]_
+
+""" ;
+  sioc:topic "fiction", "interactive bliction", "interactive fiction", "story", "IF", "writing", blog:Done ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/09/interactive>, <http://rhiaro.co.uk/2011/09/interactive-bliction-1> .
+

@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://aaronparecki.com/likes/2015/05/31/1/>
+  a as:Like ;
+  as:published "2015-05-31T09:33:50+01:00"^^xsd:datetime ;
+  as:name "Liked https://rhiaro.co.uk/2015/05/clear-caches" ;
+  as:content "Liked <https://rhiaro.co.uk/2015/05/clear-caches>" ;
+  as:actor <https://aaronparecki.com/> ;
+  as:object <https://rhiaro.co.uk/2015/05/clear-caches> .
+

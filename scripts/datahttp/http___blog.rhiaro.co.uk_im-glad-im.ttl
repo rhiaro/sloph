@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/im-glad-im>
+  dcterms:created "2016-05-06T22:01:04+01:00"^^xsd:dateTime ;
+  sioc:content "I'm glad I'm not sitting with them NO that's not the attitude, I need to spend this flight practicing being excited again" ;
+  sioc:topic "ca2016", "chi2016", "phd" ;
+  sioc:reply_of <http://rhiaro.co.uk/2016/05/im-looking> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/im-glad-im> .
+

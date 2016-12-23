@@ -1,0 +1,30 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/10/visiting>
+  blog:tmpcontent """# Visiting Studentship
+
+## Decentralized Information Group, CSAIL, MIT
+
+I have relocated to MIT for a year to work on my PhD in the delightful company of [TimBL](https://www.w3.org/People/Berners-Lee/card#i), [Sandro Hawke](http://www.hawke.org/sandro/), [Andrei Sambra](https://deiu.me/profile#me), [Nicola Greco](http://nicola.io/about/) and [Sarven Capadisli](http://csarvan.ca#i). My desk is in the W3C office, and I'm still not sure how I got here.""" ;
+  as:published "2015-10-05T23:07:06+0100"^^xsd:datetime ;
+  as:tag "dig", "education", "csail", "mit", "cv", "resume", "academia", "phd", "linked data" ;
+  as:name "Visiting Studentship" ;
+  as:startTime "2015-10-05T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2016-10-04T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+tags: phd,resume,dig,csail,mit,linked data,education,academia
+start: 5th October 2015
+end: 4th October 2016
+-->
+
+# Visiting Studentship
+
+## Decentralized Information Group, CSAIL, MIT
+
+I have relocated to MIT for a year to work on my PhD in the delightful company of [TimBL](https://www.w3.org/People/Berners-Lee/card#i), [Sandro Hawke](http://www.hawke.org/sandro/), [Andrei Sambra](https://deiu.me/profile#me), [Nicola Greco](http://nicola.io/about/) and [Sarven Capadisli](http://csarvan.ca#i). My desk is in the W3C office, and I'm still not sure how I got here.""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/61180334>, <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/14188834>, <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/10818002>, <https://twitter.com/linkedktk/status/651383473870106629>, <https://twitter.com/indecisivecoder/status/651381686308077569>, <https://twitter.com/rhiaro/status/651382241105420288>, <https://twitter.com/nicolagreco/status/651380610016149505>, <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/299615149>, <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/1014234860>, <https://twitter.com/indecisivecoder/status/651329898276126720>, <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/15506652>, <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/17826190>, <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/5848122>, <https://twitter.com/digitalWestie/status/651164787255054336>, <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/15090636>, <https://twitter.com/ben_seven/status/651162363652014088>, <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/384798210>, <https://brid-gy.appspot.com/like/twitter/rhiaro/651158168089657344/167390061> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

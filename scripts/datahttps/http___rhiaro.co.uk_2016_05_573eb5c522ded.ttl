@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573eb5c522ded>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-19T22:45:24-07:00"^^xsd:dateTime ;
+  as:tag "food", "groceries", "sprouts" ;
+  blog:cost "$3.93" ;
+  as:summary "Sustenance (Sprouts)" .
+

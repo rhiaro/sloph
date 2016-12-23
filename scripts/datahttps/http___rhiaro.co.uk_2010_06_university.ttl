@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2010/06/university>
+  blog:tmpcontent """# University Programmes Intern
+
+## <span class="h-card p-org">Google</span>, London
+
+Worked on internal administration tools for recruiting, awards, and managing outreach events to universities, and trained non-technical staff to use them. Ate a lot.""" ;
+  as:published "2010-06-01T09:00:00+0100"^^xsd:datetime ;
+  as:tag "resume", "cv", "google", "work", "internship" ;
+  as:name "University Programmes Intern" ;
+  as:startTime "2010-06-01T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2010-08-31T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st June 2010, 09:00 BST
+start: 1st June 2010
+end: 31st August 2010
+tags: google,internship,work,cv,resume
+-->
+
+# University Programmes Intern
+
+## <span class="h-card p-org">Google</span>, London
+
+Worked on internal administration tools for recruiting, awards, and managing outreach events to universities, and trained non-technical staff to use them. Ate a lot.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

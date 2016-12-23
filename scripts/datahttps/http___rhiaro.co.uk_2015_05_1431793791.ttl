@@ -1,0 +1,15 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/1431793791>
+  as:latitude "47.05085" ;
+  as:longitude "9.44122" ;
+  as:published "2015-05-16T17:29:51+0100"^^xsd:datetime ;
+  as:tag "travel", "Switzerland" ;
+  as:location <https://rhiaro.co.uk/Switzerland> ;
+  as:content """<!---
+tags: travel,Switzerland
+location: Switzerland
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

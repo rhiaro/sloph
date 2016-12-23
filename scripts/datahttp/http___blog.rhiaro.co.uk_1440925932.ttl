@@ -1,0 +1,18 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1440925932>
+  dcterms:created "2015-08-30T10:12:12+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+like-of: https://twitter.com/lynncyrin/status/637883844977274882
+tags: polyamory,fiction
+-->""" ;
+  sioc:topic "fiction", "polyamory" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/08/1440925932> ;
+  blog:like_of <https://twitter.com/lynncyrin/status/637883844977274882> .
+

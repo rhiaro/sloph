@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/fruit>
+  a as:Collection ;
+  as:name "fruit" ;
+  as:items <https://rhiaro.co.uk/2016/07/half-dragonfruit>, <https://rhiaro.co.uk/2016/07/grapefruit-juice>, <https://rhiaro.co.uk/2016/07/apricot>, <https://rhiaro.co.uk/2016/08/banana>, <https://rhiaro.co.uk/2016/08/half-banana>, <https://rhiaro.co.uk/2016/08/2-crumpets-with>, <https://rhiaro.co.uk/2016/08/banana-freshly>, <https://rhiaro.co.uk/2016/08/apple>, <https://rhiaro.co.uk/2016/08/coffee-freshly>, <https://rhiaro.co.uk/2016/08/two-corn>, <https://rhiaro.co.uk/2016/08/tofu-scramble>, <https://rhiaro.co.uk/2016/08/oatmeal-with>, <https://rhiaro.co.uk/2016/08/fries-watermelon>, <https://rhiaro.co.uk/2016/08/lemon-larabar>, <https://rhiaro.co.uk/2016/08/watermelon>, <https://rhiaro.co.uk/2016/08/veggie-peanuts>, <https://rhiaro.co.uk/2016/08/watermelon-coffee>, <https://rhiaro.co.uk/2016/08/cereal-banana>, <https://rhiaro.co.uk/2016/08/watermelon-apple>, <https://rhiaro.co.uk/2016/09/corn-tortillas>, <https://rhiaro.co.uk/2016/09/half-coconut-dosa>, <https://rhiaro.co.uk/2016/09/coconut-pecan-ice> .
+

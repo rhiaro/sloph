@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "1 night shelter",
+    "blog:cost": "0 (Yana)",
+    "as:tag": [
+        "shelter",
+        "couchsurfing",
+        "san diego",
+        "ca2016"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-20T12:30:32-07:00",
+    "@id": "http://blog.rhiaro.co.uk/573f65f679654",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/573f65f679654"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-20T12:30:32-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

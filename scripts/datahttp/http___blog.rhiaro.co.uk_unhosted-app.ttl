@@ -1,0 +1,31 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/unhosted-app>
+  dcterms:title "Unhosted App Ideas" ;
+  dcterms:created "2014-04-29T00:40:00+0000"^^xsd:datetime ;
+  dcterms:modified "1970-01-01T00:00:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 29th April 2014, 00:40
+last-modified: 29th April 20104, 01:05
+type: BlogPost
+tags: hacking,learning,unhosted,remotestorage,idea,javascript
+list: todo
+-->
+
+# Unhosted App Ideas
+
+If people release their models and data schema for remoteStorage apps, we can mash them up with much ease! I'm maintaining a list here of ideas that I may or may not get around to implementing:
+
+* Notetaking app + bookmarking app = WebClipper functionality _and/or_ annotation of webpages
+* Todo app + calendar app = duh.
+
+Since most of the early Unhosted apps are life-organise-y ones, can we just have a dashboard that combines everything? Can we call it SORT YOUR LIFE OUT?""" ;
+  sioc:topic "hacking", "learning", "unhosted", "remotestorage", "idea", "javascript", blog:Todo ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2014/04/unhosted-app> .
+

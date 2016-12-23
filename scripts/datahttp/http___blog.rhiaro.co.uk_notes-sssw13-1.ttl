@@ -1,0 +1,130 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/notes-sssw13-1>
+  dcterms:title "[Notes] Frank van Harmelen at #SSSW2013" ;
+  dcterms:created "2013-07-08T13:46:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-07-17T13:50:38.464Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3095559950473712969" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """  
+
+** [Semantic Web questions we couldn't ask 10 years ago](http://www.slideshare.net/Frank.van.Harmelen/semantic-web-questions-we-couldnt-ask-10-years-ago) ** from **[Frank Van Harmelen](http://www.slideshare.net/Frank.van.Harmelen)**   
+  
+
+Semantic Web & Web of data = a more manageable mission.  
+Metaweb movie - got bought by Google and incorporated into Knowledge Graph.  
+  
+SW Principles:  
+1\\\\. Give everything a name (entities).  
+2\\\\. Relations form graph between things.  
+3\\\\. Names are addresses on the Web (so we inherit properties of Web like AAA).  
+  
+This becomes Giant Global Graph.  (Maybe SW should be called Giant Global
+Graph?)  
+  
+4\\\\. Add semantics.  
+  
+
+  * Types of things, relationships.
+  * Hierarchy, constraints:
+    * Inferences.  Bounding shared beliefs by sharing ontological information.  Space for confusion gets smaller and we begin to agree on interpretation of information.
+Semantics = predictable inference.  
+  
+Google: from just links to results, to information boxes (last May).  Can't
+directly address Google Knowledge Graph.  
+NXP (microprocessors): 26,000 products. Integrated all databases into
+triplestore.  Exposing subset of triplestore to customers.  
+BBC: 125 million triples.  Many data sources.  APIs to website.  Own
+ontologies.  
+  
+All have the same triple-layer architecture:  
+  
+Raw data  
+   |  
+SW layer  
+   |  
+Output / API / UI etc  
+  
+DataGov: eg. air quality in cities, campaign money, if policies work.  
+  
+Companies don't care about SW, but are using these technologies for their own
+IRL purposes.  
+  
+These are all different types of use cases of SW technologies:  
+  
+
+  * search;
+  * data integration;
+  * content re-use;
+  * SEO;
+  * data publishing.
+  
+It's important that the SW graph is so big.  
+  
+
+  * More questions to ask.
+  * Good that we no longer know how big, or how fast it is growing... Tens of billions of facts.
+    * How many are really permanent?
+    * Some are stable, some will disappear - just like the 'regular' Web.
+      * "...it being a mess is the only reason why it scales."
+We need to get used to the idea of SW being a mess - aka "a system so large
+you can no longer enforce central control" (complex system).  
+  
+The LD cloud is still poorly interconnected, but good graph properties.  
+  
+SameAs.org  
+  
+Heterogeneity is unavoidable.  
+Socio-economic, first to market - why certain systems/ontologies get used, eg.
+schema.org, dbpedia.  
+  
+Self-organisation.  
+LD cloud grew, nobody designed it.  
+Knowledge follows power curve.  This has an impact on mapping and reasoning,
+storage and indexing.  
+  
+Distribution.  
+Web not geared for distributed SPARQL queries.  Everyone pulls in all data and
+queries local copy.  Not very 'webby', disadvantageous.  So subgraphs?  Query
+planning?  Caching?  Payload priority?  
+  
+Provenance.  
+Representation, (re)construction.  Metametadata (knowledge about knowledge;
+uncertainty; problems with vocabs for this).  
+How to get from provenance to trust.  
+  
+Dynamics (change).  
+Cool Web in 60 seconds graphic.  
+SW not changing this fast, but soon..  
+  
+Errors and noise.  
+Sometimes we disagree.  
+Deal with by: avoid, repair or contain.  Or just _deal with it_ \\\\- allow
+argumentation.  
+Fuzzy, rough semantics - almost, maybe.  
+  
+_Lots_ of research questions.  But not ones we could ask 10 years ago.  
+  
+Information universe - "algorithms exist without us looking at them".  
+  
+We should ask if things work in _theory_.  
+Scientists vs. engineers.  
+Discovering vs. building.  
+
+  * Is this incidental or universal?
+OWL is our microscope.  
+We can see structure well in some domains, but not so well in others.  Maybe
+it's our tool that distorts, rather than a property of the domain.  
+  
+Says we should change our mindset from building stuff to hypothesising and
+falsifying.
+
+""" ;
+  sioc:topic "raw notes", "phd", "notes", "frank van harmelen", "events", "semantic web", "sssw13", "sssw2013", blog:Done ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/07/notes-sssw13-1> .
+

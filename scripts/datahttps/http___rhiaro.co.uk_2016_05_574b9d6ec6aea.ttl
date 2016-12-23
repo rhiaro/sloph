@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/574b9d6ec6aea>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-29T14:15:00-04:00", "2016-05-29T14:15:00-04:00"^^xsd:dateTime ;
+  as:tag "household" ;
+  blog:cost "$11.47" ;
+  as:summary "Household stuff (CVS)" .
+

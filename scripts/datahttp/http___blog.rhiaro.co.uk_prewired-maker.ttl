@@ -1,0 +1,48 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/prewired-maker>
+  dcterms:title "Prewired Maker Week" ;
+  dcterms:created "2015-04-18T13:24:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 18th April 2015, 13:24
+type: BlogPost
+tags: events,prewired,maker week,kids,code club,coder dojo,organising
+start: 13th April 2015, 12:00
+end: 17th April 2015, 16:00
+reply-to: prewired.org/events
+list: done
+-->
+
+# Prewired Maker Week
+
+During the second week of the easter holidays, we hold Prewired every day! Also known as the Maker Week, from 12 til 4 dedicated mentors hang out in CodeBase and help the kids with projects. Some kids come for just a few days, and some for the whole week. They can work on whatever they like; some carry on with what they do at regular Prewired sessions, some start a new project that they aim to finish that week, and others choose to learn something totally new.
+
+On the first day we had over 20 kids; on subsequent days it dropped down to 10-15 because lots of schools were starting back this week.
+
+Here's a rundown:
+
+* Marley worked on his Raspberry Pi and Arduino based robotic arm. I think he also did some general C++ and Python hacking.
+* [Jonas](http://pages.prewired.org/jonas), [Joe]((http://pages.prewired.org/joe) and [Cerys](http://pages.prewired.org/cerys) launched their first ever websites (and learned how to use FTP in the process)!
+* Toby and Sean built an model bus using Arduino and an ultrasound sensor, aimed at prevent low-bridge related accidents.
+* Mark worked on his Android game in Unity. He also modded Prison Architect and put together a spreadsheet to manage people's Minecraft mods on his server.
+* Malcolm worked on setting up and tinkering with his own Minecraft server.
+* Dan, Robert and Bob worked together to create a suite of tools for teaching people HTML/CSS and Java, across a website and an Android app.
+* Harry started learning Java with tutorials, and worked on improving one of his Scratch games.
+* Connor and Oli played with the Twitter streaming API.
+* Albie ported his iPad drawing app to Scratch, and made some Scratch animations.
+
+Mega props to mentors for helping out over the course of the week: [Nantas](http://rad.inf.ed.ac.uk/people/nardelli), [Freda](https://twitter.com/fredaobyrne), Eder, [Luke](http://www.inf.ed.ac.uk/people/students/Luke_Shrimpton.html), Helen, [Cameron](http://camerongray.me) and [Rikki](http://rikkiguy.me.uk) (who came on his birthday!).
+""" ;
+  sioc:topic "rsvp", blog:Done, "organising", "coder dojo", "code club", "kids", "maker week", "prewired", "events" ;
+  sioc:reply_of <http://prewired.org/events> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/04/prewired-maker> ;
+  as:startTime "2015-04-13T12:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-04-17T16:00:00+0000"^^xsd:datetime .
+

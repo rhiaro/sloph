@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://twitter.com/indecisivecoder/status/628987265512009728>
+  dcterms:title "reposts this." ;
+  dcterms:created "2015-08-05T18:53:44+01:00"^^xsd:datetime ;
+  dc:creator <https://twitter.com/indecisivecoder> ;
+  sioc:content """RT [@rhiaro][1]: OH at @Prewired: "Learn Python, it can do all the things. Except some things. But learn Python." rhiaro.co.uk/2015/08/oh
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  blog:share_of <http://rhiaro.co.uk/2015/08/oh> .
+

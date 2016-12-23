@@ -1,0 +1,46 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/02/week-review-planning>
+  as:published "2013-02-10T23:56:00.002Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "events", "festival", "madrid", "open data day", "smart data hack", "innovative learning week", "spain", "semantic web summer school", "joinuped", "joined up edinburgh", "belgrade", "resonate", "week in review", "serbia", "trips" ;
+  as:name "Week in review: Planning trips!" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-4701969289450916472" ;
+  as:content """**4th - 10th February**  
+**  
+**When helping to organise an event, it's impressive how much time sending emails, updating websites and spreadsheets, having meetings and generally coordinating things can take up.   So that's a lot of what I've done this week.  Not PhD, but related enough to be excusable... sort of... ([Smart Data Hack](http://data.inf.ed.ac.uk/ilwhack) and [Open Data Day: Joined Up Edinburgh](http://www.meetup.com/OpenKnowledgeFoundation/Edinburgh-GB/878412/))  
+  
+I _have_ finally booked plane tickets to Serbia for
+[Resonate](http://resonate.io/) new media festival, at which I'm hoping to
+make useful contacts with independent digital media producers, learn some
+stuff about big data visualisation at the workshops (my places at the ones
+I've applied to haven't been confirmed yet though), and generally learn more
+about the digital art scene (and figure out ways SW technologies can benefit
+people who are part of it).  And also to enjoy Belgrade, as I'll have a spare
+couple of days either side of the festival.  Because the flights were cheaper
+then!  Honest!  I actually lost an entire afternoon hunting for cheapest
+flights on websites that weren't obviously scams (Cheap-o-Airlines?  Really??
+Ultimately booking through JAT directly was the best option), then negotiating
+cheapest trains to London in order to catch flights, then sending CouchSurfing
+requests, because why spend money on a hostel when you can meet wonderful new
+people and get tourist advice for free?  
+  
+I also applied for a place at the [Semantic Web Summer
+School](http://sssw.org/2013/) in Spain in July.  It looks fantastic and
+educational and stuff.  And I applied for funding to help cover then 900EUR
+entry cost (a whole week, accommodation and meals included), and
+[SICSA](http://www.sicsa.ac.uk/graduate-academy/funding-to-attend-a-summer-
+school) are providing Â£500, yay!  
+  
+Two thirds of [Ontologies with a
+View](http://ontologieswithaview.blogspot.co.uk/2013/02/week-7-bbc-linked-
+data.html) met this week, and we discussed BBC use of Linked Data.  I only
+managed to skim the paper, but knew the general principles from articles I'd
+read about their work before... I will read it properly at some point, though
+I think a more technical discussion of what they did might be useful.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:07:45.549Z"^^xsd:datetime .
+

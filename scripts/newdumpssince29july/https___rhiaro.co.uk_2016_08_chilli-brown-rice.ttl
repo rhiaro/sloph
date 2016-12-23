@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/chilli-brown-rice>
+  a as:Activity, asext:Consume ;
+  as:name "Chilli and brown rice, mint iced tea" ;
+  as:published "2016-08-17T13:36:36-05:00"^^xsd:dateTime, "2016-08-17T13:36:36-05:00" ;
+  as:tag "beans", "cwebber", "leftovers", "lentils", "rice", "tea", <https://rhiaro.co.uk/tags/beans>, <https://rhiaro.co.uk/tags/leftovers>, <https://rhiaro.co.uk/tags/cwebber>, <https://rhiaro.co.uk/tags/tea>, <https://rhiaro.co.uk/tags/rice>, <https://rhiaro.co.uk/tags/lentils> .
+

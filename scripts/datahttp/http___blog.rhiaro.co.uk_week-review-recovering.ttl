@@ -1,0 +1,23 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/week-review-recovering>
+  dcterms:title "Week in review: recovering?" ;
+  dcterms:created "2013-03-31T20:33:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-14T20:36:13.542Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6028435782169285190" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """**25th - 31st March**  
+**  
+**A busy, non-PhD-related activities filled week.  
+  
+Social computing seminar on Friday.
+
+""" ;
+  sioc:topic blog:Doing, "week in review", "phd" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/03/week-review-recovering> .
+

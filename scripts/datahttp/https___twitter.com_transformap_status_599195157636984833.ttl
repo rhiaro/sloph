@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://twitter.com/transformap/status/599195157636984833>
+  dcterms:title "reposts this." ;
+  dcterms:created "2015-05-15T13:50:32+01:00"^^xsd:datetime ;
+  dc:creator <http://transformap.co/> ;
+  sioc:content """RT [@almereyda][1]: Decent #SocialWG wrap up at rhiaro.co.uk/2015/05/social… by @rhiaro—especially Cooperation is striking—@transformap underlines every word #RDF
+
+[1]: https://twitter.com/almereyda
+""" ;
+  blog:share_of <http://rhiaro.co.uk/2015/05/socialwg3-summary> .
+

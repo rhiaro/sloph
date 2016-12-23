@@ -1,0 +1,131 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/character>
+  dcterms:title "Character sketching" ;
+  dcterms:created "2012-05-24T23:38:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T00:11:29.385Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-359769274262582498" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """  
+Suddenly I find myself having to write some fiction to a deadline.  A deadline
+that isn't Nanowrimo, that is.  This isn't something I've had to do since my
+English language GCSE.  I deliberately avoided pursuing creative writing in
+any formal or academic manner, for fear the joy would be sucked from something
+I love; for fear it would become a chore, or an obligation.  
+  
+But this semester I've imposed this on myself out of determination that my
+supposedly 'interdisciplinary' masters actually deviate from Web or software
+development at some point.  Not that making writing fiction a part of my final
+project has in any way reduced the programming.  Indeed, I've just added it on
+top of an already substantial project outcome.  
+  
+But making an Interactive Fiction engine feels much more valuable if I
+actually write some fiction for it, doesn't it?  
+  
+Suddenly, realistically, I have mere weeks to get this done.  My subconscious
+has been working on it since about December of last year, but I haven't had
+many committal thoughts.  So it's time to make (and justify) some decisions.  
+  
+I already decided that, quite obviously really, the piece needs to revolve
+heavily around the city of Edinburgh.  (Obvious, as the reader will be
+experiencing it whilst wandering around the city, and I'm studying the affects
+of physical environment on immersion in a text).  As such, I figured doing
+research about local myths and legends, particularly stories relevant to
+specific places, is pertinent.  Look out for updates on that.  Historic and
+mythical local characters might be useful too.  
+  
+[Ian Rankin](http://en.wikipedia.org/wiki/Ian_Rankin) has famed the Edinburgh
+streets with his novels, but I'm no crime writer, nor mystery nor thriller.  I
+write science fiction and fantasy; imagining new worlds comes far more
+naturally to me than conjuring stories in this one.  And my time is too short
+to venture into an unfamiliar genre.  So this leaves me trying to figure out
+how to set a story on the real world streets of Edinburgh whilst maintaining a
+fantastical element so that I keep my sanity and confidence in the prose.  
+  
+One potentially helpful aspect of Interactive Fiction, is that generally the
+stories are written in the second person.  The main character is a perspective
+taken by the user/reader/player.  This means there is a primary role that I
+don't have to develop too much as a character.  Just enough to fit in with the
+context of whatever plot starts to develop, but with adequate openness to
+allow the user to project themselves into the character's place.  Nonetheless,
+I'm going to need some attachment to this character in order to engage myself
+in the writing process.  I know from experience that I'm far less motivated to
+write about/for characters who don't interest me, but when I discover a
+character I feel really involved with, I miss them and desire to write more.  
+  
+That's the interesting point, really.  I don't feel much as though I'm writing
+characters or their stories, but discovering them and learning about them
+through the writing process.  I've lost control of characters before; they've
+behaved unexpectedly or undesirably, sometimes even changing the whole course
+of a previously loosely planned plot. The same might apply to imaginary places
+or even objects.  
+  
+Because I don't have time to find a fresh character, world, setting that I
+love, I have concluded that I need to hook this story back to something I've
+written in the past.  Something I'm already invested in.  This connection is
+only meaningful to me (until the glorious day the still unfinished, few-year-
+old novel gets published!) so it needs to be loose.  But enough to give _me_
+context.  The connection I have settled on is _Milo's World_, the subject of
+my 2008 Nanowrimo; my only successful attempt at reaching fifty thousand words
+in thirty days, though I have yet to write the ending to the story.  Also part
+three needs rewriting completely, those were dark days.  Not to mention the
+rest of it.  But that's neither here nor there.  
+  
+The important thing is, I met a couple of characters with whom I had great
+fun.  I hung out with them for massive chunks of their childhoods.  I learnt
+what makes them tick, and I learnt their secrets.  
+  
+The point-of-view character in _Milo's World_ is Dusty.  I first met him as a
+four year old, and quickly discovered he had access to a secret world, where
+he regularly snuck off to play with a boy his own age, Milo, who seemed to
+live full-time in this world.  They had all sorts of innocent adventures, and
+gradually met other occupants.  I spent time with Dusty and Milo again aged
+eight, to find that not much had changed.  They had befriended some strange
+creatures, and were privvy to experiences they could not understand yet.  At
+age twelve, they were growing up.  Dusty has gained a few home-world friends,
+has developed an amazing talent for drawing caricatures, and his parents have
+long since assumed that he's over the 'imaginary friend' stage.  But his grip
+on their 'reality' is disjointed.  There are more kids around in Milo's world,
+living in a network of tunnels and working and playing together, and with the
+creatures of the world.  One species of creatures in particular have
+introduced curious technologies and ways of thinking.  When Dusty is sixteen
+years old, he is balancing regular high school drama with other-worldly
+adventures, but just barely.  He and Milo are working with one of the
+creatures to learn about a contraption that they played with in their youth,
+and have dubbed The Reality Machine.  Using it is hit and miss, and many of
+the things they find out about it, they learn the hard way.  When Milo's world
+and Dusty's home-world begin to bleed together through misuse of the Machine,
+things start to take a turn for the confusing.  Cue the hilarious, semi-
+cliffhanger ending, strongly linked with Dusty's drawing skills, I haven't
+written yet.  
+  
+So where am I going with this?  In my Palimpsest story, Dusty is grown up.
+_Long_ since grown up.  He is old, mad-scientist-proffesor-ly, and living in a
+world that bears the consequences of his actions as a child.  Right away we
+have the existence of and ability to cross between alternative realities (via
+an understood and controllable Reality Machine, in case you hadn't cottoned).
+Splendid.  I'm in my comfort zone already.  So how about... the playable
+character is Dusty's lab assistant.  Their age, gender, appearance, don't
+matter.  Their temperament matters probably only a little bit.  What matters
+is the fact that they have the ability to zip around in space and time.
+Whaddya know?  Every single exciting era of Edinburgh's history is open to us
+to explore.  
+  
+All I need now is a reason Dusty might have sent his assistant across to
+Edinburgh in our version of reality; something to pursue, something to figure
+out.  Or just a malfunctioning Reality Machine.  
+  
+I call this a start.  
+  
+As always, comments and suggestions welcome!  
+  
+
+""" ;
+  sioc:topic blog:Done, "writing challenges", "writing", "nanowrimo", "msc", "icpLog", "icp", "fiction", "fantasy", "Palimpsest", "Milo's World" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2012/05/character> .
+

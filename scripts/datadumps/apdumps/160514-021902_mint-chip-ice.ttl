@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/mint-chip-ice> a blog:Consumption ;
+    dcterms:created "2016-05-13T18:19:02-07:00"^^<xsd:dateTime> ;
+    as:name "Mint chip ice cream, some berry apple pie (Saturn Cafe)" ;
+    as:published "2016-05-13T18:19:02-07:00" ;
+    as:tag "ca2016",
+        "ice cream",
+        "pie" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/mint-chip-ice> .
+

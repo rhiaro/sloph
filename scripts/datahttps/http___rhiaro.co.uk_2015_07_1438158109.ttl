@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/1438158109>
+  a as:Announce ;
+  as:published "2015-07-29T09:21:49+0100"^^xsd:datetime ;
+  as:tag "edinburgh" ;
+  as:content """<!---
+share-of: https://twitter.com/ben_seven/status/626282690770259968
+tags: edinburgh
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/ben_seven/status/626282690770259968> .
+

@@ -1,0 +1,49 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/mini-amtrak>
+  blog:tmpcontent """# Mini Amtrak Adventure
+
+I just took a 17 hour train (Starlight 14) from San Francisco to Portland, right up the west coast of the USA. At 9 last night, a connecting bus (the Thruway) took me from SF to Emeryville, Oakland, where I boarded the train at 10. I bought my ticket in advance online ($132, which includes the bus and also a Portland to Seattle stretch for later this week) and was assigned a seat upon boarding via the sophisticated system of a lady with a handdrawn grid and a pen.
+
+Totally different from any other train I've been on, which is why I'm writing about it. The train is *huge*. I didn't manage to count the carriages, but there are many. The cheapest Coach seats are wide - probably the same as the Caledonian Sleeper - but recline further with more legroom, and have an extra leg rest bit that pops out underneath, so it's a totally viable bed. The whole train is two storey, with most seats above, and loads of bathrooms below.
+
+Overnight I pretty much slept through, waking at Sacramento to close the curtain as the station lights were *bright*.  There were many stops, and people came and went from the seat beside me. At one point there was some kerfuffle from someone who thought her phone had been stolen, and also the seat assignment system resulting in people being assigned to the same place, but mostly I wasn't really disturbed. At one point I woke up to nobody, and rotated to lie across the two seats. I woke again at 0730 when the sun was up and we arrived in Klamath Falls. Plenty of empty seats in my carridge.
+
+From my vantage point it was largely dilapidated sheds situated amongst unkempt scrubland. Some tourist-looking people disembarked here, so there must be something to do. There are both a restaurant and a cafe car, the latter of which serves decent coffee with a smile for $2, and there is at least one vegan option on the menu (a burger, unsampled). The restaurant took reservations for breakfast and lunch, with a member of staff passing through the train to offer this. Above the cafe is an 'observation lounge', with seats clustered around tables, and reclining armchair-types, all with power outlets, but the special feature is double-sized windows. So really light, great vantage. I considered relocating, but wasn't sure about the etiquette of permanently occupying space here, and couldn't be bothered dragging my stuff back and forth.
+
+We proceeded and the scenery picked up with lakes and mountains, gradually becoming more epic, peaking at alpine-esque snow-covered pine forests. Scenery became less interesting after Eugene. Flat, industrial-farmland-y. Some stops are long enough for 'smoke breaks', with passengers allowed to disembark to stretch their legs for around half an hour.
+
+Way more interaction with fellow passengers than I'm used to in the UK. Always takes me by surprise. A bunch of friendly (I think?) comments on my hair, plus a few people who wander through the train rambling good wishes at everyone. Someone giving out homebaked cookies. An old couple dressed as Santa Claus. Most people - in great variety - seem consistently intimdating when silent, and friendly when they open their mouths. Maybe I just don't know how to read Americans yet. The expectation/demand of interaction with strangers here is something I'm still figuring out, and I think I unintentionally offend people when I'm not very good at making conversation.
+
+At 1430 there was a wine tasting. Who boards a train and goes to a wine tasting?
+
+Arrived in Portland over 30 minutes early. No data connection here. Not even 2G. Wilf's Wine Bar just beside Union Station let me use their wifi.""" ;
+  as:published "2015-12-06T00:00:00+0000"^^xsd:datetime ;
+  as:tag "travel", "train", "usa", "amtrak", "california", "culture", "oregon" ;
+  as:name "Mini Amtrak Adventure" ;
+  as:content """<!---
+published: 5 December 2015, 16:00 PST
+tags: travel,train,usa,amtrak,culture,california,oregon
+-->
+
+# Mini Amtrak Adventure
+
+I just took a 17 hour train (Starlight 14) from San Francisco to Portland, right up the west coast of the USA. At 9 last night, a connecting bus (the Thruway) took me from SF to Emeryville, Oakland, where I boarded the train at 10. I bought my ticket in advance online ($132, which includes the bus and also a Portland to Seattle stretch for later this week) and was assigned a seat upon boarding via the sophisticated system of a lady with a handdrawn grid and a pen.
+
+Totally different from any other train I've been on, which is why I'm writing about it. The train is *huge*. I didn't manage to count the carriages, but there are many. The cheapest Coach seats are wide - probably the same as the Caledonian Sleeper - but recline further with more legroom, and have an extra leg rest bit that pops out underneath, so it's a totally viable bed. The whole train is two storey, with most seats above, and loads of bathrooms below.
+
+Overnight I pretty much slept through, waking at Sacramento to close the curtain as the station lights were *bright*.  There were many stops, and people came and went from the seat beside me. At one point there was some kerfuffle from someone who thought her phone had been stolen, and also the seat assignment system resulting in people being assigned to the same place, but mostly I wasn't really disturbed. At one point I woke up to nobody, and rotated to lie across the two seats. I woke again at 0730 when the sun was up and we arrived in Klamath Falls. Plenty of empty seats in my carridge.
+
+From my vantage point it was largely dilapidated sheds situated amongst unkempt scrubland. Some tourist-looking people disembarked here, so there must be something to do. There are both a restaurant and a cafe car, the latter of which serves decent coffee with a smile for $2, and there is at least one vegan option on the menu (a burger, unsampled). The restaurant took reservations for breakfast and lunch, with a member of staff passing through the train to offer this. Above the cafe is an 'observation lounge', with seats clustered around tables, and reclining armchair-types, all with power outlets, but the special feature is double-sized windows. So really light, great vantage. I considered relocating, but wasn't sure about the etiquette of permanently occupying space here, and couldn't be bothered dragging my stuff back and forth.
+
+We proceeded and the scenery picked up with lakes and mountains, gradually becoming more epic, peaking at alpine-esque snow-covered pine forests. Scenery became less interesting after Eugene. Flat, industrial-farmland-y. Some stops are long enough for 'smoke breaks', with passengers allowed to disembark to stretch their legs for around half an hour.
+
+Way more interaction with fellow passengers than I'm used to in the UK. Always takes me by surprise. A bunch of friendly (I think?) comments on my hair, plus a few people who wander through the train rambling good wishes at everyone. Someone giving out homebaked cookies. An old couple dressed as Santa Claus. Most people - in great variety - seem consistently intimdating when silent, and friendly when they open their mouths. Maybe I just don't know how to read Americans yet. The expectation/demand of interaction with strangers here is something I'm still figuring out, and I think I unintentionally offend people when I'm not very good at making conversation.
+
+At 1430 there was a wine tasting. Who boards a train and goes to a wine tasting?
+
+Arrived in Portland over 30 minutes early. No data connection here. Not even 2G. Wilf's Wine Bar just beside Union Station let me use their wifi.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

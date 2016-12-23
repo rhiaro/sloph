@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/strugee2/status/663957024518987776>
+  a as:Announce ;
+  as:published "2015-11-10T05:51:05+00:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """[reposts this.][1]
+
+[1]: https://twitter.com/rhiaro/status/659240903958069248
+""" ;
+  as:actor <https://strugee.net/> ;
+  as:object <https://rhiaro.co.uk/2015/10/timblhttpswwww3orgpeopleberners> .
+

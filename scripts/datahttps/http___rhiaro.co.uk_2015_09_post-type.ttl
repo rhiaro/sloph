@@ -1,0 +1,156 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/09/post-type>
+  as:latitude "63.9941" ;
+  as:longitude "-22.62383" ;
+  blog:tmpcontent """# Post type discovery
+
+Several months ago I wrote about [switching from explicit to implict post types](https://rhiaro.co.uk/2015/04/post-and-activity-types) for my blog, and looked a little at [generating an ActivityStream from content objects (posts) based on their properties](https://rhiaro.co.uk/2015/05/generating). My thoughts have progressed on both of these things since then, and I've also added a few more post types to my site. Yesterday [Tantek](http://tantek.com) published a working draft of a [post type discovery algorithm](https://indiewebcamp.com/post-type-discovery) so to add to the discussion, here is the version of this that I currently implement; similar but different.
+
+I mostly use this to display different icons by posts. Worth noting that I don't in anyway differentiate photo type posts, just notes or articles with photos embedded in them, sometimes with properties that make them display as more specific types (like a checkin). Speaking of, I've previously written [my quite specific handling of checkins vs notes with location](https://rhiaro.co.uk/2015/05/checkins).
+
+* if `content`
+  * note post
+  
+* if `header` (aka `title` aka `name`)
+  * article post
+
+* if `startLocation` and `endLocation`
+  * travel plan post
+
+* if `reply-to`
+  * if `rvsp`
+    * - rsvp post
+  * else
+    * - reply post
+
+* if `location`
+  * checkin post
+
+* if `like-of`
+  * like post
+* else if `repost-of`
+  * repost post
+* else if `bookmark-of`
+  * bookmark post
+* else if `follow-of`
+  * follow post
+
+* else if type(`LlogPost`)
+  * llog post
+  * if food `tag`
+    * - food post
+  * if sleep `tag`
+    * - sleep post
+  * if exercise `tag`
+    * - exercise post
+		
+* if `read-of`
+  * read post
+
+* if `mention-of`
+  * // I use this when I'm displaying incoming webmentions that don't pick up another type, I don't have any of my own posts I consider 'mentions' posts yet
+  * mention/link post
+
+* if `location` and not `content`
+  * vague checkin
+
+My algorithm cascades; ie. the *last* criterion that matches takes effect.
+
+However, I don't display different posts very differently... in fact, I use one template for everything, and for all posts with `content`, display all properties which are present. So all posts with additional properties might as well *also* be considered notes and articles.
+				
+## Issues
+
+In just writing this out I've noticed a few things I need to tighten up. For example, I see no reason a like post can't also be a bookmark and a repost (you might disagree..) so I will tweak to allow that, and make decisions about how to display that. Vague checkins need to check for latitude and longitude properties.
+
+`LlogPost`s (lifelog aka metrics) still have an explicit type, as they're otherwise just notes with specific tags. Currently this is the easiest way to filter them out of a list, as I don't want to display them in my main feed. At some point I will enhance the display of these from just text, and I'll need to alter how these are identified to do that.
+
+## Querying
+
+For my implementation it's a huge pain to *exclude* posts from a list based on their properties, but this is because I'm stuck on SPARQL 1.0. Plumbing.. So I won't labour that. It does seem instinctively easier to query posts based on explicit types, so I'm still not sure if I won't actually start storing these again anyway, when the post is created.
+
+On the other hand, why is that any easier than querying based on properties? Seems like preferences would be dependant on programming and query languages, so maybe neither way is clearly better. Adapting a UI based on the properties present may allow more flexibility in display, in the end. I'll be playing around some more, anyway, and in particular adding in some more activity-like posts fairly soon.
+
+Additionally, when I start sorting my different feeds out, some by 'type' and some containing a mixture of 'types', this could get more interesting.""" ;
+  as:published "2015-09-30T17:31:00+0100"^^xsd:datetime ;
+  as:tag "algorithm", "discovery", "implicit typing", "explicit typing", "post types", "indiewebcamp", "social web", "socialwg", "indieweb" ;
+  as:name "Post type discovery" ;
+  as:content """<!---
+tags: socialwg,social web,indieweb,indiewebcamp,post types,algorithm,discovery,implicit typing,explicit typing
+published: 30th September 2015, 17:31 BST
+-->
+
+# Post type discovery
+
+Several months ago I wrote about [switching from explicit to implict post types](https://rhiaro.co.uk/2015/04/post-and-activity-types) for my blog, and looked a little at [generating an ActivityStream from content objects (posts) based on their properties](https://rhiaro.co.uk/2015/05/generating). My thoughts have progressed on both of these things since then, and I've also added a few more post types to my site. Yesterday [Tantek](http://tantek.com) published a working draft of a [post type discovery algorithm](https://indiewebcamp.com/post-type-discovery) so to add to the discussion, here is the version of this that I currently implement; similar but different.
+
+I mostly use this to display different icons by posts. Worth noting that I don't in anyway differentiate photo type posts, just notes or articles with photos embedded in them, sometimes with properties that make them display as more specific types (like a checkin). Speaking of, I've previously written [my quite specific handling of checkins vs notes with location](https://rhiaro.co.uk/2015/05/checkins).
+
+* if `content`
+  * note post
+  
+* if `header` (aka `title` aka `name`)
+  * article post
+
+* if `startLocation` and `endLocation`
+  * travel plan post
+
+* if `reply-to`
+  * if `rvsp`
+    * - rsvp post
+  * else
+    * - reply post
+
+* if `location`
+  * checkin post
+
+* if `like-of`
+  * like post
+* else if `repost-of`
+  * repost post
+* else if `bookmark-of`
+  * bookmark post
+* else if `follow-of`
+  * follow post
+
+* else if type(`LlogPost`)
+  * llog post
+  * if food `tag`
+    * - food post
+  * if sleep `tag`
+    * - sleep post
+  * if exercise `tag`
+    * - exercise post
+		
+* if `read-of`
+  * read post
+
+* if `mention-of`
+  * // I use this when I'm displaying incoming webmentions that don't pick up another type, I don't have any of my own posts I consider 'mentions' posts yet
+  * mention/link post
+
+* if `location` and not `content`
+  * vague checkin
+
+My algorithm cascades; ie. the *last* criterion that matches takes effect.
+
+However, I don't display different posts very differently... in fact, I use one template for everything, and for all posts with `content`, display all properties which are present. So all posts with additional properties might as well *also* be considered notes and articles.
+				
+## Issues
+
+In just writing this out I've noticed a few things I need to tighten up. For example, I see no reason a like post can't also be a bookmark and a repost (you might disagree..) so I will tweak to allow that, and make decisions about how to display that. Vague checkins need to check for latitude and longitude properties.
+
+`LlogPost`s (lifelog aka metrics) still have an explicit type, as they're otherwise just notes with specific tags. Currently this is the easiest way to filter them out of a list, as I don't want to display them in my main feed. At some point I will enhance the display of these from just text, and I'll need to alter how these are identified to do that.
+
+## Querying
+
+For my implementation it's a huge pain to *exclude* posts from a list based on their properties, but this is because I'm stuck on SPARQL 1.0. Plumbing.. So I won't labour that. It does seem instinctively easier to query posts based on explicit types, so I'm still not sure if I won't actually start storing these again anyway, when the post is created.
+
+On the other hand, why is that any easier than querying based on properties? Seems like preferences would be dependant on programming and query languages, so maybe neither way is clearly better. Adapting a UI based on the properties present may allow more flexibility in display, in the end. I'll be playing around some more, anyway, and in particular adding in some more activity-like posts fairly soon.
+
+Additionally, when I start sorting my different feeds out, some by 'type' and some containing a mixture of 'types', this could get more interesting.""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/649272597528604673/1562961949>, <https://petermolnar.eu/wordpress-post-format-discovery/>, <http://wirres.net/article/articleview/8697/1/51/> .
+

@@ -1,0 +1,28 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2010/12/adventures-html5>
+  as:published "2010-12-30T19:00:00.001Z"^^xsd:datetime ;
+  as:tag "hacking", "HTML5", "learning", "web dev", blog:Done ;
+  as:name "Adventures in HTML5" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-1155962792396230557" ;
+  as:content """So I was all excited about [block level links](http://html5doctor.com/block-
+level-links-in-html-5/).  
+  
+But then Firefox had to go and [vomit the DOM all over the
+place](http://remysharp.com/2009/08/10/defining-the-vomit-bug/).  
+  
+Which, incidentally, screwed with my layout somewhat.  
+  
+Everything else could handle it.  Including IE6.  Grr.  For the record, this
+was Firefox 3.6.10, Windows and 3.6.13 on Mac.  
+  
+So I'll be keeping an eye on that one before trying it again.  
+  
+YAY FOR LEARNING!
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:14:52.541Z"^^xsd:datetime .
+

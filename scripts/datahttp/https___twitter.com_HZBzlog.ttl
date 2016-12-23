@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/HZBzlog>
+  foaf:name "HZBzlog" ;
+  foaf:homepage <https://twitter.com/HZBzlog> ;
+  foaf:depiction <https://twitter.com/HZBzlog/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/6c30a557cdad320d4d0eb862aced89fc394c8a90db647dd553dd950c70ed166f.jpeg> .
+

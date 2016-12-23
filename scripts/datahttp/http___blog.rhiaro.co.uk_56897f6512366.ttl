@@ -1,0 +1,18 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix ns3: <https://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/56897f6512366>
+  a blog:Acquisition ;
+  dcterms:created "2016-01-02T16:25:28-05:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/56897f6512366> ;
+  blog:cost "$38.41" ;
+  as:published "2016-01-02T16:25:28-05:00"^^xsd:dateTime ;
+  as:image <http://img.amy.gy/files/obtainium/IMG_20160103_150513.jpg> ;
+  as:summary "Groceries (Trader Joe's)" ;
+  ns3:published "2016-01-02T16:25:28-05:00" ;
+  as:tag "groceries", "trader joes" .
+

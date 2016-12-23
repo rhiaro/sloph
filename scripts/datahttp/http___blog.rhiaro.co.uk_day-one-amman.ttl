@@ -1,0 +1,73 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/day-one-amman>
+  dcterms:title "Day one: Amman" ;
+  dcterms:created "2011-07-28T08:48:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2011-07-28T08:48:35.110Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8375633381249617799" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """We got to the Farah Hotel at around 11pm last night (after a great flight with
+unexpected free food) and met Al, one of our Oasis trip companions, en route.  
+  
+The hotel (farahhotel.com.jo) is great; clean, cheap, and friendly.  Breakfast
+(because anyone who read my India blog will know describing food when I'm
+travelling is a priority) was flat bread, hard boiled eggs and soft cheese.
+This set us up for a day of exploring the city (with Al and Chris who we met
+at breakfast).  
+  
+We started by climbing to the Amman Citadel and wandering around the grounds
+and museum. A spectacular view of the city and a cooling breeze from being
+high up, along with helpful and enthusiastic tourist police made for a
+fantastic morning. We learnt about the history of the area dating back to the
+stone age in the citadel museum.  
+  
+On our way out we were talked into letting a tour guide called Basam drive us
+to a restaurant for a fantastic local lunch, a visit to the black and white
+mosque which overlooks the city and the blue mosque. They let H and I in once
+we were covered in black robes, nd we spent a few minutes wandering through
+this beautiful, tranquil place. Young lads approached us to chat and welcome
+us warmly. Well, the guys were welcomed. H and I were largly ignored, so we
+kept quiet. One of the boys sang verses of the Qu'ran for us, and I have never
+seen a more pure delight in anyone's eyes. The other told us that he was
+visiting his family in Jordan; he studies medicine in Turkey in term time.  
+  
+Despite feeling a bit opressed, this was nonetheless incredible.  
+  
+During the drive, Basam impartedlots of local knoledge. Like that there are
+more Palestinians residing in Jordan than Jordinians, particularly in Amman.
+Jordan is also the health capital of the Middle East with govenment funded
+hospitals, world renowned doctors and people travelling from miles around for
+care.  
+  
+Promising us better quality materials and better prices than the tourist
+areas, Basam took us to a bazaar frequented by visitors from other Arabian
+nations. The place was stunning and devoid of other shoppers so we had the
+assistant's full attention. We were welcomed with rich bitter sweet Jordinian
+coffee, and dressed up in traditional Bedouin garb, apparently more for his
+amusement than anything else. Don't worry, we have photos.  
+  
+We made some small purchases,and Basam returned us to the hotel; we each gave
+him 10JOD for what had been a wonderfully informative afternoon which we
+certainly could not have managed alone.  
+  
+That evening we met Dave and Nev, ur Oasis tour leader and driver, ad Helen,
+Catheine, and Lizzie our fellow travellers.  
+  
+We spent a relaxing evening in a restaurant/cofee shop then saw the brightly
+lit cityscape from the citadel at midnight.  
+  
+Today we drive and camp on Mt Nebo overlooking Israel. No wifi for a while!  
+  
+To summerise, Amman is a stunning and welcoming city with a varied history and
+tolerant friendly people. I will definitely be back.  
+  
+
+""" ;
+  sioc:topic blog:Done, "travel", "jordan", "amman" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/07/day-one-amman> .
+

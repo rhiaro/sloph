@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/rate-everyone-uk>
+  dcterms:created "2015-05-13T20:44:40+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: politics,nhs,fucktories
+reply-to: https://twitter.com/benwerd/status/598573352547004416
+-->
+
+At this rate, everyone in the UK will be feeling that way soon too :(""" ;
+  sioc:topic "politics", "nhs", "fucktories" ;
+  sioc:reply_of <https://twitter.com/benwerd/status/598573352547004416> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/rate-everyone-uk> ;
+  blog:tmpcontent "At this rate, everyone in the UK will be feeling that way soon too :(" .
+

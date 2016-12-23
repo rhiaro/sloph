@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/could-try-figure>
+  as:published "2016-01-27T18:31:38+00:00"^^xsd:dateTime ;
+  as:tag "hacking" ;
+  as:content "I could try to figure out how to catch the error... or I could file an issue that the error isn't being caught, and move on with my day. Future me will be thrilled." .
+

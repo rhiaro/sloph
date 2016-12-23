@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "BBQ seitan sandwich, peppermint & nettle tea (Clover)",
+    "blog:cost": "$10.25",
+    "as:tag": [
+        "clover"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-01-27T12:25:00-05:00",
+    "@id": "http://blog.rhiaro.co.uk/56a90206a79fe",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/56a90206a79fe"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-27T12:25:00-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

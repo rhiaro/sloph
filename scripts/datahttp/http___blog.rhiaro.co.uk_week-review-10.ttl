@@ -1,0 +1,43 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/week-review-10>
+  dcterms:title "Week in review" ;
+  dcterms:created "2015-12-06T23:59:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 6 December 2015, 23:59 GMT
+tags: phd,week in review,webmention,https,ssl,socialwg
+-->
+
+# Week in review
+
+## 30 November - 6 December
+
+* Added some RDFa to my site templates; needs more work though.
+* SocialWG face-to-face ([notes](/2015/12/socialwg4-summary)).
+* [Indiewebcamp SF](https://indiewebcamp.com/2015/SF)
+  * Fixed a paging bug (December was an edge case, apparently).
+  * Added sessions so indieauth logins ot my site persist.
+  * Made progress on my [webmention endpoint](/q) which in addition to the base webmention spec accepts the `property` parameter and will be able to verify mentions marked up with RDFa.
+* Wrote about different social web worldviews and how that affects data models: [Things and happenings](/2015/12/things-happenings).
+* Attempted to figure out https with letsencrypt on two different server setups. One was [not terrible](/2015/12/https-terrible), the other was [pretty terrible](/2015/12/https-what).""" ;
+  sioc:topic "phd", "week in review", "webmention", "https", "ssl", "socialwg" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/12/week-review-10> ;
+  blog:tmpcontent """# Week in review
+
+## 30 November - 6 December
+
+* Added some RDFa to my site templates; needs more work though.
+* SocialWG face-to-face ([notes](/2015/12/socialwg4-summary)).
+* [Indiewebcamp SF](https://indiewebcamp.com/2015/SF)
+  * Fixed a paging bug (December was an edge case, apparently).
+  * Added sessions so indieauth logins ot my site persist.
+  * Made progress on my [webmention endpoint](/q) which in addition to the base webmention spec accepts the `property` parameter and will be able to verify mentions marked up with RDFa.
+* Wrote about different social web worldviews and how that affects data models: [Things and happenings](/2015/12/things-happenings).
+* Attempted to figure out https with letsencrypt on two different server setups. One was [not terrible](/2015/12/https-terrible), the other was [pretty terrible](/2015/12/https-what).""" .
+

@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/56fefe5e41ecc>
+  dcterms:created "2016-04-01T19:03:46-04:00"^^xsd:dateTime ;
+  sioc:reply_of <https://calendar.csail.mit.edu/events/166364> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/04/56fefe5e41ecc>, <http://rhiaro.co.uk/2016/04/online-social> ;
+  as:startTime "2016-04-07T16:00:00-04:00" ;
+  as:location <http://rhiaro.co.uk/location/food> ;
+  as:published "2016-04-01T19:03:46-04:00"^^xsd:dateTime ;
+  as:tag "phd", "rsvp", "http://rhiaro.co.uk/2016/04/56ff1ec3803d3", "social media", "social network analysis", "social science", "social web" .
+

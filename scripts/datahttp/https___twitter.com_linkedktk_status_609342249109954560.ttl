@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/linkedktk/status/609342249109954560>
+  dcterms:title "@rhiaro that's IMHO true for the ones I mentioned in this tweet this morning: twitter.com/linkedktk/stat…" ;
+  dcterms:created "2015-06-12T13:51:27+01:00"^^xsd:datetime ;
+  dc:creator <http://www.zazuko.com/> ;
+  sioc:content """[@rhiaro][1] that's IMHO true for the ones I mentioned in this tweet this morning: [twitter.com/linkedktk/stat…][2]
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/linkedktk/status/609280321499045888
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/06/oh-thing-semantic> .
+

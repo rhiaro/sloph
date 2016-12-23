@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brid-gy.appspot.com/like/twitter/rhiaro/608037855546490880/55247494>
+  a as:Like ;
+  as:published "2015-08-26T00:10:51+01:00"^^xsd:datetime, "2015-06-09T15:21:52+01:00"^^xsd:datetime ;
+  as:name "likes this." ;
+  as:actor <https://twitter.com/seyifeyi> ;
+  as:object <https://rhiaro.co.uk/2015/06/eswc2015> .
+

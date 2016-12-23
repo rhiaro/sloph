@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/half-dragonfruit>
+  a asext:Consume, as:Activity ;
+  as:name "Half a dragonfruit" ;
+  as:published "2016-07-28T19:41:14-04:00"^^xsd:dateTime ;
+  as:tag "fruit", <https://rhiaro.co.uk/tags/fruit> .
+

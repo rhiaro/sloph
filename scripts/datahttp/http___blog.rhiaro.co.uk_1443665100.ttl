@@ -1,0 +1,17 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/1443665100>
+  dcterms:created "2015-10-01T03:05:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+location: location/other
+published: 30 September 2015, 22:05 EDT
+-->""" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/10/1443665100> ;
+  as:location <http://rhiaro.co.uk/location/other> .
+

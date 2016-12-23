@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/08/heh-app-detects>
+  as:latitude "52.47851" ;
+  as:longitude "-1.91096" ;
+  blog:tmpcontent "Heh, app that detects two pebble-wearers fist bumping to transfer data is cool." ;
+  as:published "2015-08-01T12:18:37+0100"^^xsd:datetime ;
+  as:tag "foc2015", "yrs" ;
+  as:content """<!---
+tags: yrs,foc2015
+-->
+
+Heh, app that detects two pebble-wearers fist bumping to transfer data is cool.""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/627438437315035136/15090636>, <https://brid-gy.appspot.com/like/twitter/rhiaro/627438437315035136/12515352> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

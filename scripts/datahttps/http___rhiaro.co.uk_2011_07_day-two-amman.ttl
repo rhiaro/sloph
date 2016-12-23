@@ -1,0 +1,39 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2011/07/day-two-amman>
+  as:published "2011-07-30T15:21:00.000Z"^^xsd:datetime ;
+  as:tag "amman", "jordan", "travel", blog:Done, "israel", "mt nebo" ;
+  as:name "Day Two:Amman to Mt Nebo" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-9178125517774731228" ;
+  as:content """We spent a relaxing morning at the hotel before driving to Amman's City Mall
+where we saw the Oasis truck for the first time. It's pretty damn awesome.  
+  
+City Mall is a large shopping complex and one of the most Westernised places
+I've seen so far, for the most part with no dress code observed by either
+locals or tourists. If you're in Amman and missing home, a taxi will take you
+there from the centre for 3JOD. After enjoying their version of Subway, we hit
+the massive Carrefour on the bottom level to buy supplies for the evening
+meal.  
+  
+An hour drive from here took us to Madaba where we briefly visited a church
+filled with intricate mosaics, the most promient being a map of the holy land.
+We explored the small town and the guys hunted for beer (with success).  
+  
+Further driving through winding steep mountain roads eventually took us to our
+campsite for the evening, on the side of Mt Nebo. We pitched our tents and
+admired the incredible view over the Dead Sea and Israel. We watched the
+sunset from this perspective too and Israel became an unearthly spectacle of
+glittering lights. We saw plenty of shooting stars, and cooking duties were
+gained and lost in wagers about the solar system (resolved by flaky 3G access
+and texts home).  
+  
+Eventually we slept, woken periodically by the haunting call to prayer, all
+the more beautiful for not being artificially amplified. A great introduction
+forme into the world of bush camping.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2011-07-30T15:21:48.337Z"^^xsd:datetime .
+

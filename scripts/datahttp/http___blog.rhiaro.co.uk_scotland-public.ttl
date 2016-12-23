@@ -1,0 +1,37 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/scotland-public>
+  dcterms:title "Scotland Public Notices experiments" ;
+  dcterms:created "2013-03-05T01:56:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-03-23T01:57:34.241Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3302927277885043572" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """[Tell Me Scotland](http://tellmescotland.gov.uk/) publish public notices for
+things like traffic, planning permissions... And they have a [SPARQL
+endpoint](http://opendata.tellmescotland.gov.uk/)!  
+  
+I'm hacking around with the ultimate goal of creating an interface that allows
+people to generate a GeoRSS feed for a particular area.  Ally of
+[GreenerLeith](http://greenerleith.org.uk/) suggested this, so that they can
+use this to feed into their own apps.  A stage beyond that is to smoosh the
+whole lot into a Wordpress plugin, to make it accessible to anyone (who uses
+WP).  
+  
+[So far I've got the notices on an
+OpenStreetMap](http://rhiaro.co.uk/publicnotices/map.php).  I haven't had a
+whole lot of time, but will make more soon.  
+  
+I'm using the PHP library ARC2 to deal with the linked data.  
+  
+NB. the TMS endpoint is, at the moment, flaky at best.  I think they're
+working on this.
+
+""" ;
+  sioc:topic "tellmescotland", "sparql", "rdf", "openstreetmap", "open data", "linked data", "learning", "hacking", "greener leith", blog:Doing ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/03/scotland-public> .
+

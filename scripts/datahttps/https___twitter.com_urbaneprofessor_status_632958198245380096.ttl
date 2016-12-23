@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/urbaneprofessor/status/632958198245380096>
+  sioc:reply_of <https://rhiaro.co.uk/2015/08/long-walk> ;
+  as:published "2015-08-16T17:52:48+01:00"^^xsd:datetime ;
+  as:name "@rhiaro ow. And congrats! Massive achievement :-)" ;
+  as:content """[@rhiaro][1] ow. And congrats! Massive achievement :-)
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://drpetermatthews.blogspot.com/> .
+

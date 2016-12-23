@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "content": "There are ping-pong tables near my desk in [MIT CSAIL](https://www.csail.mit.edu/) but I feel somewhat let down that there isn't also a robot arm to play against.",
+    "category": [
+        "mit",
+        "csail",
+        "pingpong",
+        "robots",
+        "life"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-08-11T17:08:29+01:00",
+    "@id": "http://blog.rhiaro.co.uk/there-ping-pong",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/there-ping-pong"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-11T17:08:29+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "bookmark-of": "http://www.hemingwayapp.com/",
+    "name": "Hemingway Editor",
+    "category": [
+        "academia",
+        "phd",
+        "writing",
+        "app"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-07-31T13:32:05+01:00",
+    "@id": "http://blog.rhiaro.co.uk/hemingway-editor",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/07/hemingway-editor"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-07-31T13:32:05+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

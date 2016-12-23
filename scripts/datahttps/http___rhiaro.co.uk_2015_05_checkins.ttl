@@ -1,0 +1,44 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/checkins>
+  as:latitude "43.78205" ;
+  as:longitude "11.24954" ;
+  blog:tmpcontent """# Checkins
+
+When is it a checkin (with a note) and when is it a note (with a location)? Hot topic. I differentiate them for display purposes (currently I just show a map-marker icon next to checkins, but I'm also going to want to show them on a map and stuff).
+
+For now, my rule is:
+
+* If a post has a `location` property, which should be a URL of a place (venue/city/country/vague), it's a checkin.
+  * A checkin *may* have a `latitude` and `longitude` (my vague checkins, eg. 'home', do not).
+  * A checkin *may* have `content`.
+* If a post has a `latitude` and `longitude` and *no* `location`, it's a note with a location.
+  * A note *should* have content.
+
+My inner semantic pedant is unhappy with attaching a lat and lon to a post directly, so I might rethink this at some point.""" ;
+  as:published "2015-05-10T14:35:00+0100"^^xsd:datetime ;
+  as:tag "data model", "location", "checkin", "markup", "microformats2", blog:Done, "indieweb", "slogd", "hacking" ;
+  as:name "Checkins" ;
+  as:content """<!---
+published: 10th May 2015, 14:35
+tags: slogd,hacking,indieweb,checkin,location,microformats2,markup,data model
+list: done
+-->
+
+# Checkins
+
+When is it a checkin (with a note) and when is it a note (with a location)? Hot topic. I differentiate them for display purposes (currently I just show a map-marker icon next to checkins, but I'm also going to want to show them on a map and stuff).
+
+For now, my rule is:
+
+* If a post has a `location` property, which should be a URL of a place (venue/city/country/vague), it's a checkin.
+  * A checkin *may* have a `latitude` and `longitude` (my vague checkins, eg. 'home', do not).
+  * A checkin *may* have `content`.
+* If a post has a `latitude` and `longitude` and *no* `location`, it's a note with a location.
+  * A note *should* have content.
+
+My inner semantic pedant is unhappy with attaching a lat and lon to a post directly, so I might rethink this at some point.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

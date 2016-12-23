@@ -1,0 +1,13 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/1432307177>
+  as:latitude "43.62317" ;
+  as:longitude "13.40742" ;
+  as:published "2015-05-22T16:06:17+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Ancona> ;
+  as:content """<!---
+location: http://dbpedia.org/resource/Ancona
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

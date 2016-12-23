@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Vegan egg, cheese and sausage muffin; coffee (Terri)",
+    "as:tag": [
+        "coffee",
+        "tofu",
+        "terri",
+        "us0816"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-22T10:54:05-04:00",
+    "@id": "http://blog.rhiaro.co.uk/vegan-egg-cheese",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/vegan-egg-cheese"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-22T10:54:05-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

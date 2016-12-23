@@ -1,0 +1,33 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/todays-general-achievements->
+  as:latitude "43.51198" ;
+  as:longitude "16.43697" ;
+  blog:tmpcontent """Today's general achievements:
+* âœ“ Chill
+* âœ“ Plan for the next week
+* âœ“ Eat loads of tasty food
+* ~~Redesign homepage~~
+* ~~Make micropub endpoint accept updates and deletes via json~~
+* âœ“ Write about [making micropub endpoint accept updates and deletes via json](https://rhiaro.co.uk/2015/05/micropubbing-with)
+* ~~Write thesis~~
+* âœ“ Walked 6km, found beaches, sat in sun.""" ;
+  as:published "2015-05-24T22:36:30+0100"^^xsd:datetime ;
+  as:tag "travel", "croatia", "split", "ttd" ;
+  as:content """<!---
+tags: travel,croatia,split,ttd
+-->
+
+Today's general achievements:
+* âœ“ Chill
+* âœ“ Plan for the next week
+* âœ“ Eat loads of tasty food
+* ~~Redesign homepage~~
+* ~~Make micropub endpoint accept updates and deletes via json~~
+* âœ“ Write about [making micropub endpoint accept updates and deletes via json](https://rhiaro.co.uk/2015/05/micropubbing-with)
+* ~~Write thesis~~
+* âœ“ Walked 6km, found beaches, sat in sun.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

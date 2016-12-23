@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/Innovandiamo>
+  foaf:name "Francesco Carollo" ;
+  foaf:homepage <https://twitter.com/Innovandiamo> ;
+  foaf:depiction <https://twitter.com/Innovandiamo/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/4d17aeaf290daf5203fb5907e76f0586274ff0e276646a21d1e4aed4f0ac12bf.jpeg> .
+

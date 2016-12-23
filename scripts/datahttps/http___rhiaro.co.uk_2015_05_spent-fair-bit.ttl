@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/05/spent-fair-bit>
+  blog:tmpcontent "Spent a fair bit of time with an 8 year old and a 7 month old the past few days. 5% adorable, 95% ohgodpleaseneverletthishappentome" ;
+  as:published "2015-05-08T19:04:09+0100"^^xsd:datetime ;
+  as:tag "travel", "babies" ;
+  as:content """<!---
+tags: travel,babies
+-->
+
+Spent a fair bit of time with an 8 year old and a 7 month old the past few days. 5% adorable, 95% ohgodpleaseneverletthishappentome""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/596737566847717377/37075610>, <https://brid-gy.appspot.com/like/twitter/rhiaro/596737566847717377/19090770> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

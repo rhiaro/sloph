@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://twitter.com/girlgeekscot/status/609667511194382337>
+  dcterms:title "reposts this." ;
+  dcterms:created "2015-06-13T11:23:56+01:00"^^xsd:datetime ;
+  dc:creator <http://www.girlgeekscotland.com/> ;
+  sioc:content """RT [@rhiaro][1]: BCS world record attempt for the most people making Android apps at one time... #appathon bcs.org/content/conWeb… rhiaro.co.uk/2015/06/helpin…
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  blog:share_of <http://rhiaro.co.uk/2015/06/helping-out-with> .
+

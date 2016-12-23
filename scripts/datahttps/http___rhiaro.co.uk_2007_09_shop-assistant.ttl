@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2007/09/shop-assistant>
+  blog:tmpcontent """# Shop assistant
+
+## Bon MarchÃ©, Boston
+
+My first 'real job'! Perpetually felt like a tent because they only sell plus-size clothes and we had to wear merchandise as our 'uniforms'. Traded favours with friends/my mum to come in and buy the shop magazine so I could meet weekly targets. The most fun thing to do was keep records of lowest-net-income days. The winner was a day when the only transaction I carried out was a refund.""" ;
+  as:published "2007-09-01T09:00:00+0100"^^xsd:datetime ;
+  as:tag "boston", "resume", "cv", "work", "shop", "retail", "bon marche" ;
+  as:name "Shop assistant" ;
+  as:startTime "2007-09-01T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2008-09-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st September 2007, 09:00
+start: September 2007
+end: September 2008
+tags: cv,resume,shop,work,retail,bon marche,boston
+-->
+
+# Shop assistant
+
+## Bon MarchÃ©, Boston
+
+My first 'real job'! Perpetually felt like a tent because they only sell plus-size clothes and we had to wear merchandise as our 'uniforms'. Traded favours with friends/my mum to come in and buy the shop magazine so I could meet weekly targets. The most fun thing to do was keep records of lowest-net-income days. The winner was a day when the only transaction I carried out was a refund.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

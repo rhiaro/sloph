@@ -1,0 +1,15 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/06/day-eleven-sydney>
+  as:published "2013-06-08T23:30:00.000Z"^^xsd:datetime ;
+  as:tag "friends", "light show", "monorail", "sydney", "vivid", "australia", "travel", "food", blog:Done ;
+  as:name "Day eleven: Sydney adventures" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-450548700671913703" ;
+  as:content """Rosh etc, monorail, light show, Chinese.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-07-04T18:48:24.367Z"^^xsd:datetime .
+

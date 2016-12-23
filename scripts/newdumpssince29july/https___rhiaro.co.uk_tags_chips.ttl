@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/chips>
+  a as:Collection ;
+  as:name "chips" ;
+  as:items <https://rhiaro.co.uk/2016/08/chips-salsa> .
+

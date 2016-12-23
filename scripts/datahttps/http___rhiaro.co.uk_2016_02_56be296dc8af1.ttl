@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56be296dc8af1>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-02-12T09:30:23-05:00"^^xsd:dateTime ;
+  as:tag "food", "restaurant", "stata" ;
+  blog:cost "$1.55" ;
+  as:summary "Bagel (Stata)" .
+

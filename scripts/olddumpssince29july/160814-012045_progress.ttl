@@ -1,0 +1,26 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/progress> dct:created "2016-08-14T01:20:45+01:00"^^<xsd:dateTime> ;
+    sioc:content """Progress... [Amtrak](https://amtrak.com) straight to Chicago. [GreyhoundBus](http://greyhound.com) even implied they'd refund train ticket difference if I hassle enough\r
+\r
+![i like trains](https://pbs.twimg.com/media/Cpw42t3XEAE9lqL.jpg)""" ;
+    sioc:reply_of <https://rhiaro.co.uk/2016/08/im-going-sleep> ;
+    sioc:topic "amtrak",
+        "bus",
+        "greyhound",
+        "train",
+        "travel",
+        "us0816" ;
+    foaf:isPrimaryTopicOf <https://rhiaro.co.uk/2016/08/progress> .
+

@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/1438965189>
+  a as:Announce ;
+  as:published "2015-08-07T17:33:09+0100"^^xsd:datetime ;
+  as:tag "sexuality" ;
+  as:content """<!---
+share-of: https://twitter.com/thetrudz/status/629686891084820480
+tags: sexuality
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/thetrudz/status/629686891084820480> .
+

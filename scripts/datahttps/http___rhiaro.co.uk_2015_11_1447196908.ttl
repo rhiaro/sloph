@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/11/1447196908>
+  a as:Announce ;
+  as:published "2015-11-10T23:08:28+0000"^^xsd:datetime ;
+  as:tag "phd", "academia", "phdchat" ;
+  as:content """<!---
+share-of: https://twitter.com/AcademicsSay/status/664216675668115456
+tags: phd,academia,phdchat
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/AcademicsSay/status/664216675668115456> .
+

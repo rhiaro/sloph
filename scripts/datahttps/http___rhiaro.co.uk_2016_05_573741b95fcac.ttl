@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573741b95fcac>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-14T08:17:07-07:00"^^xsd:dateTime ;
+  as:tag "coffee", "food", "java cruz", "takeaway" ;
+  blog:cost "$2.75" ;
+  as:summary "Sustenance (Java Cruz)" .
+

@@ -1,0 +1,10 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/medialabhttpstwittercommedialab>
+  sioc:reply_of <https://twitter.com/medialab/status/705495532244963328> ;
+  as:published "2016-03-03T20:55:17+00:00"^^xsd:dateTime ;
+  as:tag "phd", "MLTalks", "Sherry", "Turkle" ;
+  as:content "[@medialab](https://Twitter.com/medialab) 'losing' or some people were always better at it than others and now they can better deal with being alone?" .
+

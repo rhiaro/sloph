@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Miso soup with tofu and seaweed. Homemade fries with daiya and chili sauce",
+    "as:tag": [
+        "potato",
+        "soup"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-06-01T00:01:51-04:00",
+    "@id": "http://blog.rhiaro.co.uk/miso-soup-with",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/miso-soup-with"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-01T00:01:51-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

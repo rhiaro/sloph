@@ -1,0 +1,28 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/connecting-images> a as:Travel ;
+    dcterms:created "2016-03-07T11:23:39-05:00"^^<xsd:dateTime> ;
+    blog:rsvp "yes" ;
+    as:content "Talk by Andrej Karpathy of Stanford" ;
+    as:endTime "2016-03-07T17:00:00-05:00" ;
+    as:location <http://dbpedia.org/resource/Massachusetts_Institute_of_Technology> ;
+    as:name "Connecting Images and Natural Language" ;
+    as:published "2016-03-07T11:23:39-05:00" ;
+    as:startTime "2016-03-07T16:00:00-05:00" ;
+    as:tag "attendee",
+        "crosscloud",
+        "event",
+        "karpathy",
+        "machine learning",
+        "mit",
+        "nlp",
+        "rsvp" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/03/connecting-images> .
+

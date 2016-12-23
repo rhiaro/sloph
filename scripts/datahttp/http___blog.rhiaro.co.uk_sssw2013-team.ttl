@@ -1,0 +1,188 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/sssw2013-team>
+  dcterms:title "#SSSW2013: Collaborative ontology engineering and team formation" ;
+  dcterms:created "2013-07-09T19:58:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-07-30T14:47:29.341Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2094529228400394655" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """We were introduced to the various mini-projects on Tuesday morning, and
+encouraged to form teams with people who weren't from the same university.  I
+quickly shortlisted the five that sounded most interesting to me, but was
+disappointed that there weren't any about multimedia.  Because how to evaluate
+a very subjective system is a potential problem for me, the project proposed
+by Valentina Presutti was my first choice:  
+  
+_"Serendipity can be defined as the combination of relevance and
+unexpectedness: an information is considered serendipitous if it is at the
+same time very relevant and unexpected for a given user and in the context of
+a given task. In other words, a user would learn new relevant knowledge. To
+evaluate the performance of a tool (e.g., an exploratory search tool, a
+recommending system) in terms of its ability to provide users with
+serendipitous knowledge is a hard task because both relevance and
+unexpectedness are highly subjective. This miniproject focuses on two main
+research questions: what is the correct way of designing a user-study for
+evaluating an exploratory search tool performance in terms of serendipity? Is
+it possible to build a reusable set of resources (a benchmark) for evaluating
+ability to produce serendipity, allowing easier evaluation experiments and
+comparison among different tools?"_  
+  
+Nobody else seemed to be interested though, so I resigned myself to not being
+able to do it... until I explained the project and why it was interesting, to
+the best of my ability, to Andy, Oscar and Josef, and they were sold enough to
+mark it as our first choice.  Thus Team Anaconda Disappointed (a name of
+significant and mysterious origins) was born, and Project Cusack (because of
+the movie _Serendipity_, which _nobody_ got) was underway.  
+  
+Our first lecture today was from Lynda Hardman, about telling stories with
+multimedia objects.  It was super relevant to what I'm doing, to the point
+where I'm surprised I hadn't come across her work already.  My notes are here.
+Lynda has done, for example, work with annotation of personal media objects
+like holiday photos in order to combine them into a media presentation.  She
+has considered similar things to me, in particular noting that there are many
+many aspects of data about multimedia - I had assembled my take on this into a
+Venn diagram for my poster..  
+  
+
+![](http://1.bp.blogspot.com/-72hbT0YOyV8/Ueb2rC_KMQI/AAAAAAAAHvg/R1b02poVNHU/
+s400/venndiagram.png)
+
+  
+  
+One I hadn't considered is annotating an explict _message_ of a piece of
+media, intended by the creator.  This isn't always relevant - sometimes the
+consumer's interpretation of the media is more important - and this in itself
+might be an interesting annotation problem.  Competing perspectives -
+something an ontology should be able to represent.  
+  
+I need to check out COMM - Core Ontology for Multimedia.  
+  
+She has an overview of the canonical processes they have consolidated the
+process of producing digital content into, and how annotation can be formed
+around these.  
+  
+Lynda also told us about Vox Populi and and LinkedTV; practical applications
+of annotating multimedia.  
+  
+I made [lots and lots of notes](http://blog.rhiaro.co.uk/2013/07/notes-lynda-
+hardman-at-sssw2013.html).  
+  
+Natasha Hoy gave us some insights from the biomedical world with regards to
+ontology development, particularly in relation to the International
+Classification of Diseases which, when last revised in the 80s, consisted of a
+lot of paper and a whoever-shouts-the-loudest algorithm for inclusion of
+terms.  But the next version, currently under creation, is being developed
+with a version of Web Protege, customised to be friendly for those who don't
+know or care about ontologies, and is a truly collaborative process (for those
+allowed to take part) with accountability for all changes.  It's open too
+though, so even those without modification rights can view and comment on the
+developments.  My[ notes are here](http://blog.rhiaro.co.uk/2013/07/notes-
+natasha-noy-at-sssw2013.html).  
+  
+Lunch was for the first time outside, under the shadows of the forest, and for
+me was a tray of tomatoey vegetables that were delicious but few.  A striking
+contrast to Monday's lunch.  Everyone else had some meat-potato combination,
+preceded by a salad with tuna, and followed by a peach.  
+  
+The hands-on session followed on from Natasha's talk.  We teamed up
+(temporarily Anaconda Hopeful) and played with Web Protégé.  There were two
+magazines and two newspapers, each with four departments.  Anaconda Hopeful
+were randomly designated the Advertising Department of Iberia Travel (a food
+and travel magazine).  We got stuck in, on paper first to identify some
+classes and relations that were relevant to us, and then with Web Protégé,
+along with the other departments of Iberia Travel.  We didn't come into any
+conflicts, but ended up creating a few classes that we needed, but should
+really have been the remit of another department (I guess we just got there
+first).  
+  
+Then it was announced that Iberia Travel had bought the other magazine (and
+one of the newspapers had bought the other), and we had to work together to
+merge ontologies with the other department.  It became apparent that the other
+magazine had never had an Advertising Department (no wonder they went under!)
+so we had no-one to attempt to merge ontologies with.  We attempted to sell
+our expertise to the Advertising Departments of the newspapers, but there were
+already too many people involved in the heated debate that came out of the
+ontology merging there, so we couldn't really get involved.  
+  
+Later we got cracking with our mini-projects.  Valentina showed us
+[aemoo](http://aemoo.org/), and the experiments her team had come up with to
+try to evaluate it.  We sat down by ourselves to brainstorm, describing a lot
+of concepts for ourselves, breaking down the notion of serendipity, figuring
+out what might be wrong with existing experiments to 'measure' serendipity,
+and collating literature in the area.  (Turns out there is a _lot_, and it's a
+very interdisciplinary issue; lots to read about from social sciences,
+anthropology etc, as well as philosophy of science.  In computing, it seems to
+be primarily discussed within the realms of recommender systems and
+exploratory search).  
+  
+Serendipity seems to be mainly described as a combination of _unexpectedness_
+and _relevance_.  Problems include the sheer subjectivity of it.  Some people
+are going to get excited by all facts they find out, whether they're useful or
+not.  Some people are going to have hidden, inexplicit or subconscious goals
+that affect how 'relevant' something is to them.  People describe their
+different areas of expertise in different ways; some are more humble than
+others and would not call themselves an expert in a topic, for example.  So
+whether or not an event can be considered a serendipitous one is a complex
+question, which must take into account the person's background, goals and
+existing knowledge, the task they are trying to achieve (or lack thereof, as
+serendipity is particularly important - in my opinion - in undirected,
+loosely-motivated activities), the way they are able or encouraged to interact
+with a system, what they are doing before and after... all these things make
+up a _context_ for someone's activities, and none of them seem to be
+particularly measurable.  
+  
+Dinner was a vegetable and potato (yay!) starter, followed by spaghetti in
+tomato sauce (fish for everyone else, although Andy got a custom omelette,
+lah-de-dah).  Also an apple.  We learnt the hard way not to sit at a table
+directly underneath a light, as the bugs just raiiiin down.  
+  
+After dinner we crowded around Enrico who had offered to provide advice about
+PhD-ing.  From this session, I have a signed diagram of the life of a PhD,
+because he borrowed my notebook to make it.  I tuned in and out of the
+discussion, and noticed some irregularities between my PhD and what seemed to
+be 'normal'.  For instance, most people didn't seem to have as much control
+over their topic, or what they were doing at any given moment in their first
+year.  I am really, really enjoying my freedom, but in order to justify that I
+deserve it I need to sort out my lack of direction and focus.  I need to
+believe in what I'm doing - not be told by someone else - which is one of the
+main reasons I am doing this particular PhD.  Perhaps I need to ask for more
+guidance to more quickly reach the necessary conclusions for myself.  (And, of
+course, perhaps I also need to stop taking big chunks of time out periodically
+[for](http://blog.rhiaro.co.uk/2013/03/the-smart-data-hack.html)
+[different](http://rhiaro.co.uk/doing/geolit)
+[reasons](http://blog.rhiaro.co.uk/2013/05/pre-oz-quests.html); that might
+speed up the process as well).  
+  
+Later, the overriding sentiment was that the job of a PhD student was to
+answer a question, to produce a theory.  Not to create a system or solve a
+large problem; certainly not to worry about_ practical_, _real-world
+applications_ of theories.  Well, I've already explained that this is
+something I can't accept, and I still am not convinced that that is going to
+impact on my ability to do a PhD.  Theories develop during practice.  Coding
+and designing, like writing, are part of my thought processes, and I reach
+realisations or find new questions to ask through hacking and playing and
+_making_.  And why would I be hacking and playing and making, if not to try to
+produce something of real-world value?  If my motivation in making a system is
+explicitly to come up with new theories, then my approach and outcomes and
+realisations will be entirely different.  In trying to make something that
+works for _real people_, not researchers in a restricted domain or specific
+context; a clean and sterile laboratory, I figure out different things, that
+matter.  
+  
+There was another discussion that I came into a bit late, but it sounded like
+a very harsh discussion about problems with research in industry (rather than
+academia) that seemed to be very overstated compared to what I have read and
+experienced myself.  
+  
+By the end of the day, it felt like I'd been at Summer School for weeks, and
+had known everyone forever.
+
+""" ;
+  sioc:topic blog:Done, "valentina presutti", "sssw2013", "sssw13", "serendipity", "semantic web", "phd", "ontology engineering", "ontologies", "lynda hardman", "events" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/07/sssw2013-team> .
+

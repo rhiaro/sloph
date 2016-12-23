@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/spinach-lentil>
+  a blog:Consumption ;
+  dcterms:created "2016-07-02T18:02:44-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/spinach-lentil> ;
+  as:published "2016-07-02T18:02:44-04:00" ;
+  as:tag "cookie", "soup" ;
+  as:name "Spinach and lentil soup, choc chip cookie (Pie in the Sky)" .
+

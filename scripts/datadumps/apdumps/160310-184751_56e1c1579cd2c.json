@@ -1,0 +1,22 @@
+{
+    "h": "entry",
+    "bookmark-of": "https://composer.borreli.com/",
+    "category": [
+        "php",
+        "composer",
+        "shared",
+        "hosting",
+        "slogd",
+        "hacking"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-03-10T18:47:51+00:00",
+    "@id": "http://blog.rhiaro.co.uk/56e1c1579cd2c",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/03/56e1c1579cd2c"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-03-10T18:47:51+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

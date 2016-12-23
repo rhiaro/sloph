@@ -1,0 +1,24 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/helping-with-pre>
+  sioc:reply_of <http://british-hci2015.org/> ;
+  blog:tmpcontent "Helping with the pre-conference hackathon at BritishHCI, and returning to my native Lincs for a week." ;
+  as:published "2015-06-09T22:18:03+0100"^^xsd:datetime ;
+  as:tag "phd", "web science", "conference", "event", "rsvp", "hci2015", "hackathon" ;
+  as:startTime "2015-07-13T09:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-07-17T12:45:00+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Lincoln,_England> ;
+  as:content """<!---
+start: 13th July 2015, 09:00 BST
+end: 17th July 2015, 12:45 BST
+location: http://dbpedia.org/resource/Lincoln,_England
+reply-to: http://british-hci2015.org/
+tags: event,conference,hci2015,web science,phd,hackathon,rsvp
+-->
+
+Helping with the pre-conference hackathon at BritishHCI, and returning to my native Lincs for a week.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

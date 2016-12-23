@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "Bus from Boston to NYC",
+    "blog:cost": "$33",
+    "as:tag": [
+        "travel",
+        "journey",
+        "coach",
+        "bus",
+        "peterpan",
+        "us0816",
+        "boston",
+        "nyc"
+    ],
+    "as:published": "2016-08-07T14:36:05-04:00",
+    "as:startTime": "2016-08-13T02:15:00-04:00",
+    "as:endTime": "2016-08-07T08:40:00-04:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/New_York_City"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Boston"
+    },
+    "@id": "http://blog.rhiaro.co.uk/bus-from-boston",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/bus-from-boston"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-07T14:36:05-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

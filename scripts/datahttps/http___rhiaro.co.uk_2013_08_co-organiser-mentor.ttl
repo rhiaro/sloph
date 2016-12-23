@@ -1,0 +1,25 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2013/08/co-organiser-mentor>
+  blog:tmpcontent """# Co-organiser and mentor, Edinburgh Centre, Young Rewired State
+
+Helped to organise the local centre, recruited participants in the run up, and helped with mentoring during the week. Also helped to supervise a coachload of kids for the trip to the Festival of Code.""" ;
+  as:published "2013-08-05T09:00:00+0100"^^xsd:datetime ;
+  as:tag "organiser", "young rewired state", "mentor", "volunteer", "cv", "resume", "teaching", "festival of code", "hackathon", "yrs" ;
+  as:name "Co-organiser and mentor, Edinburgh Centre, Young Rewired State" ;
+  as:startTime "2013-08-05T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2013-08-11T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 5th August 2013, 09:00
+start: 5th August 2013
+end: 11th August 2013
+tags: volunteer,cv,resume,yrs,festival of code,mentor,teaching,young rewired state,hackathon,organiser
+-->
+
+# Co-organiser and mentor, Edinburgh Centre, Young Rewired State
+
+Helped to organise the local centre, recruited participants in the run up, and helped with mentoring during the week. Also helped to supervise a coachload of kids for the trip to the Festival of Code.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

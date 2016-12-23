@@ -1,0 +1,33 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2013/08/rhia-ro>
+  blog:tmpcontent """# Rhia Ro
+
+I sometimes get asked what rhiaro means.
+
+Rhianna, or Rhia, was one of several daydream personas I had when I was wee. She persisted longest, so that was the name I chose (when I was around 9 or 10 years old I think) and I decided any budding author worth their salt needed a penname (I always wanted to be a writer of fiction; I still do). I scribbled Rhia Ro at the bottom of all my short stories for years, and when I started to converge on a consistent online identity, that's what I went with (before then, you might've known me as gerbilsbhs, theboynextdoor, TheRingleader, mysticalmoonflower or kirilya).
+
+Buying rhiaro.co.uk at the end of 2008 was a real formative moment for Rhia and myself.
+
+Most people instinctively pronounce it rih-haro ree-haro or ree-aro, and that's okay, but really it's reah-ro.""" ;
+  as:published "2013-08-10T20:44:00+0100"^^xsd:datetime ;
+  as:tag "writing", "rhiaro", "name", "penname", "pseudonym", "rhia ro" ;
+  as:name "Rhia Ro" ;
+  as:content """<!---
+published: 10th August 2013, 20:44
+tags: rhiaro,name,writing,penname,pseudonym,rhia ro
+-->
+
+# Rhia Ro
+
+I sometimes get asked what rhiaro means.
+
+Rhianna, or Rhia, was one of several daydream personas I had when I was wee. She persisted longest, so that was the name I chose (when I was around 9 or 10 years old I think) and I decided any budding author worth their salt needed a penname (I always wanted to be a writer of fiction; I still do). I scribbled Rhia Ro at the bottom of all my short stories for years, and when I started to converge on a consistent online identity, that's what I went with (before then, you might've known me as gerbilsbhs, theboynextdoor, TheRingleader, mysticalmoonflower or kirilya).
+
+Buying rhiaro.co.uk at the end of 2008 was a real formative moment for Rhia and myself.
+
+Most people instinctively pronounce it rih-haro ree-haro or ree-aro, and that's okay, but really it's reah-ro.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

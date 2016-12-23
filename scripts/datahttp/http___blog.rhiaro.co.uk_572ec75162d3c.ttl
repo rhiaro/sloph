@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/572ec75162d3c>
+  a blog:Acquisition ;
+  dcterms:created "2016-05-07T21:56:46-07:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/572ec75162d3c> ;
+  blog:cost "$4.30" ;
+  as:published "2016-05-07T21:56:46-07:00"^^xsd:dateTime ;
+  as:summary "2 vegan donuts (Psycho Donuts)" ;
+  as:tag "food", "psycho donuts", "takeaway" .
+

@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "Flight from Lisbon to Boston",
+    "as:tag": [
+        "travel",
+        "journey",
+        "plane",
+        "flight",
+        "tpac2016",
+        "boston",
+        "lisbon",
+        "usa",
+        "portugal"
+    ],
+    "as:published": "2016-08-08T13:14:20-04:00",
+    "as:startTime": "2016-09-25T12:30:00+00:00",
+    "as:endTime": "2016-09-25T16:55:00-04:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Lisbon"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Boston"
+    },
+    "@id": "http://blog.rhiaro.co.uk/flight-from-lisbon",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/flight-from"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-08T13:14:20-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

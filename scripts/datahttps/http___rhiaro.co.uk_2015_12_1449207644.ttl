@@ -1,0 +1,20 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/12/1449207644>
+  as:published "2015-12-04T05:40:44+0000"^^xsd:datetime ;
+  as:tag "travel", "journey", "train", "usa", "amtrak", "san francisco", "portland" ;
+  as:startTime "2015-12-05T06:04:00+0000"^^xsd:datetime ;
+  as:endTime "2015-12-05T23:32:00+0000"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/San_Francisco" ;
+  blog:endLocation "http://dbpedia.org/resource/Portland,_Oregon" ;
+  as:content """<!---
+tags: journey,travel,train,amtrak,usa,san francisco,portland
+start: 4 December 2015, 22:04 PST
+end: 5 December 2015, 15:32 PST
+startLocation: http://dbpedia.org/resource/San_Francisco
+endLocation: http://dbpedia.org/resource/Portland,_Oregon
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

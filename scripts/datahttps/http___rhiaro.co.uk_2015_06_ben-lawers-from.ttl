@@ -1,0 +1,27 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/ben-lawers-from>
+  as:latitude "56.47507" ;
+  as:longitude "-4.27026" ;
+  blog:tmpcontent """Ben Lawers (from Lawers) and back in 4.5 hours today. The clouds cleared up on the way down. Learnt some stuff about rocks.
+
+![The Summit](https://rhiaro.co.uk/photos/1506firbush/150620_benlawers.jpg)
+
+7 miles, but Runkeeper doesn't know about altitude... ([GPS trace](http://rnkpr.com/a9uy42o)).""" ;
+  as:published "2015-06-20T20:52:13+0100"^^xsd:datetime ;
+  as:tag "travel", "uk", "scotland", "highlands", "ben lawers", "firbush" ;
+  as:location <http://dbpedia.org/resource/Loch_Tay> ;
+  as:content """<!---
+tags: travel,scotland,uk,highlands,ben lawers,firbush
+location: http://dbpedia.org/resource/Loch_Tay
+-->
+
+Ben Lawers (from Lawers) and back in 4.5 hours today. The clouds cleared up on the way down. Learnt some stuff about rocks.
+
+![The Summit](https://rhiaro.co.uk/photos/1506firbush/150620_benlawers.jpg)
+
+7 miles, but Runkeeper doesn't know about altitude... ([GPS trace](http://rnkpr.com/a9uy42o)).""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/tofu-scramble-2>
+  a as:Activity, asext:Consume ;
+  as:name "Tofu scramble with broccoli, spinach, red peppers, homefries, sour dough; coffee (Lazy Jane's)" ;
+  as:published "2016-08-18T10:14:03-05:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/lazy+janes>, <https://rhiaro.co.uk/tags/bread>, <https://rhiaro.co.uk/tags/coffee>, <https://rhiaro.co.uk/tags/tofu>, <https://rhiaro.co.uk/tags/potato>, <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/us0816> .
+

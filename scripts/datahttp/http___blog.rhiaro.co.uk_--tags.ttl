@@ -1,0 +1,25 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/--tags>
+  dcterms:created "2015-08-01T12:20:31+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: yrs,foc2015,prewired
+share-of: https://twitter.com/Prewired/status/627437440316387328
+--""" ;
+  sioc:topic "yrs", "foc2015", "prewired" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/08/--tags> ;
+  as:latitude "52.47844" ;
+  as:longitude "-1.91094" ;
+  blog:share_of <https://twitter.com/Prewired/status/627437440316387328> ;
+  blog:tmpcontent """--
+tags: yrs,foc2015,prewired
+share-of: https://twitter.com/Prewired/status/627437440316387328
+--""" .
+

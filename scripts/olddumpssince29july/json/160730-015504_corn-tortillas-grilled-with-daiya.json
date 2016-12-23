@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Corn tortillas grilled with daiya, daiya cream cheese, refried beans, mashed potato, daiya, cream cheese, mushrooms, habanero, fresno pepper; salad with kale, lettuce, chilli, cucumber ; fancy ginger beer",
+    "as:tag": [
+        "tortillas",
+        "salad",
+        "beans"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-07-29T20:55:04-04:00",
+    "@id": "http://blog.rhiaro.co.uk/corn-tortillas-grilled-with-daiya",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/07/corn-tortillas"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-07-29T20:55:04-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

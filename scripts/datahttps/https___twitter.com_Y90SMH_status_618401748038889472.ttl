@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/Y90SMH/status/618401748038889472>
+  sioc:reply_of <https://rhiaro.co.uk/2015/07/todays> ;
+  as:published "2015-07-07T13:50:40+01:00"^^xsd:datetime ;
+  as:name "@rhiaro hey Amy, I'm going to have Â£50 to spend on Amazon and can't think what to get for my @CodeClub, they're Yr5, any idea's" ;
+  as:content """[@rhiaro][1] hey Amy, I'm going to have Â£50 to spend on Amazon and can't think what to get for my [@CodeClub][2], they're Yr5, any idea's
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/CodeClub
+""" ;
+  as:actor <http://seanholcroft.co.uk/> .
+

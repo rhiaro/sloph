@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1420374600>
+  a blog:LlogPost ;
+  as:published "2015-01-04T12:30:00+0000"^^xsd:datetime ;
+  as:tag "polyphasic", "sleep cycle", "sleep", "quantified self", "life" ;
+  as:startTime "2015-01-04T12:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-04T12:30:00+0000"^^xsd:datetime ;
+  as:content """<!---
+start: 4th January 2015, 12:00
+end: 4th January 2015, 12:30
+type: LlogPost
+tags: sleep,polyphasic,sleep cycle,quantified self,life
+list: done
+-->
+
+Felt thoroughly rubbish after last extended-but-interrupty nap, but 30 minutes just now really helped. I had a few vivid dreams - one about being climbed on by a massive cat, and one about waking up, checking my phone and seeing it was after 3pm and panicking, then realising my eyes were closed so I couldn't be checking my phone and must still be asleep - which means I was in REM (success).""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

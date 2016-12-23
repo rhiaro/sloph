@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/referendum>
+  dcterms:created "2016-06-24T00:55:52+01:00"^^xsd:dateTime ;
+  sioc:content """[Brackers](https://twitter.com/deusbrackers) is making me watch the Referendum. This is too much of an emotional rollercoaster. I can't. Let me watch Voyager.
+
+Aaaaaaaargh.
+
+Whenever that yellow bar gets bigger it's this surge of relief, and whenever the blue bar does it's a dark cloud of terror. And we're only on 6/382. Too violent. I can't.""" ;
+  sioc:topic "life", "politics", "referendum", "uk", "voyager" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/referendum> .
+

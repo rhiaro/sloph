@@ -1,0 +1,29 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/07/week-review-catching>
+  as:published "2013-07-07T17:00:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "semantic web", "poster", "sssw13", "week in review", "post-travel depression" ;
+  as:name "Week in review: Catching up, poster" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7090165647671052514" ;
+  as:content """  
+
+Returned to Edinburgh on Wednesday.  Suffering from post-travel depression.
+That's a thing, I looked it up.  It's a thing nobody has any sympathy for.
+Life is hard.
+
+  
+
+Started and finished my [poster](https://rhiaro.co.uk/stash/amyguy_poster.pdf)
+for the [Semantic Web Summer School](http://sssw.org/2013).
+
+  
+
+Went to Spain for aforementioned summer school.  Spain is hot.  Let this
+mental week of learning begin!
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-07-07T17:00:03.565Z"^^xsd:datetime .
+

@@ -1,0 +1,32 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/chi-2016> a as:Accept ;
+    dcterms:created "2016-05-06T18:21:37-07:00"^^<xsd:dateTime> ;
+    blog:cost "$500" ;
+    blog:rsvp "yes" ;
+    as:content "A big human-computer interaction academic conference. I have my name on a paper about pro-social deception" ;
+    as:endTime "2016-05-12T17:00:00-07:00" ;
+    as:inReplyTo <http://chi2016.acm.org/wp/> ;
+    as:location <http://dbpedia.org/resource/San_Jose,_California> ;
+    as:name "CHI 2016" ;
+    as:published "2016-05-06T18:21:37-07:00" ;
+    as:startTime "2016-05-07T09:00:00-07:00" ;
+    as:tag "academia",
+        "attendee",
+        "ca2016",
+        "chi2016",
+        "conference",
+        "event",
+        "phd",
+        "rsvp",
+        "san jose",
+        "speaker" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/chi-2016> .
+

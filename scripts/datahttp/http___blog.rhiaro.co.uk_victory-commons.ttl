@@ -1,0 +1,13 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/victory-commons>
+  dcterms:title "The Victory of the Commons" ;
+  dcterms:created "2016-07-22T14:03:53+01:00"^^xsd:dateTime ;
+  sioc:topic "couchsurfing", "economics", "freegan", "life", "sharing" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/victory-commons> ;
+  blog:bookmark_of <http://www.yesmagazine.org/new-economy/the-victory-of-the-commons> .
+

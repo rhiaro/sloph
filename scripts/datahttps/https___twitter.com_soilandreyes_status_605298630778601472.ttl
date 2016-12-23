@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/soilandreyes/status/605298630778601472>
+  a as:Announce ;
+  as:published "2015-06-01T10:03:34+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: "I wrote this code and it doesn't work really." Realtalk from @KKjernsmo xD #eswc2015 #semdev2015 rhiaro.co.uk/2015/05/wrote-â€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://orcid.org/0000-0001-9842-9718> ;
+  as:object <https://rhiaro.co.uk/2015/05/wrote-code-doesnt> .
+

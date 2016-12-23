@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/finally-moved>
+  blog:tmpcontent "I finally moved Slog'd issues from my head+Workflowy+indiewebcamp wiki to actual [issues on bitbucket](https://bitbucket.org/rhiaro/slogd/issues?status=new&status=open)!" ;
+  as:published "2015-06-19T13:07:39+0100"^^xsd:datetime ;
+  as:tag "git", "indieweb", "slogd", "hacking" ;
+  as:content """<!---
+tags: slogd,hacking,indieweb,git
+-->
+
+I finally moved Slog'd issues from my head+Workflowy+indiewebcamp wiki to actual [issues on bitbucket](https://bitbucket.org/rhiaro/slogd/issues?status=new&status=open)!""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

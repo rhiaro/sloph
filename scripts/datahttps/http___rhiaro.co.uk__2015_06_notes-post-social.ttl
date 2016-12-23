@@ -1,0 +1,31 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk//2015/06/notes-post-social>
+  sioc:reply_of <https://rhiaro.co.uk/2015/06/what-profile> ;
+  as:published "2015-06-19T12:35:35+01:00"^^xsd:datetime ;
+  as:name ": " ;
+  as:content """Notes post social-informatics seminar talk
+
+methodology: iterative, inductive
+
+ResearchGate > Academia.edu
+
+Research in use of avatars
+
+Where the good enough boundary lies for managing? When is it dangerous, when serendipitous. What 'matters'? No perfect model of social management/access control.
+
+Easier to look at different systems doing the same thing in different ways (things of a similar species)
+
+Profiles shaped strongly by the needs of the service providers Problems of their own survival are also played out in this space Difficulties people may have managing profiles are sometimes down to easily fixable poor design things Interests of people fight with interests of service
+
+Github
+
+Definition of ownership
+
+ACNE and other diseases communities on twitter - people create second accounts to participate
+
+"epidemic communication patterns" - Robin Williams""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

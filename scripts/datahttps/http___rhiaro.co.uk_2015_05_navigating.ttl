@@ -1,0 +1,61 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/navigating>
+  blog:tmpcontent """# Navigating Slovenia
+
+This afternoon was probably the most ad-hoc bit of travel in this whole barely-organised trip so far. I couldn't find any information online about buses from Koper to Portoroz, other than that such things exist, so I figured I'd show up in Koper and figure it out from there. What could go wrong?
+
+Step one was easy: bus station was right outside the train station. Bus stands were all labelled with destinations, and no fewer than three had Portoroz listed.
+
+Step two was easy: there were buses in the stands, with Portoroz even in their window signs.
+
+Step three was more difficult: there were no timetables, and no bus drivers.
+
+So I started to deviate from the obvious plan.
+
+Step four: talked to accumulating small group of fellow rucksack-bearing young people. Discover nobody knows the timetable and everyone is waiting around hoping for the best. Discuss how long we should wait.
+
+Step five: more adventurous Americans go to speak to nearby taxi drivers.
+
+Step six: we realise splitting the cost of a taxi is the same as the bus, and all seven of us pile into a taxi-van. Most are bound for Piran, two of us to Portoroz and one person (the only other ESWC-goer) for somewhere in between.
+
+Step seven: success! Arrived in Portoroz for a mere 3.5 Euros, less than half an hour later. Mohammed, the other Portoroz passenger, turned out to be staying in the same hostel as me, so we climbed the hill together.
+
+The hill was knackering, and it was hot, so I was keen to crash but ended up taking an hour to check-in because Andrej the hostel owner was fun to chat to.
+
+I'd booked a bed in a 10-bed dorm, as usual, but apparently I'm the only girl staying in the hostel. So I have a family room to myself, with my own bathroom! Score. Seems like yet another great hostel. Feeling bouncy, so I'm going to meet other ESWC-ers for dinner (thanks, twitter!).""" ;
+  as:published "2015-05-30T20:30:00+0100"^^xsd:datetime ;
+  as:tag "travel", "hostel", "slovenia", "trains", "eswc2015", "buses" ;
+  as:name "Navigating Slovenia" ;
+  as:content """<!---
+published: 30th May 2015, 2130 Europe/Berlin
+tags: travel,slovenia,trains,buses,eswc2015,hostel
+-->
+
+# Navigating Slovenia
+
+This afternoon was probably the most ad-hoc bit of travel in this whole barely-organised trip so far. I couldn't find any information online about buses from Koper to Portoroz, other than that such things exist, so I figured I'd show up in Koper and figure it out from there. What could go wrong?
+
+Step one was easy: bus station was right outside the train station. Bus stands were all labelled with destinations, and no fewer than three had Portoroz listed.
+
+Step two was easy: there were buses in the stands, with Portoroz even in their window signs.
+
+Step three was more difficult: there were no timetables, and no bus drivers.
+
+So I started to deviate from the obvious plan.
+
+Step four: talked to accumulating small group of fellow rucksack-bearing young people. Discover nobody knows the timetable and everyone is waiting around hoping for the best. Discuss how long we should wait.
+
+Step five: more adventurous Americans go to speak to nearby taxi drivers.
+
+Step six: we realise splitting the cost of a taxi is the same as the bus, and all seven of us pile into a taxi-van. Most are bound for Piran, two of us to Portoroz and one person (the only other ESWC-goer) for somewhere in between.
+
+Step seven: success! Arrived in Portoroz for a mere 3.5 Euros, less than half an hour later. Mohammed, the other Portoroz passenger, turned out to be staying in the same hostel as me, so we climbed the hill together.
+
+The hill was knackering, and it was hot, so I was keen to crash but ended up taking an hour to check-in because Andrej the hostel owner was fun to chat to.
+
+I'd booked a bed in a 10-bed dorm, as usual, but apparently I'm the only girl staying in the hostel. So I have a family room to myself, with my own bathroom! Score. Seems like yet another great hostel. Feeling bouncy, so I'm going to meet other ESWC-ers for dinner (thanks, twitter!).""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,16 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2016/02/qcri-project>
+  sioc:reply_of <http://crosscloud.org> ;
+  a as:Travel ;
+  as:published "2016-02-21T16:00:57-05:00"^^xsd:dateTime, "2016-02-21T16:00:57-05:00" ;
+  as:tag "attendee", "crosscloud", "event", "meeting", "mit", "phd", "qcri", "rsvp", "social web", "solid", "travel" ;
+  as:name "QCRI Project meeting" ;
+  as:startTime "2016-03-20T09:00:00+03:00" ;
+  as:endTime "2016-03-23T17:00:00+03:00" ;
+  as:location <http://dbpedia.org/resource/Doha> ;
+  blog:rsvp "yes" .
+

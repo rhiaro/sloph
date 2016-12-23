@@ -1,0 +1,26 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1431489720-3>
+  dcterms:created "2015-05-13T05:02:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 1st May 2015, 13:06
+start: 12th May 2015, 21:55 Europe/Berlin
+end: 13th May 2015, 06:02 Europe/Berlin
+startLocation: http://dbpedia.org/resource/Dusseldorf
+endLocation: http://dbpedia.org/resource/Munich
+tags: travel,train,germany
+-->""" ;
+  sioc:topic "travel", "train", "germany" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/1431489720-3> ;
+  as:startTime "2015-05-12T20:55:00+0100"^^xsd:datetime ;
+  as:endTime "2015-05-13T05:02:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Dusseldorf" ;
+  blog:endLocation "http://dbpedia.org/resource/Munich" .
+

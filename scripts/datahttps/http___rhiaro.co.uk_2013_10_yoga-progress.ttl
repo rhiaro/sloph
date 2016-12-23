@@ -1,0 +1,45 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/10/yoga-progress>
+  as:published "2013-10-07T14:32:00.001Z"^^xsd:datetime ;
+  as:tag blog:Doing, "misc", "yoga", "self-improvement", "exercise" ;
+  as:name "Yoga progress" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-149671452570026111" ;
+  as:content """I haven't blogged about yoga yet, but now seems like as good a time as any to
+start.  
+  
+I started yoga-ing towards the end of 2012, with on-and-off classes at the
+Commonwealth Pool, then joined two beginner classes (with very different
+teaching styles) in January that ran for a semester as part of Edinburgh
+Council's [Adult Education Programme](http://ces.egfl.net/programme/).  I was
+hooked, and since the start of this semester I've been doing four classes a
+week:  
+  
+Monday is Vinyasa 'power' yoga, one of the classes held by the [University's
+Yoga Society](http://www.eusa.ed.ac.uk/societies/society/EUYS/).  It's fast,
+sweaty and intense, and I'd never have been able to handle it - or enjoy it -
+as a complete beginner.  
+  
+Tuesday is a really relaxed beginner class running this term through the
+University Chaplaincy, mainly for relaxation. Great for the final hour of the
+24 hour recovery from Monday's class.  
+  
+Wednesday and Thursday are post-beginner Adult Education Programme classes, in
+Cameron House Centre and Nelson Hall respectively, with one of the teachers
+from my first semester of regular classes before the summer.  
+  
+But what I _really_ wanted to say, is that today I got myself into a full
+backbend unassisted (the last two weeks I've had help) and got substantially
+closer to reaching my toes with a straight back than I ever have before.  
+  
+Go me.  
+  
+(I definitely have shorter hamstrings than is normal, and my main aim with
+yoga is improving on that).
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-10-07T14:32:39.492Z"^^xsd:datetime .
+

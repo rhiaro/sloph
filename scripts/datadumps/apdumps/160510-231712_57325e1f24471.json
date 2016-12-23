@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Bubble tea (ThirsTea)",
+    "blog:cost": "$4.50",
+    "as:tag": [
+        "food",
+        "takeaway",
+        "thirstea",
+        "ca2016",
+        "chi2016"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-10T15:17:12-07:00",
+    "@id": "http://blog.rhiaro.co.uk/57325e1f24471",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/57325e1f24471"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-10T15:17:12-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

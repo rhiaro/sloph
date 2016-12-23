@@ -1,0 +1,15 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/06/day-eighteen-brisbane>
+  as:published "2013-06-15T20:09:00.000Z"^^xsd:datetime ;
+  as:tag "australia", "brisbane", "travel", blog:Done ;
+  as:name "Day eighteen: Brisbane" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2359343489060204801" ;
+  as:content """Wander, Alibi, Mt Coot-tha.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-07-04T20:11:35.878Z"^^xsd:datetime .
+

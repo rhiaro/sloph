@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Mighty Bowl (Prasad)",
+    "blog:cost": "$7",
+    "as:tag": [
+        "food",
+        "restaurant",
+        "prasad",
+        "portland"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-06-06T18:26:12-07:00",
+    "@id": "http://blog.rhiaro.co.uk/5756f53856ebd",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/5756f53856ebd"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-06T18:26:12-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

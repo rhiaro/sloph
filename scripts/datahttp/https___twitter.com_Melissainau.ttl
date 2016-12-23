@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/Melissainau>
+  foaf:name "Melissa" ;
+  foaf:homepage <https://twitter.com/Melissainau> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/77e3712b9430c56924038fb10d2c8aa869b9cd27635b69a726f185775f1c1094.jpeg> .
+

@@ -1,0 +1,23 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/05/clear-caches>
+  as:latitude "45.51727" ;
+  as:longitude "13.56941" ;
+  blog:tmpcontent """CLEAR YOUR CACHES EVERYONE, NEW WEBSITE IS UP.
+
+Whew.""" ;
+  as:published "2015-05-31T16:26:20+0100"^^xsd:datetime ;
+  as:tag "indieweb", "slogd", "hacking" ;
+  as:content """<!---
+tags: indieweb,slogd,hacking
+-->
+
+CLEAR YOUR CACHES EVERYONE, NEW WEBSITE IS UP.
+
+Whew.""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/605034326334550016/414227991>, <https://brid-gy.appspot.com/like/twitter/rhiaro/605034326334550016/18191576>, <https://aaronparecki.com/likes/2015/05/31/1/> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

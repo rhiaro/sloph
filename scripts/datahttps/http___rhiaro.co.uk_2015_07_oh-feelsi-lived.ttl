@@ -1,0 +1,25 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/oh-feelsi-lived>
+  as:latitude "53.07958" ;
+  as:longitude "-0.9521" ;
+  blog:tmpcontent """OH THE FEELS.
+
+![I lived here once.](https://rhiaro.co.uk/photos/1507bhci/labc.jpg)
+
+![I lived here once.](https://rhiaro.co.uk/photos/1507bhci/lab.jpg)""" ;
+  as:published "2015-07-13T10:12:00+0100"^^xsd:datetime ;
+  as:tag "lincoln" ;
+  as:content """<!---
+tags: lincoln
+published: 13th July 2015, 10:12 BST
+-->
+
+OH THE FEELS.
+
+![I lived here once.](https://rhiaro.co.uk/photos/1507bhci/labc.jpg)
+
+![I lived here once.](https://rhiaro.co.uk/photos/1507bhci/lab.jpg)""" .
+

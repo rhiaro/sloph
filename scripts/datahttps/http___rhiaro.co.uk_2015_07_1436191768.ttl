@@ -1,0 +1,22 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/07/1436191768>
+  as:published "2015-07-06T15:09:28+0100"^^xsd:datetime ;
+  as:tag "edinburgh", "travel", "journey", "uk", "train", "london" ;
+  as:startTime "2015-07-10T16:30:00+0100"^^xsd:datetime ;
+  as:endTime "2015-07-10T20:53:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Edinburgh" ;
+  blog:endLocation "http://dbpedia.org/resource/London" ;
+  blog:cost "Â£42.70" ;
+  as:content """<!---
+start: 10th July 2015, 16:30 BST
+end: 10th July 2015, 20:53 BST
+startLocation: http://dbpedia.org/resource/Edinburgh
+endLocation: http://dbpedia.org/resource/London
+tags: train,journey,travel,uk,london,edinburgh
+cost: Â£42.70
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

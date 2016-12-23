@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/iiiiiiiii-may>
+  as:latitude "44.29486" ;
+  as:longitude "11.88103" ;
+  blog:tmpcontent "Iiiiiiiii may have just got on the wrong train. Probably this situation will resolve itself. It's gotta be going *roughly* the right way." ;
+  as:published "2015-05-22T13:21:02+0100"^^xsd:datetime ;
+  as:tag "travel", "train", "italy" ;
+  as:content """<!---
+tags: travel,italy,train
+-->
+
+Iiiiiiiii may have just got on the wrong train. Probably this situation will resolve itself. It's gotta be going *roughly* the right way.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

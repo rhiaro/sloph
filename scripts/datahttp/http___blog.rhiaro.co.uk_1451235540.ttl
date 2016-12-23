@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1451235540>
+  dcterms:created "2015-12-27T16:59:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 27th December 2015, 16:59 Europe/London
+bookmark-of: https://matthew-brett.github.io/pydagogue/gh_delete_master.html
+tags: git,github,version control,gh-pages
+-->
+
+""" ;
+  sioc:topic "git", "github", "version control", "gh-pages" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/12/1451235540> ;
+  blog:bookmark_of <https://matthew-brett.github.io/pydagogue/gh_delete_master.html> .
+

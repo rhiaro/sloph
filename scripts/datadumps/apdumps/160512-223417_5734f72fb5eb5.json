@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Espresso (Social Policy)",
+    "blog:cost": "$3.91",
+    "as:tag": [
+        "coffee",
+        "social policy"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-12T14:34:17-07:00",
+    "@id": "http://blog.rhiaro.co.uk/5734f72fb5eb5",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/5734f72fb5eb5"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-12T14:34:17-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

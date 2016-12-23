@@ -1,0 +1,37 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/10/moved-desksedi>
+  as:latitude "42.36207" ;
+  as:longitude "-71.09046" ;
+  blog:tmpcontent """I moved desks.
+
+From..
+
+![Edi desk](https://rhiaro.co.uk/photos/deskedi.jpg)
+
+..to..
+
+![MIT desk](https://rhiaro.co.uk/photos/deskmit.jpg)""" ;
+  as:published "2015-10-03T17:36:00+0100"^^xsd:datetime ;
+  as:tag "phd", "edinburgh", "travel", "boston", "mit", "work" ;
+  as:location <http://dbpedia.org/resource/Massachusetts_Institute_of_Technology> ;
+  as:content """<!---
+tags: phd,mit,edinburgh,work,travel,boston
+location: http://dbpedia.org/resource/Massachusetts_Institute_of_Technology
+published: 3 October 2015, 12:36 EDT
+-->
+
+I moved desks.
+
+From..
+
+![Edi desk](https://rhiaro.co.uk/photos/deskedi.jpg)
+
+..to..
+
+![MIT desk](https://rhiaro.co.uk/photos/deskmit.jpg)""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/650349546179047424/1761851>, <https://brid-gy.appspot.com/like/twitter/rhiaro/650349546179047424/6251532>, <https://brid-gy.appspot.com/like/twitter/rhiaro/650349546179047424/14710505>, <https://brid-gy.appspot.com/like/twitter/rhiaro/650349546179047424/13072452>, <https://brid-gy.appspot.com/like/twitter/rhiaro/650349546179047424/14188834>, <https://brid-gy.appspot.com/like/twitter/rhiaro/650349546179047424/1583811>, <https://twitter.com/annbass/status/650379259899351040>, <https://brid-gy.appspot.com/like/twitter/rhiaro/650349546179047424/57203>, <https://twitter.com/scharlau/status/650350150804721664>, <https://brid-gy.appspot.com/like/twitter/rhiaro/650349546179047424/790517>, <https://twitter.com/jamesdoc/status/650350213585108992> .
+

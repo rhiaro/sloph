@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/56d2069ee5c86>
+  a blog:Acquisition ;
+  dcterms:created "2016-02-27T19:22:00+00:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56d2069ee5c86> ;
+  blog:cost "&pound;7.35" ;
+  as:published "2016-02-27T19:22:00+00:00"^^xsd:dateTime ;
+  as:summary "NANDOS" ;
+  as:tag "food", "nandos", "takeaway" .
+

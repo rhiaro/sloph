@@ -1,0 +1,17 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/used-work>
+  dcterms:created "2016-01-21T23:19:56+00:00"^^xsd:dateTime ;
+  sioc:content """"This used to work, I swear."
+
+"This is why you need tests."
+
+"Tests? Pft. I did tests in high school."
+
+-- [@csarven](http://csarven.ca) on software development""" ;
+  sioc:topic "csarven", "hacking", "tests" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/used-work> .
+

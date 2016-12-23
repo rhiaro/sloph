@@ -1,0 +1,23 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/synvilahttptwittercomsynvila>
+  dcterms:created "2015-07-29T13:46:00+0100"^^xsd:datetime ;
+  sioc:content """<!---
+to: http://twitter.com/synvila
+reply-to: https://twitter.com/synvila/status/626361415004237824
+tags: indieweb
+published: 29th July 2015, 13:46 BST
+-->
+
+[@synvila](http://twitter.com/synvila) If you haven't seen [indiewebify.me](http://indiewebify.me), that's a much less daunting starting point. And [IndieMark](https://indiewebcamp.com/indiemark) might be helpful for breaking stuff down. More links to things to read, I know... Hopefully worth it though :) You never have to do 'everything', just pick and choose what meets your needs. """ ;
+  sioc:topic "indieweb" ;
+  sioc:reply_of <https://twitter.com/synvila/status/626361415004237824> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/synvilahttptwittercomsynvila> ;
+  blog:tmpcontent "[@synvila](http://twitter.com/synvila) If you haven't seen [indiewebify.me](http://indiewebify.me), that's a much less daunting starting point. And [IndieMark](https://indiewebcamp.com/indiemark) might be helpful for breaking stuff down. More links to things to read, I know... Hopefully worth it though :) You never have to do 'everything', just pick and choose what meets your needs." ;
+  as:to <http://twitter.com/synvila> .
+

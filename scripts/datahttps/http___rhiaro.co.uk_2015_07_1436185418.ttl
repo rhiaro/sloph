@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/1436185418>
+  a as:Announce ;
+  as:published "2015-07-06T13:23:38+0100"^^xsd:datetime ;
+  as:tag "mentoring", "teaching", "festival of code", "yrs15", "prewired" ;
+  as:content """<!---
+share-of: https://twitter.com/Prewired/status/618031445018308608
+tags: yrs15,prewired,festival of code,teaching,mentoring
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/Prewired/status/618031445018308608> .
+

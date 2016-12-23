@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1429439340>
+  a blog:LlogPost ;
+  as:published "2015-04-19T11:29:00+0100"^^xsd:datetime ;
+  as:tag "quantified self", "life", "food", "eat" ;
+  as:startTime "2015-04-19T11:29:00+0100"^^xsd:datetime ;
+  as:endTime "2015-04-19T11:29:00+0100"^^xsd:datetime ;
+  as:content """<!--- 
+start: 19th April 2015, 11:29
+end: 19th April 2015, 11:29
+type: LlogPost
+tags: eat,food,quantified self,life
+list: done
+-->
+
+Coffee""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

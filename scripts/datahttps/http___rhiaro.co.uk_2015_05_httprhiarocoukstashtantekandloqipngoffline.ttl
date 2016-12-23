@@ -1,0 +1,19 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/httprhiarocoukstashtantekandloqipngoffline>
+  blog:tmpcontent """![](https://rhiaro.co.uk/stash/tantekandloqi.png)
+
+Offline, Tantek and Loqi have never been seen in the same place at the same time, are they secretly the same person?!""" ;
+  as:published "2015-05-11T20:48:56+0100"^^xsd:datetime ;
+  as:content """<!---
+to: aaronpk.com
+-->
+
+![](https://rhiaro.co.uk/stash/tantekandloqi.png)
+
+Offline, Tantek and Loqi have never been seen in the same place at the same time, are they secretly the same person?!""" ;
+  as:to "aaronpk.com" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

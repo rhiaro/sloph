@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/hemp-ice-cream>
+  a asext:Consume, as:Activity ;
+  as:name "Hemp ice cream (JPLicks)" ;
+  as:published "2016-07-31T21:03:25-04:00"^^xsd:dateTime, "2016-07-31T21:03:25-04:00" ;
+  as:tag "dmitriz", "ice cream", <https://rhiaro.co.uk/tags/ice+cream>, <https://rhiaro.co.uk/tags/dmitriz> .
+

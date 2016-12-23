@@ -1,0 +1,46 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/touched-toes>
+  dcterms:title "I touched my toes!" ;
+  dcterms:created "2013-10-14T16:20:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-10-14T16:20:16.369Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7431902267622492434" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """I touched my toes in yoga today.  It happened in the heat of power yoga, and I
+didn't think I'd be able to do it cold.  But I can!  That's my goal for the
+end of the year met then..  
+  
+(This may sound trivial, but I have short hamstrings, and anything that
+involves bending in the middle and straightening my legs at the same time I
+find _extremely_ difficult.  This the main thing I'm aiming to overcome with
+yoga).  
+  
+Another first from today was binding without help in a spinal twist.  I
+managed to do this again at home an hour later, too.  
+  
+And I've noticed that going into Chatarunga between sets of postures has
+become a reprieve, a chance to catch my breath and rest for a second.
+Chatarunga is essentially holding yourself in the middle of a pressup, and
+when I started this class that was _not_ something I could do, or ever though
+it might be a good idea to do; with the fast pace of the class, it was easy to
+collapse down onto my chest and skip over it.  But over the past few weeks as
+I've got used to how the class progresses I've slipped into doing the
+Chatarunga properly - or as properly as I can without having time to stop and
+think about it - and not having trouble at all.  I just tested that theory at
+home, and held myself in it for a good ten seconds.  
+  
+I haven't seen such fast progress in any of the other yoga I've done.  This
+class is exciting me, and filling me with hope.  
+  
+It's taking a toll on my wrists though.  By the end of the semester, they'll
+be strong :)
+
+""" ;
+  sioc:topic blog:Doing, "yoga", "self-improvement", "misc", "exercise" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/10/touched-toes> .
+

@@ -1,0 +1,31 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/11/week-review-9>
+  blog:tmpcontent """# Week in review
+
+## 23 - 29 November
+
+* Learnt how to write a rebuttal for a CHI paper, mostly be reading a ton of stuff Max threw at me and watching Max and Dave do it.
+* Poked a bit at [SocialAPI](https://w3c-social.github.io/social-web-protocols/social-web-protocols) for potential consideration as a FPWD for the SocialWebWG on Tuesday.
+* First pass at restructure of SoLiD spec according to the structure of my SocialAPI document, with the aim of making its constituent parts easier to implement individually, and to make it easier to map parts on to other equivalent specs. [Needs work](https://github.com/rhiaro/solid-spec/blob/restructure/README.md).
+* Sketched a [solid equivalent to webmention](https://github.com/rhiaro/solid-spec/blob/restructure/ripples.md) based on my rudimentary understanding of extended discussions and whiteboarding with [csarven](http://csarven.ca), [sandro](http://hawke.org), [deiu]() and [nicola](https://nicola.io).""" ;
+  as:published "2015-11-30T04:59:00+0000"^^xsd:datetime ;
+  as:tag "socialwg", "phd", "week in review" ;
+  as:name "Week in review" ;
+  as:content """<!---
+published: 29 November 2015, 23:59 EST
+tags: week in review,phd,socialwg
+-->
+
+# Week in review
+
+## 23 - 29 November
+
+* Learnt how to write a rebuttal for a CHI paper, mostly be reading a ton of stuff Max threw at me and watching Max and Dave do it.
+* Poked a bit at [SocialAPI](https://w3c-social.github.io/social-web-protocols/social-web-protocols) for potential consideration as a FPWD for the SocialWebWG on Tuesday.
+* First pass at restructure of SoLiD spec according to the structure of my SocialAPI document, with the aim of making its constituent parts easier to implement individually, and to make it easier to map parts on to other equivalent specs. [Needs work](https://github.com/rhiaro/solid-spec/blob/restructure/README.md).
+* Sketched a [solid equivalent to webmention](https://github.com/rhiaro/solid-spec/blob/restructure/ripples.md) based on my rudimentary understanding of extended discussions and whiteboarding with [csarven](http://csarven.ca), [sandro](http://hawke.org), [deiu]() and [nicola](https://nicola.io).""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56afb12c6f8b7>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-02-01T14:00:53-05:00"^^xsd:dateTime ;
+  as:tag "food", "food truck" ;
+  blog:cost "$5" ;
+  as:summary "Vegetable dumplings (Dewey Sq food truck)" .
+

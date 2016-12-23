@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/57a3f9304f7f6>
+  a as:Activity, asext:Acquire ;
+  as:published "2016-08-04T16:25:04-04:00"^^xsd:dateTime, "2016-08-04T16:25:04-04:00" ;
+  as:tag "a4", "csarven", "food", "restaurant", <https://rhiaro.co.uk/tags/food>, <https://rhiaro.co.uk/tags/restaurant>, <https://rhiaro.co.uk/tags/csarven>, <https://rhiaro.co.uk/tags/a4> ;
+  as:summary "Espresso for csarven (A4)" ;
+  asext:cost "$2.50" .
+

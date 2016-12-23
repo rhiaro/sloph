@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Chia pudding",
+    "as:tag": [
+        "chia"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-25T21:31:43-04:00",
+    "@id": "http://blog.rhiaro.co.uk/chia-pudding-2",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/chia-pudding"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-25T21:31:43-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

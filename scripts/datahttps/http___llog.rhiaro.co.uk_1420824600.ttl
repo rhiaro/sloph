@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1420824600>
+  a blog:LlogPost ;
+  as:published "2015-01-09T17:30:00+0000"^^xsd:datetime ;
+  as:tag "tea", "quantified self", "food", "eat", "life" ;
+  as:startTime "2015-01-09T16:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-09T17:30:00+0000"^^xsd:datetime ;
+  as:content """<!---
+start: 9th January 2015, 16:00
+end: 9th January 2015, 17:30
+type: LlogPost
+tags: eat,food,tea,quantified self,life
+list: done
+-->
+
+Cherry almond black tea at Anteaques.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

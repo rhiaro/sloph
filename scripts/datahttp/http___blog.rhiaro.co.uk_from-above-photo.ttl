@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/from-above-photo>
+  dcterms:created "2015-05-11T16:30:32+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,dusseldorf
+reply-to: https://aaronparecki.com/notes/2015/05/10/1/d%C3%BCsseldorf
+-->
+
+And from above: ![Photo of shiny building](http://rhiaro.co.uk/stash/turm1.jpg)""" ;
+  sioc:topic "travel", "dusseldorf" ;
+  sioc:reply_of <https://aaronparecki.com/notes/2015/05/10/1/d%C3%BCsseldorf> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/from-above-photo> ;
+  blog:tmpcontent "And from above: ![Photo of shiny building](http://rhiaro.co.uk/stash/turm1.jpg)" .
+

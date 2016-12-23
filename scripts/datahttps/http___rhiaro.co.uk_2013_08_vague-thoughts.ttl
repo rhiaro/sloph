@@ -1,0 +1,63 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/08/vague-thoughts>
+  as:published "2013-08-02T14:03:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "semantic web", "notes", "brainstorming", "content creators", "active content creators" ;
+  as:name "Vague thoughts about content creators and the Semantic Web" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-5156546868984603963" ;
+  as:content """I had two meetings with Dave Robertson, my second supervisor, about what on
+earth I'm doing, and here is a vague summary of my thoughts afterwards.  
+  
+I came to the realisation between meetings that I need to scrap the term
+Amateur Creative Digital Content, because amateur doesn't really apply by its
+true definition and creative is too subjective anyway.  
+  
+Focus on content _creators_, not content (so previous point doesn't matter so
+much anyway; maybe just need to look at existing ways people are describing
+types of users to make it clear who I'm concentrating on).  
+  
+In terms of emphasis of the thesis, I need to make a choice between taking a
+cognitive science/sociology perspective and a tecchie/engineering perspective
+(I choose tech because that's where I'm most comfortable, but the sociology
+side of things is still important).  
+  
+(Therefore) I need to think concretely now about technology architecture.  
+  
+Not to get too hung up on the Semantic Web; the technologies are a vehicle for
+testing theories, rather than an end in itself (though I still think
+facilitating a big linked data set of this sort of data is useful in the long
+run for research and practical applications, I didn't labour that point).  
+  
+Social machines, and how Dave's process modelling language fits in, which I
+think I get in theory but not practice (I'd probably have to look at a working
+application and code to understand really). Some of the principles may be
+useful further down the line, but probably not the language itself or
+anything.  
+  
+Technology-wise, I'm not thinking about anything novel or new, but more new
+ways for how various Web and SW technologies are combined and applied to this
+domain. (?)  
+  
+So maybe the novelty is in marking up various things about content creators
+and using this to infer information about the processes they're involved in
+(or want to be involved in) in order to then facilitate these processes,
+without (necessarily) ever explicitly representing these processes (because
+from the content creators' perspective, they're certainly not thinking in
+terms of formal representations of processes, and in many cases won't know
+what they're trying to make until it's done, for example).  
+  
+How to represent the inferences made might be novel and exciting, but I don't
+know.  
+  
+Hmm, I still don't think I've figured out how to evaluate .. anything. Beyond
+comparing activities of users with magical-new-system vs without magical-new-
+system. And maybe, going back to the this-big-dataset-is-useful idea, by
+finding questions we can now ask about these kinds of communities that we
+couldn't before because they were so fragmented.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-09-03T14:07:29.917Z"^^xsd:datetime .
+

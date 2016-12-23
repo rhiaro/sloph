@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/cuban-sandwich>
+  a as:Activity, asext:Consume ;
+  as:name "Cuban sandwich with mash and gravy; peanut butter cookie dough milkshake; regret" ;
+  as:published "2016-08-14T17:14:03-04:00"^^xsd:dateTime, "2016-08-14T17:14:03-04:00" ;
+  as:tag "bread", "chicago diner", "milkshake", "potato", "sandwich", "us0816", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/bread>, <https://rhiaro.co.uk/tags/potato>, <https://rhiaro.co.uk/tags/sandwich>, <https://rhiaro.co.uk/tags/chicago+diner>, <https://rhiaro.co.uk/tags/milkshake> .
+

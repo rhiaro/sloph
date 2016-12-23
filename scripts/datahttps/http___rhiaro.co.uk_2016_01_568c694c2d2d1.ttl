@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/568c694c2d2d1>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-01-05T20:08:08-05:00"^^xsd:dateTime ;
+  as:tag "food", "my thai", "restaurant", "vegan" ;
+  blog:cost "$70" ;
+  as:summary "My Thai for three" .
+

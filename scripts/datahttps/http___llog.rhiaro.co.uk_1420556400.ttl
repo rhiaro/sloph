@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1420556400>
+  a blog:LlogPost ;
+  as:published "2015-01-06T15:00:00+0000"^^xsd:datetime ;
+  as:tag "polyphasic", "sleep cycle", "sleep", "quantified self", "life" ;
+  as:startTime "2015-01-06T14:30:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-06T15:00:00+0000"^^xsd:datetime ;
+  as:content """<!---
+start: 6th January 2015, 14:30
+end: 6th January 2015, 15:00
+type: LlogPost
+tags: sleep,polyphasic,sleep cycle,quantified self,life
+list: done
+-->
+
+Trying out Sleep As Android, which makes me do maths before the alarm stops. It's hard.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

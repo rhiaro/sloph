@@ -1,0 +1,28 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/week-review-brainstorm>
+  dcterms:title "Week in review: brainstorm" ;
+  dcterms:created "2013-01-28T00:36:00.001Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T00:07:56.723Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2970790278352814067" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """**21st - 27th January**  
+**  
+**Brainstormed about how to work with amateur digital media creators, mostly with the aim of starting to put together a vocabulary for representing various digital media creation processes, collaboration dynamics and audience engagement.  More coherent thoughts on that next week, I should think.  
+  
+Lightning-talked about the Berlin Open Data Dialogue at an OKFN meetup in the
+National Library of Scotland on Thursday 24th.  
+  
+Talked about [ontologies for sensor data at Ontologies with a
+View](http://ontologieswithaview.blogspot.co.uk/2013/01/week-5-ontologies-for-
+sensor-data.html).
+
+""" ;
+  sioc:topic blog:Doing, "week in review", "phd", "ontologies", "digital media", "digital creatives" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/01/week-review-brainstorm> .
+

@@ -1,0 +1,14 @@
+{
+    "h": "entry",
+    "like-of": "https://twitter.com/espectalll123/status/771456899850133505",
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-09-02T00:36:17+01:00",
+    "@id": "http://blog.rhiaro.co.uk/57c8bb71a557b",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/09/57c8bb71a557b"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-09-02T00:36:17+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

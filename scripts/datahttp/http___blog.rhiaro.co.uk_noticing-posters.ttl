@@ -1,0 +1,19 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/noticing-posters>
+  dcterms:created "2015-08-03T17:58:48+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: edinburgh
+-->
+
+Noticing posters advertising shows for [the Fringe](http://twitter.com/edfringe) dominated by white men. If I go to any this year, will have a minorities-only policy I think.""" ;
+  sioc:topic "edinburgh" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/08/noticing-posters> ;
+  blog:tmpcontent "Noticing posters advertising shows for [the Fringe](http://twitter.com/edfringe) dominated by white men. If I go to any this year, will have a minorities-only policy I think." .
+

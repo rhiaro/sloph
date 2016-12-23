@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/take-note-weary>
+  blog:tmpcontent "Take note weary travellers, Three's Feel At Home plan does *not* include Germany. Silly of me to just assume it did. I spent Â£5 on IRC and reading the microformats wiki." ;
+  as:content """<!---
+tags: travel,three,3g,microformats2
+-->
+
+Take note weary travellers, Three's Feel At Home plan does *not* include Germany. Silly of me to just assume it did. I spent Â£5 on IRC and reading the microformats wiki.""" .
+

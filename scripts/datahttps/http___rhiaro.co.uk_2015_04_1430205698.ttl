@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/04/1430205698>
+  as:published "2015-04-28T08:21:38+0100"^^xsd:datetime ;
+  as:tag "edinburgh", "events", "iwcedi", "indiewebcamp", "indieweb" ;
+  blog:repost-of "http://werd.io/2015/discussing-indiewebcamp-edinburgh-is-super-weird-if-you-believe-in-owning" ;
+  as:content """<!---
+repost-of: http://werd.io/2015/discussing-indiewebcamp-edinburgh-is-super-weird-if-you-believe-in-owning
+tags: indieweb,indiewebcamp,iwcedi,events,edinburgh
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

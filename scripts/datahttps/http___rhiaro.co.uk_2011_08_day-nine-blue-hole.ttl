@@ -1,0 +1,33 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2011/08/day-nine-blue-hole>
+  as:published "2011-08-06T14:12:00.000Z"^^xsd:datetime ;
+  as:tag blog:Done, "travel", "egypt", "snorkling", "dahab", "camel", "blue hole" ;
+  as:name "Day Nine: The Blue Hole" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3840187786180890077" ;
+  as:content """Another fantastically lazy day, with everyone doing their own thing. H went to
+learn to kitesurf, and Al, Lizzie and I caught camels for half an hour to The
+Blue Hole, a prime scuba diving and snorkling spot.  
+  
+My camel was distinctly tetchy and easily distracted,but overall highly
+entertaining.  
+  
+I snorkled for a bit, but had a dodgy mask so it wasn't nearly as enjoyable as
+last time. I think we were all a little underwhelmed by the Blue Hole. It
+can't have helped that it was brimming with tourists.  
+  
+H joined us later and we lazed about, eating, drinking and sleeping until we
+were collected at 5. For anyone still reading this because Chris pointed you
+here, he was diving all day. You'll have to ask him about that.  
+  
+We regrouped for dinner at a classy looking Indian/Thai/Chinese place.  
+  
+At ten, six of us were picked up from the hotel on a minibus for our next
+grand adventure...
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2011-08-06T14:12:19.390Z"^^xsd:datetime .
+

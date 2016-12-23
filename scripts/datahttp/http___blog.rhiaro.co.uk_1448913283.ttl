@@ -1,0 +1,20 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1448913283>
+  dcterms:created "2015-11-30T19:54:43+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+like-of: https://twitter.com/jennschiffer/status/671413607591239680
+repost-of: https://twitter.com/jennschiffer/status/671413607591239680
+tags: w3c,standards,web
+-->""" ;
+  sioc:topic "w3c", "standards", "web" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/11/1448913283> ;
+  blog:like_of <https://twitter.com/jennschiffer/status/671413607591239680> ;
+  blog:share_of <https://twitter.com/jennschiffer/status/671413607591239680> .
+

@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/suchprettyeyes>
+  foaf:name "Nicola Osborne" ;
+  foaf:homepage <https://twitter.com/suchprettyeyes> ;
+  foaf:depiction <https://twitter.com/suchprettyeyes/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/33839df486b02165979097b55e604a579b397f5cf47923593d090c5c4b1311cc.png> .
+

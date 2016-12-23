@@ -1,0 +1,19 @@
+{
+    "h": "entry",
+    "content": "It's pretty useful that the webapps that distract me the most have the heaviest/slowest JS, so before things finish loading I've realised I'm procrastinating and closed the tab.",
+    "category": [
+        "life",
+        "javascript",
+        "procrastination"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-01T21:33:44+00:00",
+    "@id": "http://blog.rhiaro.co.uk/pretty-useful",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/pretty-useful"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-01T21:33:44+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

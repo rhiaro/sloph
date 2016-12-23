@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/578a7d9b78aec>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-07-15T16:31:37-04:00", "2016-07-15T16:31:37-04:00"^^xsd:dateTime ;
+  as:tag "mit", "study" ;
+  blog:cost "$-20" ;
+  as:summary "20 dollars cash for eye-tracking study" .
+

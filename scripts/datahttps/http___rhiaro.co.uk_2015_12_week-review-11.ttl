@@ -1,0 +1,30 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/week-review-11>
+  blog:tmpcontent """# Week in review
+
+## 7-13 December 2015
+
+Not much to report. Pantsed around with HTTPS too much, ate a lot and walked a lot.
+
+* CHI paper was accepted
+* WWW 2016 Solid Tutorial proposal was accepted""" ;
+  as:published "2015-12-13T23:59:00+0000"^^xsd:datetime ;
+  as:tag "phd", "week in review" ;
+  as:name "Week in review" ;
+  as:content """<!---
+tags: week in review,phd
+published: 13 December 2015, 23:59 GMT
+-->
+
+# Week in review
+
+## 7-13 December 2015
+
+Not much to report. Pantsed around with HTTPS too much, ate a lot and walked a lot.
+
+* CHI paper was accepted
+* WWW 2016 Solid Tutorial proposal was accepted""" .
+

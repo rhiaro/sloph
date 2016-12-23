@@ -1,0 +1,35 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/indiewebcamp-sf>
+  dcterms:title "Indiewebcamp SF" ;
+  dcterms:created "2015-11-07T03:36:30+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+reply-to: https://kylewm.com/2015/12/indiewebcamp-sf-2015
+rsvp: yes
+tags: rsvp,indiewebcamp,indieweb,san francisco,mozilla,hacking
+start: 3 December 2015, 09:30 PST
+end: 4th December 2015, 18:00 PST
+location: https://kylewm.com/venues/mozilla-sf-san-francisco-california
+-->
+
+# Indiewebcamp SF
+
+Attending!""" ;
+  sioc:topic "rsvp", "indiewebcamp", "indieweb", "san francisco", "mozilla", "hacking" ;
+  sioc:reply_of <https://kylewm.com/2015/12/indiewebcamp-sf-2015> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/11/indiewebcamp-sf> ;
+  as:startTime "2015-12-03T17:30:00+0000"^^xsd:datetime ;
+  as:endTime "2015-12-05T02:00:00+0000"^^xsd:datetime ;
+  as:location <https://kylewm.com/venues/mozilla-sf-san-francisco-california> ;
+  blog:tmpcontent """# Indiewebcamp SF
+
+Attending!""" ;
+  blog:rsvp "yes" .
+

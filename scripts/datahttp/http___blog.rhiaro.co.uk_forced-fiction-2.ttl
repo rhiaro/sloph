@@ -1,0 +1,66 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/forced-fiction-2>
+  dcterms:title "Forced fiction 2: billfold, circuitry, macintosh, reaction, usual" ;
+  dcterms:created "2011-08-25T23:34:00.006Z"^^xsd:datetime ;
+  dcterms:modified "2013-03-23T02:18:03.400Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6649387906420521642" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """([What is forced fiction?](http://blog.rhiaro.co.uk/2011/08/forced-fiction-
+definition.html))  
+  
+[Words were generated randomly. I swear I didn't expect them to be this
+topical.]  
+  
+Little Steve poked at the pile of circuitry in front of him with a screwdriver
+the length of his forearm. His nose wrinkled with concentration as he
+carefully extracted a string of spaghetti. His father would not be pleased.  
+  
+As usual, the aliens had come whilst his parents were sleeping. Last time it
+had only been the TV remote that they'd abducted. The time before that it was
+a standing lamp. This time, it was his father's brand new Macintosh computer.
+Steve did not want to be around for his dad's reaction, but being four-years-
+and-seven-months old, he struggled to find excuses to be absent from the
+house. So he would have to face the consequences.  
+  
+They always blamed him of course; not when things went missing, but when they
+came back. Because most of the time, things came back having been partially
+transformed into something tasty. The lamp had been embedded with chocolate
+chips. The insides of the remote, filled with ice cream. They never believed
+him when he explained about the aliens and their faulty teleporter. His mother
+just eyed him with suspicious terror, and his father talked in a stern voice
+about respecting peoples' things, and the cost of psychological counselling.  
+  
+Steve reached for tweezers in an attempt to extract flecks of bolognese. The
+machine had been quite literally turned inside out before being dosed with a
+hearty Italian meal. It may well be beyond salvation.  
+  
+He sighed, rolling his eyes at the spot in the night sky in which he knew
+their mothership resided. If their pattern of taking increasingly
+sophisticated devices was to continue, something must be done.  
+  
+Steve crept through the dark house and reached a tiny hand onto the desk in
+the study. The hand withdrew with his father's billfold clutched firmly
+inside. He extracted all of the notes, and returned the wallet to its previous
+position. Tiptoeing through the kitchen, tiles chilling his bare feet, Steve
+tucked the money between his lips and shrunk to all fours to squeeze through
+the dog-flap in the back door.  
+  
+The plantpot where he made his offerings was beside the door; Steve squashed
+the cash into the mud, making sure it was covered, then popped a marble on top
+so they'd know.  
+  
+"_Fix your teleporter_," he hissed into the darkness.  
+  
+Steve returned to bed, hoping sincerely that the aliens would deal with their
+technical problems before it was his turn.
+
+""" ;
+  sioc:topic blog:Doing, "writing", "story", "forced fiction", "flash", "fiction" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/08/forced-fiction-2> .
+

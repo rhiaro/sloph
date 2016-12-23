@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Coffee, apple cake",
+    "as:tag": [
+        "coffee",
+        "cake"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-24T10:24:29-04:00",
+    "@id": "http://blog.rhiaro.co.uk/coffee-apple-cake",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/coffee-apple-cake"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-24T10:24:29-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

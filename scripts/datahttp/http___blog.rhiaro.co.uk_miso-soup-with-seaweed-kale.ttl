@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/miso-soup-with-seaweed-kale>
+  a blog:Consumption ;
+  dcterms:created "2016-06-28T23:11:27-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/miso-soup-with> ;
+  as:published "2016-06-28T23:11:27-04:00" ;
+  as:tag "lasagne", "leftovers", "soup" ;
+  as:name "Miso soup with seaweed, kale, edamame, sweetcorn, mushrooms; lasagne" .
+

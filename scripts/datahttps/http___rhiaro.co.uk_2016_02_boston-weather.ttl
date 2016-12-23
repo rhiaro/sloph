@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/boston-weather>
+  as:published "2016-02-15T21:21:23+00:00"^^xsd:dateTime ;
+  as:tag "weather", "Boston", "life" ;
+  as:content "Boston weather right now.. Snow, hail.. bubbles? Yep, bubbles coming from the sky." .
+

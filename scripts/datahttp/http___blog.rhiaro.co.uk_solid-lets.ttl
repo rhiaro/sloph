@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/solid-lets>
+  dcterms:created "2016-04-12T15:39:20+01:00"^^xsd:dateTime ;
+  sioc:content "Solid lets developers choose their preferred model to build, and users choose the applications that implement the model they trust most." ;
+  sioc:topic "applications", "social", "solid", "web", "www2016" ;
+  sioc:reply_of <http://rhiaro.co.uk/2016/04/solid-tutorial> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/04/solid-lets> .
+

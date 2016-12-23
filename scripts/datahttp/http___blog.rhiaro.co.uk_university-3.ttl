@@ -1,0 +1,60 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/university-3>
+  dcterms:title "University 3.0" ;
+  dcterms:created "2012-09-17T17:19:00.001Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T00:11:52.340Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6182840480342847494" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """Even though I don't officially start my PhD until the 1st of October, today
+really felt like a proper first day of term.  I got up early went to a couple
+of fourth year/MSc classes that I've decided to sit in on
+([HCI](http://www.inf.ed.ac.uk/teaching/courses/hci/) and [Text
+Technologies](http://www.inf.ed.ac.uk/teaching/courses/tts/)), went to
+training for tutoring/demonstrating, filled in some forms, got my new student
+card (that doesn't expire until 2016!) and most importantly, got the key to my
+office in the [Informatics Forum](http://www.ed.ac.uk/schools-
+departments/informatics/about/forum/).  
+  
+My PhD ideas are vague at best right now, though it'll definitely be within
+the realms of the Semantic Web.  According to the proposal I wrote to apply
+for the position back in May, it'll be to do with provenance of and
+collaborative creation of digital media artefacts, like comics and films.
+It'll be interesting to watch that morph and change.  
+  
+Though I became aware of Semantic Web _stuff_ during my undergraduate, I
+developed my knowledge during my MSc at Edinburgh.  Primarily by taking the
+[Multi-Agent Semantic Web
+Systems](http://www.inf.ed.ac.uk/teaching/courses/masws/) course for credit,
+enjoying it a lot and doing pretty well.  (I should be TAing/marking for that
+this year).  I also learnt lots about linked data and other such things at
+conferences and hacks like [Dev8D](http://dev8d.org/), and various open data
+meet-ups.  I'm super excited about the future of the Internet - particularly
+making sure it remains an open, public platform for uncensored expression and
+knowledge sharing (fingers crossed).  Since I'm a technologist, not a lawyer
+or policy-maker, I have to address this with theoretical and practical
+research around how people create and share things, and ways to improve
+connectivity (between people and data), which of course includes the big
+problems like privacy, security and identity.  
+  
+Whilst I'm confident enough to say I know quite a lot about designing and
+developing for the Web these days, my Semantic Web knowledge really consists
+of a basic grounding, and a lot of enthusiasm.  
+  
+There's a _ton_ of research going on in various related areas, so I've decided
+to read one or two relevant academic papers a day... forever, I guess... and
+make notes on what I read.  Publishing my notes here works as a subconscious
+stimulant, to make sure I actually get it done.  A lot of them might be
+foundations, or basic stuff, but I intend to cram as much as possible -
+especially in the couple of weeks before I start propertly.  So look out for
+those! (If you're interested.  If not, ignore them).
+
+""" ;
+  sioc:topic blog:Doing, "semantic web", "provenance", "phd", "papers", "academia" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2012/09/university-3> .
+

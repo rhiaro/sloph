@@ -1,0 +1,36 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "blog:cost": "&pound;8.30",
+    "as:tag": [
+        "travel",
+        "journey",
+        "train",
+        "uk",
+        "scotland",
+        "glasgow",
+        "edinburgh"
+    ],
+    "as:published": "2016-02-22T12:59:00+00:00",
+    "as:startTime": "2016-02-22T13:00:00+00:00",
+    "as:endTime": "2016-02-22T13:45:00+00:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Edinburgh"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Glasgow"
+    },
+    "@id": "http://blog.rhiaro.co.uk/56cbb6b2490f7",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56cbb6b2490f7"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-22T12:59:00+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

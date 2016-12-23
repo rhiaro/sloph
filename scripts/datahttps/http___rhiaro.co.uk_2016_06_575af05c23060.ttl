@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/575af05c23060>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-06-09T09:50:25-07:00", "2016-06-09T09:50:25-07:00"^^xsd:dateTime ;
+  as:tag "food", "restaurant", "sf", "underdog" ;
+  blog:cost "$13.50" ;
+  as:summary "Hotdog (Underdog)" .
+

@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/days-twenty-gold>
+  dcterms:title "Days twenty and twenty one: More beach (Gold Coast)" ;
+  dcterms:created "2013-06-18T20:13:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-07-04T21:16:43.018Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-4146338852665774756" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """Hanging out.  
+Dropped my things.  
+Sydney in the evening.
+
+""" ;
+  sioc:topic blog:Done, "under construction", "travel", "surfer's paradise", "sun", "sea", "gold coast", "dominoes", "beach", "australia" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/06/days-twenty-gold> .
+

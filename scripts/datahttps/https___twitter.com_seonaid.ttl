@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/seonaid>
+  foaf:name "Seonaid" ;
+  foaf:homepage <https://twitter.com/seonaid> ;
+  foaf:depiction <https://twitter.com/seonaid/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/9d5cc0b6d67f137ce23992839c3a7669c43680a4eda866d62454cdb2cbad9a74.jpeg> .
+

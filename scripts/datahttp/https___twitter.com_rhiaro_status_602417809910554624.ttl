@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/rhiaro/status/602417809910554624>
+  dcterms:title "@jamesdoc hmm you're right, I should have added climb four mountains and swim to an island into the mix" ;
+  dcterms:created "2015-05-24T11:16:12+01:00"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/> ;
+  sioc:content """[@jamesdoc][1] hmm you're right, I should have added climb four mountains and swim to an island into the mix
+
+[1]: https://twitter.com/jamesdoc
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/05/todays-general> .
+

@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/57c6d9cbae0ea>
+  a as:Activity, asext:Acquire ;
+  as:published "2016-08-31T09:20:50-04:00"^^xsd:dateTime, "2016-08-31T09:20:50-04:00" ;
+  as:tag "food", "o2", "restaurant", <https://rhiaro.co.uk/tags/food>, <https://rhiaro.co.uk/tags/restaurant>, <https://rhiaro.co.uk/tags/o2> ;
+  as:summary "Breakfast and smoothie (O2)" ;
+  asext:cost "$18.15" .
+

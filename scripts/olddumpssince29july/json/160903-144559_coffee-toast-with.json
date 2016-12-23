@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Coffee, toast with Vegemite",
+    "as:tag": [
+        "bread",
+        "coffee"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-09-03T09:45:59-04:00",
+    "@id": "http://blog.rhiaro.co.uk/coffee-toast-with",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/09/coffee-toast-with"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-09-03T09:45:59-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

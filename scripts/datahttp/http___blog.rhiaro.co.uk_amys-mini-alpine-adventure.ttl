@@ -1,0 +1,147 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/amys-mini-alpine-adventure>
+  dcterms:title "Amy's mini alpine adventure ctd" ;
+  dcterms:created "2015-05-16T11:15:47+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,innsbruck,austria,alps,mountain,cable car,fog
+-->
+
+# Amy's mini alpine adventure ctd
+
+I have in-dispersed this report with messages I sent either on Twitter or to anyone who might pay attention over the course of the journey..
+
+Rosa (the elderly Vietnamese lady) and I walked to Hungerburg. It was raining heavily, but warm. I messed up the route a bit and we did a lot of scrambling through mud and up steep slopes, but Rosa seemed thrilled to have found someone to have this adventure with.
+
+She told me about when she had left Vietnam for Belgium as a political refugee, and all of the horrible things her family and friends had endured because of "crazy communists". Her brother and sister live in California now, and none of them ever want to go back to Vietnam even though it's safe now.
+
+She also told me about her 27 year old son who she considers a huge disappointment as all he does is browse the web and talk to his girlfriend, and doesn't have a job. He has a masters in Informatics, but there is no work in Belgium, and he refuses to move somewhere he can find work.
+
+She told me about a friend's son, whom everyone thought was stupid until at around 22 years old he went to university, completed some degrees in record time, and now works as an accountant in London and is married to an African woman, apparently to spite his racist family, which she finds hilarious, and wishes her son was like this instead.
+
+She calls all of her cats 'Baby'.
+
+This was super fun, and I'm glad she encouraged me to go out in the rain.
+
+She didn't have time (or suitable shoes) to climb to Seegrube, so we parted ways at Hungerburg. I hope she made it back okay!
+
+I continued to Seegrube. It was pretty thick fog the whole way, though sometimes I could see a few hundred meters ahead instead of a few meters. I took lots of pictures of where I expected there would be spectacular views if there wasn't cloud in the way. 
+
+> [14:09] Just checking in. Literally in a cloud. Can't see fuck.
+
+> [14:12] It's pretty creepy. I think I hit a pub in about an hour.
+
+> [14:13] I'm soaking. GPS is good though.
+
+I mostly followed the main road, which zigzagged and was a much less direct route, but the through-forest trails were wet and muddy and the fog didn't instil me with confidence. At one point a sign expressly pointed into the forest, so I clambered for a bit, but then found a hut and lots of scary looking forestry equipment and decided it was a horror movie waiting to happen, so back-tracked to the road...
+
+> [14:18] Ooh a sign! Pub 40 minutes. Assuming alm means pub. Then just another hour to next cable car stop..
+
+> [14:21] Mystery crashing sounds
+
+I saw two humans and one dog for the whole three hours I was walking. Occasionally I'd see a completely empty cable car glide by overhead. The air was heavy and still, and the mist was creepy. I started to worry about flash flooding, wolves, bears, and crazy humans.
+
+> [14:24] Can you look up what to do in event of flash flood, bear, or mad axeman?
+
+> [14:25] Also if there are bears or wolves on hafelekar
+
+> [14:26] Omg if this cloud wasn't here views would be incredible. I hope it isn't all the way to the top. I at least want views over expanse of cloud.
+
+About an hour before Seegrube was Bodensteinalm, a pub-type-thing a few minutes off the main trail. I was entertaining the idea of a cup of coffee and human contact, but the place - a cute little Alpine hut - was completely deserted. The temperature was starting to drop, so I pressed on.
+
+> [14:44] Omg snow
+
+> [15:11] Human being!!!
+
+> [15:12] And he's gone. Swallowed by fog.
+
+> [15:23] Omg mist clearing and can see end of cable car!
+
+The last stretch to Seegrube, 6,250ft, was pretty cold, and there was snow. After 8km uphill, I was ready for a cup of coffee, and splashed out 3 Euros at Seegrube Restaurant; the coffee was horrible. I did a circuit of the top, but alas the clouds did not part in divine glory and reveal the spectacular views I had been missing. There was nobody around but weary-looking restaurant staff.
+
+> [16:02] 6,250 feet, still can't see shit. Cable car to very top is less terrifying for being engulfed in cloud.
+
+I got a return cable car ticket to Hafelekar, the summit. I was charged for an under-18 ticket \\\\o/ (EUR 4,90). The ride was less than 10 minutes.
+
+I stepped out briefly, but there was nothing to see. I'd really hoped the summit would be above the clouds. Took some more photos of white. Met some Australians. Cable car back to Seegrube. Was freezing and tired, so decided to cable car it all the way back to Innsbruck but I didn't have enough cash, and they didn't take card. I must have looked suitably pathetic, because the staff took pity on me and let me ride free back to Hungerburg. Also the driver liked my hat. I'm pretty sure that helped.
+
+Back in Hungerburg, it was so much warmer! I had a snack and recovered a bit, then walked the 5km back to the hostel. I managed to go off-route again (this being the fourth time I'd walked between Innsbruck and Hungerburg); didn't have to scramble through mud but did accidentally walk through a wedding reception in the grounds of a hotel, and ended up going via the centre of Innsbruck, which was a bit out of the way.
+
+Really I'm fine with having missed out on seeing for miles, as climbing a mountain in thick fog is an interesting experience by itself. I will post all of my photos of white in due course, but my favourite is this convenient sign showing what I *could* have been seeing...
+
+![Handy panorama sign](https://pbs.twimg.com/media/CFDXgrQUUAEqTr3.jpg)""" ;
+  sioc:topic "cable car", "mountain", "alps", "fog", "austria", "innsbruck", "travel" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/amys-mini-alpine-adventure> ;
+  as:latitude "47.27388" ;
+  as:longitude "11.42768" ;
+  blog:tmpcontent """# Amy's mini alpine adventure ctd
+
+I have in-dispersed this report with messages I sent either on Twitter or to anyone who might pay attention over the course of the journey..
+
+Rosa (the elderly Vietnamese lady) and I walked to Hungerburg. It was raining heavily, but warm. I messed up the route a bit and we did a lot of scrambling through mud and up steep slopes, but Rosa seemed thrilled to have found someone to have this adventure with.
+
+She told me about when she had left Vietnam for Belgium as a political refugee, and all of the horrible things her family and friends had endured because of "crazy communists". Her brother and sister live in California now, and none of them ever want to go back to Vietnam even though it's safe now.
+
+She also told me about her 27 year old son who she considers a huge disappointment as all he does is browse the web and talk to his girlfriend, and doesn't have a job. He has a masters in Informatics, but there is no work in Belgium, and he refuses to move somewhere he can find work.
+
+She told me about a friend's son, whom everyone thought was stupid until at around 22 years old he went to university, completed some degrees in record time, and now works as an accountant in London and is married to an African woman, apparently to spite his racist family, which she finds hilarious, and wishes her son was like this instead.
+
+She calls all of her cats 'Baby'.
+
+This was super fun, and I'm glad she encouraged me to go out in the rain.
+
+She didn't have time (or suitable shoes) to climb to Seegrube, so we parted ways at Hungerburg. I hope she made it back okay!
+
+I continued to Seegrube. It was pretty thick fog the whole way, though sometimes I could see a few hundred meters ahead instead of a few meters. I took lots of pictures of where I expected there would be spectacular views if there wasn't cloud in the way. 
+
+> [14:09] Just checking in. Literally in a cloud. Can't see fuck.
+
+> [14:12] It's pretty creepy. I think I hit a pub in about an hour.
+
+> [14:13] I'm soaking. GPS is good though.
+
+I mostly followed the main road, which zigzagged and was a much less direct route, but the through-forest trails were wet and muddy and the fog didn't instil me with confidence. At one point a sign expressly pointed into the forest, so I clambered for a bit, but then found a hut and lots of scary looking forestry equipment and decided it was a horror movie waiting to happen, so back-tracked to the road...
+
+> [14:18] Ooh a sign! Pub 40 minutes. Assuming alm means pub. Then just another hour to next cable car stop..
+
+> [14:21] Mystery crashing sounds
+
+I saw two humans and one dog for the whole three hours I was walking. Occasionally I'd see a completely empty cable car glide by overhead. The air was heavy and still, and the mist was creepy. I started to worry about flash flooding, wolves, bears, and crazy humans.
+
+> [14:24] Can you look up what to do in event of flash flood, bear, or mad axeman?
+
+> [14:25] Also if there are bears or wolves on hafelekar
+
+> [14:26] Omg if this cloud wasn't here views would be incredible. I hope it isn't all the way to the top. I at least want views over expanse of cloud.
+
+About an hour before Seegrube was Bodensteinalm, a pub-type-thing a few minutes off the main trail. I was entertaining the idea of a cup of coffee and human contact, but the place - a cute little Alpine hut - was completely deserted. The temperature was starting to drop, so I pressed on.
+
+> [14:44] Omg snow
+
+> [15:11] Human being!!!
+
+> [15:12] And he's gone. Swallowed by fog.
+
+> [15:23] Omg mist clearing and can see end of cable car!
+
+The last stretch to Seegrube, 6,250ft, was pretty cold, and there was snow. After 8km uphill, I was ready for a cup of coffee, and splashed out 3 Euros at Seegrube Restaurant; the coffee was horrible. I did a circuit of the top, but alas the clouds did not part in divine glory and reveal the spectacular views I had been missing. There was nobody around but weary-looking restaurant staff.
+
+> [16:02] 6,250 feet, still can't see shit. Cable car to very top is less terrifying for being engulfed in cloud.
+
+I got a return cable car ticket to Hafelekar, the summit. I was charged for an under-18 ticket \\\\o/ (EUR 4,90). The ride was less than 10 minutes.
+
+I stepped out briefly, but there was nothing to see. I'd really hoped the summit would be above the clouds. Took some more photos of white. Met some Australians. Cable car back to Seegrube. Was freezing and tired, so decided to cable car it all the way back to Innsbruck but I didn't have enough cash, and they didn't take card. I must have looked suitably pathetic, because the staff took pity on me and let me ride free back to Hungerburg. Also the driver liked my hat. I'm pretty sure that helped.
+
+Back in Hungerburg, it was so much warmer! I had a snack and recovered a bit, then walked the 5km back to the hostel. I managed to go off-route again (this being the fourth time I'd walked between Innsbruck and Hungerburg); didn't have to scramble through mud but did accidentally walk through a wedding reception in the grounds of a hotel, and ended up going via the centre of Innsbruck, which was a bit out of the way.
+
+Really I'm fine with having missed out on seeing for miles, as climbing a mountain in thick fog is an interesting experience by itself. I will post all of my photos of white in due course, but my favourite is this convenient sign showing what I *could* have been seeing...
+
+![Handy panorama sign](https://pbs.twimg.com/media/CFDXgrQUUAEqTr3.jpg)""" .
+

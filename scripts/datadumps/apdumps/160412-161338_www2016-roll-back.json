@@ -1,0 +1,18 @@
+{
+    "h": "entry",
+    "content": "www2016 Roll (back) up to room 519a to get an account on a personal datastore and start working on your own Solid apps..",
+    "category": [
+        "www2016",
+        "solid"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-12T16:13:38+01:00",
+    "@id": "http://blog.rhiaro.co.uk/www2016-roll-back",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/www2016-roll-back"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-12T16:13:38+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

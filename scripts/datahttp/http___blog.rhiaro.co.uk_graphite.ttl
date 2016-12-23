@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/graphite>
+  dcterms:title "Graphite" ;
+  dcterms:created "2013-10-25T16:32:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 25th October 2013, 16:32
+tags: slogd,hacking,learning,semantic web,triples,arc2,graphite,php
+list: doing
+type: BlogPost
+-->
+
+# Graphite
+
+I think I'll use Chris Gutteridge's Graphite layer on top of ARC2.  I've been putting off thinking about yet more libraries, but I think I'll end up implementing bits of Graphite in an effort to make ARC2 more friendly anyway, and I'm sure he's done a better job than I ever could.""" ;
+  sioc:topic "slogd", "hacking", "learning", "semantic web", "triples", "arc2", "graphite", "php", blog:Doing ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/10/graphite> .
+

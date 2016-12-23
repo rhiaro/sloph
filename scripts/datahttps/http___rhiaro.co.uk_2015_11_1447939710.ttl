@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/11/1447939710>
+  as:published "2015-11-19T13:28:30+0000"^^xsd:datetime ;
+  blog:follow_of <https://twitter.com/dokieli> ;
+  as:content """<!---
+follow-of: https://twitter.com/dokieli
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

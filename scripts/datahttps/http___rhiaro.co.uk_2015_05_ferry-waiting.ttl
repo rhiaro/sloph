@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/ferry-waiting>
+  as:latitude "43.61421" ;
+  as:longitude "13.51065" ;
+  blog:tmpcontent "On a ferry, waiting for departure.." ;
+  as:published "2015-05-22T17:35:18+0100"^^xsd:datetime ;
+  as:tag "travel", "ferry" ;
+  as:location <http://dbpedia.org/resource/Ancona> ;
+  as:content """<!---
+tags: travel,ferry
+location: http://dbpedia.org/resource/Ancona
+-->
+
+On a ferry, waiting for departure..""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/clothes>
+  a as:Collection ;
+  as:name "clothes" ;
+  as:items <https://rhiaro.co.uk/2016/08/57a64c8ae7216>, <https://rhiaro.co.uk/2016/08/57bbcb5ad1d2f> .
+

@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/56b03512d985c>
+  a blog:Acquisition ;
+  dcterms:created "2016-02-01T23:47:58-05:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56b03512d985c> ;
+  blog:cost "$12.61" ;
+  as:published "2016-02-01T23:47:58-05:00"^^xsd:dateTime ;
+  as:summary "2 smoothies: spinach, almond milk, chia, blackberries (Trident)" ;
+  as:tag "fruit", "trident" .
+

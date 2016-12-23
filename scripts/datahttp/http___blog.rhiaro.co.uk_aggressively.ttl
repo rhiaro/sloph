@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/aggressively>
+  dcterms:created "2015-05-26T09:38:13+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,croatia,split,beach
+-->
+
+Aggressively pursuing beaches.""" ;
+  sioc:topic "travel", "croatia", "split", "beach" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/aggressively> ;
+  as:latitude "43.51213" ;
+  as:longitude "16.437" ;
+  blog:tmpcontent "Aggressively pursuing beaches." .
+

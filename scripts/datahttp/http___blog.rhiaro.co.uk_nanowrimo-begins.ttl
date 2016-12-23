@@ -1,0 +1,104 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/nanowrimo-begins>
+  dcterms:title "Nanowrimo: It begins" ;
+  dcterms:created "2013-11-03T00:31:00.003Z"^^xsd:datetime ;
+  dcterms:modified "2013-11-03T00:31:53.773Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2160270447291162047" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """I've committed to Nanowrimo for the seventh year.  I almost didn't.  It's
+distressing and frustrating and sucks at my self-confidence like nothing else.
+It makes me feel like a failure in a way that nothing else can.  
+  
+But it makes me write.  
+  
+If I don't commit to it, I don't write a lot of fiction.  Maybe a burst every
+six months.  
+  
+But every November for the last few years, I've written literally thousands of
+words.  I've brought vague, lingering ideas to life; I've fleshed out
+characters; I've explored worlds.  
+  
+Every November for the last few years, I've bashed out incoherent paragraphs
+figuring I'll fit them in properly later. I've exhausted ideas that I now
+never want to hear of again.  I've killed my love for characters, and tired of
+worlds.  
+  
+I've doubted my writing abilities, my imagination, my creativity, my
+storytelling.  I've convinced myself that I'm incapable of finishing anything.  
+  
+The one year I hit 50,000 words? (50,299 to be precise).  I was maybe a
+chapter away from finishing the actual story.  The third quarter needed
+totally replacing and didn't really fit with the main story.  Four or five
+years later, I still haven't written that final chapter, even though I know
+what the outcomes are to be.  I haven't even typed it all up, let alone re-
+written part three.  I didn't fall out of love with the characters or the
+world, and I think about it a lot, and it breaks my heart.  
+  
+Every November I've made a few new friends, and reconnected with old ones.
+Bonding with someone over Nanowrimo is an experience that stands alone.  I've
+had one more conversation-starter than usual.  I've discovered some new cafes
+and new writing software.  My productivity has increased as a result of using
+The Work I'm Supposed To Be Doing as a distraction from writing.  
+  
+Every year I tell myself I'm doing it to make myself write.  The 50,000 is
+irrelevant.  I just need to write some words.  More than none.  Then I'm a
+winner.  But not hitting 1,667 per day still feels like a gut-wrenching
+failure.  Finding out someone else is further on than me brings me down a
+notch.  Even with my inner-editor firmly silenced (she crawls into the
+cupboard of her own accord on the 1st of November these days) the inability to
+just sit down and churn out words right off the bat is crushing.  
+  
+But it _does_ make me write.  
+  
+Writing fiction is my first love.  What I wanted to be when I grew up was
+"author".  It was a complicated word I knew when I was quite little.  Along
+with "aspidistra", but that's another story.  
+  
+Imagine if I'd gone on to study it?  If I was writing because someone told me
+to write?  If I had to write to move forward in life?  I'd probably have burnt
+out well before now.  
+  
+I guess it hurts so much because it means so much.  
+  
+And that's why I have to get over myself and just get on with it.  If...
+when?... if I succeed, where success is writing a story I'm happy with,
+regardless of length, the boost will be indescribable.  I'll get a new lease
+on life.  I'll be sure I can do anything.  
+  
+I'm going to the Edinburgh NanoBeans launch party tomorrow.  It's at 2pm in
+Forest Cafe.  I'm going to add loads of new people (People Who Understand) on
+various social networks to increase the chances of being asked how it's going.
+Mostly I'll just have to shrug and say slowly, and feel guilty about that
+movie I watched or that extra batch of brownies I baked.  But maybe... just
+maybe there will be a time this year when I can say "it's going great! I'm
+ahead of target."  
+  
+And just for some encouragement, here's are some pictures from 2008:  
+  
+
+![](http://2.bp.blogspot.com/-b1Ha1OL1UX8/UnWZV-
+oCx5I/AAAAAAAAH6Y/HrNHFcMxC5w/s320/DSCF2152.JPG)
+
+  
+
+![](http://4.bp.blogspot.com/-qJ6NEUs_1cQ/UnWZJ_J-
+K_I/AAAAAAAAH6U/H9qot8VLAbg/s320/DSCF2158.JPG)
+
+  
+
+![](http://4.bp.blogspot.com/-b5M94WEu2IQ/UnWY7ZRQdJI/AAAAAAAAH6I/wN3zGj5Xnsg/
+s320/mecert.jpg)
+
+  
+Thanks Nano.  I need you.  Never leave.
+
+""" ;
+  sioc:topic blog:Done, "writing challenges", "writing", "nanowrimo", "doing" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/11/nanowrimo-begins> .
+

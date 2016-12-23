@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Sustenance (Safeway)",
+    "blog:cost": "$8.73",
+    "as:tag": [
+        "food",
+        "groceries",
+        "emergency",
+        "safeway"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-08T23:19:47-07:00",
+    "@id": "http://blog.rhiaro.co.uk/57302c8716322",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/57302c8716322"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-08T23:19:47-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

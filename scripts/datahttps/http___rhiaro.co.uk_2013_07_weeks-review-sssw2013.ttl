@@ -1,0 +1,45 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/07/weeks-review-sssw2013>
+  as:published "2013-07-28T21:00:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "semantic web", "google", "sssw2013", "youtube", "annotation", "ontology", "amateur creative digital content", "content creators", "semantic web summer school", "week in review", "youtubers", "acdc" ;
+  as:name "Week(s) in review: #SSSW2013, figuring stuff out and annotating YouTube" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-1329700495515273792" ;
+  as:content """**8th - 14th July**  
+**  
+**Semantic Web Summer School, much heat, much fun, much learning... Here's [an index of my posts](http://blog.rhiaro.co.uk/2013/07/sssw2013-index.html).  
+  
+**15th - 21st July**  
+**  
+**Friends visited.  Progress included writing notes to myself to figure out just what my PhD outcomes really are, and why.  Came up with:  
+  
+1\\\\\\\\. Recommending how to usefully describe diverse amateur creative digital
+content (ACDC) using an ontology.  
+    a) What are the parts of ACDC that need to be represented?  Identify and categorise properties. How do these differentiate it from other similar content?  
+    b) What existing ontologies can be used to do this, and how do they need to be extended?  
+     
+2\\\\\\\\. Building an initial set of linked data about ACDC, and providing means for
+its growth and use.  
+    a) Manual annotation of ACDC, and refinement (to test ontology).  
+    b) Tools for automatic annotation of the parts of ACDC that it is possible to automatically annotate.  
+    c) Tools for manual annotation by the community of content creators and consumers for the parts of ACDC that cannot be automatically annotated.  
+    d) Tools to expose the linked data for use by third-party applications.  
+  
+3\\\\\\\\. Create and test an example service which uses the linked data to benefit
+content creators and/or consumers.  
+     eg. Unobtrusive recommendations for collaborative partners (most likely); content recommendation; content consumption analysis (like tracking viral content); community building / knowledge sharing in this domain; ... .  
+  
+**22nd - 28th July**  
+**  
+**Brainstormed with Ewan about stage 3 (above), and came up with the idea of an interface that allows content creators to allocate varying degrees of credit for roles played by different people when collaborating on a project.  This would serve to both gather collaborative bibliographic data, learn things about how different segments of the community allocate credit, and provide a potentially useful tool for content creators.  With the future value that, if we can learn enough to estimate role inputs from different people, it could be used for things like automatic revenue sharing.  
+  
+Then spent the rest of the week in London, frolicking amongst the YouTubers
+(including attending a meeting at Google about secret YouTube-y stuff), and
+annotated some _ACDC_.  Write-up coming soon.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-07-30T14:58:49.975Z"^^xsd:datetime .
+

@@ -1,0 +1,11 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://kylewm.com/2015/11/aw-haha-i-wish-i-could-take-credit-they-ve-always>
+  sioc:reply_of <https://rhiaro.co.uk/2015/11/let-records-show> ;
+  as:published "2015-11-18T22:35:16+00:00"^^xsd:datetime ;
+  as:name "Aw haha, I wish I could take credit; theyâ€™ve always been there!" ;
+  as:content "Aw haha, I wish I could take credit; they've always been there!" ;
+  as:actor <https://kylewm.com/> .
+

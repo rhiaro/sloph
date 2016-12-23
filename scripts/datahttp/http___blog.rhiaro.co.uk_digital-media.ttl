@@ -1,0 +1,25 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/digital-media>
+  dcterms:title "Digital Media Studio Project (DMSP)" ;
+  dcterms:created "2013-01-14T00:00:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-02T16:10:34.239Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6595972298133874806" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """I'm supervising (created the brief, overseeing and guiding a group of 6 MSc
+students, grading) a Digital Media Studio Project in the Edinburgh College of
+Art.  
+  
+I challenged my lot to use responsive web design techniques in a unique and
+inventive way.  [You can see what they're up to
+here](http://dmsp.ace.ed.ac.uk/blog/contextawareweb2013/).
+
+""" ;
+  sioc:topic blog:Done, "work", "tutoring", "eca", "dmsp" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/01/digital-media> .
+

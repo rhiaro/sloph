@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://8print.co/>
+  foaf:name "High Volume Printing" ;
+  foaf:homepage <http://8print.co/> ;
+  foaf:depiction <https://twitter.com/VOLUM3_PRINTING/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/744154d61b0eed8b4fdf9ef73558a032d36ce80df5d794f32956218b97c1d224.jpeg> .
+

@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/56f3be3a105ac>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-03-24T13:13:07+03:00"^^xsd:dateTime ;
+  as:tag "food", "museum of islamic art", "restaurant" ;
+  blog:cost "14 QR" ;
+  as:summary "Karkadeh (Museum of Islamic Art)" .
+

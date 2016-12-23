@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "TAP topup",
+    "blog:cost": "$5",
+    "as:tag": [
+        "travel",
+        "metro",
+        "ca2016",
+        "la"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-19T11:58:28-07:00",
+    "@id": "http://blog.rhiaro.co.uk/573e0cf18e1c2",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/573e0cf18e1c2"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-19T11:58:28-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

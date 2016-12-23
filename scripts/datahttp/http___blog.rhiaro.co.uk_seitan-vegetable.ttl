@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/seitan-vegetable>
+  a blog:Consumption ;
+  dcterms:created "2016-06-24T22:25:41-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/seitan-vegetable> ;
+  as:published "2016-06-24T22:25:41-04:00" ;
+  as:tag "burger", "salad" ;
+  as:name "Seitan vegetable burger, mashed potato, baked beans, salad, apricot lemon juice" .
+

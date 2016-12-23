@@ -1,0 +1,46 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/10/suddenly-meet>
+  blog:tmpcontent """# In which I suddenly meet people from the internet
+
+Today set out to be a quiet day of working/procrastinating from home, then a flurry of last minute plans and serendipity meant I got to meet people I previously only knew of online, and have some good conversations that will lead to future exciting work and travel related things. Sweet!
+
+At short notice, [my roommate Liz](https://twitter.com/lizpowersss) invited me sailing on the Charles. When we got there there were no boats available, but some friendly strangers had space in theirs and picked us up. One of those strangers happened to be [Nate](http://natematias.com), whose Microsoft Research blog posts I'd read this summer and who had been twitter-introduced to me a couple of months ago by our mutual friend [Doc](http://jamesdoc.com). I'd been meaning to follow up and find time to meet up with him. After about 15 minutes of chatting with him and his friends in their boat, I realised who I was talking to. What are the odds?! Nate's research is relevant to mine, and he recommended a seminar group I should attend; bumping into him this way was an incredible stroke of luck!
+
+![MIT sail](https://rhiaro.co.uk/photos/15boston/151016_sailing1.jpg)
+
+![Sailing on the Charles](https://rhiaro.co.uk/photos/15boston/151016_sailing2.jpg)
+
+![Amy & Nate](https://rhiaro.co.uk/photos/15boston/151016_amynate.jpg)
+
+Earlier today I learned that [Shane](http://veganstraightedge.com) is in town for a couple of days as part of a roadtrip around the US, so I met him and [Morgan](https://twitter.com/mofo37) for dinner, and we talked [indieweb](https://indiewebcamp.com), travel and vegan food for a few hours. And I *might* now have exciting and exotic christmas plans as a result.
+
+![Amy & Shane](https://rhiaro.co.uk/photos/15boston/151016_amyshane.jpg)""" ;
+  as:published "2015-10-17T03:12:00+0100"^^xsd:datetime ;
+  as:tag "mofo27", "natematias", "jamesdoc", "serendipity", "sailing", "veganstraightedge", "mit", "boston", "travel", "indieweb", "life" ;
+  as:name "In which I suddenly meet people from the internet" ;
+  as:content """<!---
+published: 16 October 2015, 22:12 EDT
+tags: travel,serendipity,life,indieweb,mit,sailing,boston,veganstraightedge,mofo27,natematias,jamesdoc
+-->
+
+# In which I suddenly meet people from the internet
+
+Today set out to be a quiet day of working/procrastinating from home, then a flurry of last minute plans and serendipity meant I got to meet people I previously only knew of online, and have some good conversations that will lead to future exciting work and travel related things. Sweet!
+
+At short notice, [my roommate Liz](https://twitter.com/lizpowersss) invited me sailing on the Charles. When we got there there were no boats available, but some friendly strangers had space in theirs and picked us up. One of those strangers happened to be [Nate](http://natematias.com), whose Microsoft Research blog posts I'd read this summer and who had been twitter-introduced to me a couple of months ago by our mutual friend [Doc](http://jamesdoc.com). I'd been meaning to follow up and find time to meet up with him. After about 15 minutes of chatting with him and his friends in their boat, I realised who I was talking to. What are the odds?! Nate's research is relevant to mine, and he recommended a seminar group I should attend; bumping into him this way was an incredible stroke of luck!
+
+![MIT sail](https://rhiaro.co.uk/photos/15boston/151016_sailing1.jpg)
+
+![Sailing on the Charles](https://rhiaro.co.uk/photos/15boston/151016_sailing2.jpg)
+
+![Amy & Nate](https://rhiaro.co.uk/photos/15boston/151016_amynate.jpg)
+
+Earlier today I learned that [Shane](http://veganstraightedge.com) is in town for a couple of days as part of a roadtrip around the US, so I met him and [Morgan](https://twitter.com/mofo37) for dinner, and we talked [indieweb](https://indiewebcamp.com), travel and vegan food for a few hours. And I *might* now have exciting and exotic christmas plans as a result.
+
+![Amy & Shane](https://rhiaro.co.uk/photos/15boston/151016_amyshane.jpg)""" ;
+  sioc:has_reply <https://twitter.com/veganstraightedge/status/655218568024498176>, <https://twitter.com/natematias/status/655206300171784192>, <https://twitter.com/natematias/status/655206160845426688>, <https://twitter.com/rhiaro/status/655207641124372480>, <https://brid-gy.appspot.com/like/twitter/rhiaro/655205448849690624/52332354> .
+

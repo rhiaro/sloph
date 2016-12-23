@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/lots-people>
+  as:published "2016-06-08T20:06:56+01:00"^^xsd:dateTime ;
+  as:tag "socialwg", "web", "event", "solid", "decentralisation", "dwebsummit" ;
+  as:content "Lots of people saying \"decentralised\" to each other and meaning different things at [dwebsummit](https://decentralizedweb.net)" .
+

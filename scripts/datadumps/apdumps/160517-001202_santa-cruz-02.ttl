@@ -1,0 +1,32 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/santa-cruz-02> dct:created "2016-05-17T00:12:02+01:00"^^<xsd:dateTime> ;
+    dct:title "Santa Cruz 02\r" ;
+    sioc:content """# Santa Cruz 02\r
+\r
+Following my stay in Linda's Seabreeze Cafe, I accidentally [walked ten miles](http://rnkpr.com/ad0s3k2). Around beaches, through parks, to Twin Lakes and along traintracks back to the Boardwalk; entertaining an idea of going on the Sky Gliders, but they were closed. I also entertained the idea of a toffeeapple (available in great and exciting variety) as I wandered through the evening buzz of the funfair. I resisted. $7 pricing helped. I did google taffy to see if it's vegan though (unlikely, butter).\r
+\r
+Having neglected to eat I stumbled with relief into Saturn Cafe and downed a BBQ ranch not-chicken burger and fries. I also got a berry apple pie with mint chip ice cream but suddenly the burger caught up with me and only managed a bite of pie. Food was average veggie-diner style, prices higher than average. They had a wide choice though, so it's possible I just happened to pick a particularly uninspiring sandwich.\r
+\r
+Absolutely stuffed, I stumbled back to the trailer with vague intentions of heading out to Wholefoods for lunch supplies for the next day (so I wouldn't have to eat only old bagels). Instead I napped, woke back up just long enough to watch Perfect Sense on my laptop, then went back to sleep. My hands and forearms and face are tanned, my shoulders glowing red.""" ;
+    sioc:topic "beach",
+        "ca2016",
+        "cruz",
+        "santa",
+        "travel",
+        "usa",
+        "vegan",
+        "walking" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/santa-cruz-02> .
+

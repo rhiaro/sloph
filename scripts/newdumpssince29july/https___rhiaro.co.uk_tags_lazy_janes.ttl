@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/lazy+janes>
+  a as:Collection ;
+  as:name "lazy janes" ;
+  as:items <https://rhiaro.co.uk/2016/08/tofu-scramble>, <https://rhiaro.co.uk/2016/08/57b5ed38ce3e7> .
+

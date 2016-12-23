@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Veggie and peanuts roti (Kati Roll), orange juice",
+    "as:tag": [
+        "kati roll",
+        "fruit",
+        "bread",
+        "curry",
+        "us0816"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-20T17:42:50-04:00",
+    "@id": "http://blog.rhiaro.co.uk/veggie-peanuts",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/veggie-peanuts"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-20T17:42:50-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

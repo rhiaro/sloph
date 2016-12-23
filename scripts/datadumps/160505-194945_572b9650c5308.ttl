@@ -1,0 +1,29 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/572b9650c5308> a as:Travel ;
+    dcterms:created "2016-05-05T14:49:45-04:00"^^<xsd:dateTime> ;
+    blog:cost "$15.50" ;
+    as:endTime "2016-05-19T18:45:00-08:00" ;
+    as:origin <http://dbpedia.org/resource/Los_Angeles> ;
+    as:published "2016-05-05T14:49:45-04:00" ;
+    as:startTime "2016-05-19T16:00:00-08:00" ;
+    as:tag "bus",
+        "ca2016",
+        "california",
+        "coach",
+        "greyhound",
+        "journey",
+        "los angeles",
+        "san diego",
+        "travel",
+        "usa" ;
+    as:target <http://dbpedia.org/resource/San_Diego> ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/572b9650c5308> .
+

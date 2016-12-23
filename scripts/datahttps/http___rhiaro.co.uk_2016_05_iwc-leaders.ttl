@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/2016/05/iwc-leaders>
+  a as:Accept ;
+  as:published "2016-05-18T16:30:04-07:00" ;
+  as:name "Going to IWC Leaders Summit" ;
+  as:object <https://indiewebcamp.com/2016/Leaders> .
+

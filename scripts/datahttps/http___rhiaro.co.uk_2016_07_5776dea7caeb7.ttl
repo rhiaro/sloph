@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2016/07/5776dea7caeb7>
+  a as:Travel ;
+  as:published "2016-07-01T17:19:08-04:00", "2016-07-01T17:19:08-04:00"^^xsd:dateTime ;
+  as:tag "bus", "cape cod", "coach", "journey", "lizpowers", "peter pan", "travel", "usa" ;
+  as:startTime "2016-07-01T19:00:00-04:00" ;
+  as:endTime "2016-07-01T20:40:00-04:00" ;
+  blog:cost "$34" ;
+  as:origin <http://dbpedia.org/resource/Boston> ;
+  as:target <http://dbpedia.org/resource/Falmouth,_Massachusetts> .
+

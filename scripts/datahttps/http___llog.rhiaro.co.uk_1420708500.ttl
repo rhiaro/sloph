@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1420708500>
+  a blog:LlogPost ;
+  as:published "2015-01-08T09:15:00+0000"^^xsd:datetime ;
+  as:tag "breakfast", "coffee", "quantified self", "food", "life", "eat" ;
+  as:startTime "2015-01-08T09:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-08T09:15:00+0000"^^xsd:datetime ;
+  as:content """<!--- 
+start: 8th January 2015, 09:00
+end: 8th January 2015, 09:15
+type: LlogPost
+tags: eat,food,breakfast,coffee,quantified self,life
+list: done
+-->
+
+Coffee, porridge with mixed fruit and nuts, shredded coconut and dark chocolate chips.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

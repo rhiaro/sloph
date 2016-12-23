@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56d2de23e2a4f>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-02-28T10:46:01+00:00"^^xsd:dateTime ;
+  as:tag "coffee", "gatwick", "pret", "special offer" ;
+  blog:cost "0" ;
+  as:summary "Free coffee (Pret)" .
+

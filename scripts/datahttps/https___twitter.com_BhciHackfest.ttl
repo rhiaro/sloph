@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/BhciHackfest>
+  foaf:name "bhci hackfest" ;
+  foaf:homepage <https://twitter.com/BhciHackfest> ;
+  foaf:depiction <https://twitter.com/BhciHackfest/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/f5e73f5b26dafaec4f275dcfb71efcc7d168ef27917c19106a4169a6f65e22c7.png> .
+

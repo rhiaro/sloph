@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2010/09/ambassador>
+  blog:tmpcontent """# Ambassador, Student As Producer
+
+## University of Lincoln
+
+Wanting to see undergraduates behave and be treated as producers, empowered to shape their own education, rather than passive consumers who pay for course material and expect to be spoon fed, I dogfooded [this concept](http://studentasproducer.lincoln.ac.uk/) and committed to even more things. Mostly hassled other students, organised a few events, spoke at a few conferences as a token-proactive-undergrad, and complained too much about the structure of my degree. That's how I remember it, anyway.""" ;
+  as:published "2010-09-28T18:00:00+0100"^^xsd:datetime ;
+  as:tag "academia", "resume", "cv", "volunteer", "university of lincoln", "student as producer", "ambassador" ;
+  as:name "Ambassador, Student As Producer" ;
+  as:startTime "2010-09-01T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2012-06-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 28th September 2010, 18:00
+start: September 2010
+end: June 2012
+tags: university of lincoln,student as producer,volunteer,academia,ambassador,cv,resume
+-->
+
+# Ambassador, Student As Producer
+
+## University of Lincoln
+
+Wanting to see undergraduates behave and be treated as producers, empowered to shape their own education, rather than passive consumers who pay for course material and expect to be spoon fed, I dogfooded [this concept](http://studentasproducer.lincoln.ac.uk/) and committed to even more things. Mostly hassled other students, organised a few events, spoke at a few conferences as a token-proactive-undergrad, and complained too much about the structure of my degree. That's how I remember it, anyway.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

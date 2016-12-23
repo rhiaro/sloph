@@ -1,0 +1,42 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "HWC LA",
+    "as:content": "Since I'm in town",
+    "blog:rsvp": "yes",
+    "as:tag": [
+        "rsvp",
+        "event",
+        "attendee",
+        "hwc",
+        "indieweb",
+        "indiewebcamp",
+        "hacking",
+        "los angeles",
+        "hackathon"
+    ],
+    "as:published": "2016-05-06T19:07:10-07:00",
+    "as:startTime": "2016-05-18T18:30:00-07:00",
+    "as:endTime": "2016-05-18T19:30:00-07:00",
+    "@type": [
+        "as:Accept"
+    ],
+    "as:location": {
+        "@id": "http://dbpedia.org/resource/Los_Angeles"
+    },
+    "as:inReplyTo": [
+        {
+            "@id": "https://indiewebcamp.com/events/2016-05-18-homebrew-website-club#RSVP"
+        }
+    ],
+    "@id": "http://blog.rhiaro.co.uk/hwc-la",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/hwc-la"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-06T19:07:10-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

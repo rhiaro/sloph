@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/1435653480>
+  a as:Add ;
+  as:published "2015-06-30T09:38:00+0100"^^xsd:datetime ;
+  as:tag "social web", "phd", "social networks", "decentralised", "conference", "workshop" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 30th June 2015, 9:38 Europe/London
+bookmark-of: http://datasets-satin.telecom-st-etienne.fr/aboutet/DeSN15/
+tags: phd,decentralised,social web,social networks,workshop,conference
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://datasets-satin.telecom-st-etienne.fr/aboutet/DeSN15/> .
+

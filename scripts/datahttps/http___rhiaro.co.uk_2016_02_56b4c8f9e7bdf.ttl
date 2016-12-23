@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56b4c8f9e7bdf>
+  a as:Add ;
+  as:published "2016-02-05T16:08:25+00:00"^^xsd:dateTime ;
+  as:tag "authentication" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:object <http://research-srv.microsoft.com/pubs/161585/QuestToReplacePasswords.pdf> .
+

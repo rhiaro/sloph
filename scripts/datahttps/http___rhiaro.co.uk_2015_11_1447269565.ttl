@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/11/1447269565>
+  a as:Announce ;
+  as:published "2015-11-11T19:19:25+0000"^^xsd:datetime ;
+  as:tag "drupal", "indiewebcamp", "microformats", "indieweb" ;
+  as:content """<!---
+share-of: http://agaric.com/blogs/marking-drupals-blog-posts-indieweb?utm_term=%23drupal+%23drupalcr&utm_source=twitterfeed&utm_medium=twitter&utm_campaign=Drupal+Universe
+tags: indieweb,indiewebcamp,drupal,microformats
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://agaric.com/blogs/marking-drupals-blog-posts-indieweb?utm_term=%23drupal+%23drupalcr&utm_source=twitterfeed&utm_medium=twitter&utm_campaign=Drupal+Universe> .
+

@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/09/hold-phone>
+  a as:Note ;
+  as:published "2016-09-06T17:07:31+01:00"^^xsd:dateTime ;
+  as:tag "httprange14", "csarven", "linkedda", <https://rhiaro.co.uk/tags/csarven>, <https://rhiaro.co.uk/tags/httprange14>, <https://rhiaro.co.uk/tags/linkedda> ;
+  as:content "<p>Hold the phone everyone, <a href=\"http://csarven.ca/#i\">csarven</a> and I just realised that httprange-14 was solved by e-commerce.</p>" .
+

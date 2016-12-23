@@ -1,0 +1,20 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/oh-just>
+  sioc:reply_of <https://rhiaro.co.uk/2015/05/hostel-settlers> ;
+  as:latitude "44.11937" ;
+  as:longitude "15.23136" ;
+  blog:tmpcontent "Oh. I just remembered who makes the decisions about this trip. It's me. I will just stay another night. Duh." ;
+  as:published "2015-05-27T21:10:00+01:00"^^xsd:datetime, "2015-05-27T20:10:59+0100"^^xsd:datetime ;
+  as:tag "travel", "croatia", "hostel", "korenica", "plitvice" ;
+  as:name "Oh. I just remembered who makes the decisions about this trip. It's me. I will just stay another night. Duh." ;
+  as:content """<!---
+tags: travel,croatia,hostel,korenica,plitvice
+-->
+
+Oh. I just remembered who makes the decisions about this trip. It's me. I will just stay another night. Duh.""", "Oh. I just remembered who makes the decisions about this trip. It's me. I will just stay another night. Duh." ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

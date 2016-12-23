@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/1443018540>
+  a as:Add ;
+  as:published "2015-09-23T15:29:00+0100"^^xsd:datetime ;
+  as:tag "replies", "threading", "comments", "ui", "social web", "indieweb", "hacking" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 23rd September 2015, 15:29 Europe/London
+bookmark-of: http://www.elezea.com/2015/09/how-to-display-threaded-discussions-on-the-web/
+tags: indieweb,ui,social web,comments,threading,replies,hacking
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://www.elezea.com/2015/09/how-to-display-threaded-discussions-on-the-web/> .
+

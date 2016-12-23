@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/56f3e67972b23>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-03-24T16:06:28+03:00"^^xsd:dateTime ;
+  as:tag "doha", "food", "food festival", "takeaway" ;
+  blog:cost "35 QR" ;
+  as:summary "Thai food (food festival)" .
+

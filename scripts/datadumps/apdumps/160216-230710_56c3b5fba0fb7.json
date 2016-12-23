@@ -1,0 +1,15 @@
+{
+    "@context": "https://www.w3.org/ns/activitystreams#",
+    "location": {
+        "@id": "http://rhiaro.co.uk/location/food"
+    },
+    "published": "2016-02-16T18:07:10-05:00",
+    "@id": "http://blog.rhiaro.co.uk/56c3b5fba0fb7",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56c3b5fba0fb7"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-16T18:07:10-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

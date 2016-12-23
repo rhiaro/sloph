@@ -1,0 +1,37 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "blog:cost": "$7",
+    "as:tag": [
+        "travel",
+        "journey",
+        "coach",
+        "bus",
+        "ca2016",
+        "usa",
+        "santa cruz",
+        "san jose"
+    ],
+    "as:published": "2016-05-12T19:02:53-07:00",
+    "as:startTime": "2016-05-12T18:58:00-07:00",
+    "as:endTime": "2016-05-12T20:03:00-07:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Santa_Cruz,_California"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/San_Jose"
+    },
+    "@id": "http://blog.rhiaro.co.uk/5735365e2cc31",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/5735365e2cc31"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-12T19:02:53-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

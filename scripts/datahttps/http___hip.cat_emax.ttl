@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://hip.cat/emax>
+  foaf:name "dr electronic max" ;
+  foaf:homepage <http://hip.cat/emax> ;
+  foaf:depiction <https://twitter.com/emax/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/bda4ba78975150d1fdbce529f083441e172be10c3e0130d4afdc1c0da06447ad.jpeg> .
+

@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Tofu sandwich, fries, taro coconut bubble tea",
+    "as:tag": [
+        "tofu",
+        "fries",
+        "bubble tea",
+        "bread"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-06-04T13:00:00-07:00",
+    "@id": "http://blog.rhiaro.co.uk/tofu-sandwich",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/tofu-sandwich"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-04T13:00:00-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,58 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/tools-toys>
+  dcterms:title "Tools, toys and a chocolate fountain" ;
+  dcterms:created "2010-07-04T20:41:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T00:03:04.594Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-582599558161252099" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """As expected, the first week flew by, with lots of small projects coming my way
+as well as meetings scheduled about some bigger ones. I also finally got to
+meet the rest of my team, who had been in Zurich at the [Anita Borg
+Scholarship Retreat](http://www.google.com/anitaborg/).  
+  
+Google Calendar has become a tool impossible to live without. Whilst I'd never
+previously used it with any seriousness, after two days at Google I can't
+imagine ever planning my time without it again.  
+  
+Similarly the Tasks feature in Gmail has become invaluble, and I've started to
+use it to remind myself about menial things to do in my personal life as well.
+The trick is to write down something you have to do the minute you're asked or
+emailed to do it. The list quickly became bottomless, but you can move things
+up and down by dragging - so it's easy to prioritise, and of course there's
+the satisfaction of a big tick _and_ a strike-through when a task is done.  
+
+  
+
+It also surprises me how quickly having meetings with people in other
+countries has become normal. Video conferencing is seamlessly integrated into
+the normal workflow, so you can either make a call from your desk for a quick
+chat, or book a room (for the person you're calling, as well as yourself) for
+a longer meeting. I've met the members of my team in Zurich and Vienna in this
+way. (Still hoping I get to head out to visit them in person some time
+though!)  
+  
+Other particularly memorable highlights of the week included hiding under a
+desk, behind a giant red ball, waving toys in the air like puppets in the
+background of a short video... For like, seven takes. Not in my job
+description, but definitely fun. Plus the chocolate fountain the canteen.
+Everyone seemed amazed at this, so I guess it doesn't happen often. There were
+mini jam doughnuts to dip. I do love working here.  
+  
+But not just because of the food (although that is quite a contributing
+factor. Seriously, the vegetarian chilli - twice - was awesome). I also love
+how well interns are treated, and how I feel that the projects I'll be getting
+started with next week actually have some sort of impact. I've made friends
+with a group of other interns (mostly engineering ones) and I'm pretty sure
+they all feel the same. We don't just get menial tasks to keep us out of
+trouble, but hefty pieces of work that keep us interested and thinking.
+
+""" ;
+  sioc:topic blog:Done, "work", "google-internship", "google internship", "google" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2010/07/tools-toys> .
+

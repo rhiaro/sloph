@@ -1,0 +1,27 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/train-from> a as:Travel ;
+    dcterms:created "2016-08-07T14:33:35-04:00"^^<xsd:dateTime> ;
+    blog:cost "$106" ;
+    as:endTime "2016-08-19T18:23:00-04:00" ;
+    as:name "Train from Chicago to NYC" ;
+    as:origin <http://dbpedia.org/resource/Chicago> ;
+    as:published "2016-08-07T14:33:35-04:00" ;
+    as:startTime "2016-08-18T21:30:00-05:00" ;
+    as:tag "amtrak",
+        "chicago",
+        "journey",
+        "nyc",
+        "train",
+        "travel",
+        "us0816" ;
+    as:target <http://dbpedia.org/resource/Pennsylvania_Station_(New_York_City)> ;
+    foaf:isPrimaryTopicOf <https://rhiaro.co.uk/2016/08/train-from> .
+

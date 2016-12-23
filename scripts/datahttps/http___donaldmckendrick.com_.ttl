@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://donaldmckendrick.com/>
+  foaf:name "Donald McKendrick" ;
+  foaf:homepage <http://donaldmckendrick.com/> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/cbc1fb3d31fde2a0d315b012c2dd531ff8a28f2a8f1cb9eef3ce7cde11582fec.png> .
+

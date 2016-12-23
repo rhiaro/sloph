@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/tomwiththeweath>
+  foaf:name "TomWithTheWeather" ;
+  foaf:homepage <https://twitter.com/tomwiththeweath> ;
+  foaf:depiction <https://twitter.com/tomwiththeweath/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/ce4f2f04b015ad5bd826584ceac5e6dbf0c8c1b9be2bdce80df7bc7a1d83bdcd.jpeg> .
+

@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Macaroni, black beans, leftover greens, tomato sauce",
+    "as:tag": [
+        "pasta",
+        "beans",
+        "vegetables",
+        "leftovers"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-01T12:50:14-04:00",
+    "@id": "http://blog.rhiaro.co.uk/macaroni-black",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/macaroni-black"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-01T12:50:14-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

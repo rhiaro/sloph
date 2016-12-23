@@ -1,0 +1,20 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/porridge-fruit>
+  a blog:LlogPost ;
+  as:published "2015-04-22T11:58:00+0100"^^xsd:datetime ;
+  as:tag "quantified self", "food", "eat", "life" ;
+  as:startTime "2015-04-22T11:58:00+0100"^^xsd:datetime ;
+  as:endTime "2015-04-22T11:58:00+0100"^^xsd:datetime ;
+  as:content """<!--- 
+start: 22nd April 2015, 11:58
+end: 22nd April 2015, 11:58
+type: LlogPost
+tags: eat,food,quantified self,life
+-->
+
+Porridge, fruit, nuts & rice milk""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

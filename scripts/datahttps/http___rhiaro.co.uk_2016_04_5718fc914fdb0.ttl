@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/5718fc914fdb0>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-04-21T12:14:37-04:00"^^xsd:dateTime ;
+  as:tag "food", "2016-04-01T02:33:11+01:00", "restaurant" ;
+  blog:cost "$24" ;
+  as:summary "Lunch for two (Life Alive)" .
+

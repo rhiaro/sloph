@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573b9a21d4cdc>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-17T14:52:29-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "food", "golden mean", "restaurant", "santa monica", "veganstraightedge" ;
+  blog:cost "$20" ;
+  as:summary "Lunch for one and a half (Golden Mean)" .
+

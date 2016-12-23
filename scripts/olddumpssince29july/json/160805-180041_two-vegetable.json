@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Two vegetable gyoza (Sate)",
+    "as:tag": [
+        "snack",
+        "food truck",
+        "sate",
+        "csarven"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-05T13:00:41-04:00",
+    "@id": "http://blog.rhiaro.co.uk/two-vegetable",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/two-vegetable"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-05T13:00:41-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

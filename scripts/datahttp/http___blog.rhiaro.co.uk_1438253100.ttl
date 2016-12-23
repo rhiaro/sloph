@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1438253100>
+  dcterms:created "2015-07-30T11:45:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 30th July 2015, 11:45 Europe/London
+bookmark-of: http://www.w3.org/TR/json-ld/#interpreting-json-as-json-ld
+tags: json,jsonld,linked data,socialwg
+-->
+
+""" ;
+  sioc:topic "json", "jsonld", "linked data", "socialwg" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/1438253100> ;
+  blog:bookmark_of <http://www.w3.org/TR/json-ld/#interpreting-json-as-json-ld> .
+

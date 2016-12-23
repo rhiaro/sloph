@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/SandraTrappen>
+  foaf:name "sandra trappen" ;
+  foaf:homepage <https://twitter.com/SandraTrappen> ;
+  foaf:depiction <https://twitter.com/SandraTrappen/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/fda9824be85bc57270effaf0bf02207b1b2e96d2a4f3b34d1347abaf819be557.jpeg> .
+

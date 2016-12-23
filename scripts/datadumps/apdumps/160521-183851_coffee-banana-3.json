@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Coffee, banana",
+    "as:tag": [
+        "coffee",
+        "fruit"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-21T10:38:51-07:00",
+    "@id": "http://blog.rhiaro.co.uk/coffee-banana-3",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/coffee-banana"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-21T10:38:51-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

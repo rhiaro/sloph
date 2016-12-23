@@ -1,0 +1,27 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/10/autobiography>
+  as:published "2013-10-19T12:36:00+0000"^^xsd:datetime ;
+  as:tag blog:Todo, "book", "reading", "misc", "lame" ;
+  as:name "Autobiography" ;
+  as:content """<!---
+published: 19th October 2013, 12:36
+type: BlogPost
+list: todo
+tags: reading, book, lame, misc
+pin: 0
+-->
+
+# Autobiography
+
+I magicked _Autobiography_ to my Kindle, but I haven't started reading it yet because I'm worried I'll cry from beginning to end due to the sheer beauty of the prose.
+
+I'm looking forward to a spectacularly written yarn, designed explicitly to incite scandal and speculation.
+
+I'll read it as fiction and fantasy, inspired by, but not based upon, real events.
+
+I might relate too much, or regress back to my teenage years.  I think I'd enjoy/despise it best shut away from the world until it's over; always the case with the first listening of a new album.  I don't know when I'll have time or understanding of peers for that.  I'll try to schedule a few days.  Maybe I'll run away to Kerrara for a weekend on my own.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

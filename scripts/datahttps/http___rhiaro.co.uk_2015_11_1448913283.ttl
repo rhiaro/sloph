@@ -1,0 +1,15 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/11/1448913283>
+  a as:Announce, as:Like ;
+  as:published "2015-11-30T19:54:43+0000"^^xsd:datetime ;
+  as:tag "web", "w3c", "standards" ;
+  as:content """<!---
+like-of: https://twitter.com/jennschiffer/status/671413607591239680
+repost-of: https://twitter.com/jennschiffer/status/671413607591239680
+tags: w3c,standards,web
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/jennschiffer/status/671413607591239680> .
+

@@ -1,0 +1,37 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/standards-star> dc:creator <http://rhiaro.co.uk/about#me> ;
+    dcterms:created "2015-11-27T23:40:48+0000"^^xsd:datetime ;
+    dcterms:title "Standards and Star Trek" ;
+    sioc:content """<!---
+tags: life,standards,star trek,w3c
+-->
+
+# Standards and Star Trek
+
+This is part of an ongoing series of notes about Star Trek episodes that remind me in some way of interactions with W3C Working Groups.
+
+## On issue closing and edit wars
+
+In TNG S1E26 ("The Neutral Zone"), a man from the late 21st century is found cryogenically frozen. He is awoken aboard the Enterprise, and soon becomes frustrated that he can't speak to the Captain (who is busy diffusing a dangerous situation with the Romulans). He uses a communications panel to call the Captain, who isn't best pleased. When reprimanded for unauthorised use of the panel, he says "If they are so important, why don't they need an 'executive key'?" to which Picard replies "Aboard a starship, that is not necessary. We are all capable of exercising self-control.\"""" ;
+    sioc:topic "life",
+        "standards",
+        "star trek",
+        "w3c" ;
+    blog:tmpcontent """# Standards and Star Trek
+
+This is part of an ongoing series of notes about Star Trek episodes that remind me in some way of interactions with W3C Working Groups.
+
+## On issue closing and edit wars
+
+In TNG S1E26 ("The Neutral Zone"), a man from the late 21st century is found cryogenically frozen. He is awoken aboard the Enterprise, and soon becomes frustrated that he can't speak to the Captain (who is busy diffusing a dangerous situation with the Romulans). He uses a communications panel to call the Captain, who isn't best pleased. When reprimanded for unauthorised use of the panel, he says "If they are so important, why don't they need an 'executive key'?" to which Picard replies "Aboard a starship, that is not necessary. We are all capable of exercising self-control.\"""" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/11/standards-star> .

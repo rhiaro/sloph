@@ -1,0 +1,98 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2011/10/spells-wear-out>
+  as:published "2011-10-29T13:52:00.003Z"^^xsd:datetime ;
+  as:tag blog:Doing, "writing", "fiction", "story" ;
+  as:name "Spells wear out" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-173028562666338053" ;
+  as:content """One of the first lessons Turald learned during his time at Castle Qythe was
+that spells wear out. They weaken, they lose their power, the more they are
+used. They were all taught this, he and his classmates, probably in their very
+first week of study. But few eight year olds take this kind of wisdom to
+heart. Most are keen to crack on with casting, and nobody thought to question
+why some of their oldest tutors never demonstrated even the simplest of
+enchantments.  
+  
+For as long as he could remember, Turald had loved to explore dark places. He
+loved to see what was out of sight; to make known the unknown. When he was
+fifteen, he discovered a whole section of the castle's cellars that had been
+lost for centuries. To the delight of his wizened mentors, the expanse he
+found was filled with age-old liquor which had been promptly and
+enthusiastically excavated. It was from then that his freedom had been
+unofficially granted to roam and explore the castle grounds as extensively as
+he saw fit. Recognising his gift for discovery, Turald's studymaster, the
+ancient but sprightly Professor Chalmak, quietly overlooked Turald's disregard
+for out-of-hours and restricted-area rules that were strictly imposed upon the
+other students.  
+  
+In a broom cupboard, Turald once found a mousehole that lead two hundred
+metres north and seventy four years into the past. One of the seniors had been
+able to use this to make peace with a long-dead, estranged father who had been
+in that classroom, all those years ago.  
+  
+In the shadowy corner of the library marked 'secret', Turald had found the
+headmaster's daughter, missing for over forty years.  
+  
+In a tunnel that he had found through crawling into a large oak chest, Turald
+uncovered a delicate glass vial containing the last breath of the first
+philosopher.  
+  
+When Turald realised that his elders thought him special for his findings, he
+began to keep a diary of them. Through his diary entries, he noticed patterns
+in his actions. Or rather, repetitions. The shedding of light was the key.
+Illumination was all he needed to do to bring something once hidden out into
+the open. His ability to conjure just the right incandescence became his
+greatest gift. Thus, he practised with vigour.  
+  
+Caves, caverns, abandoned ruins: Turald devoured their secrets, consumed their
+stories. He exhausted the castle grounds, graduated from the Qythe Academy,
+and ventured forth into the Olde Lande, searching without hesitation for doors
+to throw open. Eyes aglow with his own special kind of vision, he absorbed the
+mysteries of a world in shadow.  
+  
+But spells wear out.  
+  
+He recalled this first in a forest, under a bristling canopy so thick that the
+blackened foliage groping at his legs had long since found ways to sustain
+itself that did not rely on the land's pale sun. He could see the trinkets
+that had been stowed away by blind magpies in treetrunk nests; the hoards of
+stolen food secreted into the undergrowth by milky-eyed squirrels. And then,
+he couldn't.  
+  
+The flicker in his vision was fleeting, but enough to panic Turald, just for a
+moment. Enough to make that first ever lesson come rushing back. Still young,
+still adventurous, Turald shook his concern aside.  
+  
+Deeper in the forest, he found a well; a man-made hole into the earth, darker
+even than woods entombing it.  
+  
+Why had man built such a thing so far into the shade? Turald could not resist.  
+  
+He descended, uncovering a concealed tunnel with his brilliant sight. Time
+having vacated entirely, Turald followed the route that stretched before him.
+No magic nor mystery, nor hidden treasure presented itself, and the rhythm of
+his steps lulled him into a trance. He walked blind for many hours before he
+realised he was doing so.  
+  
+A droplet of water striking the tip of his nose roused him enough for him to
+realise he saw nothing. Turald stopped. The sudden lack of motion was jarring,
+dizzying. Turald sat. Water seeped into the hem of his robes, and he sat.
+Years of advice, words of warning, from teachers, mentors, elders, echoed
+through his mind.  
+  
+Spells wear out.  
+  
+Spells lose their power. Lose their potency. Lose their meaning.  
+  
+Save the important spells for when you need them the most. Best to leave this
+world with a spell in your heart, than to leave it because your spells have
+run out.  
+  
+Turald's light had run out, so he sat.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T01:51:07.104Z"^^xsd:datetime .
+

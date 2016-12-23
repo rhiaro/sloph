@@ -1,0 +1,18 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/jumphttprhiarocoukphotos1508mumjumpjpg>
+  blog:tmpcontent "![jump](https://rhiaro.co.uk/photos/1508mum/jump.jpg)" ;
+  as:published "2015-08-22T19:41:00+0100"^^xsd:datetime ;
+  as:tag "sutton-on-sea", "family", "beach", "life" ;
+  as:location <http://dbpedia.org/resource/Sutton-on-Sea> ;
+  as:content """<!---
+tags: life,family,beach,sutton-on-sea
+location: http://dbpedia.org/resource/Sutton-on-Sea
+published: 22nd August 2015, 19:41 BST
+-->
+
+![jump](https://rhiaro.co.uk/photos/1508mum/jump.jpg)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

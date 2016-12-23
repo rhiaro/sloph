@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2016/05/572b9650c5308>
+  a as:Travel ;
+  as:published "2016-05-05T14:49:45-04:00", "2016-05-05T14:49:45-04:00"^^xsd:dateTime ;
+  as:tag "bus", "ca2016", "california", "coach", "greyhound", "journey", "los angeles", "san diego", "travel", "usa" ;
+  as:startTime "2016-05-19T16:00:00-08:00" ;
+  as:endTime "2016-05-19T18:45:00-08:00" ;
+  blog:cost "$15.50" ;
+  as:origin <http://dbpedia.org/resource/Los_Angeles> ;
+  as:target <http://dbpedia.org/resource/San_Diego> .
+

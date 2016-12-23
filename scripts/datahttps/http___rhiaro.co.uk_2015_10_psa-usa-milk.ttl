@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/10/psa-usa-milk>
+  blog:tmpcontent """PSA for the USA: Milk and sugar are not normal ingredients in bread. Stop. Please.
+
+On a related note, can anyone recommend an actual bakery in Boston/Cambridge? I'm giving up on supermarkets. Even Wholefoods doesn't have sensible bread.""" ;
+  as:published "2015-10-19T16:11:07+0100"^^xsd:datetime ;
+  as:tag "bread", "usa", "vegan", "travel", "food", "life" ;
+  as:content """<!---
+tags: life,food,bread,usa,travel,vegan
+-->
+
+PSA for the USA: Milk and sugar are not normal ingredients in bread. Stop. Please.
+
+On a related note, can anyone recommend an actual bakery in Boston/Cambridge? I'm giving up on supermarkets. Even Wholefoods doesn't have sensible bread.""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/656125838904176640/3295540153>, <https://twitter.com/AnthroPunk/status/659884754922283009>, <https://twitter.com/AnthroPunk/status/658908155280134144> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

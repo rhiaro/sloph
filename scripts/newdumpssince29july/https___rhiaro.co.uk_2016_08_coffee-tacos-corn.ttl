@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/coffee-tacos-corn>
+  a as:Activity, asext:Consume ;
+  as:name "Coffee; tacos: corn tortillas fried in coconut oil, lettuce, mushrooms, black beans, jalapeno, cream cheese, not-cheese, hot sauce" ;
+  as:published "2016-08-07T09:19:57-04:00"^^xsd:dateTime, "2016-08-07T09:19:57-04:00" ;
+  as:tag "beans", "coffee", "tacos", <https://rhiaro.co.uk/tags/coffee>, <https://rhiaro.co.uk/tags/beans>, <https://rhiaro.co.uk/tags/tacos> .
+

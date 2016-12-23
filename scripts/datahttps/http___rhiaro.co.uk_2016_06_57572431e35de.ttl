@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/57572431e35de>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-06-07T12:44:20-07:00", "2016-06-07T12:44:20-07:00"^^xsd:dateTime ;
+  as:tag "takeaway", "portland", "food truck", "food" ;
+  blog:cost "$9" ;
+  as:summary "Indian food (food truck)" .
+

@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/unexpectedly>
+  blog:tmpcontent "Unexpectedly found the ever-sought golden trio in Portland train station - seats and power outlets in just the right place to pick up wifi from the restaurant next door." ;
+  as:published "2015-12-10T19:13:21+0000"^^xsd:datetime ;
+  as:tag "travel", "portland" ;
+  as:content """<!---
+tags: travel,portland
+-->
+
+Unexpectedly found the ever-sought golden trio in Portland train station - seats and power outlets in just the right place to pick up wifi from the restaurant next door.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,8 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://matrix.org/blog/2015/07/29/micropub-support-as-an-application-service/>
+  blog:mentions <https://rhiaro.co.uk/2015/07/indiewebcamp-edinburgh-closes> ;
+  as:published "2015-07-29T11:05:28+01:00"^^xsd:datetime .
+

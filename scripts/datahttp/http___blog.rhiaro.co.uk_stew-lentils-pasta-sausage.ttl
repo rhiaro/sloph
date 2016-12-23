@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/stew-lentils-pasta-sausage>
+  a blog:Consumption ;
+  dcterms:created "2016-05-07T09:13:37-07:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/stew-lentils> ;
+  as:published "2016-05-07T09:13:37-07:00" ;
+  as:tag "pasta", "stew", "vegetables" ;
+  as:name "Stew: lentils, pasta, not-sausage, tvp, broccoli, red capsicum, jalapenos, cherry pepper, aubergine, sweet potato, squash" .
+

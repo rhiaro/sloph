@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Vietnamese pizza with not-meat, avocado maki, kale mushroom not-meat, tofu rice noodles (Grasshopper)",
+    "as:tag": [
+        "Grasshopper",
+        "noodles",
+        "sushi"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-01-30T14:23:53-05:00",
+    "@id": "http://blog.rhiaro.co.uk/vietnamese-pizza",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/vietnamese-pizza"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-30T14:23:53-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/5787fc3403536>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-07-14T14:53:35-04:00", "2016-07-14T14:53:35-04:00"^^xsd:dateTime ;
+  as:tag "groceries", "harvest market" ;
+  blog:cost "$11.29" ;
+  as:summary "Snacks and office coffee (Harvest Market)" .
+

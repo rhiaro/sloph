@@ -1,0 +1,36 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2011/08/day-seventeen-philae>
+  as:published "2011-08-19T11:31:00.001Z"^^xsd:datetime ;
+  as:tag blog:Done, "travel", "aswan", "nubian village", "henna", "hatshepsut", "elephantine island", "nubians", "philae temple" ;
+  as:name "Day Seventeen: Philae Temple, Elephantine Island" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8564233979276465155" ;
+  as:content """We were all excited by massive the lie in we got for a 9am start that morning.
+We saw Philae Temple, with Hatshepsut's cool obelisk. Another place where
+those darn Christians ruined a lot of carvings.  
+  
+After lunch on the waterfront, I slept for a few hours. It was good.  
+  
+We regrouped at 4 and took a boat to a beach on Elephantine Island. Took a dip
+in the Nile and survived. It's clean and clear around Aswan, contrary to
+popular rumour. We had a tour of a family home in the Nubian village, and
+Mona, lady of the house, cooked us a fantastic dinner. The houses are made of
+mud brick, but painted brightly and strategically in yellows, blues and greens
+to maximise heat and light potential year round. The house we saw was also
+enormous, even for a family of five. During the summer months, they all sleep
+on the roof, but there are an excess of indoor bedrooms for guests, and two
+huge reception areas. In the village, there are no locks on doors, and the
+sense of community is such that friends can wander in and out of each others'
+homes at leisure. While we were there we had a few drop-ins from neighbors and
+local kids, including a woman who henna'd up everyone except me. Even Al got a
+hardcore eye-pyramid thing on his arm. Manly :)  
+  
+An enjoyable and stress free day, in preparation for the next few days of
+uber-chilling on a felucca...
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2011-08-19T11:31:50.575Z"^^xsd:datetime .
+

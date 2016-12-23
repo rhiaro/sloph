@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Smoothie: banana, almond milk, mango, oats, hemp seeds, flaxseed",
+    "as:tag": [
+        "smoothie",
+        "oats"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-09-03T09:43:16-04:00",
+    "@id": "http://blog.rhiaro.co.uk/smoothie-banana-almond",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/09/smoothie-banana"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-09-03T09:43:16-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://adactio.com/>
+  foaf:name "Jeremy Keith" ;
+  foaf:homepage <https://adactio.com/> ;
+  foaf:depiction <https://twitter.com/adactio/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/99dca19a573d523b74213fc8fa7773b70c106d07784a6e3bb877e9595b9cb763.png> .
+

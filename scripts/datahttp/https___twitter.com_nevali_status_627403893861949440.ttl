@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/nevali/status/627403893861949440>
+  dcterms:title "@rhiaro I’m hiding in the wonderous VIP lounge, I’ll be down in a bit!" ;
+  dcterms:created "2015-08-01T10:01:59+01:00"^^xsd:datetime ;
+  dc:creator <http://neva.li/> ;
+  sioc:content """[@rhiaro][1] I'm hiding in the wonderous VIP lounge, I'll be down in a bit!
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/07/waiting-bus> .
+

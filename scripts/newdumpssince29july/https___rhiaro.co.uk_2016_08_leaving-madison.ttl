@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/leaving-madison>
+  a as:Note ;
+  as:published "2016-08-18T22:07:53+01:00"^^xsd:dateTime ;
+  as:tag "travel", "hacking", "cwebber", "madison", "activitypub", "dustycloud.org", "socialwg", "specification", <https://rhiaro.co.uk/tags/travel>, <https://rhiaro.co.uk/tags/cwebber>, <https://rhiaro.co.uk/tags/hacking>, <https://rhiaro.co.uk/tags/activitypub>, <https://rhiaro.co.uk/tags/socialwg>, <https://rhiaro.co.uk/tags/dustycloud.org>, <https://rhiaro.co.uk/tags/madison>, <https://rhiaro.co.uk/tags/specification> ;
+  as:content "<p>Leaving Madison for the 26 hour (hopefully!) journey to NYC. Had a super productive, super delicious and most of all super fun few days with <a href=\"http://dustycloud.org\">Chris Webber</a> (and family/friends). Full report due over the weekend.</p>" .
+

@@ -1,0 +1,9 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/2016/08/wrap-with-curry-2>
+  a asext:Consume, as:Activity ;
+  as:name "Wrap with curry and lettuce" ;
+  as:published "2016-08-08T12:29:31-04:00" ;
+  as:tag <https://rhiaro.co.uk/tags/wrap>, <https://rhiaro.co.uk/tags/curry>, <https://rhiaro.co.uk/tags/leftovers> .
+

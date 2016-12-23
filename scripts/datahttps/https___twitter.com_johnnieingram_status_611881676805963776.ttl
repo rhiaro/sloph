@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/johnnieingram/status/611881676805963776>
+  sioc:reply_of <https://rhiaro.co.uk/2015/06/okay-private> ;
+  as:published "2015-06-19T14:02:14+01:00"^^xsd:datetime ;
+  as:name "@rhiaro That tweet was genuine poetry." ;
+  as:content """[@rhiaro][1] That tweet was genuine poetry.
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://www.johnnieingram.co.uk/> .
+

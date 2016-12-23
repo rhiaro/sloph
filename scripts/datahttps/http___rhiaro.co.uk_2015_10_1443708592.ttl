@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/10/1443708592>
+  a as:Announce ;
+  as:published "2015-10-01T15:09:52+0100"^^xsd:datetime ;
+  as:tag "social web" ;
+  as:content """<!---
+share-of: https://twitter.com/IdentityWoman/status/649363134709264384
+tags: social web
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/IdentityWoman/status/649363134709264384> .
+

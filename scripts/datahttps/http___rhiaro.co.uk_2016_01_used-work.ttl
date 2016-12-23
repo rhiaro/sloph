@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/used-work>
+  as:published "2016-01-21T23:19:56+00:00"^^xsd:dateTime ;
+  as:tag "tests", "csarven", "hacking" ;
+  as:content """"This used to work, I swear."
+
+"This is why you need tests."
+
+"Tests? Pft. I did tests in high school."
+
+-- [@csarven](http://csarven.ca) on software development""" .
+

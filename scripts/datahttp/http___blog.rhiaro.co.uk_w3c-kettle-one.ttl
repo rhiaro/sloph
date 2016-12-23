@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/w3c-kettle-one>
+  dcterms:created "2016-02-05T17:37:29+00:00"^^xsd:dateTime ;
+  sioc:content "The W3C kettle is one of the more high tech ones I've encountered, so naturally the UX isn't great and I have to re-learn how to boil water every time." ;
+  sioc:topic "life", "ux" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/w3c-kettle-one> .
+

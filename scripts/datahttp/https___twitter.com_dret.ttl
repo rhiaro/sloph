@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/dret>
+  foaf:name "Erik Wilde" ;
+  foaf:homepage <https://twitter.com/dret> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/717c797ec568ec9108ab5a68e9d5e1033ee2c18ff2c2ffe9ea34e5493946a33e.jpeg> .
+

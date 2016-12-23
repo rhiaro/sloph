@@ -1,0 +1,19 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/tend-react-day>
+  blog:tmpcontent """I tend to react to day-to-day things on a scale from nbd to idgaf. Other people seem way too melodramatic to me, but sometimes I wonder if I should care more about stuff.
+
+Eh. Whatever.""" ;
+  as:published "2015-06-11T20:49:23+0100"^^xsd:datetime ;
+  as:tag "nbd", "idgaf", "life" ;
+  as:content """<!---
+tags: life,idgaf,nbd
+-->
+
+I tend to react to day-to-day things on a scale from nbd to idgaf. Other people seem way too melodramatic to me, but sometimes I wonder if I should care more about stuff.
+
+Eh. Whatever.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

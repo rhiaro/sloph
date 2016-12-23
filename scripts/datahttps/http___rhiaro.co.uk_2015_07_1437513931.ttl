@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/1437513931>
+  a as:Announce ;
+  as:published "2015-07-21T22:25:31+0100"^^xsd:datetime ;
+  as:tag "indiewebcamp" ;
+  as:content """<!---
+share-of: https://twitter.com/benwerd/status/623600698517667840
+tags: indiewebcamp
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/benwerd/status/623600698517667840> .
+

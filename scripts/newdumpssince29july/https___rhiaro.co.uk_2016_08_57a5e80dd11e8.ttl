@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/57a5e80dd11e8>
+  a as:Activity, asext:Acquire ;
+  as:published "2016-08-05T15:45:09-04:00"^^xsd:dateTime, "2016-08-05T15:45:09-04:00" ;
+  as:tag "csarven", "food", "no name cafe", "restaurant", <https://rhiaro.co.uk/tags/food>, <https://rhiaro.co.uk/tags/restaurant>, <https://rhiaro.co.uk/tags/csarven>, <https://rhiaro.co.uk/tags/no+name+cafe> ;
+  as:summary "Drinks and dessert for two (Katya's no name cafe)" ;
+  asext:cost "$10" .
+

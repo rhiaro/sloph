@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/5734f154d4d83>
+  a blog:Acquisition ;
+  dcterms:created "2016-05-12T14:09:29-07:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/5734f154d4d83> ;
+  blog:cost "0 (Max & Dave)" ;
+  as:published "2016-05-12T14:09:29-07:00"^^xsd:dateTime ;
+  as:summary "Sushi (Fuji Sushi)" ;
+  as:tag "ca2016", "chi2016", "food", "fuji sushi", "restaurant" .
+

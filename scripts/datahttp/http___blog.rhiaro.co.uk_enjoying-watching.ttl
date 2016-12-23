@@ -1,0 +1,19 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/enjoying-watching>
+  dcterms:created "2015-07-07T14:48:07+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: lego,teaching,volunteer,kids,sutton trust summer school
+-->
+
+Enjoying watching kids discover that coding is mostly trial and error and wtf""" ;
+  sioc:topic "lego", "teaching", "volunteer", "kids", "sutton trust summer school" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/enjoying-watching> ;
+  blog:tmpcontent "Enjoying watching kids discover that coding is mostly trial and error and wtf" .
+

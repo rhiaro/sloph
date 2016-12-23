@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/pretty-useful>
+  dcterms:created "2016-02-01T21:33:44+00:00"^^xsd:dateTime ;
+  sioc:content "It's pretty useful that the webapps that distract me the most have the heaviest/slowest JS, so before things finish loading I've realised I'm procrastinating and closed the tab." ;
+  sioc:topic "javascript", "life", "procrastination" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/pretty-useful> .
+

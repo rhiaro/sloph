@@ -1,0 +1,28 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2010/04/poster-presenter>
+  blog:tmpcontent """# Poster presenter and runner-up, People's Choice Prize
+
+## BCSWomen Lovelace Colloquium
+
+Poster: "Google Writer: A Mashup".""" ;
+  as:published "2010-04-08T18:00:00+0100"^^xsd:datetime ;
+  as:tag "resume", "cv", "women in tech", "poster", "bsc", "lovelace", "lovelace colloquium", "bcswomen", "prize" ;
+  as:name "Poster presenter and runner-up, People's Choice Prize" ;
+  as:startTime "2010-04-08T09:00:00+0100"^^xsd:datetime ;
+  as:endTime "2010-04-08T18:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 8th April 2010, 18:00
+start: 8th April 2010, 09:00
+end: 8th April 2010, 18:00
+tags: cv,resume,lovelace,bcswomen,poster,prize,lovelace colloquium,women in tech,bsc
+-->
+
+# Poster presenter and runner-up, People's Choice Prize
+
+## BCSWomen Lovelace Colloquium
+
+Poster: "Google Writer: A Mashup".""" .
+

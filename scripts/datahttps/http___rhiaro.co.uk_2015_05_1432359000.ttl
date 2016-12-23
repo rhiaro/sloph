@@ -1,0 +1,23 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/05/1432359000>
+  as:latitude "43.78192" ;
+  as:longitude "11.24968" ;
+  as:published "2015-05-23T06:30:00+0100"^^xsd:datetime ;
+  as:tag "travel", "journey", "italy", "ferry", "croatia" ;
+  as:startTime "2015-05-22T19:15:00+0100"^^xsd:datetime ;
+  as:endTime "2015-05-23T06:30:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Ancona" ;
+  blog:endLocation "http://dbpedia.org/resource/Split" ;
+  as:content """<!---
+published: 21st May 2015, 13:55 Europe/Berlin
+start: 22nd May 2015, 20:15 Europe/Berlin
+end: 23rd May 2015, 07:30 Europe/Berlin
+startLocation: http://dbpedia.org/resource/Ancona
+endLocation: http://dbpedia.org/resource/Split
+tags: travel,ferry,journey,italy,croatia
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

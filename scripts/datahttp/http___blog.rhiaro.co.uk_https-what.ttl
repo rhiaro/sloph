@@ -1,0 +1,160 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/https-what>
+  dcterms:title "HTTPS: What a terrible experience" ;
+  dcterms:created "2015-12-07T03:59:19+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: ssl,hacking,cpanel,letsencrypt,cert,tls,https
+-->
+
+# HTTPS: What a terrible experience
+
+## Digital Ocean droplet with Docker all the things
+
+Specifically all apps running in Docker containers, served on subdomains through the [nginx reverse proxy container](https://github.com/jwilder/nginx-proxy).
+
+**tl;dr** I didn't figure it out yet, if you're looking for a guide you're not in the right place.
+
+Disclaimer:
+
+![idea? none](http://images.8tracks.com/cover/i/002/479/593/cooking-dog-has-know-idea-what-hes-doing-1141.jpg)
+
+Things I currently run through the reverse proxy:
+
+* A simple standalone python webapp2 app.
+* One Apache server.
+* Another Apache server.
+* Gold (a Solid server written in Go).
+* Etherpad.
+
+Decided off the bat not to bother with Etherpad, as I haven't looked under the hood and don't know how I'd do domain validation at all. Figured the others would be doable.
+
+### Generating certs
+
+Ran the letsencrypt Docker container. The current docs run it with `-p 80:80 443:443` and the `auth` command and no plugins. I left out the ports and used the `manual` plugin, as I can't conceive of how it would do domain validation it across containers, so I'm not even going to try rig that up:
+
+```
+sudo docker run -it --rm --name letsencrypt \\\\
+  -v "/etc/letsencrypt:/etc/letsencrypt" \\\\
+  -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \\\\
+  quay.io/letsencrypt/letsencrypt:latest certonly --manual
+```
+
+I gave it several subdomains, for each of the different apps I have running, and Worked through domain validation for all of them (putting a file in .well-known).
+
+* Apache servers were easy.
+* Spent far too long figuring out the best way to route the python app to serve .well-known because I am dumb, but got there.
+* Creating the .well-known for Gold was super easy, but it wasn't accessible over http as Gold forces https even without a cert, so I dropped that until I can make it serve on http.
+
+Down to three subdomains, I (finally!) generated one cert for all of them. It stored the files (`cert.pem`, `chain.pem`, `fullchain.pem` and `privkey.pem`) under the name of the first one on the list (in `/etc/letsencrypt/live/sub.mydomain.tld`).
+
+### Installing certs
+
+I had it on good advice that if I restarted the proxy container I wouldn't need to restart all of the other containers. The instructions for SSL in the docs for the proxy say:
+
+`$ docker run -d -p 80:80 -p 443:443 -v /path/to/certs:/etc/nginx/certs -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy`
+
+It also says "The certificate and keys should be named after the virtual host with a `.crt` and `.key` extension". I had `.pem`s so I threw caution to the wind and renamed:
+
+* `fullchain.pem` -> `sub.mydomain.tld.crt`
+* `privkey.pem` -> `sub.mydomain.tld.key`
+
+Put them in a directory that I mounted to the proxy container when I relaunched it (above command). Given the rename, the proxy is supposed to just find them I guess?
+
+Failure 1: port 443 is already in use. o.O I couldn't figure out what is already using it, but later wondered if Gold is maybe sneakily hijacking it. Otherwise I found [this docker bug](https://github.com/docker/docker/issues/6476) which may be it but I am in no position to upgrade docker right now (I know, I know). Faced with imminently needing to relocate to somewhere without wifi and not being able to cope knowing my Etherpad was down, I relaunched the proxy container as above, without `-p 443:443`, but still with the path to certs. Whew, everything came back up.
+
+Except... The first subdomain, the one that the certs are named after, is now serving Gold, not the Apache container it was supposed to point to. The subdomain that is supposed to be serving Gold is also serving Gold. Neither are using the correct cert.
+
+So... that's where I'm at.
+
+### Next?
+
+* A cursory search suggests that one does not simply convert `.pem` to `.crt` by renaming the file. I will attempt to convert with openssl.
+* I'm not totally sure if I'm supposed to be using `fullchain` or one of the others? Since nginx only asks for cert and key, I assume `fullchain` is the right one.. I've seen tutorials which cat the cert with the CA bundle, which I believe is what `fullchain` is, so..
+* Get Gold out of my port 443 shiz and see if that stops confusing nginx.
+* Cry.
+* Try launching the other two subdomains with the `CERT_NAME=sub.mydomain.tld` flag as they all point to one shared cert.
+
+If you've read this far and have the remotest clue about any of these puzzle pieces, please let me know all the things I'm getting totally wrong.
+
+*See also: [HTTPS: Not a terrible experience](/2015/12/https-terrible)*""" ;
+  sioc:topic "ssl", "hacking", "cpanel", "letsencrypt", "cert", "tls", "https" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/12/https-what> ;
+  blog:tmpcontent """# HTTPS: What a terrible experience
+
+## Digital Ocean droplet with Docker all the things
+
+Specifically all apps running in Docker containers, served on subdomains through the [nginx reverse proxy container](https://github.com/jwilder/nginx-proxy).
+
+**tl;dr** I didn't figure it out yet, if you're looking for a guide you're not in the right place.
+
+Disclaimer:
+
+![idea? none](http://images.8tracks.com/cover/i/002/479/593/cooking-dog-has-know-idea-what-hes-doing-1141.jpg)
+
+Things I currently run through the reverse proxy:
+
+* A simple standalone python webapp2 app.
+* One Apache server.
+* Another Apache server.
+* Gold (a Solid server written in Go).
+* Etherpad.
+
+Decided off the bat not to bother with Etherpad, as I haven't looked under the hood and don't know how I'd do domain validation at all. Figured the others would be doable.
+
+### Generating certs
+
+Ran the letsencrypt Docker container. The current docs run it with `-p 80:80 443:443` and the `auth` command and no plugins. I left out the ports and used the `manual` plugin, as I can't conceive of how it would do domain validation it across containers, so I'm not even going to try rig that up:
+
+```
+sudo docker run -it --rm --name letsencrypt \\\\
+  -v "/etc/letsencrypt:/etc/letsencrypt" \\\\
+  -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \\\\
+  quay.io/letsencrypt/letsencrypt:latest certonly --manual
+```
+
+I gave it several subdomains, for each of the different apps I have running, and Worked through domain validation for all of them (putting a file in .well-known).
+
+* Apache servers were easy.
+* Spent far too long figuring out the best way to route the python app to serve .well-known because I am dumb, but got there.
+* Creating the .well-known for Gold was super easy, but it wasn't accessible over http as Gold forces https even without a cert, so I dropped that until I can make it serve on http.
+
+Down to three subdomains, I (finally!) generated one cert for all of them. It stored the files (`cert.pem`, `chain.pem`, `fullchain.pem` and `privkey.pem`) under the name of the first one on the list (in `/etc/letsencrypt/live/sub.mydomain.tld`).
+
+### Installing certs
+
+I had it on good advice that if I restarted the proxy container I wouldn't need to restart all of the other containers. The instructions for SSL in the docs for the proxy say:
+
+`$ docker run -d -p 80:80 -p 443:443 -v /path/to/certs:/etc/nginx/certs -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy`
+
+It also says "The certificate and keys should be named after the virtual host with a `.crt` and `.key` extension". I had `.pem`s so I threw caution to the wind and renamed:
+
+* `fullchain.pem` -> `sub.mydomain.tld.crt`
+* `privkey.pem` -> `sub.mydomain.tld.key`
+
+Put them in a directory that I mounted to the proxy container when I relaunched it (above command). Given the rename, the proxy is supposed to just find them I guess?
+
+Failure 1: port 443 is already in use. o.O I couldn't figure out what is already using it, but later wondered if Gold is maybe sneakily hijacking it. Otherwise I found [this docker bug](https://github.com/docker/docker/issues/6476) which may be it but I am in no position to upgrade docker right now (I know, I know). Faced with imminently needing to relocate to somewhere without wifi and not being able to cope knowing my Etherpad was down, I relaunched the proxy container as above, without `-p 443:443`, but still with the path to certs. Whew, everything came back up.
+
+Except... The first subdomain, the one that the certs are named after, is now serving Gold, not the Apache container it was supposed to point to. The subdomain that is supposed to be serving Gold is also serving Gold. Neither are using the correct cert.
+
+So... that's where I'm at.
+
+### Next?
+
+* A cursory search suggests that one does not simply convert `.pem` to `.crt` by renaming the file. I will attempt to convert with openssl.
+* I'm not totally sure if I'm supposed to be using `fullchain` or one of the others? Since nginx only asks for cert and key, I assume `fullchain` is the right one.. I've seen tutorials which cat the cert with the CA bundle, which I believe is what `fullchain` is, so..
+* Get Gold out of my port 443 shiz and see if that stops confusing nginx.
+* Cry.
+* Try launching the other two subdomains with the `CERT_NAME=sub.mydomain.tld` flag as they all point to one shared cert.
+
+If you've read this far and have the remotest clue about any of these puzzle pieces, please let me know all the things I'm getting totally wrong.
+
+*See also: [HTTPS: Not a terrible experience](/2015/12/https-terrible)*""" .
+

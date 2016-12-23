@@ -1,0 +1,37 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:tag": [
+        "travel",
+        "journey",
+        "plane",
+        "flight",
+        "iceland",
+        "uk",
+        "reykjavik",
+        "glasgow",
+        "sociam"
+    ],
+    "as:published": "2016-02-21T14:37:55-05:00",
+    "as:startTime": "2016-02-22T07:35+00:00",
+    "as:endTime": "2016-02-22T09:40+00:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Glasgow"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Reykjavik"
+    },
+    "@id": "http://blog.rhiaro.co.uk/56ca1c3b02ff6",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56ca1c3b02ff6"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-21T14:37:55-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

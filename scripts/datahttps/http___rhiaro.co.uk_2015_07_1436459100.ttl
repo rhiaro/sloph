@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/1436459100>
+  a as:Add ;
+  as:published "2015-07-09T17:25:00+0100"^^xsd:datetime ;
+  as:tag "video", "philarcher", "data", "semantic web", "w3c", "linked data" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 9th July 2015, 17:25 Europe/London
+bookmark-of: http://video.dataversity.net/video/semantic-web-10-years-of-achievement/
+tags: philarcher,semantic web,data,linked data,w3c,video
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://video.dataversity.net/video/semantic-web-10-years-of-achievement/> .
+

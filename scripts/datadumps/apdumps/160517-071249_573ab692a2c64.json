@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Dinner (Swinger's)",
+    "blog:cost": "$24",
+    "as:tag": [
+        "food",
+        "restaurant",
+        "ca2016",
+        "swingers"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-16T23:12:49-07:00",
+    "@id": "http://blog.rhiaro.co.uk/573ab692a2c64",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/573ab692a2c64"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-16T23:12:49-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

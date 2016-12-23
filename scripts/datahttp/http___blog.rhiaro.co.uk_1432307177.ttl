@@ -1,0 +1,18 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/1432307177>
+  dcterms:created "2015-05-22T16:06:17+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+location: http://dbpedia.org/resource/Ancona
+-->""" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/1432307177> ;
+  as:location <http://dbpedia.org/resource/Ancona> ;
+  as:latitude "43.62317" ;
+  as:longitude "13.40742" .
+

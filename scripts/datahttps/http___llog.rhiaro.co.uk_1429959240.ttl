@@ -1,0 +1,20 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1429959240>
+  a blog:LlogPost ;
+  as:published "2015-04-25T11:54:00+0100"^^xsd:datetime ;
+  as:tag "quantified self", "food", "eat", "life" ;
+  as:startTime "2015-04-25T11:54:00+0100"^^xsd:datetime ;
+  as:endTime "2015-04-25T11:54:00+0100"^^xsd:datetime ;
+  as:content """<!--- 
+start: 25th April 2015, 11:54
+end: 25th April 2015, 11:54
+type: LlogPost
+tags: eat,food,quantified self,life
+-->
+
+Chocolate (vegan, sugar free)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

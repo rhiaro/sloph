@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/04/1428417452>
+  a as:Like ;
+  as:published "2015-04-07T15:37:00+0100"^^xsd:datetime ;
+  as:tag "bookmark", "indieweb", "test", "hacking" ;
+  as:content """<!--- 
+published: 7th April 2015, 15:37
+like-of: http://indiewebcamp.com
+tags: test,hacking,indieweb,bookmark
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://indiewebcamp.com> .
+

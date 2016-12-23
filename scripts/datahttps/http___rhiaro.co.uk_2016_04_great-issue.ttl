@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/great-issue>
+  as:published "2016-04-12T15:21:24+01:00"^^xsd:dateTime ;
+  as:tag "social", "web", "data", "solid", "www2016" ;
+  as:content "Great issue raised in Solid tutorial: \"There's some data that's about me and I own it and it's personal, but it's not something I should have the right to change or erase.\"" .
+

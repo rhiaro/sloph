@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/jarofgreen/status/584705275254460416>
+  sioc:reply_of <https://rhiaro.co.uk/2015/04/minimum-viable-micropub> ;
+  as:published "2015-04-05T14:12:55+01:00"^^xsd:datetime ;
+  as:name "@rhiaro Does your redirect rule have an R in it? If it's doing an internal redirect POST should be fine." ;
+  as:content """[@rhiaro][1] Does your redirect rule have an R in it? If it's doing an internal redirect POST should be fine.
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://jamesbaster.co.uk/> .
+

@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/natematias/status/655206300171784192>
+  sioc:reply_of <https://rhiaro.co.uk/2015/10/suddenly-meet> ;
+  as:published "2015-10-17T03:18:49+01:00"^^xsd:datetime ;
+  as:name "@rhiaro Hah! You also hung out with @veganstraightedge today!" ;
+  as:content """[@rhiaro][1] Hah! You also hung out with [@veganstraightedge][2] today!
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/veganstraightedge
+""" ;
+  as:actor <http://natematias.com/> .
+

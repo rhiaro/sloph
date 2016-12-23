@@ -1,0 +1,31 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2010/06/anticipation>
+  as:published "2010-06-23T21:39:00.000Z"^^xsd:datetime ;
+  as:tag "work", "google-internship", "google internship", "google", blog:Done ;
+  as:name "Anticipation" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-864384804260099640" ;
+  as:content """Having finally found somewhere to live in London, I'm now looking forward to
+returning to Google's amazingly brightly coloured office in Belgrave House.
+The few hours I spent there during my interview left me with impressions of
+comfy chairs, excitable people, and rubber ducks stuck upside down to the
+ceiling. I also got a fleeting glimpse of the legendary canteen, which I'm
+sure I will become very familiar with over the coming weeks.  
+  
+For those of you who don't know, my role as University Programmes Intern will
+involve supporting the University Programmes team as they forge links between
+Google Engineering and the academic world, throughout Europe, the Middle East
+and Africa (read more about it
+[here](http://www.google.com/university/emea/index.html)). It's a non-
+technical role, but I'm hoping my technical background will be helpful in
+relating to the technical people (students and academics) the team will be
+working with.  
+  
+Here's to hoping I'm up for the task!
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:03:27.504Z"^^xsd:datetime .
+

@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/10/1445373586>
+  as:published "2015-10-20T21:39:46+0100"^^xsd:datetime ;
+  as:tag "phd", "oxford", "practicalpartcipation", "cooperative", "berkman", "harvard", "timdavies", "open data" ;
+  blog:follow_of <https://twitter.com/timdavies> ;
+  as:content """<!---
+follow-of: https://twitter.com/timdavies
+tags: practicalpartcipation,cooperative,berkman,harvard,oxford,timdavies,open data,phd
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

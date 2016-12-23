@@ -1,0 +1,33 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/07/notes-sssw13-poster>
+  as:published "2013-07-08T14:39:00.000Z"^^xsd:datetime ;
+  as:tag "sssw13", "poster", "sssw2013", "notes", "semantic web", "events", "phd", blog:Done ;
+  as:name "[Notes] Poster session at #SSSW2013" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-5248111370792171177" ;
+  as:content """_Things to investigate further!_  
+  
+LibRDF - linkeddata-perl for Debian by Kjetil Kjernsmo.  
+  
+Rakebul Hasan, Fabien Geandon (? not sure about names, can't read my
+handwriting..) - Trustworthiness of inferences.  
+  
+Taldea - fostering spontaneous communities.  
+Ghada Ben Nejma.  
+  
+NERD ontology for spotting entities.  
+nerd.eurecom.fr  
+See photo:  
+  
+
+![](http://1.bp.blogspot.com/-_lD50cl026w/UeashKJASrI/AAAAAAAAHvI/_2cW9a8smgk/
+s640/IMG_20130708_182405.jpg)
+
+  
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-07-17T14:39:34.170Z"^^xsd:datetime .
+

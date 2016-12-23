@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/arrived-before>
+  as:latitude "43.51209" ;
+  as:longitude "16.437" ;
+  blog:tmpcontent "Arrived before hostel opened, couldn't resist climbing a hill (Marjan)" ;
+  as:published "2015-05-23T08:35:26+0100"^^xsd:datetime ;
+  as:tag "travel", "croatia", "split", "checkin" ;
+  as:location <http://dbpedia.org/resource/Split> ;
+  as:content """<!---
+tags: travel,checkin,croatia,split
+location: http://dbpedia.org/resource/Split
+-->
+
+Arrived before hostel opened, couldn't resist climbing a hill (Marjan)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

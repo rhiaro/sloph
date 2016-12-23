@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/lasagne>
+  a as:Collection ;
+  as:name "lasagne" ;
+  as:items <https://rhiaro.co.uk/2016/07/lasagne-lentils>, <https://rhiaro.co.uk/2016/08/lasagne> .
+

@@ -1,0 +1,16 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/06/day-twelve-cairns>
+  as:published "2013-06-09T23:30:00.000Z"^^xsd:datetime ;
+  as:tag blog:Done, "travel", "beach", "australia", "cairns", "pool" ;
+  as:name "Day twelve: Chilling (Cairns)" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3825621549452531614" ;
+  as:content """Wander, pool.  
+Amazingly crappy hostel.  Woolshed.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-07-04T18:49:39.356Z"^^xsd:datetime .
+

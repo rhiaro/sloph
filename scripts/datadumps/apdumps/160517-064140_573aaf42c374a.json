@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "3 nights shelter (HI, LA)",
+    "blog:cost": "$159.68",
+    "as:tag": [
+        "travel",
+        "shelter",
+        "hostel",
+        "la",
+        "hi"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-16T22:41:40-07:00",
+    "@id": "http://blog.rhiaro.co.uk/573aaf42c374a",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/573aaf42c374a"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-16T22:41:40-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

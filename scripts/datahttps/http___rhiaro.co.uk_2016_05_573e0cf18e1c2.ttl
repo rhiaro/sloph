@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573e0cf18e1c2>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-19T11:58:28-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "la", "metro", "travel" ;
+  blog:cost "$5" ;
+  as:summary "TAP topup" .
+

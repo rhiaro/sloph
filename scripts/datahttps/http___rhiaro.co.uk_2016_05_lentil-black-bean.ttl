@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/lentil-black-bean>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-05-21T19:30:28-07:00"^^xsd:dateTime, "2016-05-21T19:30:28-07:00" ;
+  as:tag "chili", "chocolate", "rice", "vegetables" ;
+  as:name "Lentil and black bean chili, rice, spinach mash, cilantro and almond pesto, broccoli, salad, homemade chocolate" .
+

@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/terrible-user>
+  as:published "2016-04-25T20:39:26+01:00"^^xsd:dateTime ;
+  as:tag "ux", "life", "hacking" ;
+  as:content "Terrible user experiences are actually a positive coordinated effort to get people away from their computers for the good of society." .
+

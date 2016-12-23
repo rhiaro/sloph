@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/-cool-posts-names>
+  as:published "2016-01-02T07:31:24+00:00"^^xsd:dateTime ;
+  as:name " All the cool posts have names" ;
+  as:content """# All the cool posts have names
+
+No really this one""" .
+

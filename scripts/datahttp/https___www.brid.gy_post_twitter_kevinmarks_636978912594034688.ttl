@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://www.brid.gy/post/twitter/kevinmarks/636978912594034688>
+  dcterms:created "2015-08-29T22:56:14+01:00"^^xsd:datetime ;
+  dc:creator <http://kevinmarks.com/> ;
+  blog:mentions <http://rhiaro.co.uk/2015/08/6-cities-holding> .
+

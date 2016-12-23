@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/coffee-peanut>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-14T10:00:08-04:00"^^xsd:dateTime, "2016-07-14T10:00:08-04:00" ;
+  as:tag "coffee", "tortilla" ;
+  as:name "Coffee, peanut butter on 2 corn tortillas" .
+

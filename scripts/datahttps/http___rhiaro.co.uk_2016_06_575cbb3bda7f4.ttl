@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/575cbb3bda7f4>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-06-11T11:29:47-07:00", "2016-06-11T11:29:47-07:00"^^xsd:dateTime ;
+  as:tag "household", "laundry" ;
+  blog:cost "$1.50" ;
+  as:summary "Laundry" .
+

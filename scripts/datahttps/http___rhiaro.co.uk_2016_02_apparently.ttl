@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/apparently>
+  as:published "2016-02-05T19:53:40+00:00"^^xsd:dateTime ;
+  as:tag "semicolons", "javascript", "python", "js", "php", "hacking" ;
+  as:content "Apparently writing JS without semicolons is the done thing now, so today I'm occupying some weird world between PHP and Python and I'm even less sure what's going on than usual." .
+

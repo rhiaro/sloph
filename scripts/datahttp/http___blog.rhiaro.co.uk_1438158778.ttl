@@ -1,0 +1,18 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1438158778>
+  dcterms:created "2015-07-29T09:32:58+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+share-of: https://adactio.com/journal/9312
+tags: web development,performance,browsers,advertising
+-->""" ;
+  sioc:topic "web development", "performance", "browsers", "advertising" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/1438158778> ;
+  blog:share_of <https://adactio.com/journal/9312> .
+

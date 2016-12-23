@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/5751ebe15ad59>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-06-03T12:56:35-07:00", "2016-06-03T12:56:35-07:00"^^xsd:dateTime ;
+  as:tag "food", "kure", "takeaway" ;
+  blog:cost "$14" ;
+  as:summary "Wrap, smoothie (Kure)" .
+

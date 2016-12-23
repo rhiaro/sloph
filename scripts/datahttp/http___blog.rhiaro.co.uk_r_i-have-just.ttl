@@ -1,0 +1,18 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/r/i-have-just>
+  a sioc:Comment ;
+  dcterms:created "2013-03-18T09:58:02.819Z"^^xsd:datetime ;
+  dcterms:modified "2013-03-18T09:58:02.819Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7916792147361427041" ;
+  dc:creator <http://www.blogger.com/profile/14496078324895787574> ;
+  sioc:content """I have just checked out the website for Resonate. A little bit jealous now!
+
+""" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/03/i-have-just> .
+

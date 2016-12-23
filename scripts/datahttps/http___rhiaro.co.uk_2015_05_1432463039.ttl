@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/1432463039>
+  a as:Like ;
+  as:published "2015-05-24T11:23:59+0100"^^xsd:datetime ;
+  as:tag "" ;
+  as:content """<!---
+published: 24th May 2015, 11:23 Europe/London
+like-of: http://www.cracked.com/blog/5-helpful-answers-to-societys-most-uncomfortable-questions_p1/
+tags: 
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://www.cracked.com/blog/5-helpful-answers-to-societys-most-uncomfortable-questions_p1/> .
+

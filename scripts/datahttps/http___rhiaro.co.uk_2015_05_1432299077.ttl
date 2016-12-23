@@ -1,0 +1,15 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/1432299077>
+  as:latitude "44.14705" ;
+  as:longitude "12.2475" ;
+  a as:Arrive ;
+  as:published "2015-05-22T13:51:17+0100"^^xsd:datetime ;
+  as:location <https://rhiaro.co.uk/location/transit> ;
+  as:content """<!---
+published: 22nd May 2015, 11:30 Europe/Berlin
+location: transit
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

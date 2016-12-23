@@ -1,0 +1,23 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/01/week-review-7>
+  as:published "2013-01-16T19:01:00.002Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "open data", "innovative learning week", "hack", "week in review", "meetings" ;
+  as:name "Week in review: Open Data in the community" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7923782702504521067" ;
+  as:content """**17th December - 23rd December**  
+**  
+**Mostly things not strictly PhD related...  
+**  
+**18th - Initial meeting about organising a hack for undergraduates during Innovative Learning Week in February  
+19th - Discussed how local small scale community groups can benefit from Open
+Data, and how they could get involved in the ILW hack, with Freda O'Bryne and
+Euan Jackson.  
+        \\\\\\\\- Also discussed these things with Ewan, and started on a spreadsheet of decent apps that use Open Data, and links to their data sources.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:08:28.716Z"^^xsd:datetime .
+

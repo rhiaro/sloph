@@ -1,0 +1,20 @@
+{
+    "h": "entry",
+    "content": "That feeling when, late night, you relegate a problem to being solved in the distant future if ever, then wake up the next morning and solve it right away.",
+    "category": [
+        "hacking",
+        "sloph",
+        "php",
+        "life"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-08-27T13:06:30+01:00",
+    "@id": "http://blog.rhiaro.co.uk/feeling-when-late",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/feeling-when-late"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-27T13:06:30+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

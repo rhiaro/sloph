@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/someone-needs>
+  as:published "2016-06-28T14:24:45+01:00"^^xsd:dateTime ;
+  as:tag "brexit", "politics", "uk", "life" ;
+  as:content "Someone needs to turn British politics off and on again." .
+

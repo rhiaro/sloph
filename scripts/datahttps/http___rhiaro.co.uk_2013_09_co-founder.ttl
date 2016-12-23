@@ -1,0 +1,27 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2013/09/co-founder>
+  blog:tmpcontent """# Co-founder and organiser, Prewired
+
+## Programming club for under 19s
+
+Now weekly. Sometimes more. See [prewired.org](http://www.prewired.org).""" ;
+  as:published "2013-09-01T09:00:00+0100"^^xsd:datetime ;
+  as:tag "codeclub", "coder dojo", "volunteer", "cv", "resume", "teaching", "edinburgh", "prewired" ;
+  as:name "Co-founder and organiser, Prewired" ;
+  as:startTime "2013-09-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st September 2013, 09:00
+start: September 2013
+tags: cv,resume,prewired,teaching,coder dojo,codeclub,edinburgh,volunteer
+-->
+
+# Co-founder and organiser, Prewired
+
+## Programming club for under 19s
+
+Now weekly. Sometimes more. See [prewired.org](http://www.prewired.org).""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

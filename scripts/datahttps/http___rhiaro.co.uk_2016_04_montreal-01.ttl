@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/montreal-01>
+  as:published "2016-04-16T22:50:55-04:00"^^xsd:dateTime ;
+  as:tag "food", "travel", "canada", "montreal" ;
+  as:name """Montreal 01""" ;
+  as:content """
+I'm sitting in a park, as Montreal beeps and rumbles and chatters around me. I can hear a helicopter passing. The clacking of skateboards. The sky is inky black, stars drowned by city lights. A circling spotlight peeks between skyscrapers every few seconds. A city like many others. It's rough around the edges, but seems stable enough. Rough enough not to make me suspicious of it, like Tokyo or Doha. Stable enough to make me content there alone, unlike Cairo or Delhi. Maybe if Edinburgh grew skyscrapers it would be like this.
+
+It's more French than I was for some reason expecting; primarily French. I understand when people speak to me - eventually. It takes a few extra seconds to process, and by that time they've realised and switched to English.
+
+Today I went to the botanical gardens. A blue and black papillon landed on me, and a green stick insect climbed my hand. I watched my beetle alter-ego fly repeatedly into glass, flounder with its legs in the air for a while, before righting itself and proceeding to bury itself completely with dirt. I walked through artificial environments which supported plants that shouldn't be there. Diverse bits of the world gathered together in one place, entombed in glass, for $14.50. There wasn't much alive outside. Instead of playing rainforest make-believe, I took some photos of plants alongside the human-built infrastructure that kept them alive.
+
+I ate: an apple pastry from Sophie Sucree; pea soup from the gardens' restaurant; three fresh samosas from a tiny Indian place; brown sticky rice with edamame, carrot, ginger, avocado, cucumber, watercress and tempeh from Nutrimania.
+
+I saw McGill campus, Parc la Fontaine, and many streets. After dark, I walked through Place des Artes, and here I am.
+""" .
+

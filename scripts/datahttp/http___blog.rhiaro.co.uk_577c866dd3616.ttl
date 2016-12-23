@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/577c866dd3616>
+  a blog:Acquisition ;
+  dcterms:created "2016-07-06T00:17:22-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/577c866dd3616> ;
+  blog:cost "$20.83" ;
+  as:published "2016-07-06T00:17:22-04:00" ;
+  as:summary "Groceries (Star Market)" ;
+  as:tag "groceries", "star market" .
+

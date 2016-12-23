@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/stevefaeembra>
+  foaf:name "Steven Kay" ;
+  foaf:homepage <https://twitter.com/stevefaeembra> ;
+  foaf:depiction <https://twitter.com/stevefaeembra/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/71942b6519e935f464352a0e46e2dee2658ef1b0806e86e435e68e627b7d6239.png> .
+

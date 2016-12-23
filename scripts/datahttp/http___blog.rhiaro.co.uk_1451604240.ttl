@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1451604240>
+  dcterms:created "2015-12-31T23:24:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 31st December 2015, 23:24 Europe/London
+bookmark-of: https://apps.rhiaro.co.uk/burrow/
+tags: checkins,slogd,burrow,apps,micropub,activitypump,activitypub,activitystreams,indieweb
+-->
+
+""" ;
+  sioc:topic "checkins", "slogd", "burrow", "apps", "micropub", "activitypump", "activitypub", "activitystreams", "indieweb" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/12/1451604240> ;
+  blog:bookmark_of <https://apps.rhiaro.co.uk/burrow/> .
+

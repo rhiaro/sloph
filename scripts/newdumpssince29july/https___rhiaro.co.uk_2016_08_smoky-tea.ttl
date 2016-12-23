@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/smoky-tea>
+  a as:Activity, asext:Consume ;
+  as:name "Smoky tea" ;
+  as:published "2016-08-17T10:39:55-05:00"^^xsd:dateTime, "2016-08-17T10:39:55-05:00" ;
+  as:tag "tea", "us0816", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/tea> .
+

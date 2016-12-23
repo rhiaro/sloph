@@ -1,0 +1,37 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/r/hi-amy>
+  a sioc:Comment ;
+  dcterms:created "2011-09-23T20:48:37.535Z"^^xsd:datetime ;
+  dcterms:modified "2011-09-23T20:48:37.535Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2483112656392046304" ;
+  dc:creator <http://www.blogger.com/profile/03397581150789452230> ;
+  sioc:content """hi Amy  
+Dr Mark Wright from Informatics. Good to meet you last week. Glad to see you
+experimenting with stuff like this. I am interested in interactive narrative.
+I did stuff related to Joyce and Ulysses played out in the city using mobile
+phones.  
+It occurred to me that the same thing could start happening to people who
+visited the site, like the film crew. Maybe you could make a site that was
+like a wasp trap jam jar that brings real visitors into a story and then
+"kills" or freezes them and then in time and makes them part of the next
+victims story. If it was facebook maybe you could use their profile
+info/image. A feeling like the end of the Shining when the camera pans through
+the hotel and you see a young Jack in a picture from 1921.  
+http://www.youtube.com/watch?v=BCUGYgWSz8c  
+Maybe you could put facebook visitors in a picture something like that. So
+they know they have been captured and then the crowd just grows and grows with
+new victims of the page?  
+  
+best regards  
+  
+Mark
+
+""" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/09/hi-amy> .
+

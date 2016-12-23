@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/lmatteis>
+  foaf:name "Luca Matteis" ;
+  foaf:homepage <https://twitter.com/lmatteis> ;
+  foaf:depiction <https://twitter.com/lmatteis/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/cedf05b55b8dbda21b19441f81a6113439705a3c189312221018a711a956e5d9.png> .
+

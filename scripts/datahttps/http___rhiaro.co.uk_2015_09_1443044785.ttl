@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/1443044785>
+  a as:Like ;
+  as:published "2015-09-23T22:46:25+0100"^^xsd:datetime ;
+  as:content """<!---
+like-of: https://twitter.com/merrittkopas/status/646692683327610880
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/merrittkopas/status/646692683327610880> .
+

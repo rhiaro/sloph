@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/03/i-have-just>
+  a sioc:Comment ;
+  as:published "2013-03-18T09:58:02.819Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7916792147361427041" ;
+  as:content """I have just checked out the website for Resonate. A little bit jealous now!
+
+""" ;
+  as:actor <http://www.blogger.com/profile/14496078324895787574> ;
+  as:updated "2013-03-18T09:58:02.819Z"^^xsd:datetime .
+

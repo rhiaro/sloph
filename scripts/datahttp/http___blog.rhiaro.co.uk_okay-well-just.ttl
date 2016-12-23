@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/okay-well-just>
+  dcterms:created "2016-01-02T16:50:45+00:00"^^xsd:dateTime ;
+  sioc:content "Okay well I just crashed my Chromebook with a mistyped PHP `for` loop." ;
+  sioc:topic "chromebook", "hacking", "php" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/okay-well-just> .
+

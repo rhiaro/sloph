@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Number 62",
+    "blog:cost": "$1.75",
+    "as:tag": [
+        "travel",
+        "bus",
+        "ca2016",
+        "la"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-15T22:16:02-07:00",
+    "@id": "http://blog.rhiaro.co.uk/573965e19580b",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/573965e19580b"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-15T22:16:02-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

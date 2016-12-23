@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/1449552621>
+  a as:Like ;
+  as:published "2015-12-08T05:30:21+0000"^^xsd:datetime ;
+  as:content """<!---
+like-of: https://indiewebcat.com/notes/2015/12/07/1/rhiaro
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://indiewebcat.com/notes/2015/12/07/1/rhiaro> .
+

@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "MIT Museum entrance for Kit",
+    "blog:cost": "$10",
+    "as:tag": [
+        "tourism",
+        "gift"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-01-06T14:57:45-05:00",
+    "@id": "http://blog.rhiaro.co.uk/568d71e6d67e2",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/568d71e6d67e2"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-06T14:57:45-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,19 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/maybe-got-myself>
+  dcterms:created "2015-11-28T16:19:57+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: standards,w3c,life
+-->
+
+Maybe if I got myself some principles to irrationally and doggedly defend, [all this](http://rhiaro.co.uk/2015/11/standards-star-trek-2) would be easier.""" ;
+  sioc:topic "standards", "w3c", "life" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/11/maybe-got-myself> ;
+  blog:tmpcontent "Maybe if I got myself some principles to irrationally and doggedly defend, [all this](http://rhiaro.co.uk/2015/11/standards-star-trek-2) would be easier." .
+

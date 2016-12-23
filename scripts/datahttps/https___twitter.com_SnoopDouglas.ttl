@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/SnoopDouglas>
+  foaf:name "Doug Thompson" ;
+  foaf:homepage <https://twitter.com/SnoopDouglas> ;
+  foaf:depiction <https://twitter.com/SnoopDouglas/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/a941cbd7033278cdafa56297b5071fff12fd71ca738c4e18053b01c160860150.jpeg> .
+

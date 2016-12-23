@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/56d9c5b20bd33>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-03-04T12:27:10-05:00"^^xsd:dateTime ;
+  as:tag "cafe spice", "food", "takeaway" ;
+  blog:cost "$7.70" ;
+  as:summary "Curry (Cafe Spice)" .
+

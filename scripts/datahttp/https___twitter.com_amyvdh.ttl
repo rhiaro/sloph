@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/amyvdh>
+  foaf:name "Amy van der Hiel" ;
+  foaf:homepage <https://twitter.com/amyvdh> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/745989c716beb9150fc19d2d32dffba0bb4d0384103cf9a549e220e6cbc4b867.jpeg>, <https://webmention.io/avatar/twitter.com/34c8a66e165351fd865e2965e6c60424fa112d9ef280381a7c1f9feef00042db.jpeg> .
+

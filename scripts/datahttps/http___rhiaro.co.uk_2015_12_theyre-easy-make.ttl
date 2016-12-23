@@ -1,0 +1,16 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/theyre-easy-make>
+  sioc:reply_of <http://werd.io/2015/wheres-the-best-place-to-find-mince-pies-in-the> ;
+  blog:tmpcontent "They're easy to make you know!" ;
+  as:published "2015-12-03T17:46:06+0000"^^xsd:datetime ;
+  as:content """<!---
+reply-to: http://werd.io/2015/wheres-the-best-place-to-find-mince-pies-in-the
+-->
+
+They're easy to make you know!""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

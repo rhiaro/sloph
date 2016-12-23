@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1437567360>
+  dcterms:created "2015-07-22T13:16:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 22nd July 2015, 13:16 Europe/London
+like-of: http://csarven.ca/this-paper-is-a-demo
+tags: 
+-->
+
+""" ;
+  sioc:topic "" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/1437567360> ;
+  blog:like_of <http://csarven.ca/this-paper-is-a-demo> .
+

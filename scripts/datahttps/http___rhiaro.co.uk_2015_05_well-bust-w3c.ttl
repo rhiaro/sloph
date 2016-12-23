@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/05/well-bust-w3c>
+  as:latitude "43.78198" ;
+  as:longitude "11.24961" ;
+  blog:tmpcontent "Well that was a bust. W3C track, cool WebRTC demos... \"our idea is to build a new advertising model inside media streams\" ... \"location aware targeted advertising\" ... \"on the fly product placement in video\". I quit." ;
+  as:published "2015-05-21T10:27:45+0100"^^xsd:datetime ;
+  as:tag "www2015", "advertising", "webrtc" ;
+  as:content """<!---
+tags: www2015,webrtc,advertising
+-->
+
+Well that was a bust. W3C track, cool WebRTC demos... "our idea is to build a new advertising model inside media streams" ... "location aware targeted advertising" ... "on the fly product placement in video". I quit.""" ;
+  sioc:has_reply <https://aaronparecki.com/likes/2015/05/21/1/>, <https://brid-gy.appspot.com/like/twitter/rhiaro/601319165773877248/13239592>, <https://brid-gy.appspot.com/like/twitter/rhiaro/601319165773877248/281950081>, <https://brid-gy.appspot.com/like/twitter/rhiaro/601319165773877248/13236482>, <https://twitter.com/VOLUM3_PRINTING/status/601319750715707392>, <https://twitter.com/claudio_venezia/status/601321587804151808>, <https://twitter.com/licciardi/status/601320026835136512>, <https://twitter.com/m_guerini/status/601319530116308992> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

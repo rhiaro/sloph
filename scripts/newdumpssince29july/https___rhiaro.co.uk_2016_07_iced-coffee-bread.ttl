@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/iced-coffee-bread>
+  a asext:Consume, as:Activity ;
+  as:name "Iced coffee, bread with cream cheese" ;
+  as:published "2016-07-29T07:54:03-04:00"^^xsd:dateTime, "2016-07-29T07:54:03-04:00" ;
+  as:tag "bread", "coffee", <https://rhiaro.co.uk/tags/coffee>, <https://rhiaro.co.uk/tags/bread> .
+

@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/12/1450547069>
+  as:published "2015-12-19T17:44:29+0000"^^xsd:datetime ;
+  as:tag "emacs", "linux", "matrix", "quantified self", "indieweb", "hacking" ;
+  blog:follow_of <http://whatthefuck.computer/blog/> ;
+  as:content """<!---
+follow-of: http://whatthefuck.computer/blog/
+tags: indieweb,matrix,hacking,linux,emacs,quantified self
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "content": "It may not be apparent, but I am often amused by human behavior.",
+    "category": [
+        "star",
+        "trek",
+        "voyager",
+        "sevenofnine",
+        "life"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-08-25T00:49:58+01:00",
+    "@id": "http://blog.rhiaro.co.uk/may-apparent",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/may-apparent"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-25T00:49:58+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

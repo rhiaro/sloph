@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/CharlesNepote>
+  foaf:name "Charles Nepote" ;
+  foaf:homepage <https://twitter.com/CharlesNepote> ;
+  foaf:depiction <https://twitter.com/CharlesNepote/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/9a9320029d88147902eef71fe045221eba51088defed8c12985480ffc75a62ef.jpeg> .
+

@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://jamesdoc.com/>
+  foaf:name "James Doc" ;
+  foaf:homepage <http://jamesdoc.com/> ;
+  foaf:depiction <https://twitter.com/jamesdoc/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/46cca697654e909db6ee55d4ea8f090943cbe72809a0d75d815cf51a05723172.jpeg> .
+

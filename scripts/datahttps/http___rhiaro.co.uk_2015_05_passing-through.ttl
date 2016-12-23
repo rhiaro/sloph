@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/passing-through>
+  as:latitude "44.11601" ;
+  as:longitude "15.22856" ;
+  blog:tmpcontent "Passing through Zadar. Saw the sea organ." ;
+  as:published "2015-05-27T12:13:24+0100"^^xsd:datetime ;
+  as:tag "travel", "croatia", "zadar" ;
+  as:location <http://dbpedia.org/resource/Zadar> ;
+  as:content """<!---
+tags: travel,croatia,zadar
+location: http://dbpedia.org/resource/Zadar
+-->
+
+Passing through Zadar. Saw the sea organ.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

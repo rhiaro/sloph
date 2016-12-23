@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/soda>
+  a as:Collection ;
+  as:name "soda" ;
+  as:items <https://rhiaro.co.uk/2016/08/57a232e85d7e5>, <https://rhiaro.co.uk/2016/08/lime-soda-clover>, <https://rhiaro.co.uk/2016/08/blueberry-soda>, <https://rhiaro.co.uk/2016/08/pizza-with-daiya-> .
+

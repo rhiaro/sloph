@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/made-bread-today>
+  a as:Note ;
+  as:published "2016-07-31T23:12:34+01:00"^^xsd:dateTime ;
+  as:tag "bread", "food", "mbaking", "vegan", <https://rhiaro.co.uk/tags/bread>, <https://rhiaro.co.uk/tags/food>, <https://rhiaro.co.uk/tags/mbaking>, <https://rhiaro.co.uk/tags/vegan> ;
+  as:content "<p>I made bread today. As I munch through slice after slice I'm thinking.. it's so good.. is it cake? Did I make savoury cake? Store bread isn't this easy and pleasurable to eat. But actually my bread standards have probably just been drastically lowered since I left home and stopped eating my mum's homemade bread every day. Also my bread is pink.</p>" .
+

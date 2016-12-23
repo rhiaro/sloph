@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/10/tpac2015-call>
+  blog:tmpcontent "TPAC2015 call for the vegan-inclined to venture across town to [one of these places](http://www.happycow.net/asia/japan/sapporo/) on Wednesday evening. Ping here on IRC!" ;
+  as:published "2015-10-26T05:17:07+0000"^^xsd:datetime ;
+  as:tag "food", "travel", "conference", "event", "vegan", "tpac", "tpac2015" ;
+  as:content """<!---
+tags: tpac,tpac2015,conference,event,food,travel,vegan
+-->
+
+TPAC2015 call for the vegan-inclined to venture across town to [one of these places](http://www.happycow.net/asia/japan/sapporo/) on Wednesday evening. Ping here on IRC!""" ;
+  sioc:has_reply <https://twitter.com/shepazu/status/658583499721453568>, <https://twitter.com/sideshowbarker/status/658525643299098624> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

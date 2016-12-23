@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://www.johnnieingram.co.uk/>
+  foaf:name "Johnnie" ;
+  foaf:homepage <http://www.johnnieingram.co.uk/> ;
+  foaf:depiction <https://twitter.com/johnnieingram/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/6dfe0334e4437c8b6322832a37592ec569b615e0b4d8037ec679b48a7ec2407b.png> .
+

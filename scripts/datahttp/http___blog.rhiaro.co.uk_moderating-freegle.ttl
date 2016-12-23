@@ -1,0 +1,79 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/moderating-freegle>
+  dcterms:title "Moderating Edinburgh Freegle" ;
+  dcterms:created "2013-04-13T21:21:00.003Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-13T21:30:22.358Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6474955000839878568" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """I'm now officially a volunteer moderator for the Edinburgh Freegle group.  
+  
+I love Freegle (/Freecycle) and have used it for years.  I've got rid of stuff
+I didn't need and given a loving home to many unwanted things.  Things I love
+about Freegle are:  
+  
+
+  * Saving items from landfill.  The environment says thanks!
+  * Getting stuff for free.  My bank balance says thanks!
+  * Giving stuff away.  Other peoples' bank balances say thanks!
+  * Knowing there's a network of like-minded, environmentally conscious people out there, and every now and again getting to briefly meet them.
+  * Seeing more of the city!  Unless it's outrageously far or outrageously raining, I always walk to pick something up.  I've seen a dozen parts of Edinburgh I would never have explored otherwise, and discovered a multitude of cute little independent shops that I would have remained disappointingly ignorant of.
+
+Possessions I have gained thanks to Freelge include:
+
+  * An under counter freezer.
+  * A futon mattress.
+  * Clothes.
+  * An electric citrus juicer.
+  * Ten empty tins for transporting cakes and stuff.
+  * A yoga mat.
+  * Duvet covers and throws.
+  * A kneeling chair.
+
+When I met the other moderators a couple of weeks ago to become officially
+trained in the process, I had no idea how much goes on behind the scenes.
+Well, I had some idea, but actually there's loads more.  [Edward
+Hibbert](http://tedxtalks.ted.com/video/TEDx-Edinburgh-Edward-Hibbert-1) is
+behind it all.
+
+  
+
+At it's core, Freegle still runs on Yahoo Groups.  This means it's possible to
+interact with it through email alone.  Thus, moderation takes place through
+the Yahoo Groups interface, but hugely enhanced thanks to Edward's moderator
+Firefox plugin.  (It means I have to moderate using Firefox or suffer the
+consequences, but it's not so bad.  One day maybe we/I'll port it to a Chrome
+extension).
+
+  
+
+However, there's also a super high tech front-end at
+[Freegle.in/Edinburgh](http://freegle.in/Edinburgh).  Check it out.  The web
+interface helps people get their subject lines correct and keeps track of
+various user stats.  It detects where people are posting from from the subject
+line and plots it on a handy map; it categorises posts by picking out keywords
+from the subject line too, and usually gets it right.
+
+  
+
+There's definitely more to write about here, but I'm going to save that for
+another time.
+
+  
+
+Meanwhile, if you're not part of your local Freegle or Freecycle group, change
+that!  Check out [ilovefreegle.com](http://ilovefreegle.com/) to find yours.
+It's an easy and amazingly beneficial way to help the environment and interact
+with your local community.
+
+  
+
+""" ;
+  sioc:topic blog:Doing, "volunteering", "freegle", "environment" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/04/moderating-freegle> .
+

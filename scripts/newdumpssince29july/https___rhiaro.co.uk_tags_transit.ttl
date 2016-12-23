@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/transit>
+  a as:Collection ;
+  as:name "transit" ;
+  as:items <https://rhiaro.co.uk/2016/08/57b63ef8ce150>, <https://rhiaro.co.uk/2016/08/57b87559e9d42>, <https://rhiaro.co.uk/2016/08/57ba53755121d> .
+

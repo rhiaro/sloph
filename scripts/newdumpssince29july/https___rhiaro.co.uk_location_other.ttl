@@ -1,0 +1,3 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/location/other> a as:Place .

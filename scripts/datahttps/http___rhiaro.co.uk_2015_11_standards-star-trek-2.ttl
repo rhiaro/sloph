@@ -1,0 +1,28 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/11/standards-star-trek-2>
+  blog:tmpcontent """# Standards and Star Trek
+
+This is part of an ongoing series of notes about Star Trek episodes that remind me in some way of interactions with W3C Working Groups.
+
+## On neverending circular arguements
+
+"It is a matter of honor!" - Worf, most episodes.""" ;
+  as:published "2015-11-28T16:16:18+0000"^^xsd:datetime ;
+  as:tag "star trek", "w3c", "standards", "life" ;
+  as:name "Standards and Star Trek" ;
+  as:content """<!---
+tags: life,standards,w3c,star trek
+-->
+
+# Standards and Star Trek
+
+This is part of an ongoing series of notes about Star Trek episodes that remind me in some way of interactions with W3C Working Groups.
+
+## On neverending circular arguements
+
+"It is a matter of honor!" - Worf, most episodes.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

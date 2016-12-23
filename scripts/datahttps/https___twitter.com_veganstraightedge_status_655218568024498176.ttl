@@ -1,0 +1,17 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/veganstraightedge/status/655218568024498176>
+  sioc:reply_of <https://rhiaro.co.uk/2015/10/suddenly-meet> ;
+  as:published "2015-10-17T04:07:34+01:00"^^xsd:datetime ;
+  as:name "It's always great meeting internet friends AFK for the first time. We had dinner with a fellow vegan #indieweb friend, @rhiaro." ;
+  as:content """It's always great meeting internet friends AFK for the first time.   
+  
+We had dinner with a fellow vegan [#indieweb][1] friend, [@rhiaro][2].
+
+[1]: https://twitter.com/search?q=#indieweb
+[2]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://veganstraightedge.com/> .
+

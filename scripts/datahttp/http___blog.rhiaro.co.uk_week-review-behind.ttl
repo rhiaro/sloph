@@ -1,0 +1,34 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/week-review-behind>
+  dcterms:title "Week in review: behind" ;
+  dcterms:created "2013-04-28T15:34:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-05-06T20:23:27.206Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-323778533467032231" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """**22nd - 28th April**  
+**  
+**[How to write a literature review workshop](http://blog.rhiaro.co.uk/2013/04/how-to-write-literature-review-workshop.html) on Monday.  
+  
+Got hold of Amateur Media book (2012) in the NLS, and started reading it.  Got
+in trouble for having a pen instead of a pencil to take notes.  Oops. N00b
+mistake.  
+  
+Did more GeoLit related stuff than PhD stuff.  Must try harder.  (Got a
+funding application in and went to a [tech start-up panel / networking
+event](http://blog.rhiaro.co.uk/2013/04/starting-up-in-it-panel-
+discussion.html) that was great).  
+  
+Fiddled with my lit review outline a bit, but didn't really accomplish much.
+Officially behind schedule for finishing by the end of the month (was I ever
+on schedule?).  MUST TRY HARDER.
+
+""" ;
+  sioc:topic blog:Doing, "week in review", "phd", "literature review", "behind" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/04/week-review-behind> .
+

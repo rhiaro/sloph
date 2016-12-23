@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Watermelon, coffee",
+    "as:tag": [
+        "coffee",
+        "fruit"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-25T08:05:07-04:00",
+    "@id": "http://blog.rhiaro.co.uk/watermelon-coffee",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/watermelon-coffee"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-25T08:05:07-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

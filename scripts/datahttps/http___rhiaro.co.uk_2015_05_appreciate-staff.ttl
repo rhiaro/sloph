@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/appreciate-staff>
+  blog:tmpcontent "Appreciate staff at Innsbruck Hbf who helped me calculate convoluted train route to avoid reservation fees :D" ;
+  as:published "2015-05-13T12:43:13+0100"^^xsd:datetime ;
+  as:tag "travel", "Innsbruck", "trains" ;
+  as:content """<!---
+tags: travel,Innsbruck,trains
+-->
+
+Appreciate staff at Innsbruck Hbf who helped me calculate convoluted train route to avoid reservation fees :D""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

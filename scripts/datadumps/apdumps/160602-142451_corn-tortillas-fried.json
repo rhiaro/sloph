@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Corn tortillas, fried in coconut oil, tofu, mushrooms, spinach, coffee",
+    "as:tag": [
+        "coffee",
+        "tofu"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-06-02T09:24:51-04:00",
+    "@id": "http://blog.rhiaro.co.uk/corn-tortillas-fried",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/corn-tortillas"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-02T09:24:51-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "h": "entry",
+    "bookmark": "http://dig.csail.mit.edu/2012/WWW-DUMW/papers/dumw2012_submission_5.pdf",
+    "category": [
+        "nissenbaum",
+        "decentralisation",
+        "social networks",
+        "pds",
+        "personal data",
+        "privacy",
+        "phd"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-01-28T14:48:00+00:00",
+    "@id": "http://blog.rhiaro.co.uk/56aa2a20b800f",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/56aa2a20b800f"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-28T14:48:00+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

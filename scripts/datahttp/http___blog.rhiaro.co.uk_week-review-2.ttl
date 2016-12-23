@@ -1,0 +1,26 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/week-review-2>
+  dcterms:title "Week in review: Not much" ;
+  dcterms:created "2012-12-03T14:32:00.003Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T00:09:58.891Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2457346054749920727" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """**26th November - 2nd December**  
+  
+I read a paper about [Semantic Web tools for online
+communities](http://blog.rhiaro.co.uk/2012/11/phd-notes-about-semantic-web-
+tools-for.html).  Large parts of this project are comparable to my own, I
+think, and I will probably keep going back to it for inspiration.  
+  
+I did a lot of non-PhD related things, too.
+
+""" ;
+  sioc:topic blog:Doing, "semantic web", "phd", "online communities" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2012/12/week-review-2> .
+

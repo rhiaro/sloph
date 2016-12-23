@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Cornflakes, orange juice, toast, coffee",
+    "as:tag": [
+        "coffee",
+        "bread",
+        "cereal",
+        "ca2016"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-19T10:36:40-07:00",
+    "@id": "http://blog.rhiaro.co.uk/cornflakes-orange-juice",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/cornflakes-orange"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-19T10:36:40-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

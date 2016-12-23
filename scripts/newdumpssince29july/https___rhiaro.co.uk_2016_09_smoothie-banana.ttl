@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/09/smoothie-banana>
+  a as:Activity, asext:Consume ;
+  as:name "Smoothie: banana, almond milk, mango, oats, hemp seeds, flaxseed" ;
+  as:published "2016-09-03T09:43:16-04:00"^^xsd:dateTime, "2016-09-03T09:43:16-04:00" ;
+  as:tag "oats", "smoothie", <https://rhiaro.co.uk/tags/smoothie>, <https://rhiaro.co.uk/tags/oats> .
+

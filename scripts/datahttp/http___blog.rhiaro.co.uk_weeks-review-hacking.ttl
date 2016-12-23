@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/weeks-review-hacking>
+  dcterms:title "Week(s) in review: Hacking, linked data" ;
+  dcterms:created "2013-11-22T21:52:00.001Z"^^xsd:datetime ;
+  dcterms:modified "2013-11-22T21:52:15.499Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-4582909628386282501" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """  
+  
+  
+  
+A few useful links in this SlideShare from ESWC '11:
+<http://www.slideshare.net/juansequeda/consuming-linked-data>
+
+""" ;
+  sioc:topic blog:Doing ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/11/weeks-review-hacking> .
+

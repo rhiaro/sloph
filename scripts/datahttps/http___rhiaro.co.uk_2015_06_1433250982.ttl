@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/1433250982>
+  a as:Like ;
+  as:published "2015-06-02T14:16:22+0100"^^xsd:datetime ;
+  as:tag "" ;
+  as:content """<!---
+published: 2nd June 2015, 14:16 Europe/London
+like-of: https://aaronparecki.com/notes/2015/05/31/1/indieauth
+tags: 
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://aaronparecki.com/notes/2015/05/31/1/indieauth> .
+

@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/04/1429796580>
+  a as:Add ;
+  as:published "2015-04-23T14:43:00+0100"^^xsd:datetime ;
+  as:tag "social web", "feminism", "twitter", "social justice", "race", "racism", "gentrification" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!--- 
+published: 23rd April 2015, 14:43
+bookmark-of: https://modelviewculture.com/pieces/in-defense-of-twitter-feminism
+tags: feminism,twitter,social web,social justice,race,racism,gentrification
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://modelviewculture.com/pieces/in-defense-of-twitter-feminism> .
+

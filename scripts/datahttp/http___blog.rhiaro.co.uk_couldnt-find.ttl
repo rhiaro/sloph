@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/couldnt-find>
+  dcterms:created "2015-10-17T03:37:46+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+reply-to: https://kylewm.com/2015/10/i-ve-gotten-vegemite-at-whole-foods-though-i-overhead
+tags: food,vegemite
+-->
+
+I couldn't find 'world foods' in Wholefoods today; will broaden my search. UK-style baked beans are my childhood favourite food. Technically Brits eat Marmite, but I consider Vegemite far superior. Marmite will do in a pinch though.""" ;
+  sioc:topic "food", "vegemite" ;
+  sioc:reply_of <https://kylewm.com/2015/10/i-ve-gotten-vegemite-at-whole-foods-though-i-overhead> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/10/couldnt-find> ;
+  blog:tmpcontent "I couldn't find 'world foods' in Wholefoods today; will broaden my search. UK-style baked beans are my childhood favourite food. Technically Brits eat Marmite, but I consider Vegemite far superior. Marmite will do in a pinch though." .
+

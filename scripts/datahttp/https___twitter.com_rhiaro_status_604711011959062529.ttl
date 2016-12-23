@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/rhiaro/status/604711011959062529>
+  dcterms:title "@Ricardo_Usbeck (thanks!)" ;
+  dcterms:created "2015-05-30T19:08:34+01:00"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/> ;
+  sioc:content """[@Ricardo_Usbeck][1] (thanks!)
+
+[1]: https://twitter.com/Ricardo_Usbeck
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/05/arrived-portoroz> .
+

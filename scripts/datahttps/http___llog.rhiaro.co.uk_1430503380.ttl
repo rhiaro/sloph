@@ -1,0 +1,20 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1430503380>
+  a blog:LlogPost ;
+  as:published "2015-05-01T19:03:00+0100"^^xsd:datetime ;
+  as:tag "quantified self", "food", "eat", "life" ;
+  as:startTime "2015-05-01T19:03:00+0100"^^xsd:datetime ;
+  as:endTime "2015-05-01T19:03:00+0100"^^xsd:datetime ;
+  as:content """<!--- 
+start: 1st May 2015, 19:03
+end: 1st May 2015, 19:03
+type: LlogPost
+tags: eat,food,quantified self,life
+-->
+
+Haggis, neeps & tatties (Auld Hoose)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

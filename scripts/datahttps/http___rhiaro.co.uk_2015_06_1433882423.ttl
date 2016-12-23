@@ -1,0 +1,25 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://rhiaro.co.uk/2015/06/1433882423>
+  as:published "2015-06-09T21:40:23+0100"^^xsd:datetime ;
+  as:tag "travel", "uk", "train", "london", "oxford" ;
+  as:startTime "2015-06-27T16:50:00+0100"^^xsd:datetime ;
+  as:endTime "2015-06-27T17:48:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/London" ;
+  blog:endLocation "http://dbpedia.org/resource/Oxford" ;
+  blog:cost "&pound;5.30" ;
+  blog:state "rescheduled" ;
+  dcterms:isReplacedBy <http://blog.rhiaro.co.uk/1435431067> ;
+  as:content """<!---
+start: 27th June 2015, 16:50 BST
+end: 27th June 2015, 17:48 BST
+startLocation: http://dbpedia.org/resource/London
+endLocation: http://dbpedia.org/resource/Oxford
+cost: &pound;5.30
+tags: travel,train,uk,oxford,london
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

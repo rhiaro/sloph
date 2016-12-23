@@ -1,0 +1,29 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/cambridge>
+  dcterms:title "Cambridge Semantic Web Monthly Meetup" ;
+  dcterms:created "2015-10-07T22:21:17+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+reply-to: http://www.meetup.com/The-Cambridge-Semantic-Web-Meetup-Group/events/224731648/
+tags: event,rsvp,linked data,phd,mit
+start: 13 October 2015, 18:00 EDT
+end: 13 October 2015, 20:00 EDT
+location: http://dbpedia.org/resource/Ray_and_Maria_Stata_Center
+-->
+
+# Cambridge Semantic Web Monthly Meetup""" ;
+  sioc:topic "event", "rsvp", "linked data", "phd", "mit" ;
+  sioc:reply_of <http://www.meetup.com/The-Cambridge-Semantic-Web-Meetup-Group/events/224731648/> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/10/cambridge> ;
+  as:startTime "2015-10-13T23:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-10-14T01:00:00+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Ray_and_Maria_Stata_Center> ;
+  blog:tmpcontent "# Cambridge Semantic Web Monthly Meetup" .
+

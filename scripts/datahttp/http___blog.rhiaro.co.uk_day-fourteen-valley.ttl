@@ -1,0 +1,47 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/day-fourteen-valley>
+  dcterms:title "Day Fourteen: The Valley of the Kings" ;
+  dcterms:created "2011-08-17T12:30:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2011-08-17T12:30:09.823Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3382959581499780552" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """A 6am start for the Valley of the Kings, where a ticket allows entry to three
+tombs. We saw those of Ramses third, fifth, and ninth. Pro tip: EVERYTHING is
+half price with an international NUS card.  
+  
+The quality of the preserved colours and carvings in the tomb is stunning,
+especially upon remembering that they are thousands of years old. Colours in
+the tombs in the Valley of the Workers were even more intense - the workers
+had one day off a month to work on their own family tombs, and put much more
+effort into the art.  
+  
+After napping for a couple of hours we regrouped for lunch at a cafe in town.
+My growing karkade addiction (did I mention this yet?) was satisfied and more
+shopping commenced. We spent a while in a no-haggle statue shop and learnt how
+to tell machine- or Chinese-made from handcrafted Egyptian wares, as well as
+getting a demo on holding a naked flame to the black statues to prove they are
+plastic and not the stone they are sold as on the street. We hung out in the
+jewellers again, and were given more karkade. I then bought a ton of dried
+hibiscus so I can make my own every day for the next year.  
+  
+Later that afternoon, H, Lizzie and I joined Dave on a visit to the SunShine
+Orphanage, a charity sponsored by Oasis. Wewere covered in adorable drooling
+toddlers for a couple of hours before our return.  
+  
+We all ate dinner at a restaurant overlooking the Nile. At the end of the
+meal, an enormous chocolate cream birthday cake appeared bearing the message
+'HAPPY BIRTDAY AMY' (sic). Thanks everyone! The best surprise. We ate about a
+third of it then stored it in the hotel's freezer.  
+  
+To bed ready for an exciting 4am start...
+
+""" ;
+  sioc:topic blog:Done, "valley of the kings", "travel", "tombs", "orphanage", "luxor", "egypt", "birthday cake" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/08/day-fourteen-valley> .
+

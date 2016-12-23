@@ -1,0 +1,15 @@
+{
+    "h": "entry",
+    "content": "Forget gravatar, ResearchGate just straight up Google image searches your name so you don't have to make the effort to upload an avatar on registration o.O",
+    "category": null,
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-11T23:22:02+00:00",
+    "@id": "http://blog.rhiaro.co.uk/forget-gravatar",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/forget-gravatar"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-11T23:22:02+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

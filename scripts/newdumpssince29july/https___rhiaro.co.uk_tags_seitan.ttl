@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/seitan>
+  a as:Collection ;
+  as:name "seitan" ;
+  as:items <https://rhiaro.co.uk/2016/08/tofu-crabby-cakes>, <https://rhiaro.co.uk/2016/09/half-fries-bbq>, <https://rhiaro.co.uk/2016/09/scrambled-tofu>, <https://rhiaro.co.uk/2016/09/salad-seitan> .
+

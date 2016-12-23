@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/5781c30c67e45>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-09T23:37:09-04:00", "2016-07-09T23:37:09-04:00"^^xsd:dateTime ;
+  as:tag "" ;
+  as:name "" .
+

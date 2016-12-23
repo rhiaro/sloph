@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/jmahoney127>
+  foaf:name "Jamie Mahoney" ;
+  foaf:homepage <https://twitter.com/jmahoney127> ;
+  foaf:depiction <https://twitter.com/jmahoney127/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/5f41f4e920b1ef3cea32227bc40e76b07f689157a42ceb560e16428d9f8b1fb0.jpeg> .
+

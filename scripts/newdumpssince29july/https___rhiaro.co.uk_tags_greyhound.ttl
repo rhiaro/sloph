@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/greyhound>
+  a as:Collection ;
+  as:name "greyhound" ;
+  as:items <https://rhiaro.co.uk/2016/08/began-30-hour>, <https://rhiaro.co.uk/2016/08/bus-broken-down>, <https://rhiaro.co.uk/2016/08/travelupdate-cool>, <https://rhiaro.co.uk/2016/08/people-with>, <https://rhiaro.co.uk/2016/08/bonding-over>, <https://rhiaro.co.uk/2016/08/peterpan>, <https://rhiaro.co.uk/2016/08/still-here>, <https://rhiaro.co.uk/2016/08/stiiiiill>, <https://rhiaro.co.uk/2016/08/2nd-peterpan>, <https://rhiaro.co.uk/2016/08/next-time-im>, <https://rhiaro.co.uk/2016/08/replacement>, <https://rhiaro.co.uk/2016/08/summary>, <https://rhiaro.co.uk/2016/08/we-know-dangerous>, <https://rhiaro.co.uk/2016/08/im-going-sleep>, <https://rhiaro.co.uk/2016/08/progress>, <https://rhiaro.co.uk/2016/08/got-like-10-new> .
+

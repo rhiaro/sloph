@@ -1,0 +1,31 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/indiewebcamp-dusseldorf>
+  dcterms:title "Indiewebcamp Dusseldorf" ;
+  dcterms:created "2015-04-21T03:00:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 21st April 2015, 03:00
+type: BlogPost
+tags: rsvp,dusseldorf,germany,travel,decentralised web,indiewebcamp,indieweb,iwc,social web,events
+start: 9th May 2015, 10:00
+end: 10th May 2015, 18:00
+reply-to: http://indiewebcamp.com/2015/Germany
+list: todo
+-->
+
+# Indiewebcamp Dusseldorf
+
+""" ;
+  sioc:topic blog:Todo, "events", "social web", "iwc", "indieweb", "indiewebcamp", "decentralised web", "travel", "germany", "dusseldorf", "rsvp" ;
+  sioc:reply_of <http://http://indiewebcamp.com/2015/Germany> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/04/indiewebcamp-dusseldorf> ;
+  as:startTime "2015-05-09T10:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-05-10T18:00:00+0000"^^xsd:datetime .
+

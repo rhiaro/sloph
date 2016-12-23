@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/56ad0ec952a4b>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-01-30T14:26:55-05:00"^^xsd:dateTime ;
+  as:tag "Grasshopper", "food", "restaurant" ;
+  blog:cost "$45" ;
+  as:summary "Vegan Vietnamese for two (Grasshopper)" .
+

@@ -1,0 +1,352 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/extensibility>
+  blog: "icroformats2,socialwg,social web,indieweb,mf2,linked data,rdf" ;
+  dcterms:title "On extensibility of Microformats" ;
+  dcterms:created "2015-08-20T14:29:32+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags:microformats2,socialwg,social web,indieweb,mf2,linked data,rdf
+-->
+
+# On extensibility of Microformats
+
+This post is for:
+
+* People who don't understand what microformats2 are used for beyond SEO.
+* People who like linked data, and think microformats2 is a small, centrally controlled vocabulary.
+* People who think microformats2 is not extensible, and don't understand when microformats people say 'of course it is!'
+* People who like microformats2 and don't understand when linked data people insist that it's not extensible.
+* People who like microformats2 and don't understand what all the RDF fuss is about.
+* Machines who can't read the microformats2 documentation (heh, just kidding, the contents of this post aren't machine readable, sorry machines, maybe one day).
+
+**tl;dr**: The extensibility mechanism of Microformats is alien to people used to linked data because extensions that are not [yet] accepted into the core are not [consistently] documented by their authors to make them reusable, and from the outside the process for getting things accepted into the core looks very centralised and... cliquey. Things may also be confusing due to conflation of syntax and vocabulary.
+
+**Disclaimer:** I'm writing this tongue in cheek because I have to entertain myself somehow, please don't take offence at anything.
+
+From hereon I will refer to microformats2 as mf2.
+
+**Background:** I use mf2 and linked data, and appreciate the benefits of both. From what I've heard from the people with the loudest voices, folks tend to be on principle on one side or the other, as if they're in opposition or fundamentally incompatible. Y'all should check your koolaid. My goal is not to promote one over the other, just to try to explain things as I see it and maybe clarify some stuff for some people. I'm sure there are people out there who use and appreciate both, but I can't say I've heard from many of them.
+
+## What are microformats for?
+
+Mf2 has been adopted by the [indieweb](http://indiewebcamp.com) community for interoperability of social websites. There is now a large overlap between the microformats and indieweb communities. The scope of indieweb is *social*. Whilst technically the scope of microformats is everything one might want to publish about on the web, you might find yourself in debate with microformats advocates who dismiss anything not social as irrelevant:
+
+**Example debate 1**
+
+> *LD:* I want to describe all of the properties of volcanoes, I can't do that with microformats therefore microformats is bad.
+> 
+> *MF:* Wat why would you want to do that? Linked data is stupid.
+> 
+> *LD:* I am a volcanoes researcher and I want to publish all my volcanoes data for other volcanoes researches to read.
+> 
+> *MF:* I don't care about volcanoes, bye. (exit stage left, muttering something about fax machines).
+
+
+...just worth bearing in mind.
+
+There are mf2 [parsers](http://microformats.org/wiki/microformats2#Parsers) in many different languages. If you parse mf2 from a page, and your code knows the mf2 vocabulary, you can do something useful with the data you've parsed. In the indieweb, we use this to find out who the author of a blog post is, what it's tags are, it's relations to other posts (eg. `in-reply-to`), and other metadata. A practical example of use is when I am alerted (however that may be) that someone has replied to my post from their own website, my site can parse their post and display under my post "Bob replied to this on 1st August 2015 and said 'I fundamentally disagree with all of this.'", which might add value for other readers of my post. Because I've parsed out the metadata, I can decide which parts I want to display, and display them however I like.
+
+**Example debate 2**
+
+> *LD:* But we can do that with linked data!
+> 
+> *MF:* Well... you're not. Come back when you are?
+
+(Seriously, if you're doing social interoperability with linked data from your personal site, I want to interoperate with you, contact me).
+
+## Syntax and vocabulary
+
+Syntax: 
+
+> "The syntax of a language describes the form of a valid program" - [Wikipedia](https://en.wikipedia.org/wiki/Syntax_%28programming_languages%29%23Syntax_versus_semantics)
+
+The syntax of microformats tells parsers where to get a value from when they encounter a certain property, using a defined set of *prefixes*. Eg. `<span class="p-name">Amy</span>` tells the parser the value of `name` is the plain text contents of the tag, ie. "Amy". `<a href="http://rhiaro.co.uk" class="u-url">my website</a>` tells the parser that the value of `url` is found in the `href` property on the tag (and other places URLs are found). [Here are the prefix rules](http://microformats.org/wiki/microformats-2-prefixes). Parsers *do not care* what the property itself is, and all the parsers I've looked at drop the prefix for the parsed output (though this does mean a consumer of the parsed output loses any indication of the datatype of the value), so adding new microformats properties does not mean that parsers need to be updated.
+
+Semantics:
+
+> "...meaning..." - [Wikipedia](https://en.wikipedia.org/wiki/Semantics)
+
+The semantics of mf2 come from the vocabulary, which is documented on the [wiki](http://microformats.org/wiki/microformats2). To add things to the mf2 vocabulary, one must go through the [microformats process](http://microformats.org/wiki/process).
+
+**Example debate 3**
+
+> *LD:* LD is better because if I want to add a new term I can just make one up myself and don't have to go through a centralised authority.
+> 
+> *MF:* Mf2 isn't centralised you just have to go through the process then talk about it in IRC and hope core community members approve. You can add it (and all of your going-through-the-process documentation) to the wiki yourself.
+> 
+> *LD:* What if core community members don't approve eg. because they are morally opposed to volcanoes? Also this 'process' seems long and arduous.
+> 
+> *MF:* The process helps keep the vocabulary focused and avoid duplication with what's already out there, over-engineering not based on practical implementation, or random useless cruft from creeping in.
+> 
+> *LD:* Actually us linked data people tend to do our due diligence and check for existing terms before we create new ones, and reuse what already exists, that's kind of a thing. By the way, on the web "anyone can say anything about anything", not "anyone can say anything about only things the microformats community deems appropriate".
+> 
+> *MF:* Well anyway, you can start using your new term experimentally, and see if it catches on.
+
+So, to extend the current microformats vocabulary, you could do something like `<p class="p-volcano-height">4000m</p>`. This is *syntactically correct* mf2, but not *semantically correct* as `volcano-height` isn't an approved mf2 property. Nonetheless, mf2 parsers would correctly output `"volcano-height":"4000m"` based on your syntax. It's then up to the consumer to decide what they want to do with the value of the property `volcano-height`. If they're your volcano researcher buddy, they might use it for something. If they're a cake blogger, they might ignore it.
+
+Whether you want to go through the 'process' to see if it'll get accepted into the core is up to you, and debating the validity of the 'process' is out of scope for this blog post.
+
+In summary:
+
+**Example debate 4**
+
+> *LD:* Microformats is not extensible (meaning: I can't just add my own terms and have everyone know how to use them).
+> 
+> *MF:* Microformats is extensible (meaning: parsers are vocabulary agnostic).
+
+... *LD* is talking about the vocabulary (semantics). *MF* is replying about the syntax. I think that's why this debate goes round in circles. I hope that clarifies something for both sides.
+
+## Documentation and namespacing
+
+This is the most interesting issue, and the reason I started this post, really.
+
+**Example debate 5**
+
+> *MF:* .. (continuing) use your new term experimentally, and see if it catches on.
+> 
+> *LD:* How do I find out if someone else is already using something like this?
+> 
+> *MF:* Ask in IRC or check the wiki.
+> 
+> *LD:* Okay, I found someone's site using `volcano-height` but I don't know if they mean prominence or height from sea level. I can't contact them and they haven't updated the wiki. How do I find out what they mean?
+> 
+> *MF:* Why do you need to?
+> 
+> *LD:* What if we use the same property but mean different things? How can anyone combine our data?
+> 
+> *MF:* Add a prefix so it's different, like `ld-volcano-height`.
+> 
+> *LD:* So what if it turns out we mean the same thing, how will we show equivalence so someone combining our data knows they're the same?
+> 
+> *MF:* Why would anyone combine your data? I don't believe in volcanoes.
+
+So, *LD* is used to checking out data, seeing a property they don't know, and being able to dereference its URI (ie. visit the webpage about it) and find out how it should be used, any logical constraints, maybe see labels and descriptions in different languages, or equivalence to a term from another vocabulary that maybe they already know. If *LD* is building something more sophisticated, their system can dereference the URI and consume a machine-readable version and automatically figure out what to do with it.
+
+But mf2 doesn't have this expectation of documentation of experimental properties, even on the wiki, or at least, I haven't seen it happening. That's not to say it couldn't:
+
+* All new experimental properties could get a page on the microformats wiki:
+  * Con: the domain isn't under the control of the author, and the content could be edited by someone else, too.
+  * Con: someone finding the property who is unfamiliar with microformats has no idea where to look to find out more.
+* All new experimental properties could get a description page on the author's own site:
+  * Con: someone finding it still doesn't know where to look for the documentation, from the property name alone.
+
+And also the documentation is still not machine readable. Ooh but what if there were microformats to mark up documentation of microformats?! Like:
+
+```
+<dl class="h-extension" id="extension">
+  <h2><dt class="p-name">extension</dt></h2>
+  <dd class="p-summary">An entry that serves as documentation for a Microformats extension.</dd>
+  <time class="dt-published" datetime="2015-07-01T23:12:00+01:00"><a class="u-url"  href="http://rhiaro.co.uk/2015/08/extensibility-microformats#extension">1st July 2015, 23:12 BST</a></time>
+</dl>
+```
+
+I'd support this. But.. it does seem to be a reinvention of RDF...
+
+And this still doesn't solve the documentation discoverability problem, nor the fact that multiple people can document their properties to their heart's content, but if they call them the same thing there is no way for a third party to distinguish between them. And if you want to reuse someone else's experimental property (which you should, otherwise how will they ever catch on?) how/where do you point to the documentation of that for someone who might discover this term for the first time through your site, rather than the origin? We could come up with conventions on where to find stuff, maybe `rel="vocab"`... Then what if you want to mix terms from multiple sources? I dunno, RDF namespacing seems to be handling this already.
+  
+## The other thing
+
+I can't reaaally be bothered to go into this, but there's one other problem:
+
+**Example debate 6**
+
+> `while(1){`
+> 
+> *MF:* Linked data is too complicated.
+> 
+> *LD:* No it isn't.
+> 
+> `}`
+
+I think what's going on here is that *MF* gets concerned about various academic Semantic Web baggage. But really the core tenet of linked data is... everything has a globally unique identifier - a URI.. or, fine, a URL if the 'I' is offputting. Forget everything else. But this means that *properties* - the relation between a thing and another thing - also have URLs. They're pretty important, worth having webpages about. To me, that's a reasonable building block.
+
+But I'm really bored of this argument, so I don't want replies from anyone that are just retelling one side or the other, please.
+
+## Conclusion
+
+To *LD*: 
+
+* Mf2 is actually being used for social interop. Right now. That is not to be sniffed at, or dismissed as 'hacky'. Instead of saying that linked data can do the same thing but better... go do it.
+*  Starting by marking up with mf2 results in human-readable data foremost. Let's face it, they're still the most important audience, especially for social web. Figuring out what's important for humans helps you to prune what you really need to be publishing, and focus on rapid iteration (because people can see and interact with what you're publishing) rather than trying to pre-empt theoretical edge cases or getting hung up on hypothetical data models.
+
+To *MF*: 
+
+* Your vocabulary extensibility and documentation is what *LD* has a problem with, so claiming mf2 is extensible based on syntax alone is not helpful.
+* People like to publish other kinds of data on the web, often more complex than can easily be marked up with mf2, and where consumption by machines is as useful as human readability. It also opens the door for mixing data from different domains on a massive scale. I know you're not interested in this, but don't dismiss linked data out of hand because of that.
+
+Wonderful, now I've pissed of both sides of the debate, I'll go get back in my box.""" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/08/extensibility> ;
+  blog:tmpcontent """# On extensibility of Microformats
+
+This post is for:
+
+* People who don't understand what microformats2 are used for beyond SEO.
+* People who like linked data, and think microformats2 is a small, centrally controlled vocabulary.
+* People who think microformats2 is not extensible, and don't understand when microformats people say 'of course it is!'
+* People who like microformats2 and don't understand when linked data people insist that it's not extensible.
+* People who like microformats2 and don't understand what all the RDF fuss is about.
+* Machines who can't read the microformats2 documentation (heh, just kidding, the contents of this post aren't machine readable, sorry machines, maybe one day).
+
+**tl;dr**: The extensibility mechanism of Microformats is alien to people used to linked data because extensions that are not [yet] accepted into the core are not [consistently] documented by their authors to make them reusable, and from the outside the process for getting things accepted into the core looks very centralised and... cliquey. Things may also be confusing due to conflation of syntax and vocabulary.
+
+**Disclaimer:** I'm writing this tongue in cheek because I have to entertain myself somehow, please don't take offence at anything.
+
+From hereon I will refer to microformats2 as mf2.
+
+**Background:** I use mf2 and linked data, and appreciate the benefits of both. From what I've heard from the people with the loudest voices, folks tend to be on principle on one side or the other, as if they're in opposition or fundamentally incompatible. Y'all should check your koolaid. My goal is not to promote one over the other, just to try to explain things as I see it and maybe clarify some stuff for some people. I'm sure there are people out there who use and appreciate both, but I can't say I've heard from many of them.
+
+## What are microformats for?
+
+Mf2 has been adopted by the [indieweb](http://indiewebcamp.com) community for interoperability of social websites. There is now a large overlap between the microformats and indieweb communities. The scope of indieweb is *social*. Whilst technically the scope of microformats is everything one might want to publish about on the web, you might find yourself in debate with microformats advocates who dismiss anything not social as irrelevant:
+
+**Example debate 1**
+
+> *LD:* I want to describe all of the properties of volcanoes, I can't do that with microformats therefore microformats is bad.
+> 
+> *MF:* Wat why would you want to do that? Linked data is stupid.
+> 
+> *LD:* I am a volcanoes researcher and I want to publish all my volcanoes data for other volcanoes researches to read.
+> 
+> *MF:* I don't care about volcanoes, bye. (exit stage left, muttering something about fax machines).
+
+
+...just worth bearing in mind.
+
+There are mf2 [parsers](http://microformats.org/wiki/microformats2#Parsers) in many different languages. If you parse mf2 from a page, and your code knows the mf2 vocabulary, you can do something useful with the data you've parsed. In the indieweb, we use this to find out who the author of a blog post is, what it's tags are, it's relations to other posts (eg. `in-reply-to`), and other metadata. A practical example of use is when I am alerted (however that may be) that someone has replied to my post from their own website, my site can parse their post and display under my post "Bob replied to this on 1st August 2015 and said 'I fundamentally disagree with all of this.'", which might add value for other readers of my post. Because I've parsed out the metadata, I can decide which parts I want to display, and display them however I like.
+
+**Example debate 2**
+
+> *LD:* But we can do that with linked data!
+> 
+> *MF:* Well... you're not. Come back when you are?
+
+(Seriously, if you're doing social interoperability with linked data from your personal site, I want to interoperate with you, contact me).
+
+## Syntax and vocabulary
+
+Syntax: 
+
+> "The syntax of a language describes the form of a valid program" - [Wikipedia](https://en.wikipedia.org/wiki/Syntax_%28programming_languages%29%23Syntax_versus_semantics)
+
+The syntax of microformats tells parsers where to get a value from when they encounter a certain property, using a defined set of *prefixes*. Eg. `<span class="p-name">Amy</span>` tells the parser the value of `name` is the plain text contents of the tag, ie. "Amy". `<a href="http://rhiaro.co.uk" class="u-url">my website</a>` tells the parser that the value of `url` is found in the `href` property on the tag (and other places URLs are found). [Here are the prefix rules](http://microformats.org/wiki/microformats-2-prefixes). Parsers *do not care* what the property itself is, and all the parsers I've looked at drop the prefix for the parsed output (though this does mean a consumer of the parsed output loses any indication of the datatype of the value), so adding new microformats properties does not mean that parsers need to be updated.
+
+Semantics:
+
+> "...meaning..." - [Wikipedia](https://en.wikipedia.org/wiki/Semantics)
+
+The semantics of mf2 come from the vocabulary, which is documented on the [wiki](http://microformats.org/wiki/microformats2). To add things to the mf2 vocabulary, one must go through the [microformats process](http://microformats.org/wiki/process).
+
+**Example debate 3**
+
+> *LD:* LD is better because if I want to add a new term I can just make one up myself and don't have to go through a centralised authority.
+> 
+> *MF:* Mf2 isn't centralised you just have to go through the process then talk about it in IRC and hope core community members approve. You can add it (and all of your going-through-the-process documentation) to the wiki yourself.
+> 
+> *LD:* What if core community members don't approve eg. because they are morally opposed to volcanoes? Also this 'process' seems long and arduous.
+> 
+> *MF:* The process helps keep the vocabulary focused and avoid duplication with what's already out there, over-engineering not based on practical implementation, or random useless cruft from creeping in.
+> 
+> *LD:* Actually us linked data people tend to do our due diligence and check for existing terms before we create new ones, and reuse what already exists, that's kind of a thing. By the way, on the web "anyone can say anything about anything", not "anyone can say anything about only things the microformats community deems appropriate".
+> 
+> *MF:* Well anyway, you can start using your new term experimentally, and see if it catches on.
+
+So, to extend the current microformats vocabulary, you could do something like `<p class="p-volcano-height">4000m</p>`. This is *syntactically correct* mf2, but not *semantically correct* as `volcano-height` isn't an approved mf2 property. Nonetheless, mf2 parsers would correctly output `"volcano-height":"4000m"` based on your syntax. It's then up to the consumer to decide what they want to do with the value of the property `volcano-height`. If they're your volcano researcher buddy, they might use it for something. If they're a cake blogger, they might ignore it.
+
+Whether you want to go through the 'process' to see if it'll get accepted into the core is up to you, and debating the validity of the 'process' is out of scope for this blog post.
+
+In summary:
+
+**Example debate 4**
+
+> *LD:* Microformats is not extensible (meaning: I can't just add my own terms and have everyone know how to use them).
+> 
+> *MF:* Microformats is extensible (meaning: parsers are vocabulary agnostic).
+
+... *LD* is talking about the vocabulary (semantics). *MF* is replying about the syntax. I think that's why this debate goes round in circles. I hope that clarifies something for both sides.
+
+## Documentation and namespacing
+
+This is the most interesting issue, and the reason I started this post, really.
+
+**Example debate 5**
+
+> *MF:* .. (continuing) use your new term experimentally, and see if it catches on.
+> 
+> *LD:* How do I find out if someone else is already using something like this?
+> 
+> *MF:* Ask in IRC or check the wiki.
+> 
+> *LD:* Okay, I found someone's site using `volcano-height` but I don't know if they mean prominence or height from sea level. I can't contact them and they haven't updated the wiki. How do I find out what they mean?
+> 
+> *MF:* Why do you need to?
+> 
+> *LD:* What if we use the same property but mean different things? How can anyone combine our data?
+> 
+> *MF:* Add a prefix so it's different, like `ld-volcano-height`.
+> 
+> *LD:* So what if it turns out we mean the same thing, how will we show equivalence so someone combining our data knows they're the same?
+> 
+> *MF:* Why would anyone combine your data? I don't believe in volcanoes.
+
+So, *LD* is used to checking out data, seeing a property they don't know, and being able to dereference its URI (ie. visit the webpage about it) and find out how it should be used, any logical constraints, maybe see labels and descriptions in different languages, or equivalence to a term from another vocabulary that maybe they already know. If *LD* is building something more sophisticated, their system can dereference the URI and consume a machine-readable version and automatically figure out what to do with it.
+
+But mf2 doesn't have this expectation of documentation of experimental properties, even on the wiki, or at least, I haven't seen it happening. That's not to say it couldn't:
+
+* All new experimental properties could get a page on the microformats wiki:
+  * Con: the domain isn't under the control of the author, and the content could be edited by someone else, too.
+  * Con: someone finding the property who is unfamiliar with microformats has no idea where to look to find out more.
+* All new experimental properties could get a description page on the author's own site:
+  * Con: someone finding it still doesn't know where to look for the documentation, from the property name alone.
+
+And also the documentation is still not machine readable. Ooh but what if there were microformats to mark up documentation of microformats?! Like:
+
+```
+<dl class="h-extension" id="extension">
+  <h2><dt class="p-name">extension</dt></h2>
+  <dd class="p-summary">An entry that serves as documentation for a Microformats extension.</dd>
+  <time class="dt-published" datetime="2015-07-01T23:12:00+01:00"><a class="u-url"  href="http://rhiaro.co.uk/2015/08/extensibility-microformats#extension">1st July 2015, 23:12 BST</a></time>
+</dl>
+```
+
+I'd support this. But.. it does seem to be a reinvention of RDF...
+
+And this still doesn't solve the documentation discoverability problem, nor the fact that multiple people can document their properties to their heart's content, but if they call them the same thing there is no way for a third party to distinguish between them. And if you want to reuse someone else's experimental property (which you should, otherwise how will they ever catch on?) how/where do you point to the documentation of that for someone who might discover this term for the first time through your site, rather than the origin? We could come up with conventions on where to find stuff, maybe `rel="vocab"`... Then what if you want to mix terms from multiple sources? I dunno, RDF namespacing seems to be handling this already.
+  
+## The other thing
+
+I can't reaaally be bothered to go into this, but there's one other problem:
+
+**Example debate 6**
+
+> `while(1){`
+> 
+> *MF:* Linked data is too complicated.
+> 
+> *LD:* No it isn't.
+> 
+> `}`
+
+I think what's going on here is that *MF* gets concerned about various academic Semantic Web baggage. But really the core tenet of linked data is... everything has a globally unique identifier - a URI.. or, fine, a URL if the 'I' is offputting. Forget everything else. But this means that *properties* - the relation between a thing and another thing - also have URLs. They're pretty important, worth having webpages about. To me, that's a reasonable building block.
+
+But I'm really bored of this argument, so I don't want replies from anyone that are just retelling one side or the other, please.
+
+## Conclusion
+
+To *LD*: 
+
+* Mf2 is actually being used for social interop. Right now. That is not to be sniffed at, or dismissed as 'hacky'. Instead of saying that linked data can do the same thing but better... go do it.
+*  Starting by marking up with mf2 results in human-readable data foremost. Let's face it, they're still the most important audience, especially for social web. Figuring out what's important for humans helps you to prune what you really need to be publishing, and focus on rapid iteration (because people can see and interact with what you're publishing) rather than trying to pre-empt theoretical edge cases or getting hung up on hypothetical data models.
+
+To *MF*: 
+
+* Your vocabulary extensibility and documentation is what *LD* has a problem with, so claiming mf2 is extensible based on syntax alone is not helpful.
+* People like to publish other kinds of data on the web, often more complex than can easily be marked up with mf2, and where consumption by machines is as useful as human readability. It also opens the door for mixing data from different domains on a massive scale. I know you're not interested in this, but don't dismiss linked data out of hand because of that.
+
+Wonderful, now I've pissed of both sides of the debate, I'll go get back in my box.""" .
+

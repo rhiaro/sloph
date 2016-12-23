@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/progressive>
+  as:published "2016-01-19T21:19:19+00:00"^^xsd:dateTime ;
+  as:tag "vegan", "food", "life" ;
+  as:content "Progressive enhancement for catering: core dish is substantial and meets common dietary constraints. Sides/additions through less restrictive diets can be added optionally." .
+

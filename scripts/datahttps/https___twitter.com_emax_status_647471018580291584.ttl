@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/emax/status/647471018580291584>
+  sioc:reply_of <https://rhiaro.co.uk/2015/09/astounded-humbled> ;
+  as:published "2015-09-25T19:01:34+01:00"^^xsd:datetime ;
+  as:name "@rhiaro this is not emax this is a deception robot" ;
+  as:content """[@rhiaro][1] this is not emax this is a deception robot
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://hip.cat/emax> .
+

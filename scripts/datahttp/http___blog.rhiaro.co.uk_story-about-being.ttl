@@ -1,0 +1,37 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/story-about-being>
+  dcterms:title "A story about being trapped, which presently has no end." ;
+  dcterms:created "2011-08-26T22:38:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T01:51:23.065Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2469134646843477339" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """[13th August 2011]  
+  
+The grazes on Kip's palms stung, pressed tightly against the icy cold rock.
+Water seeped into the belly of his tshirt and front of his tattered pants as
+he scraped his body along the unforgiving stone. Though the crevasse through
+which he crawled was getting smaller, he continued to inch onward.  
+  
+Kip had an inkling that his father's life depended on his progress, and the
+several tonnes of grey rock closing in on him from every direction did nothing
+to persuade him to give in. For the tenth time in as many minutes, the boy
+swallowed his fear and crept forward another arms length.  
+  
+His breaths became shallower as space in which to expand his lungs decreased;
+cheek pressed against stone, a single tear merged with the veins of water
+already tracing the surface.  
+  
+He tried to move again, an inch, a millimetre. He squeezed his eyes closed and
+pushed his head until his temples groaned, but the barrier would not yield.  
+  
+
+""" ;
+  sioc:topic blog:Doing, "writing", "story", "fiction" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/08/story-about-being> .
+

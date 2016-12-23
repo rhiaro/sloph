@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/rhiaro/status/602417809910554624>
+  sioc:reply_of <https://rhiaro.co.uk/2015/05/todays-general> ;
+  as:published "2015-05-24T11:16:12+01:00"^^xsd:datetime ;
+  as:name "@jamesdoc hmm you're right, I should have added climb four mountains and swim to an island into the mix" ;
+  as:content """[@jamesdoc][1] hmm you're right, I should have added climb four mountains and swim to an island into the mix
+
+[1]: https://twitter.com/jamesdoc
+""" ;
+  as:actor <https://rhiaro.co.uk/> .
+

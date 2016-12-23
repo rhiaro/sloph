@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/56f4c5d663b20>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-03-23T20:50:18+03:00"^^xsd:dateTime ;
+  as:tag "doha", "food", "snack", "souvenir", "travel" ;
+  blog:cost "40.59 QR" ;
+  as:summary "Nutty sweets (Al Meera, Thakira)" .
+

@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/577ff22cadd4c>
+  a blog:Acquisition ;
+  dcterms:created "2016-07-08T13:45:37-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/577ff22cadd4c> ;
+  blog:cost "$3" ;
+  as:published "2016-07-08T13:45:37-04:00" ;
+  as:summary "Froyo (Katya's unnamed cafe)" ;
+  as:tag "csarven", "food", "katyas", "restaurant", "takeaway" .
+

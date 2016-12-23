@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/charwarz/status/610791521504337920>
+  a as:Announce ;
+  as:published "2015-06-16T13:50:21+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: Mind blown by how quick, convenient and inexpensive it was to just change a @megabus reservation. Take not... #travel rhiaro.co.uk/2015/06/mind-bâ€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://charlottegodley.co.uk/> ;
+  as:object <https://rhiaro.co.uk/2015/06/mind-blown-quick> .
+

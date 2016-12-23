@@ -1,0 +1,28 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/01/week-review-6>
+  as:published "2013-01-16T19:12:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "open data", "innovative learning week", "hack", "techmeetup", "week in review", "aliss" ;
+  as:name "Week in review: Networking" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-5911240151774126696" ;
+  as:content """**7th January - 13th January**  
+**  
+**I was subject of Paolo's procedural task labelling pilot experiment.  It was quite complicated.  I don't know if I did a very good job.  
+  
+I went to TechMeetup and networked like crazy.  
+  
+
+  * I talked to Andy Hyde about [ALISS](http://aliss.org/) getting involved with the ILW hack, and Edinburgh OD scene in general.
+  * And a few other people about supporting the ILW hack in various ways.
+  * I talked to Felix Gilfedder of Popcorn Horror about novel ways of engaging with creative digital media communities (PhD related!)
+  * I briefly met Russell, with whom I hope to discuss digital video metadata (PhD related!)
+  * One other thing which isn't related to Open Data or my PhD but is very exciting nonetheless.
+
+I went to a Design Informatics talk about the Internet of Things.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:08:11.844Z"^^xsd:datetime .
+

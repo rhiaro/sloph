@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Burrito (rice, beans, guacamole, jalapenos, cilantro) and bubble tea (soy milk, jasmine green)",
+    "as:tag": [
+        "burrito",
+        "bubble tea",
+        "ca2016"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-08T13:48:55-07:00",
+    "@id": "http://blog.rhiaro.co.uk/burrito-rice",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/burrito-rice"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-08T13:48:55-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

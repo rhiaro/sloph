@@ -1,0 +1,13 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://kylewm.com/2015/08/though-i-m-not-in-the-social-wg-i-am-curious-about>
+  sioc:reply_of <https://rhiaro.co.uk/2015/08/extensibility> ;
+  as:published "2015-08-26T12:24:18+01:00"^^xsd:datetime ;
+  as:name "Though Iâ€™m not in the Social WG, I am curious about this stuff, and this really helped clarify the divide for me! And why some would consider microformats vocab centralized and/or cliquish. How do people in the LD community usually find what vocabulary exists (like if you were looking for a property for volcano prominence, where would you look)?" ;
+  as:content """Though I'm not in the Social WG, I am curious about this stuff, and this really helped clarify the divide for me! And why some would consider microformats vocab centralized and/or cliquish.
+
+How do people in the LD community usually find what vocabulary exists (like if you were looking for a property for volcano prominence, where would you look)?""" ;
+  as:actor <https://kylewm.com/> .
+

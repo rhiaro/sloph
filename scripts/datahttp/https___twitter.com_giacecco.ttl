@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/giacecco>
+  foaf:name "Gianfranco Cecconi" ;
+  foaf:homepage <https://twitter.com/giacecco> ;
+  foaf:depiction <https://twitter.com/giacecco/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/b4e327d742dc5547b83cc8590da947231fb82d5b7c3fc11265e3edd617852146.png> .
+

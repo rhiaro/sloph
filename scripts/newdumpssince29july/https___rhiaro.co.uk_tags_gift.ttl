@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/gift>
+  a as:Collection ;
+  as:name "gift" ;
+  as:items <https://rhiaro.co.uk/2016/08/57a8d2480d31f>, <https://rhiaro.co.uk/2016/08/57a91514b67cd>, <https://rhiaro.co.uk/2016/08/57b7af7729a20>, <https://rhiaro.co.uk/2016/08/57b7af32c979b> .
+

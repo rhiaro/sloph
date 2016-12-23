@@ -1,0 +1,34 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:tag": [
+        "travel",
+        "journey",
+        "train",
+        "grantham",
+        "london",
+        "uk"
+    ],
+    "as:published": "2016-02-21T15:32:21-05:00",
+    "as:startTime": "2016-03-31T11:06:00+00:00",
+    "as:endTime": "2016-03-31T12:23:00+00:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/London"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Grantham"
+    },
+    "@id": "http://blog.rhiaro.co.uk/56ca1f088f8b1",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56ca1f088f8b1"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-21T15:32:21-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

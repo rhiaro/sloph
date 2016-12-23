@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/11/youre-looking>
+  blog:tmpcontent "If you're looking for something to do in Cambridge this weekend, come learn/hack on personal social web stuff at [indiewebcamp](https://indiewebcamp.com/2015/MIT)" ;
+  as:published "2015-11-07T12:06:14+0000"^^xsd:datetime ;
+  as:tag "hacking", "indiewebcamp", "indieweb" ;
+  as:content """<!---
+tags: indieweb,indiewebcamp,hacking
+-->
+
+If you're looking for something to do in Cambridge this weekend, come learn/hack on personal social web stuff at [indiewebcamp](https://indiewebcamp.com/2015/MIT)""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/662965658070724608/139199211>, <https://brid-gy.appspot.com/like/twitter/rhiaro/662965658070724608/235193328> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

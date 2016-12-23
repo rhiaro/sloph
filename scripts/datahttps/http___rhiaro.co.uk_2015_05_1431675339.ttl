@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/1431675339>
+  a as:Announce ;
+  as:published "2015-05-15T08:35:39+0100"^^xsd:datetime ;
+  as:tag "json", "hacking" ;
+  as:content """<!---
+tags: json,hacking
+share-of: https://twitter.com/aaronpk/status/599040815789252608
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/aaronpk/status/599040815789252608> .
+

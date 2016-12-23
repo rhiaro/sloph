@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/1435503977>
+  a as:Announce ;
+  as:published "2015-06-28T16:06:17+0100"^^xsd:datetime ;
+  as:content """<!---
+share-of: https://twitter.com/MammonMachine/status/614875679876734976
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/MammonMachine/status/614875679876734976> .
+

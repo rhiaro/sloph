@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/pokemon-palettes>
+  a as:Add ;
+  as:name "Pokemon Palettes" ;
+  as:published "2016-08-17T17:11:36+01:00"^^xsd:dateTime ;
+  as:tag "css", "styles", "pokemon", "cwebber", "hacking", "life", <https://rhiaro.co.uk/tags/life>, <https://rhiaro.co.uk/tags/cwebber>, <https://rhiaro.co.uk/tags/hacking>, <https://rhiaro.co.uk/tags/styles>, <https://rhiaro.co.uk/tags/css>, <https://rhiaro.co.uk/tags/pokemon> ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:object <http://pokepalettes.com/> .
+

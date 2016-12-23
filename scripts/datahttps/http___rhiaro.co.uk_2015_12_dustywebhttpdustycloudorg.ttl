@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/dustywebhttpdustycloudorg>
+  blog:tmpcontent "[@dustyweb](http://dustycloud.org) points out that the SocialWG is already in Federation Space." ;
+  as:published "2015-12-02T20:38:30+0000"^^xsd:datetime ;
+  as:tag "dustycloud.org", "star trek", "federation", "w3c", "socialwg", "standards" ;
+  as:content """<!---
+tags: socialwg,w3c,standards,star trek,federation,dustycloud.org
+-->
+
+[@dustyweb](http://dustycloud.org) points out that the SocialWG is already in Federation Space.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

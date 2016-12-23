@@ -1,0 +1,84 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/only-half-past>
+  as:name "Itâ€™s only half past one." ;
+  as:content """  
+
+[A summary of things I feel about HTML5, from a sleep-deprived mind]
+
+  
+
+It feels like it should be much later... earlier... than that.  Iâ€™ve spent
+hours and hours reading debates about HTML5.  Mostly debates in the comments
+of blog posts and articles.  I feel fairly well versed in two sides of the
+argument, the nature of which boils down to â€œHTML5: What is the point?â€.  
+  
+My personal view is that progression is good.  Development for the sake of
+development is good.  Even if you donâ€™t get it right the first time, at least
+youâ€™re doing something, and not just whining about it.  Someone (yeah, someone
+important, I donâ€™t do citations at this time in the morning) said that HTML5
+was being developed for the present, and that it will be rewritten in the
+future, to meet the needs in the future.  Lots of people had a problem with
+that concept, as we should be developing for the future.  Lots of people
+supported that concept, as predicting the future is quite a challenge.  I
+havenâ€™t decided where I stand yet.  Maybe I donâ€™t need to.  
+  
+I like the fact things are changing, because it makes me feel excited and
+challenged and all that.  It upsets me a little that Iâ€™d just got the hang of
+all this web development malarky, and now thereâ€™s more?!  Lots of people seem
+to feel the same about the latter.  Which is understandable.  Understandable
+in a world where the web is expected to be a fixed thing, and you make a
+website, and it works, and customers are happy, and clients are happy, and it
+stays like that forever.  But the world and the web (and customers and
+clients) are fluid and flowing and flexible and fickle.  Peoplesâ€™ needs
+change, hardware changes, software changes, businesses change.  They always
+have, and always will, so where this idea that the web should whoa slow down a
+second and wait for the slower ones to catch up has come from, Iâ€™m not quite
+sure.  
+  
+This makes it sound like HTML5 appeared overnight.  Which for me, in a way, it
+did.  Appeared to my conscious, concentrating, information-absorbing mind,
+anyway.  
+  
+But the part where the HTML5 spec has been under development for like six
+years or something now?  Come on guys.  I know itâ€™s not easy, but really.
+Give the lazy people something to complain about.  Or at least make a big deal
+out of it from the start.  So â€˜theyâ€™ can start thinking about it from the get-
+go.  Maybe a big deal was made, and I just missed it.  But I was making
+websites six years ago, just.  So if I missed it, â€˜theyâ€™ did too.  
+  
+That last paragraph went a bit to the dogs.  What Iâ€™m trying to say is: the
+little man on the ground, the guy making the websites day-to-day, the guy
+dabbling, the guy fouling up the standard mark-up you hold so dear... Tell him
+what youâ€™re doing, as youâ€™re doing it, so heâ€™s prepared.  
+  
+I know you canâ€™t force change.  Hell, outside of term time I still live under
+a regime where IE6 is deemed a perfectly adequate browser, installing Chrome
+â€˜breaksâ€™ IE, so isnâ€™t allowed, and [insert new web thing since 1997] might be
+a great feature, but since my father doesnâ€™t explicitly use it, any
+development on that front is pointless.  Hey, he even (almost daily) states
+angrily that film making companies are at fault because their productions are
+shown letterboxed on his 4:3 TV.  (I just searched so I could state that
+widescreen TVs have been commonplace since [year], and discovered that films
+have been being made in widescreen since around 1929.  HAH.  Iâ€™ll quote that
+juicy fact next time).  But this is whole other blog post.  
+  
+I was going somewhere with this.  Oh yes.  
+  
+I still donâ€™t know whether I can put a <nav> in a <header>.  
+  
+Thatâ€™s all I was trying to find out when I stumbled across the various
+debates.  
+  
+Iâ€™m officially declaring the HTML5 spec subject to interpretation.  
+  
+And Iâ€™m putting the <nav> in the <header>.  Itâ€™s part of the header of the
+page.  In this particular context, if I had a div with id header, Iâ€™d put the
+navigation inside it.  To hell with you all.  
+  
+PS. Thanks for the great work on developing HTML5, guys.  My life would be
+dull and repetitive without the likes of you; Iâ€™d be reading and writing a lot
+more fiction, and spending far more time with my family.  Much obliged.
+
+""" .
+

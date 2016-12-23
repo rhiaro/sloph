@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/NetStratego/status/603624505089650688>
+  a as:Announce ;
+  as:published "2015-05-27T19:11:11+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: This hostel has Settlers of Catan and free mountain tours and a nice kitchen and friendly staff and I can already... rhiaro.co.uk/2015/05/hostelâ€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://jumbastic.com/> ;
+  as:object <https://rhiaro.co.uk/2015/05/hostel-settlers> .
+

@@ -1,0 +1,120 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/10/remote-sparql>
+  as:published "2013-10-21T13:02:00+0000"^^xsd:datetime ;
+  as:tag "dydra", "redland", "rdflib", "librdf", "sparql", "learning", "python", "semantic web", blog:Doing, "phd", "rdf", "linked data", "slogd", "hacking" ;
+  as:name "Remote SPARQL endpoints and RDF parsing" ;
+  as:content """<!---
+published: 21st October 2013, 13:02
+last-modified: 21st October 2013, 18:24
+type: BlogPost
+tags: phd, semantic web, rdf, python, hacking, slogd, learning, linked data, librdf, rdflib, redland, dydra, sparql
+list: doing
+-->
+
+# Remote SPARQL endpoints and RDF parsing
+
+Didn't have much success talking to the Dydra SPARQL endpoint yesterday.  I was briefly worried as there are no docs describing how to write back to the SPARQL endpoint, so I thought that was write-off at once, but then I found a [blog post](http://blog.dydra.com/2011/09/07/sparql-11) from 2011 about how that has been introduced.  Just not documented yet apparently.
+
+But to start with, I imported some test triples using the Web interface, into dydra.com/rhiaro/about-me and tried to read them back.
+
+With ARC2, along the lines of:
+
+	include_once("ARC2/ARC2.php");
+
+	$config = array(
+		'remote_store_endpoint' => 'http://dydra.com/rhiaro/about-me/sparql'
+	);
+
+	$store = ARC2::getRemoteStore($config);
+	$query = 'select * where {?s ?p ?o} limit 20';
+	$rows = $store->query($query, 'rows');
+
+
+But all I got back was an empty array.  I tried with with the DBPedia endpoint, which fell over a couple of times, but I got results... except... they were different from the results I got when I queried the endpoint directly through their interface.  They seemed sort of metadata-y, rather than actual triples from the store.  But it's hard to tell.
+
+So I had a go with Python's RDFLib to try to figure out who had the problem.
+
+	import rdflib
+
+	rdflib.plugin.register('sparql', rdflib.query.Processor, 'rdfextras.sparql.processor', 'Processor')
+	rdflib.plugin.register('sparql', rdflib.query.Result, 'rdfextras.sparql.query', 'SPARQLQueryResult')
+
+	g = rdflib.Graph()
+
+	query = \"""
+	        SELECT *
+	        FROM <http://dydra.com/rhiaro/about-me/sparql>
+	        WHERE {
+	             ?s ?p ?o .
+	        }Limit 10
+	    \"""
+
+	for row in g.query(query):
+	    print row
+
+And with that I got some triples... but not from the triplestore.  It parsed, I presume, whatever semantic markup it could find in the page itself, the page you see when you visit dydra.com/rhiaro/about-me/sparql.  Eg.
+
+	(rdflib.term.URIRef(u'https://s3.amazonaws.com/public.dydra.com/stylesheets/style.css?1337867890'), 
+	rdflib.term.URIRef(u'http://www.w3.org/1999/xhtml/vocab#stylesheet'), 
+	rdflib.term.URIRef(u'http://dydra.com/rhiaro/about-me/sparql'))
+
+Do I have to send an accept header?  Surely RDFLib is supposed to take care of that for me... Whatever.
+
+If that's how you're going to play it, I'll just make the request with CURL directly.  (I used [Python's Requests](http://docs.python-requests.org/) because the Web says it's nicer than urllib2):
+
+	import requests
+	import rdflib
+
+	q = "select * where {?s ?p ?o}"
+	url = "http://dydra.com/rhiaro/about-me/sparql"
+
+	p = {'query': q}
+	h = {'Accept': 'application/json'}
+	r = requests.get(url, params=p, headers=h)
+
+	print r.text
+
+Boom!  Triples!  Better yet... the ones in the triplestore!  By default (with no ```Accept``` header set) they come through as RDF/XML, and it won't give me Turtle, so JSON seems to be the nicest looking option.  That doesn't really matter though, as nobody really needs to look at it.
+
+I guess I'll try CURL with PHP for Slog'd, and just parse it with ARC2.  It seems a shame that ARC2's remote endpoint querying didn't Just Work with Dydra, but I don't have the time or energy to try to figure out why right now.
+
+Then I need to figure out if I can write to it or not.  If I can't... In the name of progressing, I'll have to ditch it and use ARC2's built in MySQL-based triplestore.
+
+## Update: Parsing the results with RDFLib
+
+Because I want to understand exactly what Dyrda is giving back to me, I wanted to quickly parse the results and use them like I should be able to use a graph.
+
+The XML that Dydra is returning is not straightforward RDF/XML that RDFLib can just understand. It's a '[SPARQL Result](http://www.w3.org/TR/rdf-sparql-XMLres/'). It looks like this:
+
+	<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+	 <head> 
+	 	<variable name='s'/> 
+	 	<variable name='p'/> 
+	 	<variable name='o'/> 
+	 </head>
+	 <results>  
+	 	<result> 
+	 		<binding name='s'>
+	 			<uri>https://rhiaro.co.uk/about#me</uri>
+	 		</binding> 
+	 		<binding name='p'>
+	 			<uri>http://xmlns.com/foaf/0.1/homepage</uri>
+	 		</binding> 
+	 		<binding name='o'>
+	 			<uri>https://rhiaro.co.uk</uri>
+	 		</binding> 
+	 	</result>
+
+	 	...etc
+
+So later I either have to work out how to make RDFLib understand this, or make RDFLib understand the [JSON alternative](http://www.w3.org/TR/sparql11-results-json/).  I really don't want to have to write a custom parser to deal with it.
+
+## Update: Solved
+
+Turns out it's as simple as using ```CONSTRUCT``` instead of ```SELECT``` in the query.  Rookie mistake?  I don't know.  I feel like RDFLib ought to be able to handle the SPARQL results format somehow though.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:updated "2013-10-21T18:24:00+0000"^^xsd:datetime .
+

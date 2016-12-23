@@ -1,0 +1,35 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/week-review-9>
+  dcterms:title "Week in review" ;
+  dcterms:created "2015-11-30T04:59:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 29 November 2015, 23:59 EST
+tags: week in review,phd,socialwg
+-->
+
+# Week in review
+
+## 23 - 29 November
+
+* Learnt how to write a rebuttal for a CHI paper, mostly be reading a ton of stuff Max threw at me and watching Max and Dave do it.
+* Poked a bit at [SocialAPI](https://w3c-social.github.io/social-web-protocols/social-web-protocols) for potential consideration as a FPWD for the SocialWebWG on Tuesday.
+* First pass at restructure of SoLiD spec according to the structure of my SocialAPI document, with the aim of making its constituent parts easier to implement individually, and to make it easier to map parts on to other equivalent specs. [Needs work](https://github.com/rhiaro/solid-spec/blob/restructure/README.md).
+* Sketched a [solid equivalent to webmention](https://github.com/rhiaro/solid-spec/blob/restructure/ripples.md) based on my rudimentary understanding of extended discussions and whiteboarding with [csarven](http://csarven.ca), [sandro](http://hawke.org), [deiu]() and [nicola](https://nicola.io).""" ;
+  sioc:topic "week in review", "phd", "socialwg" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/11/week-review-9> ;
+  blog:tmpcontent """# Week in review
+
+## 23 - 29 November
+
+* Learnt how to write a rebuttal for a CHI paper, mostly be reading a ton of stuff Max threw at me and watching Max and Dave do it.
+* Poked a bit at [SocialAPI](https://w3c-social.github.io/social-web-protocols/social-web-protocols) for potential consideration as a FPWD for the SocialWebWG on Tuesday.
+* First pass at restructure of SoLiD spec according to the structure of my SocialAPI document, with the aim of making its constituent parts easier to implement individually, and to make it easier to map parts on to other equivalent specs. [Needs work](https://github.com/rhiaro/solid-spec/blob/restructure/README.md).
+* Sketched a [solid equivalent to webmention](https://github.com/rhiaro/solid-spec/blob/restructure/ripples.md) based on my rudimentary understanding of extended discussions and whiteboarding with [csarven](http://csarven.ca), [sandro](http://hawke.org), [deiu]() and [nicola](https://nicola.io).""" .
+

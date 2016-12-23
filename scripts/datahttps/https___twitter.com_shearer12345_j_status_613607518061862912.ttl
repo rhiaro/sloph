@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/shearer12345_j/status/613607518061862912>
+  sioc:reply_of <https://rhiaro.co.uk/2015/06/new-favourite-way> ;
+  as:published "2015-06-24T08:20:07+01:00"^^xsd:datetime ;
+  as:name "@rhiaro me too. If I don't write it down it'll never happen!" ;
+  as:content """[@rhiaro][1] me too. If I don't write it down it'll never happen!
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <https://twitter.com/shearer12345_j> .
+

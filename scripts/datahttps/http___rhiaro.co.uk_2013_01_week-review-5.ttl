@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/01/week-review-5>
+  as:published "2013-01-16T19:05:00.002Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "week in review", "plan", "6 month plan" ;
+  as:name "Week in review: 6 month plan" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2068063547667128686" ;
+  as:content """**31st December - 6th January 2013**  
+**  
+**Wrote a 6 month plan.  It's nice to have solid targets.  [Here it is in calendar form](https://www.google.com/calendar/embed?src=s7bsnjh4qb54sh2jtke9c8ie50%40group.calendar.google.com&ctz=Europe/London).  
+  
+Got the flu.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:08:17.308Z"^^xsd:datetime .
+

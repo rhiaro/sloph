@@ -1,0 +1,29 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/mountain>
+  as:latitude "47.27394" ;
+  as:longitude "11.42717" ;
+  blog:tmpcontent """![Mountain rain](https://rhiaro.co.uk/photos/1505innsbruck/IMG_20150515_090952.jpg)
+
+I thought today was going to be one of those staying-in-the-hostel sorta days.
+
+But the old Vietnamese women sharing my dorm said she was inspired yesterday by my desire to climb the mountain on foot (instead of cable car) today, and wants to come with me, despite the torrential rain. So, I guess that's happening.
+
+First she has to sleep off overeating at breakfast though.""" ;
+  as:published "2015-05-15T09:15:00+0100"^^xsd:datetime ;
+  as:tag "travel", "austria", "hostel", "mountain", "innsbruck" ;
+  as:content """<!---
+tags: travel,austria,mountain,innsbruck,hostel
+published: 15th May 2015, 10:15 Europe/Berlin
+-->
+
+![Mountain rain](https://rhiaro.co.uk/photos/1505innsbruck/IMG_20150515_090952.jpg)
+
+I thought today was going to be one of those staying-in-the-hostel sorta days.
+
+But the old Vietnamese women sharing my dorm said she was inspired yesterday by my desire to climb the mountain on foot (instead of cable car) today, and wants to come with me, despite the torrential rain. So, I guess that's happening.
+
+First she has to sleep off overeating at breakfast though.""" .
+

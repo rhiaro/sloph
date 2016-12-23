@@ -1,0 +1,90 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/03/tigo-tablet-cover>
+  as:published "2013-03-08T20:12:00.000Z"^^xsd:datetime ;
+  as:tag blog:Done, "parrot", "Tigo", "mbaking", "crochet", "nexus 7 case" ;
+  as:name "Tigo tablet cover (crochet)" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-5534111577713409746" ;
+  as:content """Lovingly crocheted over a couple of days.  No pattern, all approximated, with
+scraps of wool of the appropriate colours I just happened to have.  
+  
+I started with a chain the length of the width (shortest side) of my Nexus 7,
+and single crocheted in each stitch down both sides, and carried on round; so
+I did the very bottom first and worked my way up in a flat rectangular spiral.
+I dunno if that makes sense, but it immediately begins to take shape.  
+  
+
+![](http://3.bp.blogspot.com/-5m5tRKaxaFc/UWm8b5OG1kI/AAAAAAAAFes/i3_y3X3_Tj8/
+s320/IMG_20130308_223721.jpg)
+
+  
+
+![](http://2.bp.blogspot.com/-7LHTwLIaNME/UWm8bx7wHoI/AAAAAAAAFe0/scimej5JmSo/
+s320/IMG_20130308_223832.jpg)
+
+  
+
+When I got to the right height, I carried on across the back, then just
+chained across the front, and continued as before, to make the opening.
+
+  
+
+![](http://3.bp.blogspot.com/-iXr7GBZRJrk/UWm8cJRI3UI/AAAAAAAAFew/yb-
+H0T04Phc/s320/IMG_20130308_223849.jpg)
+
+  
+
+Though it may look deliberate that the 'tail' sticks out a bit at each side, I
+actually made it too wide.  So I had to decide whether to carry on making it
+too big and pad it on the inside, or tuck the ends in and make it tighter with
+the green.  I chose the latter and it worked far better than I anticipated.
+
+  
+
+![](http://3.bp.blogspot.com/-qKKEddd1lgs/UWm991DG8xI/AAAAAAAAFe8/C6paQ_0efYs/
+s320/IMG_20130308_224108.jpg)
+
+  
+
+Most of it is just double crochet for no particular reason, but his fuzzy lil'
+chest is a pattern of alternating front-post triple crochet and back-post
+triple crochet (triple to compensate so it stays level with the 'normal'
+double crochet around the triangle, as front- and back-post double crochet are
+slightly shorter than regular double crochet).
+
+  
+
+![](http://3.bp.blogspot.com/-Ub4XUTwnBjo/UWm-2-LT8xI/AAAAAAAAFfE/reCUUBDLMiI/
+s320/IMG_20130308_224135.jpg)
+
+  
+
+His feet and wings are just chains; his eyes made just the way you'd make
+small circles, but skewed a bit to be ovals (I can't remember, I probably
+chained three, then [sc, hdc, hdc, tc, hdc, hdc, sc]x2, then sc in each stich
+around. Don't hold me to that though).  The black centres are literally just
+threaded through and through until they looked right, and the loose ends used
+to attach.  I shaped the beak by periodically crocheting two together.  I'm
+surprised it's as remotely symmetrical as it is, because I didn't count
+_anything_.
+
+  
+
+![](http://1.bp.blogspot.com/-WhGcoiTl-
+9I/UWnBQO6PZZI/AAAAAAAAFfM/UjY3N5UCiFg/s320/IMG_20130308_224314.jpg)
+
+  
+
+![](http://3.bp.blogspot.com/-wzqDluAZJlc/UWnBTNuHCYI/AAAAAAAAFfU/BYicG5BPzmQ/
+s320/IMG_20130308_224452.jpg)
+
+  
+
+The resemblance is uncanny!
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-13T20:35:09.647Z"^^xsd:datetime .
+

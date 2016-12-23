@@ -1,0 +1,23 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/chez>
+  dcterms:created "2015-05-06T16:00:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,paris
+location: http://dbpedia.org/resource/Paris
+published: 6th May 2015, 17:00 Europe/Berlin
+-->
+
+Chez [Henry](http://bblfish.net) in centre of Paris""" ;
+  sioc:topic "travel", "paris" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/chez> ;
+  as:location <http://dbpedia.org/resource/Paris> ;
+  blog:tmpcontent "Chez [Henry](http://bblfish.net) in centre of Paris" .
+

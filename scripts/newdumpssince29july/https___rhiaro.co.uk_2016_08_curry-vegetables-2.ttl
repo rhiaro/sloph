@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/curry-vegetables-2>
+  a as:Activity, asext:Consume ;
+  as:name "Curry vegetables, not-meatballs, iced coffee" ;
+  as:published "2016-08-26T20:35:55-04:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/coffee>, <https://rhiaro.co.uk/tags/leftovers>, <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/curry> .
+

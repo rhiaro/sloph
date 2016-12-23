@@ -1,0 +1,24 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/test-thing>
+  blog:tmpcontent """# Test
+
+test a thing""" ;
+  as:published "2015-06-11T11:27:00+0100"^^xsd:datetime ;
+  as:tag "test" ;
+  as:name "Test" ;
+  as:startTime "2011-09-01T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2012-08-31T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+start: 1st September 2011
+end: 31st August 2012
+tags: test
+published: 11th June 2015, 11:27 BST
+-->
+
+# Test
+
+test a thing""" .
+

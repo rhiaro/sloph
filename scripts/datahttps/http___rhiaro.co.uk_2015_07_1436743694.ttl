@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/1436743694>
+  a as:Announce ;
+  as:published "2015-07-13T00:28:14+0100"^^xsd:datetime ;
+  as:tag "indiewebcamp", "indieweb" ;
+  as:content """<!---
+share-of: https://aaronparecki.com/notes/2015/07/12/3/indieweb
+tags: indieweb,indiewebcamp
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://aaronparecki.com/notes/2015/07/12/3/indieweb> .
+

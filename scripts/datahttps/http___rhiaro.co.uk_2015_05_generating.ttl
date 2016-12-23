@@ -1,0 +1,461 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/generating>
+  as:latitude "43.77953" ;
+  as:longitude "11.24911" ;
+  blog:tmpcontent """# Generating an ActivityStream
+
+## Part one: posts-for-all-the-things
+
+If you've been paying attention to me IRL or in IRC lately, you'll have had me try to persuade you that activities and posts are basically the same thing. People advocating post-centric views and people advocating activity-centric views are really describing the same thing from different angles, and with slightly different data models.
+
+An activity looks generally like:
+
+![Activity structure](https://rhiaro.co.uk/posts/201505activitystream/activity_blank.png)
+
+And a post looks generally like:
+
+![Post structure](https://rhiaro.co.uk/posts/201505activitystream/post_blank.png)
+
+Colour coding indicates what correlates between the two. Differences:
+
+|                                    | Activity                           | Post                        |
+| ---------------------------------- | ---------------------------------- | --------------------------- |
+| **type**                           | explicit                           | implied by properties       |
+| **relationship to another object** | `object`                           | value of arbitrary property |
+| **meta**                           | some on activity, some on `result` | all on post                 |
+
+But you can see that the data they contain are basically the same. Bear with me.
+
+### What are activities for?
+
+To propagate changes through a network. To tell people that somebody did something.
+
+### What are posts for?
+
+Posts are content, an end in themselves.
+
+### Who cares?
+
+As someone who just wants to publish stuff and interact on the web, do I care if I'm creating and pushing around posts, or activities? Probably not. I just want to do stuff, and have people see it.
+
+As a developer, I want to post objects around that contain as much data as needed, and no more. I want the right people to know when something has changed. Whether I prefer to do this with activities or posts (or JSON or HTML) is, as far as I see it, personal preference. I don't think there's an inherant advantage to one over the other.
+
+### So which to start with?
+
+Starting with a blog perspective, the most important thing is that people see my content. Posts are my content, so I start there.
+
+* I create a post, which are objects with various properties.
+* If I want to explicitly notify someone of a post - because I'm replying to them, favouriting, bookmarking, sharing, tagging, etc, I send them a [webmention](http://indiewebcamp.com/webmention).
+  * The reciever is then free to act upon this as they like: display my post on their site, update their own internal friends list, add my post to a collection, ignore it completely, or whatever.
+* If I want to make a general announcement that something has changed on my site (eg. a new post) I either use PuSH and the hub lets subscribers know, or I don't do anything, and wait for interested parties to pull (visit my homepage, or open their reader) and find out for themselves.
+
+![A new post](https://rhiaro.co.uk/posts/201505activitystream/post_create.png)
+
+For humans, the posts are displayed in html, and for machines they're marked up with minimal microformats, which allows a reader such as [Woodwind](http://reader.kylewm.com/) to parse out the relevant information and display however necessary. (Mine are also avaiable as RDF, but to the best of my knowledge nobody has built a blog reader that consumes RDF yet).
+
+In the ActivityStreams model, rather than creating posts directly, the user performs some *activity* which may generate as a side-effect a post. The activty could be something like `Post`, `Share`, `Like` (with many other terms currently in the vocab), with an optional `target` of an object being acted upon, and an optional `result` of a new object being created. Upon creation, the *activity* is sent by the server to the servers of anyone who is expected to receive it - either a default list such as people who have subscribed to the author, or a specific list of other people specified when the activity is created, or anyone mentioned or replied-to etc. Anyone for whom the activity ends up on their inbox might get a notification, and their server can fetch the associated post for them.
+
+![A new create activity](https://rhiaro.co.uk/posts/201505activitystream/activity_create.png)
+
+Not all activities generate a `result` post and some activities generate a `result` that is the same as the `object`. In these cases, I would argue that an activity == a post...
+
+Currently, when I like something I create a like post, that looks like this:
+
+![Like post](https://rhiaro.co.uk/posts/201505activitystream/post_like.png)
+
+A like *activity* looks like this:
+
+![Like activity](https://rhiaro.co.uk/posts/201505activitystream/activity_like.png)
+
+See how similar they are?!
+
+So given this apparent direct mapping between posts and activities...
+
+### Posts as activities
+
+Dreaming of interoperability with [ActivityPump](http://w3c-social.github.io/activitypump/) implementations, I want to generate AS2.0 compliant activities that I can send out. I stuck to super basic representations for now, nesting as little as possible (figuring everything with a URI can be dereferenced anyway, so all of the data doesn't need to be present in the first layer of JSON).
+
+So for a new post such as:
+
+```
+<article class="h-entry">
+  <h1 class="p-name">Post title</h1>
+  <div class="e-content">
+    <p>This is a post!</p>
+  </div>
+  <time class="dt-published" datetime="2015-05-15T13:06:00+02:00"><a href="https://rhiaro.co.uk/2015/05/a-post" class="u-url u-uid">15th May 2015 13:06</a></time>
+  <p class="h-card p-author p-name"><a href="https://rhiaro.co.uk/about#me" class="u-url">Amy Guy</a></p>
+</article>
+```
+
+The activity generated looks like:
+
+```
+{
+  "@type": "Post",
+  "published": "2015-05-15T13:06:00+02:00",
+  "actor": "https://rhiaro.co.uk/about#me",
+  "object": "https://rhiaro.co.uk/2015/05/a-post",
+  "result": {
+    "@id": "https://rhiaro.co.uk/2015/05/a-post"
+  }
+}
+```
+
+With no explicit audience specified, an ActivityPump compliant server would post this to the inboxes of all of my followers. *Their* server would see the new activity and insert it into their feed; they could click it and view the object (the post). Note that the `object` of the activity and the `result` here are the same, so there's some redundancy.
+
+For a like post - because I start with posts, I keep the `result` of the activity as the like post and retain this redundancy, though this isn't necessary and (see diagram above) you could in fact consider the activity to be equivalent to the like post, and use the ID of the activity to interact with it (if someone wanted to like my like, etc). I have no explicit post types, so it's implicitly considerd a 'like' post due to the `like-of` microformats property:
+
+```
+<article class="h-entry">
+  <p class="p-name e-content">I like <a href="https://theperplexingpariah.co.uk/2015/05/a-post" class="u-like-of">Jessica's post</a>.</p>
+  <time class="dt-published" datetime="2015-05-15T13:06:00+02:00"><a href="https://rhiaro.co.uk/2015/05/a-like" class="u-url u-uid">15th May 2015 13:06</a></time>
+  <p class="h-card p-author p-name"><a href="https://rhiaro.co.uk/about#me" class="u-url">Amy Guy</a></p>
+</article>
+```
+
+And the activity:
+
+```
+{
+  "@type": "Like",
+  "published": "2015-05-15T13:06:00+02:00",
+  "actor": "https://rhiaro.co.uk/about#me",
+  "object": "https://theperplexingpariah.co.uk/2015/05/a-post",
+  "result": {
+    "@id": "https://rhiaro.co.uk/2015/05/a-like"
+  }
+}
+```
+
+In this case, as well as any explicit or default audience specified, my server would post this activity to Jessica's inbox, whether Jessica is following me or not, as it's a like of her post. Her server can notify her, insert this into her feed, and it's also her server's job to send this activity out to everyone (probably Jessica's followers) who recieved the *original* post (the one I'm liking), so the 'like' counter can be incremented consistently for everyone, whether they know you or not.
+
+Without activities (my current setup), I'd send a webmention to Jessica, and there's nothing specified about how her server should handle this (beyond checking it's valid), so propagating the like out to everyone who had seen her post wouldn't necessarily happen. However, she is likely to display the number of 'likes' on her post, so a reader could *pull* the new number of likes each time anyone viewed it (or poll continuously if it wanted a live-update), which puts a lot of burden on the *client* rather than the server.
+
+### Microformats to ActivityStreams
+
+So I generate [activities like this for all of my posts](https://rhiaro.co.uk/activitiesjson.php) so far. As I removed all explicit post types from my storage, I rely only on the *properties* of a post to decide how to display it. I implemented similar rules to generate the activity types required by AS2.0. These rules cascade:
+
+* `name` exists (object has a title) -> `Post`
+* `location` exists -> `Arrive`
+* `like-of` exists -> `Like`
+* `bookmark-of` exists -> `Save`
+* `repost-of` exists -> `Share`
+* otherwise -> `Post`
+* `in-reply-to` exists and has `category` "rsvp" -> `Accept`
+  * otherwise -> `Respond`
+
+I also check nameless posts for `eat` and `sleep` tags, as these indicate a lifelog post for eating or sleeping, and use types `_:Consume` and `_:Sleep` (my own namespace, as AS2.0 doesn't have these types. TODO: Reuse an existing vocab for these). I'll be adding running, yoga, hiking, listening to music and committing code imminantly, so I might need more activity types. I probably need to model these better than relying on tags (but... maybe not. We'll see).
+
+### Known issues
+
+If you noticed that the `object` of a `Consume` activity is a blog post, you're a semantic pedant, and you're right, this doesn't make sense. The next best option given the data I currently store is the object being blank node with a label of the contents of the post, eg:
+
+```
+{
+  "@type": "Consume",
+  "published": "2015-05-15T13:06:00+02:00",
+  "actor": "https://rhiaro.co.uk/about#me",
+  "object": {
+    "title": "An apple"
+  },
+  "result": {
+    "@id": "https://rhiaro.co.uk/2015/05/a-nom"
+  }
+}
+```
+
+But ideally the `object` would have it's own URI. This probably *isn't* something I'm going to do any time soon.
+
+Note an object (a post) is still created as a `result` of the `Consume` activity. This isn't necessary - as with likes, the pure activity could be sent and displayed to people - but since I start with posts, I wouldn't drop them.
+
+If you're squinting at my `location` -> `Arrive` rule, note my [own special rules for displaying checkins](https://rhiaro.co.uk/2015/05/checkins). This is subject to change.
+
+## Part two: Maybe not posts-for-all-the-things
+
+### Activities as posts
+
+Sometimes, when you want to do something on the web, it doesn't *feel* like making a post. For example, if I want to delete a blog post, I need to tell everyone who received it that it's deleted. In indiewebland, you just delete the post, return a 410, and send a webmention to anyone who needs it. However, this doesn't leave any record of when it was deleted (or when it was created). You might have noticed I like [tracking *everything*](https://rhiaro.co.uk/all), so the ActivityPump way of deleting - which retains a trace of the deletion - appeals to me:
+
+```
+{
+  "@type": "Delete",
+  "@id": "https://rhiaro.co.uk/2015/05/delete-bad-post",
+  "published": "2015-05-15T13:06:00+02:00",
+  "actor": "https://rhiaro.co.uk/about#me",
+  "object": "https://rhiaro.co.uk/2015/05/bad-post",
+  "result": {
+    "@id": "https://rhiaro.co.uk/2015/05/bad-post",
+    "deleted": "2015-05-15T13:06:00+02:00"
+  }
+}
+```
+
+(In the current ActivityPump spec, the `result` is a shell of the object that is being deleted, so the URI of the deleted post is retained with a deletion date attached, but all other properties deleted).
+
+But when you think about deleting a post, you're *not* thinking about creating a delete post which references the post you want to delete (if this *is* how you think about it, I'd love to hear from you). You want to hit delete, and have everyone suitably notified. The same for updates/edits/modifications (of your *own* post - creating a diff post as an edit to somene else's post or a wiki page is a different matter).
+
+Nonetheless, if I wanted to display the delete activity for humans, I could mark it up in HTML with microformats, just as if it were a post, something like:
+
+```
+<article class="h-entry">
+  <p class="p-name e-content">I deleted <a href="https://rhiaro.co.uk/2015/05/bad-post" class="u-delete-of">a post</a>.</p>
+  <time class="dt-published" datetime="2015-05-15T13:06:00+02:00"><a href="https://rhiaro.co.uk/2015/05/delete-bad-post" class="u-url u-uid">15th May 2015 13:06</a></time>
+  <p class="h-card p-author p-name"><a href="https://rhiaro.co.uk/about#me" class="u-url">Amy Guy</a></p>
+</article>
+```
+
+Note:
+* I have invented microformat property `u-delete-of`, this doesn't currently exist.
+* There is content in the HTML version that is not present in the JSON version. Probably a `content` (or existing `displayName`) property on the activity could be used for this. Where this content comes from could be implementation-dependant, with some sensible default fallback.
+
+So *even though they're basically the same* thinking about 'delete' as an *activity* rather than a post feels easier *and* it is still possible to treat as a post for display if you need to.
+
+At the moment I store a modified date and just update this whenever I edit a post. For now I plan to add something that checks all posts for a `updated` date and slots `Update` activities into the stream (even though there is no explicit `update-of` post). When I can update posts properly with micropub, I will generate the update activity then.
+
+There are other activities ((un)follow/add/remove/join/leave) that I also think would be simpler to think of in this way. I don't currently know of anyone in indieweb who is displaying posts for these marked up with microformats, though I have a couple of [experimantal follows posts](https://rhiaro.co.uk/follows) with `u-follow-of`.
+
+## Next
+
+Once I have AS2.0 compliant activities, I could post them to inboxes of [ActivityPump]() compliant servers. Someone should implement one please :)
+
+## Addendum
+
+Certain activities (like `Follow`) may trigger special side-effects (a user is added to another users `followers` collection according to pump.io and ActivityPump (not ActivityStreams)). In indieweb, if you want to follow someone you type their URL into a reader and it fetches their content. What's missing is the reader being able to post a follow activity to your site via micropub so that others (including who you have just followed) can be notified of your follow, and if you have a public list of follows, that can be updated too.
+
+This is out of scope for this post, but I think core side-effects like this need to be clearly defined, and we also need a clear way of defining new side-effects as extensions.""" ;
+  as:published "2015-05-20T14:32:21+0100"^^xsd:datetime ;
+  as:tag "posts", "activities", "activitystreams2", blog:Doing, "microformats2", "as2", "social web", "activitystreams", "socialwg", "indieweb", "slogd", "hacking" ;
+  as:name "Generating an ActivityStream" ;
+  as:content """<!---
+tags: activitystreams,activitystreams2,as2,social web,socialwg,activities,posts,indieweb,microformats2,hacking,slogd
+list: doing
+-->
+
+# Generating an ActivityStream
+
+## Part one: posts-for-all-the-things
+
+If you've been paying attention to me IRL or in IRC lately, you'll have had me try to persuade you that activities and posts are basically the same thing. People advocating post-centric views and people advocating activity-centric views are really describing the same thing from different angles, and with slightly different data models.
+
+An activity looks generally like:
+
+![Activity structure](https://rhiaro.co.uk/posts/201505activitystream/activity_blank.png)
+
+And a post looks generally like:
+
+![Post structure](https://rhiaro.co.uk/posts/201505activitystream/post_blank.png)
+
+Colour coding indicates what correlates between the two. Differences:
+
+|                                    | Activity                           | Post                        |
+| ---------------------------------- | ---------------------------------- | --------------------------- |
+| **type**                           | explicit                           | implied by properties       |
+| **relationship to another object** | `object`                           | value of arbitrary property |
+| **meta**                           | some on activity, some on `result` | all on post                 |
+
+But you can see that the data they contain are basically the same. Bear with me.
+
+### What are activities for?
+
+To propagate changes through a network. To tell people that somebody did something.
+
+### What are posts for?
+
+Posts are content, an end in themselves.
+
+### Who cares?
+
+As someone who just wants to publish stuff and interact on the web, do I care if I'm creating and pushing around posts, or activities? Probably not. I just want to do stuff, and have people see it.
+
+As a developer, I want to post objects around that contain as much data as needed, and no more. I want the right people to know when something has changed. Whether I prefer to do this with activities or posts (or JSON or HTML) is, as far as I see it, personal preference. I don't think there's an inherant advantage to one over the other.
+
+### So which to start with?
+
+Starting with a blog perspective, the most important thing is that people see my content. Posts are my content, so I start there.
+
+* I create a post, which are objects with various properties.
+* If I want to explicitly notify someone of a post - because I'm replying to them, favouriting, bookmarking, sharing, tagging, etc, I send them a [webmention](http://indiewebcamp.com/webmention).
+  * The reciever is then free to act upon this as they like: display my post on their site, update their own internal friends list, add my post to a collection, ignore it completely, or whatever.
+* If I want to make a general announcement that something has changed on my site (eg. a new post) I either use PuSH and the hub lets subscribers know, or I don't do anything, and wait for interested parties to pull (visit my homepage, or open their reader) and find out for themselves.
+
+![A new post](https://rhiaro.co.uk/posts/201505activitystream/post_create.png)
+
+For humans, the posts are displayed in html, and for machines they're marked up with minimal microformats, which allows a reader such as [Woodwind](http://reader.kylewm.com/) to parse out the relevant information and display however necessary. (Mine are also avaiable as RDF, but to the best of my knowledge nobody has built a blog reader that consumes RDF yet).
+
+In the ActivityStreams model, rather than creating posts directly, the user performs some *activity* which may generate as a side-effect a post. The activty could be something like `Post`, `Share`, `Like` (with many other terms currently in the vocab), with an optional `target` of an object being acted upon, and an optional `result` of a new object being created. Upon creation, the *activity* is sent by the server to the servers of anyone who is expected to receive it - either a default list such as people who have subscribed to the author, or a specific list of other people specified when the activity is created, or anyone mentioned or replied-to etc. Anyone for whom the activity ends up on their inbox might get a notification, and their server can fetch the associated post for them.
+
+![A new create activity](https://rhiaro.co.uk/posts/201505activitystream/activity_create.png)
+
+Not all activities generate a `result` post and some activities generate a `result` that is the same as the `object`. In these cases, I would argue that an activity == a post...
+
+Currently, when I like something I create a like post, that looks like this:
+
+![Like post](https://rhiaro.co.uk/posts/201505activitystream/post_like.png)
+
+A like *activity* looks like this:
+
+![Like activity](https://rhiaro.co.uk/posts/201505activitystream/activity_like.png)
+
+See how similar they are?!
+
+So given this apparent direct mapping between posts and activities...
+
+### Posts as activities
+
+Dreaming of interoperability with [ActivityPump](http://w3c-social.github.io/activitypump/) implementations, I want to generate AS2.0 compliant activities that I can send out. I stuck to super basic representations for now, nesting as little as possible (figuring everything with a URI can be dereferenced anyway, so all of the data doesn't need to be present in the first layer of JSON).
+
+So for a new post such as:
+
+```
+<article class="h-entry">
+  <h1 class="p-name">Post title</h1>
+  <div class="e-content">
+    <p>This is a post!</p>
+  </div>
+  <time class="dt-published" datetime="2015-05-15T13:06:00+02:00"><a href="https://rhiaro.co.uk/2015/05/a-post" class="u-url u-uid">15th May 2015 13:06</a></time>
+  <p class="h-card p-author p-name"><a href="https://rhiaro.co.uk/about#me" class="u-url">Amy Guy</a></p>
+</article>
+```
+
+The activity generated looks like:
+
+```
+{
+  "@type": "Post",
+  "published": "2015-05-15T13:06:00+02:00",
+  "actor": "https://rhiaro.co.uk/about#me",
+  "object": "https://rhiaro.co.uk/2015/05/a-post",
+  "result": {
+    "@id": "https://rhiaro.co.uk/2015/05/a-post"
+  }
+}
+```
+
+With no explicit audience specified, an ActivityPump compliant server would post this to the inboxes of all of my followers. *Their* server would see the new activity and insert it into their feed; they could click it and view the object (the post). Note that the `object` of the activity and the `result` here are the same, so there's some redundancy.
+
+For a like post - because I start with posts, I keep the `result` of the activity as the like post and retain this redundancy, though this isn't necessary and (see diagram above) you could in fact consider the activity to be equivalent to the like post, and use the ID of the activity to interact with it (if someone wanted to like my like, etc). I have no explicit post types, so it's implicitly considerd a 'like' post due to the `like-of` microformats property:
+
+```
+<article class="h-entry">
+  <p class="p-name e-content">I like <a href="https://theperplexingpariah.co.uk/2015/05/a-post" class="u-like-of">Jessica's post</a>.</p>
+  <time class="dt-published" datetime="2015-05-15T13:06:00+02:00"><a href="https://rhiaro.co.uk/2015/05/a-like" class="u-url u-uid">15th May 2015 13:06</a></time>
+  <p class="h-card p-author p-name"><a href="https://rhiaro.co.uk/about#me" class="u-url">Amy Guy</a></p>
+</article>
+```
+
+And the activity:
+
+```
+{
+  "@type": "Like",
+  "published": "2015-05-15T13:06:00+02:00",
+  "actor": "https://rhiaro.co.uk/about#me",
+  "object": "https://theperplexingpariah.co.uk/2015/05/a-post",
+  "result": {
+    "@id": "https://rhiaro.co.uk/2015/05/a-like"
+  }
+}
+```
+
+In this case, as well as any explicit or default audience specified, my server would post this activity to Jessica's inbox, whether Jessica is following me or not, as it's a like of her post. Her server can notify her, insert this into her feed, and it's also her server's job to send this activity out to everyone (probably Jessica's followers) who recieved the *original* post (the one I'm liking), so the 'like' counter can be incremented consistently for everyone, whether they know you or not.
+
+Without activities (my current setup), I'd send a webmention to Jessica, and there's nothing specified about how her server should handle this (beyond checking it's valid), so propagating the like out to everyone who had seen her post wouldn't necessarily happen. However, she is likely to display the number of 'likes' on her post, so a reader could *pull* the new number of likes each time anyone viewed it (or poll continuously if it wanted a live-update), which puts a lot of burden on the *client* rather than the server.
+
+### Microformats to ActivityStreams
+
+So I generate [activities like this for all of my posts](https://rhiaro.co.uk/activitiesjson.php) so far. As I removed all explicit post types from my storage, I rely only on the *properties* of a post to decide how to display it. I implemented similar rules to generate the activity types required by AS2.0. These rules cascade:
+
+* `name` exists (object has a title) -> `Post`
+* `location` exists -> `Arrive`
+* `like-of` exists -> `Like`
+* `bookmark-of` exists -> `Save`
+* `repost-of` exists -> `Share`
+* otherwise -> `Post`
+* `in-reply-to` exists and has `category` "rsvp" -> `Accept`
+  * otherwise -> `Respond`
+
+I also check nameless posts for `eat` and `sleep` tags, as these indicate a lifelog post for eating or sleeping, and use types `_:Consume` and `_:Sleep` (my own namespace, as AS2.0 doesn't have these types. TODO: Reuse an existing vocab for these). I'll be adding running, yoga, hiking, listening to music and committing code imminantly, so I might need more activity types. I probably need to model these better than relying on tags (but... maybe not. We'll see).
+
+### Known issues
+
+If you noticed that the `object` of a `Consume` activity is a blog post, you're a semantic pedant, and you're right, this doesn't make sense. The next best option given the data I currently store is the object being blank node with a label of the contents of the post, eg:
+
+```
+{
+  "@type": "Consume",
+  "published": "2015-05-15T13:06:00+02:00",
+  "actor": "https://rhiaro.co.uk/about#me",
+  "object": {
+    "title": "An apple"
+  },
+  "result": {
+    "@id": "https://rhiaro.co.uk/2015/05/a-nom"
+  }
+}
+```
+
+But ideally the `object` would have it's own URI. This probably *isn't* something I'm going to do any time soon.
+
+Note an object (a post) is still created as a `result` of the `Consume` activity. This isn't necessary - as with likes, the pure activity could be sent and displayed to people - but since I start with posts, I wouldn't drop them.
+
+If you're squinting at my `location` -> `Arrive` rule, note my [own special rules for displaying checkins](https://rhiaro.co.uk/2015/05/checkins). This is subject to change.
+
+## Part two: Maybe not posts-for-all-the-things
+
+### Activities as posts
+
+Sometimes, when you want to do something on the web, it doesn't *feel* like making a post. For example, if I want to delete a blog post, I need to tell everyone who received it that it's deleted. In indiewebland, you just delete the post, return a 410, and send a webmention to anyone who needs it. However, this doesn't leave any record of when it was deleted (or when it was created). You might have noticed I like [tracking *everything*](https://rhiaro.co.uk/all), so the ActivityPump way of deleting - which retains a trace of the deletion - appeals to me:
+
+```
+{
+  "@type": "Delete",
+  "@id": "https://rhiaro.co.uk/2015/05/delete-bad-post",
+  "published": "2015-05-15T13:06:00+02:00",
+  "actor": "https://rhiaro.co.uk/about#me",
+  "object": "https://rhiaro.co.uk/2015/05/bad-post",
+  "result": {
+    "@id": "https://rhiaro.co.uk/2015/05/bad-post",
+    "deleted": "2015-05-15T13:06:00+02:00"
+  }
+}
+```
+
+(In the current ActivityPump spec, the `result` is a shell of the object that is being deleted, so the URI of the deleted post is retained with a deletion date attached, but all other properties deleted).
+
+But when you think about deleting a post, you're *not* thinking about creating a delete post which references the post you want to delete (if this *is* how you think about it, I'd love to hear from you). You want to hit delete, and have everyone suitably notified. The same for updates/edits/modifications (of your *own* post - creating a diff post as an edit to somene else's post or a wiki page is a different matter).
+
+Nonetheless, if I wanted to display the delete activity for humans, I could mark it up in HTML with microformats, just as if it were a post, something like:
+
+```
+<article class="h-entry">
+  <p class="p-name e-content">I deleted <a href="https://rhiaro.co.uk/2015/05/bad-post" class="u-delete-of">a post</a>.</p>
+  <time class="dt-published" datetime="2015-05-15T13:06:00+02:00"><a href="https://rhiaro.co.uk/2015/05/delete-bad-post" class="u-url u-uid">15th May 2015 13:06</a></time>
+  <p class="h-card p-author p-name"><a href="https://rhiaro.co.uk/about#me" class="u-url">Amy Guy</a></p>
+</article>
+```
+
+Note:
+* I have invented microformat property `u-delete-of`, this doesn't currently exist.
+* There is content in the HTML version that is not present in the JSON version. Probably a `content` (or existing `displayName`) property on the activity could be used for this. Where this content comes from could be implementation-dependant, with some sensible default fallback.
+
+So *even though they're basically the same* thinking about 'delete' as an *activity* rather than a post feels easier *and* it is still possible to treat as a post for display if you need to.
+
+At the moment I store a modified date and just update this whenever I edit a post. For now I plan to add something that checks all posts for a `updated` date and slots `Update` activities into the stream (even though there is no explicit `update-of` post). When I can update posts properly with micropub, I will generate the update activity then.
+
+There are other activities ((un)follow/add/remove/join/leave) that I also think would be simpler to think of in this way. I don't currently know of anyone in indieweb who is displaying posts for these marked up with microformats, though I have a couple of [experimantal follows posts](https://rhiaro.co.uk/follows) with `u-follow-of`.
+
+## Next
+
+Once I have AS2.0 compliant activities, I could post them to inboxes of [ActivityPump]() compliant servers. Someone should implement one please :)
+
+## Addendum
+
+Certain activities (like `Follow`) may trigger special side-effects (a user is added to another users `followers` collection according to pump.io and ActivityPump (not ActivityStreams)). In indieweb, if you want to follow someone you type their URL into a reader and it fetches their content. What's missing is the reader being able to post a follow activity to your site via micropub so that others (including who you have just followed) can be notified of your follow, and if you have a public list of follows, that can be updated too.
+
+This is out of scope for this post, but I think core side-effects like this need to be clearly defined, and we also need a clear way of defining new side-effects as extensions.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

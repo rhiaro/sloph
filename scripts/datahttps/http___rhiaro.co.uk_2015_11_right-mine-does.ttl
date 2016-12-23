@@ -1,0 +1,22 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/11/right-mine-does>
+  sioc:reply_of <http://kongaloosh.com/e/2015/11/10/yeah-my-micropub-endpoint-was-the-first-thing-i-built-so-that-i-could-just-use-quill-instead-of-making-my-own-forms> ;
+  blog:tmpcontent """Right, mine does a ton of metadata parsing, I put everything in the content field, it's kind of awful, but also works great..
+
+![Quill metadata hack](https://rhiaro.co.uk/posts/151110_quill.png)""" ;
+  as:published "2015-11-10T23:03:40+0000"^^xsd:datetime ;
+  as:tag "editor", "client", "indieweb", "slogd", "hacking" ;
+  as:content """<!---
+reply-to: http://kongaloosh.com/e/2015/11/10/yeah-my-micropub-endpoint-was-the-first-thing-i-built-so-that-i-could-just-use-quill-instead-of-making-my-own-forms
+tags: indieweb,editor,client,slogd,hacking
+-->
+
+Right, mine does a ton of metadata parsing, I put everything in the content field, it's kind of awful, but also works great..
+
+![Quill metadata hack](https://rhiaro.co.uk/posts/151110_quill.png)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

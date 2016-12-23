@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/bread-jalapeno>
+  a asext:Consume, as:Activity ;
+  as:name "Bread and jalapeno daiya" ;
+  as:published "2016-07-30T11:35:34-04:00"^^xsd:dateTime, "2016-07-30T11:35:34-04:00" ;
+  as:tag "bread", <https://rhiaro.co.uk/tags/bread> .
+

@@ -1,0 +1,20 @@
+{
+    "h": "entry",
+    "content": "@w3c Parents early adopters, Web around as long as remember, made first website age 10, now work for w3c ^^ ",
+    "in-reply-to": "https://twitter.com/w3c/status/761477099714666496",
+    "category": [
+        "web",
+        "life",
+        "w3c"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-08-05T22:49:44+01:00",
+    "@id": "http://blog.rhiaro.co.uk/w3c-parents-early",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/w3c-parents-early"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-05T22:49:44+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

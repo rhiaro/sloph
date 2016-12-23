@@ -1,0 +1,14 @@
+{
+    "h": "entry",
+    "like-of": "https://twitter.com/jamesdoc/status/699719425084297217",
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-16T22:29:26+00:00",
+    "@id": "http://blog.rhiaro.co.uk/56c3a2c605aba",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56c3a2c605aba"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-16T22:29:26+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

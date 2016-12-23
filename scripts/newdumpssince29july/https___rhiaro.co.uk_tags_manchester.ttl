@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/manchester>
+  a as:Collection ;
+  as:name "manchester" ;
+  as:items <https://rhiaro.co.uk/2016/08/train-from>, <https://rhiaro.co.uk/2016/08/flight-from> .
+

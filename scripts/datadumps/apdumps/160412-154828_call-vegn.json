@@ -1,0 +1,19 @@
+{
+    "h": "entry",
+    "content": "Call for the veg*n-inclined at WWW2016, interested in a meal tomorrow night, ping!",
+    "category": [
+        "www2016",
+        "vegan",
+        "montreal"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-12T15:48:28+01:00",
+    "@id": "http://blog.rhiaro.co.uk/call-vegn",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/call-vegn"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-12T15:48:28+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

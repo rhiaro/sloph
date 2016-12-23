@@ -1,0 +1,9 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brid-gy.appspot.com/like/twitter/rhiaro/637342820857212929/14741253>
+  blog:mentions <https://rhiaro.co.uk/2015/08/kitbhttpkitbpw> ;
+  as:published "2015-08-29T22:57:31+01:00"^^xsd:datetime ;
+  as:actor <https://twitter.com/alanjohndix> .
+

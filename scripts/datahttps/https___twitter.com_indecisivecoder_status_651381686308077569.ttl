@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/indecisivecoder/status/651381686308077569>
+  sioc:reply_of <https://rhiaro.co.uk/2015/10/visiting> ;
+  as:published "2015-10-06T14:01:10+01:00"^^xsd:datetime ;
+  as:name "@nicolagreco @rhiaro yes, we do. I was at Edinburgh too" ;
+  as:content """[@nicolagreco][1] [@rhiaro][2] yes, we do. I was at Edinburgh too
+
+[1]: https://twitter.com/nicolagreco
+[2]: https://twitter.com/rhiaro
+""" ;
+  as:actor <https://twitter.com/indecisivecoder> .
+

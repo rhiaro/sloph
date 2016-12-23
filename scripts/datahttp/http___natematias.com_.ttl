@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://natematias.com/>
+  foaf:name "J. Nathan Matias" ;
+  foaf:homepage <http://natematias.com/> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/64b5e25f93ce418437ac8306e2fdb58222527b7b2bf078d272e69138d4404686.png> .
+

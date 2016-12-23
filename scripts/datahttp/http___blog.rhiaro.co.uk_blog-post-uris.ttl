@@ -1,0 +1,43 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/blog-post-uris>
+  dcterms:title "Blog Post URIs" ;
+  dcterms:created "2014-12-28T19:44:00+0000"^^xsd:datetime ;
+  dcterms:modified "2014-12-28T19:44:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 28th December 2014, 19:44
+last-modified: 28th December 2014, 19:44
+type: BlogPost
+tags: hacking,slogd,blog,post,socialweb,linked data,semantic web,pedantry,uri
+list: doing
+-->
+
+# Blog Post URIs
+
+My instinct is telling me to separate a 'raw' blog post from a rendered version which includes html markup, css styles, replies from other people, a header, footer, maybe links to other pages on my website on a menu somewhere, ...etc. Because an instance of a blog post is *not* the same as the post mashed into an HTML page along with replies and other stuff. **The replies can stand alone on the social web, so the original post should be able to.**
+
+So 'raw' post URIs are in the form `http://blog.rhiaro.co.uk/unique-post-slug` and the rendered versions are found at `http://rhiaro.co.uk/yyyy/mm/unique-post-slug`. The rendered versions have a slashy-datey URL because it makes it obvious that you can filter back to temporal aggregates by removing parts of the URL. It's just plumbing and a bit of UX++, which is partly why I don't want to use this format as the URI for the blog itself (I might change my plumbing one day).
+
+Dereferencing the rendered URI obviously returns the rendered page in all its glory.
+
+Dereferencing the 'raw' URI should still return a document, not redirect, because a blog post *can* be retrieved over HTTP. But what exactly should it return? A bunch of plain text turtle maybe; all the triples with the URI as the subject. Or minimally marked up HTML (including microformats, I suppose, and maybe RDFa). I guess I just have an arbitrary decision to make here.
+
+So what's the relationship between the 'raw' URI and the rendered one? Maybe `<raw> foaf:primaryTopicOf <rendered>` and `<rendered> foaf:primaryTopic <raw>`? (Or maybe I should coin a new `renderedAt` property to make the relationship clearer).
+
+But when people want to start sending replies from their own sites, they're automatically going to want to use the rendered URI as the subject of their in-reply-to, however they do it, which would be technically incorrect; they should be replying to the blog post itself, not this rendering of it. Or maybe this is a context in which it doesn't matter, and the 'raw' and the rendered are essentially `sameAs` each other.
+
+Maybe I call the 'raw' a permalink, and make it clear on the rendered page, and hope people point their replies at the right place. 
+
+But if people do muddle the blog post and the (essentially) page-about-the-blog-post in their interactions with it, it probably doesn't matter; I can disambiguate them appropriately on my end. Maybe do some contextual reinterpretation experiments in the process (watch this space).
+
+How do other people handle this? Well the people who are replying to each others' blog posts from their own sites are [indieweb](http://indiewebcamp.com) and they're not necessarily big on the linked data or pedantic arguments about what a URI 'means'. **Todo**: Find out if anyone has implemented a blog or similar with [LDP](http://www.w3.org/2012/ldp/wiki/Main_Page).
+""" ;
+  sioc:topic "hacking", "slogd", "blog", "post", "socialweb", "linked data", "semantic web", "pedantry", "uri", blog:Doing ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2014/12/blog-post-uris> .
+

@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/tacos-lettuce>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-23T19:12:48-04:00"^^xsd:dateTime, "2016-07-23T19:12:48-04:00" ;
+  as:tag "tacos", "tofu" ;
+  as:name "Tacos: lettuce, black beans, tofu, mushrooms, habanero, fresno pepper, corn tortillas; fancy ginger beer" .
+

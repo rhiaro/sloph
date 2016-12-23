@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56b0d7b324f77>
+  a as:Add ;
+  as:published "2016-02-02T16:22:11+00:00"^^xsd:dateTime ;
+  as:tag "knowledge management", "ed summers", "identity", "privacy", "social science", "linked data" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:object <http://inkdroid.org/> .
+

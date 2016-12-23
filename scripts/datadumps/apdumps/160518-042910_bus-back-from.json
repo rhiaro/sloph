@@ -1,0 +1,20 @@
+{
+    "h": "entry",
+    "content": "On the bus back from Venice Beach to Santa Monica, serious FOMO on all the vegan restaurants / ice cream shops / food trucks I'm passing. Must exercise restraint.",
+    "category": [
+        "travel",
+        "food",
+        "vegan",
+        "ca2016"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-05-18T04:29:10+01:00",
+    "@id": "http://blog.rhiaro.co.uk/bus-back-from",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/bus-back-from"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-18T04:29:10+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

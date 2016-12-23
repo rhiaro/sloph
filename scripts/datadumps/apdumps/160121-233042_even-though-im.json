@@ -1,0 +1,20 @@
+{
+    "h": "entry",
+    "content": "Even though I'm fully sold on the whole selfdogfooding thing, I'm continuously impressed at how many suddenly-urgent bugs are being thrown up by using the subject of our paper as the tool to write the paper.",
+    "category": [
+        "hacking",
+        "selfdogfooding",
+        "academia",
+        "linked research"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-01-21T23:30:42+00:00",
+    "@id": "http://blog.rhiaro.co.uk/even-though-im",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/even-though-im"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-21T23:30:42+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

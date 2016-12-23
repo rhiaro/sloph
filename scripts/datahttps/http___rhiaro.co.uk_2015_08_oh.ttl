@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/08/oh>
+  blog:tmpcontent "OH at [Prewired](http://www.prewired.org): Learn Python, it can do all the things. Except some things. But learn Python." ;
+  as:published "2015-08-05T18:28:45+0100"^^xsd:datetime ;
+  as:tag "kids", "teaching", "prewired" ;
+  as:content """<!---
+tags: prewired,teaching,kids
+-->
+
+OH at [Prewired](http://www.prewired.org): Learn Python, it can do all the things. Except some things. But learn Python.""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/628981205741010944/507922769>, <https://twitter.com/indecisivecoder/status/628987265512009728> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

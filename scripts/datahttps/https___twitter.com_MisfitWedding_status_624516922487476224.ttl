@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/MisfitWedding/status/624516922487476224>
+  sioc:reply_of <https://rhiaro.co.uk/2015/07/steampunk-vegan> ;
+  as:published "2015-07-24T10:50:11+01:00"^^xsd:datetime ;
+  as:name "@rhiaro Love the photos!" ;
+  as:content """[@rhiaro][1] Love the photos!
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://www.misfitwedding.com/> .
+

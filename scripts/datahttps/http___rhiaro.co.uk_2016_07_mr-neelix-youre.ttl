@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/mr-neelix-youre>
+  as:published "2016-07-22T05:45:30+01:00"^^xsd:dateTime ;
+  as:tag "voyager", "trek", "star", "life" ;
+  as:content "Mr Neelix you're wallowing in useless remorse. I'll have to ask you to stop." .
+

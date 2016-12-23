@@ -1,0 +1,30 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/found-vegan-frys>
+  dcterms:created "2015-08-30T13:29:08+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: vegan,milkshake,edinburgh,http://twitter.com/shakeawayland
+cc: http://twitter.com/taradoesstuff_
+location: http://shakeaway.com
+-->
+
+I found vegan Fry's Peppermint Cream milkshake at [Shakeaway's](http://twitter.com/shakeawayland) in Edinburgh
+
+![chub](http://rhiaro.co.uk/photos/150830_shake.jpg)""" ;
+  sioc:topic "http://twitter.com/shakeawayland", "edinburgh", "milkshake", "vegan" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/08/found-vegan-frys> ;
+  as:location <http://shakeaway.com> ;
+  as:latitude "55.94981" ;
+  as:longitude "-3.20563" ;
+  blog:tmpcontent """I found vegan Fry's Peppermint Cream milkshake at [Shakeaway's](http://twitter.com/shakeawayland) in Edinburgh
+
+![chub](http://rhiaro.co.uk/photos/150830_shake.jpg)""" ;
+  as:cc <http://twitter.com/taradoesstuff_> .
+

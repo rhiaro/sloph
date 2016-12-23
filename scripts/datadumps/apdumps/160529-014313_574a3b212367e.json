@@ -1,0 +1,14 @@
+{
+    "h": "entry",
+    "repost-of": "https://twitter.com/rhiaro/status/736307281172660224",
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-05-29T01:43:13+01:00",
+    "@id": "http://blog.rhiaro.co.uk/574a3b212367e",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/574a3b212367e"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-29T01:43:13+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

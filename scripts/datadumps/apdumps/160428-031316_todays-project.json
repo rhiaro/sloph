@@ -1,0 +1,25 @@
+{
+    "h": "entry",
+    "content": "Today's project was updating the [dokieli](https://dokie.li) homepage to make it not a wall of text",
+    "category": [
+        "dokieli",
+        "linked",
+        "research",
+        "hacking",
+        "css",
+        "html",
+        "coding",
+        "project",
+        "github"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-28T03:13:16+01:00",
+    "@id": "http://blog.rhiaro.co.uk/todays-project",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/todays-project"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-28T03:13:16+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

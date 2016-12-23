@@ -1,0 +1,48 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/many-big-trees> dct:created "2016-05-17T20:40:01+01:00"^^<xsd:dateTime> ;
+    dct:title "Many big trees (Santa Cruz 03)\r" ;
+    sioc:content """# Many big trees (Santa Cruz 03)\r
+\r
+Deflating in beautiful Hidden Peak teashop. No photos, because no electronics allowed! I'm sinking into a soft, velvety plum red chair with dark wooden arms. The decor is tea paraphenelia, Asian rugs, paneling and wood carving. I can't place the music; it has a Middle Eastern Lint and is chanty. In the front of the shop are tea hardware and decor for sale as well as shelves of books. Lamps and dragons. The seating ranges from wooden chairs and stools to squishy (yet still elegant) armchairs and couches. The lighting is soft with a burgundy ambiance from the walls and dark wood flooring and furniture.\r
+\r
+I'm sipping Dama, a Yunnan, and couldn't resist picking one of their four raw vegan desserts (an orange, cardamom cup with cashew cream). They have $400+ (per serving) pu-erhs on the menu, which made me smile. They're very serious about tea here. As anyone should be. I came across this place by accident as I wandered through town looking for a place to sit, and it's perfect. There seems to be a guy here who has brought his tea-novice friends for a pu-erh tasting. That's a test of a friendship.\r
+\r
+I'm unwinding and sinking and stretching because I walked about 15 miles today. I'm glad I managed to drag myself out of bed for the 0830 35A to Big Basin. I followed [this guide](http://www.sensibletransportation.org/bbasin/) and started out on the Sunset Trail, through forests of giant Redwoods. I deviated by accident to Timm's Creek and doubled back to see Silver Falls and Golden Falls after Berry Creek Falls. Despite this, I remained between one and two hours ahead of schedule according to the times given in the guide. I also detoured (deliberately this time) to Sunset Camp; the guide said not to bother but the trail up was very pretty. A change in foliage, footing and lighting from the forest.\r
+\r
+The stretch that followed Waddell Creek was long and samey. But the guide hadn't prepared me for the stretch around a precarious edge of a mountain with a beautiful view of Waddell Beach. Seeing the destination made the last few miles a little easier; especially when the destination was glittering sea and sand.\r
+\r
+Ready to thrust my feet into the ocean, I came across park rangers with a variety of local snakes. My new friend Bandita (a King Snake) investigated me throughly before folding herself in half and nesting under my hoodie, stretched around my bank in the nook left by my backpack, with her middle poking out one end and her head and tail out of the other. I patiently stood for about 15 minutes as other hikers came and went, none committing to take over as snake-bed. Eventually I had to wake her so I could go collapse on the beach.\r
+\r
+I had 45 minutes before the number 40 bus back to Santa Cruz. I plunged my feet into the mouth of the creek and ate leftover Saturn Cafe pie. When  heading back to the bus I saw humpback whales spraying and playing in the surf. \r
+\r
+I had no phone signal all day, and after the 40 minute bus ride I walked through downtown looking for somewhere to sit down and catch up. And  yet it's somehow a relief that Hidden Peak tells me I'm not allowed to.\r
+\r
+Oh, I did only eat old bagels all day after all. And a banana, leftover noodles, some chips from the bus station, and leftover pie. Later... pizza.""" ;
+    sioc:topic "basin",
+        "beach",
+        "big",
+        "ca2016",
+        "cruz",
+        "hidden",
+        "peak",
+        "redwoods",
+        "santa",
+        "tea",
+        "travel",
+        "usa",
+        "vegan",
+        "walking" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/many-big-trees> .
+

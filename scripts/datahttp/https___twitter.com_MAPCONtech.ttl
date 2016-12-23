@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/MAPCONtech>
+  foaf:name "MAPCON Technologies" ;
+  foaf:homepage <https://twitter.com/MAPCONtech> ;
+  foaf:depiction <https://twitter.com/MAPCONtech/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/b60cd2941e372728c2852e9c82a674559c1f59d06fe6a119987e379f191c232b.jpeg> .
+

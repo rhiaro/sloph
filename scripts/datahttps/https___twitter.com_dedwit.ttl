@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/dedwit>
+  foaf:name "Djellel Difallah" ;
+  foaf:homepage <https://twitter.com/dedwit> ;
+  foaf:depiction <https://twitter.com/dedwit/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/be61e0cdff43669c151bee2a08a5f06f590926b4929ab1c484e564383d26a1a9.png> .
+

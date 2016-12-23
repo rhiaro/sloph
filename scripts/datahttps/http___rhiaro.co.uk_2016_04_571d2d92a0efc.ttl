@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/571d2d92a0efc>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-04-24T16:32:50-04:00"^^xsd:dateTime ;
+  as:tag "boston", "t", "travel" ;
+  blog:cost "$10" ;
+  as:summary "T-pass topup" .
+

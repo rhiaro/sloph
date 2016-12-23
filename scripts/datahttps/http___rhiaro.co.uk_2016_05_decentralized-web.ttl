@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/2016/05/decentralized-web>
+  a as:Accept ;
+  as:published "2016-05-18T16:39:17-07:00" ;
+  as:name "Going to Decentralized Web Summit" ;
+  as:object <http://www.decentralizedweb.net/> .
+

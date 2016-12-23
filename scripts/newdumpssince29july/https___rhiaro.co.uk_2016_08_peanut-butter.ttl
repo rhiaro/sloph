@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/peanut-butter>
+  a asext:Consume, as:Activity ;
+  as:name "Peanut butter coconut cookie and soya milk" ;
+  as:published "2016-08-12T20:07:14-04:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/cookie> .
+

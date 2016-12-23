@@ -1,0 +1,15 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2016/05/6th-social-wg-f2f>
+  a as:Travel ;
+  as:published "2016-05-18T16:41:05-07:00", "2016-05-18T16:41:05-07:00"^^xsd:dateTime ;
+  as:tag "attendee", "decentralised social web", "decentralised web", "event", "phd", "rsvp", "social web", "social web working group", "socialwg", "socl2016", "speaker", "w3c" ;
+  as:name "6th Social WG F2F" ;
+  as:startTime "2016-06-06T09:00:00-07:00" ;
+  as:endTime "2016-06-07T17:00:00-07:00" ;
+  as:location <http://dbpedia.org/resource/Portland,_Oregon> ;
+  blog:rsvp "yes" ;
+  as:inReplyTo <https://www.w3.org/wiki/Socialwg/2016-06-06> .
+

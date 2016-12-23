@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/digitalWestie/status/651164787255054336>
+  dcterms:title "@rhiaro not bad, congrats!" ;
+  dcterms:created "2015-10-05T23:39:17+01:00"^^xsd:datetime ;
+  dc:creator <http://www.rorygianni.me.uk/> ;
+  sioc:content """[@rhiaro][1] not bad, congrats!
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/10/visiting> .
+

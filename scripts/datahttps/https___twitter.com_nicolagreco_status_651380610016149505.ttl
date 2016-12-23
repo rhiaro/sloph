@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/nicolagreco/status/651380610016149505>
+  sioc:reply_of <https://rhiaro.co.uk/2015/10/visiting> ;
+  as:published "2015-10-06T13:56:54+01:00"^^xsd:datetime ;
+  as:name "@indecisivecoder @rhiaro do you know each other? :O" ;
+  as:content """[@indecisivecoder][1] [@rhiaro][2] do you know each other? :O
+
+[1]: https://twitter.com/indecisivecoder
+[2]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://nicola.io/> .
+

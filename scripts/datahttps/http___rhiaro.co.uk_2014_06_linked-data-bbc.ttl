@@ -1,0 +1,24 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2014/06/linked-data-bbc>
+  as:published "2014-06-30T12:00:00+0000"^^xsd:datetime ;
+  as:tag "internship", "bbc", "work", "data", "semantic web", "ldp", blog:Done, "linked data" ;
+  as:name "Linked Data at the BBC" ;
+  as:content """<!---
+published: 30th June 2014, 12:00
+type: BlogPost
+tags: work,bbc,linked data,semantic web,ldp,internship,data
+list: done
+-->
+
+# Linked Data at the BBC
+
+I've been offered a 3 month contact at the BBC, to work as a data architect on thier Linked Data Platform team in London! 
+
+The BBC uses linked data to model all of the things of importance to their audience: people, places, events, news storylines, and general concepts which are used to group things together through tags. A lot of the power is internal only right now, used by journalists for categorising creative works, but more and more audience-facing parts of the website are powered by linked data.
+
+I'm excited about seeing how linked data works in 'the real world' (as opposed to academia), and really interested to see how various semantic web theories translate in practice.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

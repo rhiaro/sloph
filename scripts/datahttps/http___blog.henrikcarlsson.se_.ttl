@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.henrikcarlsson.se/>
+  foaf:name "Henrik Carlsson" ;
+  foaf:homepage <http://blog.henrikcarlsson.se/> ;
+  foaf:depiction <https://twitter.com/synvila/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/1b998dab96ba0f1b51d9a8886838f0276d543432fea68e51f9056706541a7c52.png> .
+

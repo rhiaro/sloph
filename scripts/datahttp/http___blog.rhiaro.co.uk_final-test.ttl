@@ -1,0 +1,13 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/final-test>
+  dcterms:title "Final test" ;
+  dcterms:created "2016-01-02T07:33:52+00:00"^^xsd:dateTime ;
+  sioc:content """# Final test
+
+This time without spaces.""" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/final-test> .
+

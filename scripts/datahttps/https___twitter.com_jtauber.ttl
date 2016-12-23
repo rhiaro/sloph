@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/jtauber>
+  foaf:name "James Tauber" ;
+  foaf:homepage <https://twitter.com/jtauber> ;
+  foaf:depiction <https://twitter.com/jtauber/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/45c4c1abca0e5b2e8b289553218e833e0de240d9a4405e7ec5f475aec054e1d0.jpeg> .
+

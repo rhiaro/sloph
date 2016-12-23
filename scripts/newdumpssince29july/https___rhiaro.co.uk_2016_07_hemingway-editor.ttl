@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/hemingway-editor>
+  a as:Add ;
+  as:name "Hemingway Editor" ;
+  as:published "2016-07-31T13:32:05+01:00"^^xsd:dateTime ;
+  as:tag "phd", "app", "academia", "writing", <https://rhiaro.co.uk/tags/phd>, <https://rhiaro.co.uk/tags/academia>, <https://rhiaro.co.uk/tags/app>, <https://rhiaro.co.uk/tags/writing> ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:object <http://www.hemingwayapp.com/> .
+

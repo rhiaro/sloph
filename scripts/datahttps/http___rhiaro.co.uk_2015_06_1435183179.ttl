@@ -1,0 +1,20 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/06/1435183179>
+  as:published "2015-06-24T22:59:39+0100"^^xsd:datetime ;
+  as:tag "edinburgh", "travel", "bus", "uk", "glasgow", "scotland" ;
+  as:startTime "2015-06-26T11:45:00+0100"^^xsd:datetime ;
+  as:endTime "2015-06-26T13:04:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Glasgow" ;
+  blog:endLocation "http://dbpedia.org/resource/Edinburgh" ;
+  as:content """<!---
+start: 26th June 2015, 11:45 BST
+end: 26th June 2015, 13:04 BST
+startLocation: http://dbpedia.org/resource/Glasgow
+endLocation: http://dbpedia.org/resource/Edinburgh
+tags: travel,uk,scotland,edinburgh,glasgow,bus
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/56ca1cc57cf4f>
+  a as:Travel ;
+  dcterms:created "2016-02-21T15:21:16-05:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56ca1cc57cf4f> ;
+  as:startTime "2016-02-24T06:45:00+00:00" ;
+  as:endTime "2016-02-24T08:20:00+00:00" ;
+  blog:cost "&pound;35" ;
+  as:published "2016-02-21T15:21:16-05:00" ;
+  as:tag "flight", "journey", "plane", "sociam", "travel", "uk" ;
+  as:origin <http://dbpedia.org/resource/Edinburgh> ;
+  as:target <http://dbpedia.org/resource/Southampton> .
+

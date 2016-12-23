@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/oats>
+  a as:Collection ;
+  as:name "oats" ;
+  as:items <https://rhiaro.co.uk/2016/08/oats-with-peanut>, <https://rhiaro.co.uk/2016/08/oatmeal-with>, <https://rhiaro.co.uk/2016/09/smoothie-banana> .
+

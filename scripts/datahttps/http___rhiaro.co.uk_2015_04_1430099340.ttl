@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/04/1430099340>
+  as:published "2015-04-27T01:49:00+0100"^^xsd:datetime ;
+  as:tag "micropub", "esri", "loqi", "w3c", "socialwg", "indieweb" ;
+  blog:follow_of <http://aaronpk.com> ;
+  as:content """<!---
+published: 27th April 2015, 0149
+tags: indieweb,micropub,esri,loqi,socialwg,w3c
+follow-of: http://aaronpk.com
+-->""" .
+

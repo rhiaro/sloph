@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/claudio_venezia>
+  foaf:name "claudio_venezia" ;
+  foaf:homepage <https://twitter.com/claudio_venezia> ;
+  foaf:depiction <https://twitter.com/claudio_venezia/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/ff78538be8a82f4f413978d5fc955d0f75cd28d445f2a1ad9dc17c515b95ead4.png> .
+

@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://www.meetup.com/veganeventsscotland/>
+  foaf:name "VeganEvents Scotland" ;
+  foaf:homepage <http://www.meetup.com/veganeventsscotland/> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/fd598ba34a4058e52507b110d5284adf00efaddc1ce39c323dc2015b23d06a4d.jpeg> .
+

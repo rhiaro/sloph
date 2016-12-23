@@ -1,0 +1,3 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk> as:updated "1426882365", "1420460322", "1380585600" .

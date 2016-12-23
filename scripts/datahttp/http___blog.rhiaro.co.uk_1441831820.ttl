@@ -1,0 +1,27 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1441831820>
+  dcterms:created "2015-09-09T21:50:20+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,usa,flight,plane,journey,icelandair
+start: 30th September 2015, 13:25 BST
+end: 30th September 2015, 18:35 EST
+startLocation: http://dbpedia.org/resource/Manchester
+endLocation: http://dbpedia.org/resource/Boston
+cost: 408 GBP
+-->""" ;
+  sioc:topic "travel", "usa", "flight", "plane", "journey", "icelandair" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/09/1441831820> ;
+  as:startTime "2015-09-30T13:25:00+0100"^^xsd:datetime ;
+  as:endTime "2015-10-01T00:35:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Manchester" ;
+  blog:endLocation "http://dbpedia.org/resource/Boston" ;
+  blog:cost "408 GBP" .
+

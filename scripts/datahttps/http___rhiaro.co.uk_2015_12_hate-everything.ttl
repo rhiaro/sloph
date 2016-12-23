@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/hate-everything>
+  blog:tmpcontent "i hate everything i hate everything i hate everything i hate everything i hate everything i'm going for vegan corn dogs" ;
+  as:published "2015-12-08T01:04:35+0000"^^xsd:datetime ;
+  as:tag "ssl", "https" ;
+  as:content """<!---
+tags: https,ssl
+-->
+
+i hate everything i hate everything i hate everything i hate everything i hate everything i'm going for vegan corn dogs""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

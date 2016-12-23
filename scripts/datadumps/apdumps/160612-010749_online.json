@@ -1,0 +1,23 @@
+{
+    "h": "entry",
+    "content": "Online advertising right now can't decide whether I'm single and looking to hook up or pregnant. Small victory I guess. I blame whatever my facebook friends are doing.",
+    "category": [
+        "life",
+        "surveillance",
+        "orwell",
+        "advertising",
+        "data",
+        "facebook",
+        "privacy"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-06-12T01:07:49+01:00",
+    "@id": "http://blog.rhiaro.co.uk/online",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/online"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-12T01:07:49+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,27 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/04/3rd-social-web>
+  sioc:reply_of <http://https://www.w3.org/wiki/Socialwg/2015-05-04> ;
+  as:published "2015-04-21T03:00:00+0000"^^xsd:datetime ;
+  as:tag "socialwg", "w3c", "social web", "events", blog:Todo, "travel", "rsvp", "decentralised web", "social web working group", "working group", "paris" ;
+  as:name "3rd Social Web F2F" ;
+  as:startTime "2015-05-04T10:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-05-05T17:00:00+0000"^^xsd:datetime ;
+  as:content """<!---
+published: 21st April 2015, 03:00
+type: BlogPost
+tags: rsvp,paris,travel,decentralised web,w3c,working group,social web working group,socialwg,social web,events
+start: 4th May 2015, 10:00
+end: 5th May 2015, 17:00
+reply-to: https://www.w3.org/wiki/Socialwg/2015-05-04
+list: todo
+-->
+
+# 3rd Social Web F2F
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/olberger/status/608293109609472000>
+  a as:Announce ;
+  as:published "2015-06-09T16:22:33+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: I posted: ESWC2015 summary #eswc2015 #semdev2015 rhiaro.co.uk/2015/06/eswc20â€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <https://twitter.com/olberger> ;
+  as:object <https://rhiaro.co.uk/2015/06/eswc2015> .
+

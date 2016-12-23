@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Hotdog and ginger beer (Original Gravity)",
+    "blog:cost": "$12",
+    "as:tag": [
+        "food",
+        "restaurant",
+        "original gravity",
+        "ca2016",
+        "chi2016"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-07T19:37:54-07:00",
+    "@id": "http://blog.rhiaro.co.uk/572ec7c5d3052",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/572ec7c5d3052"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-07T19:37:54-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,18 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix ns0: <http://rdfs.org/sioc/ns#> .
+
+<https://rhiaro.co.uk/2016/04/reflections>
+  sioc:reply_of <http://cmsw.mit.edu/event/fox-harrell-reflections-on-advanced-identity-representation/> ;
+  a as:Travel ;
+  as:published "2016-04-28T15:42:59-04:00"^^xsd:dateTime, "2016-04-28T15:42:59-04:00" ;
+  as:tag "attendee", "event", "fox harrell", "identity", "media lab", "mit", "phd", "profiles", "rsvp", "social media" ;
+  as:name "Reflections on Advanced Identity Representation - Fox Harrell" ;
+  as:startTime "2016-04-28T17:00:00-04:00" ;
+  as:endTime "2016-04-28T18:00:00-04:00" ;
+  as:location <http://dbpedia.org/resource/Massachusetts_Institute_of_Technology> ;
+  blog:rsvp "yes" ;
+  ns0:reply_of <http://cmsw.mit.edu/event/fox-harrell-reflections-on-advanced-identity-representation/> .
+

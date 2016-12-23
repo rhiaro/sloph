@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/5717b11b18fdf>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-04-20T12:40:25-04:00"^^xsd:dateTime ;
+  as:tag "Ames St Deli", "coffee" ;
+  blog:cost "$7" ;
+  as:summary "2 coffees (Ames St)" .
+

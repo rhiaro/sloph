@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/why-brokkin>
+  as:latitude "45.5207" ;
+  as:longitude "13.58995" ;
+  blog:tmpcontent "Why are you brokkin micropub?" ;
+  as:published "2015-06-04T16:33:13+0100"^^xsd:datetime ;
+  as:tag "test" ;
+  as:content """<!---
+tags: test
+-->
+
+Why are you brokkin micropub?""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

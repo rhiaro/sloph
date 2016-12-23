@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/57238bd0c99ba>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-04-29T12:28:30-04:00"^^xsd:dateTime ;
+  as:tag "food", "food truck", "takeaway" ;
+  blog:cost "$8.50" ;
+  as:summary "Falafel and vine leaves" .
+

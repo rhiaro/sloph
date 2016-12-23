@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/html-view-data>
+  dcterms:created "2015-05-31T09:13:45+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: eswc2015,semdev2015,linked data,ui,http://about.me/essepuntato,event,semantic web
+-->
+
+"This is an html view on the data, for *humans*. Is it so hard to just make it *readable*?!" Realtalk from http://twitter.com/essepuntato""" ;
+  sioc:topic "eswc2015", "semdev2015", "linked data", "ui", "http://about.me/essepuntato", "event", "semantic web" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/html-view-data> ;
+  as:latitude "45.51727" ;
+  as:longitude "13.56941" ;
+  blog:tmpcontent "\"This is an html view on the data, for *humans*. Is it so hard to just make it *readable*?!\" Realtalk from http://twitter.com/essepuntato" .
+

@@ -1,0 +1,19 @@
+{
+    "h": "entry",
+    "content": "\"This used to work, I swear.\"\n\n\"This is why you need tests.\"\n\n\"Tests? Pft. I did tests in high school.\"\n\n-- [@csarven](http://csarven.ca) on software development",
+    "category": [
+        "hacking",
+        "tests",
+        "csarven"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-01-21T23:19:56+00:00",
+    "@id": "http://blog.rhiaro.co.uk/used-work",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/used-work"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-21T23:19:56+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

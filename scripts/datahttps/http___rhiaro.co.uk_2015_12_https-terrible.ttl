@@ -1,0 +1,64 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/https-terrible>
+  blog:tmpcontent """# HTTPS: Not a terrible experience
+
+## Shared hosting with cPanel
+
+Installed letsencrypt on my local machine (a Chromebook running Ubuntu in crouton, didn't melt):
+
+`git clone https://github.com/letsencrypt/letsencrypt`
+
+`cd letsencrypt`
+
+Ran in manual mode:
+
+`./letsencrypt-auto certonly --manual`
+
+Followed instructions for domain validation (dealt with rogue .htaccess file that stopped .well-known being accessible).
+
+`fullchain.pem`, `chain.pem`, `cert.pem` and `privkey.pem` were generated into `/etc/letsencrypt/live/mydomain.tld`.
+
+cPanel -> SSL/TLS Manager.
+
+Uploaded `privkey.pem` to Private Keys. Uploaded `cert.pem` to Certificates.
+
+Manage SSL Hosts -> Browse Certficates -> picked the cert (it prefilled domain automatically). First two boxes prefilled with private key and cert. Pasted CA bundle into the third box from [the lets encrypt site](https://letsencrypt.org/certs/lets-encrypt-x1-cross-signed.pem.txt).
+
+Worked!""" ;
+  as:published "2015-12-06T21:47:27+0000"^^xsd:datetime ;
+  as:tag "cert", "letsencrypt", "cpanel", "https", "ssl", "tls", "hacking" ;
+  as:name "HTTPS: Not a terrible experience" ;
+  as:content """<!---
+tags: ssl,hacking,cpanel,letsencrypt,cert,tls,https
+-->
+
+# HTTPS: Not a terrible experience
+
+## Shared hosting with cPanel
+
+Installed letsencrypt on my local machine (a Chromebook running Ubuntu in crouton, didn't melt):
+
+`git clone https://github.com/letsencrypt/letsencrypt`
+
+`cd letsencrypt`
+
+Ran in manual mode:
+
+`./letsencrypt-auto certonly --manual`
+
+Followed instructions for domain validation (dealt with rogue .htaccess file that stopped .well-known being accessible).
+
+`fullchain.pem`, `chain.pem`, `cert.pem` and `privkey.pem` were generated into `/etc/letsencrypt/live/mydomain.tld`.
+
+cPanel -> SSL/TLS Manager.
+
+Uploaded `privkey.pem` to Private Keys. Uploaded `cert.pem` to Certificates.
+
+Manage SSL Hosts -> Browse Certficates -> picked the cert (it prefilled domain automatically). First two boxes prefilled with private key and cert. Pasted CA bundle into the third box from [the lets encrypt site](https://letsencrypt.org/certs/lets-encrypt-x1-cross-signed.pem.txt).
+
+Worked!""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

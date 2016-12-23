@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Coffee for two (Financier)",
+    "blog:cost": "$6.25",
+    "as:tag": [
+        "food",
+        "takeaway",
+        "indecisivecoder",
+        "financier",
+        "us0816"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-08-20T11:18:25-04:00",
+    "@id": "http://blog.rhiaro.co.uk/57b875115e9b5",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/57b875115e9b5"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-20T11:18:25-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

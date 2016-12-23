@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/06/when-re-discover>
+  blog:tmpcontent "When you re-discover someone you already follow in twitter and they're great and you wish you could follow them again." ;
+  as:published "2015-06-08T23:34:49+0100"^^xsd:datetime ;
+  as:tag "twitter", "social media" ;
+  as:content """<!---
+tags: twitter,social media
+-->
+
+When you re-discover someone you already follow in twitter and they're great and you wish you could follow them again.""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/608039749685768192/14188834> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

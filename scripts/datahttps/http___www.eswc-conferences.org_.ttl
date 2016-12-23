@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://www.eswc-conferences.org/>
+  foaf:name "ESWC Conferences" ;
+  foaf:homepage <http://www.eswc-conferences.org/> ;
+  foaf:depiction <https://twitter.com/eswc_conf/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/31b4ffae597cd774064e020a3f84985474ff2b52ab809e043285090969773887.png> .
+

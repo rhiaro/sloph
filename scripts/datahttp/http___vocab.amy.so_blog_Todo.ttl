@@ -1,0 +1,9 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+blog:Todo
+  a sioc:Category ;
+  rdfs:label "Todo" ;
+  rdfs:comment "A grouping for all things I will do." .
+

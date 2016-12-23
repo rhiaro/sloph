@@ -1,0 +1,16 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/annbass/status/650379259899351040>
+  sioc:reply_of <https://rhiaro.co.uk/2015/10/moved-desksedi> ;
+  as:published "2015-10-03T19:37:53+01:00"^^xsd:datetime ;
+  as:name "@rhiaro fantastic for you, @w3c @SocialWebWG, and hopefully your PhD." ;
+  as:content """[@rhiaro][1] fantastic for you, [@w3c][2] [@SocialWebWG][3], and hopefully your PhD.
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/w3c
+[3]: https://twitter.com/SocialWebWG
+""" ;
+  as:actor <https://twitter.com/annbass> .
+

@@ -1,0 +1,30 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/04/week-review-behind>
+  as:published "2013-04-28T15:34:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "literature review", "week in review", "behind" ;
+  as:name "Week in review: behind" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-323778533467032231" ;
+  as:content """**22nd - 28th April**  
+**  
+**[How to write a literature review workshop](http://blog.rhiaro.co.uk/2013/04/how-to-write-literature-review-workshop.html) on Monday.  
+  
+Got hold of Amateur Media book (2012) in the NLS, and started reading it.  Got
+in trouble for having a pen instead of a pencil to take notes.  Oops. N00b
+mistake.  
+  
+Did more GeoLit related stuff than PhD stuff.  Must try harder.  (Got a
+funding application in and went to a [tech start-up panel / networking
+event](http://blog.rhiaro.co.uk/2013/04/starting-up-in-it-panel-
+discussion.html) that was great).  
+  
+Fiddled with my lit review outline a bit, but didn't really accomplish much.
+Officially behind schedule for finishing by the end of the month (was I ever
+on schedule?).  MUST TRY HARDER.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-05-06T20:23:27.206Z"^^xsd:datetime .
+

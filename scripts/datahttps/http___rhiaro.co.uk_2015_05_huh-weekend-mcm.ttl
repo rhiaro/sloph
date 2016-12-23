@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/huh-weekend-mcm>
+  as:latitude "43.78193" ;
+  as:longitude "11.24948" ;
+  blog:tmpcontent "Huh, this weekend is MCM and WebWeWant Fest in London. Sorrynotsorry I'll be on a Croatian island." ;
+  as:published "2015-05-21T13:33:37+0100"^^xsd:datetime ;
+  as:tag "events", "travel" ;
+  as:content """<!---
+tags: events,travel
+-->
+
+Huh, this weekend is MCM and WebWeWant Fest in London. Sorrynotsorry I'll be on a Croatian island.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

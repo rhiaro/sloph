@@ -1,0 +1,19 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/11/next-internet>
+  blog:tmpcontent "The next Internet of You smart device wakes you up in the morning and says hmm, based on current brain patterns, various external factors, and those of the other people you are likely to interact with today, your mood is on a negative trend. So I've turned off the router for 12 hours, and here are some colouring books." ;
+  as:published "2015-11-25T01:29:04+0000"^^xsd:datetime ;
+  as:tag "dystopia", "surveillance", "life" ;
+  as:content """<!---
+tags: life,surveillance,dystopia
+fucks-given: Disproportionate
+-->
+
+The next Internet of You smart device wakes you up in the morning and says hmm, based on current brain patterns, various external factors, and those of the other people you are likely to interact with today, your mood is on a negative trend. So I've turned off the router for 12 hours, and here are some colouring books.""" ;
+  blog:fucks-given "Disproportionate" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/669326973856952320/15090636> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

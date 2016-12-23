@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/after-years>
+  blog:tmpcontent "After years of occasional trying and giving up, I finally figured out the foundation single crochet stitch. Now I'm bored of it.. Only 189 more to go for this round." ;
+  as:published "2015-12-27T23:04:32+0000"^^xsd:datetime ;
+  as:tag "mbaking", "crochet" ;
+  as:content """<!---
+tags: mbaking,crochet
+-->
+
+After years of occasional trying and giving up, I finally figured out the foundation single crochet stitch. Now I'm bored of it.. Only 189 more to go for this round.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

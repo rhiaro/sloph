@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Old noodles, chips",
+    "as:tag": [
+        "noodles",
+        "leftovers",
+        "ca2016"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-14T15:15:49-07:00",
+    "@id": "http://blog.rhiaro.co.uk/old-noodles-chips",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/old-noodles-chips"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-14T15:15:49-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

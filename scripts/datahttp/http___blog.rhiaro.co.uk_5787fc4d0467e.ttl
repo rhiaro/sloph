@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/5787fc4d0467e>
+  a blog:Acquisition ;
+  dcterms:created "2016-07-14T13:55:17-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/5787fc4d0467e> ;
+  blog:cost "$1.25" ;
+  as:published "2016-07-14T13:55:17-04:00" ;
+  as:summary "Samosa (Spice Cafe)" ;
+  as:tag "food", "spice cafe", "takeaway" .
+

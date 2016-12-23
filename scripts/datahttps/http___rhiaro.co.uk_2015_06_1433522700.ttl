@@ -1,0 +1,21 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/06/1433522700>
+  as:published "2015-04-06T09:00:00+01:00"^^xsd:datetime ;
+  as:tag "travel", "journey", "uk", "slovenia", "plane" ;
+  as:startTime "2015-06-05T15:35:00+0100"^^xsd:datetime ;
+  as:endTime "2015-06-05T17:45:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Ljubljana" ;
+  blog:endLocation "http://dbpedia.org/resource/London" ;
+  as:content """<!---
+published: 15th May 2015, 13:06
+start: 5th June 2015, 16:35 Europe/Berlin
+end: 5th June 2015, 17:45 Europe/London
+startLocation: http://dbpedia.org/resource/Ljubljana
+endLocation: http://dbpedia.org/resource/London
+tags: travel,plane,slovenia,uk,journey
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,15 @@
+{
+    "h": "entry",
+    "content": "Our article on building tooling to publish and consume (and own) your LinkedResearch, plus LDOW2016 reviews, up at [csarven.ca/dokieli](http://csarven.ca/dokieli)",
+    "category": null,
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-11T15:54:12+00:00",
+    "@id": "http://blog.rhiaro.co.uk/our-article",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/our-article"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-11T15:54:12+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

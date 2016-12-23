@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/mivesto>
+  foaf:name "graste" ;
+  foaf:homepage <https://twitter.com/mivesto> ;
+  foaf:depiction <https://twitter.com/mivesto/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/a0790b74813a7f00853b35751e32121ac9180bba2ac7ab6851b0950f3857615a.png> .
+

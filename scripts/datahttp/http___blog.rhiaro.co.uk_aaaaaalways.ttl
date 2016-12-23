@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/aaaaaalways>
+  dcterms:created "2016-05-28T15:42:46+01:00"^^xsd:dateTime ;
+  sioc:content "It's aaaaaalways the .htaccess file." ;
+  sioc:topic "apache", "fml", "hacking", "htaccess" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/aaaaaalways> .
+

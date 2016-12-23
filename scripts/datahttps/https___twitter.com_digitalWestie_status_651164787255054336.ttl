@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/digitalWestie/status/651164787255054336>
+  sioc:reply_of <https://rhiaro.co.uk/2015/10/visiting> ;
+  as:published "2015-10-05T23:39:17+01:00"^^xsd:datetime ;
+  as:name "@rhiaro not bad, congrats!" ;
+  as:content """[@rhiaro][1] not bad, congrats!
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://www.rorygianni.me.uk/> .
+

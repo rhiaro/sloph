@@ -1,0 +1,58 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2010/10/professional-2>
+  as:published "2010-10-15T21:30:00.000Z"^^xsd:datetime ;
+  as:tag blog:Done, "learning", "bsc", "professional practice", "Roy Isbell" ;
+  as:name "Professional Practice: guest speaker number two" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8361538417984548969" ;
+  as:content """****[This post is written as an informal part of a university module]****  
+**  
+**  
+**Speaker:** Roy Isbell  
+**Area:** Digital security  
+  
+Depending on your point of view, you can probably claim the company you
+started was successful if it is eventually bought out by a global giant, such
+as Symantec. Roy certainly had this air of success about him as he told us
+about the route he'd taken to get where he is today. But he didn't dwell on
+his life story for the entire hour as we half expected. Instead he gave a
+thought provoking presentation about digital security issues, from their
+origins in the days when losing your data was the biggest concern, to modern
+day crackers, malware and botnets.  
+  
+He emphasised how much of a profitable growth industry digital security is,
+from both the point of view of those trying to breach the security, and those
+trying to prevent the breaches. Roy mentioned that the UK government has
+recently allocated Â£8 million to cyber security but a quick search* yielded
+nothing to back this particular claim up... Instead I found [articles from as
+recently as this afternoon about the Â£1 billion that will be spent on this
+issue](http://www.infosecurity-us.com/view/13248/uk-government-to-spend-1bn-
+on-cybersecurity/), as well as quite a few statistics that reinforce
+everything else Roy had to say about the activity and effectiveness of
+botnets.  
+  
+So although I'd heard of most, if not all, of the buzzwords that came out of
+Roy's presentation, I'd never really _thought_ about them. That's not entirely
+true. I use free anti-virus software and common sense when I'm browsing.
+Goodness knows data security was hammered into all the new Google interns on
+the day they handed over our shiny new MacBooks. But when you log into your
+Internet banking from your own laptop, what could possibly go wrong? How can
+this textbook company you've never used before, that you're putting your card
+details into right now, possibly not be legitimate? Why would a stranger in
+Russia be interested in logging my keystrokes? It's one of those... _It'll
+never happen to me_ situations.  
+  
+I paid attention though, because although I've never really built a web
+application big (powerful, used, important) enough to warrant anything more
+than sanitising database entries before, I will be doing this year. So I
+should probably get wise to this network security stuff.  
+  
+  
+*A search of thirty seconds or less being all the multi-tasking, attention-deficit 'Internet generation' of today are capable of.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-03-31T23:58:40.266Z"^^xsd:datetime .
+

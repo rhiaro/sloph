@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/1433883215>
+  dcterms:created "2015-06-09T21:53:35+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+start: 28th June 2015, 14:00 BST
+end: 1st July 2015, 13:00 BST
+location: http://dbpedia.org/resource/Oxford
+tags: websci15,conference,event,phd,sociam,web science,rsvp
+reply-to: http://websci15.org
+-->""" ;
+  sioc:topic "websci15", "conference", "event", "phd", "sociam", "web science", "rsvp" ;
+  sioc:reply_of <http://websci15.org> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/06/1433883215> ;
+  as:startTime "2015-06-28T14:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-07-01T13:00:00+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Oxford> .
+

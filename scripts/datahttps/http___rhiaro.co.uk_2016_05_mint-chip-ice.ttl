@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/mint-chip-ice>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-05-13T18:19:02-07:00"^^xsd:dateTime, "2016-05-13T18:19:02-07:00" ;
+  as:tag "ca2016", "ice cream", "pie" ;
+  as:name "Mint chip ice cream, some berry apple pie (Saturn Cafe)" .
+

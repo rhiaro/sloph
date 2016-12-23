@@ -1,0 +1,8 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.exascale.info/2015/05/www2015.html>
+  blog:mentions <https://rhiaro.co.uk/2015/05/www2015> ;
+  as:published "2015-08-09T22:48:07+01:00"^^xsd:datetime .
+

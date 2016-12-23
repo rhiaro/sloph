@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/leftover-curry>
+  a as:Activity, asext:Consume ;
+  as:name "Leftover curry and rice" ;
+  as:published "2016-08-09T18:16:14-04:00"^^xsd:dateTime, "2016-08-09T18:16:14-04:00" ;
+  as:tag "curry", "leftovers", "rice", <https://rhiaro.co.uk/tags/leftovers>, <https://rhiaro.co.uk/tags/curry>, <https://rhiaro.co.uk/tags/rice> .
+

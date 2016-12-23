@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "content": " * everybody grimaces at Neelix's cooking *\r\n\r\nSeven of Nine: It is offensive.\r\n\r\n... Fortunately, taste is irrelevant.",
+    "category": [
+        "star",
+        "trek",
+        "voyager",
+        "sevenofnine",
+        "life"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-08-27T05:10:15+01:00",
+    "@id": "http://blog.rhiaro.co.uk/--everybody",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/--everybody"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-27T05:10:15+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

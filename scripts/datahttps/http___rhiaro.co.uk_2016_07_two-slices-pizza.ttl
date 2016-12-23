@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/two-slices-pizza>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-08T13:44:53-04:00"^^xsd:dateTime, "2016-07-22T13:00:06-04:00"^^xsd:dateTime, "2016-07-22T13:00:06-04:00", "2016-07-08T13:44:53-04:00" ;
+  as:tag "all star", "pizza" ;
+  as:name "Two slices of pizza with tofu, spinach, broccoli, basil and vegan mozerella (All Star)", "Two slices of pizza with potatos, mushrooms, olives, daiya (All Star)" .
+

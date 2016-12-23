@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/various-lettuce>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-06-16T21:08:31-04:00"^^xsd:dateTime, "2016-06-16T21:08:31-04:00" ;
+  as:tag "burger", "salad" ;
+  as:name "Various lettuce, seitan burger, Fresno peppers, mushroom, habanero, tomato, daiya, corn tortillas" .
+

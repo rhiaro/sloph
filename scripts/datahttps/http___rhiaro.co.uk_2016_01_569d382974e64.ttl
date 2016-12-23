@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/569d382974e64>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-01-18T14:06:48-05:00"^^xsd:dateTime ;
+  as:tag "tofu", "veggie galaxy" ;
+  blog:cost "$17" ;
+  as:summary "Tofu melt sandwich (Veggie Galaxy)" .
+

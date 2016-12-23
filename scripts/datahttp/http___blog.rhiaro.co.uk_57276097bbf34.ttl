@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/57276097bbf34>
+  dcterms:created "2016-05-02T15:13:43+01:00"^^xsd:dateTime ;
+  sioc:topic "auth", "authentication", "authorisation", "connect", "data", "hacking", "openid", "personal", "pod", "solid", "store", "tutorial" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/57276097bbf34> ;
+  blog:bookmark_of <http://connect2id.com/learn/openid-connect> .
+

@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/summary>
+  a as:Note ;
+  as:published "2016-08-14T01:15:14+01:00"^^xsd:dateTime ;
+  as:tag "travel", "bus", "us0816", "greyhound", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/travel>, <https://rhiaro.co.uk/tags/bus>, <https://rhiaro.co.uk/tags/greyhound> ;
+  as:content "<p>Summary: <a href=\"http://greyhound.com\">GreyhoundBus</a> left 20 people dangerously on side of highway for 4.5h, no water, all awake for 2am bus that didn't show til 4.</p>" ;
+  as:inReplyTo <https://rhiaro.co.uk/2016/08/replacement> .
+

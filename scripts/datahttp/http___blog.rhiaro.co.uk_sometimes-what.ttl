@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/sometimes-what>
+  dcterms:created "2016-02-17T17:38:09+00:00"^^xsd:dateTime ;
+  sioc:content "Sometimes what people are talking about at lunch is what I happened to read about from twitter that morning and then I can feel well informed and a useful member of the conversation." ;
+  sioc:topic "life" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/sometimes-what> .
+

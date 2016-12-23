@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/tfgrahame/status/626505442324254720>
+  sioc:reply_of <https://rhiaro.co.uk/2015/07/digital-memories> ;
+  as:published "2015-07-29T22:31:52+01:00"^^xsd:datetime ;
+  as:name "@rhiaro it's the writing not the recollection that's important." ;
+  as:content """[@rhiaro][1] it's the writing not the recollection that's important.
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://uk.linkedin.com/in/tfgrahame> .
+

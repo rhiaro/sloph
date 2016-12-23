@@ -1,0 +1,26 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2012/12/community>
+  blog:tmpcontent """# Community Coordinator for Edinburgh
+
+## Open Knowledge Scotland
+
+I help with organising Open Knowledge Meetups and Open Data Maker Nights. This definitely has nothing to do with my PhD supervisor being the OK Scotland Ambassador.""" ;
+  as:published "2012-12-01T09:00:00+0000"^^xsd:datetime ;
+  as:tag "events", "resume", "cv", "volunteer", "open knowledge", "okfn", "community coordinator", "ok" ;
+  as:name "Community Coordinator for Edinburgh" ;
+  as:startTime "2012-12-01T00:00:00+0000"^^xsd:datetime ;
+  as:content """<!---
+published: 1st December 2012, 09:00
+start: December 2012
+tags: cv,resume,open knowledge,ok,okfn,community coordinator,volunteer,events
+-->
+
+# Community Coordinator for Edinburgh
+
+## Open Knowledge Scotland
+
+I help with organising Open Knowledge Meetups and Open Data Maker Nights. This definitely has nothing to do with my PhD supervisor being the OK Scotland Ambassador.""" .
+

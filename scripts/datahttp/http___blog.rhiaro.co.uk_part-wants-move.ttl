@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/part-wants-move>
+  dcterms:created "2016-02-13T17:21:22+00:00"^^xsd:dateTime ;
+  sioc:content "Part of me wants to move my site to github so commits count towards a streak etc, and that's where pretty much everything else I'm working on regularly is, but really I should keep it on bitbucket in the name of decentralisation, and manage my own 'streak' and contributions list on my site, aggregating commits from both places." ;
+  sioc:topic "bitbucket", "decentralisation", "github", "hacking", "llog", "ownyourdata", "slogd" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/part-wants-move> .
+

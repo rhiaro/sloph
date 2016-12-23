@@ -1,0 +1,20 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/07/1436811060>
+  a as:Add ;
+  as:published "2015-07-13T19:11:00+0100"^^xsd:datetime ;
+  as:tag "push", "notifications", "indieweb", "slogd", "hacking" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 13th July 2015, 19:11 Europe/London
+bookmark-of: https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en
+tags: slogd,hacking,notifications,indieweb,push
+-->
+
+""" ;
+  sioc:has_reply <http://known.kevinmarks.com/2015/can-you-set-the-notification-contents-yet-or-is-it> ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en> .
+

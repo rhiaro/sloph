@@ -1,0 +1,25 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/10/talking-irc>
+  blog:tmpcontent """Talking on IRC all afternoon is work. I am literally paid to do this.
+
+As long as it's about the right things, but yeah.
+
+\\\\\\\\o/""" ;
+  as:published "2015-10-22T20:42:07+0100"^^xsd:datetime ;
+  as:tag "socialwg", "w3c", "phd", "work", "irc" ;
+  as:content """<!---
+tags: w3c,phd,work,socialwg,irc
+-->
+
+Talking on IRC all afternoon is work. I am literally paid to do this.
+
+As long as it's about the right things, but yeah.
+
+\\\\\\\\o/""" ;
+  sioc:has_reply <http://aaronparecki.com/likes/2015/10/22/1/> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

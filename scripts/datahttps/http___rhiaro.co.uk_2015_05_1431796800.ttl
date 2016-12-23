@@ -1,0 +1,21 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/05/1431796800>
+  as:published "2015-05-16T18:20:00+0100"^^xsd:datetime ;
+  as:tag "travel", "train", "austria", "switzerland" ;
+  as:startTime "2015-05-16T14:43:00+0100"^^xsd:datetime ;
+  as:endTime "2015-05-16T18:20:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Innsbruck" ;
+  blog:endLocation "http://dbpedia.org/resource/Zurich" ;
+  as:content """<!---
+published: 15th May 2015, 13:06
+start: 16th May 2015, 15:43 Europe/Berlin
+end: 16th May 2015, 19:20 Europe/Berlin
+startLocation: http://dbpedia.org/resource/Innsbruck
+endLocation: http://dbpedia.org/resource/Zurich
+tags: travel,train,austria,switzerland
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

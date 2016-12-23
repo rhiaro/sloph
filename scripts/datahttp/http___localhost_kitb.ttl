@@ -1,0 +1,6 @@
+@prefix ns0: <http://localhost/> .
+
+<http://localhost/kitb>
+  ns0:butts "More many' quotes \"?\"??", "Don't butts \"kids\"!" ;
+  ns0:total "\"butts\"" .
+

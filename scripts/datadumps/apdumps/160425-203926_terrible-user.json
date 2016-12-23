@@ -1,0 +1,19 @@
+{
+    "h": "entry",
+    "content": "Terrible user experiences are actually a positive coordinated effort to get people away from their computers for the good of society.",
+    "category": [
+        "hacking",
+        "life",
+        "ux"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-25T20:39:26+01:00",
+    "@id": "http://blog.rhiaro.co.uk/terrible-user",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/terrible-user"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-25T20:39:26+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

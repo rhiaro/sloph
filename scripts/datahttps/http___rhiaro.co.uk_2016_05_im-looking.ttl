@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/im-looking>
+  as:published "2016-05-06T21:53:55+01:00"^^xsd:dateTime ;
+  as:tag "ca2016", "travel", "chi2016" ;
+  as:content "I'm looking forward to CHI. I think this plane might be full of CHI attendees, I can hear people asking about each other's research." .
+

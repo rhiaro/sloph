@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/10/1444083305>
+  as:published "2015-10-05T23:15:05+0100"^^xsd:datetime ;
+  as:tag "solid", "mit", "js", "csail" ;
+  blog:follow_of <https://twitter.com/nicolagreco> ;
+  as:content """<!---
+follow-of: https://twitter.com/nicolagreco
+tags: mit,solid,js,csail
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

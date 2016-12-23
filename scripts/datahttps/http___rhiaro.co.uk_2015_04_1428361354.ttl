@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/04/1428361354>
+  a as:Like ;
+  as:published "2015-04-06T23:59:00+0100"^^xsd:datetime ;
+  as:tag blog:Done, "pedantry", "dublin core application profiles", "dublin core", "linked data", "indieweb" ;
+  as:content """<!---
+published: 6th April 2015, 23:59
+tags: indieweb,linked data,dublin core,dublin core application profiles,pedantry
+like-of: http://tantek.com/2015/079/b1/dublin-core-application-profiles
+list: done
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://tantek.com/2015/079/b1/dublin-core-application-profiles> .
+

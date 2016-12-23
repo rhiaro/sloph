@@ -1,0 +1,42 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/ping-me>
+  dcterms:title "Ping me! (Linked Data Notifications)" ;
+  dcterms:created "2016-07-12T21:49:02+01:00"^^xsd:dateTime ;
+  sioc:content """I've been working with [csarven](http://csarven.ca#i) on the [Linked Data Notifications (LDN)](https://linkedresearch.org/ldn) spec, a protocol which lets you receive and use RDF notifications with your server or personal data store. There are three roles a piece of software can play (any or all of) in this: sender, receiver, or consumer.
+
+The sender generates the body of the notification as a JSON-LD blob, discovers where to send it based on who the notification is for, and makes a `POST` request with this payload. [Errol](https://apps.rhiaro.co.uk/errol) is my PHP implementation of a sender. It has some bugs and is designed really as a UI for sending test data, so it's not particularly interesting if you aren't a developer. I've also helped with [dokieli](https://dokie.li), a JavaScript document editor/annotator which sends notifications when you leave an annotation. One of my [academic articles is up here as a dokieli document](http://rhiaro.co.uk/pub/cim14) which you can annotate.
+
+The receiver is what lives in my data space, where these JSON-LD payloads end up. The main part of a receiver's job is to host an *Inbox* - a script that processes incoming posts from senders, and also exposes previously received notifications when asked for. Receivers can do other cool stuff like verify a notfication is true, filter out spam, decide what to bother keeping based on the sender or type of notification and restrict who can access the notifications afterwards. My receiver is [less than 100 lines of PHP](https://github.com/rhiaro/sloph/blob/a77c24d75840f6c42e531f3cbe81b241401bb84e/ldn.php), and just accepts and stores everything that's thrown at it right now, and is completely publicly accessible.
+
+I advertise this inbox anywhere I want people to discover it from. It's in a `Link` header across my whole site, but also explicitly in the body of my profile. I can add it to any webpage I can edit the contents or `Link` header of. Any sender that goes sniffing around that page because it wants to send a notification about it will find my inbox and send it there.
+
+The consumer is an application that finds your inbox and reads the notifications and does something useful with them, like: display them, lets you acknowledge them, or take other relevant actions. [dokieli](https://dokie.li) is also a consumer (which is how the annotations are displayed on the document for everyone to see once they've been made).
+
+But what I really wanted to say was that I hooked up [Pushover](https://pushover.net) to my Inbox so whenever a new notification is delivered, it sends a push notification to my phone. So this has become an actual way to reach me! And probably more effective than email. 
+
+You can use Errol when it works (which, at the time of writing this post, it doesn't, but maybe by the time you read this it will again). You can build your own sender. Or you can just make a curl request:
+
+```
+curl -v -X POST -H "Content-Type: application/ld+json" --data "@msg.json" https://rhiaro.co.uk/ldn.php 
+```
+
+Where `msg.json` looks something like:
+
+```
+{
+  "@context": "http://www.w3.org/ns/activitystreams#",
+  "to": { "@id": "https://rhiaro.co.uk" },
+  "name": "Free chocolate",
+  "summary": "Free chocolate for you",
+  "content": "I have some free 95% dark chocolate for you, come and get it.",
+  "actor": { "@id": "http://yourdomain.com" },
+  "published": "2016-07-12T12:29:00"
+}
+```""" ;
+  sioc:topic "csarven", "data", "dokieli", "hacking", "inbox", "ldn", "linked", "notifications", "phd", "php", "pushover", "socialwg" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/ping-me> .
+

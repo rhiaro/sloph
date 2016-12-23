@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Smoothie: avocado, banana, watermelon, almond milk",
+    "as:tag": [
+        "smoothie"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-09-01T09:22:11-04:00",
+    "@id": "http://blog.rhiaro.co.uk/smoothie-avocado",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/09/smoothie-avocado"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-09-01T09:22:11-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

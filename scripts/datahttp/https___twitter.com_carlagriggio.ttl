@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/carlagriggio>
+  foaf:name "Carla Griggio" ;
+  foaf:homepage <https://twitter.com/carlagriggio> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/45feee6d5131d4af2addee4c9cebb6a9f22942922514d8230bed3cc8f3bad973.png> .
+

@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://rhiaro.co.uk/2015/06/guess-should-stop> sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/611144551647027200/2202651865>, <https://twitter.com/PhD_Connect/status/611145038886797312>, <https://brid-gy.appspot.com/like/twitter/rhiaro/611144551647027200/2307539594> .

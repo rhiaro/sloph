@@ -1,0 +1,16 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/5691904b3862b>
+  a blog:Acquisition ;
+  dcterms:created "2016-01-09T17:55:38-05:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/5691904b3862b> ;
+  blog:cost "&pound;204.69" ;
+  as:published "2016-01-09T17:55:38-05:00"^^xsd:dateTime ;
+  as:image <http://img.amy.gy/files/obtainium/IMG_20160109_225200.jpg> ;
+  as:summary "Vet bill for a stupid bird who eats things he shouldn't in the middle of the night" ;
+  as:tag "parrotbehaviour", "tigo", "vet" .
+

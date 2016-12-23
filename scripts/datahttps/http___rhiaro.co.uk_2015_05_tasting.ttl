@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/tasting>
+  as:latitude "44.11422" ;
+  as:longitude "15.23777" ;
+  blog:tmpcontent "Tasting the university of Zadar eduroam" ;
+  as:published "2015-05-27T13:02:29+0100"^^xsd:datetime ;
+  as:tag "travel", "croatia", "zadar", "eduroam" ;
+  as:location <http://dbpedia.org/resource/Zadar> ;
+  as:content """<!---
+tags: travel,croatia,zadar,eduroam
+location: http://dbpedia.org/resource/Zadar
+-->
+
+Tasting the university of Zadar eduroam""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

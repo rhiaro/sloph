@@ -1,0 +1,3 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://aaronparecki.com/bookmarks/2015/04/12/1/activitystreams-indieweb> blog:bookmark_of <http://blog.rhiaro.co.uk/post-and-activity-types> .

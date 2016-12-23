@@ -1,0 +1,69 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2012/11/week-review>
+  as:published "2012-11-26T01:27:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "semantic web", "london", "open data", "ontologies", "pancakes", "digital methods as a mainstream methodology", "berlin", "1st international open data dialoge", "ontologieswithaview", "project management", "open data dialogue" ;
+  as:name "Week in review: Pancakes & Project management" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-5417335182000880230" ;
+  as:content """**19th November - 25th November**  
+**  
+**I read two papers about ontology development methodologies.  
+  
+
+  * [Notes are here](http://blog.rhiaro.co.uk/2012/11/phd-notes-about-ontology-creation.html).
+
+I read [two](http://tech.slashdot.org/story/12/09/06/1428210/bring-on-the-
+decentralized-social-networking)
+[articles](http://tech.slashdot.org/story/12/10/05/1215249/decentralized-
+social-networking-why-it-could-work) by Bennett Haselton about decentralized
+social networking, which happened to pretty much sum up and beautifully
+articulate everything about that that has been floating in my subconscious for
+a couple of weeks.  I saw links to them in the latest
+[Circumventor](http://peacefire.org/) email, which I've been subscribed to
+since High School for bypassing the internal blacklist, and remain subscribed
+to because the jokes at the end are _always_ laugh-out-loud funny.
+
+  
+
+  
+I attended an all day course entitled 'practical project management for
+research students'.  
+  
+
+  * It was attended by a diverse bunch of seemingly really lovely people.
+  * The two ladies running it, from the IT Project Management department in the University, were lovely too.
+  * The stuff covered was all obvious, common sense stuff (and pleasantly the organisers didn't try to claim otherwise) - but sometimes it's helpful to have it all written down and waved in your face.  And _structured_, in particular.  Made me actually focus on thinking about organising my project.  The main thing I hadn't much considered, even subconsciously, was formally identifying stakeholders for a project and their relative interest/power in the project.
+  * There are a bunch of tools at projects.ed.ac.uk to aid in project management.
+  * It prompted me to do these week-in-review posts, as I realised I haven't been recording properly everything I've been doing (an overview of my time goes on my calendar, but no detail).
+  * The sandwiches weren't great, but fortunately when I got back to the Forum there were massive slabs of chocolate cake left over from some event.  I love the Forum.
+
+I booked a place at the [1st International Open Data Dialogue](http://open-
+data.fokus.fraunhofer.de/?page_id=12&lang=en) in Berlin, and necessary
+flights.
+
+  * Despite the short notice, it worked out logistically because I need to be in London on the 7th anyway, so I can simply go to London on the 4th, fly to Berlin from there for the 5th and 6th, and back to London for the 7th.
+  * I'm particularly looking forward to "Open Statecraft: Openness as a Means (not an End)" by Philipp MÃ¼ller, "The Open Data Movement vs. Business Models - is this a Contradiction?" by Dr. Peter A. Hecker, "Linked Open Data @ W3C-Vocabularies, Working Groups, Usage Scenarios" by Prof. Felix Sasaki, "The potential of Open Data for improving urban sustainability" by Dr. Marianne Linde and "Towards Trustworthiness: Establishing Transparency with Open Information Flows" by Dr. Edzard HÃ¶fig.
+  * I'm also looking forward being in Berlin again, even if it is just for one evening, and I'll probably be too exhausted to appreciate it.
+
+Ontologies with a View took place at a different place and time to usual.
+
+  * [And with added pancakes](http://ontologieswithaview.blogspot.co.uk/2012/11/week-3-ontologies-with-breakfast.html).
+
+I started preparing for presenting at [Digital Methods as a Mainstream
+Methodology](http://digitalmethodsnmi.com/events/event-2/) in London in a
+couple of weeks.
+
+  * I scribbled lots of notes.
+  * I skimmed a few papers by organisers/speakers but didn't read any in detail yet.  Mostly stuff about analysing data gathered from comments, tweets etc. 
+  * There will be more about both of those things next week, I imagine.
+
+I made a plan for the two weeks following the 20th.
+
+  * It mostly consists of finishing my Digital Methods preparation.  I have a lot of non-PhD related things to do as well, plus lots of travelling.  Also graduation from my MSc, and subsequent parental visitation will get in the way.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:10:08.526Z"^^xsd:datetime .
+

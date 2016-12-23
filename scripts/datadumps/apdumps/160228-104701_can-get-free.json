@@ -1,0 +1,20 @@
+{
+    "h": "entry",
+    "content": "You can get a free coffee from Pret at Gatwick Airport by brandishing your phone and saying you 'signed up for the free coffee thing'",
+    "category": [
+        "travel",
+        "coffee",
+        "Gatwick",
+        "pret"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-28T10:47:01+00:00",
+    "@id": "http://blog.rhiaro.co.uk/can-get-free",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/can-get-free"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-28T10:47:01+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

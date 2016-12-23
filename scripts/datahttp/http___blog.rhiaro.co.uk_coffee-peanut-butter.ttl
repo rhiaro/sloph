@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/coffee-peanut-butter>
+  a blog:Consumption ;
+  dcterms:created "2016-07-14T10:00:08-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/coffee-peanut> ;
+  as:published "2016-07-14T10:00:08-04:00" ;
+  as:tag "coffee", "tortilla" ;
+  as:name "Coffee, peanut butter on 2 corn tortillas" .
+

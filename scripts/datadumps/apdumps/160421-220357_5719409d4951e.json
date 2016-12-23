@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "blog:cost": "$196.10",
+    "as:tag": [
+        "travel",
+        "journey",
+        "plane",
+        "flight",
+        "usa",
+        "boston",
+        "san diego",
+        "jetblue",
+        "ca2016"
+    ],
+    "as:published": "2016-04-21T17:03:57-04:00",
+    "as:startTime": "2016-05-23T22:14:00-07:00",
+    "as:endTime": "2016-05-24T06:44:00-04:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Boston"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/San_Diego"
+    },
+    "@id": "http://blog.rhiaro.co.uk/5719409d4951e",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/5719409d4951e"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-21T17:03:57-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

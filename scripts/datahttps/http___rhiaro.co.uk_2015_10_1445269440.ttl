@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/10/1445269440>
+  a as:Add ;
+  as:published "2015-10-19T16:44:00+0100"^^xsd:datetime ;
+  as:tag "profiles", "phd", "edinburgh", "privacy", "identity", "security", "reading", "vaniea" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 19th October 2015, 16:44 Europe/London
+bookmark-of: https://vaniea.com/publications.html
+tags: privacy,security,identity,profiles,phd,reading,vaniea,edinburgh
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://vaniea.com/publications.html> .
+

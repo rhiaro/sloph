@@ -1,0 +1,30 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/summer-school>
+  sioc:reply_of <http://www.ifip-summerschool.org/> ;
+  blog:tmpcontent """# Summer school: privacy and identity management - time for a revolution?
+
+> The IFIP Summer Schools take a holistic approach to society and technology and support interdisciplinary exchange through keynote and plenary lectures, tutorials, workshops, and research paper presentations. In particular, participantsâ€™ contributions that combine technical, legal, regulatory, socio-economic, social or societal, political, ethical, anthropological, philosophical, or psychological perspectives are welcome. The interdisciplinary character of the work is fundamental to the school.""" ;
+  as:published "2015-08-01T09:00:00+0100"^^xsd:datetime ;
+  as:tag "phd", "event", "rsvp", "privacy", "identity", "summer school" ;
+  as:name "Summer school: privacy and identity management - time for a revolution?" ;
+  as:startTime "2015-08-16T18:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-08-21T11:00:00+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Edinburgh> ;
+  as:content """<!---
+reply-to: http://www.ifip-summerschool.org/
+tags: rsvp,event,summer school,phd,privacy,identity
+start: 16th August, 18:00 BST
+end: 21st August, 11:00 BST
+location: http://dbpedia.org/resource/Edinburgh
+published: 1st August 2015, 09:00 BST
+-->
+
+# Summer school: privacy and identity management - time for a revolution?
+
+> The IFIP Summer Schools take a holistic approach to society and technology and support interdisciplinary exchange through keynote and plenary lectures, tutorials, workshops, and research paper presentations. In particular, participantsâ€™ contributions that combine technical, legal, regulatory, socio-economic, social or societal, political, ethical, anthropological, philosophical, or psychological perspectives are welcome. The interdisciplinary character of the work is fundamental to the school.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

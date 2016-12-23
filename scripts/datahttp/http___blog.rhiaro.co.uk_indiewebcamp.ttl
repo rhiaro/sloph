@@ -1,0 +1,31 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/indiewebcamp>
+  dcterms:title "Indiewebcamp" ;
+  dcterms:created "2015-02-11T13:19:00+0000"^^xsd:datetime ;
+  sioc:content """<!---
+published: 11th February 2015, 13:19
+type: BlogPost
+tags: events,social web,indiewebcamp,indieweb,decentralised web,hackathon,travel,usa,boston,cambridge,rsvp
+start: 19th March 2015, 09:00
+end: 20th February 2015, 17:00
+reply-to: http://indiewebcamp.com/2015/Cambridge
+list: doing
+-->
+
+# Indiewebcamp
+
+Straight after the Social Web Working Group face-to-face is an [indiewebcamp](http://indiewebcamp.com/2015/Cambridge) at MIT! 19th and 20th of March. Can't wait. Despite my best efforts in the past, this will be my first one.
+
+This happened!""" ;
+  sioc:topic "rsvp", "cambridge", "boston", "usa", "travel", "hackathon", "decentralised web", "indieweb", "indiewebcamp", "social web", "events", blog:Done ;
+  sioc:reply_of <http://indiewebcamp.com/2015/Cambridge> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/02/indiewebcamp> ;
+  as:startTime "2015-03-19T09:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-02-20T17:00:00+0000"^^xsd:datetime .
+

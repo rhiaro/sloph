@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/12/productive>
+  blog:tmpcontent "Productive SocialWG f2f day 1. Many resolution, such spec, so convergence, wow." ;
+  as:published "2015-12-02T02:06:01+0000"^^xsd:datetime ;
+  as:tag "socialwg", "w3c", "social web", "events" ;
+  as:content """<!---
+tags: socialwg,social web,w3c,events
+-->
+
+Productive SocialWG f2f day 1. Many resolution, such spec, so convergence, wow.""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/671872967731601409/3064618349>, <https://brid-gy.appspot.com/like/twitter/rhiaro/671872967731601409/20148603>, <https://twitter.com/azaroth42/status/671912611210854400> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/TheRehn>
+  foaf:name "Ruth Hennell" ;
+  foaf:homepage <https://twitter.com/TheRehn> ;
+  foaf:depiction <https://twitter.com/TheRehn/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/023d6d296bb18d80751eec87eba0729463a07ab5180d25b7b91f194ad2b9b6ce.jpeg> .
+

@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/56ec84cd3c022>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-03-17T19:10:32-04:00"^^xsd:dateTime ;
+  as:tag "groceries", "harvest market" ;
+  blog:cost "$25" ;
+  as:summary "Essentials (Harvest Market)" .
+

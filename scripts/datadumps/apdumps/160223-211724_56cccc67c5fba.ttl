@@ -1,0 +1,24 @@
+@prefix : <_:> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmit: <http://purl.org/dc/dcmitype/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geos: <http://www.opengis.net/ont/geosparql#> .
+@prefix ical: <http://www.w3.org/2002/12/cal/ical#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/56cccc67c5fba> dct:created "2016-02-23T16:17:24-05:00"^^xsd:dateTime ;
+    as:location <http://rhiaro.co.uk/location/home> ;
+    as:published "2016-02-23T16:17:24-05:00"^^xsd:dateTime ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56cccc67c5fba> .
+

@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/there-ping-pong>
+  a as:Note ;
+  as:published "2016-08-11T17:08:29+01:00"^^xsd:dateTime ;
+  as:tag "life", "csail", "mit", "pingpong", "robots", <https://rhiaro.co.uk/tags/life>, <https://rhiaro.co.uk/tags/csail>, <https://rhiaro.co.uk/tags/mit>, <https://rhiaro.co.uk/tags/pingpong>, <https://rhiaro.co.uk/tags/robots> ;
+  as:content "<p>There are ping-pong tables near my desk in <a href=\"https://www.csail.mit.edu/\">MIT CSAIL</a> but I feel somewhat let down that there isn't also a robot arm to play against.</p>" .
+

@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/curry-vegetables>
+  a asext:Consume, as:Activity ;
+  as:name "Curry vegetables and lentils, half a jalapeno; coffee" ;
+  as:published "2016-08-26T09:43:28-04:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/curry>, <https://rhiaro.co.uk/tags/leftovers>, <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/coffee>, "vegetables", "leftovers", "curry", "coffee" .
+

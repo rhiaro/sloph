@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/macaroni-brown>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-20T21:15:31-04:00"^^xsd:dateTime, "2016-07-20T21:15:31-04:00" ;
+  as:tag "gravy", "leftovers", "pasta", "rice", "vegetables" ;
+  as:name "Macaroni, brown rice, aubergine, courgette, edamame, corn, tomato, gravy" .
+

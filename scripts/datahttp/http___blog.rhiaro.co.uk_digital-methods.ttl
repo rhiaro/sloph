@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/digital-methods>
+  dcterms:title "Digital Methods as Mainstream Methodology, London, 7 December" ;
+  dcterms:created "2013-01-16T18:57:00.002Z"^^xsd:datetime ;
+  dcterms:modified "2013-05-18T17:04:08.467Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-1647831903220711745" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """([Write-up about this event by the organisers
+here](http://digitalmethodsnmi.com/2013/01/23/our-second-even/)).  
+  
+DMMM was a conference aimed at sociologists and anthropologists and the like,
+so, having never studied these disciplines in any way, I was worried I'd have
+no idea what was going on.  
+  
+Fortunately everyone was friendly, and everyone's research was really
+interesting, relevant and mostly made sense to me.  You can [read all of the
+notes I took here](http://blog.rhiaro.co.uk/2013/01/notes-digital-methods-as-
+mainsteam.html).  
+  
+Humanities researchers are using and gathering digital data in lots of
+interesting and unique ways.  Using social media and other digital methods to
+engage with study participants (Jo Belcher, Lorenza Antonucci, Eve Stirling);
+sentiment analysis (Mike Thelwell); examining archives; image use in online
+interviews (Emma Hutchinson); e-focus groups (Ibrar Bhatt); digital records
+(reflections) of a creative arts process (Carole Kirk); crowd-sourcing of
+commercial ideas (Temitayo Abinusawa); avatars and virtual interaction spaces
+like SecondLife (Evelyn McElhinney); brilliant playful use of hacking to
+disrupt discussions about online learning (Jeremy Knox on MOOCs).  
+  
+_I _talked about digital media on the Semantic Web, with as much of a
+sociology swing as I could give it given my limited expertise in that domain.
+My slides, beautifully illustrated by [Chloe Dungate (available for hire!
+Academic slides starting at £2 a drawing!  Loves topics she doesn't understand
+so she can be as outrageously creative as
+possible!)](http://scarfdemon.tumblr.com/), are [here](http://goo.gl/6dSlD).
+You can see my talk notes there, too.  
+  
+danah boyd, whose work I've followed more or less since my undergraduate,
+teleconferenced in to give a really interesting keynote called "Making Sense
+of Teen Life: Strategies for Capturing Ethnographic Data in a Networked Era."
+She discussed working with young people for the last few years to examine
+their use of social networks (mostly MySpace), and all of the challenges and
+considerations that came up along the way.  She was surprised a lot.  
+  
+The open discussion at the end raised a lot of discussion about ethics.  It
+was implied at one point that the content of tweets or YouTube comments are
+ripe for the picking with no strings attached because they're already in the
+public space.  It's definitely not _that_ simple.  
+  
+There's also a danger of humanities researchers being out of touch with modern
+techniques and best practices.  Commercial research is sometimes way ahead,
+but there's no communication between each end of the spectrum, so methods get
+developed and optimised unnecessarily.  
+  
+A lot of people had experiences indicating that digital methods in humanities
+are often not taken seriously.  Supervisors, ethics committees, funding
+bodies, who have only worked with traditional methods can struggle to see the
+legitimacy of results gathered by digital means.  On the other hand, certain
+levels of ignorance can sometimes work to the researcher's advantage in terms
+of being allowed to get stuff done with minimal red tape (because authorities
+don't know what questions to ask).  
+  
+Personally I was interested by this general feeling of novelty about digital
+methods.  Having been in computing for almost my whole academic career (not to
+mention a child of the Web), a lot of things were being critically and
+confusedly discussed that I just take for granted.  Things like the validity
+of friendships that exist entirely online, and feelings expressed through
+short-lived text alone.  I think arts and humanities researchers who really
+want to get to grips with digital methods as legitimate research tools should
+consider orchestrating placements alongside technical researchers and
+immersing themselves in a world where the main options are all digital by
+default.
+
+""" ;
+  sioc:topic blog:Done, "speaker", "research", "phd", "events", "digital methods as a mainstream methodology", "digital methods", "data", "conference" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/01/digital-methods> .
+

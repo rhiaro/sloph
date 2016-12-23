@@ -1,0 +1,23 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/todays>
+  dcterms:created "2015-07-07T13:20:22+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: lego,teaching,volunteer,sutton trust summer school
+-->
+
+Today's procrastination exercise is teaching 16 year olds how to make lego robots follow lines
+
+![and then conquer the earth](http://rhiaro.co.uk/photos/150707_stss.jpg)""" ;
+  sioc:topic "lego", "teaching", "volunteer", "sutton trust summer school" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/todays> ;
+  blog:tmpcontent """Today's procrastination exercise is teaching 16 year olds how to make lego robots follow lines
+
+![and then conquer the earth](http://rhiaro.co.uk/photos/150707_stss.jpg)""" .
+

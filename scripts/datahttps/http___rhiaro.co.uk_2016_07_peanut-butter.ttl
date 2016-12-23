@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/peanut-butter>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-14T15:51:28-04:00"^^xsd:dateTime, "2016-07-07T18:38:28-04:00"^^xsd:dateTime, "2016-07-07T18:38:28-04:00", "2016-07-14T15:51:28-04:00" ;
+  as:tag "smoothie", "snack" ;
+  as:name "Peanut butter, banana, raspberry jam, almond milk smoothie", "Peanut butter and cherry larabar" .
+

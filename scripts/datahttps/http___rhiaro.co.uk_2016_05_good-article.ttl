@@ -1,0 +1,12 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/good-article>
+  sioc:reply_of <https://backchannel.com/do-startups-have-a-drinking-problem-920139d132a7#.55h2wh1vv> ;
+  as:published "2016-05-19T05:00:30+01:00"^^xsd:dateTime ;
+  as:tag "drinking", "culture", "vegan", "life" ;
+  as:content """Good article and relatable comments too.. I've definitely heard "you don't drink, don't do drugs and don't eat meat? What do you do for fun?!" a whole bunch of times. 
+
+I just assume these people are really boring and find someone else to talk to.""" .
+

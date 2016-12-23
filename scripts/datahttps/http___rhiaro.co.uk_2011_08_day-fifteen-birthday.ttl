@@ -1,0 +1,79 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2011/08/day-fifteen-birthday>
+  as:published "2011-08-17T14:06:00.001Z"^^xsd:datetime ;
+  as:tag "aswan", "birthday", "egypt", "hassle", "hot air balloon", "karnak temple", "luxor", "travel", blog:Done ;
+  as:name "Day Fifteen: Birthday! (Luxor and Aswan)" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6370355496037808745" ;
+  as:content """We started our day at 4am by catching a hot air balloon from the other side of
+the Nile. On the boat across, we were unexpectadly supplied with coffee and
+Twinkys. We shared the balloon with Japanese tourists and a pilot with a sense
+of humour. I hadn't expected the fire part of the balloon to be so close to
+our heads, nor so loud.  
+  
+The wind took us away from the Valley of the Kings and across the Nile. We
+upped and downed a bit, with the pilot explaining that flying close to things
+(the Nile, tops of trees...) is more fun. We saw the sunrise, and lots of
+Luxor from above. We almost landed in someone's field but a disgruntled
+looking chap on a donkey waved us away. So we landed in the next field, with a
+ground crew of local kids, who had been chasing the balloon's progress for the
+past ten minutes. The pilot warned us not to tip the kids or we'd have to pay
+them all, and to keep hold of our bags. We stayed in the basket whilst the
+balloon was haphazardly bundled away before traipsing through mud to the
+waiting minibus. An experience of a lifetime. I got some cool photos.  
+  
+Back at the hotel we slept for an hour before digging in to the remaining
+birthday cake and heading out to Karnak Temple by horse and carriage. Karnak
+is huuuuge. Afterwards we went back to bed again before lunch.  
+  
+Al and I set out on a hunt for the kushari shop, which should have been a
+couple of minutes walk from where everyone else went for lunch. En route we
+encountered a young man desperate to sell his shoe cleaning services to Al,
+who had jut stepped in something disgusting. This proved to be at a crucial
+point in the journey as the distraction meant we missed the turning we were
+looking for. Next we met the infamous Christian Mike, a toothless carriage
+driver wwho misdirected us and we walked for a further forty minutes or so
+into a distinctly tourist free area. Fortunately we didn't get charged for
+this pleasure.  
+  
+Eventually we circled back and found an enormous tourist information centre.
+The friendly staff directed us around the corner where finally! Kushari. A big
+takeaway tub for 10LE. That's about a quid. As expected, finding our way back
+to the cafe where the girls' were took two minutes and we all returned to the
+truck.  
+  
+Cue: four hour drive to Aswan.  
+  
+We checked into the Orchida St George Hotel, where they welcomed us with cold
+karkarde. Score.  
+  
+That evening we ventured into Aswan town. The tourist stuff is mixed in with
+the locals' stuff and veryone is much more laid back. We still got about the
+smae number of 'hello!', 'where from?', 'welcome!', 'spice girls!', and Al got
+plenty of 'lucky man, five wives!', but people seemed marginally less
+desperate to sell us things.  
+  
+We did struggle to find somewhere to eat though. Eventually we went into a
+dogy looking cafe which we decided was definitely a front for a secret mafia
+related organisation. It was run by a stoney-faced fellow who didn't seem as
+thrilld about having customers as other places have been. The food arrived
+incredibly fast and there was definitely evidence of it being fetched from
+down the street. It was hella cheap too though, and by the end the guy running
+the joint seemed to have cheered up. Out of nowhere his mate arrived with
+something sweet on a fork and inserted it into Lizzie's mouth. He had a small
+selection of apparently complimentary sweet coconutty things which he insisted
+we finish off. They were tasty.  
+  
+And thus ended the longest birthday ever. I was starting to get depressed
+about the impending end to the trip, especially with all of the UK riots news
+that was trickling through. Everyone we had encountered in Egypt was friendly
+and welcoming, providing contrast to what at the time felt like the country
+full of thugs to which I belonged. But let's not dwell. We went to bed early
+for yet another 4am wake up.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2011-08-17T14:11:26.862Z"^^xsd:datetime .
+

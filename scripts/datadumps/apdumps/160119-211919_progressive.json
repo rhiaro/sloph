@@ -1,0 +1,19 @@
+{
+    "h": "entry",
+    "content": "Progressive enhancement for catering: core dish is substantial and meets common dietary constraints. Sides/additions through less restrictive diets can be added optionally.",
+    "category": [
+        "life",
+        "food",
+        "vegan"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-01-19T21:19:19+00:00",
+    "@id": "http://blog.rhiaro.co.uk/progressive",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/progressive"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-19T21:19:19+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

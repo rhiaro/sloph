@@ -1,0 +1,28 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1432359000>
+  dcterms:created "2015-05-23T06:30:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 21st May 2015, 13:55 Europe/Berlin
+start: 22nd May 2015, 20:15 Europe/Berlin
+end: 23rd May 2015, 07:30 Europe/Berlin
+startLocation: http://dbpedia.org/resource/Ancona
+endLocation: http://dbpedia.org/resource/Split
+tags: travel,ferry,journey,italy,croatia
+-->""" ;
+  sioc:topic "travel", "ferry", "journey", "italy", "croatia" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/1432359000> ;
+  as:startTime "2015-05-22T19:15:00+0100"^^xsd:datetime ;
+  as:endTime "2015-05-23T06:30:00+0100"^^xsd:datetime ;
+  as:latitude "43.78192" ;
+  as:longitude "11.24968" ;
+  blog:startLocation "http://dbpedia.org/resource/Ancona" ;
+  blog:endLocation "http://dbpedia.org/resource/Split" .
+

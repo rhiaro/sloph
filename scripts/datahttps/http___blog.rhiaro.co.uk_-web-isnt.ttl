@@ -1,0 +1,5 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/-web-isnt> as:content """> "The Web isnâ€™t uniformâ€”itâ€™s countless flowing layers, each affecting user experiences in its own way."
+
+&mdash; [The Web isnâ€™t uniform](https://medium.com/@fox/the-web-isn-t-uniform-fd67eb631501)""" .

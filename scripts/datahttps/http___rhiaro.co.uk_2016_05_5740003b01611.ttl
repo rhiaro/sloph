@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/5740003b01611>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-20T23:28:33-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "couchsurfing", "shelter" ;
+  blog:cost "0 (Jeannie)" ;
+  as:summary "3 nights shelter" .
+

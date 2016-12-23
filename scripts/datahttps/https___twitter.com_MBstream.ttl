@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/MBstream>
+  foaf:name "m bobak" ;
+  foaf:homepage <https://twitter.com/MBstream> ;
+  foaf:depiction <https://twitter.com/MBstream/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/93988758bd77af293e25ee4501ec679644f33c18d4cc29b8f1685d4b25776e24.jpeg> .
+

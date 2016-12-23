@@ -1,0 +1,20 @@
+{
+    "h": "entry",
+    "content": "[Dmitri](https://twitter.com/codenamedmitri): We owe some thanks to facebook et al for laying the groundwork of UX for data access and sharing",
+    "category": [
+        "www2016",
+        "solid",
+        "social",
+        "web"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-12T15:14:49+01:00",
+    "@id": "http://blog.rhiaro.co.uk/dmitrihttpstwittercomcodenamedmitri",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/dmitrihttpstwittercomcodenamedmitri"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-12T15:14:49+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

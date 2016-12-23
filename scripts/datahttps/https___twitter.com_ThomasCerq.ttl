@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/ThomasCerq>
+  foaf:name "ThomasCerq" ;
+  foaf:homepage <https://twitter.com/ThomasCerq> ;
+  foaf:depiction <https://twitter.com/ThomasCerq/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/8fcdc9618b2b53a20d54273723a668912341270c9655df41e37e4fc97acf181d.jpeg> .
+

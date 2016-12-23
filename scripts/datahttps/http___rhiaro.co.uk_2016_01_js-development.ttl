@@ -1,0 +1,13 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/js-development>
+  as:published "2016-01-12T23:48:22+00:00"^^xsd:dateTime ;
+  as:tag "javascript", "js", "solid", "hacking" ;
+  as:content """JS development...
+
+* When it works: feelings of bafflement and unexpected relief.
+* When it doesn't work: heart-wrenching disappointment and resignation to a life of uselessness.
+
+Overall: Mostly negative.""" .
+

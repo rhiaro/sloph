@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/use>
+  blog:tmpcontent "my use of capitalisation and punctuation in textual communications definitely reflects my mood" ;
+  as:published "2015-08-11T00:00:34+0100"^^xsd:datetime ;
+  as:tag "grammar", "irc", "life" ;
+  as:content """<!---
+tags: life,grammar,irc
+-->
+
+my use of capitalisation and punctuation in textual communications definitely reflects my mood""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

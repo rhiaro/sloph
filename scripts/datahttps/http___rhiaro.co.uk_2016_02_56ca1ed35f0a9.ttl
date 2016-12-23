@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56ca1ed35f0a9>
+  a as:Travel ;
+  as:published "2016-02-21T15:31:00-05:00", "2016-02-21T15:31:00-05:00"^^xsd:dateTime ;
+  as:tag "boston", "grantham", "journey", "train", "travel", "uk" ;
+  as:startTime "2016-03-31T09:41:00+00:00" ;
+  as:endTime "2016-03-31T10:31:00+00:00" ;
+  as:origin <http://dbpedia.org/resource/Boston,_Lincolnshire> ;
+  as:target <http://dbpedia.org/resource/Grantham> .
+

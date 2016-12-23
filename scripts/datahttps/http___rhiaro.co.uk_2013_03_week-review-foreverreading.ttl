@@ -1,0 +1,41 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/03/week-review-foreverreading>
+  as:published "2013-03-17T23:07:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "semantic web", "annotation", "online communities", "matthew rowe", "week in review" ;
+  as:name "Week in review: foreverreading" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-1152639463394072081" ;
+  as:content """**11th - 17th March**  
+**  
+**Had a sensible conversation with Ewan about when I should stop reading and start actually producing something.  The answer is sooner, rather than later.  I'm aiming for a literature review that is "neither a first nor final" draft by the end of April.  I started outlining topics that should be in it, and began faffing about with LaTeX (and Markdown and Pandoc).   
+  
+Then started panicking and promptly quadrupled the amount of things on my to-
+read list.  Oops.  I blame Matthew Rowe.  
+  
+I finished reading his first year review (2007) as well as his paper about
+[Meervisage: Community-based Annotation for the Semantic
+Web](http://blog.rhiaro.co.uk/2013/03/notes-meervisage-community-based.html).
+I compiled a massive list of more things to read from _his_ lit. review, and
+then looked up what he's been doing since then.  A lot.  Mostly relevant.  At
+the very least, interesting.  Damn.  Don't worry, I'll prioritise that list,
+and don't aim to finish it before I start writing.  
+  
+Going to Serbia on Tuesday, for Resonate.io.  What should I bring back?  
+
+  * Information about creative processes for digital artworks.
+  * Anything to do with open data or decentralized social networking movements.
+  * Potential case studies or people to work with.
+  * ... to be discovered?
+
+Had a chat with Russell of [Makur Media](http://www.makurmedia.com/) about
+video metadata and ontologies for describing film/TV production processes.
+We're doing some of the same research and keeping in touch is likely to be
+mutually beneficial.  Note to self: Summerhall Cafe is nice and the food is
+cheap; go there for lunch one day.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:05:08.339Z"^^xsd:datetime .
+

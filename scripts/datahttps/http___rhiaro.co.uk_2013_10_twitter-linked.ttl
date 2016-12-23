@@ -1,0 +1,29 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/10/twitter-linked>
+  as:published "2013-10-13T20:41:00+0000"^^xsd:datetime ;
+  as:tag "status2ld", "twit2ld", "status updates", "learning", "social media", "semantic web", blog:Todo, "twitter", "linked data", "slogd", "hacking" ;
+  as:name "Twitter to Linked Data" ;
+  as:content """<!---
+published: 13th October 2013, 20:41
+last-modified: 13th October 2013, 20:41
+type: BlogPost
+list: todo
+tags: semantic web,linked data,twitter,status updates,social media,hacking,learning,slogd,twit2ld,status2ld
+-->
+
+# Twitter to Linked Data
+
+Or perhaps more generically, Status to Linked Data.  But Twitter is the only thing I update with statuses, so I'll start with that.
+
+I want to be able to:
+
+1. Parse the whole backlog of my tweets and turn them into Linked Data along the same schema as my blog posts will be.
+2. Tag all tweets with the same tagset that my blog posts use, automatically from hashtags or keywords, followed by a manual second pass.  The mapping of hashtags and keywords to tags for the 'automatic' tagging will be done manually, I should think.  This, then, needs a nice interface.
+3. Shove all that into the same triplestore my blog uses.
+4. Integrate status updates into my kanban-style website, alongside blogposts.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:updated "2013-10-13T20:41:00+0000"^^xsd:datetime .
+

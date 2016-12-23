@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/06/need-research>
+  blog:tmpcontent "Need research into problems with personalisation. Filter bubbles, agency, nudges, manipulation, trust, security, informed consent, ... ~ Ansgar Koene" ;
+  as:published "2015-06-28T17:31:18+0100"^^xsd:datetime ;
+  as:tag "social web", "phd", "websci15", "privacy", "social media", "social network analysis", "personalisation" ;
+  as:content """<!---
+tags: websci15,privacy,phd,personalisation,social media,social network analysis,social web
+-->
+
+Need research into problems with personalisation. Filter bubbles, agency, nudges, manipulation, trust, security, informed consent, ... ~ Ansgar Koene""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/615196041990815744/109613064> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

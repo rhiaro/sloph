@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "1 night shelter (Walk of Fame Hostel)",
+    "blog:cost": "$39.90",
+    "as:tag": [
+        "travel",
+        "shelter",
+        "hostel",
+        "la",
+        "walk of fame hostel"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-15T23:15:01-07:00",
+    "@id": "http://blog.rhiaro.co.uk/573965a169d93",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/573965a169d93"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-15T23:15:01-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

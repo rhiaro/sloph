@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/57424c290b285>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-22T14:22:18-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "food", "jeannie", "julian", "restaurant" ;
+  blog:cost "$6" ;
+  as:summary "Pie and tea" .
+

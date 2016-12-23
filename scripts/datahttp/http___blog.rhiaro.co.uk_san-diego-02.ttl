@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/san-diego-02>
+  dcterms:title """San Diego 02""", "San Diego 02" ;
+  dcterms:created "2016-05-21T23:11:08-07:00"^^xsd:dateTime ;
+  sioc:content """Sitting on the sofa in my host's lovely home after a fun evening with her family. Fiona, the timid cat, was eyeing me up like she wants to be on the sofa but is too shy to ask. She eventually elected for the top of a big cat toy across the room, from where she continues to watch me resentfully. Yoshi, the less timid cat, is content in a little basket.
+
+I got up lateish this morning and after coffee and breakfast and talking about pets, my host and I drove to La Jolla, an upscale seaside neighbourhood in the north of San Diego. We [walked](https://runkeeper.com/user/rhiaro/activity/792365650) along the coast, enjoying the sun, watching the waves crash and baby seals play in the surf.
+
+We drove back to pick up supplies and make lentil and black bean chilli, cilantro and almond pesto (who knew pesto goes with chilli) in time for her nieces and their families to arrive for dinner. A nice evening talking about travel, tech, and life in general. A four year old instructed me on stirring the chilli, ate copious amounts of my homemade coconut oil+cocoa+coconut sugar chocolate, and made me draw snowflakes and build a helicopter from blocks. Once I was on the floor amongst the child chaos it was hard to get up again.""" ;
+  sioc:topic "ca2016", "california", "couchsurfing", "diego", "lajolla", "san", "travel", "usa", "vegan" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/san-diego-02> .
+

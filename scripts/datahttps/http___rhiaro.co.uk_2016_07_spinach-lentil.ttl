@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/spinach-lentil>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-02T18:02:44-04:00"^^xsd:dateTime, "2016-07-02T18:02:44-04:00" ;
+  as:tag "cookie", "soup" ;
+  as:name "Spinach and lentil soup, choc chip cookie (Pie in the Sky)" .
+

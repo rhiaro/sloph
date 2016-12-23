@@ -1,0 +1,14 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/good-article>
+  dcterms:created "2016-05-19T05:00:30+01:00"^^xsd:dateTime ;
+  sioc:content """Good article and relatable comments too.. I've definitely heard "you don't drink, don't do drugs and don't eat meat? What do you do for fun?!" a whole bunch of times. 
+
+I just assume these people are really boring and find someone else to talk to.""" ;
+  sioc:topic "culture", "drinking", "life", "vegan" ;
+  sioc:reply_of <https://backchannel.com/do-startups-have-a-drinking-problem-920139d132a7#.55h2wh1vv> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/good-article> .
+

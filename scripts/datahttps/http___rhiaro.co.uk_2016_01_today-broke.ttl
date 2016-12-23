@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/today-broke>
+  as:published "2016-01-02T06:56:58+00:00"^^xsd:dateTime ;
+  as:tag "activitypub", "activitypump", "micropub", "indieweb", "slogd", "hacking" ;
+  as:content "Today I broke my website completely and fixed it again. Rewrote lots of code in the process. I gained some functionality and lost some functionality. I may have lost more than I gained. Now I can do what I was planning to do tod.. oh. It's tomorrow." .
+

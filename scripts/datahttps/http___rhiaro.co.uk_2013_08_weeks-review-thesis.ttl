@@ -1,0 +1,28 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/08/weeks-review-thesis>
+  as:published "2013-08-04T14:59:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "semantic web", "amateur creative digital content", "week in review", "thesis proposal" ;
+  as:name "Weeks in Review: Thesis proposal" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7027603982367622066" ;
+  as:content """**29th July - 4th August**  
+**  
+**Discussed my ideas and work so far with Dave Robertson, my second supervisor, in two meetings this week.  
+  
+[Here's a summary of some of my thoughts](http://blog.rhiaro.co.uk/2013/08
+/vague-thoughts-about-content-creators.html).  
+  
+**5th - 11th August**  
+**  
+**I worked on my thesis proposal.  But it was also [Young Rewired State week](http://blog.rhiaro.co.uk/2013/08/young-rewired-state-in-edinburgh-yrs2013.html)!  
+**  
+****12th - 18th August**  
+**  
+**Finally (belatedly) handed in my thesis proposal.  (My review is scheduled for the 22nd August).
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-09-19T10:13:44.138Z"^^xsd:datetime .
+

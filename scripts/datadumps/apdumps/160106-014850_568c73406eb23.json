@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Gifts from Canadaland (a Hoppers tshirt, maple tea and a litre of maple syrup)",
+    "blog:cost": "0",
+    "as:tag": [
+        "gift",
+        "kongaloosh",
+        "tea",
+        "food",
+        "clothes"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-01-05T20:48:50-05:00",
+    "@id": "http://blog.rhiaro.co.uk/568c73406eb23",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/568c73406eb23"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-05T20:48:50-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

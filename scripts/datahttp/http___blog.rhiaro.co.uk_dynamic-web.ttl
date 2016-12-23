@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/dynamic-web>
+  dcterms:title "Dynamic Web Design" ;
+  dcterms:created "2013-01-14T00:00:00.001Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-02T16:11:05.055Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8222168456378725417" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """For the second year, I'm tutoring PHP, MySQL, HTML, CSS and JavaScript to MSc
+Design and Digital Media students for the [Dynamic Web
+Design](http://ddm.ace.ed.ac.uk/ddm/?page_id=187) course in Edinburgh College
+of Art.  
+  
+Sometimes this makes me feel like a wizard.
+
+""" ;
+  sioc:topic blog:Done, "tutoring", "eca", "dynamic web design" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/01/dynamic-web> .
+

@@ -1,0 +1,29 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/prewired-2>
+  sioc:reply_of <http://www.prewired.org> ;
+  blog:tmpcontent """# Prewired
+
+A weekly programming club for under 19s.""" ;
+  as:published "2015-09-02T20:00:00+0100"^^xsd:datetime ;
+  as:tag "organising", "mentoring", "teaching", "rsvp", "event", "prewired" ;
+  as:name "Prewired" ;
+  as:startTime "2015-09-09T17:30:00+0100"^^xsd:datetime ;
+  as:endTime "2015-09-09T19:30:00+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Edinburgh> ;
+  as:content """<!---
+location: http://dbpedia.org/resource/Edinburgh
+start: 9th September 2015, 17:30 BST
+end: 9th September 2015, 19:30 BST
+tags: prewired,event,organising,teaching,mentoring,rsvp
+reply-to: http://www.prewired.org
+published: 2nd September 2015, 20:00 BST
+-->
+
+# Prewired
+
+A weekly programming club for under 19s.""" .
+

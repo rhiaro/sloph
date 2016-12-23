@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/potatoes-kale>
+  a as:Activity, asext:Consume ;
+  as:name "Potatoes, kale, soya meatballs, daiya, tomatoes, miso" ;
+  as:published "2016-08-23T16:15:45-04:00"^^xsd:dateTime, "2016-08-23T16:15:45-04:00" ;
+  as:tag "potato", "salad", "vegetables", <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/salad>, <https://rhiaro.co.uk/tags/potato> .
+

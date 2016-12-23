@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/essepuntato/status/604925373982380032>
+  a as:Announce ;
+  as:published "2015-05-31T09:20:22+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: "This is html view of data, for *humans*. So hard to just make it *readable*?!"Realtalk from @essepuntato #semdev2015 rhiaro.co.uk/2015/05/html-vâ€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://about.me/essepuntato> ;
+  as:object <https://rhiaro.co.uk/2015/05/html-view-data> .
+

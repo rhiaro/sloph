@@ -1,0 +1,34 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/2013-03-23-current-status>
+  as:published "2013-03-23T02:07:00.000Z"^^xsd:datetime ;
+  as:name "Current status" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.page-1463329837886367956" ;
+  as:content """##### Travelling: YES
+
+I'm at the [Resonate](http://resonate.io) new media festival in Belgrade.
+
+##### Studying: YES
+
+I started a PhD in the [Centre for Intelligent Systems and their Applications
+(CISA)](http://www.cisa.inf.ed.ac.uk/) in Informatics at the University of
+Edinburgh in October 2012. I'm looking at how Semantic Web tools might be able
+to augment digital media creation by providing collaborative opportunities for
+content creation and improving connectivity between creative projects. I'm
+interested in decentralized social networks, and retaining control of and
+making good use of personal data.
+
+##### Writing: Sometimes
+
+Gearing up for Camp Nanowrimo this April.
+
+##### Working: YES and no
+
+Tutoring and doing ongoing freelance work, but not taking on any new projects.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-03-23T02:07:06.214Z"^^xsd:datetime .
+

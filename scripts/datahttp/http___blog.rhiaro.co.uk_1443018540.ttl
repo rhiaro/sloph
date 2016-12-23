@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1443018540>
+  dcterms:created "2015-09-23T15:29:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 23rd September 2015, 15:29 Europe/London
+bookmark-of: http://www.elezea.com/2015/09/how-to-display-threaded-discussions-on-the-web/
+tags: indieweb,ui,social web,comments,threading,replies,hacking
+-->
+
+""" ;
+  sioc:topic "indieweb", "ui", "social web", "comments", "threading", "replies", "hacking" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/09/1443018540> ;
+  blog:bookmark_of <http://www.elezea.com/2015/09/how-to-display-threaded-discussions-on-the-web/> .
+

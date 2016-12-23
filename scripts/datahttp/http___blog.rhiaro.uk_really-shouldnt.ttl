@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.uk/really-shouldnt>
+  dcterms:created "2016-01-01T16:15:00-05:00"^^xsd:dateTime ;
+  sioc:content "I really shouldn't be trusted with websites." ;
+  sioc:topic "hacking", "slogd", "indieweb", "breaking things", "fml" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/really-shouldnt> .
+

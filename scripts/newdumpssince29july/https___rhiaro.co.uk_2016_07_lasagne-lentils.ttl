@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/lasagne-lentils>
+  a asext:Consume, as:Activity ;
+  as:name "Lasagne: lentils, tomato, greens, mushrooms, various chilli peppers, beet greens, daiya, almond milk" ;
+  as:published "2016-07-30T16:56:00-04:00"^^xsd:dateTime, "2016-07-30T16:56:00-04:00" ;
+  as:tag "lasagne", "leftovers", <https://rhiaro.co.uk/tags/leftovers>, <https://rhiaro.co.uk/tags/lasagne> .
+

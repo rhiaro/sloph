@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/current-status-manipulatin>
+  dcterms:created "2016-01-10T18:13:48+00:00"^^xsd:dateTime ;
+  sioc:content "Current status: Manipulatin' the DOM." ;
+  sioc:topic "hacking", "javascript", "life" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/current-status> .
+

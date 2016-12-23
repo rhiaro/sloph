@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/5722a57681a73>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-04-28T20:05:28-04:00"^^xsd:dateTime ;
+  as:tag "food", "restaurant", "veggie galaxy" ;
+  blog:cost "$30.19" ;
+  as:summary "Dinner and dessert for two" .
+

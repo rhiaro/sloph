@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Dinner for two (Dumpling Palace)",
+    "blog:cost": "$35",
+    "as:tag": [
+        "food",
+        "restaurant",
+        "dumpling palace"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-03-08T21:06:55-05:00",
+    "@id": "http://blog.rhiaro.co.uk/56df857194966",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/03/56df857194966"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-03-08T21:06:55-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

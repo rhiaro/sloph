@@ -1,0 +1,23 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/05/going-wander-find>
+  as:latitude "43.51197" ;
+  as:longitude "16.43695" ;
+  blog:tmpcontent """Going for a wander to find food and somewhere to sit and write CSS, nothing strenuous.
+
+* saves offline maps of 20km radius in case of accidental adventure *""" ;
+  as:published "2015-05-24T12:22:24+0100"^^xsd:datetime ;
+  as:tag "croatia", "travel", "hacking" ;
+  as:content """<!---
+tags: travel,croatia,hacking
+-->
+
+Going for a wander to find food and somewhere to sit and write CSS, nothing strenuous.
+
+* saves offline maps of 20km radius in case of accidental adventure *""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/602434858795868162/661723>, <https://brid-gy.appspot.com/like/twitter/rhiaro/602434858795868162/5559402> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

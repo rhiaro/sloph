@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Fancy pants dinner for two (True Bistro)",
+    "blog:cost": "$79",
+    "as:tag": [
+        "food",
+        "vegan",
+        "restaurant",
+        "true bistro"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-04-23T19:36:21-04:00",
+    "@id": "http://blog.rhiaro.co.uk/571c074917154",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/571c074917154"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-23T19:36:21-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/vegan-french>
+  a as:Activity, asext:Consume ;
+  as:name "Vegan french toast (almond milk, tapioca flour, flaxseed, spices)" ;
+  as:published "2016-08-16T08:45:25-05:00"^^xsd:dateTime, "2016-08-16T08:45:25-05:00" ;
+  as:tag "bread", "cwebber", "us0816", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/bread>, <https://rhiaro.co.uk/tags/cwebber> .
+

@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/11/know-what-us>
+  blog:tmpcontent "YOU KNOW WHAT US GOVERNMENT I WOULD LIKE MORE COMPLICATED FORMS TO FILL IN PLEASE DO SEND ME MORE" ;
+  as:published "2015-11-17T22:35:11+0000"^^xsd:datetime ;
+  as:tag "tax", "fml", "usa", "forms", "life" ;
+  as:content """<!---
+tags: life,tax,usa,fml,forms
+-->
+
+YOU KNOW WHAT US GOVERNMENT I WOULD LIKE MORE COMPLICATED FORMS TO FILL IN PLEASE DO SEND ME MORE""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

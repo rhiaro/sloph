@@ -1,0 +1,18 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/munich>
+  blog:tmpcontent "Munich Hauptbahnhof" ;
+  as:published "2015-05-13T06:30:00+0100"^^xsd:datetime ;
+  as:tag "travel", "germany", "munich" ;
+  as:location <http://dbpedia.org/resource/Munich> ;
+  as:content """<!---
+tags: travel,germany,munich
+location: http://dbpedia.org/resource/Munich
+published: 13th May 2015, 07:30 Europe/Berlin
+-->
+
+Munich Hauptbahnhof""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

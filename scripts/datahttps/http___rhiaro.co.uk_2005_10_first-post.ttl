@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2005/10/first-post>
+  as:published "2005-10-31T21:32:00.001Z"^^xsd:datetime ;
+  as:tag blog:Done ;
+  as:name "First post" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-113079438807822936" ;
+  as:content """Every blog's gotta have one...  
+  
+  
+_Edit: _Reclaimed this blog I started five years ago!  Let's write more, this
+time round.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2010-12-29T02:23:29.320Z"^^xsd:datetime .
+

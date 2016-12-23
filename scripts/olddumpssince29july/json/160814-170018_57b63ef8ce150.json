@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Ventra card",
+    "blog:cost": "$15",
+    "as:tag": [
+        "chicago",
+        "transit",
+        "transport",
+        "travel",
+        "us0816"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-08-14T11:00:18-05:00",
+    "@id": "http://blog.rhiaro.co.uk/57b63ef8ce150",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/57b63ef8ce150"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-14T11:00:18-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

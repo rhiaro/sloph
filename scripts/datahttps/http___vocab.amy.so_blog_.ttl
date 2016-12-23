@@ -1,0 +1,13 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+blog:
+  a owl:Ontology ;
+  as:published "2014-11-01" ;
+  as:name "Amy's mini blog ontology" ;
+  owl:versionInfo "Version 0.1" ;
+  dcterms:description "Random terms Amy needs for this blogging nonesense." ;
+  as:updated "2014-11-01" .
+

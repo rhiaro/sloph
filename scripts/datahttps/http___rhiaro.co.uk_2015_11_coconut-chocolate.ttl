@@ -1,0 +1,82 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/11/coconut-chocolate>
+  blog:tmpcontent """# Coconut chocolate cake
+
+I think CHI submission reviews coming in tipped me over the TODOs edge, I developed a powerful cake craving, but didn't want to leave my apartment/pyjamas so the natural outcome is... procrastabaking!
+
+This was improvised, and I don't normally have much success with full-size cakes, but lack of other baking dishes left me with little choice. It turned out great! Maybe using US units of measurements is the secret after all.
+
+![cake](https://rhiaro.co.uk/photos/151118_cake4.jpg)
+
+All measurements approximate:
+
+* 1 1/4 cups wholewheat flour
+* handful of cocoa powder
+* handful of coconut sugar (I have small hands and not a sweet tooth, you might want more)
+* handful of coconut flakes
+* teaspoon baking soda
+* 1/2 cup vegetable oil (I would have used melted coconut oil but I didn't have enough)
+* juice of one small lime
+* enough warm water to bring to cake consistency, about 1/2 cup I guess
+
+Combined dry and wet ingredients separately, then mixed together. Baked for 40 minutes (with poking breaks at 20 and 30) at 350F.
+
+For the chocolate coating:
+
+* 1/2 cup melted coconut oil
+* whatever drizzle of soy milk I had left.. uh 1/4 cup?
+* half a handful of cocoa powder
+* half a handful of coconut sugar
+
+Stir vigorously over a very low heat to make it foamy and wonderful. When it cools it separates, so as soon as the cake is cooled, pour it over and immediately refrigerate. Still separated a bit, but tastes great.
+
+![cake](https://rhiaro.co.uk/photos/151118_cake2.jpg)
+
+![cake](https://rhiaro.co.uk/photos/151118_cake3.jpg)""" ;
+  as:published "2015-11-19T02:17:25+0000"^^xsd:datetime ;
+  as:tag "mbaking", "vegan", "chocolate", "cake", "procrastabaking", "recipe", "raspberry", "coconut" ;
+  as:name "Coconut chocolate cake" ;
+  as:content """<!---
+tags: mbaking,procrastabaking,cake,vegan,recipe,chocolate,raspberry,coconut
+-->
+
+# Coconut chocolate cake
+
+I think CHI submission reviews coming in tipped me over the TODOs edge, I developed a powerful cake craving, but didn't want to leave my apartment/pyjamas so the natural outcome is... procrastabaking!
+
+This was improvised, and I don't normally have much success with full-size cakes, but lack of other baking dishes left me with little choice. It turned out great! Maybe using US units of measurements is the secret after all.
+
+![cake](https://rhiaro.co.uk/photos/151118_cake4.jpg)
+
+All measurements approximate:
+
+* 1 1/4 cups wholewheat flour
+* handful of cocoa powder
+* handful of coconut sugar (I have small hands and not a sweet tooth, you might want more)
+* handful of coconut flakes
+* teaspoon baking soda
+* 1/2 cup vegetable oil (I would have used melted coconut oil but I didn't have enough)
+* juice of one small lime
+* enough warm water to bring to cake consistency, about 1/2 cup I guess
+
+Combined dry and wet ingredients separately, then mixed together. Baked for 40 minutes (with poking breaks at 20 and 30) at 350F.
+
+For the chocolate coating:
+
+* 1/2 cup melted coconut oil
+* whatever drizzle of soy milk I had left.. uh 1/4 cup?
+* half a handful of cocoa powder
+* half a handful of coconut sugar
+
+Stir vigorously over a very low heat to make it foamy and wonderful. When it cools it separates, so as soon as the cake is cooled, pour it over and immediately refrigerate. Still separated a bit, but tastes great.
+
+![cake](https://rhiaro.co.uk/photos/151118_cake2.jpg)
+
+![cake](https://rhiaro.co.uk/photos/151118_cake3.jpg)""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/667166148006453250/14365878>, <https://brid-gy.appspot.com/like/twitter/rhiaro/667166148006453250/19330885>, <https://brid-gy.appspot.com/like/twitter/rhiaro/667166148006453250/561207668> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

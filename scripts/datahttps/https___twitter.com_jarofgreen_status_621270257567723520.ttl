@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/jarofgreen/status/621270257567723520>
+  sioc:reply_of <https://rhiaro.co.uk/2015/07/facebook> ;
+  as:published "2015-07-15T11:49:06+01:00"^^xsd:datetime ;
+  as:name "@rhiaro There are 2 types of ppl in this world; those that are happy when targeted advertising goes wrong, and those that are sad." ;
+  as:content """[@rhiaro][1] There are 2 types of ppl in this world; those that are happy when targeted advertising goes wrong, and those that are sad.
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://jarofgreen.co.uk/> .
+

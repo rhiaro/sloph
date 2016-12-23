@@ -1,0 +1,14 @@
+{
+    "h": "entry",
+    "repost-of": "https://twitter.com/bitxbitxbitcoin/status/740668816917565440",
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-06-08T23:18:04+01:00",
+    "@id": "http://blog.rhiaro.co.uk/5758999c7a657",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/5758999c7a657"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-08T23:18:04+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

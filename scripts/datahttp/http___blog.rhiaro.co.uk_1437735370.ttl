@@ -1,0 +1,27 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1437735370>
+  dcterms:created "2015-07-24T11:56:10+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+start: 11th August 2015, 16:44 BST
+end: 11th August 2015, 20:13 BST
+endLocation: http://dbpedia.org/resource/Edinburgh
+startLocation: http://dbpedia.org/resource/Newark-on-Trent
+tags: train,journey,uk,travel
+cost: £10.60
+-->""" ;
+  sioc:topic "train", "journey", "uk", "travel" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/1437735370> ;
+  as:startTime "2015-08-11T16:44:00+0100"^^xsd:datetime ;
+  as:endTime "2015-08-11T20:13:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Newark-on-Trent" ;
+  blog:endLocation "http://dbpedia.org/resource/Edinburgh" ;
+  blog:cost "£10.60" .
+

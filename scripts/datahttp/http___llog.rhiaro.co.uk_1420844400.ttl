@@ -1,0 +1,24 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://llog.rhiaro.co.uk/1420844400>
+  a blog:LlogPost ;
+  dcterms:created "2015-01-09T23:00:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+start: 9th January 2015, 22:30
+end: 9th January 2015, 23:00
+type: LlogPost
+tags: eat,food,dinner,life,quantified self,takeaway
+list: done
+-->
+
+Selection of vegetarian curries and rice from Noor. Various sweets from Chinese supermarket. Homemade fabulous unicorn sparkles cupcake.""" ;
+  sioc:topic "eat", "food", "dinner", "life", "quantified self", "takeaway" ;
+  as:startTime "2015-01-09T22:30:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-09T23:00:00+0000"^^xsd:datetime .
+

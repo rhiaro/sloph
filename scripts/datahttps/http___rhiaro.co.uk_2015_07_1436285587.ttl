@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/1436285587>
+  a as:Announce ;
+  as:published "2015-07-07T17:13:07+0100"^^xsd:datetime ;
+  as:tag "phd", "facebook", "privacy", "identity", "real name policy" ;
+  as:content """<!---
+share-of: https://twitter.com/isislovecruft/status/618449913295167488
+tags: privacy,real name policy,facebook,identity,phd
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/isislovecruft/status/618449913295167488> .
+

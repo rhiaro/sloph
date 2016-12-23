@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/cake-4-small>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-15T21:03:37-04:00"^^xsd:dateTime, "2016-07-15T21:03:37-04:00" ;
+  as:tag "cake" ;
+  as:name "Cake: 4 small beetroots, banana, cocoa, coconut sugar, wholewheat flour, baking soda, almond milk, dark chocolate" .
+

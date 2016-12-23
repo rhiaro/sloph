@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/skddc>
+  foaf:name "RÃ¢u Cao" ;
+  foaf:homepage <https://twitter.com/skddc> ;
+  foaf:depiction <https://twitter.com/skddc/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/dc59ee9d9b56a65b5442609c34254744bcde5ca5546ebeb426dd2e0416a6e703.png> .
+

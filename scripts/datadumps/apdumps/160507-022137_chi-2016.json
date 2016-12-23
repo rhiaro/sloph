@@ -1,0 +1,44 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "CHI 2016",
+    "as:content": "A big human-computer interaction academic conference. I have my name on a paper about pro-social deception",
+    "blog:rsvp": "yes",
+    "blog:cost": "$500",
+    "as:tag": [
+        "rsvp",
+        "event",
+        "attendee",
+        "speaker",
+        "ca2016",
+        "chi2016",
+        "phd",
+        "conference",
+        "academia",
+        "san jose"
+    ],
+    "as:published": "2016-05-06T18:21:37-07:00",
+    "as:startTime": "2016-05-07T09:00:00-07:00",
+    "as:endTime": "2016-05-12T17:00:00-07:00",
+    "@type": [
+        "as:Accept"
+    ],
+    "as:location": {
+        "@id": "http://dbpedia.org/resource/San_Jose,_California"
+    },
+    "as:inReplyTo": [
+        {
+            "@id": "http://chi2016.acm.org/wp/"
+        }
+    ],
+    "@id": "http://blog.rhiaro.co.uk/chi-2016",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/chi-2016"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-06T18:21:37-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

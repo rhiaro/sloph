@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/FredaOByrne>
+  foaf:name "Freda O'Byrne" ;
+  foaf:homepage <https://twitter.com/FredaOByrne> ;
+  foaf:depiction <https://twitter.com/FredaOByrne/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/6f3684ad6e07bba0a09d2ba202e4bf523a52e99d4a2bb92f0ee188c45bf0841f.jpeg> .
+

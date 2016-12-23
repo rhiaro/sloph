@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/best-hostel-kitchens>
+  blog:tmpcontent "Best hostel kitchens are ones full of stuff labeled 'take me!'" ;
+  as:published "2015-05-13T10:26:53+0100"^^xsd:datetime ;
+  as:tag "travel", "hostel", "Austria" ;
+  as:content """<!---
+tags: travel,Austria,hostel
+-->
+
+Best hostel kitchens are ones full of stuff labeled 'take me!'""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

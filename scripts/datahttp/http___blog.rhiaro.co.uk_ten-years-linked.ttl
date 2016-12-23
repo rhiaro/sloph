@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/ten-years-linked>
+  dcterms:title "Ten Years of Linked Data at the BBC" ;
+  dcterms:created "2016-07-22T21:08:29+01:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/ten-years-linked> ;
+  blog:bookmark_of <http://www.slideshare.net/ConnectedDataLondon/ten-years-of-linked-data-at-the-bbc> .
+

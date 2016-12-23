@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1420615800>
+  a blog:LlogPost ;
+  as:published "2015-01-07T07:30:00+0000"^^xsd:datetime ;
+  as:tag "polyphasic", "sleep cycle", "sleep", "quantified self", "life" ;
+  as:startTime "2015-01-07T00:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-07T07:30:00+0000"^^xsd:datetime ;
+  as:content """<!---
+start: 7th January 2015, 00:00
+end: 7th January 2015, 07:30
+type: LlogPost
+tags: sleep,polyphasic,sleep cycle,quantified self,life
+list: done
+-->
+
+Woke at 0330, decided to make it a 4.5h core... woke at 0430, thoroughly failed to get up for a while and eventually gave up around 0530. Kept tapping in 1 hour naps on Sleep As Android. Still, getting up at 0730 felt like an achievement..""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

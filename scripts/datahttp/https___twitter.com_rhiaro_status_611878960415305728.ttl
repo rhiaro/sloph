@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/rhiaro/status/611878960415305728>
+  dcterms:title "@anticitizen79 yeah I'm setting this up right now" ;
+  dcterms:created "2015-06-19T13:51:26+01:00"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/> ;
+  sioc:content """[@anticitizen79][1] yeah I'm setting this up right now
+
+[1]: https://twitter.com/anticitizen79
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/06/starting-wonder> .
+

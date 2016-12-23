@@ -1,0 +1,44 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/11/uris-content>
+  as:published "2013-11-08T16:16:00+0000"^^xsd:datetime ;
+  as:tag "phd", "social network", blog:Doing, "semantic web", "uris", "uri", "content creators", "content network" ;
+  as:name "URIs for content creators and content" ;
+  as:content """<!--- 
+published: 8th November 2013, 1616
+last-modified: 8th November 2013, 1616
+tags: phd, semantic web, content creators, social network, content network, uri, uris
+list: doing
+type: BlogPost
+-->
+
+# URIs for content creators and content
+
+## Generating unique IDs
+
+In a centralised system, I could generate my own unique IDs by whatever means, assign them, and be done with it.
+
+I thought briefly about trying to generate human-readable unique IDs, but [this article](http://thedailywtf.com/Articles/The-Automated-Curse-Generator.aspx) made me decide that that will all end in tears.  
+
+Maybe for now I assume that people won't need to remember their ```OnlinePersona``` URI... Dangerous? Maybe. Maybe not. Maybe it's more likely that someone will be searched for by all the properties of their ```OnlinePersona```, but the ```OnlinePersona``` itself doesn't matter directly.  We shall see.
+
+So on that note, Python's UUID will do.  They're long and horrible.  But I'll get over it.  
+
+## Power to the people
+
+How do I persist creator and content URIs in a non-centralised, user-owned network? 
+
+People would need the option to change their URI to whatever they felt represented themselves, like their personal 'about me' page.  Trying to enforce content negotiation and a Document != Person mentality here might be difficult.
+
+Ultimately it doesn't really matter what their URI is as long as it resolves and persists, right?  And if it doesn't resolve, or even disappears entirely, it's kind of rubbish, but not Web-breaking.  Kind of the reason the Web still holds up, and the reason the Semantic Web is an extension of that.
+
+Assuming a distributed, Diaspora*-esque 'Pod' structure for this network, if a user moves to another Pod and as a result must change their URI, the protocols involved essentially need to require leaving a 'forwarding address' to their new URI.  Maybe, in this scenario, URIs are handled differently altogether.  Separately from the Pods.  You can get a URI from the Pod you just joined, or you can use your own or generate one from a provider.
+
+How do you authenticate changing of a URI?  Someone could essentially steal someone else's identity by switching out their URI... so... that can't happen.
+
+Maybe I'm thinking too much. I might need to talk to someone smarter about this.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:updated "2013-11-08T16:16:00+0000"^^xsd:datetime .
+

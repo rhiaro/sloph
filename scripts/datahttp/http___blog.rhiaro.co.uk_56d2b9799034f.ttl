@@ -1,0 +1,16 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/56d2b9799034f>
+  a as:Travel ;
+  dcterms:created "2016-02-28T09:08:57+00:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56d2b9799034f> ;
+  as:startTime "2016-02-28T09:42:00+00:00" ;
+  as:endTime "2016-02-28T09:58:00+00:00" ;
+  as:published "2016-02-28T09:08:57+00:00" ;
+  as:tag "journey", "london", "train", "travel", "uk" ;
+  as:origin <http://dbpedia.org/resource/East_Croydon> ;
+  as:target <http://dbpedia.org/resource/Gatwick_Airport> .
+

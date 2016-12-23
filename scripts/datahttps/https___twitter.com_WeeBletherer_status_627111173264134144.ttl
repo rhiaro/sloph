@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/WeeBletherer/status/627111173264134144>
+  a as:Announce ;
+  as:published "2015-07-31T14:38:49+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: Waiting for the bus to Birmingham for Festival of Code! Excited... Exhau... @prewired #foc2015 rhiaro.co.uk/2015/07/waitinâ€¦
+
+[ ][2]
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/WeeBletherer/status/627111173264134144
+""" ;
+  as:actor <http://www.edinburgh.gov.uk/> ;
+  as:object <https://rhiaro.co.uk/2015/07/waiting-bus> .
+

@@ -1,0 +1,33 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/indieweb-summit> a as:Accept ;
+    dcterms:created "2016-05-06T18:23:02-07:00"^^<xsd:dateTime> ;
+    blog:cost "$0" ;
+    blog:rsvp "yes" ;
+    as:content "Maybe I'll rebuild my website from scratch again." ;
+    as:endTime "2016-06-05T18:00:00-07:00" ;
+    as:inReplyTo <http://2016.indieweb.org/> ;
+    as:location <http://dbpedia.org/resource/Portland,_Oregon> ;
+    as:name "Indieweb Summit 2016" ;
+    as:published "2016-05-06T18:23:02-07:00" ;
+    as:startTime "2016-06-03T19:00:00-07:00" ;
+    as:tag "attendee",
+        "decentralised social web",
+        "event",
+        "hackathon",
+        "hacking",
+        "indieweb",
+        "indiewebcamp",
+        "portland",
+        "rsvp",
+        "social web",
+        "usa" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/indieweb-summit> .
+

@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/tortilla-chips>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-05-04T16:45:33-04:00"^^xsd:dateTime, "2016-05-04T16:45:33-04:00" ;
+  as:tag "" ;
+  as:name "Tortilla chips, daiya, tomatoes, jalapenos, cherry pepper, mushrooms, red capsicum, black beans" .
+

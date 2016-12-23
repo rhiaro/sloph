@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brid-gy.appspot.com/like/twitter/rhiaro/637965730043031552/145536476>
+  a as:Like ;
+  as:published "2015-08-31T11:38:26+01:00"^^xsd:datetime ;
+  as:name "likes this." ;
+  as:actor <https://twitter.com/Twinkletoeonly> ;
+  as:object <https://rhiaro.co.uk/2015/08/found-vegan-frys> .
+

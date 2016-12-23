@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/08/1438731932>
+  as:published "2015-08-04T21:39:00+0100"^^xsd:datetime ;
+  as:tag "phd", "social science", "hci", "chi", "ambiguity", "deceipt", "lying", "audience", "performativity", "aoki", "paper", "woodruff" ;
+  blog:read-of "http://arxiv.org/pdf/cs/0507019.pdf" ;
+  as:content """<!---
+published: 4th August 2015, 21:39 BST
+read-of: http://arxiv.org/pdf/cs/0507019.pdf
+tags: chi,hci,phd,ambiguity,deceipt,lying,social science,audience,performativity,aoki,woodruff,paper
+-->""" .
+

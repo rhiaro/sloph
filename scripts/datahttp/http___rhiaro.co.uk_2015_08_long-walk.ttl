@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://rhiaro.co.uk/2015/08/long-walk> sioc:has_reply <https://twitter.com/urbaneprofessor/status/632958198245380096> .

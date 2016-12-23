@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Wrap with curried cauliflower, potatoes, chickpeas, veg. Passionfruit black iced tea.",
+    "as:tag": [
+        "bread",
+        "curry",
+        "tea"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-18T19:48:05-07:00",
+    "@id": "http://blog.rhiaro.co.uk/wrap-with-curried",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/wrap-with-curried"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-18T19:48:05-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

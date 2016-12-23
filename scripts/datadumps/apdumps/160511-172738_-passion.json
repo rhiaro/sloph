@@ -1,0 +1,22 @@
+{
+    "h": "entry",
+    "content": "> \"\"Passion is a neutralizing force, for both women and introverts.\" - Marissa Mayer \"\r\n\r\nWow, so THAT'S the secret. We've been doing it wrong all these years.",
+    "category": [
+        "womenintech",
+        "chi2016",
+        "mayer",
+        "gender",
+        "minorities",
+        "discrimination"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-05-11T17:27:38+01:00",
+    "@id": "http://blog.rhiaro.co.uk/-passion",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/-passion"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-11T17:27:38+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

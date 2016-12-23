@@ -1,0 +1,10 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/guess-what-im>
+  sioc:reply_of <https://rhiaro.co.uk/2016/01/progressive> ;
+  as:published "2016-01-19T21:24:32+00:00"^^xsd:dateTime ;
+  as:tag "vegan", "food", "life" ;
+  as:content "I guess what I'm trying to say is I'm much less hungry after meals where more than only the side salad is vegan." .
+

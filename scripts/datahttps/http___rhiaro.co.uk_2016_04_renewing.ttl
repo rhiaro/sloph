@@ -1,0 +1,15 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/renewing>
+  as:published "2016-04-04T21:52:57+01:00"^^xsd:dateTime ;
+  as:tag "certs", "letsencrypt", "cpanel", "https", "ssl", "web", "hacking" ;
+  as:name "Renewing LetsEncrypt certs for my shared hosting" ;
+  as:content """Navigated to where I previously installed the letsencrypt cli client (note to self as this took me a while to remember: `/home/rhiaro/letsencrypt`).
+
+Ran `./letsencrypt-auto renew --agree-tos --manual-public-ip-logging-ok`
+
+When I ran with `--dry-run` it looped through the three domains I previously generated certs for, failed on the first two because it tried to do the acme-challenge without giving me a chance to copypaste the code, but the last one waited for my input before proceeding, so I was able to copy the code to a file on the server and press enter, and it continued successfully. But then when I ran it for real (without `--dry-run`) it waited for my input after each one, so I was able to do them all at once.
+
+Then I went through cPanel, deleted the existing private keys (which deleted the corresponding certs automatically), uploaded the new `privkey.pem` files for each domain to Private Keys and the `cert.pem` files to Certificates. In "Install and Manage SSL for your site" I clicked 'Update certificate' by each domain in the list, chose the certs from the GUI (which prefilled the private keys) and pasted the `chain.pem` contents into the input for the CA bundle. All set!""" .
+

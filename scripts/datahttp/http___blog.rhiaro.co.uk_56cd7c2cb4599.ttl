@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/56cd7c2cb4599>
+  dcterms:created "2016-02-24T09:47:24+00:00"^^xsd:dateTime ;
+  sioc:topic "automation", "bots", "boyd", "ethics", "machines", "media", "phd", "social", "twitter" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56cd7c2cb4599> ;
+  blog:bookmark_of <http://motherboard.vice.com/read/how-to-think-about-bots> .
+

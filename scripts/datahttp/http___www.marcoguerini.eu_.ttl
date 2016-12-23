@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://www.marcoguerini.eu/>
+  foaf:name "Marco Guerini" ;
+  foaf:homepage <http://www.marcoguerini.eu/> ;
+  foaf:depiction <https://twitter.com/m_guerini/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/eb86af9dec1717d05d72d89c14b698459dc03a520c12a942800832cf400d3eb3.png> .
+

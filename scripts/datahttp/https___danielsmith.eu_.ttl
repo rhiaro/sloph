@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://danielsmith.eu/>
+  foaf:name "Daniel Smith" ;
+  foaf:homepage <https://danielsmith.eu/> ;
+  foaf:depiction <https://twitter.com/DrDanielASmith/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/d9e568087ff227d7e819d68665f13e8995de58e47d8ed1ca0b542929a64d563d.jpeg> .
+

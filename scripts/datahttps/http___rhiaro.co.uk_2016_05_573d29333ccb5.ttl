@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573d29333ccb5>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-18T19:45:38-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "food", "mendocino", "restaurant" ;
+  blog:cost "$15" ;
+  as:summary "Wrap and tea (Mendocino)" .
+

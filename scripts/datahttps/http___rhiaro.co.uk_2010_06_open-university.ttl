@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2010/06/open-university>
+  blog:tmpcontent """# Open University short course
+
+## T155, Linux: An Introduction
+
+Because I didn't have enough to do with my summer. Dominant memories of this are answering weird essay questions about why open source software is better.""" ;
+  as:published "2010-06-01T18:00:00+0100"^^xsd:datetime ;
+  as:tag "resume", "cv", "linux", "education", "open university" ;
+  as:name "Open University short course" ;
+  as:startTime "2010-06-01T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2010-09-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st June 2010, 18:00
+start: June 2010
+end: September 2010
+tags: education,open university,linux,cv,resume
+-->
+
+# Open University short course
+
+## T155, Linux: An Introduction
+
+Because I didn't have enough to do with my summer. Dominant memories of this are answering weird essay questions about why open source software is better.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

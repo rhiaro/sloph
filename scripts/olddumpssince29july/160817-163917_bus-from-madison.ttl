@@ -1,0 +1,28 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/bus-from-madison> a as:Travel ;
+    dcterms:created "2016-08-17T10:39:17-05:00"^^<xsd:dateTime> ;
+    blog:cost "$21" ;
+    as:endTime "2016-08-18T20:30:00-05:00" ;
+    as:name "Bus from Madison to Chicago" ;
+    as:origin <http://dbpedia.org/resource/Madison,_Wisconsin> ;
+    as:published "2016-08-17T10:39:17-05:00" ;
+    as:startTime "2016-08-18T16:45:00-05:00" ;
+    as:tag "bus",
+        "chicago",
+        "coach",
+        "journey",
+        "madison",
+        "megabus",
+        "travel",
+        "us0816" ;
+    as:target <http://dbpedia.org/resource/Chicago> ;
+    foaf:isPrimaryTopicOf <https://rhiaro.co.uk/2016/08/bus-from-madison> .
+

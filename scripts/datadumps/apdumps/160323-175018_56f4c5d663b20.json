@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Nutty sweets (Al Meera, Thakira)",
+    "blog:cost": "40.59 QR",
+    "as:tag": [
+        "snack",
+        "souvenir",
+        "doha",
+        "travel",
+        "food"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-03-23T20:50:18+03:00",
+    "@id": "http://blog.rhiaro.co.uk/56f4c5d663b20",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/03/56f4c5d663b20"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-03-23T20:50:18+03:00",
+        "@type": "xsd:dateTime"
+    }
+}

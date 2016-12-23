@@ -1,0 +1,28 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Lunch for one and a half (Golden Mean)",
+    "blog:cost": "$20",
+    "as:tag": [
+        "food",
+        "restaurant",
+        "ca2016",
+        "veganstraightedge",
+        "santa monica",
+        "golden mean"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-17T14:52:29-07:00",
+    "@id": "http://blog.rhiaro.co.uk/573b9a21d4cdc",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/573b9a21d4cdc"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-17T14:52:29-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

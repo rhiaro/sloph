@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/JockelLohkamp>
+  foaf:name "Joachim Lohkamp" ;
+  foaf:homepage <https://twitter.com/JockelLohkamp> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/152856de993007ab9358422a5485f3acb9c8ceb56c0c46472e056c8b8396d1f0.png> .
+

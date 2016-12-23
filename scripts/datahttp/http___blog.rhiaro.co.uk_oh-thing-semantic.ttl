@@ -1,0 +1,22 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/oh-thing-semantic> dc:creator <http://rhiaro.co.uk/about#me> ;
+    dcterms:created "2015-06-12T12:53:30+0100"^^xsd:datetime ;
+    sioc:content """<!---
+tags: semantic web,academia
+-->
+
+OH: "The thing Semantic Web people are best at is jumping on bandwagons\"""" ;
+    sioc:topic "academia",
+        "semantic web" ;
+    blog:tmpcontent "OH: \"The thing Semantic Web people are best at is jumping on bandwagons\"" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/06/oh-thing-semantic> .

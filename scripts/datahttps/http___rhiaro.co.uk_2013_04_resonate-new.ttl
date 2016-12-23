@@ -1,0 +1,235 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/04/resonate-new>
+  as:published "2013-04-02T14:18:00.000Z"^^xsd:datetime ;
+  as:tag blog:Done, "phd", "events", "conference", "attendee", "new media", "interactive art", "belgrade", "artists", "new media festival", "resonate" ;
+  as:name "Resonate new media festival" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8954918904391415358" ;
+  as:content """[Resonate](http://resonate.io/), held between the 21st and 23rd of March in
+Belgrade, Serbia, is "...a platform for networking, information, knowledge
+sharing and education. It brings together distinguished, world class artists
+with an opportunity of participating in a forward-looking debate on the
+position of technology in art and culture." (from the website).  
+  
+Before I left, I suggested I might return with the following:  
+  
+
+  * Information about creative processes for digital artworks.
+  * Anything to do with open data or decentralized social networking movements.
+  * Potential case studies or people to work with.
+  
+I largely failed on all three counts.  
+  
+
+I was thrown from the outset by the apparent poor organisation of the event.
+Not to mention a complete lack of free food. But the main problem was that
+well over one thousand people had tickets, but on the first day the main
+lecture room could hold a few hundred at best. Seating consisted of a handful
+of sofas and armchairs and valuable floor space was occupied by altogether too
+many stylish coffee tables. For everyone not lucky enough to be among the
+first ten in the room it was aching backs and/or pins and needles all round.
+This situation improved slightly after the first day, when two more tracks
+opened in slightly bigger rooms, but there was still nowhere near enough
+space. People were bursting out all doors, so switching tracks ever wasn't an
+option. There were also several _long_ delays or postponements. A few were
+weather related, but too many (ie more than none) were organisational; lack of
+projector in main room, etc.  
+  
+
+That aside, I was aware that an event labelled 'festival' wasn't going to be
+right at the conference end of the party<->conference scale, but I was
+surprised at just how much party it was. A party with thousands of people,
+where everybody knew someone else but me. This made it particularly difficult
+to interact. You might expect the opposite. Indeed, I suspect that for most
+people this was the perfect environment to make new friends, start
+collaborations etc.  I'm (usually) great at networking. I'm never great at
+social situations involving large crowds, a bar and loud music. I tried. But I
+couldn't catch anyone's eye, there was never a moment to start a conversation.
+The most interaction I had over three days was being elbowed out of the way by
+people who felt more entitled to see what was going on than me.
+
+  
+
+I might have fared better if...  
+  
+
+...I had succeeded in getting a place at one of the workshops.  Places were
+very limited, but it was explained that all workshops were open for anyone to
+listen in on even if you couldn't participate directly.  Had I taken part in
+one, it would have been a lot easier to talk to some specific people.  I went
+along to attempt to listen in, however, to find all of the workshops (twenty
+or so) consisted of people grouped around tables, together in the same giant
+hall.  The actual participants were craning their necks, straining to hear
+their workshop instructor over the general clamour of the event, so it was
+impossible for bystanders to be involved at all.  Plus, only a couple of the
+workshops had (handwritten) signs indicating which they were, so there was
+also no way of tracking down the ones I was particularly interested in.  
+  
+
+...I had been to any of the performances or night club tours that started
+about about 9pm each day and ran until the early hours of the morning.  The
+performances, as far as I could tell, were electronic music sets, held in
+night clubs or similar venues.  I don't _do_ night clubs, and I was knackered
+by 7pm anyway, so that was a no go.  Having said that, it probably wouldn't
+have been easier to meet new people over very loud music in a place where
+everyone was getting drunk, so maybe I didn't miss out.  
+  
+Now I've explained that, I will write a bit about the talks I did manage to
+get in to, which were generally interesting and of good quality.  (The
+itinerary I sketched out for myself beforehand differed greatly from what I
+actually achieved because of crowd/small room issues mentioned previously).  
+  
+These aren't the only things I went to, but the only ones I took notes or
+tweeted about.  
+**  
+****Marcin Ignac**, talking about Data Art, showed some really cool things he's done with Plask and WebGL, including 3D data visualisations, hacking with fonts, and realtime installations like a 3D visualisation of global energy market transactions.  Plask and WebGL are capable of a lot, just in the browser.  He also mentioned basil.js, which is "a library that brings scripting and automation into layout and makes computational and generative design possible from within InDesign" ([cite](http://basiljs.ch/about/)) which looks useful for artists wanting to get into coding.  
+  
+**Mike Tucker** ("Unity as a Tool for Non-Games") suggested that Unity fills the creative gap recently vacated by Flash.  He started out as a Flash guy, but isn't sad or bitter about Flash's demise, and understands that it's time to move on.  His current WIP is an app to explore an abstract visual and audio landscape using the device's gyroscope.  The audio is 'physically' located in a virtual 3D world, and changes as you navigate around by moving the device in space.  
+  
+**Julia Laub** told us about her Generative Design book, that she worked on as part of her thesis project.  She defined (with a diagram) generative design as creating choices, then making choices, rather than controlling a visual output.  She created a visualisation of Wikipedia pages that presents as a self-optimising network - as you interact with the diagram to expand the information you want to see, it rearranges itself for optimal viewing.  Her book looks amazing, and getting my hands on a copy is on my things-to-do list.  
+  
+**Dmitry Morozov** ("An Autonomous Synthesis") showed some great circuit bent installations and sound projects; check out <http://www.vtol.tk/>.  
+  
+**Signal | Noise** (oops, I didn't take down the names of the actual guys) ("Datatainment") talked about gamification of data collection.  People like "digital navel gazing"; they derive satisfaction from their own data, and comparing themselves to others.  They mentioned a "top secret" client project for which they're aiming to "quantify everything people do"... intriguing...  
+  
+**Lucas Werthin** ("Design, Tech and Architecture for Large Scale Projection Mapping") showed us the ins and outs of an _incredible_ project he'd worked on.. [Described here](http://createdigitalmotion.com/2012/08/beyonce-at-the-un-behind-the-scenes-of-epic-projection-in-the-general-assembly-hall-gallery/) (with videos).  
+  
+The **[onedotzero](http://www.onedotzero.com/)**
+[screening](http://www.onedotzero.com/onedotzero-x-resonate/event/) was a
+compilation of digital animation work from a number of artists.  It was weird
+and awesome, with some inspiring visuals and music I need to listen to more
+(inspiring for writing fiction, not for the PhD unfortunately).  Notes I wrote
+during that suggested I need to listen to the music in _Warsnare_, and the one
+with the giant Catzilla in.  
+  
+**Markus Heckmann and Barry Threw** ("Building by Doing - Visually guided design in TouchDesigner") described another easy bridge for artists who want to code.  I wrote down "TouchDesigner" in my notes during this talk, but I can't remember why now.  [Find out more here](http://www.derivative.ca/).  
+  
+My favourite talk was by **Ivan Poupyrev** ("Computing Reality").  I tweeted
+loads about it, but none of them got sent because the wifi and my phone
+weren't playing nice or something.  Fortunately I also made a ton of notes.  
+  
+Ivan describes himself as an 'inventor'; he worked for Sony, and now works for
+Walt Disney, and he is inventing the future.  He has a great ethic and vision
+for the world; all about "giving people tools to make the world the way they
+want it to be."  He envisions a decentralisation of production; large
+corporations only want to make their part of the world interactive, not the
+whole world.  So ordinary people must have the technology to use, develop,
+spread, build on.  
+  
+In 1999, his team created an augmented reality toolkit, before it's time.  In
+2001, they developed a flexible display with is interacted with by bending it
+and sliding fingers around the back of the screen.  A huge amount of
+interactions are possible just by bending and flexing in different ways.  In
+2004, Sony said "users will never accept a device with no buttons", and all
+early touchscreen devices also had buttons because of this.  He says the
+iPhone was the "fall" of the button, proving everyone wrong.  Last year (2012)
+the Sony PS Vita has touchback interaction, and Samsung have released a
+flexible display this year (2013) but "nobody cares".  
+  
+Now, he says, everything has been invented already, the market is saturated
+with new gadgets.  He sees the future of the technology curve as embedded in
+people and surroundings: "no question... that it's coming to your body ...
+going to seep into the environment, disappear into the environment ...
+seamlessly, invisibly, efficiently" and describes a reality that computes
+itself, where "the computer doesn't have to exist at all."  
+  
+Ivan was very expressive about not being any kind of "tree-hugger", but is
+convinced that we don't need to "make more junk".  So many resources have been
+used, and the earth can't support another industrial revolution.  Instead, he
+wants to turn everything that already exists into interactive objects,
+including humans, animals and plants.  That may sound weird / scary / far-
+futuristic but guess what... they've already done it.  
+  
+Flipping interaction on its head, they're all about not changing the
+environment, but changing _you_, or your perception of the environment.
+_TouchÃ©_ is used for 'virtual tactile perception'... they can create a charged
+field around the human hand so that you feel things differently.  The objects
+themselves are passive, simple, unchanged.  The person just has to be in
+contact with the device that creates the field, which can be embedded in an
+object you're already touching like clothing, a shoe or an umbrella.  Then,
+with no wires or weird contraptions, the person can touch some object (like a
+teapot) and as the settings of the field are changed, so the texture of the
+object appears changed.  
+  
+With this technology they can also tell who is touching something, or which
+part of your own body you are touching, because everything has a different
+electronic resistance.  An example they produced was a touchscreen drawing
+application that changed the pen colour depending on who was drawing, with no
+additional information than sensing the fingers on the screen.  
+  
+Disney has the _botannicus interacticus_ \\\\\\\\- an interactive plant.  Electrodes
+in the soil transform any plant into a multi-touch controller!  Gestures
+around the plant (Ã  la theremin) or touching the plant in different ways, can
+be mapped to things like sound.  It's possible to have very high precision.
+All plants are different, too!  So the same tech applied to different plants
+will cause different outcomes.  [Video](http://www.disneyresearch.com/project
+/botanicus-interacticus-interactive-plant-technology/).  
+  
+There's an open source version of _TouchÃ©_ for Arduino.  
+  
+Ivan also played with 3D printing, and sees this as something that will become
+hugely accessible to the extent that people will start to manufacture most
+things themselves; or at least, pop down to their local corner shop to get
+something printed from an existing design.  
+  
+They've done some experiments with 3D printing transparent objects, and 'light
+pipes' which direct colours and sizes of light precisely.  They can create
+interactive displays by projecting light from below or behind objects and
+piping images onto them.  
+  
+It's possible now to 3D print a broad variety of sensors.  
+  
+These things result in interactive objects that respond to you, but all of the
+electronics are outside of the object, so you can switch one object for
+another one and have it work the same very easily.  
+  
+He concluded with:  
+  
+  
+1\\\\\\\\. Digitizing what we already have, not making more junk.  
+2\\\\\\\\. Sustainability requires augmenting humans and growing your electronics.  
+3\\\\\\\\. Distributed manufacturing vs. mass production.  
+  
+  
+
+  
+
+  
+
+  
+**Resulting thoughts and ideas**  
+**  
+**I got a general feeling of disparity between 'art' and 'real-life', with strong suggestions that it doesn't matter if interactive, technology-powered art installations break, so long as people are compelled to play with them.  That's something I absolutely loved and absolutely hated simultaneously during my MSc in the ECA last year, and still causes internal conflict. (Ie. I understand the value of _play_ and experimentation, but I'm passionate about things being _useful_ and empowering, and it's possible to do both, and it bothers me when people take the easy way out, slap the 'experimental art' label on it and move on to their next solid-outcome-less project).  
+  
+Despite not actually talking to anyone about what I am doing and how it might
+in some way link to what they do, I suspect digital artists like these kinds
+of people might be good use cases for what I'm trying to make.  They
+collaborate, have varied processes.  And are more likely than amateur
+YouTubers to be interested in engaging with a new experimental technology.
+They could, for example, be incentivised to record their processes and actions
+over the course of a project, and be rewarded with visualisations of their
+data, and comparisons with the data of others.  (Actually making the
+visualisations is out of my remit, but there will be someone who can..).  
+  
+A thing I should do is analyse blogs, articles, reports, etc about creative
+digital projects for the vocabulary about their processes.  I thought about
+this as one of the speakers was just describing step by step the process for
+one project... but I wasn't listening properly; I only realised in time to
+have this thought, too late to write it all down.  But there will be loads of
+documentation already out there that can be harvested.  
+  
+I always think of my project as something that helps a lot toward connecting
+with others for collaborating, but a large part can be finding other art/media
+projects for inspiration.  That kind of pitch would sell it to this kind of
+audience, at least.  
+  
+So that's that.  [Photos from all the time I wasn't at Resonate are here](http
+s://plus.google.com/photos/111411411952277423504/albums/5857522975948484353?au
+thkey=CIO2z_Ps9u2MbA).
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-05-18T16:46:41.806Z"^^xsd:datetime .
+

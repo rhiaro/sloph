@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/cateronzolaz>
+  foaf:name "Cat" ;
+  foaf:homepage <https://twitter.com/cateronzolaz> ;
+  foaf:depiction <https://twitter.com/cateronzolaz/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/b795d55274b41772d1ac8030028534900f81b925e5be362a79c9969747dd89b9.jpeg> .
+

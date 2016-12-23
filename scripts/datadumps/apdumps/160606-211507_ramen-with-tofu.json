@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Ramen with tofu and vegetables. Green tea.",
+    "as:tag": [
+        "tea",
+        "noodles",
+        "tofu",
+        "vegetables"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-06-06T13:15:07-07:00",
+    "@id": "http://blog.rhiaro.co.uk/ramen-with-tofu",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/ramen-with-tofu"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-06T13:15:07-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/johnnieingram/status/615817605761253376>
+  dcterms:title "@rhiaro And not forgetting Reason Number Two: twitter.com/PennyRed/statu…" ;
+  dcterms:created "2015-06-30T10:42:13+01:00"^^xsd:datetime ;
+  dc:creator <http://www.johnnieingram.co.uk/> ;
+  sioc:content """[@rhiaro][1] And not forgetting Reason Number Two: [twitter.com/PennyRed/statu…][2]
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/PennyRed/status/613707140683956225
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/06/number-one-reason> .
+

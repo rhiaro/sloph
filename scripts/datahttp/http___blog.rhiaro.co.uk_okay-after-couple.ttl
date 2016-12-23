@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/okay-after-couple>
+  dcterms:created "2016-07-13T03:08:57+01:00"^^xsd:dateTime ;
+  sioc:content "Okay so after a couple of serious (but good episodes) we're back to regular programming: Tuvok and Neelix are combined by the transporter." ;
+  sioc:topic "life", "star", "trek", "voyager" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/okay-after-couple> .
+

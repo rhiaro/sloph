@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Coffee, cinnamon bagel",
+    "as:tag": [
+        "bread",
+        "coffee"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-12T09:30:03-07:00",
+    "@id": "http://blog.rhiaro.co.uk/coffee-cinnamon",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/coffee-cinnamon"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-12T09:30:03-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

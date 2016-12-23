@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/cpwood>
+  foaf:name "Chris Wood" ;
+  foaf:homepage <https://twitter.com/cpwood> ;
+  foaf:depiction <https://twitter.com/cpwood/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/3661060ac69982e96aae2977f92f8f464955cc5bac167b6282367707766ef595.jpeg> .
+

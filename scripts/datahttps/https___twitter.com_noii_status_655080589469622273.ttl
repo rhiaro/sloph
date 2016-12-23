@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/noii/status/655080589469622273>
+  sioc:reply_of <https://rhiaro.co.uk/2015/10/sos-urgent-send> ;
+  as:published "2015-10-16T18:59:17+01:00"^^xsd:datetime ;
+  as:name "@rhiaro m.youtube.com/watch?v=DzbbxVâ€¦" ;
+  as:content """[@rhiaro][1] [m.youtube.com/watch?v=DzbbxVâ€¦][2]
+
+[1]: https://twitter.com/rhiaro
+[2]: https://m.youtube.com/watch?v=DzbbxVt4JAw
+""" ;
+  as:actor <http://noii.net/> .
+

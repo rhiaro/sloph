@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/1438964880>
+  a as:Add ;
+  as:published "2015-08-07T17:28:00+0100"^^xsd:datetime ;
+  as:tag "presbrey", "timbl", "access control", "foaf", "acl", "privacy", "semantic web", "rdf", "linked data" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 7th August 2015, 17:28 Europe/London
+bookmark-of: http://dig.csail.mit.edu/2009/presbrey/UAP.pdf
+tags: linked data,semantic web,acl,rdf,foaf,access control,privacy,timbl,presbrey
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://dig.csail.mit.edu/2009/presbrey/UAP.pdf> .
+

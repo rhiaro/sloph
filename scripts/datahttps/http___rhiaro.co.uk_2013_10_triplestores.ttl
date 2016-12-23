@@ -1,0 +1,44 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/10/triplestores>
+  as:published "2013-10-13T18:58:00+0000"^^xsd:datetime ;
+  as:tag "hosted triplestores", "shared hosting", "triplestores", "learning", "semantic web", blog:Doing, "rdf", "slogd", "hacking" ;
+  as:name "Triplestores and shared hosting" ;
+  as:content """<!---
+published: 13th October 2013, 18:58
+last-modified: 20th October 2013, 11:33
+tags: semantic web,triplestores,shared hosting,learning,hacking,slogd,hosted triplestores,rdf
+list: doing
+type: BlogPost
+-->
+
+# Triplestores and shared hosting
+
+What I want to create is a solution to allow the Every(wo)man to publish their blog (/whatever) 'on' the Semantic Web.
+
+The Every(wo)man uses a cheap, perhaps archaically run, shared hosting environment, and has little to no control over what is installed there.  The most accessible server-side language is PHP.  The most likely default databases are MySQL.  Files are uploaded using FTP (typically through a client with a GUI) or a web interface like cPanel.  Maybe they'd _like_ to change to a new host who would allow them to, say, experiment with Python and CouchDB, but they just renewed their two-year contract, and besides the customer service with their current account is really good, and they have _so much_ content knocking about on that server space now, and they definitely can't afford to be paying for duplicate at the moment.  And they also can't be bothered with the faff of remembering how to work with Heroku or something everytime they sit down to tinker, not to mention the worry that their limited understanding of such a system will suddenly start incurring costs.
+
+Disclaimer: Previous paragraph may be based on actual events.
+
+The solution for running a triplestore from shared hosting is the PHP ARC2 library, which can, wonderfully, drag a MySQL database kicking and screaming into the SPARQL world.
+
+But I didn't really want to just use MySQL.  It is a terribly practical, but inpure solution.  I want a graph database, damnit, with a SPARQL endpoint, and I want somewhere for it to live that I don't have to pay extra for.
+
+So what else is there?
+
+I want to experiment with CouchDB anyway, so I checked that out.  There are hosted instances - like [Iris Couch](http://iriscouch.com) that look pretty easy to deal with.  Nobody seems to have optimised it as a triplestore though, so setting up a SPARQL endpoint and proper inferencing and stuff may be a bit beyond me right now.
+
+There are lots of hosted triplestores I guess, but they all seem to be about 'Big Data'.  I came across [Dydra](http://dydra.com/) ages ago and signed up for their Beta and forgot about it.  Then they _called me at my office_ to find out what I wanted to use the Beta for.  I bumbled that conversation because I'd forgotten what it even was (I think they introduced themselves with a different name, too), and I was generally dealing with the fact they'd actively Googled me (I asked) to get my office phone number (the University helpfully posts these on their website) which I had not given to them.  And if I had figured out what was going on in time, I'm positive they would not have given me a Beta account for "maybe tinkering a bit to see what it does when I have time at some indeterminable point in the future".
+
+UPDATE: The day after writing this I got an email with an invite code for the Dydra beta, and no personal contact from them.  Crazy coincidence.  I'll give it a shot.
+
+Anyway, I'm sure I've come across hosted 4store services that didn't try to step on your toes about what you used it for, but I can't find any now.
+
+[Talis](http://docs.api.talis.com) looks mega promising, aside from having an outdated site with broken links, but they're still allocating stores on a request basis.  Grumble.
+
+In the interests of moving forwards, I'm going to go with ARC2 and MySQL.  But I'll make sure it's all modularised and stuff so it's easy to switch out the store for something else in the future.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:updated "2013-10-20T11:33:00+0000"^^xsd:datetime .
+

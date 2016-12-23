@@ -1,0 +1,18 @@
+{
+    "h": "entry",
+    "content": "I hate computers.",
+    "category": [
+        ""
+    ],
+    "slug": "life",
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-03T17:20:40+01:00",
+    "@id": "http://blog.rhiaro.co.uk/life",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/life"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-03T17:20:40+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

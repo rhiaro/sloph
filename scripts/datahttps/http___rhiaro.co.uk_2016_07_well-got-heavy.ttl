@@ -1,0 +1,10 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/well-got-heavy>
+  sioc:reply_of <http://blog.rhiaro.co.uk/okay-after-couple> ;
+  as:published "2016-07-13T03:46:26+01:00"^^xsd:dateTime ;
+  as:tag "voyager", "trek", "star", "life" ;
+  as:content "Well, this got heavy." .
+

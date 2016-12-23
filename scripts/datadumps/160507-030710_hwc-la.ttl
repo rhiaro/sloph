@@ -1,0 +1,30 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/hwc-la> a as:Accept ;
+    dcterms:created "2016-05-06T19:07:10-07:00"^^<xsd:dateTime> ;
+    blog:rsvp "yes" ;
+    as:content "Since I'm in town" ;
+    as:endTime "2016-05-18T19:30:00-07:00" ;
+    as:inReplyTo <https://indiewebcamp.com/events/2016-05-18-homebrew-website-club#RSVP> ;
+    as:location <http://dbpedia.org/resource/Los_Angeles> ;
+    as:name "HWC LA" ;
+    as:published "2016-05-06T19:07:10-07:00" ;
+    as:startTime "2016-05-18T18:30:00-07:00" ;
+    as:tag "attendee",
+        "event",
+        "hackathon",
+        "hacking",
+        "hwc",
+        "indieweb",
+        "indiewebcamp",
+        "los angeles",
+        "rsvp" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/hwc-la> .
+

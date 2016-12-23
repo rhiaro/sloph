@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Watermelon juice, burrito (rice, black beans, refried beans, guacamole, jalapenos, cilantro, fries lol)",
+    "as:tag": [
+        "burrito",
+        "juice"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-11T15:55:24-07:00",
+    "@id": "http://blog.rhiaro.co.uk/watermelon-juice",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/watermelon-juice"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-11T15:55:24-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

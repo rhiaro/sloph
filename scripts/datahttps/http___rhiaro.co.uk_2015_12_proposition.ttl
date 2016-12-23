@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/proposition>
+  blog:tmpcontent "Proposition: Scandal is better than House of Cards. Thoughts?" ;
+  as:published "2015-12-20T20:05:33+0000"^^xsd:datetime ;
+  as:tag "netflix", "house of cards", "scandal", "tv", "life" ;
+  as:content """<!---
+tags: life,tv,scandal,house of cards,netflix
+-->
+
+Proposition: Scandal is better than House of Cards. Thoughts?""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

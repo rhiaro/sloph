@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Tacos: corn tortillas, lettuce, black beans, serrano chilli, light green chili, mushrooms, daiya, cream cheese, hot sauce; coffee",
+    "as:tag": [
+        "coffee",
+        "tacos"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-02T07:28:19-04:00",
+    "@id": "http://blog.rhiaro.co.uk/tacos-corn-tortillas",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/tacos-corn"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-02T07:28:19-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

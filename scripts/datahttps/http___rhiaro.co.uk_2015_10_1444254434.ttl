@@ -1,0 +1,20 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/10/1444254434>
+  as:published "2015-10-07T22:47:14+0100"^^xsd:datetime ;
+  as:tag "travel", "journey", "plane", "usa", "flight", "canada", "tpac" ;
+  as:startTime "2015-11-05T22:45:00+0000"^^xsd:datetime ;
+  as:endTime "2015-11-06T00:15:00+0000"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Toronto" ;
+  blog:endLocation "http://dbpedia.org/resource/Boston" ;
+  as:content """<!---
+start: 5 November 2015, 18:45 EDT
+end: 5 November 2015, 20:15 EDT
+startLocation: http://dbpedia.org/resource/Toronto
+endLocation: http://dbpedia.org/resource/Boston
+tags: journey,travel,flight,usa,plane,tpac,canada
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

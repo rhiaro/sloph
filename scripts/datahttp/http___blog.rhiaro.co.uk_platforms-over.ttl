@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/platforms-over>
+  dcterms:created "2015-06-30T10:33:23+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: websci15,emax,online personas,social media,privacy,identity
+-->
+
+Platforms 'over-ask' for data that users didn't think they should have to share - [@emax](http://twitter.com/emax)""" ;
+  sioc:topic "websci15", "emax", "online personas", "social media", "privacy", "identity" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/06/platforms-over> ;
+  as:latitude "51.73855" ;
+  as:longitude "-1.23887" ;
+  blog:tmpcontent "Platforms 'over-ask' for data that users didn't think they should have to share - [@emax](http://twitter.com/emax)" .
+

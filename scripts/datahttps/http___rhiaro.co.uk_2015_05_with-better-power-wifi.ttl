@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/with-better-power-wifi>
+  as:latitude "46.15919" ;
+  as:longitude "8.96648" ;
+  blog:tmpcontent "With better power and wifi provision, I would totally consider moving my office to misc trains through Italian/Swiss/Austrian mountains." ;
+  as:published "2015-05-17T14:13:06+0100"^^xsd:datetime ;
+  as:tag "travel", "austria", "switzerland", "italy", "trains", "mountains" ;
+  as:content """<!---
+tags: travel,trains,italy,switzerland,austria,mountains
+-->
+
+With better power and wifi provision, I would totally consider moving my office to misc trains through Italian/Swiss/Austrian mountains.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

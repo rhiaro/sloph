@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/chicago+diner>
+  a as:Collection ;
+  as:name "chicago diner" ;
+  as:items <https://rhiaro.co.uk/2016/08/57b0df0abefd8>, <https://rhiaro.co.uk/2016/08/cuban-sandwich> .
+

@@ -1,0 +1,23 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/05/1431090000>
+  as:latitude "43.78192" ;
+  as:longitude "11.24968" ;
+  as:published "2015-05-08T14:00:00+0100"^^xsd:datetime ;
+  as:tag "travel", "journey", "uk", "france", "germany", "belgium", "roadtrip" ;
+  as:startTime "2015-05-08T06:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-05-08T14:00:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Paris" ;
+  blog:endLocation "http://dbpedia.org/resource/Dusseldorf" ;
+  as:content """<!---
+published: 1st May 2015, 13:55 Europe/London
+start: 8th May 2015, 07:00 Europe/Berlin
+end: 8th May 2015, 15:00 Europe/Berlin
+startLocation: http://dbpedia.org/resource/Paris
+endLocation: http://dbpedia.org/resource/Dusseldorf
+tags: travel,roadtrip,journey,uk,france,belgium,germany
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

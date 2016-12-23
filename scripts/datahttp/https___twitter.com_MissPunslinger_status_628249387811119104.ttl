@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/MissPunslinger/status/628249387811119104>
+  dcterms:title "@rhiaro Would you consider mine? x tickets.edfringe.com/whats-on/kirst…" ;
+  dcterms:created "2015-08-03T18:01:41+01:00"^^xsd:datetime ;
+  dc:creator <https://twitter.com/MissPunslinger> ;
+  sioc:content """[@rhiaro][1] Would you consider mine? x [tickets.edfringe.com/whats-on/kirst…][2]
+
+[1]: https://twitter.com/rhiaro
+[2]: https://tickets.edfringe.com/whats-on/kirsten-macgregor-hello-cruel-world
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/08/noticing-posters> .
+

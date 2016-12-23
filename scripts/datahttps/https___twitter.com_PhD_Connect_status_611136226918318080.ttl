@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/PhD_Connect/status/611136226918318080>
+  a as:Announce ;
+  as:published "2015-06-17T12:40:05+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: I like when papers say they conducted a study on "social networking sites" but actually it was just Faceb... #phdchat rhiaro.co.uk/2015/06/like-wâ€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://www.phdconnect.org/> ;
+  as:object <https://rhiaro.co.uk/2015/06/like-when-papers> .
+

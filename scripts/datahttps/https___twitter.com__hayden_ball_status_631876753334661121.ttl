@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/_hayden_ball/status/631876753334661121>
+  sioc:reply_of <https://rhiaro.co.uk/2015/08/new-favourite> ;
+  as:published "2015-08-13T18:15:32+01:00"^^xsd:datetime ;
+  as:name "@rhiaro @edfringe don't complain or you'll all get one." ;
+  as:content """[@rhiaro][1] [@edfringe][2] don't complain or you'll all get one.
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/edfringe
+""" ;
+  as:actor <https://twitter.com/_hayden_ball> .
+

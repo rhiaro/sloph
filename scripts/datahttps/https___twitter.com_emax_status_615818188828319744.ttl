@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/emax/status/615818188828319744>
+  a as:Announce ;
+  as:published "2015-06-30T10:44:32+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: We're asking questions about lying online to understand the tensions between users and platform ... ~ @emax #websci15 rhiaro.co.uk/2015/06/were-aâ€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://hip.cat/emax> ;
+  as:object <https://rhiaro.co.uk/2015/06/were-asking> .
+

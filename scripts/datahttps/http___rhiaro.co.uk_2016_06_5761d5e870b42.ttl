@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/5761d5e870b42>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-06-15T18:08:54-04:00", "2016-06-15T18:08:54-04:00"^^xsd:dateTime ;
+  as:tag "groceries", "trader joes" ;
+  blog:cost "$13.16" ;
+  as:summary "Groceries & treats (Trader Joe's)" .
+

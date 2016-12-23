@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/x-irrelevant>
+  a as:Note ;
+  as:published "2016-08-27T05:06:12+01:00"^^xsd:dateTime ;
+  as:tag "trek", "sevenofnine", "star", "life", "voyager", <https://rhiaro.co.uk/tags/life>, <https://rhiaro.co.uk/tags/voyager>, <https://rhiaro.co.uk/tags/star>, <https://rhiaro.co.uk/tags/trek>, <https://rhiaro.co.uk/tags/sevenofnine> ;
+  as:content "<p>&quot;[x] is irrelevant.&quot;</p>" .
+

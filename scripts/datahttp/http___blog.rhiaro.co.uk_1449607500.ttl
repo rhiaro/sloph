@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1449607500>
+  dcterms:created "2015-12-08T20:45:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 8th December 2015, 20:45 Europe/London
+bookmark-of: http://www.w3.org/2015/Process-20150901/#transition-reqs
+tags: w3c,standards,socialwg
+-->
+
+""" ;
+  sioc:topic "w3c", "standards", "socialwg" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/12/1449607500> ;
+  blog:bookmark_of <http://www.w3.org/2015/Process-20150901/#transition-reqs> .
+

@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "BBQ seitan sandwich (Clover)",
+    "as:tag": [
+        "clover"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-01-27T12:42:46-05:00",
+    "@id": "http://blog.rhiaro.co.uk/bbq-seitan",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/bbq-seitan"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-27T12:42:46-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

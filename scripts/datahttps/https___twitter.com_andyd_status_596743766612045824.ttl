@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/andyd/status/596743766612045824>
+  sioc:reply_of <https://rhiaro.co.uk/2015/05/take-note-weary> ;
+  as:published "2015-05-08T19:29:35+01:00"^^xsd:datetime ;
+  as:name "@rhiaro You can get a calendar day (UK time) of unlimited data in Germany on Three by buying something called the Euro pass." ;
+  as:content """[@rhiaro][1] You can get a calendar day (UK time) of unlimited data in Germany on Three by buying something called the Euro pass.
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://about.me/andyd> .
+

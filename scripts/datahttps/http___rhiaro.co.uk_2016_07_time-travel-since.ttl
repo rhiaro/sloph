@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/time-travel-since>
+  as:published "2016-07-23T04:09:39+01:00"^^xsd:dateTime ;
+  as:tag "star trek", "voyager", "janeway" ;
+  as:content "Since my first day on the job as a Starfleet captain I swore I'd never let myself get caught in one of these godforsaken paradoxes. The future is the past, the past is the future, it all gives me a headache." .
+

@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2009/09/communications>
+  blog:tmpcontent """# Communications Officer, Science Fiction, Fantasy & Horror Society
+
+## University of Lincoln
+
+Ran the website, helped with socials, special events and regular meetings, made a paltry attempt at a society magazine (called The Bridge) but hardly anyone would write for it; did most of the dealing with the Students' Union because nobody else could be bothered.""" ;
+  as:published "2009-09-01T09:00:00+0100"^^xsd:datetime ;
+  as:tag "resume", "cv", "volunteer", "university of lincoln", "university society", "lincoln", "lincolnscifi", "science fiction" ;
+  as:name "Communications Officer, Science Fiction, Fantasy & Horror Society" ;
+  as:startTime "2009-09-01T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2011-05-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st September 2009, 09:00
+start: September 2009
+end: May 2011
+tags: cv,resume,university society,lincoln,university of lincoln,lincolnscifi,science fiction,volunteer
+-->
+
+# Communications Officer, Science Fiction, Fantasy & Horror Society
+
+## University of Lincoln
+
+Ran the website, helped with socials, special events and regular meetings, made a paltry attempt at a society magazine (called The Bridge) but hardly anyone would write for it; did most of the dealing with the Students' Union because nobody else could be bothered.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

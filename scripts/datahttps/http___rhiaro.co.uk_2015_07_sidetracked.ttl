@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/sidetracked>
+  blog:tmpcontent """Sidetracked briefly by the beach, but made it to Brighton for IndieWebCamp!
+
+![beach](https://rhiaro.co.uk/photos/1507iwcbrighton/beach.jpg)""" ;
+  as:published "2015-07-11T10:26:15+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Brighton> ;
+  as:content """<!---
+tag: indiewebcamp,brighton,events,indieweb
+location: http://dbpedia.org/resource/Brighton
+-->
+
+Sidetracked briefly by the beach, but made it to Brighton for IndieWebCamp!
+
+![beach](https://rhiaro.co.uk/photos/1507iwcbrighton/beach.jpg)""" ;
+  blog:tag "indiewebcamp,brighton,events,indieweb" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/56a90206a79fe>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-01-27T12:25:00-05:00"^^xsd:dateTime ;
+  as:tag "clover" ;
+  blog:cost "$10.25" ;
+  as:summary "BBQ seitan sandwich, peppermint & nettle tea (Clover)" .
+

@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/577306331ca84>
+  dcterms:created "2016-06-28T19:20:16-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/577306331ca84> ;
+  as:location <http://rhiaro.co.uk/location/transit> ;
+  as:published "2016-06-28T19:20:16-04:00"^^xsd:dateTime .
+

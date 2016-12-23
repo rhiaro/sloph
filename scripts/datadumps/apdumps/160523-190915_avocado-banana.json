@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Avocado, banana orange juice smoothie",
+    "as:tag": [
+        "fruit"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-23T11:09:15-07:00",
+    "@id": "http://blog.rhiaro.co.uk/avocado-banana",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/avocado-banana"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-23T11:09:15-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

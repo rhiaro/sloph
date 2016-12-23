@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/homemade-fries>
+  a asext:Consume, as:Activity ;
+  as:name "Homemade fries, veggie burger, salad (lettuce, cucumber, tomato, celery, almonds)" ;
+  as:published "2016-08-05T18:15:54-04:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/burger>, <https://rhiaro.co.uk/tags/fries>, <https://rhiaro.co.uk/tags/salad>, "vegetables", "pizza", "salad", "fries", "burger" .
+

@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/tfgrahame>
+  foaf:name "Tom Grahame" ;
+  foaf:homepage <https://twitter.com/tfgrahame> ;
+  foaf:depiction <https://twitter.com/tfgrahame/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/5709a289d4aff5a7a6874b263607cee82daee2d297c4983f44aad4b637e9c732.jpeg> .
+

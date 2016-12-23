@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/2013-03-24-todo>
+  as:published "2013-03-24T00:53:00.002Z"^^xsd:datetime ;
+  as:name "Todo" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.page-5038396530756269010" ;
+  as:content """  
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-03-24T00:53:23.146Z"^^xsd:datetime .
+

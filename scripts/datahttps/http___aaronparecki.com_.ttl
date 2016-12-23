@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://aaronparecki.com/>
+  foaf:name "Aaron Parecki" ;
+  foaf:homepage <http://aaronparecki.com/> ;
+  foaf:depiction <http://aaronparecki.com/images/aaronpk.png>, <https://webmention.io/avatar/aaronparecki.com/315c3e5ec79692096afd23002ac6860e55387ebf3ee157ae2b7ef5d21ee75c9d.png> .
+

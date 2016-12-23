@@ -1,0 +1,27 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/56ca1d62acb11> a as:Travel ;
+    dcterms:created "2016-02-21T15:23:35-05:00"^^<xsd:dateTime> ;
+    as:endTime "2016-02-28T15:30:00+00:00" ;
+    as:origin <http://dbpedia.org/resource/London> ;
+    as:published "2016-02-21T15:23:35-05:00" ;
+    as:startTime "2016-02-28T12:30:00+00:00" ;
+    as:tag "flight",
+        "iceland",
+        "journey",
+        "london",
+        "plane",
+        "reykjavik",
+        "sociam",
+        "travel",
+        "uk" ;
+    as:target <http://dbpedia.org/resource/Reykjavik> ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56ca1d62acb11> .
+

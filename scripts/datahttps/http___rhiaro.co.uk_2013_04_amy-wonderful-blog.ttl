@@ -1,0 +1,16 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/04/amy-wonderful-blog>
+  a sioc:Comment ;
+  as:published "2013-04-11T19:51:11.958Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-4219486181377401636" ;
+  as:content """Amy, wonderful blog! I was just discussing how well you've done with Duncan
+Rowland whom I bumped into last week in Lincoln.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/15257735143228455982> ;
+  as:updated "2013-04-11T19:51:11.958Z"^^xsd:datetime .
+

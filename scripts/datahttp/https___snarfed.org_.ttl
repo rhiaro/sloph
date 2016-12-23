@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://snarfed.org/>
+  dcterms:title "Ryan Barrett" ;
+  dcterms:created "2015-11-24T10:28:27+00:00"^^xsd:datetime, "2015-11-18T21:35:40+00:00"^^xsd:datetime ;
+  dc:creator <https://snarfed.org/> ;
+  sioc:content """[obligatory plug.][1] :P
+
+[1]: https://snarfed.org/posting-to-the-indieweb-from-your-phone
+""", """likes [What Amy Does: : post][1]
+
+[1]: http://rhiaro.co.uk/2015/11/let-records-show
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/11/webid-doesnt> ;
+  foaf:name "Ryan Barrett" ;
+  foaf:homepage <https://snarfed.org/> ;
+  blog:like_of <http://rhiaro.co.uk/2015/11/let-records-show> ;
+  foaf:depiction <https://webmention.io/avatar/secure.gravatar.com/feb5cf3e1e753f7c27d9796785cfa5c3ae792c503e1fe2b1fb261b5be706aa79.jpeg> .
+

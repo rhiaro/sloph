@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/bagel-with>
+  a as:Activity, asext:Consume ;
+  as:name "Bagel with avocado, spinach, tofu, tempeh, not-cheese; chips; berry smoothie (O2)" ;
+  as:published "2016-08-31T09:50:31-04:00"^^xsd:dateTime, "2016-08-31T09:50:31-04:00" ;
+  as:tag "bread", "o2", "salad", "smoothie", <https://rhiaro.co.uk/tags/bread>, <https://rhiaro.co.uk/tags/salad>, <https://rhiaro.co.uk/tags/smoothie>, <https://rhiaro.co.uk/tags/o2> .
+

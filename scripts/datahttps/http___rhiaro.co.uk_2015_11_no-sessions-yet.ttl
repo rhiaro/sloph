@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/11/no-sessions-yet>
+  blog:tmpcontent """No sessions yet, but you can now sign into my site with indieauth!
+
+Thanks for help [aaronpk](http://aaronpk.com)!""" ;
+  as:published "2015-11-08T20:47:27+0000"^^xsd:datetime ;
+  as:tag "login", "indieauth", "indiewebcamp", "http://aaronpk.com", "indieweb", "slogd", "hacking" ;
+  as:content """<!---
+tags: indieweb,indiewebcamp,hacking,slogd,indieauth,login,http://aaronpk.com
+-->
+
+No sessions yet, but you can now sign into my site with indieauth!
+
+Thanks for help [aaronpk](http://aaronpk.com)!""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/663458020970598400/369017201> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

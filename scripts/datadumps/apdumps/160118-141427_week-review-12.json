@@ -1,0 +1,22 @@
+{
+    "h": "entry",
+    "content": "# Week in review\n\n## 11-17 January 2016\n\nA pretty *solid* week. Pun intended.\n\n* Almost finished the resource browser for [dokieli](https://github.com/rhiaro/dokieli/tree/browser) and as a result started learning how to JS properly (Promises?!) and specifically interacting with Solid servers.\n* General dokieli QA and [issues](https://github.com/linkeddata/dokieli/issues) filing.\n* Started outlining [LDOW dokieli paper](http://rawgit.com/csarven/dive-into-dokieli/master/index.html).\n* Helped a little bit with materials for, and attended some of, Solid IAP hackathon/tutorials.",
+    "category": [
+        "week in review",
+        "phd",
+        "solid",
+        "javascript",
+        "dokieli"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-01-18T14:14:27+00:00",
+    "http://purl.org/dc/terms/title": "Week in review",
+    "@id": "http://blog.rhiaro.co.uk/week-review-12",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/week-review"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-18T14:14:27+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1437738000>
+  dcterms:created "2015-07-24T12:40:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 24th July 2015, 12:40 Europe/London
+bookmark-of: http://cweiske.de/tagebuch/ssl-client-certificates.htm
+tags: webid,tls,certificates,security,hacking
+-->
+
+""" ;
+  sioc:topic "webid", "tls", "certificates", "security", "hacking" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/1437738000> ;
+  blog:bookmark_of <http://cweiske.de/tagebuch/ssl-client-certificates.htm> .
+

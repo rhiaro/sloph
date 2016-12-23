@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/awful-coffee>
+  a as:Activity, asext:Consume ;
+  as:name "Awful coffee, raspberry chocolate" ;
+  as:published "2016-08-21T09:19:45-04:00"^^xsd:dateTime, "2016-08-21T09:19:45-04:00" ;
+  as:tag "chocolate", "coffee", <https://rhiaro.co.uk/tags/coffee>, <https://rhiaro.co.uk/tags/chocolate> .
+

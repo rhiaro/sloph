@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/curry-meatballs>
+  a as:Activity, asext:Consume ;
+  as:name "Curry not-meatballs, jalapenos, kale, tomato in wholewheat muffins, cucumber" ;
+  as:published "2016-08-25T22:29:54-04:00"^^xsd:dateTime, "2016-08-25T22:29:54-04:00" ;
+  as:tag "bread", "curry", "salad", "soya", <https://rhiaro.co.uk/tags/bread>, <https://rhiaro.co.uk/tags/salad>, <https://rhiaro.co.uk/tags/curry>, <https://rhiaro.co.uk/tags/soya> .
+

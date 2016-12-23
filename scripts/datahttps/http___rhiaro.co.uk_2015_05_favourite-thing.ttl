@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/favourite-thing>
+  as:latitude "44.29486" ;
+  as:longitude "11.88103" ;
+  blog:tmpcontent "My favourite thing about Italy is whenever I hear sirens I expect Morrissey to jump out belting The Youngest Was The Most Loved. Also polenta toast with porcini mushrooms. But, happy birthday Morrissey." ;
+  as:published "2015-05-22T13:10:27+0100"^^xsd:datetime ;
+  as:tag "italy", "morrissey" ;
+  as:content """<!---
+tags: morrissey,italy
+-->
+
+My favourite thing about Italy is whenever I hear sirens I expect Morrissey to jump out belting The Youngest Was The Most Loved. Also polenta toast with porcini mushrooms. But, happy birthday Morrissey.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

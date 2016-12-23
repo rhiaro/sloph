@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "content": "\"[x] is irrelevant.\"",
+    "category": [
+        "star",
+        "trek",
+        "voyager",
+        "sevenofnine",
+        "life"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-08-27T05:06:12+01:00",
+    "@id": "http://blog.rhiaro.co.uk/x-irrelevant",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/x-irrelevant"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-27T05:06:12+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

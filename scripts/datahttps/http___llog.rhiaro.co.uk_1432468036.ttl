@@ -1,0 +1,22 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1432468036>
+  as:latitude "43.51198" ;
+  as:longitude "16.43697" ;
+  a blog:LlogPost ;
+  as:published "2015-05-24T12:47:16+0100"^^xsd:datetime ;
+  as:tag "quantified self", "food", "eat", "life" ;
+  as:startTime "2015-05-24T12:47:16+0100"^^xsd:datetime ;
+  as:endTime "2015-05-24T12:47:16+0100"^^xsd:datetime ;
+  as:content """<!---
+start: 2015-05-24T13:47:16+02:00
+end: 2015-05-24T13:47:16+02:00
+type: LlogPost
+tags: eat,food,quantified self,life
+-->
+
+Fresh orange juice (Vege)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

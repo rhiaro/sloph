@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/kite-hill-cream>
+  dcterms:created "2016-07-16T01:19:02+01:00"^^xsd:dateTime ;
+  sioc:content "Kite Hill cream cheese is better than Daiya cream cheese on every count (taste, texture, spreadability) except Daiya melts spectacularly." ;
+  sioc:topic "food", "vegan" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/kite-hill-cream> .
+

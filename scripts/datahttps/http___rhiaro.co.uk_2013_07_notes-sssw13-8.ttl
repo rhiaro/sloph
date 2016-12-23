@@ -1,0 +1,173 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/07/notes-sssw13-8>
+  as:published "2013-07-11T21:00:00.000Z"^^xsd:datetime ;
+  as:tag "fabio ciravenga", "semantics", "sensor networks", "sensors", "sssw13", "social machine", "sssw2013", "notes", "semantic web", "phd", blog:Done ;
+  as:name "[Notes] Fabio Ciravenga at #SSSW2013" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6703915713273014969" ;
+  as:content """  
+Make a model of what is happening.  
+  
+_WeSenseIt_ \\\\\\\\- citizen water observations.  
+  
+River belongs to citizens, not authorities.  
+Physical sensors (hard layer) are expensive and brittle.  
+So use people instead (soft layer, social).  
+  
+Give people small sensors.  Phones.  
+Then you just need software for information management.  
+  
+
+  * capture.
+  * integrate and correlate data.
+  * share.
+  
+Can't rely on phones.  
+Old people in Doncaster.  
+  
+Give them easy sensors instead.  
+  
+
+  * camera
+  * humidity
+  * position GPS
+  * water depth, velocity
+  * rainfall via accelerometer
+  * could coverage via luminocity
+  
+Costs about EUR 80.  
+  
+Open Source & hackable.  
+  
+Not expected to substitute professional sensors, but a way to crowdsource
+information you would never get.  
+  
+  
+_In Delft_  
+  
+Give people flood preparation advice and record who ticks things off, to build
+a picture of who/how/when preparations take place.  
+  
+  
+_The Floow Ltd_  
+  
+"Commercialises data solution for telematic insurance."  
+  
+World divided 10x10m squares, sense things everywhere.  
+Traffic risks.  
+  
+  
+Sensors tell you people are going somewhere, not why.  
+That's what social media can tell you.  
+  
+  
+  
+Monitoring development of a house fire via Twitter.  
+Seeing events through the eyes of the community.  
+  
+Social streams:  
+  
+
+  * High volume
+  * Duplicated, incomplete, imprecise, incorrect
+  * Time sensitive / short term
+  * Informal
+  * Only 140 characters
+  * Spam
+  
+Large music festival.  Monitor geolocated messages, trends, topics and
+relations.  
+  
+Most 'critical' events were management issues.  
+Developing system to warn you automatically about things to pay attention to.  
+  
+Look/listen for event within 72 hours.  10 minutes to find out what it was.  
+\\\\\\\\- Simulation of station bombing.  
+Minute by minute description of event.  
+1.5 billion messages.  
+  
+
+  * Linguistic issues
+    * Alternative language
+    * Negatives
+    * Conditional statements
+    * Hope/prayer statements
+    * Irony/sarcasm
+    * Ambiguity
+    * Unreliable capitalisation
+    * Data sparsity
+  
+Four things when monitoring:  
+  
+
+  * What
+    * Identify, classify, cluster
+      * Events and sub-events
+      * Involved entities
+  * Who
+    * Human or not?
+    * Bots can be beneign, but many are a serious risk.
+    * Bots that pretend to be humans.
+  * When
+  * Where
+  
+  
+Big problem - people tweet crap!  
+People don't realise when people nearby are in danger.  
+  
+  
+_Deception on social media_  
+  
+False crowdsourcing political support on social networks.  
+Smear campaigns using bots.  
+Bots to foster / prevent social unrest.  
+  
+  
+_Identifying bots_  
+  
+23 behavioural features.  
+Feature set is open.  
+Recognise 90% of bots - more than humans can do.  
+  
+  
+  
+Very small amount of tweets are geolocated, it's useless.  
+Have to use the text.  
+  
+Timestamp is not necessarily correct.  
+  
+  
+_Issues in events_  
+  
+No infrastructure (eg. at music festivals).  
+Phone signal issues, phone charging issues.  
+  
+Most tweets from outside event.  
+  
+_Conclusions_  
+  
+Need to convince citizens that authorities are not spying on them.  
+Need to convince authorities that citizens are not all criminals.  
+  
+Privacy and legality issues.  
+  
+Creating a company on this research would be unethical.  
+Need to pass the right message.  Full disclosure.  Non-intrusive use of tweet
+content.  
+  
+What happens when authorities demand this technology for privacy-invading
+stuff.  
+  
+Have to be careful with what you publish.  
+Always assume the bad guys have thought of what you thought of.  
+Always be in a situation where you can destroy your data at short notice.  
+Bit legal barrage behind them.  Know what they are/aren't allowed, know what
+they do/don't have to do.  
+Start leading a blameless life.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-07-30T17:29:21.713Z"^^xsd:datetime .
+

@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/KKjernsmo/status/604944336791478272>
+  dcterms:title "@csarven @rhiaro Yes. Code runs, but story is it produces cartesian joins and very low selectivity triple patterns. Cost model will fix :-)" ;
+  dcterms:created "2015-05-31T10:35:43+01:00"^^xsd:datetime ;
+  dc:creator <http://www.kjetil.kjernsmo.net/> ;
+  sioc:content """[@csarven][1] [@rhiaro][2] Yes. Code runs, but story is it produces cartesian joins and very low selectivity triple patterns. Cost model will fix :-)
+
+[1]: https://twitter.com/csarven
+[2]: https://twitter.com/rhiaro
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/05/wrote-code-doesnt> .
+

@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Slice of homemade beetroot bread",
+    "as:tag": [
+        "bread"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-07-31T17:53:29-04:00",
+    "@id": "http://blog.rhiaro.co.uk/slice-homemade-beetroot",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/07/slice-homemade"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-07-31T17:53:29-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

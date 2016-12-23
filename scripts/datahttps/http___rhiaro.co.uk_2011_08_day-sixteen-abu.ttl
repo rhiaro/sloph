@@ -1,0 +1,41 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2011/08/day-sixteen-abu>
+  as:published "2011-08-17T14:51:00.002Z"^^xsd:datetime ;
+  as:tag blog:Done, "travel", "luxor", "egypt", "elephantine island", "nubian", "abu simbel" ;
+  as:name "Day Sixteen: Abu Simbel and Elephantine Island" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2182920829989310869" ;
+  as:content """SOMEONE* ordered a wakeup call for everyone without telling us. At 4am, a
+phone you don't recognise ringing next to your head from a table of all of
+your charging electricals is one of the most confusing phenomena known to man.  
+  
+*It was Dave.  
+  
+We drove three hours to Abu Simbel and marvelled at giant representations of
+Ramses II and his cohorts. The whole lot had been moved to save it from the
+rising Nile a few decades ago, which is pretty impressive. At quarter to ten
+we regrouped to join the return convoy (they don't trust tourists driving
+alone in the desert).  
+  
+Lunch was even shadier than last night's dinner. There was no written menu so
+the guy reeled off what he had. Not feeling particularly hungry, Kathryn and I
+ordered spinach soup. It had the texture of dried spinach, herbs and garlic in
+oil. Our resident professional chef (Al, for those of you not keeping up)
+whisked it for a bit and concluded it was egg white. It tasted sort of okay
+with bread dipped in. But I wouldn't recommend it.  
+  
+At 4, a local gave us a tour of Elephantine Island. The place is so chilled
+out. There is an enormous sense of community and 'the simple life' amoung the
+Nubian people.  
+  
+After dinner on the waterfront we went for an aimless wander that turned into
+getting lost in the winding streets of Aswan. It was nice to see some entirely
+tourist free areas, but we were also knackered. Eventual collapse at the
+hotel.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2011-08-17T14:53:47.582Z"^^xsd:datetime .
+

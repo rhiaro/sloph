@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/1449172904>
+  a as:Announce ;
+  as:published "2015-12-03T20:01:44+0000"^^xsd:datetime ;
+  as:tag "socialwg", "social web" ;
+  as:content """<!---
+repost-of: https://twitter.com/wilkieii/status/672314014781726720
+tags: socialwg,social web
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/wilkieii/status/672314014781726720> .
+

@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/someone-told-year>
+  blog:tmpcontent "If someone had told me a year ago all this w3c stuff would involve so much *arguing* I might not have bothered. On a similar note, if someone had told me academia would have involved so much public speaking, I might have given that a miss too. Probably best I just keep obliviously forging ahead." ;
+  as:published "2015-07-27T23:38:07+0100"^^xsd:datetime ;
+  as:tag "arguements", "academia", "w3c", "standards", "life" ;
+  as:content """<!---
+tags: w3c,academia,standards,arguements,life
+-->
+
+If someone had told me a year ago all this w3c stuff would involve so much *arguing* I might not have bothered. On a similar note, if someone had told me academia would have involved so much public speaking, I might have given that a miss too. Probably best I just keep obliviously forging ahead.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/lentils-potatoes>
+  a as:Activity, asext:Consume ;
+  as:name "Lentils, potatoes, greens and almonds in almond milk curry sauce" ;
+  as:published "2016-08-24T19:54:34-04:00"^^xsd:dateTime, "2016-08-24T19:54:34-04:00" ;
+  as:tag "curry", "lentils", "nuts", "vegetables", <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/curry>, <https://rhiaro.co.uk/tags/nuts>, <https://rhiaro.co.uk/tags/lentils> .
+

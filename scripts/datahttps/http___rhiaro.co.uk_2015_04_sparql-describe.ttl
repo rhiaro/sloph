@@ -1,0 +1,16 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/04/sparql-describe>
+  as:published "2015-04-22T15:04:00+0100"^^xsd:datetime ;
+  as:tag "query", "sparql", blog:Done, "linked data", "slogd", "hacking" ;
+  as:content """<!---
+published: 22nd April 2015, 15:04
+list: done
+tags: slogd,sparql,linked data,query,hacking
+-->
+
+So SPARQL `DESCRIBE` queries are literally 8x slower than an equivalent `CONSTRUCT { ?s ?p ?o . }`. Who knew? Not me. Maybe this isn't news to anyone who knows anything about graphs and/or query languages.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

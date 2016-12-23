@@ -1,0 +1,52 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/snakes-spiders>
+  blog:tmpcontent """# Snakes, spiders and sleepy Å olta
+
+Yesterday I jumped on a ferry at 0645 to Å olta, one of the smaller and closer islands to Split. The ferry took about an hour and was 56 kuna (~Â£5.60) return. It seemed to be full of manual labourers commuting to work. This made a lot of sense when I arrived, as there's a lot of building work going on on the island. I'd heard there isn't anything in particular to do or see on Å olta, and that it's peaceful. My main aim was to find a nice bit of beach to set up office on for a few hours.
+
+I thought I'd walk around the coast until I found a good spot, so set off east from RogaÄ. It was beautiful; the sea was shades of blue and green I can't even comprehend, and once everyone from the ferry had dispersed there wasn't a soul in sight. I only managed to get so far before my way was blocked by inpenetrable trees and/or sheer cliffs and I had to turn back. Intead of backtracking all the way back to RogaÄ to take a road though, I had a shot at pushing through the forest a bit. All over are tracks of rocks, like someone started building wide drystone walls and stopped after a few layers. These came in pretty handy for following through the brush, and eventually I cleared the denser part of the woods. Everywhere were vineyards and olive groves, and it was utterly peaceful. GPS was strong, so I kept off the roads and aimed for Stomorska. After an hour or so of (scr)ambling through the woods, I had noted the variety of lovely butterflies, become hyper-aware of all rustling sounds having seen several snakes disappearing into crevices not far from my feet, and carefully disassembled no small number of webs belonging to giant spiders so that I could pass. Suddenly I realised I had got turned about, and wound up on a road to Grohote, in the opposite direction to Stomorska. I particularly wanted to visit Maslinica at the west end of the island because I'd seen photos of *more* smaller islands off the coast there, so I kept on to Grohote. I stopped in the village for juice and chocolate, then continued the remaining 8km by following the road.
+
+I was enjoying the walk, and it was warm, though often raining very gently. Not many cars passed, but over half that did (including one scooter) stopped to offer me a ride. I figured based on this I'd hitch back.
+
+I made it to Maslinica and followed the coast around until I found an empty seafront bar with wifi, where I settled.
+
+![I live here now](https://rhiaro.co.uk/photos/1505croatia/desksolta.jpg)
+
+[Here's the GPS trace of my walk on RunKeeper](#) (pending runkeeper deciding to actually push it to the website...).
+
+All day the only people who came by the bar seemed to be friends or family of the couple who were working there. It was also a beautful spot for a swim (but really where wasn't?), with a stoney beach. I worked on my site until my battery ran out, then wandered around Maslinica.
+
+My legs were not impressed with the idea of walking 10km back to RogaÄ, and in any case I wouldn't have time to make the last ferry. I set off down the road, and sure enough the first car to come by picked me up, after about 20 minutes. They were going to Grohote, which is 2km from RogaÄ and a route I hadn't walked yet, so no problem, but last minute they decided to take me the last extra few minutes to RogaÄ anyway. So suddenly I had two hours to kill before the return ferry!
+
+This time I wandered west around the coast, and found some more gorgeous swimming spots, and chilled out in a spot off the track from where I could see the ferry come in.
+
+In conclusion, if you need distractions you should probably pick another island, but if you want understated beauty and a calm retreat, Å olta is definitely worth checking out.""" ;
+  as:name "Snakes, spiders and sleepy Å olta" ;
+  as:content """<!---
+tags: travel,croatia,solta,island,beach
+-->
+
+# Snakes, spiders and sleepy Å olta
+
+Yesterday I jumped on a ferry at 0645 to Å olta, one of the smaller and closer islands to Split. The ferry took about an hour and was 56 kuna (~Â£5.60) return. It seemed to be full of manual labourers commuting to work. This made a lot of sense when I arrived, as there's a lot of building work going on on the island. I'd heard there isn't anything in particular to do or see on Å olta, and that it's peaceful. My main aim was to find a nice bit of beach to set up office on for a few hours.
+
+I thought I'd walk around the coast until I found a good spot, so set off east from RogaÄ. It was beautiful; the sea was shades of blue and green I can't even comprehend, and once everyone from the ferry had dispersed there wasn't a soul in sight. I only managed to get so far before my way was blocked by inpenetrable trees and/or sheer cliffs and I had to turn back. Intead of backtracking all the way back to RogaÄ to take a road though, I had a shot at pushing through the forest a bit. All over are tracks of rocks, like someone started building wide drystone walls and stopped after a few layers. These came in pretty handy for following through the brush, and eventually I cleared the denser part of the woods. Everywhere were vineyards and olive groves, and it was utterly peaceful. GPS was strong, so I kept off the roads and aimed for Stomorska. After an hour or so of (scr)ambling through the woods, I had noted the variety of lovely butterflies, become hyper-aware of all rustling sounds having seen several snakes disappearing into crevices not far from my feet, and carefully disassembled no small number of webs belonging to giant spiders so that I could pass. Suddenly I realised I had got turned about, and wound up on a road to Grohote, in the opposite direction to Stomorska. I particularly wanted to visit Maslinica at the west end of the island because I'd seen photos of *more* smaller islands off the coast there, so I kept on to Grohote. I stopped in the village for juice and chocolate, then continued the remaining 8km by following the road.
+
+I was enjoying the walk, and it was warm, though often raining very gently. Not many cars passed, but over half that did (including one scooter) stopped to offer me a ride. I figured based on this I'd hitch back.
+
+I made it to Maslinica and followed the coast around until I found an empty seafront bar with wifi, where I settled.
+
+![I live here now](https://rhiaro.co.uk/photos/1505croatia/desksolta.jpg)
+
+[Here's the GPS trace of my walk on RunKeeper](#) (pending runkeeper deciding to actually push it to the website...).
+
+All day the only people who came by the bar seemed to be friends or family of the couple who were working there. It was also a beautful spot for a swim (but really where wasn't?), with a stoney beach. I worked on my site until my battery ran out, then wandered around Maslinica.
+
+My legs were not impressed with the idea of walking 10km back to RogaÄ, and in any case I wouldn't have time to make the last ferry. I set off down the road, and sure enough the first car to come by picked me up, after about 20 minutes. They were going to Grohote, which is 2km from RogaÄ and a route I hadn't walked yet, so no problem, but last minute they decided to take me the last extra few minutes to RogaÄ anyway. So suddenly I had two hours to kill before the return ferry!
+
+This time I wandered west around the coast, and found some more gorgeous swimming spots, and chilled out in a spot off the track from where I could see the ferry come in.
+
+In conclusion, if you need distractions you should probably pick another island, but if you want understated beauty and a calm retreat, Å olta is definitely worth checking out.""" .
+

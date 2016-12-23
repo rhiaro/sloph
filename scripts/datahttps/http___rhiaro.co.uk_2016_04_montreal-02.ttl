@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/montreal-02>
+  as:published "2016-04-17T20:50:55-04:00"^^xsd:dateTime ;
+  as:tag "food", "travel", "vegan", "canada", "montreal", "walking" ;
+  as:name """Montreal 02""" ;
+  as:content """
+Nine empty beds, one with me in. The fluorescent light that works is clicking rapidly. Muffled lively conversation from elsewhere in the hostel. Resting my legs.
+
+I started the day (after toast and hostel-chat) with an 8.9 mile run. Some walking. It was hot all day, I'm a bit red. I traversed the ports and almost started along the bridge to Ile Sainte-Helene before turning back; over two hours. I saw great abandoned buildings, grain silos, old and modern port industry. A boat spa with a tranquil pool, hidden away; Habitat 67; and plenty of green.
+
+As if that wasn't enough, I walked up Mont Royal, then rested by the lake for a while. Hot sun and piles of snow, tam-tams, jugglers, acrobats and hippies everywhere. Walked further, all around the city, over 12 more miles in total.
+
+I ate: coconut bubble tea from a bakery in Chinatown; shiitake teriyaki with cheese sandwich from Copper Branch; chocolate mousse from Crudessence; pizza sans fromage with wholewheat base, spinach, olives, artichokes, from Il Focolaio. The pizza was great, reminded me of Rigatoni's in Edinburgh. *And* they clocked vegan straight away, and even have a tofu pepperoni option.
+""" .
+

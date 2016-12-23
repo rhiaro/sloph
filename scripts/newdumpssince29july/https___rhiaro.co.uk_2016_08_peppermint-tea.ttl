@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/peppermint-tea>
+  a as:Activity, asext:Consume ;
+  as:name "Peppermint tea (Starbucks)" ;
+  as:published "2016-08-09T21:36:37-04:00"^^xsd:dateTime, "2016-08-09T21:36:37-04:00" ;
+  as:tag "starbucks", "tea", <https://rhiaro.co.uk/tags/tea>, <https://rhiaro.co.uk/tags/starbucks> .
+

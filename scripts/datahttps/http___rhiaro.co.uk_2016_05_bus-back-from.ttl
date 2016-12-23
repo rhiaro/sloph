@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/bus-back-from>
+  as:published "2016-05-18T04:29:10+01:00"^^xsd:dateTime ;
+  as:tag "food", "travel", "vegan", "ca2016" ;
+  as:content "On the bus back from Venice Beach to Santa Monica, serious FOMO on all the vegan restaurants / ice cream shops / food trucks I'm passing. Must exercise restraint." .
+

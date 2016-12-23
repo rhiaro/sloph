@@ -1,0 +1,35 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "blog:cost": "&pound;14.35",
+    "as:tag": [
+        "travel",
+        "journey",
+        "train",
+        "london",
+        "brockenhurst",
+        "sociam"
+    ],
+    "as:published": "2016-02-26T10:13:59+00:00",
+    "as:startTime": "2016-02-26T15:45:00+00:00",
+    "as:endTime": "2016-02-26T17:21:00+00:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/London"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Brockenhurst"
+    },
+    "@id": "http://blog.rhiaro.co.uk/56d0258fbc5d8",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56d0258fbc5d8"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-26T10:13:59+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

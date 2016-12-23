@@ -1,0 +1,29 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/online-social> a as:Travel ;
+    dcterms:created "2016-04-04T15:06:26-04:00"^^<xsd:dateTime> ;
+    blog:rsvp "yes" ;
+    as:endTime "2016-04-07T17:00:00-04:00" ;
+    as:location <http://dbpedia.org/resource/Massachusetts_Institute_of_Technology> ;
+    as:name "Online social interactions: a lens on humans and a world for humans" ;
+    as:published "2016-04-04T15:06:26-04:00" ;
+    as:startTime "2016-04-04T16:00:00-04:00" ;
+    as:tag "attendee",
+        "csail",
+        "event",
+        "phd",
+        "rsvp",
+        "social interactions",
+        "social media",
+        "social network analysis",
+        "social science",
+        "social web" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/04/online-social> .
+

@@ -1,0 +1,83 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/04/food-jenny-whole>
+  as:published "2013-04-13T20:51:00.000Z"^^xsd:datetime ;
+  as:tag blog:Done, "jenny", "food for jenny", "food diary", "vegetarian" ;
+  as:name "Food For Jenny: A whole Saturday" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-822181187325891779" ;
+  as:content """For breakfast I had Tesco's own brand bran flakes, with soya milk.  
+  
+HAHA that's a lie.  I had a cupcake.  Orange sponge with a square of dark
+chocolate in the middle.  
+  
+Homemade, so it doesn't count.  
+  
+Lunch was Linda McCartney sausages in my Mum's 'miracle bread' rolls that I
+brought back from home a couple of days ago.  They have soya flour, and
+linseeds, and all sorts of stuff.  Also in there was 'fresh' (actually week-
+old) spinach, ketchup, tabasco sauce, hummus and a pinch of magic BBQ spice
+mix.  And bancha hojicha (a Japanese green tea).  
+  
+[Then I made my own bread.  It wasn't altogether successful.
+](http://blog.rhiaro.co.uk/2013/04/my-first-bread.html)  
+  
+Over the course of the afternoon I drank a cold bottled concoction calling
+itself jasmine tea from the Chinese supermarket (because whenever I go into a
+Chinese supermarket I have to try a new weird drink).  
+  
+Dinner, then, was a sort of chilli bean stew, because I thought that would go
+well with the weird bread...  
+  
+[Soak and boil dried kidney beans; skip this part for canned ones, and chuck
+them in whenever].  
+  
+Boileth a quarter of a swede and large chunks of new potatoes with the kidney
+beans, until everything is soft.  
+  
+
+![](http://1.bp.blogspot.com/-hfopJeC9-FI/UWnEztdUbQI/AAAAAAAAFf0/YfFbcDacIbE/
+s320/130413_stewboilinghalf.jpg)
+
+  
+  
+Meanwhile:  
+  
+Half an onion, two cloves of garlic, a courgette, a red pepper, broad beans
+(frozen), a handful of tomatos and a handful of mushrooms into the wok to fry
+until they looked mostly cooked.  Plus pinches of: Vegeta (which is a
+particularly good vegetable stock you'll find in an Eastern European
+supermarket); cajun spice mix; chilli powder; piri piri spice mix; garam
+masala and mixed herbs, and let sizzle for a while longer.  Then Quorn mince
+and a tin of chopped tomatoes, a good mix, and simmer for an indeterminate
+amount of time (or until the other pan of boiling things is done).  
+  
+
+![](http://2.bp.blogspot.com/-Yf2NCsBmBzA/UWnE5IsUAFI/AAAAAAAAFf8/09YQhQ4NXt0/
+s320/130413_stewchillihalf.jpg)
+
+  
+  
+Combine two pans of boiling/simmering things (ideally into largest pan).  
+  
+
+![](http://1.bp.blogspot.com/-FY76CubkT9w/UWnE-
+JubVvI/AAAAAAAAFgE/VwN85GJyWro/s320/130413_stewcombined.jpg)
+
+  
+  
+Eat with bread and/or rice and/or a spoon.  
+  
+
+![](http://2.bp.blogspot.com/-U6ha037kePI/UWnFDGgZOOI/AAAAAAAAFgM/zP-
+rfokr6fc/s320/130413_stewserved.jpg)
+
+  
+  
+Follow with more cupcakes and tea.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-13T20:51:15.938Z"^^xsd:datetime .
+

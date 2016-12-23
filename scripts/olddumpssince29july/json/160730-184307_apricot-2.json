@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Apricot",
+    "as:tag": [
+        "fruit"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-07-30T13:43:07-04:00",
+    "@id": "http://blog.rhiaro.co.uk/apricot-2",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/07/apricot"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-07-30T13:43:07-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

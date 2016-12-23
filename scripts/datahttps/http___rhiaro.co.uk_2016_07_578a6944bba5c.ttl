@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/578a6944bba5c>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-07-16T13:04:33-04:00", "2016-07-16T13:04:33-04:00"^^xsd:dateTime ;
+  as:tag "food", "jfk museum", "restaurant" ;
+  blog:cost "$2" ;
+  as:summary "Herb lemonade (JFK Museum Cafe)" .
+

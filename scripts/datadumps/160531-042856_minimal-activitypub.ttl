@@ -1,0 +1,46 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/minimal-activitypub> dct:created "2016-05-31T04:28:56+01:00"^^<xsd:dateTime> ;
+    dct:title "Minimal ActivityPub update client\r" ;
+    sioc:content """# Minimal ActivityPub update client\r
+\r
+Today I finished [morph](https://apps.rhiaro.co.uk/morph), a client for posting ActivityStreams2 Update activities to an endpoint. The server handles this update activity however it wants, but the obvious thing to do is take the `object` of the activity and make the indicated changes.\r
+\r
+So far it:\r
+\r
+* Doesn't have proper authentication, just a field to enter in a key that the server uses to verify me.\r
+* Doesn't do endpoint discovery, so I have to type that in as well.\r
+* Only understands how to display ActivityStreams2 Collections, and only knows how to edit items within the Collections.\r
+* Specifically only knows how to add `name`, `published` and `tags` to items in a Collection.\r
+\r
+Will be expanding its object editing abilities soon.\r
+\r
+[Code on github](https://github.com/rhiaro/morph). See also: [Minimal ActivityPub update endpoint](http://rhiaro.co.uk/2016/05/minimal).""" ;
+    sioc:topic "activitypub",
+        "activitystreams",
+        "activitystreams2",
+        "as2",
+        "client",
+        "cv",
+        "hacking",
+        "json",
+        "morph",
+        "photos",
+        "php",
+        "resume",
+        "social",
+        "socialwg",
+        "swwg" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/minimal> .
+

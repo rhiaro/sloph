@@ -1,0 +1,20 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/protip>
+  dcterms:created "2015-05-01T10:23:58+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: chromeos,ubuntu,hacking,operating system,proTip
+list: done
+-->
+
+None of the install Ubuntu on chromebook instructions mention the loud beeps. Don't do it during a seminar. #proTip""" ;
+  sioc:topic "chromeos", "ubuntu", "hacking", "operating system", "proTip", blog:Done ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/protip> ;
+  blog:tmpcontent "None of the install Ubuntu on chromebook instructions mention the loud beeps. Don't do it during a seminar. #proTip" .
+

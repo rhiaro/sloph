@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1435434000>
+  dcterms:created "2015-06-27T20:40:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 27th June 2015, 20:40 Europe/London
+bookmark-of: http://www.digital-selfdefense.com/
+tags: privacy,security,persona,online identity,social networks,social media,phd
+-->
+
+""" ;
+  sioc:topic "phd", "social media", "social networks", "online identity", "persona", "security", "privacy" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/06/1435434000> ;
+  blog:bookmark_of <http://www.digital-selfdefense.com/> .
+

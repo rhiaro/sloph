@@ -1,0 +1,22 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1432033343>
+  as:latitude "43.78048" ;
+  as:longitude "11.2481" ;
+  a blog:LlogPost ;
+  as:published "2015-05-19T12:02:23+0100"^^xsd:datetime ;
+  as:tag "quantified self", "food", "eat", "life" ;
+  as:startTime "2015-05-19T12:02:23+0100"^^xsd:datetime ;
+  as:endTime "2015-05-19T12:02:23+0100"^^xsd:datetime ;
+  as:content """<!---
+start: 2015-05-19T13:02:23+02:00
+end: 2015-05-19T13:02:23+02:00
+type: LlogPost
+tags: eat,food,quantified self,life
+-->
+
+Potatoes, carrots, green beans, Bulgar wheat, bread, tomato""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

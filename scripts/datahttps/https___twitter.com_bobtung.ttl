@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/bobtung>
+  foaf:name "Bobby" ;
+  foaf:homepage <https://twitter.com/bobtung> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/0040dc81f12e1a4370c77b943c7acf6ddf02226d8a55ab26a7f99a895b6800c3.jpeg> .
+

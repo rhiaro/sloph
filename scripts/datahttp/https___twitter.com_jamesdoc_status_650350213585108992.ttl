@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/jamesdoc/status/650350213585108992>
+  dcterms:title "@rhiaro So your visa came through then!" ;
+  dcterms:created "2015-10-03T17:42:28+01:00"^^xsd:datetime ;
+  dc:creator <http://jamesdoc.com/> ;
+  sioc:content """[@rhiaro][1] So your visa came through then!
+
+[1]: https://twitter.com/rhiaro
+""", "" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/10/moved-desksedi> .
+

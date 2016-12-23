@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/56f4c5d663b20>
+  a blog:Acquisition ;
+  dcterms:created "2016-03-23T20:50:18+03:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/03/56f4c5d663b20> ;
+  blog:cost "40.59 QR" ;
+  as:published "2016-03-23T20:50:18+03:00"^^xsd:dateTime ;
+  as:summary "Nutty sweets (Al Meera, Thakira)" ;
+  as:tag "doha", "food", "snack", "souvenir", "travel" .
+

@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/572bbf8248ba5>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-05T17:46:56-04:00"^^xsd:dateTime ;
+  as:tag "food", "life alive", "restaurant" ;
+  blog:cost "$16.59" ;
+  as:summary "Noodles and smoothie (Life Alive)" .
+

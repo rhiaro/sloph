@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/strugee2>
+  foaf:name "Alex Jordan" ;
+  foaf:homepage <https://twitter.com/strugee2> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/451021f1c0056698ab07e489828f120c3584f8dd84b09ba1ee78636d8658bc41.jpeg> .
+

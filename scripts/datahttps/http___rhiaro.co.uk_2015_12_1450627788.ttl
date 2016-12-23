@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/1450627788>
+  a as:Like ;
+  as:published "2015-12-20T16:09:48+0000"^^xsd:datetime ;
+  as:tag "identity", "nationality", "global citizenship" ;
+  as:content """<!---
+like-of: http://werd.io/2015/the-complicated-liberating-metadata-of-my-future-children
+tags: nationality,global citizenship,identity
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://werd.io/2015/the-complicated-liberating-metadata-of-my-future-children> .
+

@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/mind-blown>
+  as:published "2016-04-11T19:42:04+01:00"^^xsd:dateTime ;
+  as:tag "social", "phd", "machines", "www2016", "socm2016" ;
+  as:content "Mind blown by individuals as social machines talk in &#35;socm2016... individualism as in Buddhism... something to do with state machines and temporality and 'megamoments' and then facebook status updates. For interoperability of social profiles between social machines. I barely followed and am really confused, yet positive there was something amazing in there." .
+

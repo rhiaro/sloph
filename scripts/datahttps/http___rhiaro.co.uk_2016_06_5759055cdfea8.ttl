@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/5759055cdfea8>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-06-08T18:39:32-07:00", "2016-06-08T18:39:32-07:00"^^xsd:dateTime ;
+  as:tag "cafe la flore", "food", "restaurant", "sf" ;
+  blog:cost "$9.40" ;
+  as:summary "Bagel and tea (Cafe La Flore)" .
+

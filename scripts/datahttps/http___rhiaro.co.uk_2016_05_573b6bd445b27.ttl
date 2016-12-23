@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573b6bd445b27>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-14T18:30:00-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "food", "hidden peak", "restaurant", "santa cruz", "tea", "vegan" ;
+  blog:cost "$15" ;
+  as:summary "Tea and cake and space (Hidden Peak)" .
+

@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/1443360720>
+  a as:Add ;
+  as:published "2015-09-27T14:32:00+0100"^^xsd:datetime ;
+  as:tag "social", "social web", "profiles", "phd", "social science", "web", "identity", "social media", "marshall", "resources", "papers", "content creation", "ugc", "attribution" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 27th September 2015, 14:32 Europe/London
+bookmark-of: http://www.csdl.tamu.edu/~marshall/pubs.html
+tags: marshall,phd,resources,papers,web,social,social web,social media,content creation,ugc,social science,attribution,identity,profiles
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://www.csdl.tamu.edu/~marshall/pubs.html> .
+

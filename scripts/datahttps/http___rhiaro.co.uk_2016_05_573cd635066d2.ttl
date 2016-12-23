@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573cd635066d2>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-18T13:52:50-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "food", "getty villa", "restaurant" ;
+  blog:cost "$13" ;
+  as:summary "Lunch (Getty Villa)" .
+

@@ -1,0 +1,35 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/morrissey>
+  dcterms:title "Morrissey" ;
+  dcterms:created "2015-09-21T18:59:46+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+location: http://dbpedia.org/resource/Hammersmith_Apollo
+start: 21 September 2015, 19:00 bst
+end: 21 September 2015, 23:00 bst
+tags: rsvp,morrissey,gig
+reply-to: null
+-->
+
+# Morrissey
+
+Since I'm in town anyway..""" ;
+  sioc:topic "rsvp", "morrissey", "gig" ;
+  sioc:reply_of <http://null> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/09/morrissey> ;
+  as:startTime "2015-09-21T19:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-09-21T23:00:00+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Hammersmith_Apollo> ;
+  as:latitude "51.45954" ;
+  as:longitude "0.04917" ;
+  blog:tmpcontent """# Morrissey
+
+Since I'm in town anyway..""" .
+

@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/greens-almonds>
+  a asext:Consume, as:Activity ;
+  as:name "Greens and almonds with black bean gravy" ;
+  as:published "2016-07-31T14:00:30-04:00"^^xsd:dateTime, "2016-07-31T14:00:30-04:00" ;
+  as:tag "beans", "gravy", "nuts", "vegetables", <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/beans>, <https://rhiaro.co.uk/tags/nuts>, <https://rhiaro.co.uk/tags/gravy> .
+

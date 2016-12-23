@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/578ed537b8f12>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-07-19T21:34:06-04:00", "2016-07-19T21:34:06-04:00"^^xsd:dateTime ;
+  as:tag "clover", "food", "restaurant" ;
+  blog:cost "$8.25" ;
+  as:summary "Small dinner (Clover)" .
+

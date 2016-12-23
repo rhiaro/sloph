@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/cinema>
+  a as:Collection ;
+  as:name "cinema" ;
+  as:items <https://rhiaro.co.uk/2016/07/579e732301eda>, <https://rhiaro.co.uk/2016/08/57a5e84b0ac3b> .
+

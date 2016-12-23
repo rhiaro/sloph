@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/love-work-oliver>
+  dcterms:created "2016-05-11T01:07:35+01:00"^^xsd:dateTime ;
+  sioc:content "I love the work by [Oliver Haimson](http://oliverhaimson.com) about transitioning between idenitties online, and how digital footprints and arbitrary technical decisions make this difficult. ~\"What would it look like for a social network site be oriented towards people drifting between identities over time as happens in the real world? Designing for forgetting and decay.\"" ;
+  sioc:topic "chi2016", "design", "facebook", "gender", "identity", "networks", "phd", "social", "trans" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/love-work-oliver> .
+

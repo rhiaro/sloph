@@ -1,0 +1,19 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/10/googling>
+  sioc:reply_of <https://rhiaro.co.uk/2015/10/sos-urgent-send> ;
+  blog:tmpcontent "Googling this is difficult, as Boston has its own prominent version of baked beans that is different from UK baked beans." ;
+  as:published "2015-10-16T19:25:47+01:00"^^xsd:datetime, "2015-10-16T18:25:47+0100"^^xsd:datetime ;
+  as:tag "food", "travel", "boston", "usa", "beans" ;
+  as:name ": post" ;
+  as:content "Googling this is difficult, as Boston has its own prominent version of baked beans that is different from UK baked beans.", """<!---
+reply-to: https://rhiaro.co.uk/2015/10/sos-urgent-send
+tags: food,usa,travel,beans,boston
+-->
+
+Googling this is difficult, as Boston has its own prominent version of baked beans that is different from UK baked beans.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

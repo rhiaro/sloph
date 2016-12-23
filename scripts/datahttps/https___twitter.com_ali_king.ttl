@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/ali_king>
+  foaf:name "Ali King" ;
+  foaf:homepage <https://twitter.com/ali_king> ;
+  foaf:depiction <https://twitter.com/ali_king/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/6546b0f4d84379c0d8c08babfa9866abd5eb6507df181e82c2fbeb19b98c0519.jpeg> .
+

@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/5792815bac2c2>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-07-22T12:45:40-04:00", "2016-07-22T12:45:40-04:00"^^xsd:dateTime ;
+  as:tag "all star", "csarven", "food", "restaurant" ;
+  blog:cost "$27" ;
+  as:summary "Pizza for two (All Star)" .
+

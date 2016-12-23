@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Burrito (rice, beans, jalapenos, guacamole, cilantro) (Iguanas)",
+    "blog:cost": "$7.03",
+    "as:tag": [
+        "food",
+        "restaurant",
+        "takeaway",
+        "burrito",
+        "ca2016"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-08T13:46:19-07:00",
+    "@id": "http://blog.rhiaro.co.uk/572fa5f0ce006",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/572fa5f0ce006"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-08T13:46:19-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

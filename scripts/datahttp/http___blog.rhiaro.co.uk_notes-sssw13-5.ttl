@@ -1,0 +1,61 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/notes-sssw13-5>
+  dcterms:title "[Notes] Natasha Noy at #SSSW2013" ;
+  dcterms:created "2013-07-09T16:25:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-07-17T16:26:11.585Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7560158229952344339" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """  
+
+** [Collaborative ontology development](http://www.slideshare.net/sssw2012/noy-collaborative-ontology-development) ** from Natasha Noy (**[sssw2012](http://www.slideshare.net/sssw2012))**
+
+  
+Stanford, Protégé.  
+  
+In past 10-15 years, through collaboration with scientists (particularly
+biomed), ontologies have become essential.  
+  
+Don't need to sell ontologies to scientists, they believe in it.  
+  
+Focus on science because that's where she has experience etc.  
+  
+We're not _so_ bad at versioning ontologies, more versioning data is the
+problem.  
+  
+Experts add stuff, curator checks quality, and publishes upcoming tasks.  
+  
+Similar to open source developments, but no research to compare the two.  
+\\\\- Different because biomed people are paid (well).  
+  
+ICD - International Classification of Diseases.  
+
+  * Started 17th century.
+  * Causes of death, medical bills, policy making.
+  * Revised in 80s over 8 annual conferences.
+    * 17-58 countries, 1-5 person delegations, mainly health statisticians.
+    * Manual, on paper.
+    * Whoever shouted loudest..
+    * Paper copies, only English, pdf.
+  * ICD-11 - OWL ontology!
+    * Open, Protégé (a customised, Web version), links to others.
+  
+Conflict resolution:  
+
+  * People naturally don't step on each others' toes.
+  * Users expect stuff like Web 2.0 interactions, Web interface.
+Web Protégé:  
+
+  * No consistency checking - coming but currently must go offline.
+  * Ontologies are solution to everything - versioning, roles, social interactions.
+  * Also plugins are the solutions to everything - visualisations.
+
+""" ;
+  sioc:topic blog:Done, "semantic web", "phd", "ontology", "notes", "events", "collaborative ontology development" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/07/notes-sssw13-5> .
+

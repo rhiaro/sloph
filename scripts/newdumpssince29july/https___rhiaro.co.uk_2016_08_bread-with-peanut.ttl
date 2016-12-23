@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/bread-with-peanut>
+  a as:Activity, asext:Consume ;
+  as:name "Bread with peanut butter, various jams and pumpkin butter" ;
+  as:published "2016-08-15T10:24:09-05:00"^^xsd:dateTime, "2016-08-15T10:24:09-05:00" ;
+  as:tag "bread", "cwebber", <https://rhiaro.co.uk/tags/bread>, <https://rhiaro.co.uk/tags/cwebber> .
+

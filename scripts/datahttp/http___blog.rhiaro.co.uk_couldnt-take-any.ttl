@@ -1,0 +1,27 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/couldnt-take-any>
+  sioc:content """<!---
+tags: travel,croatia,sea,beach,where fishes go
+-->
+
+i couldn't take it any more so i went back to the sea
+
+'cos that's where fishes go when fishes get the sense to flee
+
+![where fishes go](http://rhiaro.co.uk/photos/1505croatia/sea1.jpg)
+![where fishes go](http://rhiaro.co.uk/photos/1505croatia/sea2.jpg)""" ;
+  sioc:topic "where fishes go", "beach", "sea", "croatia", "travel" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/1970/01/couldnt-take-any> ;
+  as:latitude "43.51209" ;
+  as:longitude "16.437" ;
+  blog:tmpcontent """i couldn't take it any more so i went back to the sea
+
+'cos that's where fishes go when fishes get the sense to flee
+
+![where fishes go](http://rhiaro.co.uk/photos/1505croatia/sea1.jpg)
+![where fishes go](http://rhiaro.co.uk/photos/1505croatia/sea2.jpg)""" .
+

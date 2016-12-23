@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573f988a657d6>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-20T16:05:35-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "food", "restaurant", "world beat center" ;
+  blog:cost "$12" ;
+  as:summary "Chili and juice (World Beat Center)" .
+

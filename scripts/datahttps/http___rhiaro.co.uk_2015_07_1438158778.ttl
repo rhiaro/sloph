@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/1438158778>
+  a as:Announce ;
+  as:published "2015-07-29T09:32:58+0100"^^xsd:datetime ;
+  as:tag "browsers", "performance", "advertising", "web development" ;
+  as:content """<!---
+share-of: https://adactio.com/journal/9312
+tags: web development,performance,browsers,advertising
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://adactio.com/journal/9312> .
+

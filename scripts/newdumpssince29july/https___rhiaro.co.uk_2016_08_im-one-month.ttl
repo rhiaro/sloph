@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/im-one-month>
+  a as:Note ;
+  as:published "2016-08-05T22:59:07+01:00"^^xsd:dateTime ;
+  as:tag "life", "web", "w3c", <https://rhiaro.co.uk/tags/life>, <https://rhiaro.co.uk/tags/web>, <https://rhiaro.co.uk/tags/w3c> ;
+  as:content "<p>I'm one month older than the first web browser</p>" ;
+  as:inReplyTo <https://rhiaro.co.uk/2016/08/w3c-parents-early> .
+

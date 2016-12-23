@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/adactio/status/602920626395979777>
+  dcterms:title "@rhiaro We’ll do it same time as the one in Portland: July 11th and 12th. I should really get a wiki page up." ;
+  dcterms:created "2015-05-25T20:34:13+01:00"^^xsd:datetime ;
+  dc:creator <https://adactio.com/> ;
+  sioc:content """[@rhiaro][1] We'll do it same time as the one in Portland: July 11th and 12th. I should really get a wiki page up.
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/05/hey-jeremy-what> .
+

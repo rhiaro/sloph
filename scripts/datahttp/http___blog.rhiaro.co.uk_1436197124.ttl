@@ -1,0 +1,27 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1436197124>
+  dcterms:created "2015-07-06T16:38:44+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+start: 20th July 2015, 23:00 BST
+end: 21st July 2015, 07:55 BST
+startLocation: http://dbpedia.org/resource/London
+endLocation: http://dbpedia.org/resource/Edinburgh
+tags: travel,uk,bus,coach,london,edinburgh
+cost: £21
+-->""" ;
+  sioc:topic "travel", "uk", "bus", "coach", "london", "edinburgh" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/1436197124> ;
+  as:startTime "2015-07-20T23:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-07-21T07:55:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/London" ;
+  blog:endLocation "http://dbpedia.org/resource/Edinburgh" ;
+  blog:cost "£21" .
+

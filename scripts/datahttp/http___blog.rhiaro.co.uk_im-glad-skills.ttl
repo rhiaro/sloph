@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/im-glad-skills>
+  dcterms:created "2016-07-21T20:36:16+01:00"^^xsd:dateTime ;
+  sioc:content "I'm glad my skills are being put to good use at MIT: helping my colleagues rewrite silly tweets into proper English." ;
+  sioc:topic "csarven", "life", "mit", "tweet" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/im-glad-skills> .
+

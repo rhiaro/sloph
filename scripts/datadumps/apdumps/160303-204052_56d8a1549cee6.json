@@ -1,0 +1,14 @@
+{
+    "h": "entry",
+    "repost-of": "https://twitter.com/amyburvall/status/705492538191314944",
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-03-03T20:40:52+00:00",
+    "@id": "http://blog.rhiaro.co.uk/56d8a1549cee6",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/03/56d8a1549cee6"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-03-03T20:40:52+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

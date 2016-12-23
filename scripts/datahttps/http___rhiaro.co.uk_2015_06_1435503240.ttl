@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/1435503240>
+  a as:Add ;
+  as:published "2015-06-28T15:54:00+0100"^^xsd:datetime ;
+  as:tag "social web", "facebook", "privacy", "social media", "real name policy", "case study", "fail" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 28th June 2015, 15:54 Europe/London
+bookmark-of: https://medium.com/@zip/my-name-is-only-real-enough-to-work-at-facebook-not-to-use-on-the-site-c37daf3f4b03
+tags: social media,facebook,fail,social web,privacy,case study,real name policy
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://medium.com/@zip/my-name-is-only-real-enough-to-work-at-facebook-not-to-use-on-the-site-c37daf3f4b03> .
+

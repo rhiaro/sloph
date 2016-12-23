@@ -1,0 +1,34 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/project-parrotdj>
+  dcterms:title "Project ParrotDJ" ;
+  dcterms:created "2010-03-01T00:00:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 1st March 2010
+start: March 2010
+end: July 2010
+tags: parrot,parrot behaviour,parrotdj,research,undergraduate,university of lincoln,student as producer,tigo,rfid,java,cv,resume
+-->
+
+# Project ParrotDJ
+
+## Undergraduate Research Opportunities Scheme grant, University of Lincoln
+
+Set up an RFID sensor on the outside of a parrot cage, and some patterned, disc-shaped RFID tags inside, and a small Java programme to play a different genre of music depending on the tag placed by the sensor. And tried to train a parrot to use it. The first part worked pretty well, the last part not so much.""" ;
+  sioc:topic "parrot", "parrot behaviour", "parrotdj", "research", "undergraduate", "university of lincoln", "student as producer", "tigo", "rfid", "java", "cv", "resume" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2010/03/project-parrotdj> ;
+  as:startTime "2010-03-01T00:00:00+0000"^^xsd:datetime ;
+  as:endTime "2010-07-01T00:00:00+0100"^^xsd:datetime ;
+  blog:tmpcontent """# Project ParrotDJ
+
+## Undergraduate Research Opportunities Scheme grant, University of Lincoln
+
+Set up an RFID sensor on the outside of a parrot cage, and some patterned, disc-shaped RFID tags inside, and a small Java programme to play a different genre of music depending on the tag placed by the sensor. And tried to train a parrot to use it. The first part worked pretty well, the last part not so much.""" .
+

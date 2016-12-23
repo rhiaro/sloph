@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/welcome-london>
+  dcterms:created "2016-02-26T17:32:35+00:00"^^xsd:dateTime ;
+  sioc:content "Welcome to London Waterloo, none of the Tube ticket machines are taking cards and 2/3 ATMs are out of service. At rush hour. Guess I'll just stay a while." ;
+  sioc:topic "london", "travel" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/welcome-london> .
+

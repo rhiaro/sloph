@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/SocialWebWG/status/587685860407054336>
+  a as:Announce ;
+  as:published "2015-04-13T19:36:42+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@elfpavlik][1]: "Implicit vs explicit object types" by @rhiaro rhiaro.co.uk/2015/04/post-aâ€¦ see: [#hEntry #Activity] cc: [#IndieWeb #ActivityStreams #LinkedData]
+
+[1]: https://twitter.com/elfpavlik
+""" ;
+  as:actor <https://twitter.com/SocialWebWG> ;
+  as:object <https://rhiaro.co.uk/2015/04/post-and-activity-types>, <http://blog.rhiaro.co.uk/post-and-activity-types> .
+

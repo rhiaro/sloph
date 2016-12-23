@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/yeah-earlier>
+  as:latitude "44.21126" ;
+  as:longitude "12.12887" ;
+  blog:tmpcontent "Yeah it's an earlier delayed train. Terminates half way to where I'm going so I can pick up the correct train there assuming that one remains ritardo. Had to figure this out by scouring interrail timetables as there are entirely no hints on the train or any platforms passed through." ;
+  as:published "2015-05-22T13:42:22+0100"^^xsd:datetime ;
+  as:tag "travel", "train", "italy" ;
+  as:content """<!---
+tags: travel,italy,train
+-->
+
+Yeah it's an earlier delayed train. Terminates half way to where I'm going so I can pick up the correct train there assuming that one remains ritardo. Had to figure this out by scouring interrail timetables as there are entirely no hints on the train or any platforms passed through.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

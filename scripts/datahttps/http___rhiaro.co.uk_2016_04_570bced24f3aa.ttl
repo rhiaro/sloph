@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/570bced24f3aa>
+  a as:Announce ;
+  as:published "2016-04-11T17:20:34+01:00"^^xsd:dateTime ;
+  as:object <https://twitter.com/AnthroPunk/status/719560003816828928> .
+

@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/coffee-croatia>
+  dcterms:created "2015-05-29T10:22:52+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,croatia,italy,coffee
+-->
+
+Coffee in Croatia is better than coffee in Italy, in my professional opinion.""" ;
+  sioc:topic "travel", "croatia", "italy", "coffee" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/coffee-croatia> ;
+  as:latitude "45.78492" ;
+  as:longitude "15.98933" ;
+  blog:tmpcontent "Coffee in Croatia is better than coffee in Italy, in my professional opinion." .
+

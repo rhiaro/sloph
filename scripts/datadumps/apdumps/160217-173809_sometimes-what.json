@@ -1,0 +1,17 @@
+{
+    "h": "entry",
+    "content": "Sometimes what people are talking about at lunch is what I happened to read about from twitter that morning and then I can feel well informed and a useful member of the conversation.",
+    "category": [
+        "life"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-17T17:38:09+00:00",
+    "@id": "http://blog.rhiaro.co.uk/sometimes-what",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/sometimes-what"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-17T17:38:09+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

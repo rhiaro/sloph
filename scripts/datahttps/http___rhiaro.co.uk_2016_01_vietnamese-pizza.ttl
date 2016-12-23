@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/vietnamese-pizza>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-01-30T14:23:53-05:00"^^xsd:dateTime, "2016-01-30T14:23:53-05:00" ;
+  as:tag "Grasshopper", "noodles", "sushi" ;
+  as:name "Vietnamese pizza with not-meat, avocado maki, kale mushroom not-meat, tofu rice noodles (Grasshopper)" .
+

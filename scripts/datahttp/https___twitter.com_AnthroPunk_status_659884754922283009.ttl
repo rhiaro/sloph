@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/AnthroPunk/status/659884754922283009>
+  dcterms:title "@rhiaro This NYTImes article just came out on this bread issue in US: nytimes.com/2015/11/01/mag…" ;
+  dcterms:created "2015-10-30T00:09:20+00:00"^^xsd:datetime ;
+  dc:creator <http://www.posr.org/> ;
+  sioc:content """[@rhiaro][1] This NYTImes article just came out on this bread issue in US: [nytimes.com/2015/11/01/mag…][2]
+
+[1]: https://twitter.com/rhiaro
+[2]: http://www.nytimes.com/2015/11/01/magazine/bread-is-broken.html?_r=0
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/10/psa-usa-milk> .
+

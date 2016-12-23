@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/smoothie>
+  a as:Collection ;
+  as:name "smoothie" ;
+  as:items <https://rhiaro.co.uk/2016/08/banana-avocado>, <https://rhiaro.co.uk/2016/08/bagel-with>, <https://rhiaro.co.uk/2016/09/smoothie-avocado>, <https://rhiaro.co.uk/2016/09/smoothie-banana> .
+

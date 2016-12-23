@@ -1,0 +1,9 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/2016/08/half-banana-2>
+  a asext:Consume, as:Activity ;
+  as:name "Half a banana" ;
+  as:published "2016-08-05T06:37:23-04:00" ;
+  as:tag <https://rhiaro.co.uk/tags/fruit> .
+

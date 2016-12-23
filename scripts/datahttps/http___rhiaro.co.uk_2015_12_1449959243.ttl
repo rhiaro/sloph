@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/1449959243>
+  a as:Announce ;
+  as:published "2015-12-12T22:27:23+0000"^^xsd:datetime ;
+  as:content """<!---
+share-of: https://twitter.com/annbass/status/675797865730473984
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/annbass/status/675797865730473984> .
+

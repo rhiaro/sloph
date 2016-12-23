@@ -1,0 +1,39 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/slogd-semantic>
+  dcterms:title "Slog'd: *S*emantic B*log* from Mark*d*own" ;
+  dcterms:created "2013-10-11T15:46:00+0000"^^xsd:datetime ;
+  dcterms:modified "2013-10-12T21:36:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 11th October 2013, 15:46
+last-modified: 12th October 2013, 21:36
+type: BlogPost
+tags: hacking,learning,semantic web,linked data,blog,markdown
+list: doing
+-->
+
+# Slog'd: *S*emantic B*log* from Mark*d*own
+
+Gotta start somewhere.  So here's a first post.
+
+With Slog'd you will be able to:
+
+* Write posts in markdown
+* Add tags and categories
+* Upload them to the server
+
+Then when someone loads your blog:
+
+* Any new MD is parsed and turned into triples
+* They can browse through your frontend, with posts sorted however you like, within the layout you created.
+
+I don't know how I'm going to do this yet, but I'll save my progress as I go...""" ;
+  sioc:topic blog:Doing, "linked data", "blog", "semantic web", "learning", "hacking", "markdown" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/10/slogd-semantic> .
+

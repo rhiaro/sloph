@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lukasrosenstock.net/post/63280048>
+  a as:Like ;
+  as:published "2015-08-06T21:49:00+01:00"^^xsd:datetime ;
+  as:name "Lukas Rosenstock I liked a post:https://rhiaro.co.uk/2015/08/ilooklikeanengineer 2015/08/06 20:49 Â· via phpADNSite LukasRosenstock.net" ;
+  as:content """I liked a post:  
+<https://rhiaro.co.uk/2015/08/ilooklikeanengineer>""" ;
+  as:actor <https://lukasrosenstock.net/> ;
+  as:object <https://rhiaro.co.uk/2015/08/ilooklikeanengineer> .
+

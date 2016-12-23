@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/there-companies>
+  as:latitude "51.75887" ;
+  as:longitude "-1.25852" ;
+  blog:tmpcontent "There are companies that help you sell your personal data to advertisers, I totally didn't realise this. Via [@RDBinns](http://twitter.com/RDBinns)" ;
+  as:published "2015-06-30T15:03:43+0100"^^xsd:datetime ;
+  as:tag "phd", "websci15", "personal data", "privacy" ;
+  as:content """<!---
+tags: websci15,personal data,privacy,phd
+-->
+
+There are companies that help you sell your personal data to advertisers, I totally didn't realise this. Via [@RDBinns](http://twitter.com/RDBinns)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,20 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/10/arrived-hostel>
+  as:latitude "35.6808" ;
+  as:longitude "139.7669" ;
+  blog:tmpcontent "Arrived to hostel in Tokyo, immediately invited to a party. This is a friendly place. Will be back." ;
+  as:published "2015-10-24T09:00:00+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Tokyo_Station> ;
+  as:content """<!---
+location: http://dbpedia.org/resource/Tokyo_Station
+latitude: 35.6808
+longitude: 139.7669
+published: 24th October 2015, 17:00 JST
+-->
+
+Arrived to hostel in Tokyo, immediately invited to a party. This is a friendly place. Will be back.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

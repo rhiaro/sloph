@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/2016/05/hwc-la>
+  a as:Accept ;
+  as:published "2016-05-06T19:07:10-07:00" ;
+  as:name "Going to HWC LA" ;
+  as:content "Since I'm in town" ;
+  as:object <https://indiewebcamp.com/events/2016-05-18-homebrew-website-club#RSVP> .
+

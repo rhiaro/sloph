@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Fresh squeezed orange juice by Liz",
+    "as:tag": [
+        "juice"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-06-01T08:30:17-04:00",
+    "@id": "http://blog.rhiaro.co.uk/fresh-squeezed",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/fresh-squeezed"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-01T08:30:17-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,30 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2010/12/moorhen-died-arms>
+  as:published "2010-12-21T21:24:00.003Z"^^xsd:datetime ;
+  as:tag "wildlife hospital", "pigeon", "parrot behaviour", "moorhen", "Weirfield", "canary", "conure behaviour", "ducklings", "green cheek", "conure", "Tigo", "parrot", blog:Done ;
+  as:name "A moorhen died in my arms today." ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6325435303124924192" ;
+  as:content """It was sad indeed.  Plus the hoard of ducklings is now down to seven.  (There
+were nine, last time I was in, and they started at ten).  Apparently they can
+die from being too wet.  Who knew.  
+  
+I also encountered this morning: a pigeon who held his head upside down and
+walked in circles.  He had issues.  And a flightless canary, who seems healthy
+in all other aspects.  Maybe heâ€™s just awkward.  But because of this, it
+doesnâ€™t look like heâ€™s fit for the outside aviary.  If I didnâ€™t think Tigo
+would eat him, Iâ€™d adopt him in a second.  
+  
+Speaking of Tigo, he seems to be exhibiting nesting behaviour:  
+[images]  
+I think he might be hormonal.  It would certainly explain the sudden increase
+in biting.  
+  
+PS. Yesterdayâ€™s prophecy came true.  Quelle surprise.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2010-12-29T02:31:47.394Z"^^xsd:datetime .
+

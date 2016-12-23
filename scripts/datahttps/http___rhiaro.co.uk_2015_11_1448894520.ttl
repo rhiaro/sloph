@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/11/1448894520>
+  a as:Like ;
+  as:published "2015-11-30T14:42:00+0000"^^xsd:datetime ;
+  as:tag "" ;
+  as:content """<!---
+published: 30th November 2015, 14:42 Europe/London
+like-of: https://twitter.com/philip_roberts/status/671336246329933825
+tags: 
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/philip_roberts/status/671336246329933825> .
+

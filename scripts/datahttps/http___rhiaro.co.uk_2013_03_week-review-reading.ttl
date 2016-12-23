@@ -1,0 +1,45 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/03/week-review-reading>
+  as:published "2013-03-03T20:58:00.001Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "semantic web", "notes", "ontologies", "social machine", "week in review" ;
+  as:name "Week in review: Reading and catching up" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-4369784383717498857" ;
+  as:content """**25th Feb - 3rd March**  
+**  
+**I spent most of this week in a remote village by the sea in the Scottish Highlands.  
+  
+When I came back I read and made notes about the [Semantic Web and social
+machines](http://blog.rhiaro.co.uk/2013/03/phd-notes-about-semantic-web-and-
+social.html) by TBL; and typed up some notes from a while ago about
+[OntoMedia](http://blog.rhiaro.co.uk/2013/03/phd-notes-about-annotating-
+multimedia.html) and the [Semantic Web and
+communities](http://blog.rhiaro.co.uk/2013/03/phd-notes-on-sw-and-
+communities.html) by K. Faith Lawrence.  
+  
+I also translated all of my written meeting notes into Evernote, which
+promptly glitched out and doubled the amount of typing I had to do.  (I
+considered switching back to Google Docs, but I _need_ labels).  _I sure love
+technology._  
+_  
+_I refamiliarised myself with the structure OWL.  [Awesome diagrams
+here](http://www.infowebml.ws/rdf-owl/graphical-representations.htm#Resource).  
+_  
+_I did some more thinking about how I need to work with amateur content
+creators to make an ontology that fits their workflow.  I should have finished
+the planning stage of this ages ago, but.. I blame the ILWhack.  
+  
+I keep wondering about the best way to have a system of consistent URIs across
+a network where the information can move from server to server on the whim of
+a user.  During this wonderment I discovered that purl.org's login system is
+broken.  I joined the mailing list, and people complain about it and have it
+re-fixed fairly regularly, so I'll just wait..  
+  
+  
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:04:25.753Z"^^xsd:datetime .
+

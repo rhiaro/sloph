@@ -1,0 +1,214 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/api-requirements>
+  blog:tmpcontent """# API requirements derived from user stories
+
+*Draft post, in preparation for posting to SocialWG wiki*
+
+So far completed for [approved user stories](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Approved_user_stories). ~~~~
+
+Note: These requirements are deliberately limited by the contents of the user stories. If things seem obviously missing, this is because they were not referenced in the user stories. I've tried not to over-generalise when summarising them, too.
+
+Process:
+
+1. List required functionality from each user story.
+2. Cluster related functionality, find overlap between stories (see colours/tags).
+3. Organise requirements into shortlist.
+
+## Requirements shortlist
+
+In no particular order. Tags/colours map to requirements by story, below.
+
+### <span style="background-color: crimson">sub</span> Subscribe to content
+
+* According to some filter, eg. by a certain user, posted to a certain group.
+* Undo a subscription.
+
+### <span style="background-color: lightgreen">pub</span> Publish content
+
+* Including text, photo, video, audio.
+* Including metadata and relations to other things, ie. audience/to, tags, reply-to, likes.
+* Update published content.
+* Delete published content.
+
+### <span style="background-color: DarkOrchid">notif</span> Notifications
+
+* User is somehow alerted when content is created that explicitly targets them (ie. as recipient or subject).  
+
+### <span style="background-color: dodgerblue">read</span> Read content
+
+* According to permissions.
+* Discovery of content according to criteria:
+  * type (text, photo..);
+  * associated with group;
+  * created by a particular user;
+  * by the content's target (replies/likes of a particular post).
+
+## Requirements by story
+
+### [SWAT0](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#SWAT0)
+
+* Publishing a photo. <span style="background-color: lightgreen">pub</span>
+* Push notifications. <span style="background-color: DarkOrchid">notif</span>
+* Subscription to a user. <span style="background-color: crimson">sub</span>
+* Commenting on / replying to a post. <span style="background-color: lightgreen">pub</span>
+
+### [User posts a note](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#User_posts_a_note)
+
+* Publishing text content. <span style="background-color: lightgreen">pub</span>
+* Updating published text. <span style="background-color: lightgreen">pub</span>
+* Deleting published text. <span style="background-color: lightgreen">pub</span>
+
+### [Reading a user's recent posts](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Reading_a_user.27s_recent_posts)
+
+* Reading comments / replies. <span style="background-color: dodgerblue">read</span>
+* Reading posts from a particular user. <span style="background-color: dodgerblue">read</span>
+* Viewing photos from a particular user. <span style="background-color: dodgerblue">read</span>
+
+### [Following a person](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Following_a_person)
+
+* Subscription to a user. <span style="background-color: crimson">sub</span>
+* Publishing a photo. <span style="background-color: lightgreen">pub</span>
+* See a user's subscriptions. <span style="background-color: crimson">sub</span>
+* Read posts from a particular user. <span style="background-color: dodgerblue">read</span>
+* Unsubscribe from a user. <span style="background-color: crimson">sub</span>
+
+### [Read Social Stream](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Read_Social_Stream)
+
+* Subscribe to a user (one way). <span style="background-color: crimson">sub</span>
+* Join a group ~= subscribe to group content. <span style="background-color: crimson">sub</span>
+* Publish a video. <span style="background-color: lightgreen">pub</span>
+* Publish audio. <span style="background-color: lightgreen">pub</span>
+* Private sharing. <span style="background-color: dodgerblue">read</span>
+* Publish subscriptions. <span style="background-color: crimson">sub</span>
+
+### [Integration: Adding recommendations](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Integration_:_Adding_recommendations_to_bespoke_software)
+
+* Liking / recommending a post. <span style="background-color: lightgreen">pub</span>
+* Subscribe to a user. <span style="background-color: crimson">sub</span>
+* View likes of a post. <span style="background-color: dodgerblue">read</span>
+* Posting from one interface to another system (scope?)
+
+### [Integration: Adding comments](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Integration_:_Adding_comments_to_bespoke_software)
+
+* Reply to posts. <span style="background-color: lightgreen">pub</span>
+* Notifications. <span style="background-color: DarkOrchid">notif</span>
+* Subscribe to a user. <span style="background-color: crimson">sub</span>
+* Posting from one interface to another system (scope?)
+
+### [Direct messaging](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Direct_Messaging)
+
+* Publishing text content. <span style="background-color: lightgreen">pub</span>
+* Private sharing; specifying audience. <span style="background-color: dodgerblue">read</span>
+* Notifications. <span style="background-color: DarkOrchid">notif</span>""" ;
+  as:published "2015-08-01T18:30:00+0100"^^xsd:datetime ;
+  as:tag "socialwg", "w3c", "social web", "user stories", "api requirements", "social api" ;
+  as:name "API requirements derived from user stories" ;
+  as:content """<!---
+published: 1st August 2015, 18:30 BST
+tags: socialwg,w3c,social web,social api,api requirements,user stories
+-->
+
+# API requirements derived from user stories
+
+*Draft post, in preparation for posting to SocialWG wiki*
+
+So far completed for [approved user stories](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Approved_user_stories). ~~~~
+
+Note: These requirements are deliberately limited by the contents of the user stories. If things seem obviously missing, this is because they were not referenced in the user stories. I've tried not to over-generalise when summarising them, too.
+
+Process:
+
+1. List required functionality from each user story.
+2. Cluster related functionality, find overlap between stories (see colours/tags).
+3. Organise requirements into shortlist.
+
+## Requirements shortlist
+
+In no particular order. Tags/colours map to requirements by story, below.
+
+### <span style="background-color: crimson">sub</span> Subscribe to content
+
+* According to some filter, eg. by a certain user, posted to a certain group.
+* Undo a subscription.
+
+### <span style="background-color: lightgreen">pub</span> Publish content
+
+* Including text, photo, video, audio.
+* Including metadata and relations to other things, ie. audience/to, tags, reply-to, likes.
+* Update published content.
+* Delete published content.
+
+### <span style="background-color: DarkOrchid">notif</span> Notifications
+
+* User is somehow alerted when content is created that explicitly targets them (ie. as recipient or subject).  
+
+### <span style="background-color: dodgerblue">read</span> Read content
+
+* According to permissions.
+* Discovery of content according to criteria:
+  * type (text, photo..);
+  * associated with group;
+  * created by a particular user;
+  * by the content's target (replies/likes of a particular post).
+
+## Requirements by story
+
+### [SWAT0](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#SWAT0)
+
+* Publishing a photo. <span style="background-color: lightgreen">pub</span>
+* Push notifications. <span style="background-color: DarkOrchid">notif</span>
+* Subscription to a user. <span style="background-color: crimson">sub</span>
+* Commenting on / replying to a post. <span style="background-color: lightgreen">pub</span>
+
+### [User posts a note](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#User_posts_a_note)
+
+* Publishing text content. <span style="background-color: lightgreen">pub</span>
+* Updating published text. <span style="background-color: lightgreen">pub</span>
+* Deleting published text. <span style="background-color: lightgreen">pub</span>
+
+### [Reading a user's recent posts](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Reading_a_user.27s_recent_posts)
+
+* Reading comments / replies. <span style="background-color: dodgerblue">read</span>
+* Reading posts from a particular user. <span style="background-color: dodgerblue">read</span>
+* Viewing photos from a particular user. <span style="background-color: dodgerblue">read</span>
+
+### [Following a person](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Following_a_person)
+
+* Subscription to a user. <span style="background-color: crimson">sub</span>
+* Publishing a photo. <span style="background-color: lightgreen">pub</span>
+* See a user's subscriptions. <span style="background-color: crimson">sub</span>
+* Read posts from a particular user. <span style="background-color: dodgerblue">read</span>
+* Unsubscribe from a user. <span style="background-color: crimson">sub</span>
+
+### [Read Social Stream](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Read_Social_Stream)
+
+* Subscribe to a user (one way). <span style="background-color: crimson">sub</span>
+* Join a group ~= subscribe to group content. <span style="background-color: crimson">sub</span>
+* Publish a video. <span style="background-color: lightgreen">pub</span>
+* Publish audio. <span style="background-color: lightgreen">pub</span>
+* Private sharing. <span style="background-color: dodgerblue">read</span>
+* Publish subscriptions. <span style="background-color: crimson">sub</span>
+
+### [Integration: Adding recommendations](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Integration_:_Adding_recommendations_to_bespoke_software)
+
+* Liking / recommending a post. <span style="background-color: lightgreen">pub</span>
+* Subscribe to a user. <span style="background-color: crimson">sub</span>
+* View likes of a post. <span style="background-color: dodgerblue">read</span>
+* Posting from one interface to another system (scope?)
+
+### [Integration: Adding comments](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Integration_:_Adding_comments_to_bespoke_software)
+
+* Reply to posts. <span style="background-color: lightgreen">pub</span>
+* Notifications. <span style="background-color: DarkOrchid">notif</span>
+* Subscribe to a user. <span style="background-color: crimson">sub</span>
+* Posting from one interface to another system (scope?)
+
+### [Direct messaging](https://www.w3.org/wiki/Socialwg/Social_API/User_stories#Direct_Messaging)
+
+* Publishing text content. <span style="background-color: lightgreen">pub</span>
+* Private sharing; specifying audience. <span style="background-color: dodgerblue">read</span>
+* Notifications. <span style="background-color: DarkOrchid">notif</span>""" .
+

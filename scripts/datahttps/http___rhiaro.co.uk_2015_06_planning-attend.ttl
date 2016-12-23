@@ -1,0 +1,24 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/planning-attend>
+  sioc:reply_of <http://indiewebcamp.com/2015/Brighton> ;
+  as:latitude "45.51675" ;
+  as:longitude "13.56956" ;
+  blog:tmpcontent "Planning to attend Indiewebcamp Brighton" ;
+  as:published "2015-06-02T09:24:37+0100"^^xsd:datetime ;
+  as:tag "brighton", "rsvp", "uk", "events", "indiewebcamp", "indieweb", "hacking" ;
+  as:startTime "2015-07-11T10:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-07-12T18:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+start: 11th July 2015, 10:00 BST
+end: 12th July 2015, 18:00 BST
+reply-to: http://indiewebcamp.com/2015/Brighton
+tags: rsvp,events,brighton,uk,indieweb,indiewebcamp,hacking
+-->
+
+Planning to attend Indiewebcamp Brighton""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

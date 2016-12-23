@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/chips-salsa>
+  a as:Activity, asext:Consume ;
+  as:name "Chips, salsa, guacamole" ;
+  as:published "2016-08-16T20:53:52-05:00"^^xsd:dateTime, "2016-08-16T20:53:52-05:00" ;
+  as:tag "chips", "salad", "snack", <https://rhiaro.co.uk/tags/salad>, <https://rhiaro.co.uk/tags/snack>, <https://rhiaro.co.uk/tags/chips> .
+

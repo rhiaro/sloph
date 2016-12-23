@@ -1,0 +1,47 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/assertionb-im>
+  dcterms:created "2015-11-25T04:01:11+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: life,standards
+-->
+
+A. "This is an assertion."
+
+B. "I'm not sure I agree with your assertion."
+
+A. "Here is some anecdotal evidence to support my assertion."
+
+B. "Interesting, here is some anecdotal evidence to support the opposite of your assertion."
+
+A. "But my *evidence* really supports my assertion."
+
+B. "But I just gave you an equal amount of evidence to the contrary."
+
+The 'my anecdotal evidence is better than your anecdotal evidence' game.
+
+It's related to [experience](http://rhiaro.co.uk/2015/11/1-person-says-do).""" ;
+  sioc:topic "life", "standards" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/11/assertionb-im> ;
+  blog:tmpcontent """A. "This is an assertion."
+
+B. "I'm not sure I agree with your assertion."
+
+A. "Here is some anecdotal evidence to support my assertion."
+
+B. "Interesting, here is some anecdotal evidence to support the opposite of your assertion."
+
+A. "But my *evidence* really supports my assertion."
+
+B. "But I just gave you an equal amount of evidence to the contrary."
+
+The 'my anecdotal evidence is better than your anecdotal evidence' game.
+
+It's related to [experience](http://rhiaro.co.uk/2015/11/1-person-says-do).""" .
+

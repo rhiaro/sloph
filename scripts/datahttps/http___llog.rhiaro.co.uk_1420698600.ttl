@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1420698600>
+  a blog:LlogPost ;
+  as:published "2015-01-08T06:30:00+0000"^^xsd:datetime ;
+  as:tag "polyphasic", "sleep cycle", "sleep", "quantified self", "life" ;
+  as:startTime "2015-01-08T01:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-08T06:30:00+0000"^^xsd:datetime ;
+  as:content """<!---
+start: 8th January 2015, 01:00
+end: 8th January 2015, 06:30
+type: LlogPost
+tags: sleep,polyphasic,sleep cycle,quantified self,life
+list: done
+-->
+
+Suddenly it's all seeming a bit mono. I'll just go with it for now.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

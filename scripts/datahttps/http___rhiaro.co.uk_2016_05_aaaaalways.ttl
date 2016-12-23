@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/aaaaalways>
+  as:published "2016-05-28T16:14:39+01:00"^^xsd:dateTime, "2016-05-28T16:17:31+01:00"^^xsd:dateTime ;
+  as:tag "permissions", "fml", "linux", "php", "hacking" ;
+  as:content "It's aaaaalways a missing bracket.", "It's aaaaalways a permissions error." .
+

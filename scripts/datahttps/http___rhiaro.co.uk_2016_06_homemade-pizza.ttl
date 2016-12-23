@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/homemade-pizza>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-06-19T20:33:25-04:00"^^xsd:dateTime, "2016-06-19T20:33:25-04:00" ;
+  as:tag "fries", "pizza" ;
+  as:name "Homemade pizza: peppers, tofu, courgette, mushrooms, chillis, carrot, daiya; fries" .
+

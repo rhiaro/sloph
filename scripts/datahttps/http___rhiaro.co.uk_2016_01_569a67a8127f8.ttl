@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/569a67a8127f8>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-01-16T10:00:22-05:00"^^xsd:dateTime ;
+  as:tag "groceries", "vegan", "vegetables", "wholefoods" ;
+  blog:cost "$91.53" ;
+  as:summary "Groceries (Wholefoods)" .
+

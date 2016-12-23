@@ -1,0 +1,10 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://unrelenting.technology/replies/2015-07-31-22-24-36>
+  sioc:reply_of <https://rhiaro.co.uk/2015/07/would-like-chat> ;
+  as:published "2015-07-31T23:24:00+01:00"^^xsd:datetime ;
+  as:name "Maybe thatâ€™s not a regex, but an actual check that tries to connect to the SMTP server?" ;
+  as:content "Maybe that's not a regex, but an actual check that tries to connect to the SMTP server?" .
+

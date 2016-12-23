@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/hazelnut-milk>
+  a blog:Consumption ;
+  dcterms:created "2016-05-15T12:45:00-07:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/05/hazelnut-milk> ;
+  as:published "2016-05-15T12:45:00-07:00" ;
+  as:tag "coffee", "cafe gratitude" ;
+  as:name "Hazelnut milk mocha" .
+

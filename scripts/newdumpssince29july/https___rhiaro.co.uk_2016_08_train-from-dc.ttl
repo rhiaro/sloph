@@ -1,0 +1,15 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+
+<https://rhiaro.co.uk/2016/08/train-from-dc>
+  a as:Travel ;
+  as:name "Train from DC to Chicago" ;
+  as:published "2016-08-07T14:31:07-04:00"^^xsd:dateTime, "2016-08-07T14:31:07-04:00" ;
+  as:tag "amtrak", "chicago", "dc", "journey", "train", "travel", "us0816", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/travel>, <https://rhiaro.co.uk/tags/journey>, <https://rhiaro.co.uk/tags/amtrak>, <https://rhiaro.co.uk/tags/chicago>, <https://rhiaro.co.uk/tags/train>, <https://rhiaro.co.uk/tags/dc> ;
+  as:endTime "2016-08-14T08:45:00-05:00" ;
+  as:origin <http://dbpedia.org/resource/Washington,_D.C.> ;
+  as:startTime "2016-08-13T16:05:00-04:00" ;
+  as:target <http://dbpedia.org/resource/Chicago> ;
+  asext:cost "$162" .
+

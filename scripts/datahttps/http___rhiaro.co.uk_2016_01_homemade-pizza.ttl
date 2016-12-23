@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/homemade-pizza>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-01-23T22:36:01-05:00"^^xsd:dateTime, "2016-01-26T21:15:23-05:00"^^xsd:dateTime, "2016-01-26T21:15:23-05:00", "2016-01-23T22:36:01-05:00" ;
+  as:tag "pizza" ;
+  as:name "Homemade pizza: tomato, mushroom, jalapenos, not-sausage, pepper, carrot, daiya", "Homemade pizza: tomato paste, carrot, shiitake mushrooms, jalapenos, olives, tofurky sausage, diaya, vegan cream cheese" .
+

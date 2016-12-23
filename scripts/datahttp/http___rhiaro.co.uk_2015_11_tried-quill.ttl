@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://rhiaro.co.uk/2015/11/tried-quill> sioc:has_reply <http://kongaloosh.com/e/2015/11/10/yeah-my-micropub-endpoint-was-the-first-thing-i-built-so-that-i-could-just-use-quill-instead-of-making-my-own-forms> .

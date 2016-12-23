@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/11/edinburghapps>
+  as:published "2013-11-14T15:56:00.000Z"^^xsd:datetime ;
+  as:tag blog:Done, "events", "edinburgh", "hackathon", "open data", "attendee", "okfn", "edinburghapps", "council" ;
+  as:name "EdinburghApps" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-5547008470420824561" ;
+  as:content """[The post I wrote about EdinburghApps, the City of Edinburgh Council's awesome
+hackathon, is on the OKFN Scotland
+blog](http://scot.okfn.org/2013/11/12/edinburghapps/)!
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-11-14T15:56:20.229Z"^^xsd:datetime .
+

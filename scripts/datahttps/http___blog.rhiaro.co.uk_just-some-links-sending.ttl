@@ -1,0 +1,19 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/just-some-links-sending>
+  sioc:reply_of <https://rhiaro.co.uk/2015/04/indiewebcamp-dusseldorf> ;
+  as:published "2015-05-10T15:23:00+01:00"^^xsd:datetime ;
+  as:name "10th May 2015, 14:23 Amy http://blog.rhiaro.co.uk/just-some-links-sending in reply to https://rhiaro.co.uk/2015/04/indiewebcamp-dusseldorf test, hacking, indieweb, webmention Just some links for sending webmentions to.. self mention IWC Dusseldorf" ;
+  as:content """Just some links for sending webmentions to..
+
+[self mention][1]
+
+[IWC Dusseldorf][2]
+
+[1]: https://rhiaro.co.uk
+[2]: https://rhiaro.co.uk/2015/04/indiewebcamp-dusseldorf
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1442519520>
+  dcterms:created "2015-09-17T20:52:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 17th September 2015, 20:52 Europe/London
+bookmark-of: https://dud.inf.tu-dresden.de/literatur/Anon_Terminology_v0.21.pdf
+tags: privacy,pseudonymity,anonymity,identity,phd,taxonomy
+-->
+
+""" ;
+  sioc:topic "privacy", "pseudonymity", "anonymity", "identity", "phd", "taxonomy" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/09/1442519520> ;
+  blog:bookmark_of <https://dud.inf.tu-dresden.de/literatur/Anon_Terminology_v0.21.pdf> .
+

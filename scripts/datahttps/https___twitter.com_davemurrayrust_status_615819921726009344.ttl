@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/davemurrayrust/status/615819921726009344>
+  a as:Announce ;
+  as:published "2015-06-30T10:51:25+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: Facebook asks 'what is your name'. If you think about it too long, you violate the terms of service.- @emax #websci15 rhiaro.co.uk/2015/06/faceboâ€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://www.mo-seph.com/> ;
+  as:object <https://rhiaro.co.uk/2015/06/facebook-asks> .
+

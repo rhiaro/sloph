@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/train>
+  a as:Collection ;
+  as:name "train" ;
+  as:items <https://rhiaro.co.uk/2016/08/train-from-dc>, <https://rhiaro.co.uk/2016/08/train-from>, <https://rhiaro.co.uk/2016/08/progress>, <https://rhiaro.co.uk/2016/08/57b0771dbdf05>, <https://rhiaro.co.uk/2016/08/57b7af7729a20> .
+

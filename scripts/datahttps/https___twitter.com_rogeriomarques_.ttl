@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/rogeriomarques_>
+  foaf:name "Rogerio Marques" ;
+  foaf:homepage <https://twitter.com/rogeriomarques_> ;
+  foaf:depiction <https://twitter.com/rogeriomarques_/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/b95e1818041d7c36e32732c9828a33475de3f0eb73bd18e94f5d7b0b8266d86a.png> .
+

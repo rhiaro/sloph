@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Corn tortillas, fried in coconut oil, with habanero, jalapenos, black beans, mushrooms, green peppers, daiya and cream cheese melted between. Coffee",
+    "as:tag": [
+        "coffee",
+        "bread",
+        "chilli"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-29T10:06:43-04:00",
+    "@id": "http://blog.rhiaro.co.uk/corn-tortillas",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/corn-tortillas"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-29T10:06:43-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

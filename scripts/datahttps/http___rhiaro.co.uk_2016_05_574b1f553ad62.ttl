@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/574b1f553ad62>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-29T12:56:02-04:00", "2016-05-29T12:56:02-04:00"^^xsd:dateTime ;
+  as:tag "brookline diner", "food", "restaurant" ;
+  blog:cost "$6" ;
+  as:summary "Iced tea, home fries (Brookline Diner)" .
+

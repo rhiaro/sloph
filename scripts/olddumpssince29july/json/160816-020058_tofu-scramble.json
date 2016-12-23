@@ -1,0 +1,29 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Tofu scramble with tempeh, various vegetables, fried potatoes with other vegetables, bread, melon, grapefruit juice, cherry pie (Monty's Diner)",
+    "as:tag": [
+        "pie",
+        "tofu",
+        "bread",
+        "vegetables",
+        "fruit",
+        "montys diner",
+        "us0816"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-15T20:00:58-05:00",
+    "@id": "http://blog.rhiaro.co.uk/tofu-scramble",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/tofu-scramble"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-15T20:00:58-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

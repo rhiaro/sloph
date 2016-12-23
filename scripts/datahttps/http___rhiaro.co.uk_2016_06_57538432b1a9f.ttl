@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/57538432b1a9f>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-06-04T18:28:36-07:00", "2016-06-04T18:28:36-07:00"^^xsd:dateTime ;
+  as:tag "veggie grill", "restaurant", "iwc2016", "food" ;
+  blog:cost "$12.50" ;
+  as:summary "Dinner (Veggie Grill)" .
+

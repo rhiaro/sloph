@@ -1,0 +1,40 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/blog-semantic-web>
+  dcterms:title "Putting a blog on the Semantic Web" ;
+  dcterms:created "2013-10-13T18:28:00+0000"^^xsd:datetime ;
+  dcterms:modified "2013-10-13T18:33:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 13th October 2013, 18:28
+last-modified: 13th October 2013, 18:33
+type: BlogPost
+tags: semantic web,triplestores,rdf,sparql,blog,shared hosting,slogd,hacking,learning
+list: doing
+-->
+
+# Putting a blog on the Semantic Web
+
+It's easy to see why not many people do.  I say not many, because I'm sure there are people using the various RDF Drupal or Wordpress plugin.  But I don't really know if they count, because that's really just people annotating their content for SEO purposes, and maybe a bit of interlinking with DBPedia to let visitors find out a bit more about topics of interest.
+
+But what I'm really talking about is the whole blog running from a triplestore, with a publicly accessible SPARQL endpoint.
+
+All the [publicly accessible SPARQL endpoints](http://labs.mondeca.com/sparqlEndpointsStatus/) I can find are big 'useful' datasets that people might want to mash up with other things.  Archives of data.  Not live or frequently updated stuff.  Certainly not the contents and metadata of a personal blog.
+
+So what's the point?  
+
+There's not a lot else 'on' the Semantic Web to tap into.  There's no hidden Semantic Blogosphere that would yield great worth if I could only tap into it.  There are no smart agents traversing the Semantic Web and aggregating interesting blog content for intelligent readers (are there?).
+
+And there never will be, if nobody publishes their content this way.
+
+So I suppose I'd better get on with it.
+
+My point is, it's easy to see why nobody does.""" ;
+  sioc:topic "hacking", blog:Doing, "slogd", "shared hosting", "blog", "sparql", "rdf", "triplestores", "semantic web", "learning" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/10/blog-semantic-web> .
+

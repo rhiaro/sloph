@@ -1,0 +1,95 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/only-half-past>
+  dcterms:title "It’s only half past one." ;
+  dcterms:created "2010-12-29T02:20:00.006Z"^^xsd:datetime ;
+  dcterms:modified "2013-03-23T02:18:43.834Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-4159930322107356006" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """  
+
+[A summary of things I feel about HTML5, from a sleep-deprived mind]
+
+  
+
+It feels like it should be much later... earlier... than that.  I’ve spent
+hours and hours reading debates about HTML5.  Mostly debates in the comments
+of blog posts and articles.  I feel fairly well versed in two sides of the
+argument, the nature of which boils down to “HTML5: What is the point?”.  
+  
+My personal view is that progression is good.  Development for the sake of
+development is good.  Even if you don’t get it right the first time, at least
+you’re doing something, and not just whining about it.  Someone (yeah, someone
+important, I don’t do citations at this time in the morning) said that HTML5
+was being developed for the present, and that it will be rewritten in the
+future, to meet the needs in the future.  Lots of people had a problem with
+that concept, as we should be developing for the future.  Lots of people
+supported that concept, as predicting the future is quite a challenge.  I
+haven’t decided where I stand yet.  Maybe I don’t need to.  
+  
+I like the fact things are changing, because it makes me feel excited and
+challenged and all that.  It upsets me a little that I’d just got the hang of
+all this web development malarky, and now there’s more?!  Lots of people seem
+to feel the same about the latter.  Which is understandable.  Understandable
+in a world where the web is expected to be a fixed thing, and you make a
+website, and it works, and customers are happy, and clients are happy, and it
+stays like that forever.  But the world and the web (and customers and
+clients) are fluid and flowing and flexible and fickle.  Peoples’ needs
+change, hardware changes, software changes, businesses change.  They always
+have, and always will, so where this idea that the web should whoa slow down a
+second and wait for the slower ones to catch up has come from, I’m not quite
+sure.  
+  
+This makes it sound like HTML5 appeared overnight.  Which for me, in a way, it
+did.  Appeared to my conscious, concentrating, information-absorbing mind,
+anyway.  
+  
+But the part where the HTML5 spec has been under development for like six
+years or something now?  Come on guys.  I know it’s not easy, but really.
+Give the lazy people something to complain about.  Or at least make a big deal
+out of it from the start.  So ‘they’ can start thinking about it from the get-
+go.  Maybe a big deal was made, and I just missed it.  But I was making
+websites six years ago, just.  So if I missed it, ‘they’ did too.  
+  
+That last paragraph went a bit to the dogs.  What I’m trying to say is: the
+little man on the ground, the guy making the websites day-to-day, the guy
+dabbling, the guy fouling up the standard mark-up you hold so dear... Tell him
+what you’re doing, as you’re doing it, so he’s prepared.  
+  
+I know you can’t force change.  Hell, outside of term time I still live under
+a regime where IE6 is deemed a perfectly adequate browser, installing Chrome
+‘breaks’ IE, so isn’t allowed, and [insert new web thing since 1997] might be
+a great feature, but since my father doesn’t explicitly use it, any
+development on that front is pointless.  Hey, he even (almost daily) states
+angrily that film making companies are at fault because their productions are
+shown letterboxed on his 4:3 TV.  (I just searched so I could state that
+widescreen TVs have been commonplace since [year], and discovered that films
+have been being made in widescreen since around 1929.  HAH.  I’ll quote that
+juicy fact next time).  But this is whole other blog post.  
+  
+I was going somewhere with this.  Oh yes.  
+  
+I still don’t know whether I can put a <nav> in a <header>.  
+  
+That’s all I was trying to find out when I stumbled across the various
+debates.  
+  
+I’m officially declaring the HTML5 spec subject to interpretation.  
+  
+And I’m putting the <nav> in the <header>.  It’s part of the header of the
+page.  In this particular context, if I had a div with id header, I’d put the
+navigation inside it.  To hell with you all.  
+  
+PS. Thanks for the great work on developing HTML5, guys.  My life would be
+dull and repetitive without the likes of you; I’d be reading and writing a lot
+more fiction, and spending far more time with my family.  Much obliged.
+
+""" ;
+  sioc:topic blog:Done, "rant", "progression", "learning", "hacking", "HTML5" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2010/12/only-half-past> .
+

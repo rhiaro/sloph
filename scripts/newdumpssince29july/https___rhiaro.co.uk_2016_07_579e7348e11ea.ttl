@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/579e7348e11ea>
+  a as:Activity, asext:Acquire ;
+  as:published "2016-07-31T17:45:36-04:00"^^xsd:dateTime, "2016-07-31T17:45:36-04:00" ;
+  as:tag "boston", "t", "travel", <https://rhiaro.co.uk/tags/travel>, <https://rhiaro.co.uk/tags/boston>, <https://rhiaro.co.uk/tags/t> ;
+  as:summary "T-pass topup" ;
+  asext:cost "$4.50" .
+

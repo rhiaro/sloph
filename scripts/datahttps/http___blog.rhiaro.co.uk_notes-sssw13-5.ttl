@@ -1,0 +1,47 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/notes-sssw13-5> as:content """  
+
+** [Collaborative ontology development](http://www.slideshare.net/sssw2012/noy-collaborative-ontology-development) ** from Natasha Noy (**[sssw2012](http://www.slideshare.net/sssw2012))**
+
+  
+Stanford, ProtÃ©gÃ©.  
+  
+In past 10-15 years, through collaboration with scientists (particularly
+biomed), ontologies have become essential.  
+  
+Don't need to sell ontologies to scientists, they believe in it.  
+  
+Focus on science because that's where she has experience etc.  
+  
+We're not _so_ bad at versioning ontologies, more versioning data is the
+problem.  
+  
+Experts add stuff, curator checks quality, and publishes upcoming tasks.  
+  
+Similar to open source developments, but no research to compare the two.  
+\\\\\\\\- Different because biomed people are paid (well).  
+  
+ICD - International Classification of Diseases.  
+
+  * Started 17th century.
+  * Causes of death, medical bills, policy making.
+  * Revised in 80s over 8 annual conferences.
+    * 17-58 countries, 1-5 person delegations, mainly health statisticians.
+    * Manual, on paper.
+    * Whoever shouted loudest..
+    * Paper copies, only English, pdf.
+  * ICD-11 - OWL ontology!
+    * Open, ProtÃ©gÃ© (a customised, Web version), links to others.
+  
+Conflict resolution:  
+
+  * People naturally don't step on each others' toes.
+  * Users expect stuff like Web 2.0 interactions, Web interface.
+Web ProtÃ©gÃ©:  
+
+  * No consistency checking - coming but currently must go offline.
+  * Ontologies are solution to everything - versioning, roles, social interactions.
+  * Also plugins are the solutions to everything - visualisations.
+
+""" .

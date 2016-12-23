@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/57a5e7c793074>
+  a as:Activity, asext:Acquire ;
+  as:published "2016-08-05T22:06:56-04:00"^^xsd:dateTime, "2016-08-05T22:06:56-04:00" ;
+  as:tag "fomu", "food", "lizpowerssss", "treat", <https://rhiaro.co.uk/tags/food>, <https://rhiaro.co.uk/tags/fomu>, <https://rhiaro.co.uk/tags/lizpowerssss>, <https://rhiaro.co.uk/tags/treat> ;
+  as:summary "Pint ice cream (FoMu)" ;
+  asext:cost "$8" .
+

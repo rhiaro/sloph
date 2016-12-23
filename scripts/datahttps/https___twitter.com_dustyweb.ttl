@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/dustyweb>
+  foaf:name "Christopher Webber" ;
+  foaf:homepage <https://twitter.com/dustyweb> ;
+  foaf:depiction <https://twitter.com/dustyweb/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/73f5db76907cb057bd8e14bd359b990bd43d0b68dfd2e36a29d2e0b0cdb3097b.png> .
+

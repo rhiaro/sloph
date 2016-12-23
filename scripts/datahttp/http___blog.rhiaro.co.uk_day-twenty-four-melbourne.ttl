@@ -1,0 +1,25 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/day-twenty-four-melbourne>
+  dcterms:title "Day twenty four to twenty seven: Quests and silliness (Melbourne)" ;
+  dcterms:created "2013-06-24T21:34:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-07-04T21:34:35.232Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8619980812376691566" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """Friday: Arrived. Slept.  
+  
+Saturday: Shoe shopping.  Got distracted by something.  Posh meal and casino.  
+  
+Sunday: Botanic gardens, but nothing open.  After Earth. Fort. Wrath of Khan.  
+  
+Monday: Sleeping in Fort. Gardens, souvenirs. The Purge. Took fort down.
+
+""" ;
+  sioc:topic "sleep", "quest", "mbaking", "irn bru cupcakes", "fort", "cupcakes", "botanic gardens", "blanket fort", "australia", "after earth", "thornley family", "travel", blog:Done ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/06/day-twenty-four-melbourne> .
+

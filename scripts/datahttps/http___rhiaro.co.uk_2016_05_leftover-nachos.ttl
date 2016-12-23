@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/leftover-nachos>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-05-18T01:15:00-07:00"^^xsd:dateTime, "2016-05-18T01:15:00-07:00" ;
+  as:tag "ca2016", "leftovers" ;
+  as:name "Leftover nachos" .
+

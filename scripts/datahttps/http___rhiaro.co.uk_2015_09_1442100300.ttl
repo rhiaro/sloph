@@ -1,0 +1,13 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/1442100300>
+  a as:Arrive ;
+  as:published "2015-09-13T00:25:00+0100"^^xsd:datetime ;
+  as:location <https://rhiaro.co.uk/location/transit> ;
+  as:content """<!---
+location: location/transit
+published: 13th September 2015, 00:25 bst
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,27 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/went-heriot-watt>
+  dcterms:created "2015-06-08T18:16:24+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,office,phd,productivity,life
+-->
+
+So I went to Heriot Watt for the SWeL meeting today. I worked on the bus on the way there, and on the way back (apparently I've completely overcome the severe travel sickness I've had my whole life over the past few weeks). But back in my office for the afternoon, I've been at my desk, but hardly done anything. So now I'm going to the pub, and I expect to pick up where I left off, and finish what I was working on there.
+
+I guess tomorrow I might try the Forum roof. If that fails, maybe I'll try the Meadows, or the middle of Holyrood Park.
+
+I was starting to panic about the amount of UK travel/events I have coming up over the next couple of months, but looking at this it might actually improve my productivity.""" ;
+  sioc:topic "travel", "office", "phd", "productivity", "life" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/06/went-heriot-watt> ;
+  blog:tmpcontent """So I went to Heriot Watt for the SWeL meeting today. I worked on the bus on the way there, and on the way back (apparently I've completely overcome the severe travel sickness I've had my whole life over the past few weeks). But back in my office for the afternoon, I've been at my desk, but hardly done anything. So now I'm going to the pub, and I expect to pick up where I left off, and finish what I was working on there.
+
+I guess tomorrow I might try the Forum roof. If that fails, maybe I'll try the Meadows, or the middle of Holyrood Park.
+
+I was starting to panic about the amount of UK travel/events I have coming up over the next couple of months, but looking at this it might actually improve my productivity.""" .
+

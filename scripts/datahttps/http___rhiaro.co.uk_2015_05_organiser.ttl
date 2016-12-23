@@ -1,0 +1,25 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/organiser>
+  blog:tmpcontent """# Organiser, Edinburgh Centre, Young Rewired State
+
+Heading up this year's Edinburgh YRS contingent. Want to mentor? [Sign up](http://yrs.io)! Hoping to raise enough money to take two dozen kids to Birmingham on a coach, seeking sponsors...""" ;
+  as:published "2015-05-01T09:00:00+0100"^^xsd:datetime ;
+  as:tag "organisor", "young rewired state", "mentor", "volunteer", "cv", "resume", "teaching", "festival of code", "hackathon", "prewired", "yrs" ;
+  as:name "Organiser, Edinburgh Centre, Young Rewired State" ;
+  as:startTime "1970-01-01T01:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-08-02T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st May, 09:00
+start: 27th July August 2015
+end: 2nd August 2015
+tags: volunteer,cv,resume,yrs,festival of code,mentor,teaching,young rewired state,hackathon,prewired,organisor
+-->
+
+# Organiser, Edinburgh Centre, Young Rewired State
+
+Heading up this year's Edinburgh YRS contingent. Want to mentor? [Sign up](http://yrs.io)! Hoping to raise enough money to take two dozen kids to Birmingham on a coach, seeking sponsors...""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

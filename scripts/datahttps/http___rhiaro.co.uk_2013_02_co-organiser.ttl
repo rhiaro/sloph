@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2013/02/co-organiser>
+  blog:tmpcontent """# Co-organiser, Smart Data Hack
+
+## University of Edinburgh
+
+Dropped the ball on my PhD for months to wrangle sponsors, set up the website, recruit participants and generally get shit together. It went well, with feedback from students like "easily the most useful and fun week I've had since I started uni".""" ;
+  as:published "2013-02-18T09:00:00+0000"^^xsd:datetime ;
+  as:tag "hackathon", "resume", "cv", "volunteer", "university of edinburgh", "organiser", "ilwhack", "smart data hack", "innovative learning week" ;
+  as:name "Co-organiser, Smart Data Hack" ;
+  as:startTime "2013-02-18T10:00:00+0000"^^xsd:datetime ;
+  as:endTime "2013-02-22T19:00:00+0000"^^xsd:datetime ;
+  as:content """<!---
+published: 18th February 2013, 09:00
+start: 18th February 2013, 10:00
+end: 22nd February 2013, 19:00
+tags: cv,resume,volunteer,organiser,hackathon,smart data hack,ilwhack,university of edinburgh,innovative learning week
+-->
+
+# Co-organiser, Smart Data Hack
+
+## University of Edinburgh
+
+Dropped the ball on my PhD for months to wrangle sponsors, set up the website, recruit participants and generally get shit together. It went well, with feedback from students like "easily the most useful and fun week I've had since I started uni".""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

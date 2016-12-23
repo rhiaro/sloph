@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/56ba3bf68ce08>
+  a blog:Acquisition ;
+  dcterms:created "2016-02-09T13:19:43-05:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56ba3bf68ce08> ;
+  blog:cost "$10" ;
+  as:published "2016-02-09T13:19:43-05:00"^^xsd:dateTime ;
+  as:summary "2 coffees (Ames St)" ;
+  as:tag "Ames St Deli", "coffee" .
+

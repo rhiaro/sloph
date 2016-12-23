@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://known.kevinmarks.com/2015/find-an-indian-grocers---they-usually-have-well-priced-uk>
+  dcterms:title "Find an Indian grocers - they usually have well-priced UK style heinz baked beans and I expect other ingredients you will like." ;
+  dcterms:created "2015-10-16T20:25:22+01:00"^^xsd:datetime ;
+  dc:creator <http://known.kevinmarks.com/profile/kevinmarks> ;
+  sioc:content "Find an Indian grocers - they usually have well-priced UK style heinz baked beans and I expect other ingredients you will like." ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/10/sos-urgent-send> .
+

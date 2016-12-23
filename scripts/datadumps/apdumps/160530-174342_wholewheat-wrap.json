@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Wholewheat wrap with peanut butter",
+    "as:tag": [
+        "bread"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-30T12:43:42-04:00",
+    "@id": "http://blog.rhiaro.co.uk/wholewheat-wrap",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/wholewheat-wrap"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-30T12:43:42-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

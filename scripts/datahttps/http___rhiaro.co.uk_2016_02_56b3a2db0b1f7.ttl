@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56b3a2db0b1f7>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-02-04T12:12:47-05:00"^^xsd:dateTime ;
+  as:tag "medical" ;
+  blog:cost "$10" ;
+  as:summary "Prescription" .
+

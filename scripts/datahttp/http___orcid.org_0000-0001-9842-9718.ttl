@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://orcid.org/0000-0001-9842-9718>
+  foaf:name "Stian Soiland-Reyes" ;
+  foaf:homepage <http://orcid.org/0000-0001-9842-9718> ;
+  foaf:depiction <https://twitter.com/soilandreyes/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/279281a0e135a36e12068ba80e0609cd5db4fbfcae76970ba2ed2b0766f3eca3.jpeg> .
+

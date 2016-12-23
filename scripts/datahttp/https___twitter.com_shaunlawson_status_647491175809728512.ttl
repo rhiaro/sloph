@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/shaunlawson/status/647491175809728512>
+  dcterms:title "@rhiaro oh wow that looks so nice - we are banking on PCS being open a while yet here!" ;
+  dcterms:created "2015-09-25T20:21:40+01:00"^^xsd:datetime ;
+  dc:creator <http://lisc.lincoln.ac.uk/> ;
+  sioc:content """[@rhiaro][1] oh wow that looks so nice - we are banking on PCS being open a while yet here!
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/09/post-chi-deadline> .
+

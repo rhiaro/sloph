@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1429449480>
+  a blog:LlogPost ;
+  as:published "2015-04-19T14:18:00+0100"^^xsd:datetime ;
+  as:tag "quantified self", "food", "eat", "life" ;
+  as:startTime "2015-04-19T14:18:00+0100"^^xsd:datetime ;
+  as:endTime "2015-04-19T14:18:00+0100"^^xsd:datetime ;
+  as:content """<!--- 
+start: 19th April 2015, 14:18
+end: 19th April 2015, 14:18
+type: LlogPost
+tags: eat,food,quantified self,life
+list: done
+-->
+
+Cherry blossom green and Turkish apple tea, chocolate raspberry tart (Anteaques)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/tacos-with>
+  a as:Activity, asext:Consume ;
+  as:name "Tacos with butternut squash, tofu, lettuce, black beans, brown rice, daiya, guacamole; iced tea (Blockheads)" ;
+  as:published "2016-08-22T14:16:19-04:00"^^xsd:dateTime, "2016-08-22T14:16:19-04:00" ;
+  as:tag "beans", "blockheads", "salad", "tacos", "tea", "tofu", "us0816", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/salad>, <https://rhiaro.co.uk/tags/beans>, <https://rhiaro.co.uk/tags/tofu>, <https://rhiaro.co.uk/tags/tea>, <https://rhiaro.co.uk/tags/tacos>, <https://rhiaro.co.uk/tags/blockheads> .
+

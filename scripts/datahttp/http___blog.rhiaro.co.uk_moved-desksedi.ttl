@@ -1,0 +1,39 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/moved-desksedi>
+  dcterms:created "2015-10-03T17:36:00+0100"^^xsd:datetime ;
+  sioc:content """<!---
+tags: phd,mit,edinburgh,work,travel,boston
+location: http://dbpedia.org/resource/Massachusetts_Institute_of_Technology
+published: 3 October 2015, 12:36 EDT
+-->
+
+I moved desks.
+
+From..
+
+![Edi desk](http://rhiaro.co.uk/photos/deskedi.jpg)
+
+..to..
+
+![MIT desk](http://rhiaro.co.uk/photos/deskmit.jpg)""" ;
+  sioc:topic "boston", "travel", "work", "edinburgh", "mit", "phd" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/10/moved-desksedi> ;
+  as:location <http://dbpedia.org/resource/Massachusetts_Institute_of_Technology> ;
+  as:latitude "42.36207" ;
+  as:longitude "-71.09046" ;
+  blog:tmpcontent """I moved desks.
+
+From..
+
+![Edi desk](http://rhiaro.co.uk/photos/deskedi.jpg)
+
+..to..
+
+![MIT desk](http://rhiaro.co.uk/photos/deskmit.jpg)""" .
+

@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/09/rice-noodles-with>
+  a as:Activity, asext:Consume ;
+  as:name "Rice noodles with paprika tofu, salad, spicy peanut dressing; basil limeade (Bon Me)" ;
+  as:published "2016-09-03T13:35:41-04:00"^^xsd:dateTime, "2016-09-03T13:35:41-04:00" ;
+  as:tag "bon me", "noodles", "salad", "tofu", <https://rhiaro.co.uk/tags/salad>, <https://rhiaro.co.uk/tags/tofu>, <https://rhiaro.co.uk/tags/noodles>, <https://rhiaro.co.uk/tags/bon+me> .
+

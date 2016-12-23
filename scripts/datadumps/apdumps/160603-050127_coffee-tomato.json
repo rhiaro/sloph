@@ -1,0 +1,28 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Coffee, tomato juice, blue potato chips, leftover pasta and veg",
+    "as:tag": [
+        "food",
+        "snacks",
+        "free",
+        "flight",
+        "jetblue",
+        "leftovers"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-06-02T21:01:27-07:00",
+    "@id": "http://blog.rhiaro.co.uk/coffee-tomato",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/coffee-tomato"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-02T21:01:27-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

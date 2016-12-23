@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/09/complex-systems>
+  a as:Note ;
+  as:published "2016-09-02T01:03:02+01:00"^^xsd:dateTime ;
+  as:tag "tng", "software", "data", "star trek", "hacking", <https://rhiaro.co.uk/tags/hacking>, <https://rhiaro.co.uk/tags/star+trek>, <https://rhiaro.co.uk/tags/software>, <https://rhiaro.co.uk/tags/tng>, <https://rhiaro.co.uk/tags/data> ;
+  as:content "<p>&quot;Complex systems sometimes behave in ways that are difficult to predict&quot; - Data explains bugs in my software</p>" .
+

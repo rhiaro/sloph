@@ -1,0 +1,26 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/01/week-review-ilw>
+  as:published "2013-01-20T15:29:00.002Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "innovative learning week", "week in review" ;
+  as:name "Week in review: ILW hack, mostly" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8834169395759849825" ;
+  as:content """**14th January - 20th January**  
+**  
+**Further discussed ILW hack with various parties, and released a [website](http://events.inf.ed.ac.uk/ilw/hack) with information for anyone interested in being involved, and registration for students.  
+  
+I went to the first Machine Learning and Pattern Recognition class.  It looks
+interesting, but might be a bit maths heavy... I might concentrate on learning
+the maths now, and take the class next year, instead of killing myself with
+both.  
+  
+Caught up on all my blogging!  
+  
+  
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:08:01.660Z"^^xsd:datetime .
+

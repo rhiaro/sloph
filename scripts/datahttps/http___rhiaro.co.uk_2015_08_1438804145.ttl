@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/1438804145>
+  a as:Announce ;
+  as:published "2015-08-05T20:49:05+0100"^^xsd:datetime ;
+  as:tag "prewired" ;
+  as:content """<!---
+share-of: https://twitter.com/Prewired/status/629015595804164096
+tags: prewired
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/Prewired/status/629015595804164096> .
+

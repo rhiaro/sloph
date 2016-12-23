@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/pancakes-made>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-06-11T15:04:53-07:00"^^xsd:dateTime, "2016-06-11T15:04:53-07:00" ;
+  as:tag "coffee", "foodparsed.com", "pancakes" ;
+  as:name "Pancakes made by Elaine, with peanut butter. Coffee" .
+

@@ -1,0 +1,95 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/04/notes-lit-review>
+  as:published "2013-04-22T15:41:00.000Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "events", "thesis", "workshop", "attendee", "literature review" ;
+  as:name "[Notes] How to write a literature review workshop" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-6939420428262832066" ;
+  as:content """  
+Just notes!  
+  
+Workshop by Dr Mimo Caenepeel on Monday 22nd April.  
+  
+'Critical' does not mean you have to pass judgement, or say why it's good or
+bad.  
+Not taking things at face value.  
+  
+Started with freewriting about what has particularly influenced / inspired our
+own research.  Five minutes, not allowed to stop or edit, don't worry about
+quality of writing, not for anyone else to read.  A good way to get ideas out
+of your head and start to organise your thoughts without censoring or
+constraining yourself.  
+  
+How many pages will a review usually take up in a thesis?  My policy is to
+write what needs to be written and stop when you're done.  But apparently 20
+to 30, sometimes more, is normal in sciences.  
+  
+There's no consistent / right answer to 'how many publications to review'.
+For some people it's in the tens, for some the hundreds.  
+  
+Think about how to integrate literature review into the thesis.  You're
+unlikely to have a chapter that is just 'literature review' and no mention of
+the background reading elsewhere.  
+  
+Good qualities for a lit review?  
+\\\\\\\\- Coherence (avoid fragmentation)  
+\\\\\\\\- Structure, clarity.  
+\\\\\\\\- Proof of novelty - purposeful.  
+  
+A review can often be considered as an indicator of the quality of the rest of
+the research - demonstrating scholarship.  
+  
+A good place to start:  
+1\\\\\\\\. Write your research question, formulated as a question.  
+2\\\\\\\\. Write up to five research areas that are relevant to your research
+question.  
+3\\\\\\\\. Note some related issues/areas that will not be considered in your review.  
+  
+Think about balance of content.  
+1\\\\\\\\. Three studies influential in your field (I couldn't answer this, I clearly
+need to read more).  
+2\\\\\\\\. Two significan older contributions.  
+3\\\\\\\\. Five recent sources.  
+4\\\\\\\\. Two sources that have strongly influenced your thinking.  
+  
+You don't need to consider all papers in the same level of detail.  Decide
+which papers are more important / useful than others.  
+  
+For some papers (important ones) you should work through these questions in
+the same way every time you read something (this is 'SQ3R'):  
+1\\\\\\\\. Survey: What is the gist of the article? Skim the title, abstract,
+introduction, conclusion and section headings. What stands out?  
+2\\\\\\\\. Question: Which aspects of the research are particularly relevant for your
+review? Articulate some relevant questions the article might address.  
+3\\\\\\\\. Read: Read through the text more slowly and in more detail and highlight
+key points / key words.  Identify connections with other material you have
+read.  
+4\\\\\\\\. Recall: Divide the text into manageable chunks and summarise each chunk in
+a sentence.  
+5\\\\\\\\. Review: To what extent has the text answered the questions you formulated
+earlier?  
+  
+Critical reading (these seem like really useful questions to work through
+whilst reading papers):  
+1\\\\\\\\. What is the author's central argument or main point, ie. what does the
+author want you, the reader, to accept?  
+2\\\\\\\\. What conclusions does the author reach?  
+3\\\\\\\\. What evidence does the author put foward in support of his or her
+conclusions?  
+4\\\\\\\\. Do you think the evidence is strong enough to support the arguments and
+conclusions, ie. is the evidence relevant and far-reaching enough?  
+5\\\\\\\\. Does the author make any unstated assumptions about shared beliefs with
+readers?  
+6\\\\\\\\. Can these assumptions be challenged?  
+7\\\\\\\\. Could the text's scientific, cultural or historical context have an effect
+on the author's assumptions, the content and the way it has been presented?  
+  
+See Ridley, D. _The Literature Review: A step-by-step guide for students._
+Sage Study Skills Series. Sage Publications, 2011 (2008).
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-05-18T16:47:20.823Z"^^xsd:datetime .
+

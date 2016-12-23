@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/o2>
+  a as:Collection ;
+  as:name "o2" ;
+  as:items <https://rhiaro.co.uk/2016/08/57c6d9cbae0ea>, <https://rhiaro.co.uk/2016/08/bagel-with> .
+

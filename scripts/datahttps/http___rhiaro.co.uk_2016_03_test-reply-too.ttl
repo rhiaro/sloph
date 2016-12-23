@@ -1,0 +1,10 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/test-reply-too>
+  sioc:reply_of <http://csarven.ca/dokieli> ;
+  as:published "2016-03-15T18:28:17+00:00"^^xsd:dateTime ;
+  as:tag "linked", "solid", "research", "test" ;
+  as:content "Test reply I am too lazy to write something real" .
+

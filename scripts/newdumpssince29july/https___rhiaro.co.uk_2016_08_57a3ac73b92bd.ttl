@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/57a3ac73b92bd>
+  a as:Activity, asext:Acquire ;
+  as:published "2016-08-04T14:30:51-04:00"^^xsd:dateTime, "2016-08-04T14:30:51-04:00" ;
+  as:tag "food", "restaurant", "veggie galaxy", <https://rhiaro.co.uk/tags/food>, <https://rhiaro.co.uk/tags/restaurant>, <https://rhiaro.co.uk/tags/veggie+galaxy> ;
+  as:summary "Lunch, coffee, half dessert (Veggie Galaxy)" ;
+  asext:cost "$19" .
+

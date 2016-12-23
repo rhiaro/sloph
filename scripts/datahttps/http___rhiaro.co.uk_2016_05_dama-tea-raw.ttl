@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/dama-tea-raw>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-05-14T18:30:00-07:00", "2016-05-14T18:30:00-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "cake", "hidden peak", "tea" ;
+  as:name "Dama tea and raw orange cardamom cashew cream cake" .
+

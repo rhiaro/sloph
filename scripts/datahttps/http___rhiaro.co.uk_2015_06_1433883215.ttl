@@ -1,0 +1,20 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/1433883215>
+  sioc:reply_of <http://websci15.org> ;
+  as:published "2015-06-09T21:53:35+0100"^^xsd:datetime ;
+  as:tag "phd", "web science", "websci15", "conference", "event", "sociam", "rsvp" ;
+  as:startTime "2015-06-28T14:00:00+0100"^^xsd:datetime ;
+  as:endTime "2015-07-01T13:00:00+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Oxford> ;
+  as:content """<!---
+start: 28th June 2015, 14:00 BST
+end: 1st July 2015, 13:00 BST
+location: http://dbpedia.org/resource/Oxford
+tags: websci15,conference,event,phd,sociam,web science,rsvp
+reply-to: http://websci15.org
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

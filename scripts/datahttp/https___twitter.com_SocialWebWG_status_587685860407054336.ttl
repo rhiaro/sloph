@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://twitter.com/SocialWebWG/status/587685860407054336>
+  dcterms:title "reposts this." ;
+  dcterms:created "2015-04-13T19:36:42+01:00"^^xsd:datetime ;
+  dc:creator <https://twitter.com/SocialWebWG> ;
+  sioc:content """RT [@elfpavlik][1]: "Implicit vs explicit object types" by @rhiaro rhiaro.co.uk/2015/04/post-a… see: [#hEntry #Activity] cc: [#IndieWeb #ActivityStreams #LinkedData]
+
+[1]: https://twitter.com/elfpavlik
+""" ;
+  blog:share_of <http://blog.rhiaro.co.uk/post-and-activity-types>, <http://rhiaro.co.uk/2015/04/post-and-activity-types> .
+

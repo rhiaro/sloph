@@ -1,0 +1,16 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/56d2b92827c75>
+  a as:Travel ;
+  dcterms:created "2016-02-28T09:07:05+00:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56d2b92827c75> ;
+  as:startTime "2016-02-28T08:54:00+00:00" ;
+  as:endTime "2016-02-28T09:28:00+00:00" ;
+  as:published "2016-02-28T09:07:05+00:00" ;
+  as:tag "journey", "london", "train", "travel", "uk" ;
+  as:origin <http://dbpedia.org/resource/London_Bridge> ;
+  as:target <http://dbpedia.org/resource/East_Croydon> .
+

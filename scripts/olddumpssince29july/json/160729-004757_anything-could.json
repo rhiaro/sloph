@@ -1,0 +1,19 @@
+{
+    "h": "entry",
+    "content": "\"Anything could eat anyone anytime\" is an axiom of the Web, isn't it? Or am I mixing things up?",
+    "category": [
+        "web",
+        "iamabear",
+        "life"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-07-29T00:47:57+01:00",
+    "@id": "http://blog.rhiaro.co.uk/anything-could",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/07/anything-could"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-07-29T00:47:57+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

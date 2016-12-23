@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/peanut-tofu-food>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-20T13:00:00-04:00"^^xsd:dateTime, "2016-07-20T13:00:00-04:00" ;
+  as:tag "food truck", "leftovers", "rice", "salad", "tofu" ;
+  as:name "Peanut tofu (food truck), rice, kale, cucumber, edamame, salad" .
+

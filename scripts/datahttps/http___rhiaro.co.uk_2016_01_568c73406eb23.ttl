@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/568c73406eb23>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-01-05T20:48:50-05:00"^^xsd:dateTime ;
+  as:tag "clothes", "food", "gift", "kongaloosh", "tea" ;
+  blog:cost "0" ;
+  as:summary "Gifts from Canadaland (a Hoppers tshirt, maple tea and a litre of maple syrup)" .
+

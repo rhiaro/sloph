@@ -1,0 +1,158 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/07/notes-sssw13-6>
+  as:published "2013-07-10T20:30:00.000Z"^^xsd:datetime ;
+  as:tag "behaviour analysis", "harith alani", "semantic web summer school", "sssw13", "online communities", "sssw2013", "social media", "semantic web", "phd", blog:Done ;
+  as:name "[Notes] Harith Alani at #SSSW2013" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3867912077064038876" ;
+  as:content """**Social Media Analytics with a Pinch of Semantics**  
+**  
+**Using semantics to solve problems (not solving problems of semantics).  
+  
+SM for businesses:  
+  
+
+  * Analytics.
+  * How to measure success?
+  
+_SM silos impeding progress._  
+In-house social platforms increasing, so even more so.  
+  
+SIOC to integrate online community information.  
+SIOC + FOAF + SKOS.  
+  
+FB Graph.  
+People are likeaholics.  Their 'likes' become meaningless, so you need to take
+this into account when making recommendations.  
+Browse your data and understand user actions.  
+  
+Behaviour analysis.  
+  
+Bottom-up analysis.  
+Can handle unexpected or emerging behaviours.  
+  
+
+  * Community members classified into roles.
+  * Identify unknown roles.
+  * Cope with role changes over time.
+  * Clustering to identify emerging roles.
+  
+eg. focussed novice; mixed novice; distributed expert; ...  
+Spectrum across users you can or can't do without.  
+  
+Extending an ontology built on SIOC.  
+  
+Encoding rules in ontologies with SPIN.  
+  
+Three categories of features:  
+  
+
+  * Social features (people you follow, people follow you, ...)
+  * Content features (what you're posting, keywords, ...)
+  * Topical/semantic features
+  
+Which behaviour categories you need to cater for more than others?  How roles
+impact activity in online community.  
+  
+Consistently see that you need some sort of stable mixture of behaviours for
+activities in forums to increase.  
+  
+==> Don't know what's causing which.  
+  
+What is a healthy community?  
+  
+Use behaviour analysis to guess what's going to happen to community. Eg.  
+  
+
+  * Churn rate.
+  * User count.
+  * Seeds/non-seeds prop (how many / if people reply to you).
+  * Clustering.
+  
+Unexpected: the fewer focused experts in the community, the more posts
+received a reply.  
+(But quality of answers?)  
+  
+_Community types_ (Little work in this space)  
+  
+Muller, M. (CHI 2012) community types in IBM Connections:  
+  
+
+  * Communities of Practice
+  * Teams
+  * Technical support
+  * ..
+  * .. (see slides..)
+  
+Need an ontology and inference engine of community types.  
+Wants an automated process to tell you what type of community it is - it might
+be something it wasn't set up for.  
+Then you could determine what sort of patterns you would expect to find.  
+Noone has done this yet.  
+  
+_Measurements of value and satisfaction_  
+  
+Answers different across communities.  They ran it on IBM Connections -
+corporate community.  
+  
+Most of this work is for managers of communities - see what's happening and
+help to predict what might be coming next.  
+  
+Can classify users based on Maslow's Hierarchy of Needs?  
+Mapping the hierarchy to social media communities.  
+~90% users happily staying at the lower levels of the 'needs hierarchy'.  
+  
+_Behaviour evolution patterns_  
+  
+What paths they follow over time.  
+eg. people who become moderators eventually.  
+  
+_Engagement analysis_  
+  
+What's the best way to write a tweet so that people care about it?  
+Which posts are likely to generate more attention?  
+  
+Getting bored of people finding patterns in individual datasets.  What can be
+generalised to other communities?  
+  
+So experimented with 7 datasets and looked at how results differed across:  
+  
+
+  * community types.
+  * randomness (vs. topicality) of datasets.
+  * related experiments.
+  
+And people use different features.  
+  
+_Semantic sentiment analysis in social media_  
+  
+Too much research going on, especially on twitter.  
+  
+Extract semantic concepts from tweets; likely sentiment for a concept.  
+Tweetnator.  
+Semantics increases accuracy by 6.5% for negative sentiment; 4.8% for positive
+sentiment.  
+  
+OUSocial.  
+Students don't use in-house networks because they already use facebook groups
+etc. Want to analyse what's happening on them.  
+  
+_Upcoming_  
+  
+Reel Lives (inc. Ed.)  
+Fragmented digital selves.  
+Want to automate compilations of media (photos, messages) posted online.  
+  
+Changing energy consumption behaviour.  
+Providing information is not enough.  
+  
+Social Eco feedback technology.  
+
+  
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-07-30T15:36:36.995Z"^^xsd:datetime .
+

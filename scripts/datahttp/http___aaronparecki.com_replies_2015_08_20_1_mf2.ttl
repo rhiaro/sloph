@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://aaronparecki.com/replies/2015/08/20/1/mf2>
+  dcterms:title "@rhiaro This is great! Thanks for writing this up. I do like the idea that properties have their own URLs that describe them. I wonder how we could reasonably do that with microformats." ;
+  dcterms:created "2015-08-20T10:36:31+01:00"^^xsd:datetime ;
+  dc:creator <http://aaronparecki.com/> ;
+  sioc:content """[@rhiaro][1] This is great! Thanks for writing this up. I do like the idea that properties have their own URLs that describe them. I wonder how we could reasonably do that with microformats.
+
+[1]: http://twitter.com/rhiaro
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/08/extensibility> .
+

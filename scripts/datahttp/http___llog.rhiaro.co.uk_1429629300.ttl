@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://llog.rhiaro.co.uk/1429629300>
+  a blog:LlogPost ;
+  dcterms:created "2015-04-21T17:15:00+0100"^^xsd:dateTime ;
+  sioc:content """<!--- 
+start: 21st April 2015, 17:15
+end: 21st April 2015, 17:15
+type: LlogPost
+tags: eat,food,quantified self,life
+-->
+
+Leftover cashew mushrooms and coconut rice (Silver Bowl)""" ;
+  sioc:topic "eat", "food", "quantified self", "life" ;
+  as:startTime "2015-04-21T17:15:00+0100"^^xsd:dateTime ;
+  as:endTime "2015-04-21T17:15:00+0100"^^xsd:dateTime .
+

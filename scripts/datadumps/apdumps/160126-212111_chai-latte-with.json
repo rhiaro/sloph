@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Chai latte with almond milk (Tatte)",
+    "as:tag": [
+        "tatte"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-01-26T16:21:11-05:00",
+    "@id": "http://blog.rhiaro.co.uk/chai-latte-with",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/chai-latte-with"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-26T16:21:11-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

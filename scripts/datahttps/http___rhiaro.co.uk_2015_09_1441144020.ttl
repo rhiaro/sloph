@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/1441144020>
+  a as:Add ;
+  as:published "2015-09-01T22:47:00+0100"^^xsd:datetime ;
+  as:tag "" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 1st September 2015, 22:47 Europe/London
+bookmark-of: http://dbpedia.org/resource/Hackers:_Heroes_of_the_Computer_Revolution
+tags: 
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://dbpedia.org/resource/Hackers:_Heroes_of_the_Computer_Revolution> .
+

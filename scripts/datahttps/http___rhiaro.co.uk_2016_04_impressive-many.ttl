@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/impressive-many>
+  as:published "2016-04-25T23:19:39+01:00"^^xsd:dateTime ;
+  as:tag "phd", "thesis", "LinkedResearch" ;
+  as:content "It's impressive how many researchers are scared of their research being read" .
+

@@ -1,0 +1,16 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/56ca1c3b02ff6>
+  a as:Travel ;
+  dcterms:created "2016-02-21T14:37:55-05:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56ca1c3b02ff6> ;
+  as:startTime "2016-02-22T07:35+00:00" ;
+  as:endTime "2016-02-22T09:40+00:00" ;
+  as:published "2016-02-21T14:37:55-05:00" ;
+  as:tag "flight", "glasgow", "iceland", "journey", "plane", "reykjavik", "sociam", "travel", "uk" ;
+  as:origin <http://dbpedia.org/resource/Reykjavik> ;
+  as:target <http://dbpedia.org/resource/Glasgow> .
+

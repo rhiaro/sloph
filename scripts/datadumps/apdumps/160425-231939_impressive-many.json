@@ -1,0 +1,19 @@
+{
+    "h": "entry",
+    "content": "It's impressive how many researchers are scared of their research being read",
+    "category": [
+        "LinkedResearch",
+        "phd",
+        "thesis"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-25T23:19:39+01:00",
+    "@id": "http://blog.rhiaro.co.uk/impressive-many",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/impressive-many"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-25T23:19:39+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

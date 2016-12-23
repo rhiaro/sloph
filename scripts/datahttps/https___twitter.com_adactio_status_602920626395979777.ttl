@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/adactio/status/602920626395979777>
+  sioc:reply_of <https://rhiaro.co.uk/2015/05/hey-jeremy-what> ;
+  as:published "2015-05-25T20:34:13+01:00"^^xsd:datetime ;
+  as:name "@rhiaro Weâ€™ll do it same time as the one in Portland: July 11th and 12th. I should really get a wiki page up." ;
+  as:content """[@rhiaro][1] We'll do it same time as the one in Portland: July 11th and 12th. I should really get a wiki page up.
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <https://adactio.com/> .
+

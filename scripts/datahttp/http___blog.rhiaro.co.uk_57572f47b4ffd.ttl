@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/57572f47b4ffd>
+  dcterms:created "2016-06-07T21:32:07+01:00"^^xsd:dateTime ;
+  sioc:topic "stress", "life", "feelings" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57572f47b4ffd> ;
+  blog:bookmark_of <http://www.thebookoflife.org/on-being-out-of-touch-with-ones-feelings/> .
+

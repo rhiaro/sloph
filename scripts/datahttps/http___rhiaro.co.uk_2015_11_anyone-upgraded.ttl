@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/11/anyone-upgraded>
+  blog:tmpcontent "Anyone upgraded Fairphone 1 to 4.3+? I accidentally a Bamboo Spark without checking minimum s/w reqs and I definitely don't want a new phone." ;
+  as:published "2015-11-11T03:06:04+0000"^^xsd:datetime ;
+  as:tag "fairphone", "phone", "android", "wacom", "bamboo spark", "magic notebook" ;
+  as:content """<!---
+tags: fairphone,phone,android,wacom,bamboo spark,magic notebook
+-->
+
+Anyone upgraded Fairphone 1 to 4.3+? I accidentally a Bamboo Spark without checking minimum s/w reqs and I definitely don't want a new phone.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/jarofgreen/status/621270257567723520>
+  dcterms:title "@rhiaro There are 2 types of ppl in this world; those that are happy when targeted advertising goes wrong, and those that are sad." ;
+  dcterms:created "2015-07-15T11:49:06+01:00"^^xsd:datetime ;
+  dc:creator <http://jarofgreen.co.uk/> ;
+  sioc:content """[@rhiaro][1] There are 2 types of ppl in this world; those that are happy when targeted advertising goes wrong, and those that are sad.
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/07/facebook> .
+

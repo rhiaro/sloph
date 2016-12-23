@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/1439132813>
+  a as:Like ;
+  as:published "2015-08-09T16:06:53+0100"^^xsd:datetime ;
+  as:tag "profile", "microformats", "foaf", "rdfa" ;
+  as:content """<!---
+like-of: https://twitter.com/csarven/status/630394109363126273
+tags: rdfa,microformats,profile,foaf
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/csarven/status/630394109363126273> .
+

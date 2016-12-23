@@ -1,0 +1,25 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/few-hours-zadar>
+  blog:tmpcontent """# A few hours in Zadar
+
+I made the 0800 bus from Split to Zadar, which was later than I intended, but oh well. That was 94 kuna, and took about 3.25 hours. I dozed a bit, but the sea views were pretty good. I floated around Zadar complete with rucksacks. I saw/heard the sea organ, wandered around the marina, sat at a cafe for the bit watching boats, wandered through the university campus, wandered through Konzum for a snack, and wandered back to to the bus station. Most of the things to see in Zadar seem to be churches, which I'm sure are very impressive and maybe I would have bothered if I hadn't been rucksack-laden. I was disappointed not to stumble upon a beach I could sit at, it was all harbour. Or at least, where I got to was all harbour. I definitely like Split better from this experience, but Zadar has some epic (and closer) islands I hear, which I'd love to hop between.
+
+The bus to Korenica is presently 15 minutes late and counting, and if I hadn't noticed loads of other buses being late I'd be a bit concerned I was waiting in the wrong place...""" ;
+  as:published "2015-05-27T14:25:00+0100"^^xsd:datetime ;
+  as:tag "travel", "bus", "croatia", "zadar", "korenica", "plitvice" ;
+  as:name "A few hours in Zadar" ;
+  as:content """<!---
+published: 27th May 2015, 15:25 Europe/Berlin
+tags: travel,bus,croatia,zadar,plitvice,korenica
+-->
+
+# A few hours in Zadar
+
+I made the 0800 bus from Split to Zadar, which was later than I intended, but oh well. That was 94 kuna, and took about 3.25 hours. I dozed a bit, but the sea views were pretty good. I floated around Zadar complete with rucksacks. I saw/heard the sea organ, wandered around the marina, sat at a cafe for the bit watching boats, wandered through the university campus, wandered through Konzum for a snack, and wandered back to to the bus station. Most of the things to see in Zadar seem to be churches, which I'm sure are very impressive and maybe I would have bothered if I hadn't been rucksack-laden. I was disappointed not to stumble upon a beach I could sit at, it was all harbour. Or at least, where I got to was all harbour. I definitely like Split better from this experience, but Zadar has some epic (and closer) islands I hear, which I'd love to hop between.
+
+The bus to Korenica is presently 15 minutes late and counting, and if I hadn't noticed loads of other buses being late I'd be a bit concerned I was waiting in the wrong place...""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

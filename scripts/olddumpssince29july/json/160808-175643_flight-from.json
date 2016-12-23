@@ -1,0 +1,36 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "Flight from Boston to Iceland",
+    "as:tag": [
+        "travel",
+        "journey",
+        "flight",
+        "tpac2016",
+        "boston",
+        "reykjavik",
+        "wowair"
+    ],
+    "as:published": "2016-08-08T12:56:43-04:00",
+    "as:startTime": "2016-09-13T19:00:00-04:00",
+    "as:endTime": "2016-09-14T04:30:00+00:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Reykjavik"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Boston"
+    },
+    "@id": "http://blog.rhiaro.co.uk/flight-from",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/flight-from"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-08T12:56:43-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

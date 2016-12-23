@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/ferry-waiting>
+  dcterms:created "2015-05-22T17:35:18+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,ferry
+location: http://dbpedia.org/resource/Ancona
+-->
+
+On a ferry, waiting for departure..""" ;
+  sioc:topic "travel", "ferry" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/ferry-waiting> ;
+  as:location <http://dbpedia.org/resource/Ancona> ;
+  as:latitude "43.61421" ;
+  as:longitude "13.51065" ;
+  blog:tmpcontent "On a ferry, waiting for departure.." .
+

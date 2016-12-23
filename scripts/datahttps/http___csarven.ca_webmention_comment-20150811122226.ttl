@@ -1,0 +1,8 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://csarven.ca/webmention#comment-20150811122226>
+  blog:mentions <https://rhiaro.co.uk/2015/08/threaded-replies> ;
+  as:published "2015-08-11T17:11:46+01:00"^^xsd:datetime .
+

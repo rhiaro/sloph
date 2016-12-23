@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "content": "# Vegan cheesecake\n\nThis month is the month I really start to concentrate on my thesis, so today I made cheesecakes!\n\n![Cheesecake hearts](http://img.amy.gy/files/food/160203_cheesecake1.jpg)\n\nAll quantities thoroughly approximate, and blended on high speed:\n\n* 2 cups cashews\n* 3/4 cup lemon juice (freshly squeezed, 2.5 lemons)\n* 1/4 cup coconut oil (melted, I've tried blending solid coconut oil before and it does *not* blend)\n* drizzle maple syrup\n* spash of almond milk\n\n![Cheesecake hearts](http://img.amy.gy/files/food/160203_cheesecake4.jpg)\n\nAugmented with a fruity layer:\n\n* 2 handfuls blueberries\n* 2 tablespoons applesauce\n* 1 tablespoon coconut oil\n\n![Cheesecake hearts](http://img.amy.gy/files/food/160203_cheesecake3.jpg)\n\nIn the freezer for a couple of hours, and they turned out pretty well. They are amazingly creamy and tangy. The real question is, why haven't I given up computers to make desserts full time?",
+    "category": [
+        "vegan",
+        "mbaking",
+        "cheesecake",
+        "cashews"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-03T23:38:55+00:00",
+    "http://purl.org/dc/terms/title": "Vegan cheesecake",
+    "@id": "http://blog.rhiaro.co.uk/vegan-cheesecake",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/vegan-cheesecake"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-03T23:38:55+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

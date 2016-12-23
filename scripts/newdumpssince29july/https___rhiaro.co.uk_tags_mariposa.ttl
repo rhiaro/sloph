@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/mariposa>
+  a as:Collection ;
+  as:name "mariposa" ;
+  as:items <https://rhiaro.co.uk/2016/08/iced-almond-milk>, <http://rhiaro.co.uk/2016/08/half-chocolate> .
+

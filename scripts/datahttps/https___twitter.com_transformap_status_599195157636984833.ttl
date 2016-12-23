@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/transformap/status/599195157636984833>
+  a as:Announce ;
+  as:published "2015-05-15T13:50:32+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@almereyda][1]: Decent #SocialWG wrap up at rhiaro.co.uk/2015/05/socialâ€¦ by @rhiaroâ€”especially Cooperation is strikingâ€”@transformap underlines every word #RDF
+
+[1]: https://twitter.com/almereyda
+""" ;
+  as:actor <http://transformap.co/> ;
+  as:object <https://rhiaro.co.uk/2015/05/socialwg3-summary> .
+

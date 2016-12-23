@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56c1eb2f17b83>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-02-15T10:13:31-05:00"^^xsd:dateTime ;
+  as:tag "life", "travel" ;
+  blog:cost "&pound;137" ;
+  as:summary "2nd passport appointment" .
+

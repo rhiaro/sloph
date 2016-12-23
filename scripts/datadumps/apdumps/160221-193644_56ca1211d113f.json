@@ -1,0 +1,35 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:tag": [
+        "travel",
+        "journey",
+        "boston",
+        "reykjavik",
+        "usa",
+        "iceland",
+        "sociam"
+    ],
+    "as:published": "2016-02-21T14:36:44-05:00",
+    "as:startTime": "2016-02-21T20:35:00-05:00",
+    "as:endTime": "2016-02-22T06:40:00+00:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Reykjavik"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Boston"
+    },
+    "@id": "http://blog.rhiaro.co.uk/56ca1211d113f",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56ca1211d113f"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-21T14:36:44-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

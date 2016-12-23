@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56d183c655631>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-02-27T10:07:06+00:00"^^xsd:dateTime ;
+  as:tag "food", "le pain quotidien", "restaurant" ;
+  blog:cost "&pound;13.16" ;
+  as:summary "Fancy expensive breakfast (Le Pain Quotidien)" .
+

@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/spring+rolls>
+  a as:Collection ;
+  as:name "spring rolls" ;
+  as:items <https://rhiaro.co.uk/2016/08/tofu-rice-bun> .
+

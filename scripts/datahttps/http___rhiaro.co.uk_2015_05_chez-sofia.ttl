@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/chez-sofia>
+  blog:tmpcontent "Chez Sofia in Gentilly, Paris" ;
+  as:published "2015-05-03T19:00:00+0100"^^xsd:datetime ;
+  as:tag "travel", "paris" ;
+  as:location <http://dbpedia.org/resource/Paris> ;
+  as:content """<http://blog.rhiaro.co.uk/chez-sofia> <http://rdfs.org/sioc/types#content> \"""<!---
+tags: travel,paris
+location: http://dbpedia.org/resource/Paris
+published: 3rd May 2015, 20:00 Europe/Berlin
+-->
+
+Chez Sofia in Gentilly, Paris""" .
+

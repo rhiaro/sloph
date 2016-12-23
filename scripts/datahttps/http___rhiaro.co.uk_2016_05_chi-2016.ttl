@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/2016/05/chi-2016>
+  a as:Accept ;
+  as:published "2016-05-06T18:21:37-07:00" ;
+  as:name "Going to CHI 2016" ;
+  as:content "A big human-computer interaction academic conference. I have my name on a paper about pro-social deception" ;
+  as:object <http://chi2016.acm.org/wp/> .
+

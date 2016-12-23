@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/VeganEventsScot/status/638032526573969408>
+  a as:Announce ;
+  as:published "2015-08-30T17:56:23+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: I found #vegan Fry's Peppermint Cream milkshake at @shakeawayland in Edinburgh @TaraDoesStuff rhiaro.co.uk/2015/08/found-â€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://www.meetup.com/veganeventsscotland/> ;
+  as:object <https://rhiaro.co.uk/2015/08/found-vegan-frys> .
+

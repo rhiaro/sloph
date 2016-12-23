@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/1440948540>
+  a as:Add ;
+  as:published "2015-08-30T16:29:00+0100"^^xsd:datetime ;
+  as:tag "phd", "thesis" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 30th August 2015, 16:29 Europe/London
+bookmark-of: http://thesiswhisperer.com/2012/05/08/the-valley-of-shit/
+tags: phd,thesis
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://thesiswhisperer.com/2012/05/08/the-valley-of-shit/> .
+

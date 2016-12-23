@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/1443311198>
+  a as:Announce ;
+  as:published "2015-09-27T00:46:38+0100"^^xsd:datetime ;
+  as:tag "doctor who" ;
+  as:content """<!---
+share-of: https://twitter.com/StatsBritain/status/647848308564692994
+tags: doctor who
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/StatsBritain/status/647848308564692994> .
+

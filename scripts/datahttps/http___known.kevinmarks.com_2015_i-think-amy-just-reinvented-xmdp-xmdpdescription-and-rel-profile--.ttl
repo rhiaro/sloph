@@ -1,0 +1,11 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://known.kevinmarks.com/2015/i-think-amy-just-reinvented-xmdp-xmdpdescription-and-rel-profile-->
+  sioc:reply_of <https://rhiaro.co.uk/2015/08/extensibility> ;
+  as:published "2015-08-20T16:13:28+01:00"^^xsd:datetime ;
+  as:name "I think Amy just reinvented XMDP http://gmpg.org/xmdp/description and rel-profile - GRDDL next? http://microformats.org/wiki/grddl" ;
+  as:content "I think Amy just reinvented XMDP <http://gmpg.org/xmdp/description> and rel-profile - GRDDL next? <http://microformats.org/wiki/grddl>" ;
+  as:actor <http://known.kevinmarks.com/profile/kevinmarks> .
+

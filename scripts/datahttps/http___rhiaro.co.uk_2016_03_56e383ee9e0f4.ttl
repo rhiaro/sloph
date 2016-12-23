@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/56e383ee9e0f4>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-03-11T18:42:00-05:00"^^xsd:dateTime ;
+  as:tag "csarven", "food", "osullivans", "restaurant", "veronica" ;
+  blog:cost "$50" ;
+  as:summary "Dinner and drinks for 3 (O'Sullivans)" .
+

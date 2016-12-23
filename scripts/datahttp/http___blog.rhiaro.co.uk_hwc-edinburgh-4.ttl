@@ -1,0 +1,33 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/hwc-edinburgh-4>
+  dcterms:title "HWC Edinburgh" ;
+  dcterms:created "2015-09-02T10:48:55+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+reply-to: http://indiewebcamp.com/events/2015-09-03-homebrew-website-club
+tags: rsvp,event,hwc,indieweb,indiewebcamp
+start: 3rd September 2015, 17:30 BST
+end: 3rd September 2015, 20:30 BST
+location: http://dbpedia.org/resource/Edinburgh
+-->
+
+# HWC Edinburgh
+
+Personal site hacking at Edinburgh's Homebrew Website Club""" ;
+  sioc:topic "rsvp", "event", "hwc", "indieweb", "indiewebcamp" ;
+  sioc:reply_of <http://indiewebcamp.com/events/2015-09-03-homebrew-website-club> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/09/hwc-edinburgh-4> ;
+  as:startTime "2015-09-03T17:30:00+0100"^^xsd:datetime ;
+  as:endTime "2015-09-03T20:30:00+0100"^^xsd:datetime ;
+  as:location <http://dbpedia.org/resource/Edinburgh> ;
+  blog:tmpcontent """# HWC Edinburgh
+
+Personal site hacking at Edinburgh's Homebrew Website Club""" .
+

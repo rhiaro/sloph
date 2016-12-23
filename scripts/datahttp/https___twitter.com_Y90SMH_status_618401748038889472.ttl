@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/Y90SMH/status/618401748038889472>
+  dcterms:title "@rhiaro hey Amy, I'm going to have £50 to spend on Amazon and can't think what to get for my @CodeClub, they're Yr5, any idea's" ;
+  dcterms:created "2015-07-07T13:50:40+01:00"^^xsd:datetime ;
+  dc:creator <http://seanholcroft.co.uk/> ;
+  sioc:content """[@rhiaro][1] hey Amy, I'm going to have £50 to spend on Amazon and can't think what to get for my [@CodeClub][2], they're Yr5, any idea's
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/CodeClub
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/07/todays> .
+

@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Banana chocolate donut, cherry donut, bad hotel coffee",
+    "as:tag": [
+        "donut",
+        "coffee",
+        "breakfast"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-08T08:35:38-07:00",
+    "@id": "http://blog.rhiaro.co.uk/banana-chocolate",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/banana-chocolate"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-08T08:35:38-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

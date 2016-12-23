@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://brid-gy.appspot.com/like/twitter/rhiaro/600300264294322176/3044654542>
+  dcterms:title "likes this." ;
+  dcterms:created "2015-05-19T00:15:05+01:00"^^xsd:datetime, "2015-08-25T23:47:55+01:00"^^xsd:datetime ;
+  dc:creator <https://twitter.com/_silvialc> ;
+  blog:like_of <http://rhiaro.co.uk/2015/05/representin> .
+

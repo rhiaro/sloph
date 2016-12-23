@@ -1,0 +1,14 @@
+{
+    "h": "entry",
+    "repost-of": "https://twitter.com/AnthroPunk/status/719560003816828928",
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-11T17:20:34+01:00",
+    "@id": "http://blog.rhiaro.co.uk/570bced24f3aa",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/570bced24f3aa"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-11T17:20:34+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

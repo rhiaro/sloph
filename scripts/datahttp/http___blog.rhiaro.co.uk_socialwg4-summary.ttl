@@ -1,0 +1,169 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/socialwg4-summary>
+  dcterms:title "Social Web WG 4th face-to-face summary" ;
+  dcterms:created "2015-12-07T23:59:00+0000"^^xsd:datetime ;
+  sioc:content """<!---
+tags: socialwg,social web,phd,standards,w3c,webmention,micropub,indieweb,activitypump,mf2,microformats,jf2,activitystreams,as2,social protocols,socialapi,federation,meeting
+published: 5 December 2015, 09:00 PST
+-->
+
+# Social Web WG 4th face-to-face summary
+
+*This post is my own opinion, and does not necessarily represent the opinion of the Social Web WG!*
+
+See also [day 1 minutes](https://www.w3.org/wiki/Socialwg/2015-12-01-minutes) and [day 2 minutes](https://www.w3.org/wiki/Socialwg/2015-12-02-minutes).
+
+What follows is more detail on my perspective of the main conversations we had over the two days. Clarifications and corrections welcome.
+
+## tl;dr ##
+
+* Most AS2 issues are closed! CR-blocking issues are now due by 15th December.
+* We took a bunch of things to Editor's Draft and are pushing for FPWDs as soon as is viable.
+* Some of the drafts overlap but there's a general feeling that since there are keen editors we should work on everything and iron out issues and redundancies as we go, rather than holding out and waiting for clarity.
+* Go check out the specs and build bits of them and give the editors feedback!
+
+## ActivityStreams 2
+
+We steamrollared through AS2 issues, which included core simplifications, vocabulary changes and reductions and editorial clarifications. James made most edits during the meeting, so there's [a much updated working draft](http://jasnell.github.io/w3c-socialwg-activitystreams/activitystreams-core/index.html) available now. You should read it and post any issues you see to be CR-blocking by the 15th of December.
+
+JSON-LD related stuff has been moved to its own section; since it is optional, having references sprinkled throughout was confusing for people who don't necessarily want to deal with it. [Chris](https://dustycloud.org) pointed out that even for extensions, if you know the extension you want to handle you can still do that in plain JSON.
+
+Still some consternation about which alternative syntax examples should be in the spec. Since they're non-normative/editorial anyway they're not a CR-blocker so left alone for the time being.
+
+We don't need a verison number in the URL because any future widely-deployed extensions that want to make it into the core will likely be incorporated as part of a full new version (ie. AS3). At some point we should start a registry for extensions; James is keeping track himself on github, we could move this to a wiki page and ultimately a CG when the WG wraps up.
+
+Lots of discussion about testing frameworks and how to meaningfully test production and consumption of syntax and vocabulary. I refer you to the minutes, as this is beyond my ability to summarise well enough, but it seemed like the people working on this gained some clarity and a plan to move forwards.
+
+## Social API
+
+### Editor's Draft all the things
+
+There's some contention around what it means to accept a spec as an Editor's Draft in the WG. Our general consensus was that it means a spec isn't necessarily going to be rec-track, or even the direction the group is going to take, but it's in-scope and worth some portion of our attention, even if that is just to inform other things. Most specs we've picked up are work that the editors were doing anyway, and this just means the WG should explicitly not ignore them. It's expected that the specs will change significantly going forward, in response to input from the WG.
+
+As such, it's okay that some of our now-ED specs currently cover overlapping territory. We hope that WG attention will serve to refine, cut, expand, merge, and otherwise sort this out. We may end up multiple small specs derived from our current set of EDs which cover pieces of the social puzzle, or several specs will demonstrate multiple viable ways of doing the same thing. My preference is for the former, but the latter is better than nothing. (I tentatively extrapolate the latter into either one gets wide adoption and the others quietly fade out, or they all get equal adoption and people build bridges between them, either way not a total loss).
+
+### Social Web Protocols
+
+I finally convinced people to stop calling this "Amy's SocialAPI Document" and renamed everything to [Social Web Protocols](https://w3c-social.github.io/social-web-protocols/social-web-protocols). This document describes the individual componants we are trying to standardise (based on user stories), covering both the API and Federation. Given the potential for the WG to produce multiple small specs, work on this is to continue to describe and serve as a guide to each building block. This should highlight both points of convergence between separate specs, and gaps that no existing specs are filling adequately.
+
+Issues filed should be to that end. Point out obvious points of commonality between specs that I haven't noted, or where it would be worth replacing the vague overview with more spec-like details.
+
+I aim to take this to FPWD next week (which does *not* imply WG consensus on the contents yet) with the expectation that this is currently an overview document: a guide to the different areas being standardised by the WG. If we end up with a bunch of small (or overlapping) specs, this could end up as a Note, detailing how they relate to each other as a guide to implementors. If we end up with one spec that covers everything, either this becomes it following input from the other drafts, or this has done its job at converging things and is dropped completely. The rationale behind going to FPWD with this document is to better advertise and explain the different angles of work the WG is doing to other WGs and the public, and to seek wider feedback thereon. The issues become a place to discuss features based on *functionality*, where they are not specific to one of the other individual specs.
+
+### ActivityPump and Micropub
+
+Both now EDs. Micropub covers a subsection of functionality of ActivityPump, but is uncoupled from any other pieces of functionality, whereas ActivityPump intertwines lots of things. There are distinct similarities - both POST JSON to a specific endpoint to create, update and delete content. The editors are keen to cooperate so there's value in working on them both in sync.
+
+### jf2
+
+jf2 is a social syntax to complement (*not* compete with!) AS2, where jf2 is content-centric and AS2 is activity-centric. The editors of both agreed that it would be beneficial to work on these in conjunction. I've written more about [the relationship between them here](/2015/12/things-happenings).
+
+### Post type discovery
+
+PTD is an algorithm to help consumers who find themselves with implicitly typed objects to derive explicit AS2 types, if that's what they prefer to work with. My concern is that it's biased towards the microformats2 vocabulary and currently useful for a niche - but a very small niche. However, James pointed out that types are actually optional in AS2 in general, so it could be expanded to help go from untyped AS2 objects to typed ones as well.
+
+My other concern is that this space is such a moving target, and having a fixed algorithm to derive post types based on properties is going to get dated really fast. A constantly shifting algorithm doesn't fit into W3C workflow, and of course brings its own problems (who has implemented which version as it changes over time). I don't have an answer to this.
+
+## Federation: Realisations and moving forward
+
+Evan forced us to slow down and really think about what we meant by federation. I don't know if anyone else did, but I had a bit of a lightbulb during this discussion. Bogged down in the particular bits of federation that are within reach to me (basically, notifications), I forgot there are a great many other things one might want to federate, like search, following topics, user discovery, recommendations... The WG is not required to tackle all of these, as a 'federation protocol' is the icing on our charter cake, but we absolutely don't want to de-prioritise federation completely as it's important and actually ties in well with a lot of the work we're already doing. But taking a step back to reassess - and clarify to the outside world - what we're actually doing is important, and there's some effort going into that now.
+
+### Webmention
+
+Webmention has been an ED for a short while, and there were some issues to work through. Some really interesting points have been raised around technical details, security concerns and functionality enhancements, and lots of different ways to refine this spec are emerging. We talked through open issues, and group resolutions were made for most of them.
+
+The one I'm most interested in is addition of the [`property` parameter](http://csarven.ca/webmention) for better disambiguation of the assertion being made by a webmention. It surfaces a need of people outside of the current core webmention implementors to send and verify claims more precisely, whilst adding minimal additional overhead for those who don't need it. Since bringing this spec to the WG is an effort to gain wider adoption and investigate broader use cases than what we have at present, taking these kinds of expansions seriously is good. The benefits were positively acknowledge overall, and I was hoping we'd see this added to the current version, even if marked 'at risk' pending future implementations. But the decision was taken to leave it out, in the same vein as AS2 currently relegating all *addition* suggestions to extensions. On the plus side, the webmention spec will link to all proposed extensions which are written up as specs, and if any extensions see enough adoption over the course of the work they can be integrated into the core.
+
+## Cooperation
+
+Bridging between worlds has been an ongoing theme in this WG.
+
+[Chris](https://dustycloud.org) has done some great work on [Activipy](http://activipy.readthedocs.org), a Python library for handling AS2, and overnight between meeting days he added support for jf2 as well by simply passing in an alternative JSON-LD context. This means you can pass in AS2 and serialize out again as jf2, and vice versa! More or less, at least... this might even be improved by adding PTD in between for where mappings aren't already obvious.
+
+In general, tensions between specs that could be overlapping have changed to editors supporting each other to drive all of the work forward, and, I'm hoping, to optimise where redundancies exist. We all have the same goals, after all. We've still got a long way to go, but we ended on the feeling that we can probably get there.
+
+And we played almost no SocialWG bingo, so it must have been a good meeting.""" ;
+  sioc:topic "meeting", "federation", "socialapi", "social protocols", "as2", "activitystreams", "jf2", "microformats", "mf2", "activitypump", "indieweb", "micropub", "webmention", "w3c", "standards", "phd", "social web", "socialwg" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/12/socialwg4-summary> ;
+  blog:tmpcontent """# Social Web WG 4th face-to-face summary
+
+*This post is my own opinion, and does not necessarily represent the opinion of the Social Web WG!*
+
+See also [day 1 minutes](https://www.w3.org/wiki/Socialwg/2015-12-01-minutes) and [day 2 minutes](https://www.w3.org/wiki/Socialwg/2015-12-02-minutes).
+
+What follows is more detail on my perspective of the main conversations we had over the two days. Clarifications and corrections welcome.
+
+## tl;dr ##
+
+* Most AS2 issues are closed! CR-blocking issues are now due by 15th December.
+* We took a bunch of things to Editor's Draft and are pushing for FPWDs as soon as is viable.
+* Some of the drafts overlap but there's a general feeling that since there are keen editors we should work on everything and iron out issues and redundancies as we go, rather than holding out and waiting for clarity.
+* Go check out the specs and build bits of them and give the editors feedback!
+
+## ActivityStreams 2
+
+We steamrollared through AS2 issues, which included core simplifications, vocabulary changes and reductions and editorial clarifications. James made most edits during the meeting, so there's [a much updated working draft](http://jasnell.github.io/w3c-socialwg-activitystreams/activitystreams-core/index.html) available now. You should read it and post any issues you see to be CR-blocking by the 15th of December.
+
+JSON-LD related stuff has been moved to its own section; since it is optional, having references sprinkled throughout was confusing for people who don't necessarily want to deal with it. [Chris](https://dustycloud.org) pointed out that even for extensions, if you know the extension you want to handle you can still do that in plain JSON.
+
+Still some consternation about which alternative syntax examples should be in the spec. Since they're non-normative/editorial anyway they're not a CR-blocker so left alone for the time being.
+
+We don't need a verison number in the URL because any future widely-deployed extensions that want to make it into the core will likely be incorporated as part of a full new version (ie. AS3). At some point we should start a registry for extensions; James is keeping track himself on github, we could move this to a wiki page and ultimately a CG when the WG wraps up.
+
+Lots of discussion about testing frameworks and how to meaningfully test production and consumption of syntax and vocabulary. I refer you to the minutes, as this is beyond my ability to summarise well enough, but it seemed like the people working on this gained some clarity and a plan to move forwards.
+
+## Social API
+
+### Editor's Draft all the things
+
+There's some contention around what it means to accept a spec as an Editor's Draft in the WG. Our general consensus was that it means a spec isn't necessarily going to be rec-track, or even the direction the group is going to take, but it's in-scope and worth some portion of our attention, even if that is just to inform other things. Most specs we've picked up are work that the editors were doing anyway, and this just means the WG should explicitly not ignore them. It's expected that the specs will change significantly going forward, in response to input from the WG.
+
+As such, it's okay that some of our now-ED specs currently cover overlapping territory. We hope that WG attention will serve to refine, cut, expand, merge, and otherwise sort this out. We may end up multiple small specs derived from our current set of EDs which cover pieces of the social puzzle, or several specs will demonstrate multiple viable ways of doing the same thing. My preference is for the former, but the latter is better than nothing. (I tentatively extrapolate the latter into either one gets wide adoption and the others quietly fade out, or they all get equal adoption and people build bridges between them, either way not a total loss).
+
+### Social Web Protocols
+
+I finally convinced people to stop calling this "Amy's SocialAPI Document" and renamed everything to [Social Web Protocols](https://w3c-social.github.io/social-web-protocols/social-web-protocols). This document describes the individual componants we are trying to standardise (based on user stories), covering both the API and Federation. Given the potential for the WG to produce multiple small specs, work on this is to continue to describe and serve as a guide to each building block. This should highlight both points of convergence between separate specs, and gaps that no existing specs are filling adequately.
+
+Issues filed should be to that end. Point out obvious points of commonality between specs that I haven't noted, or where it would be worth replacing the vague overview with more spec-like details.
+
+I aim to take this to FPWD next week (which does *not* imply WG consensus on the contents yet) with the expectation that this is currently an overview document: a guide to the different areas being standardised by the WG. If we end up with a bunch of small (or overlapping) specs, this could end up as a Note, detailing how they relate to each other as a guide to implementors. If we end up with one spec that covers everything, either this becomes it following input from the other drafts, or this has done its job at converging things and is dropped completely. The rationale behind going to FPWD with this document is to better advertise and explain the different angles of work the WG is doing to other WGs and the public, and to seek wider feedback thereon. The issues become a place to discuss features based on *functionality*, where they are not specific to one of the other individual specs.
+
+### ActivityPump and Micropub
+
+Both now EDs. Micropub covers a subsection of functionality of ActivityPump, but is uncoupled from any other pieces of functionality, whereas ActivityPump intertwines lots of things. There are distinct similarities - both POST JSON to a specific endpoint to create, update and delete content. The editors are keen to cooperate so there's value in working on them both in sync.
+
+### jf2
+
+jf2 is a social syntax to complement (*not* compete with!) AS2, where jf2 is content-centric and AS2 is activity-centric. The editors of both agreed that it would be beneficial to work on these in conjunction. I've written more about [the relationship between them here](/2015/12/things-happenings).
+
+### Post type discovery
+
+PTD is an algorithm to help consumers who find themselves with implicitly typed objects to derive explicit AS2 types, if that's what they prefer to work with. My concern is that it's biased towards the microformats2 vocabulary and currently useful for a niche - but a very small niche. However, James pointed out that types are actually optional in AS2 in general, so it could be expanded to help go from untyped AS2 objects to typed ones as well.
+
+My other concern is that this space is such a moving target, and having a fixed algorithm to derive post types based on properties is going to get dated really fast. A constantly shifting algorithm doesn't fit into W3C workflow, and of course brings its own problems (who has implemented which version as it changes over time). I don't have an answer to this.
+
+## Federation: Realisations and moving forward
+
+Evan forced us to slow down and really think about what we meant by federation. I don't know if anyone else did, but I had a bit of a lightbulb during this discussion. Bogged down in the particular bits of federation that are within reach to me (basically, notifications), I forgot there are a great many other things one might want to federate, like search, following topics, user discovery, recommendations... The WG is not required to tackle all of these, as a 'federation protocol' is the icing on our charter cake, but we absolutely don't want to de-prioritise federation completely as it's important and actually ties in well with a lot of the work we're already doing. But taking a step back to reassess - and clarify to the outside world - what we're actually doing is important, and there's some effort going into that now.
+
+### Webmention
+
+Webmention has been an ED for a short while, and there were some issues to work through. Some really interesting points have been raised around technical details, security concerns and functionality enhancements, and lots of different ways to refine this spec are emerging. We talked through open issues, and group resolutions were made for most of them.
+
+The one I'm most interested in is addition of the [`property` parameter](http://csarven.ca/webmention) for better disambiguation of the assertion being made by a webmention. It surfaces a need of people outside of the current core webmention implementors to send and verify claims more precisely, whilst adding minimal additional overhead for those who don't need it. Since bringing this spec to the WG is an effort to gain wider adoption and investigate broader use cases than what we have at present, taking these kinds of expansions seriously is good. The benefits were positively acknowledge overall, and I was hoping we'd see this added to the current version, even if marked 'at risk' pending future implementations. But the decision was taken to leave it out, in the same vein as AS2 currently relegating all *addition* suggestions to extensions. On the plus side, the webmention spec will link to all proposed extensions which are written up as specs, and if any extensions see enough adoption over the course of the work they can be integrated into the core.
+
+## Cooperation
+
+Bridging between worlds has been an ongoing theme in this WG.
+
+[Chris](https://dustycloud.org) has done some great work on [Activipy](http://activipy.readthedocs.org), a Python library for handling AS2, and overnight between meeting days he added support for jf2 as well by simply passing in an alternative JSON-LD context. This means you can pass in AS2 and serialize out again as jf2, and vice versa! More or less, at least... this might even be improved by adding PTD in between for where mappings aren't already obvious.
+
+In general, tensions between specs that could be overlapping have changed to editors supporting each other to drive all of the work forward, and, I'm hoping, to optimise where redundancies exist. We all have the same goals, after all. We've still got a long way to go, but we ended on the feeling that we can probably get there.
+
+And we played almost no SocialWG bingo, so it must have been a good meeting.""" .
+

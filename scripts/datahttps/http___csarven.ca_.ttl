@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://csarven.ca/>
+  foaf:name "Sarven Capadisli" ;
+  foaf:homepage <http://csarven.ca/> ;
+  foaf:depiction <https://twitter.com/csarven/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/5053df62c051e6fc88fac76d804b684256f6d1443fc4992ed6b0d22716df8bb1.jpeg> .
+

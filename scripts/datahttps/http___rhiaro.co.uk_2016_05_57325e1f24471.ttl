@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/57325e1f24471>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-10T15:17:12-07:00"^^xsd:dateTime ;
+  as:tag "ca2016", "chi2016", "food", "takeaway", "thirstea" ;
+  blog:cost "$4.50" ;
+  as:summary "Bubble tea (ThirsTea)" .
+

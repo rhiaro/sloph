@@ -1,0 +1,188 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/11/sky-stole-50-pounds>
+  as:published "2013-11-01T15:26:00.000Z"^^xsd:datetime ;
+  as:tag "customer service", "money", "sky", "rant", "misc", blog:Done, "life" ;
+  as:name "Sky stole Â£50 from me" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2456068872762257763" ;
+  as:content """#### Here is my tale of trying to get it back.
+
+Â£50 isn't a large amount of money to a massive organisation like Sky. But for
+me, it's two to three weeks food, or a train ticket to visit my mother, or
+about half of my Christmas shopping (yeah alright, I'm not very extravagant
+with that sort of thing).  
+Following is an account of how a relatively small mistake on their part, which
+I thought was resolved well and quickly, then led to an agonising four month
+back-and-forth of:  
+a) Lies  
+  
+b) Broken promises  
+  
+c) Incompetencies  
+  
+d) All of the above.  
+
+#### May: Attempted cancellation
+
+I messaged through Help & Support to cancel my broadband and phone line,
+because I was going away a lot over the summer and it wasn't worth keeping it
+on. I was told it was sorted. I went to Australia for a month.  
+
+#### June: Apparently failed cancellation
+
+I got back to Edinburgh and discovered I'd been billed. I turned on my router
+to see if I'd managed to mess up the cancellation myself, and saw no sign of
+broadband. So the services were cancelled, just not the billing.  
+
+#### 18 July: Good customer service
+
+I finally got round to contacting Sky about my bill; by this point I'd been
+billed for July as well.  
+I spoke to a couple of people on the phone who made me feel like it was my
+fault, then finally to the lovely Rachael who dug deeper, discovered a human
+error had occurred as a result of (we think) the two ways of writing the first
+line my address: 2F2 35 or 35/5. As a result, I had two account numbers... one
+had the services I guess, and one had the bills. It was very confusing, but
+once we found the two numbers Rachael properly cancelled my mysterious second
+account, and very kindly applied Â£50 credit to make up for the overbilling. I
+was told to contact again in a few weeks to initiate the refund process.  
+
+#### 16-26 Sept: Being blown off
+
+I tried several times to contact customer services via help tickets to ask for
+the refund but got told (by a human, not an automated error message) there
+'system error' with my bill, or something totally unhelpful (telling me
+something I didn't ask about) in response.  
+
+#### 29 Sept: Actually, no
+
+I'm told the Â£50 credit can only be spent on Sky services, not refunded
+directly to a bank account.  
+
+#### 29 Sept: I damn well disagree!
+
+I protested the unfairness of this, since I have moved somewhere with an
+existing broadband provider and actually probably wouldn't be going back to
+Sky after all this even if I had a choice...  
+I was told that actually they can refund it after all, and I should expect it
+in 48 hours. I pointed out that I'd heard this before. I was told not to
+worry, it'll be fine! I relaxed.  
+48 hours later... no refund.  
+
+#### Social media
+
+Throughout September and October I started tweeting about the problems. I
+liked to do things like compare Sky's customer service to that of Virgin
+Mobile (who have done wonderful things for me from time to time). I hoped
+'public shaming' might speed up a resolution. I got encouraging responses from
+the social media team at Sky, who actually seemed to care (which is their job,
+I suppose) but really I only ended up opening more tickets and talking to
+other advisors in the end.  
+
+#### 21 Oct: A change of tune
+
+Following another help ticket chase up, I'm told credit was incorrectly
+applied in the first place, and has been removed. I'm not exaggerating (just
+paraphrasing) when I say this was done "for reasons".  
+
+#### 21 Oct: You what?!
+
+Oh, hey guys, how about... no? I didn't just suffer through months of torment
+for you try to tell me the only competant member of staff I have spoken to was
+actually incompetant after all!  
+So I had a _very_ long live chat to William (I think; I've named him, because
+he didn't leave a follow-up note like he was supposed to) who "carefully
+reviewed my account" and agreed with the verdict that the credit was
+incorrectly applied. I protested. He "carefully reviewed my account" some
+more, and then said he could see that an explicit reason was left for the
+application of the credit to my account in the first place... so it should
+have been there after all! Yay.  
+He said it would be refunded to my bank account in 78 hours. I told him I'd
+heard this before. He said not to worry, it'll definitely be fine this time.  
+Guess what.  
+
+#### 31 October: It wasn't.
+
+So far, no refund, no re-application of credit to my bill, and not even an
+update to my help ticket about the conversation. It was like it never
+happened. I stupidly didn't think to copy the chat as evidence, although I
+assume they have a transcript of it somewhere.  
+
+#### 1 November: Hope
+
+I DMed the social media team a bit, and scheduled a time to live chat with
+_one of them_, _directly_. While I waited, I typed out a timeline of
+everything that happened so far so I could paste it straight to them.  
+Three quarters of an hour later, I have hope once more following a chat with
+the most human member of Sky customer services I have spoken to so far.  
+He found actual reasons for things that had been done for "reasons". For
+example, my initial refund was never successfully issued because goodwill
+credit must be issued as a cheque, not a bank account transfer, so Finance
+just rejected it. A silly rule, but that's the way of it. (In my case the
+response was just to not issue it though, so Finance can't even follow their
+own silly rules).  
+I'm still not entirely sure why the credit was totally removed though, or why
+on my bill its removal shows up as a charge for Sky TV.  
+He treated me like a person by not making vague promises, or holding back
+particularities of how the organisation works. He told me he _believed_ I
+should be receiving a refund based on what he knew so far, but he'd have to
+talk to his manager. He talked to his manager, who agreed. But he didn't then
+just tell me everything would be fine. He told me it still might get rejected
+by Finance (for "reasons", I presume).  
+What he is doing is speaking directly to someone in Finance to get a cheque
+sent out. He's manually changing my address to make sure the cheque goes to
+the right place, and he's going to get in touch with me again on Wednesday
+night to let me know what the progress has been.  
+I asked him what the next step is if Finance reject the refund request, and he
+implied threats of violence. (NOTE to Sky managers who might read this: I
+don't believe he meant he would really commit violence on the Finance team. He
+was doing his job well and using humour to relieve me whilst promising he
+would make an effor to follow up).  
+He also gave me permission to verbally abuse him if he doesn't get in touch on
+Wednesday night. I appreciate this sentiment, though it's unlikely I'll get
+into capslock territory with this guy any time soon. I _would_ tweet a gentle
+a reminder of course.  
+
+#### 6 November: The Wednesday follow-up
+
+I got a Twitter DM with a link to a live chat... After just under an hour of
+waiting in a 'queue' for the live chat I had to leave, and DMed @SkyHelpTeam
+back to ask if they'd let me know when there was someone there, so I wasn't
+waisting my time refreshing a page.  They responded and sent the details to my
+MySky help tickets instead.  And the result?  
+  
+A cheque is in the post!  
+  
+Please allow 28 days for it to arrive.  
+  
+I sure hope that's true.  And that it's coming to the right address.  I might
+send a letter to my old flat, just in case.  So I guess I'll update in 28 days
+whether or not it actually arrived.  I'm hopeful, but they've promised me that
+money is on its way in _x_ amount of time before...  
+  
+
+#### Conclusions
+
+If your problems aren't fixed immediately, pester the social media team
+([@SkyHelpTeam](http://twitter.com/skyhelpteam)).  Get everything in writing,
+record every conversation, keep track of dates, names of customer service
+people, and what you were promised.  Don't give up.  For every semi-competant
+and sympathetic customer service person, there are four or five
+lazy/useless/uncaring or possibly even malicious ones.  Just keep trying, and
+you'll get through eventually...  
+
+#### Recommendations for Sky
+
+Following my unfortunately extensive experience with Sky help ticketing, I'd
+like to make a few suggestions for its improvement.  
+
+  1. Tickets should be marked as resolved by the _customer_. I have so many tickets that I don't consider to be resolved, sitting in my 'resolved' tickets column.
+  2. I should be able to _reply to tickets_. I post a request, I get a response that is marked as resolved that I don't agree with. I then have to follow up by opening a _new ticket_, which inevitably goes to a different person, and I end up going around in circles.
+  3. If I'm taking the time to type out messages to you, it probably means I don't want to talk to you on the phone. It doesn't matter why. Take the time to write messages back. (Related: telling me it's free to call customer service on a Sky line is really unhelpful when I'm trying to contact you about a recently cancelled Sky line. The fact that I never physically had a landline phone, line or no, is irrelevant here).
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-11-07T14:58:49.331Z"^^xsd:datetime .
+

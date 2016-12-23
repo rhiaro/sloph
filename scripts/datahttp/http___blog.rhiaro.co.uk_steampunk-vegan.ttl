@@ -1,0 +1,30 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/steampunk-vegan>
+  dcterms:created "2015-07-19T12:36:51+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: laurel,vegan,wedding,steampunk
+-->
+
+This steampunk vegan wedding is the best wedding I've ever been to.
+
+![cake!!](http://rhiaro.co.uk/photos/1507laurel/1.jpg)
+
+![laurel](http://rhiaro.co.uk/photos/1507laurel/2.jpg)""" ;
+  sioc:topic "laurel", "vegan", "wedding", "steampunk" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/07/steampunk-vegan> ;
+  as:latitude "51.55216" ;
+  as:longitude "0.16166" ;
+  blog:tmpcontent """This steampunk vegan wedding is the best wedding I've ever been to.
+
+![cake!!](http://rhiaro.co.uk/photos/1507laurel/1.jpg)
+
+![laurel](http://rhiaro.co.uk/photos/1507laurel/2.jpg)""" .
+

@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/location/transit>
+  a as:Place ;
+  as:name "transit" ;
+  rdfs:label "transit" ;
+  blog:pastLabel "was travelling between places" ;
+  blog:presentLabel "is in transit" .
+

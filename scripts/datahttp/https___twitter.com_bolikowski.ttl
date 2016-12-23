@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/bolikowski>
+  foaf:name "Łukasz Bolikowski" ;
+  foaf:homepage <https://twitter.com/bolikowski> ;
+  foaf:depiction <https://twitter.com/bolikowski/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/a227ea99ae29ca21c278e914aa1764002d2ca7624c7c47061e5b9808c3e4a752.jpeg> .
+

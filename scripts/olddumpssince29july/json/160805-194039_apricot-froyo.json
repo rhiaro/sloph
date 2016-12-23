@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Apricot froyo, iced tea (Katya's no name)",
+    "as:tag": [
+        "csarven",
+        "froyo",
+        "no name cafe",
+        "tea"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-05T14:40:39-04:00",
+    "@id": "http://blog.rhiaro.co.uk/apricot-froyo",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/apricot-froyo"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-05T14:40:39-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

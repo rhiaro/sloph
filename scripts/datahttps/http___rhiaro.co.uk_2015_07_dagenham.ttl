@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/dagenham>
+  as:latitude "51.52681" ;
+  as:longitude "0.00434" ;
+  blog:tmpcontent "Dagenham, celebration, steampunk." ;
+  as:published "2015-07-19T10:28:50+0100"^^xsd:datetime ;
+  as:tag "london", "laurel" ;
+  as:location <http://dbpedia.org/resource/Dagenham> ;
+  as:content """<!---
+location: http://dbpedia.org/resource/Dagenham
+tags: laurel,london
+-->
+
+Dagenham, celebration, steampunk.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

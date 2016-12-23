@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/572f883f4b777>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-08T11:40:35-07:00"^^xsd:dateTime ;
+  as:tag "philz coffee", "tea" ;
+  blog:cost "0 (Ilaria)" ;
+  as:summary "Mint tea (Philz Coffee)" .
+

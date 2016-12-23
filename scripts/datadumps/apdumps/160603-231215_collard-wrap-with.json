@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Collard wrap with pumpkin seed, carrot, peppers, onion (Kure)",
+    "as:tag": [
+        "vegetables",
+        "kure"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-06-03T15:12:15-07:00",
+    "@id": "http://blog.rhiaro.co.uk/collard-wrap-with",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/collard-wrap-with"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-03T15:12:15-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

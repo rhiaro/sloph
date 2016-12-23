@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/shepazu/status/658583499721453568>
+  dcterms:title "@rhiaro did you find a place? I might join you guys" ;
+  dcterms:created "2015-10-26T09:58:36+00:00"^^xsd:datetime ;
+  dc:creator <http://schepers.cc/> ;
+  sioc:content """[@rhiaro][1] did you find a place? I might join you guys
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/10/tpac2015-call> .
+

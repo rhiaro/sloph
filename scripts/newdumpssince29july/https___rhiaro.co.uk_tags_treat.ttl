@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/treat>
+  a as:Collection ;
+  as:name "treat" ;
+  as:items <https://rhiaro.co.uk/2016/08/57a5e7c793074> .
+

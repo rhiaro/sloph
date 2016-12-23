@@ -1,0 +1,19 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/plotting-vegan>
+  dcterms:created "2015-12-06T06:11:35+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,food,portland,usa,vegan
+-->
+
+Plotting vegan food places on a map of Portland. Plots whole of Portland. Going to have to find another way to narrow this down. Haven't even opened Happy Cow yet.""" ;
+  sioc:topic "travel", "food", "portland", "usa", "vegan" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/12/plotting-vegan> ;
+  blog:tmpcontent "Plotting vegan food places on a map of Portland. Plots whole of Portland. Going to have to find another way to narrow this down. Haven't even opened Happy Cow yet." .
+

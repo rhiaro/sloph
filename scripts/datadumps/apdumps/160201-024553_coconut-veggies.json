@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Coconut, veggies and tofu soup, fresh spring rolls, rice noodles with veggies and not-chicken (My Thai)",
+    "as:tag": [
+        "noodles",
+        "soup",
+        "My Thai"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-01-31T21:45:53-05:00",
+    "@id": "http://blog.rhiaro.co.uk/coconut-veggies",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/coconut-veggies"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-31T21:45:53-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

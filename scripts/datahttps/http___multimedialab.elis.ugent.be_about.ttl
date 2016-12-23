@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://multimedialab.elis.ugent.be/about>
+  foaf:name "Miel Vander Sande" ;
+  foaf:homepage <http://multimedialab.elis.ugent.be/about> ;
+  foaf:depiction <https://twitter.com/Miel_vds/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/654f42c42f89c1978b1fc28fe14170a53e1ad1f5688029d8b26eda1caab116a5.jpeg> .
+

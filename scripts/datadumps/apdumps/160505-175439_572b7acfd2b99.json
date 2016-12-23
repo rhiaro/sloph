@@ -1,0 +1,25 @@
+{
+    "h": "entry",
+    "bookmark-of": "https://hypothes.is/blog/a-coalition-of-scholarly-annotators/",
+    "category": [
+        "dokieli",
+        "linked",
+        "research",
+        "webannotations",
+        "w3",
+        "scholarly",
+        "publishing",
+        "hypothesis",
+        "academia"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-05-05T17:54:39+01:00",
+    "@id": "http://blog.rhiaro.co.uk/572b7acfd2b99",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/572b7acfd2b99"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-05T17:54:39+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/favourite-weird>
+  as:published "2016-06-28T20:37:14+01:00"^^xsd:dateTime ;
+  as:tag "codenamedmitri", "nodejs", "computingjoy.com", "apache", "solid", "csarven", "hacking" ;
+  as:content """My favourite weird bug diagnosis of the day: "maybe the server is parsing the filename as scientific notation?" via [codenamedmitri](http://computingjoy.com/)
+
+Fortunately this was quickly disproved.""" .
+

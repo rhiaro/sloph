@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "My Thai for two",
+    "blog:cost": "$20",
+    "as:tag": [
+        "my Thai",
+        "food",
+        "restaurant"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-01-31T22:00:34-05:00",
+    "@id": "http://blog.rhiaro.co.uk/56aede6610d61",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56aede6610d61"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-31T22:00:34-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

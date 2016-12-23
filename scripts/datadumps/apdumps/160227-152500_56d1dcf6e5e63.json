@@ -1,0 +1,15 @@
+{
+    "@context": "https://www.w3.org/ns/activitystreams#",
+    "location": {
+        "@id": "http://rhiaro.co.uk/location/other"
+    },
+    "published": "2016-02-27T15:25:00+00:00",
+    "@id": "http://blog.rhiaro.co.uk/56d1dcf6e5e63",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56d1dcf6e5e63"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-27T15:25:00+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Wholewheat wrap with various peppers, tomato, not-mayo, not-cheese, not-bacon, spinach",
+    "as:tag": [
+        "bread",
+        "vegetables",
+        "seitan"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-31T14:47:34-04:00",
+    "@id": "http://blog.rhiaro.co.uk/wholewheat-wrap-with",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/wholewheat-wrap"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-31T14:47:34-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

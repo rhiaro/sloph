@@ -1,0 +1,26 @@
+{
+    "h": "entry",
+    "content": "# San Diego 01\r\n\r\nI arrived in San Diego on the Greyhound, struggled to figure out how to top up a public transit card with anything other than a $7 day pass, gave up and jumped on an approaching bus because they're infrequent, didn't have the right change so resigned myself to giving up $5, and a nice lady supplied my missing $1 so I could make the correct fare after all. So that was a welcoming start.\r\n\r\nThe bus announcement voices have a kind of lisp... \"stop requischtid\"\r\n\r\nTurns out San Diego is one of those US cities where I can't get a data connection on my phone.\r\n\r\nMy CouchSurfing host had been held up, so she let me know where to find the spare key, and I let myself into her house, and hung out with her beautiful fluffy cat, Kafka. Kafka wanted all of the cuddles.\r\n\r\nMy host came home and we drank tea and chatted. I went to Sprouts grocery store (very similar to Wholefoods) for a quick instant-noodle dinner, then eventually crashed. I had a mattress on the floor in a private room. The next morning my host left for work before I woke up, and I enjoyed a reasonably productive morning on her couch catching up on life and administrative tasks. Kafka helped with my CHI expense report by sitting on all of my receipts as I tried to sort them out.\r\n\r\nEventually I ventured out. I [walked](https://runkeeper.com/user/rhiaro/activity/791792032) through University Heights and Hillcrest, cool districts with lots of lively restaurants and thrift shops. I found the Spruce Street suspension bridge, which is where a normal neighbourhood is suddenly a canyon full of trees with a massive bridge across. It was stable, but moved just enough underfoot to be unnerving.\r\n\r\nI proceeded to Balboa Park, which I've heard was worth going to, but imagined like a park, not massive canyons and hills. It felt wild and had groundhogs darting around but it's also sliced through by freeways, so had that special USAmerican kind of nature vibe. There were pretty good views of downtown San Diego from some points. By accident I ended up in the central part of the park which is suddenly civilised and full of museums (none of which were free). There's a botanical 'building' that looks like it's made from massive bamboo straws or something. Lots of people around and I walked through the background of at least one wedding and one graduation ceremony. I saw cable cars overhead and looked for them, but figured eventually they must be in the zoo. I wandered more, aiming for where HappyCow told me would be a vegan restaurant. I found the WorldBeat Cultural Center, which it turns out is where the restaurant was, and hung out there for a couple of hours eating Jamaican curry and a big cinnamon roll. Food was good and cheap, and atmosphere was quiet and friendly and hippie. Stuff going on in the background like business meetings and dance classes; was a nice backdrop to get my laptop out for a bit.\r\n\r\nMy legs were aching by that point. Not from the 7 mile walk I'd just done surely... but perhaps from the fact I'd walked about an average of ten miles every day for over a week. My CS host offered to pick me up! Which she did, and then gave me a driving tour of downtown San Diego, and Coronado island. Coronado is an upscale neighbourhood on an island, surrounding a military base, reachable across a massive road bridge. We parked and took a [walk](https://runkeeper.com/user/rhiaro/activity/792365642) along the front; mostly fancy hotels, beaches, posh people..\r\n\r\nWe ate at Muzita Ethiopian restaurant (yum!) and my host dropped me at a transit station where I caught a bus to my next CS destination.\r\n\r\nMy new host picked me up from the bus stop! (Americans and cars! Not complaining..). I met her kitties and we talked about pets and breakfast and plans for the weekend. Then I went to sleep in a lovely room of my own with a real bed in it.",
+    "category": [
+        "san",
+        "diego",
+        "travel",
+        "ca2016",
+        "couchsurfing",
+        "vegan",
+        "balboa",
+        "usa",
+        "california"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-05-22T07:00:16+01:00",
+    "http://purl.org/dc/terms/title": "San Diego 01\r",
+    "@id": "http://blog.rhiaro.co.uk/san-diego-01",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/san-diego-01"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-22T07:00:16+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,20 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/encryption>
+  a as:Travel ;
+  dcterms:created "2016-03-07T11:19:02-05:00"^^xsd:dateTime ;
+  sioc:reply_of <https://events.mit.edu> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/03/encryption> ;
+  as:startTime "2016-03-07T14:00:00-05:00" ;
+  as:endTime "2016-03-07T15:00:00-05:00" ;
+  as:location <http://dbpedia.org/resource/Massachusetts_Institute_of_Technology> ;
+  as:published "2016-03-07T11:19:02-05:00" ;
+  as:tag "attendee", "crosscloud", "encryption", "event", "gchq", "mit", "privacy", "surveillance", "rsvp" ;
+  as:name "Encryption, Privacy and Partnerships" ;
+  as:content "Talk by Hannigan of GCHQ" ;
+  as:inReplyTo <https://events.mit.edu> .
+

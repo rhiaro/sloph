@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/09/1442744962>
+  as:published "2015-09-20T11:29:22+0100"^^xsd:datetime ;
+  as:tag "quora", "hacking" ;
+  blog:follow_of <http://twitter.com/6> ;
+  as:content """<!---
+follow-of: http://twitter.com/6
+tags: hacking,quora
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

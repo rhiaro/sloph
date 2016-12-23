@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/peanut-noodles>
+  a as:Activity, asext:Consume ;
+  as:name "Peanut noodles with edamame, mushrooms, tofu, spring onions; homemade ginger beer" ;
+  as:published "2016-08-06T13:36:30-04:00"^^xsd:dateTime, "2016-08-06T13:36:30-04:00" ;
+  as:tag "noodles", "tofu", "vegetables", <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/tofu>, <https://rhiaro.co.uk/tags/noodles> .
+

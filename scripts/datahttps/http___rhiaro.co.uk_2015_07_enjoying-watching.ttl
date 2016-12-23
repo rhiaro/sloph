@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/enjoying-watching>
+  blog:tmpcontent "Enjoying watching kids discover that coding is mostly trial and error and wtf" ;
+  as:published "2015-07-07T14:48:07+0100"^^xsd:datetime ;
+  as:tag "teaching", "lego", "volunteer", "kids", "sutton trust summer school" ;
+  as:content """<!---
+tags: lego,teaching,volunteer,kids,sutton trust summer school
+-->
+
+Enjoying watching kids discover that coding is mostly trial and error and wtf""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

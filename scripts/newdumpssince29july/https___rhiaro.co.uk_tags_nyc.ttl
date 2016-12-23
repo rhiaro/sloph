@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/nyc>
+  a as:Collection ;
+  as:name "nyc" ;
+  as:items <https://rhiaro.co.uk/2016/08/train-from-nyc-dc>, <https://rhiaro.co.uk/2016/08/train-from>, <https://rhiaro.co.uk/2016/08/bus-from-boston>, <https://rhiaro.co.uk/2016/08/57b87559e9d42>, <https://rhiaro.co.uk/2016/08/57ba53755121d> .
+

@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/lukeshr/status/631913348049846272>
+  a as:Announce ;
+  as:published "2015-08-13T20:40:57+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: New fave thing about @edfringe: the purple floodlight the BBC venue now points DIRECTLY AT MY EYES thru office window rhiaro.co.uk/2015/08/new-faâ€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <https://sites.google.com/site/lukeshr/> ;
+  as:object <https://rhiaro.co.uk/2015/08/new-favourite> .
+

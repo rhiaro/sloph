@@ -1,0 +1,59 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2014/04/ontology-feels>
+  as:published "2014-04-21T21:30:00+0000"^^xsd:datetime ;
+  as:tag "hacking", "ontology", "conversion", "emotion", "emotions", "feelstracker", "learning", "semantic web", blog:Doing, "rdf", "linked data" ;
+  as:name "Ontology of the Feels" ;
+  as:content """<!---
+published: 21st April 2014, 21:30
+last-modified: 21st April 2014, 21:30
+type: BlogPost
+tags: hacking,learning,semantic web,linked data,feelstracker,emotions,emotion,ontology,rdf,conversion
+list: doing
+-->
+
+# Ontology of the Feels
+
+I had an idea for a tiny wee project to do with quantified self. More on that later.
+
+Because I'm trying to use linked data for _everything_, for reasons beyond the scope of this post, the first thing I did was sketch out the data I need to store in a graph structure. I need to record emotions, so I did a quick search for ontologies that represent emotions, figuring psychologists and the like must have been at this for years already.
+
+Sure enough I found a few, but the most convincing one, the [HUMAINE Emotion Annotation & Representation Language (EARL)](http://emotion-research.net/projects/humaine/earl) is in XML rather than OWL.
+
+Yay! Time to convert a well structured and useful dataset into RDF. Always a Good Thing.
+
+## EARL
+
+EARL comes as many files, and goes beyond what I need. But it's not huge, and with a little effort (and looking some stuff on Wikipedia) I think I can understand what's going on enough to convert the lot.
+
+Note: There's apparently a lot of disagreement about [terms and stuff](http://www.w3.org/TR/2012/NOTE-emotion-voc-20120510/) in this area. Not something I'm invested in, so I'm just going to roll with this XML.
+
+There are:
+
+* Categories (names of emotions)
+* Dimensions (ways of describing intensity, I think)
+* Modality types (the means through which the emotion was expressed, eg. face)
+* Regulation attributes (response to an emotion)
+* Appraisal attributes (a list of other descriptive terms; emotional metadata, if you will)
+* Emotion times (start and end)
+
+Emotional occurrences can have all of the above as properties, as well as probability and intensity. Complex emotional occurrences have times, and contain a minimum of two emotional occurrences with the above properties.
+
+The terms are all taken from various different psychological experiments or schools of thought. There are alternative versions of some of these things from something called AIBO. Arbitrarily I'm ignoring everything prefixed AIBO for now.
+
+## Converting
+
+I'm going through the files and writing everything relevant out, then drawing it as a graph.
+
+First juncture: do I use all the attributes (like the list of 55 emotions) as properties (as they are demonstrated in the original XML) or use classes? Properties seems messy, and feels less extensible, even though technically I suppose it's not.
+
+Maybe they should be properties. Except the categories, they all (or at least most) have corresponding DBPedia entries that it would be stupid not to take advantage of. But the dimensions, regulation and appraisal might be better suited to being properties, otherwise I'm having pointless identifiers or blank nodes everywhere. And nobody wants that.
+
+I adjusted the Samples thing a bit, mostly to simplify it, and I may have got it wrong, but I think it makes sense. 
+
+Then I typed it all into WebProtege. As a result, I think quite a few things are overspecified. What do you think? Check it out: [http://vocab.amy.so/earl](http://vocab.amy.so/earl).""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:updated "2014-04-21T21:30:00+0000"^^xsd:datetime .
+

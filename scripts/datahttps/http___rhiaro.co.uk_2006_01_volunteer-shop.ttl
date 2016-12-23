@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2006/01/volunteer-shop>
+  blog:tmpcontent """# Volunteer shop assistant
+
+## British Hearth Foundation, Boston
+
+Started as part of the Duke of Edinburgh Award Scheme, and just didn't leave; spent Wednesday and Saturday afternoons selling used stuff, keeping the shop tidy and being sweet to old people. Sometimes I wrote short stories on tissue paper.""" ;
+  as:published "2006-01-01T00:00:00+0000"^^xsd:datetime ;
+  as:tag "boston", "resume", "cv", "volunteer", "work", "shop", "retail", "charity", "bhf", "duke of edinburgh" ;
+  as:name "Volunteer shop assistant" ;
+  as:startTime "2006-01-01T00:00:00+0000"^^xsd:datetime ;
+  as:endTime "2008-04-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st January 2006
+start: January 2006
+end: April 2008
+tags: volunteer,work,shop,retail,charity,bhf,duke of edinburgh,cv,resume,boston
+-->
+
+# Volunteer shop assistant
+
+## British Hearth Foundation, Boston
+
+Started as part of the Duke of Edinburgh Award Scheme, and just didn't leave; spent Wednesday and Saturday afternoons selling used stuff, keeping the shop tidy and being sweet to old people. Sometimes I wrote short stories on tissue paper.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

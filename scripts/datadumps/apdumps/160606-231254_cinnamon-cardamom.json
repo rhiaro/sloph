@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Cinnamon cardamom sugar doughnut (Blue Star)",
+    "as:tag": [
+        "bread",
+        "doughnut",
+        "blue star"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-06-06T15:12:54-07:00",
+    "@id": "http://blog.rhiaro.co.uk/cinnamon-cardamom",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/cinnamon-cardamom"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-06T15:12:54-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

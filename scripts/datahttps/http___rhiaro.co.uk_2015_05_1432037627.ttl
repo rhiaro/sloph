@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/1432037627>
+  a as:Add ;
+  as:published "2015-05-19T13:13:47+0100"^^xsd:datetime ;
+  as:tag "social science", "facebook", "experiments", "open plan" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 19th May 2015, 13:13 Europe/London
+bookmark-of: https://eytan.github.io/www-15-tutorial/
+tags: facebook,experiments,open plan,social science
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://eytan.github.io/www-15-tutorial/> .
+

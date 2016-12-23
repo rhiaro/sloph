@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/it-begins>
+  dcterms:title "IT BEGINS" ;
+  dcterms:created "2011-07-26T10:00:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T00:12:53.924Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-69618332186490786" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """![](http://3.bp.blogspot.com/-hymYOClXgOg/Ti8sjfzkRGI/AAAAAAAAKuM/yb6ebpKtsC8/
+s320/P7263891.jpg)
+
+  
+
+""" ;
+  sioc:topic blog:Done, "travel", "heathrow", "begin", "adventure" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/07/it-begins> .
+

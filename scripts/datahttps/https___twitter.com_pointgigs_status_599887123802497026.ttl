@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/pointgigs/status/599887123802497026>
+  a as:Announce ;
+  as:published "2015-05-17T11:40:10+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: Ticket inspector validating and selling tickets via NFC and qr codes on Switzerland-Italy train. The future is here. rhiaro.co.uk/2015/05/ticketâ€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://pointgigs.com/> ;
+  as:object <https://rhiaro.co.uk/2015/05/ticket-inspector> .
+

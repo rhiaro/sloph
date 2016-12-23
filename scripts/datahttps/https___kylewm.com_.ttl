@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://kylewm.com/>
+  foaf:name "Kyle Mahan" ;
+  foaf:homepage <https://kylewm.com/> ;
+  foaf:depiction <https://webmention.io/avatar/kylewm.com/148df9c2d3d38129449b01e3c727140650f3e1ee5844b35d5de25c7fcfde7c72.jpeg>, <https://webmention.io/avatar/kylewm.com/ef13e9e35ea992adb30241b4f3f29652ab4092d902810afa4e8cff6d029d874e.jpeg>, <https://webmention.io/avatar/kylewm.com/dcffbb0712bbccc3ed94fc0f0c873ce8fde83d0cc3474fff93109042c378e2f4.jpeg> .
+

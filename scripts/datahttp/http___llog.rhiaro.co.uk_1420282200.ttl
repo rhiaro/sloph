@@ -1,0 +1,24 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://llog.rhiaro.co.uk/1420282200>
+  a blog:LlogPost ;
+  dcterms:created "2015-01-03T10:50:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+start: 3rd January 2015, 08:00
+end: 3rd January 2015, 10:50
+type: LlogPost
+tags: sleep,polyphasic,sleep cycle,quantified self,life
+list: done
+-->
+
+Was supposed to nap for 40 minutes, but I was really comfy... Oops.""" ;
+  sioc:topic "sleep", "polyphasic", "sleep cycle", "quantified self", "life" ;
+  as:startTime "2015-01-03T08:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-03T10:50:00+0000"^^xsd:datetime .
+

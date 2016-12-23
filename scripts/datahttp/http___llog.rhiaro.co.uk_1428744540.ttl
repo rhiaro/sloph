@@ -1,0 +1,24 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://llog.rhiaro.co.uk/1428744540>
+  a blog:LlogPost ;
+  dcterms:created "2015-04-11T10:29:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!--- 
+start: 11th April 2015, 10:29
+end: 11th April 2015, 10:29
+type: LlogPost
+tags: eat,food,quantified self,life
+list: done
+-->
+
+Porridge, fruit, nuts, dark sugar-free chocolate & rice milk""" ;
+  sioc:topic "eat", "food", "quantified self", "life" ;
+  as:startTime "2015-04-11T10:29:00+0100"^^xsd:datetime ;
+  as:endTime "2015-04-11T10:29:00+0100"^^xsd:datetime .
+

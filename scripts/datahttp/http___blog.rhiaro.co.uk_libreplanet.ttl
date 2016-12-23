@@ -1,0 +1,28 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/libreplanet>
+  dcterms:title "LibrePlanet" ;
+  dcterms:created "2015-02-11T13:24:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 11th February 2015, 13:24
+type: BlogPost
+tags: events,libreplanet,free software,conference,travel,usa,boston,cambridge,rsvp
+list: todo
+-->
+
+# LibrePlanet
+
+Straight after the Social Web Working Group face-to-face *and* [indiewebcamp Cambridge](http://indiewebcamp.com/2015/Cambridge) is [http://libreplanet.org](libreplanet) (21st and 22nd February). It's going to be a busy week.""" ;
+  sioc:topic "events", "libreplanet", "free software", "conference", "travel", "usa", "boston", "cambridge", "rsvp", blog:Done ;
+  sioc:reply_of <https://www.libreplanet.org/2015/> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/02/libreplanet> ;
+  as:startTime "2015-03-21T09:00:00+00:00"^^xsd:dateTime ;
+  as:endTime "2015-03-22T18:00:00+00:00"^^xsd:dateTime .
+

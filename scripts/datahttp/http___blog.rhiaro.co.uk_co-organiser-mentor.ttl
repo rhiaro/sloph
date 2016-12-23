@@ -1,0 +1,30 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/co-organiser-mentor>
+  dcterms:title "Co-organiser and mentor, Edinburgh Centre, Young Rewired State" ;
+  dcterms:created "2013-08-05T09:00:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 5th August 2013, 09:00
+start: 5th August 2013
+end: 11th August 2013
+tags: volunteer,cv,resume,yrs,festival of code,mentor,teaching,young rewired state,hackathon,organiser
+-->
+
+# Co-organiser and mentor, Edinburgh Centre, Young Rewired State
+
+Helped to organise the local centre, recruited participants in the run up, and helped with mentoring during the week. Also helped to supervise a coachload of kids for the trip to the Festival of Code.""" ;
+  sioc:topic "volunteer", "cv", "resume", "yrs", "festival of code", "mentor", "teaching", "young rewired state", "hackathon", "organiser" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/08/co-organiser-mentor> ;
+  as:startTime "2013-08-05T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2013-08-11T00:00:00+0100"^^xsd:datetime ;
+  blog:tmpcontent """# Co-organiser and mentor, Edinburgh Centre, Young Rewired State
+
+Helped to organise the local centre, recruited participants in the run up, and helped with mentoring during the week. Also helped to supervise a coachload of kids for the trip to the Festival of Code.""" .
+

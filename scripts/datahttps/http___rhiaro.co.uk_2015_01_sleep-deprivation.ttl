@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/01/sleep-deprivation>
+  as:published "2015-01-05T13:36:00+0000"^^xsd:datetime ;
+  as:tag "polyphasic", "sleep", "quantified self", blog:Done, "life" ;
+  as:content """<!---
+published: 5th January 2015, 13:36
+last-modified: 5th January 2015, 13:36
+type: MicroblogPost
+tags: sleep,quantified self,life,polyphasic
+list: done
+-->
+
+Sleep deprivation definitely kicking in a bit. Finding it hard to concentrate or remember what I'm doing. Feels like Friday because I've slept so many times since Saturday. Feel pleasant, but out of it.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:updated "2015-01-05T13:36:00+0000"^^xsd:datetime .
+

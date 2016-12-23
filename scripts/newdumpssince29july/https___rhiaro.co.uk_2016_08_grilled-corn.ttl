@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/grilled-corn>
+  a as:Activity, asext:Consume ;
+  as:name "Grilled corn and wheat tortillas with refried beans, cream cheese, mushrooms, green pepper, tomato, kale and lettuce; coffee" ;
+  as:published "2016-08-03T09:28:42-04:00"^^xsd:dateTime, "2016-08-03T09:28:42-04:00" ;
+  as:tag "beans", "coffee", "salad", "tortillas", <https://rhiaro.co.uk/tags/coffee>, <https://rhiaro.co.uk/tags/salad>, <https://rhiaro.co.uk/tags/beans>, <https://rhiaro.co.uk/tags/tortillas> .
+

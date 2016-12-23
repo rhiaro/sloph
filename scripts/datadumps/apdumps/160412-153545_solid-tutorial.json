@@ -1,0 +1,20 @@
+{
+    "h": "entry",
+    "content": "Solid tutorial discusses... group chat: the ultimate challenge in data ownership and discoverability.",
+    "category": [
+        "www2016",
+        "solid",
+        "group",
+        "chat"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-12T15:35:45+01:00",
+    "@id": "http://blog.rhiaro.co.uk/solid-tutorial",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/solid-tutorial"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-12T15:35:45+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

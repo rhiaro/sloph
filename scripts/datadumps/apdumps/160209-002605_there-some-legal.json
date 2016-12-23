@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "content": "Is there some legal requirement for disclaimer and liability stuff in terms of service to be in all caps? Every site has this, but only for this section.",
+    "category": [
+        "terms of service",
+        "privacy",
+        "social media",
+        "identity",
+        "profiles"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-02-09T00:26:05+00:00",
+    "@id": "http://blog.rhiaro.co.uk/there-some-legal",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/there-some-legal"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-09T00:26:05+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

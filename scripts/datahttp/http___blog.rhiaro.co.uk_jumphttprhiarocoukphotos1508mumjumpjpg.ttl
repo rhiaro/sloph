@@ -1,0 +1,23 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/jumphttprhiarocoukphotos1508mumjumpjpg>
+  dcterms:created "2015-08-22T19:41:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: life,family,beach,sutton-on-sea
+location: http://dbpedia.org/resource/Sutton-on-Sea
+published: 22nd August 2015, 19:41 BST
+-->
+
+![jump](http://rhiaro.co.uk/photos/1508mum/jump.jpg)""" ;
+  sioc:topic "life", "family", "beach", "sutton-on-sea" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/08/jumphttprhiarocoukphotos1508mumjumpjpg> ;
+  as:location <http://dbpedia.org/resource/Sutton-on-Sea> ;
+  blog:tmpcontent "![jump](http://rhiaro.co.uk/photos/1508mum/jump.jpg)" .
+

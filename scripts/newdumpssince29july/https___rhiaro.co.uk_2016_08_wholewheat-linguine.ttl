@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+
+<https://rhiaro.co.uk/2016/08/wholewheat-linguine>
+  a as:Activity, asext:Consume ;
+  as:name "Wholewheat linguine, tomato sauce, mushrooms, beet greens, red pepper, onion, garlic" ;
+  as:published "2016-08-11T12:39:16-04:00" ;
+  as:tag <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/pasta> .
+

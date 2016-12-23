@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/04/1428516761>
+  a as:Add, as:Save ;
+  as:published "2015-04-08T19:12:00+0100"^^xsd:datetime ;
+  as:tag "social", "rdf", "ldp", "linked data" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!--- 
+published: 8th April 2015, 19:12
+bookmark-of: https://linkeddata.github.io/SoLiD/
+tags: linked data,ldp,rdf,social
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://linkeddata.github.io/SoLiD/> .
+

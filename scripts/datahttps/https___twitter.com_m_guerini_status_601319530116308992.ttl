@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/m_guerini/status/601319530116308992>
+  a as:Announce ;
+  as:published "2015-05-21T10:32:02+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: Well that was a bust. W3C track, cool WebRTC demos... "our idea is to build a new advertising model insid... rhiaro.co.uk/2015/05/well-bâ€¦ #www2015
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://www.marcoguerini.eu/> ;
+  as:object <https://rhiaro.co.uk/2015/05/well-bust-w3c> .
+

@@ -1,0 +1,26 @@
+{
+    "h": "entry",
+    "content": "# Santa Cruz 01\r\n\r\nI'm in Linda's Seabreeze Cafe in Santa Cruz. Feels like it's full of locals. Coffee is nice, in a large mug. Staff are friendly, reporting back from time to time as they discover things in their kitchen which are vegan. They have a few things on the menu, but only big meals, so I enquired after smaller things. I'm not hungry anyway, I only wanted coffee. The sun came out since I've been in here. It was grey when I walked. I'll finish my coffee, then continue walking to Twin Lakes. Oh that might be a while, I just got an impromptu refill.\r\n\r\nSanta Cruz so far feels pleasant and friendly. The Boardwalk is tacky... fairground rides, candyfloss, toffee apples... but somehow still charming. I walked around as the sun was setting last night and everywhere felt quiet and calm. Until I made it to the end of the wharf, which, underneath, is populated by noisy sealions. They bark and snort and sneeze and groan. I found a spot that was lit well enough to see a heap of them and watched them sleeping in piles, climbing over each other, awkwardly hauling themselves in and out of the water and over and around their buddies.\r\n\r\nI'm staying in an AirBnB, an adorable trailer in someone's backyard. It's tiny, only has a bed and some shelving inside. The bathroom is across the yard. A tiny space to myself in a quiet town is exactly what I need for a few days post-conference.\r\n\r\nI might go on the cablecars (Sky Glider) on the Boardwalk later. And maybe swim in the sea. Tomorrow I'm thinking about hiking in Big Basin all day. I need to look out for somewhere I can pick up lunch to take so I'm not eating week old bagels all day.",
+    "category": [
+        "ca2016",
+        "travel",
+        "santa",
+        "cruz",
+        "usa",
+        "vegan",
+        "beach",
+        "airbnb",
+        "walking"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-05-17T00:01:30+01:00",
+    "http://purl.org/dc/terms/title": "Santa Cruz 01\r",
+    "@id": "http://blog.rhiaro.co.uk/santa-cruz-01",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/santa-cruz-01"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-17T00:01:30+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

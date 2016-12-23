@@ -1,0 +1,25 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2013/07/attendee-summer>
+  blog:tmpcontent """# Attendee, Summer School for Ontology Engineering and the Semantic Web
+
+Presented poster "Active Digital Content Creators and the Semantic Web". Learnt lots, slept little. Worked on a mini group project about measuring serendipity. Won the best video prize, with "[Summer School for Semantic Wizards](https://www.youtube.com/watch?v=BISwM1POYvk)", featuring a wizard who turns water into wine using SPARQL.""" ;
+  as:published "2013-07-08T09:00:00+0100"^^xsd:datetime ;
+  as:tag "phd", "semantic web", "resume", "cv", "sssw2013", "summer school", "university of edinburgh", "madrid", "summer school for ontology engineering and the semantic web", "poster" ;
+  as:name "Attendee, Summer School for Ontology Engineering and the Semantic Web" ;
+  as:startTime "2013-07-08T09:00:00+0100"^^xsd:datetime ;
+  as:endTime "2013-07-14T19:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 8th July 2013, 09:00
+start: 8th July 2013, 09:00
+end: 14th July 2013, 19:00
+tags: cv,resume,sssw2013,summer school,university of edinburgh,madrid,phd,semantic web,summer school for ontology engineering and the semantic web,poster
+-->
+
+# Attendee, Summer School for Ontology Engineering and the Semantic Web
+
+Presented poster "Active Digital Content Creators and the Semantic Web". Learnt lots, slept little. Worked on a mini group project about measuring serendipity. Won the best video prize, with "[Summer School for Semantic Wizards](https://www.youtube.com/watch?v=BISwM1POYvk)", featuring a wizard who turns water into wine using SPARQL.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

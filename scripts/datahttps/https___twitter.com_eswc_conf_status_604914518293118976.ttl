@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/eswc_conf/status/604914518293118976>
+  a as:Announce ;
+  as:published "2015-05-31T08:37:14+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: I'm *really* hoping #ESWC2015 reignites my excitement about linked data, which has been kinda damp for a while. #S... rhiaro.co.uk/2015/05/im-reaâ€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <http://www.eswc-conferences.org/> ;
+  as:object <https://rhiaro.co.uk/2015/05/im-really-hoping> .
+

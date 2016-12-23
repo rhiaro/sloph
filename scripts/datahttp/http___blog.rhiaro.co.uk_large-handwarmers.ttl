@@ -1,0 +1,49 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/large-handwarmers>
+  dcterms:title "Large handwarmers (crochet)" ;
+  dcterms:created "2013-02-28T20:38:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-13T20:47:44.654Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-1911880712985871370" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """One of the first useful things I crocheted were these extremely masculine
+handwarmers.  
+  
+
+![](http://2.bp.blogspot.com/-g-cGnRwrdgs/UWnC1_aaM4I/AAAAAAAAFfc/AmF1sDMw_aM/
+s320/IMG_20130113_143702.jpg)
+
+  
+The extremely soft and fuzzy wool was from Age Scotland I believe.  
+  
+
+![](http://2.bp.blogspot.com/-fTFbbGzPw1E/UWnC6Rwqh7I/AAAAAAAAFfo/KTAyUyjWzHw/
+s320/IMG_20130113_143732.jpg)
+
+  
+I used no pattern and had never made handwarmers before, so they came out far
+too big.  Not to worry, at least you can fit a Tigo in them!  
+  
+
+![](http://4.bp.blogspot.com/-ISoY-
+WYN6ig/UWnC6BJ3CaI/AAAAAAAAFfw/h3iXqVIPzWM/s320/IMG_20130119_161714.jpg)
+
+  
+I just repeated *dc ch1* around, dc-ing in the gap left by the chain each
+time.  I reduced a bit around the wrist area to shape it, but it wasn't
+particularly effective.  I chained about four, instead of carrying on, to make
+the gap for the thumb, then continued as normal.  One of them is shorter than
+the other, because I didn't count anything.  
+  
+They serve their purpose though, and the lucky owner has even gone so far as
+to wear them in public in the chilly heights of Appleton Tower.
+
+""" ;
+  sioc:topic blog:Done, "mbaking", "handwarmers", "crochet" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/02/large-handwarmers> .
+

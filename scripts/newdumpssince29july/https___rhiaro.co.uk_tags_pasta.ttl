@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/pasta>
+  a as:Collection ;
+  as:name "pasta" ;
+  as:items <https://rhiaro.co.uk/2016/08/macaroni-black>, <https://rhiaro.co.uk/2016/08/wholewheat>, <https://rhiaro.co.uk/2016/08/mac-cheese-with>, <https://rhiaro.co.uk/2016/08/pasta-vegetables>, <https://rhiaro.co.uk/2016/09/pasta-with-tofu>, <https://rhiaro.co.uk/2016/09/pasta-kale-tomato> .
+

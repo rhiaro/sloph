@@ -1,0 +1,20 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/innsbruck-austria>
+  as:latitude "47.27388" ;
+  as:longitude "11.42768" ;
+  blog:tmpcontent "Innsbruck, Austria" ;
+  as:published "2015-05-13T09:00:00+0100"^^xsd:datetime ;
+  as:tag "travel", "austria", "innsbruck" ;
+  as:location <http://dbpedia.org/resource/Innsbruck> ;
+  as:content """<!---
+tags: travel,innsbruck,austria
+published: 13th May 2015, 10:00 Europe/Berlin
+location: http://dbpedia.org/resource/Innsbruck
+-->
+
+Innsbruck, Austria""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

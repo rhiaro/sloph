@@ -1,0 +1,45 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "Indieweb Summit 2016",
+    "as:content": "Maybe I'll rebuild my website from scratch again.",
+    "blog:rsvp": "yes",
+    "blog:cost": "$0",
+    "as:tag": [
+        "rsvp",
+        "event",
+        "attendee",
+        "indieweb",
+        "indiewebcamp",
+        "hacking",
+        "decentralised social web",
+        "social web",
+        "hackathon",
+        "portland",
+        "usa"
+    ],
+    "as:published": "2016-05-06T18:23:02-07:00",
+    "as:startTime": "2016-06-03T19:00:00-07:00",
+    "as:endTime": "2016-06-05T18:00:00-07:00",
+    "@type": [
+        "as:Accept"
+    ],
+    "as:location": {
+        "@id": "http://dbpedia.org/resource/Portland,_Oregon"
+    },
+    "as:inReplyTo": [
+        {
+            "@id": "http://2016.indieweb.org/"
+        }
+    ],
+    "@id": "http://blog.rhiaro.co.uk/indieweb-summit",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/indieweb-summit"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-06T18:23:02-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

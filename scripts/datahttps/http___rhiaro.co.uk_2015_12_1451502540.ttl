@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/1451502540>
+  a as:Add ;
+  as:published "2015-12-30T19:09:00+0000"^^xsd:datetime ;
+  as:tag "rewritecond", "mod_rewrite", "apache", "server", "hacking" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 30th December 2015, 19:09 Europe/London
+bookmark-of: http://www.tokiwinter.com/apache-httpd-mod_rewrite-one-rewritecond-many-rewriterules/
+tags: apache,mod_rewrite,rewritecond,hacking,server
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://www.tokiwinter.com/apache-httpd-mod_rewrite-one-rewritecond-many-rewriterules/> .
+

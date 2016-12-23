@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/feeling-when-late>
+  a as:Note ;
+  as:published "2016-08-27T13:06:30+01:00"^^xsd:dateTime ;
+  as:tag "life", "sloph", "php", "hacking", <https://rhiaro.co.uk/tags/life>, <https://rhiaro.co.uk/tags/hacking>, <https://rhiaro.co.uk/tags/php>, <https://rhiaro.co.uk/tags/sloph> ;
+  as:content "<p>That feeling when, late night, you relegate a problem to being solved in the distant future if ever, then wake up the next morning and solve it right away.</p>" .
+

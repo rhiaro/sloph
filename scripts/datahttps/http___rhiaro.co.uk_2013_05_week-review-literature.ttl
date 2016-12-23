@@ -1,0 +1,25 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/05/week-review-literature>
+  as:published "2013-05-06T20:18:00.001Z"^^xsd:datetime ;
+  as:tag "phd", blog:Doing, "semantic web", "literature review", "week in review" ;
+  as:name "Week in review: literature reviewin'" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-5057107454255521137" ;
+  as:content """**29th April - 5th May**  
+**  
+**Read several papers and an [entire book](http://books.google.co.uk/books/about/Multimedia_Content_and_the_Semantic_Web.html?id=NN2QuFGlTL8C&redir_esc=y).  Notes to follow.  Literature review inching along.  
+  
+Got accepted for the [Semantic Web Summer School](http://sssw.org/).  
+  
+Talked about the SW search engine Watson project during Ontologies with a
+View.  This is different from IBM's Jeopardy playing Watson.  
+  
+Had to write off the bank holiday weekend because a friend visited.  Walked a
+_lot_.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-05-06T20:18:13.114Z"^^xsd:datetime .
+

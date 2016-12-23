@@ -1,0 +1,23 @@
+{
+    "h": "entry",
+    "content": "For real.\r\n\r\n> \"Elsevier patents online academic peer review.\" - [EFF](https://www.eff.org/deeplinks/2016/08/stupid-patent-month-elsevier-patents-online-peer-review)",
+    "category": [
+        "linkedresearch",
+        "academia",
+        "phd",
+        "research.",
+        "eff.",
+        "elsevier",
+        "publishing"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-08-31T23:14:13+01:00",
+    "@id": "http://blog.rhiaro.co.uk/real-elsevier",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/real-elsevier"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-31T23:14:13+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

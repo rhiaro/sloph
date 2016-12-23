@@ -1,0 +1,20 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/awkward-silence>
+  blog:tmpcontent """Awkward silence. Relax into it. Make it your own. Become the silence. 
+
+Now you can do anything.""" ;
+  as:published "2015-06-14T15:06:00+0100"^^xsd:datetime ;
+  as:tag "life" ;
+  as:content """<!---
+published: 14th June 2015, 15:06
+tags: life
+-->
+
+Awkward silence. Relax into it. Make it your own. Become the silence. 
+
+Now you can do anything.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

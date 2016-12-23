@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/tom-paris-wants>
+  as:published "2016-07-24T00:27:46+01:00"^^xsd:dateTime ;
+  as:tag "star", "trek", "voyager" ;
+  as:content "Tom Paris wants to be Riker but just nah" .
+

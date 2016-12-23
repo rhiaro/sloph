@@ -1,0 +1,1148 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/notes-odd-2>
+  dcterms:title "[Notes] 1st International Open Data Dialogue (Day two)", "[Notes] 1st International Open Data Dialogue (Day one)" ;
+  dcterms:created "2013-01-16T18:23:00.002Z"^^xsd:datetime, "2013-01-16T18:22:00.001Z"^^xsd:datetime ;
+  dcterms:modified "2013-05-18T16:44:53.176Z"^^xsd:datetime, "2013-05-18T16:44:42.682Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-35354596892475062", "tag:blogger.com,1999:blog-18505529.post-1934883843818742818" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """_December 6th, 2012._  
+  
+Notes as I scrawled them.  [Read a proper
+review](http://blog.rhiaro.co.uk/2013/01/1st-international-open-data-
+dialogue.html).  Purple is calls to action for myself.  
+  
+**Rufus Pollock - Open Data, Building the Ecosystem**  
+**  
+**  
+_Open API is a contradiction.  _  
+An API is not open (though still valuable) but not the same as bulk open data.  
+Should we open governments?  So much is hidden.  
+Ultimately a lot of it is about in/justice (debts paid off by younger
+generations).  
+  
+Open spending  
+\\\\- only 30% of departments are up to date - can keep checking who's updating
+their stuff.  
+\\\\- but sometimes more up to date that government's own records - they use it
+themselves.  
+  
+Getting the data is only the beginning.  Need a platform.  
+  
+Getting citizens, journalists and government to work together.  
+  
+Why doesn't every dataset have a public issue tracker?  This is what he'd like
+to see most.  
+  
+The process is important.  
+  
+Digital doesn't run out.  That's why open makes so much sense.  
+  
+FourSquare uses OSM.  
+  
+Average consumers won't see raw open data - but via products and services.  
+  
+Next?  Building communities.  Takes time to nurture.  publicdata.eu.  
+  
+We'll go from hackdays to deep integration.  Toy vs. core datasets.  
+  
+Geodata is mature.  
+  
+SchoolOfData.org.  Data analysis, programming, training.  
+\\\\- Teachathons better than hackathons.  
+  
+Should have access to all our own data - travel (Oyster), shopping (loyalty
+cards), social.  
+\\\\- Would like to control who uses it.  
+\\\\- Compare with others (aggregate).  Only companies can do that.  
+\\\\- Some people will choose to publish/open their own data.  Even if it's a few
+people, still lots of data.  
+  
+Open Data = Platform; !Commodity  
+\\\\- Build on it rather than sell it (and let others build on it)  
+\\\\- Already seeing people building companies/making money on this principle.  
+  
+Ecosystem.  Need feedback.  Poor quality data creates wasted time, especially
+at hacks.  
+  
+Datagov census dashboard - who has what out.  
+There's no gov. data that's come back cleaned up from the community (even
+though people are almost certainly cleaning this data up).  
+  
+Be patient.  Needed to wait for pressure to build up (why it's happening now).
+Low investment.  
+  
+Way to fund production of gov. data (or combination of):  
+\\\\- Charge users  
+\\\\- Taxpayer revenue  
+\\\\- Charge creators (most attractive)  
+  eg. Companies Register data; more efficient to charge people registering
+companies a bit extra, people won't be deterred from registering a company
+because of this.  Basically, add to existing fees for things people will pay
+anyway.  
+  
+Open data saves lives!  Heart surgery data caused improvements.  
+  
+MiData (more from Nigel)  
+Supermarkets not very good, but some big companies involved.  
+
+  
+
+**Prof. Esteve Almirall - Reinveting Cities - Open Innovation in the Public Sector**
+
+**  
+**
+
+Competition now is about innovation, not money.
+
+  
+
+Adopt a Hydrant (Boston)
+
+  
+
+**Peter Hanecak - Open Data in Slovakia**
+
+**  
+**
+
+2012 govt signed open government partnership.
+
+  
+
+Laws already align with Open Data principles.
+
+  
+
+Everything must be public, unless stated otherwise (eg. according to a
+specific law, like army secrets. Must be clearly defined, no rubbish excuses
+for not publishing something).
+
+  
+
+Open licences (GPL, CC) are not recognised, because there's no signed paper.
+Currently they're campaigning to fix this.
+
+  
+
+Existing laws do not fully apply to regional governments, only to state
+government.
+
+  
+
+Data that is available isn't in great formats. Lots of things are ignored or
+misunderstood.
+
+  
+
+Achievements so far: - Datastores and apps. Datanest.fair-play.sk,
+znasichdani.sk, cenastau.sme.sk, otvorenezmluvy.sk, data.gov.sk. - app
+competitions, conferences. Restart Slovensko.
+
+  
+
+Future
+
+\\\\- Spread the word
+
+\\\\- Advance principles on regional levels
+
+\\\\- Major release of OD by gov
+
+\\\\- develop OS publication platform for OD
+
+\\\\- incorporate results into other projects
+
+  
+
+They have a standard published for state government.
+
+  
+
+**Ivonne Jansen-Dings - Code4EU and Apps for Amsterdam**
+
+**  
+**
+
+Technology is a key component, but impact on citizens is central.
+
+Taking linked OD out of academia and applying it to 'real life'.
+
+Tourist one. FairPhone.
+
+  
+
+Collaboration between government, coders and citizens. Can't do this top down.
+Creating something together, that has to evolve naturally. There isn't a
+formula.
+
+  
+
+apps for Amsterdam is a platform for people to talk about OD; creating it and
+working with it.
+
+  * Lots of reasons why coders participate. 
+    * Hobbies
+    * Solve local problems
+    * Network, get new business
+    * Ideas start during hack events/workshops. 
+  * Past two years gone from 22 - 130+ datasets. 
+  * Quality of data is essential for good apps. 
+  * Mostly about getting the government to see the necessity of open data. 
+  * All sorts of working groups arising with municipalities to solve specific regional issues using OD. 
+  * Helping people who have made/are making apps, to help them move forward. 
+  * Lots of people are stuck because they need certain data. 
+  * Creating ideas for apps is a good place to start with deciding which data to open up. 
+  * Essential for app developers is also getting paid. Necessary to help people evolve apps. So a4A helps to connect developers to companies, NGOs, etc. for whom the app is relevant, so they can work out a way to work together.
+  * They don't have much government data about spending and stuff, working on that.
+
+  
+
+Apps for Democracy (Apps Voor Democratie)
+
+  * Can see which parties and people collaborated with each other on getting motions put in and passed etc. Now integrated into actual parliament website. 
+  * PolitFutures. Stock exchange around politicians.
+
+Code4EU
+
+  * Currently hiring developers to create solutions for problems they see within municipalities. 
+  * Changing government from within. Civic innovators.
+  * Lots of people come with problems, not ideas for apps.
+
+**_Not about the apps, about the social change._**
+
+Local issues can have solutions that have global value.
+
+  
+
+**Lena-Sophie Mueller - Open Government is more than Open Data**
+
+**  
+**
+
+Stuttgart local people had issues with train station and there was a huge
+protest. Planning happened in a black box, people didn't understand why
+decisions had been made.
+
+(Ed trams)
+
+  
+
+Same as ACTA. People negotiated about it for 7 years, but it was not
+transparent.
+
+  
+
+Need transparency to face obstacles of 21st century.
+
+  
+
+IT-Planungsrat say open govt needs to be a focus point, but will focus on open
+data first.
+
+  * Open goverment though, is _more_ than just open data. 
+  * It's hard to keep information secret now. Things get leaked. To counter leaks, they put it online too, so it's a trusted source. Can publish accurate new versions. 
+  * What's needed is a Diff, so information needs to be in machine-readable formats so documents can be compared. 
+  * Then politicians can be asked specific questions about changes.
+
+Open gov means taking contribution of people as valuable.
+
+  * US crowdsourcing patent information for making decisions about patents. 
+  * Open Budgets - people participate in deciding how budget is spent.
+  * Governments and administrations collaborate. 
+  * barnet.gov.uk. PledgeBank ("a site to get things done")
+
+Lots of administrative workers aren't used to working with data.
+
+  * Need help with extracting data and organisation and processes and technology. 
+  * Change management. 
+  * It's going to take some time, but it's worth making the journey.
+
+Convince organisations that it's okay to open data (sans personal
+information).
+
+  * Lots is digitalised already, and expensive to digitse paper. 
+  * Smaller municipalities are mostly paper. 
+  * eGovernment projects are important for open data.
+
+Status of open government in a country? The thing Rufus mentioned.
+
+Initatives that measure freedom of information laws, but it's very difficult
+to measure openness. Need to develop a measurement that could be used
+internationally (big complicated project).
+
+Web Foundation published an index a few months ago.
+
+  
+
+What does she use?  Usually use CKAN.
+
+  
+
+**Christoph Lutz - Open Data and Social Media**
+
+**  
+**
+
+Social medai readiness in Hamburg.
+
+Many insights from social media can be transferred to open data.
+
+Social media adoption and readiness can take place on several levels
+
+\\\\- organisational level
+
+\\\\- individual level
+
+\\\\- societal level
+
+  
+
+This project looks mainly at organisational and individual.
+
+  
+
+Organisational:
+
+  * different agencies, like culture and financial services; regional agencies. 
+  * structure, leadership and culture
+
+  
+
+Individual:
+
+  * drivers and barriers to social media adoption: cognitive (know how) or affective (acceptingness of technology, concerns)
+
+Some agencies in Hamburg have started intiatives (like fb, twitter). Some were
+recalled, but in general there is political support and Hamburg is more
+advanced than other cities.
+
+  
+
+Their research project:
+
+  * conduct interviews with employees who had contact with social media. 
+    * 8 people 
+    * analaysed successful vs unsuccessful social media use 
+    * different levels of responsibility, and different agencies 
+  * case studies 
+  * soon a big quantative survey
+
+Organisational factors:
+
+  * political support (crucial) 
+  * leadership support (some people high up in hierarchy aren't familiar with technologies) 
+  * autonomy and trust (people can experiment, be proactive) 
+  * structures of organisations (complicated, different motives and experiences in different departments, hard to coordinate) 
+  * processes (hierarchy and bureaucracy; you need fast feedback for social media, which contrasts with usual way of work) 
+  * resource (stressed most in interviews; employees don't have time at work to administer social media accounts, sometimes IT resources)
+
+Individual factors:
+
+  * age (younger people more interested) 
+  * affinity (how much people enjoy working with IT; intrinsic motivation) 
+  * experience 
+  * social capital 
+  * concerns (privacy, security, technostress)
+
+Identifiable strategies:
+
+  * avoid resistance (make projects appear small, non-invasive, simple) 
+  * externalise project (work with other organisations, avoid bureaucracy)
+
+Engage people in open data via social media.
+
+  
+
+Objective of Hamburg project? Mainly about representing administration to the
+citizens, and providing feedback to people. Later about engaging people in
+conversations and participation.
+
+  
+
+How to make use of social media in administration? How to get public offices
+to produce open data? The quantitative questionnaire will help show how open
+people are to social media.
+
+  
+
+**Simon M. Onywere - Outcome of the Kenya Open Data Consultative Forum - Kenya’s Strategy to Make Government Data available to Communities**
+
+**  
+**
+
+Increase transparency and accountability of government.
+
+Help people make decisions.
+
+Support economic development in the country.
+
+Supported by World Bank.
+
+  
+
+In Kenyan Bill of Rights, citizens have a right to the data held by the
+government.
+
+  
+
+opendata.gov.ke
+
+  
+
+Media plays a very important role.
+
+  
+
+KODI - Code4Kenya:
+
+  * Lack of certain data
+  * lack of metadata
+  * limited search
+  * data duplication. 
+  * Need for better analysis and visualisation tools. 
+
+These observations allowed holding a stackeholders forum.
+
+  * People interested in solving problems that face the country.
+  * (MANY issues; things Europe was facing 100+ years ago, but no data about what's going wrong, what the impacts are likely to be). 
+  * Interested in building a platform, but the content is important, and what is it supposed to help us do? 
+  * Issues about data collection. 
+  * In the forum, ended up talking about issues that face the country, rather than the data.
+
+Challenges:
+
+  * data hugging syndrome: 'this data is mine' 
+  * Lack of Freedom of Information Act 
+  * Slow digitization 
+  * Lack of trust and low culture of openness
+
+Demand for open repository of all Kenyan PhD and Masters theses. Needs
+metadata, and needs to be widely accessible. Will help with research, and help
+people understand research that has been done that might be able to solve
+problems. Help avoid double research.
+
+  
+
+Not really free information, because most public sectors spend money to get
+information.
+
+  
+
+Project requires various degrees of collaboration. Countries in Europe that
+are one or two steps ahead. Need training for socio-economic transformation.
+
+  
+
+Are the licensing issues being sorted out? There's a comprehensive statement
+on the website (so a custom license?).
+
+Citizens will hold government accountable for information provided, so they
+(gov) are worried about data being inaccurate.
+
+Letting research community use the data can help get useful feedback about
+what is wrong - you don't know if things are wrong until you try to use the
+data.
+
+Up to people to give the government the correct situation on the ground,
+because gov't is not always right.
+
+  
+
+**Nigel Shadbolt - Finding the Value in Open Data**
+
+**  
+**
+
+Local data matters.
+
+  
+
+Open Data Institute - build economic value in a serious way.
+
+2005 AKTive PSI was early beginnings with getting various bodies imagining
+opening their data. Nobody would really give them the data at that point, but
+were curious about what could happen.
+
+Reported to parliament in 2007 - said it was exciting and had great promise,
+but nothing else.
+
+Activism, top-level political will and committed individuals needed to move
+things on.
+
+  
+
+Two years is not a long time for really disruptive movements like open data.
+Natural lifecycle to processes.
+
+Early enthusiasm, but wall of people who question impact, value, if it's worth
+the effort. We can see now that it's always worth the effort, and doesn't cost
+much.
+
+  
+
+Government is becoming more comfortable with this stuff.
+
+"Can we put a government website up that says 'beta' in the right hand corner,
+and not be ridiculed?"
+
+Gov't got used to the idea of agile web development; of not knowing how the
+system would be finished when it's started.
+
+  
+
+Suddenly, applications appear. Many unexpected.
+
+Gov't efforts would be more expensive and less effective.
+
+  
+
+Virtuous cycle: open licences - open standards - open source - open data -
+open participation.
+
+  
+
+CC isn't for everyone... companies worried about giving rights away. In the UK
+there's an open government license, developed by government lawyers (to make
+officials feel more comfortable, and understand conditions).
+
+  
+
+Open Data market needs a steady stream of successes. Always have a story the
+person in charge can understand.
+
+OD is abstract principle.
+
+He uses MRSA. They began to publish infection rates in hospitals. Two years
+later, it's down by 85%. Worst hospitals can look at ones that are doing
+better. People started to ask questions; simple procedures implemented
+(sunlight, disinfectant).
+
+We have to understand that companies are in the business of making money, and
+public services are in the business of providing efficient services.
+
+  
+
+Transport... Companies think it's more valuable to keep hold of the data than
+to have people on the transport - lolwat?
+
+  
+
+Visualising data highlights issues.
+
+  
+
+Quality over quantity.
+
+Routine to publish certain sorts of information, but there's other stuff
+that's really important.
+
+Needs to be found easily.
+
+Data portal needs lots of metadata (quality of content, what kind of links,
+how much).
+
+Every public data should rate itself on the 5* score card.
+
+  
+
+Open Data business models:
+
+It isn't enough just to publish.
+
+Need to build demand for data that you're supplying.
+
+If the data is poor or gets turned off, people will let you know.
+
+Data Marketplace.
+
+OD Apps (people think this naturally).
+
+  
+
+Innovate - economic benefits for host, sponsor and developers.
+
+Developers innovate on behalf of companies.
+
+Build and maintain trust.
+
+Prove that you're doing good things, eg. where materials come from, or effects
+on environment. Various different kinds of open APIs.
+
+  
+
+Open Data needs a balanced and broad ecosystem.
+
+Complex.
+
+Not just gov'ts. Businesses are beginning to, citizens might eventually (think
+about social networks).
+
+Lots of varieties of open data AND closed data (some just cannot be released).
+Or personal data that only the owner can/should have access to.
+
+It's much richer than just "everything's open and we need to work out a way to
+monetise it".
+
+  
+
+midata:
+
+We will increasingly become aware that we can collect our own data.
+
+So why can't we get the data that other people collect about us? Why don't you
+have access electronically to every receipt - and what would that world look
+like? Switching suppliers, teaming up with neighbors for shopping.
+
+Energy providers in the UK (three of them, other three will do soon) give
+access to all their raw data.
+
+It's hard to get data out of companies, but those who do see real benefits.
+Telephone companies in the UK are seeing increasing data exchange between them
+and consumers.
+
+Products and processes that we'll see emerge from this are exciting.
+
+  
+
+What's the mix between open data and personal data (midata)?
+
+Government midata. Most people don't claim cold weather allowance. Costs a lot
+to get credits moved around. Open data meeting midata would benefit this. Same
+in health area.
+
+  
+
+Open Data Institude - theodi.org
+
+Leading the creation of the open data ecosystem.
+
+Trying to improve public supply.
+
+Training people to produce and publish open data.
+
+Incubating companies.
+
+Work with public bodies, big corporates, small startups, trying to find values
+in datasets.
+
+After 8 weeks, 4 companies working in their space.
+
+Locatable
+
+placr.mobi is a transport API provider. High quality access to all open
+transport data.
+
+Mastodon - green cloud computing options.
+
+  
+
+It isn't all sweetness and light. Have to demonstrate tangiable benefits to
+keep progress going. Have to give company/politicians good reasons why this is
+better.
+
+  
+
+Huge amount of capital value is based on "I know something you don't know".
+
+As information becomes abundant, the landscape will be changed. You can't rely
+on knowing something any more, you have to provide something extra quality.
+
+Drive innovation and improvement in service delivery.
+
+With heavy investment in acquiring certain information, why should they share
+it?
+
+Evolutionary arms race means that someone else will find a way to collect that
+data more cheaply. How long can they sit on their monopoly?
+
+  
+
+Governments are not here to become revenue generating businesses, but to
+provide public services.
+
+In the UK, the office of national statistics gross value added figures are
+from 2010.
+
+Hasn't seen any examples yet that cost more than the benefit that's gained.
+
+Hospitals, traffic data. These studies need doing more carefully than they
+have.
+
+  
+
+  
+
+""", """_December 5th, 2012._  
+  
+Notes as I scrawled them.  [See here for a proper
+review](http://blog.rhiaro.co.uk/2013/01/1st-international-open-data-
+dialogue.html).  Purple is calls to action for myself.  
+  
+**Dr. Philipp Mueller - Openness as a means, not an end**  
+I missed the opening keynote.  His slides are
+[here](http://www.blogger.com/%20//prezi.com/vbf6izwnd1ty/open-as-a-means-not-
+an-end/?auth_key=fea67b5fad3078333fd5085798fe406bed77c605).  
+  
+**Dr. Wolfgang Both - One Year Open Data Portal Berlin**  
+  
+_Open cities EU - Nov '10 - Apr '13._  
+Amsterdam, Barcelona, Berlin, Helsinki, Paris, Rome.  
+Berlin responsible for open data working group; several working groups (OD is
+just one).  
+  
+_EuroCities_  
+  
+_Knowledge Society Open Data working group_  
+Guidebook for cities, 30 pages so far.  
+  
+_Open Data Berlin_  
+Portal Sept '11  
+Publication  
+Press conference Feb '12  
+Short term: Political agenda, budget, working group.  
+Mid term: Harmonize data formats.  
+Long term: Legal framework (Berlin can't decide laws by itself, for whole EU).  
+  
+_Open Data Day_ May '11, '12 and '13 in prep.  
+  
+_WG open traffic hack_ (29th Nov '12)  
+\\\\- 150 programmers with transport data.  
+  
+_Portal stats_  
+Are users interested?  Peak at start.  Other peaks for hacks, Apps4D contest
+(Nov '11)  
+Possibility for feedback - questions, advice, ideas.  
+100 datasets; daten.berlin.de  
+  
+_WG 2012_  
+\\\\- formats and metadata  
+\\\\- licensing and user rules  
+\\\\- education for staff (lectures, this is new for many working in public
+sector)  
+\\\\- organisting and processing  
+_WG 2013_  
+\\\\- evaluation of OD studies  
+\\\\- Recommendations  
+\\\\- Exchange with other cities.  
+  
+__(Q&A)__  
+Datasets were volunteered, not selected  
+\\\\- But are looked at for quality, machine readable, looking for wide range of
+topics of interest to public.  
+\\\\- Want open, transparent process for publishing.  
+\\\\- Communicate with media as well as community.  
+  
+Licenses  
+\\\\- Heuristic... no legal advice available because it hasn't been done before.
+Many possibilities; for opening data for individuals, CC was familiar to
+Internet community, includes origin data (CC-BY).  Some smaller datasets are
+licensed for non-commercial usage.  Discussion still ongoing.  
+Knows other cities will follow / copy there example whatever they do!  
+  
+**Jan Schallabok - Right to Freedom of Information on Enterprises**  
+**  
+**  
+Call for open enterprise data.  
+  
+_Why?_  
+Scenarios, set a timeline:  
+2015 - personal search  
+2016 - data disasters (identity hack)  
+2017 - pictures omnipresent, know all about everyone becomes normal  
+2019 - Google Glass on market  
+  
+If there's no data on you, things don't work (eg. personalised advertising)  
+Society down the drain if it didn't open data (Switzerland in the story didn't
+open data, so Swiss woman moving to German couldn't settle in easily).  
+  
+Moving away from clear facts towards probabalistic.  
+eg.  
+Google Translate fed by open (input) data, but algorithms aren't open.  
+Siri - enriches dataset from Web (he said Google search?)  
+OpenStreetMap (counter example)  
+If there was more data, everyone would use OSM paradigm (eg. government).  
+  
+_Harm businesses?_  
+..maybe.  But more damage in the long run?  
+  
+Need to make businesses move away from using peoples' data.   Like, we work
+for facebook.  our data, not theirs.  
+  
+_Data protection:_  
+by law, data subject has rights to know logic involved  
+but  
+as long as it doesn't affect trade secrets  
+  
+_Privacy implications_  
+'Anonymous' data can be used to identify people.  See AOL search database
+fail.  
+When can datasets go public?  
+Weather data can be personal data (no time for example..)  
+
+  
+
+**Michael Hörz - Open Data in Local Journalism**
+
+**  
+**
+
+Journalists expect everything
+
+\\\\- spending
+
+\\\\- political decisions
+
+  (district levels, searchable)
+
+\\\\- quality (schools, pollution, food)
+
+\\\\- real time sensors (air quality, traffic, energy)
+
+  
+
+\\\\- Open Data Paris (loads, on a map)
+
+\\\\- Locrating (school performance on map, UK)
+
+\\\\- Chicago bike crash reports (map) (sort by injury, date, day; data all open
+from Chicago Transport Authority, in a nice format).
+
+\\\\- LA Times LAFD (fire dept.) response times.
+
+  
+
+\\\\- Airplane noise map, taz.de (Journalists had a PDF, eugh).  One of the first
+Berlin interactive visualisations.
+
+\\\\- Berlin election.  Was real time.  Down to the polling station.
+
+\\\\- Berlin bicycle accidents '11 - came from massive PDF (3,800+ cases)
+
+  
+
+\\\\- Wishes for xls or csv... wants directly processable.  WHY NOT RDF?!
+
+\\\\- ..or APIS.  WHY NOT LD?!
+
+Reality = PDFs, requests ignored, data incomplete or hidden.  Hard to get for
+journalists.
+
+All datasets are interesting and should be out there.  In Berlin often only
+one or two districts are available, which is no good.
+
+  
+
+__(Q&A)__
+
+  
+
+It's not always straightforward just to release data - need priorities; raw
+data/API documentation isn't always available straight away.
+
+  
+
+Why PDFs?  They don't know any better.  Need to make people aware.
+
+  
+
+Consequences of public seeing data they're not used to?  Panic?  Or activism?
+Pressure politicians for change.  Empowers people.
+
+  
+
+Is there are resistance to making data available (eg. Italy - data there but
+useless).  Maybe, or maybe they just don't realise [it's useless].
+
+  
+
+**Prof. Felix Sasaki - Linked Open Data @ W3C-Vocabularies, Working Groups, Usage Scenarios**
+
+**  
+**
+
+== first half of MASWS.
+
+  
+
+New work on LD http://www.w3.org/2012/ldp/wiki/Main_Page
+
+  
+
+Media fragments - spec finalised www.w3c.org/TR/media-frags/
+
+  
+
+Ontology for Media Resources (DC for video and audio?)
+http://www.w3.org/TR/mediaont-10/
+
+  
+
+Internationalization Tag Set 2.0
+
+  
+
+SW core is stable, so work with vocabs now. Need interoperability. Decide: -
+Syntax - - Microdata not necessarily for SEO - - Schema.org;
+w3.org/wiki/WebSchemas; very basic schemas with increasing numbers of more
+specialised extensions. Discussion at lists.w3c.org/Archives/Public/public-
+schemas -
+
+  
+
+Application scenarios.
+
+  
+
+Organisation ontology - Membership and reporting structure, location
+information, organisational history - Interoperable organisations - 'Final
+call' stage - nearly done. Need feedback.
+
+  
+
+DCAT (interoperability between data catalogues) - Uses FOAF, DC, SKOS
+
+w3.org/TR/publishing-linking draft Namespace neutrality - xmlns.com
+
+  
+
+Language graph of the Web is cool.
+
+  
+
+**Tomáš Knap - Tracking Data Provenance of the Published (Linked) Open Data**
+
+**  
+**
+
+xrg.cz
+
+opendata.cz
+
+watch film
+
+  
+
+Defines provenance and agents, artifacts, processes. Provenance useful for
+data integration. Which is right/recent etc.
+
+  
+
+How to cite. Vocabularies: PROV-O (almost w3c final, w3/ns/prov), VoiD
+(datasets w3/TR/void), FOAF, DC ODCleanStore \\\\-
+http://iswc2012.semanticweb.org/sites/default/files/paper_37.pdf (prov aware
+storage, processing, querying) - Write rules/queries using web front end.
+Certain automation from inserting ontologies. Still manual work.
+
+  
+
+LOD2 WP9a - EU project LD tools
+
+  
+
+**Maria Magdalena Theisen - Open Data and Big Data**
+
+**  
+**
+
+Big Data - have to ask questions to understand what questions to ask. Consists
+of volume, velocity, variety. Can't say that all open data is big data, and
+vice versa.
+
+  
+
+Some BD from external social media, disaster information, sensors, smart
+meter. Lots of things bringing data to process.
+
+  
+
+Facebook has largest data collection by 2010.
+
+  
+
+Open and Big - Eye on Earth - air watch (over 1k stations in Europe providing
+live data), noise watch, water watch (static historical data) - can rate
+quality of data and give attributes
+
+  
+
+Cloud computing is an enabler for B and OD - Don't have to manage servers to
+provide data. - Flexibility and scalability - Interoperability with existing
+infrastructure - Easy access to data - Development platform (Azure) - can
+enter an app with open data into marketplace. Lots of examples.
+
+  
+
+Is Azure marketplace integrated with ckan? - No.
+
+  
+
+**Evanela Lapi - Building Sustainable Open Data Platforms**
+
+**  
+**
+
+Understand stakeholders
+
+  
+
+* Consumers
+
+* 
+
+* Developers
+
+* Citizens
+
+* 
+
+* Less technical, can use open data to help with life
+
+  
+
+* Journalists, scientists, researchers
+
+* First two more critical
+
+* 
+
+* disseminate data
+
+* Need open, standards-based, non-proprietary formats.  Easy to download/browse/search/redistribute/share.
+
+  
+
+  
+
+* Publishers
+
+* 
+
+* Provide transparency
+
+* Want a cost-effective, easy solution platform
+
+* Public sector has lots of data not online - because it's hard to publish?
+
+* 
+
+* lots of friction, fragmentation
+
+  
+
+  
+
+  
+
+  
+
+Socrata - end to end, custom solution.  Many implementations in US, Kenya.
+
+  
+
+vs.
+
+  
+
+Integrated, loosely-coupled - existing SW, eg. CKAN + Drupal (data.gov.uk)
+
+Faunhofer OD platform is Java (Amsterdam uses)
+
+  
+
+Open Cities
+
+\\\\- open innovation (see last time this was mentioned)
+
+\\\\- on Github - get feedback from use.
+
+  
+
+Virtuoso triplestore + Liferay CMS + CKAN catalogue
+
+(Java wrappers for REST APIs)
+
+  
+
+User roles:
+
+  * Data owner
+    * Publish
+    * Maintain
+    * Bulk upload
+  * Platform user
+    * Query
+    * Discuss
+    * Search
+    * Browse
+    * Download
+    * Propose new
+
+amsterdamopendata.nl - 137 datasets in 18 categories
+
+flevoland.....nl(?) - 22 datasets
+
+  
+
+It's a good start, but still not enough - why?
+
+  * Too much manual work, redundancy across different platforms.
+    * Modernise environment - by modular, high level stuff?  (I think that's what she said)
+
+"Germany isn't much into OD yet.."
+
+  
+
+**Oliver Adamczak - Big Data for Smarter Cities**
+
+**  
+**
+
+Leaders must innovate to exceed citizen expectations.
+
+Functionality of BD - use variety and volume to innovate.
+
+Vision - do things you haven't thought of before.
+
+  
+
+I should do a survey of open data about arts/media?  It's all about
+gov/science.
+
+  
+
+IBM BD platform
+
+  
+
+Hadoop to store
+
+\\\\- low cost (open source)
+
+\\\\- scaleable
+
+\\\\- easy to load data - don't have to care about structure until afterwards
+
+  
+
+Text analytics to read PDFs etc. and extract data with context.
+
+  
+
+Streaming data is important
+
+\\\\- Not for repo, just use/analyse and discard.
+
+  
+
+  
+
+""" ;
+  sioc:topic "events", "conference", "berlin", "attendee", "1st international open data dialoge", "hack", "open data", "open source", "phd", "research", blog:Done ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/01/notes-1st>, <http://rhiaro.co.uk/2013/01/notes-odd-1>, <http://rhiaro.co.uk/2013/01/notes-odd-2> .
+

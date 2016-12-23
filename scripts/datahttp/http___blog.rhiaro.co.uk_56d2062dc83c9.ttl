@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/56d2062dc83c9>
+  a blog:Acquisition ;
+  dcterms:created "2016-02-27T19:14:00+00:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/02/56d2062dc83c9> ;
+  blog:cost "&pound;4.21" ;
+  as:published "2016-02-27T19:14:00+00:00"^^xsd:dateTime ;
+  as:summary "Groceries" ;
+  as:tag "groceries", "tesco" .
+

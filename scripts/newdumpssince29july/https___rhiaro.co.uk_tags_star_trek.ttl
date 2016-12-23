@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/star+trek>
+  a as:Collection ;
+  as:name "star trek" ;
+  as:items <https://rhiaro.co.uk/2016/08/well-kes>, <https://rhiaro.co.uk/2016/09/complex-systems> .
+

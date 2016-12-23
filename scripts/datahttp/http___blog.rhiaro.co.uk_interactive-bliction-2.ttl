@@ -1,0 +1,80 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/interactive-bliction-2>
+  dcterms:title "Interactive-Bliction: > Investigate door." ;
+  dcterms:created "2011-10-06T16:14:00.002Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T01:51:11.712Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3149512785497720837" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """> Investigate door.  
+  
+Your eyes are drawn again to the marks on the small door, and you squint,
+taking a tentative step forward. A small cloud of powder rises around your
+foot, and a floorboard creaks. The creak is low, and to you, sounds welcoming.
+Like the house is inviting you in.  
+  
+Encouraged by this, you continue. You have to watch out for the things
+cluttering the floor, and step carefully around an upturned plastic chair.
+That obviously wasn't part of the original décor, and despite the heavy
+coating of dust, you assume it must have been left by the documentary crew.
+Your foot clacks against something heavy.  
+  
+> Look at floor.  
+  
+The dust makes everything the same dark grey, but there are distinct shapes
+that you can see. Several small plastic chairs are visible, laying on their
+sides or with their legs pointing into the air. A standing lamp with a wide
+shade has fallen over at the foot of the stairs, to your left. There's a knee-
+hight rectangular box against a wall to your right, with what looks like a
+padlock hanging from the front, and beside it lie pieces of a large and once-
+ornate vase. At your feet is something long and narrow, and a glimmer of metal
+peeks through the dust. When your foot made contact, it felt pretty solid. You
+kick it again to roll it over, and dust peels away to reveal a brassy
+candlestick holder.  
+  
+> Take candlestick holder.  
+  
+You pick up the object, about half the length of your forearm. The metal is
+cool, but surprisingly not cold. Feeling like you need a souvenir, you tuck it
+into your coat pocket, and continue to pick your way across the hall.  
+  
+> Inventory.  
+  
+In your coat pockets you have the candlestick holder, half a bar of Dairy
+Milk, and the keys to your flat. In your trouser pocket is your mobile phone,
+which is turned off so your friends won't disturb you, and some change.  
+  
+> Investigate door.  
+  
+The small door is in front of you, and to your left is the sturdy looking
+bannister that runs up the side of the staircase. You could touch the
+bannister and the wall to your right at the same time, if you stretched out
+your arms. It's harder to see because you're no longer in direct line of the
+light from the entrance (which you left open), but you lean to inspect the
+front of the door. Cobweb trails curl around your finger tips as you run your
+hand down the dark wood. You can feel carvings on the surface, and blow and
+swipe at the dusty layer until the patterns are no longer so obscured.  
+  
+You suppress a splutter at the thick and itchy air you're breathing. Some of
+the shapes carved into the door feel like cogs, but there's something else as
+well. Something winding, with a shape more organic. You only wish you could
+see all of the details.  
+  
+Your wandering hand finds a wooden protrusion at waist height, and you try to
+turn the handle. It moves stiffly, but the door itself doesn't budge.
+Carefully, you lean your shoulder against it and push harder, but to no avail.  
+  
+> _  
+  
+  
+_[What do you do next? Comment!]_
+
+""" ;
+  sioc:topic blog:Done, "writing", "story", "interactive fiction", "interactive bliction", "fiction", "IF" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/10/interactive-bliction-2> .
+

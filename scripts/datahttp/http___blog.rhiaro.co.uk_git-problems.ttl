@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/git-problems>
+  dcterms:created "2016-03-08T22:51:05+00:00"^^xsd:dateTime ;
+  sioc:content "All git problems are definitely solved by deleting branches/repos and starting over." ;
+  sioc:topic "fml", "git", "hacking" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/03/git-problems> .
+

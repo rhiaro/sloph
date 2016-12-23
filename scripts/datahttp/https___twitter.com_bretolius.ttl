@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/bretolius>
+  foaf:name "Bret Comnes" ;
+  foaf:homepage <https://twitter.com/bretolius> ;
+  foaf:depiction <https://twitter.com/bretolius/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/47d6b91936793d90fe2d738c24d0d16fd1d07a8f67f104aa07decbc19944f998.jpeg> .
+

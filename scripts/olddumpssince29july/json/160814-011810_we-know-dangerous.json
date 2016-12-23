@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "content": "We know it's dangerous cos a cop stopped and called [GreyhoundBus](http://greyhound.com) about it (they hung up on her). Driver has been fantastic though.",
+    "in-reply-to": "http://rhiaro.co.uk/2016/08/summary",
+    "category": [
+        "travel",
+        "bus",
+        "greyhound",
+        "us0816"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-08-14T01:18:10+01:00",
+    "@id": "http://blog.rhiaro.co.uk/we-know-dangerous",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/we-know-dangerous"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-14T01:18:10+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

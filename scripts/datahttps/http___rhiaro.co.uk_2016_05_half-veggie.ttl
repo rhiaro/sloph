@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/half-veggie>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-05-17T14:34:45-07:00"^^xsd:dateTime, "2016-05-17T14:34:45-07:00" ;
+  as:tag "bread", "burger", "ca2016", "golden mean", "nachos" ;
+  as:name "Half veggie burger, half nachos (Golden Mean)" .
+

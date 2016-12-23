@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://kylewm.com/2015/10/i-ve-gotten-vegemite-at-whole-foods-though-i-overhead>
+  dcterms:title "I’ve gotten vegemite at Whole Foods, though I overhead a stock person say recently that they’ve never had it, so it might have been ghost vegemite? (Also I thought brits ate Marmite?). Baked beans here are dreadful, I thought I hated them until I made my own one time." ;
+  dcterms:created "2015-10-16T12:59:47+01:00"^^xsd:datetime ;
+  dc:creator <https://kylewm.com/> ;
+  sioc:content "I've gotten vegemite at Whole Foods, though I overhead a stock person say recently that they've never had it, so it might have been ghost vegemite? (Also I thought brits ate Marmite?). Baked beans here are dreadful, I thought I hated them until I made my own one time." ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/10/sos-urgent-send> .
+

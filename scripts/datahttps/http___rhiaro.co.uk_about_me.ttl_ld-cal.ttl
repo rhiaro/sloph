@@ -1,0 +1,9 @@
+@prefix ns4: <http://ns.rww.io/wapp#> .
+
+<https://rhiaro.co.uk/about/me.ttl#ld-cal>
+  a <http://ns.rww.io/wapp#app> ;
+  ns4:description "Simple Linked Data calendar with agenda." ;
+  ns4:endpoint <http://localhost/rhiaro/events> ;
+  ns4:name "LD-Cal" ;
+  ns4:serviceId <https://ld-cal.rww.io> .
+

@@ -1,0 +1,10 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/awesome-review>
+  sioc:reply_of <http://csarven.ca/dokieli#i-20160217184234> ;
+  as:published "2016-02-17T19:02:29+00:00"^^xsd:dateTime ;
+  as:tag "academia", "research", "ux", "dokieli", "linked" ;
+  as:content "Awesome review, thanks! Really helpful points. And you're right, I hate the colours, fonts and styles of [csarven](http://csarven.ca#i)'s website too :p" .
+

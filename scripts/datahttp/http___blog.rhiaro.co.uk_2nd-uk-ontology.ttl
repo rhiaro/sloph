@@ -1,0 +1,287 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/2nd-uk-ontology>
+  dcterms:title "2nd UK Ontology Networks Workshop" ;
+  dcterms:created "2013-04-11T15:38:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-05-18T16:47:03.111Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7147479585295099140" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """The UK Ontology Networks Workshop took place over one day in the Informatics
+Forum.  
+  
+There was a mix of people there; some talks were way over my head and very
+technical, and some talks were by people who confessed they had had to look up
+"ontology" that morning.  And things in between.  
+  
+Lazy writeup, but following are notes as I scribbled them:  
+  
+  
+  
+**John Callahan**  
+  
+US navy research.  
+Focused information integration.  
+Human intervention to keep predictive part on track. Tweaking.  
+  
+**Alan Bundy**  
+  
+Interaction of representation and reasoning.  
+Changing world so agents must evolve. How to automate? What would trigger a
+need for change:  
+Inconsistency  
+Incompleteness  
+Inefficiency  
+how to diagnose which?  
+Interested in language and perception change.  
+Unsorted first order logic algorithm called Reformation. Based on standard
+unification algorithm.  
+Allows blocking and unblocking unification.  
+  
+  
+**Phil Barker**  
+  
+Schema.org  
+Cetis (JISC funded)  
+learning resource metadata initiative.  
+Big names behind schema.org.  
+= ontology + syntax  
+Big and growing ontology.  
+Dumbed down for people.  
+LRMI adds to it. W3C go through it. It's creeping, how much do the big names
+actually care about stuff that's added?  
+don't know how Google uses it.  
+People should consider using it for more sophisticated search and
+disambiguation.  
+  
+**Gill Hamilton**  
+  
+Doing more with library metadata. Learnt from OKFN. Had to convince people in
+charge.  
+Dublin core, didn't like; not specific enough. Instead RDF > OWL. "We know
+best how to structure our data"  
+  
+Hardest was convincing marketing people that there was no commercial value.
+Metadata is advert to actual resource.  
+  
+**Enrico Motta**  
+  
+Traditionally top down approach. So now so many people interacting with
+semantic structures, so should involve users.  
+Recognise there isn't a unique or best way of doing things.  
+Initial study included modeling task with binary relations.  
+  
+Patterns that are more or less intuitive. 4D least, 3D+1 most.  
+N-ary most widely used by experts.  
+  
+Relationship between reasoning power and intuitiveness of writing? More
+creativity needed for simpler ones. (Not really sure what he's saying)  
+  
+Email him for copy of study.  
+  
+**Chris Mellish**  
+  
+Ontology authoring is hard. Better ways to do it.  
+  
+Controlled language input (mature tech); responsive reasoning (also mature,
+information as you're editing); understanding the process (beginning to
+understand more).  
+  
+Hypotheses:  
+users don't know what they're doing. What if questions.  Many answers, what is
+relevant? Depends on context.  
+  
+Authoring as dialogue.  
+Todo list.  
+  
+Useable in the same ways as protégé.  
+  
+**Peter Winstanley**  
+  
+UN classification schemes.  
+Various vocabularies.  
+Allow development of cross mapping between government administrations.  
+  
+Mostly internal currently. Moves to bring externalizing data into the 21st
+century.  
+  
+**Peter Murray-Rust**  
+  
+Fight for your Ontologies.  
+Ontologies in physical sciences. Chemists don't want ontologies. They'll sue
+you.  
+Crystallography uses 'dictionary'. Written in CIF. 20 years to build CIF.  
+  
+Compare physical sciences to government.  
+  
+Every program author writes dictionaries that work for them. When different
+parties agree, promote to communal dictionary. Provide conventions to help
+disagreements.  
+  
+Show a company can do it as opposed to a rabbiting academic ..  
+  
+**Jeff Pan**  
+  
+Tractable ontological stream reasoning.  
+Need to be more efficient, scaleable, as things change. Inputs from web.  
+  
+Dealing with complexities: approximate owl2.  
+Dealing with frequent updates: to-add stream and to-do delete stream. Truth
+maintenance. Evaluation criteria.  
+  
+Trowl.EU can use with protégé, also supports jena.  
+  
+**Edoardo Pignotti**  
+  
+Semantic web tech to support Interdisciplinary research.  
+ourSpaces VRE  
+Provenance crucial.  
+OPM prov ontology.  
+  
+Deployed since 2009, 180 users. Comprehensive ontologies but people unwilling
+to provide metadata.  
+paper! Edwards et al. ourSpaces.  
+  
+**Tom Grahame (BBC) @tfgrahame**  
+  
+Content arrangement on BBC sport by tagging, automatic to free up editors to
+write.  
+LD API so systems don't need to know about each other.  
+Growing from simple rdfxml to more complex ontology.  
+Can ask much more general and much more detailed questions about sport.  
+  
+Mapping incoming data is outsourced.  
+Lots of errors, sometimes system alerts, sometimes manual.  
+  
+Working on opening the data. Maybe a dump, but licensing issues.  
+  
+**Ewan Klein**  
+  
+Mining old texts for commodities, adding place and time and putting in
+structured database.  
+Transcriptions of customs import records.  
+  
+Skos for synonyms.  
+Dbp concepts.  
+  
+Why? Want to query.  
+Visualisations.  
+  
+Tools? Python script.  
+  
+**Janice Watson**  
+  
+Harnessing clinical terminologies and classifications for healthcare
+improvements.  
+  
+**Bob Barr**  
+  
+Geographical addressing.  
+Addressing and address geocoding is important and broad. Not always postal,
+but this not addressed (punlol) in ontologies.  
+Different contexts change meaning of address (for delivering, you only care
+about postbox; property sale whole building).  
+Loads of things to address. Loads of reasons why.  
+Work held up as national address file is owned by royal mail and might be
+sold!  
+  
+**Fiona McNeill**  
+  
+Run time extraction of data. Failure driven. Looking at extraction of specific
+information.  
+Emergency response. Lots of data, timely sharing of data required.  
+From domestic level to humanitarian disasters.  
+How can it be automated?  
+Multilayered incompatibility.  
+Format  
+Terminology  
+Structure  
+...  
+  
+**Richard Gunn**  
+  
+Towards an intelligent information industry.  
+  
+**Elena Simperl (Soton, sociam)**  
+  
+Crowdsourcing ontology engineering.  
+  
+CSrc: Brabham 2008.  
+  
+Distribute task into smaller atomic units.  
+  
+Humans validating results that are automatically detected as not accurate.  
+What are the costs? What resources?  
+  
+Games with a purpose. Like quizzes.  
+Micropayments or vouchers.  
+MTurk. CrowdFlower.  
+Paper about useage of microtask crowdsourcing.  ISWC 2012.  
+  
+**Claudia Paglieri**  
+  
+Ontologies in ehealth.  
+  
+**Enrico Motta** \\\\- Rexplore  
+Klink algorithm mines relations between research topics.  
+Use this!  Nope, it's not public.   Uees MS Academic research.  
+  
+**Peter Murray-Rust**  
+  
+Content mining expands regular text mining.  
+Focus on academic stuff.  
+Chemical Tagger. Takes chemistry jargon and annotated it, knows actions,
+conditions, molecules etc.. NLP. Uses ontologies and contributes to
+ontologies.  
+In chemistry,  no need to put everything in rdf because there are already lots
+of formalisms.  
+Proper cool PDF to sensible format conversion. Amy the kangaroo. Looking for
+collaborators.  
+  
+**Yuan Ren**  
+  
+Ontology authoring in whatif project.  
+  
+Reasoning with protégé and trowl .  
+  
+Tractable reasoning. Trowl v fast.  
+  
+  
+_**Notes from conversations / breakout discussions:**_  
+  
+BBC use owlm triplestore  .  
+Store all their datasets in svn. But they have reads and writes to the live
+triplestore all the time.  
+  
+Lots of people saying minimise owl use because of unpredictable output.  
+  
+Versioning ontologies (available in owl2) in case third parties change stuff
+you use. You're dependent on their software engineering practices. Only good
+if they're ahead of the game.  
+  
+IRIs, Arabic characters in ontologies!  
+Semantic heavy, maybe make a decision to abstract away to ids and make heavier
+use of labels.  
+  
+Difference between importing and using someone else's.  
+  
+There's no (practically useful) software that lets you reason over stuff you
+haven't imported? (over HTTP?)  
+  
+Build ontology from reality (data), don't start with no data.  
+  
+Lode.  
+  
+Problems with dbpedia URIs changing or disappearing.  
+  
+Hard to visualize massive graphs. Relational, tabular much easier to
+understand.
+
+""" ;
+  sioc:topic blog:Done, "workshop", "phd", "ontologies", "networking", "events", "conference", "attendee" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/04/2nd-uk-ontology> .
+

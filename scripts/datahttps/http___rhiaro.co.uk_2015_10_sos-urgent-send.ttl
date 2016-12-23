@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/10/sos-urgent-send>
+  blog:tmpcontent """SOS. Urgent, send help quick. Where can I get baked beans in the USA? Not full of sugar?
+
+Also vegemite.""" ;
+  as:published "2015-10-16T18:19:29+0100"^^xsd:datetime ;
+  as:tag "food", "travel", "usa", "beans" ;
+  as:content """<!---
+tags: food,travel,usa,beans
+-->
+
+SOS. Urgent, send help quick. Where can I get baked beans in the USA? Not full of sugar?
+
+Also vegemite.""" ;
+  sioc:has_reply <http://known.kevinmarks.com/2015/find-an-indian-grocers---they-usually-have-well-priced-uk>, <https://kylewm.com/2015/10/i-ve-gotten-vegemite-at-whole-foods-though-i-overhead>, <https://twitter.com/DearDonald/status/655079416645726208>, <https://twitter.com/noii/status/655080589469622273>, <https://twitter.com/mattl/status/655071615672123392>, <https://rhiaro.co.uk/2015/10/googling> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

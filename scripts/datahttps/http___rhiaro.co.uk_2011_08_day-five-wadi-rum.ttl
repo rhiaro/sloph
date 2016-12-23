@@ -1,0 +1,37 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2011/08/day-five-wadi-rum>
+  as:published "2011-08-02T09:31:00.001Z"^^xsd:datetime ;
+  as:tag "wadi rum", "bush camp", "desert", "jordan", "lawrence of arabia", "travel", blog:Done ;
+  as:name "Day Five: Wadi Rum Desert" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-1017033232484402393" ;
+  as:content """The day started with a nice easy morning of packing and chilling out by the
+pool. This was followed by an exhaustingly violent match of water polo, at
+which Al and I were proven the indisputable champions. (We won nine-two
+against H and Chris).  
+  
+We hit Wadi Moussa for a cheap (1JOD) and tasty falafel lunch. I have decided
+that fresh lemon with mint is my drink of choice for the Middle East.  
+  
+A couple of hours drive took us to the Wadi Rum desert. The truck got slightly
+stuck en route which is always exciting. Eventually we found a good spot and
+pitched our tents. Al, H and I climbed to the highest rock we could physically
+get to. It took a while. The view was awesome but getting bak down was a minor
+disaster. Mostly for Heather. We made it eventually.  
+  
+After dinner and sunset we relaxed in the gradually cooling surroundings.
+Speculation abot what was coming through the desert to get us definitely
+didn't freak anyone out. Shortly after settling for the night, screams erupted
+as Kath and Helen found a spider THIS big in their tent.  
+  
+I slept under the stars that night,and was still unaffected by this apparently
+mythical 'cold' I have heard mentioned. I woke up with tiny little crabby
+spiders everywhere, but with no additional bites. Which is always a sign of a
+succesful camp.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2011-08-02T09:38:13.514Z"^^xsd:datetime .
+

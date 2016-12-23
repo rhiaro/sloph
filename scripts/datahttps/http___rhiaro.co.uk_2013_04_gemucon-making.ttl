@@ -1,0 +1,147 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/04/gemucon-making>
+  as:published "2013-04-08T20:43:00.000Z"^^xsd:datetime ;
+  as:tag "cupcakes", blog:Done, "youtube", "gemucon", "gemu", "games convention", "gaming", "digital creatives", "convention", "amateur creative digital content", "ad revenue", "nottingham", "that's so gemu baby", "tomska", "video games" ;
+  as:name "GemuCon (and making a living from YouTube)" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3067828619841552713" ;
+  as:content """GemuCon, a first-time gaming convention, wasn't normally the sort of event I'd
+go to.  Especially not with the Â£35 ticket price tag.  
+  
+But it was being organised by one of my friends from my undergraduate, so I
+agreed to do the website (violating my no-more-freelance-work policy), and
+having botched together a custom registration system (scope creep) I was
+drafted in as 'Registrations Officer' on the committee, too.  Since I was in
+Nottingham on the 4th for the Lovelace Colloquium anyway, I had no excuse not
+to go.  
+  
+It was a good job I did, as the checking-people-off-who-arrive system was web
+based, and the hotel wifi was not playing ball from the outset.  We'd thought
+of that of course, and brought backup wifi dongles.  Neither of which could
+get signal.  So half an hour before registration opened I was writing a script
+to export the database into a nicely formatted spreadsheet (sounds simple;
+wasn't; ask if you're curious) so that we had more than one machine (I had the
+database locally on my laptop) we could register over 700 people with.  Then
+it was literally non-stop.  
+  
+
+![](http://4.bp.blogspot.com/-gCiKMtMC9Gg/UWsXe24nTII/AAAAAAAAFgY/n2JqhZyYNLE/
+s320/mereg.jpg)
+
+  
+The other reason I was there was to morally support my good friend
+[TomSka](http://youtube.com/tom), who was attending as a guest because he is
+Internet Famous.  
+  
+So my time was split between hanging out in the Operations Room (mostly) to
+help confused con-goers with things like registration, lost property, picking
+up merchandise, finding the stairs, getting free cupcakes; making myself
+useful by running up and down ten flights of stairs on errands (until I
+discovered the service elevator; two 6-man lifts between 800 people hadn't
+been so accessible); and hanging out with Tom and Matt.  
+  
+On Saturday I helped him on his merch stall (we sold everything but all of the
+wristbands and all of the keyrings and earrings).  
+
+![](http://3.bp.blogspot.com/-Nqm-
+fnBCRfU/UWsccl1HxgI/AAAAAAAAFgw/PYchnEb7Fys/s320/IMG_20130406_130819.jpg)
+
+  
+
+![](http://1.bp.blogspot.com/-GlAQqlgNocw/UWscIWULNHI/AAAAAAAAFgg/CTDuXadyKDQ/
+s320/metomska.jpg)
+
+  
+During the quiet times when there were other big events on, and thus no
+customers, I had to make my own fun.  
+  
+
+![](http://4.bp.blogspot.com/-9JonHAzMNpk/UWscaxpBz8I/AAAAAAAAFgo/-s_boSr1u5k/
+s320/IMG_20130406_143232.jpg)
+
+  
+On Sunday I live-tweeted Tom and Matt's panel "How to YouTube".  
+  
+[[View the story "TomSka's YouTube panel at GemuCon" on
+Storify](//storify.com/rhiaro/tomska-s-youtube-panel-at-gemucon)]  
+  
+This generated a small amount of controversy, as people who have never had to
+live off advertising revenue often hate people who live off advertising
+revenue even if it means they have found a way to survive by doing something
+they love, and can provide what they create to the world for free.  
+  
+Frankly I'm just excited that we _do_ live in a world where young creatives
+can be their own boss, make a living from doing what they love, and where the
+only hoops they have to jump through to do so are _getting better at their
+craft_.  Whilst the advertising-centric revenue model may be outdated and may
+be despised by a good number of people, it's working for YouTubers at the
+moment and I haven't seen a better alternative present itself.  Not everyone,
+particularly consumers of amateur media, can afford to pay for content they
+consume; accessing content for free empowers consumers too because their
+entertainment choices are not controlled by the same person who controls their
+finances (and thus probably most other aspects of their lives).  I'm also
+fairly convinced that if the advertising revenue model falls flat in the
+future, amateur content creators will be much faster to recover and adapt than
+traditional media industries would.  
+  
+The other great thing about this business model - for YouTubers at least - is
+that many/most don't start out with financial motivations.  After a while they
+realise thier hobby is giving pleasure to increasing numbers of people, so
+they carry on, and suddenly a side-effect is that they're making money as
+well, at no cost to their audience.  (This may change as YouTubing is
+acknowledged as a career choice).  
+  
+Maybe naive or overly idealistic, but I don't believe anyone should be stuck
+doing a job they hate.  It's a very, very long term goal for society, but the
+ultimate utopia is a world in which everybody is motivated and empowered to
+develop skills they enjoy or knowledge they're passionate about, and to put
+their abilities to some use that can sustain an acceptable standard of living
+for themselves and their family.  Technology plays a crucial role in this (for
+a start, all the jobs nobody wants to do will be automated).  
+  
+Anyway, Tom and Matt's panel was full of sound advice for digital creatives
+just starting out, though the current landscape is a very different one from
+when _they _began their YouTube journeys (for example: no YouTube).  
+  
+Though I didn't experience much of it myself, GemuCon had all sorts going on.
+There were a few rooms packed full of video game consoles (for people to
+entertain themselves at leisure, as well as scheduled tournaments with cash
+prizes), a room of tabletop games, merch dealers and artists galore, various
+panels with the various guests, a talent show, a cosplay masquerade, and
+parties all night every night.  Now, I don't like parties, but even I couldn't
+resist hanging around at a rave for a bit when the music was Pokemon theme
+remixes, or the Zelda soundtrack.  Et cetera.  
+  
+
+![](http://2.bp.blogspot.com/-d8D3WQYD1o0/UWskPKYJ6mI/AAAAAAAAFg4/SBma-
+HIz04A/s320/IMG_20130406_233232.jpg)
+
+  
+The most impressive thing about this wee convention (and 700-odd people _is_
+wee, compared with similar more established cons) is the air of friendliness
+and solidarity that seemed to be ever-present.  Granted not everyone could
+have been happy at every moment, and there was definitely douchebaggery from
+time to time, but in general there was a unification of nerds; an unspoken
+understanding between the stereotypically socially awkward that allowed people
+to come out of their shells and enjoy themselves in a way that they might
+normally suffer abuse for, thanks the the common background provided by video
+game and Internet culture.  This is somewhat tongue in cheek, but... hopefully
+you know what I mean.  
+  
+I made a few new friends, too.  
+  
+If you're thusly inclined, check out 'official' photos ([here](http://www.face
+book.com/media/set/?set=a.617017491647426.1073741827.194141780601668&type=3)
+and [here](http://www.facebook.com/media/set/?set=a.618586888157153.1073741829
+.194141780601668&type=3)) and videos ([here](http://www.youtube.com/playlist?l
+ist=PLr6gY1Ht0iNYeQBoc15ClZk2mn4q4f7o_)) from Team Neko.  
+  
+And if you visit the new [GemuCon holding page](http://gemucon.co.uk/), don't
+forget to [Konami Code](http://en.wikipedia.org/wiki/File:Konami_Code.svg).
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-14T23:26:55.613Z"^^xsd:datetime .
+

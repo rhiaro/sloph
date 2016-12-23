@@ -1,0 +1,10 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/kes-too-good>
+  sioc:reply_of <https://rhiaro.co.uk/2016/06/still-light-im> ;
+  as:published "2016-06-11T23:26:52+01:00"^^xsd:dateTime ;
+  as:tag "star", "trek", "voyager" ;
+  as:content "Kes is too good and sweet for this world." .
+

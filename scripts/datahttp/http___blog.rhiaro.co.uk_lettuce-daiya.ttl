@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/lettuce-daiya>
+  a blog:Consumption ;
+  dcterms:created "2016-07-10T15:10:28-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/lettuce-daiya> ;
+  as:published "2016-07-10T15:10:28-04:00" ;
+  as:tag "beans", "bread", "salad", "sandwich" ;
+  as:name "Lettuce, daiya cream cheese, tomato, black beans on rye bread" .
+

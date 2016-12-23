@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/56fd0c2a1475f>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-03-31T12:37:00+01:00"^^xsd:dateTime ;
+  as:tag "food", "takeaway", "vx" ;
+  blog:cost "&pound;9" ;
+  as:summary "Vegan burger and pizza (Vx)" .
+

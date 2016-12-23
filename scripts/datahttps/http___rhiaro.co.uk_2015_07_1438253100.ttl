@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/1438253100>
+  a as:Add ;
+  as:published "2015-07-30T11:45:00+0100"^^xsd:datetime ;
+  as:tag "jsonld", "json", "socialwg", "linked data" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 30th July 2015, 11:45 Europe/London
+bookmark-of: http://www.w3.org/TR/json-ld/#interpreting-json-as-json-ld
+tags: json,jsonld,linked data,socialwg
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://www.w3.org/TR/json-ld/#interpreting-json-as-json-ld> .
+

@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Groceries",
+    "blog:cost": "&pound;4.21",
+    "as:tag": [
+        "groceries",
+        "tesco"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-02-27T19:14:00+00:00",
+    "@id": "http://blog.rhiaro.co.uk/56d2062dc83c9",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56d2062dc83c9"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-27T19:14:00+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

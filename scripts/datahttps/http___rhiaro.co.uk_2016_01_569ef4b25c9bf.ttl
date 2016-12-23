@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/569ef4b25c9bf>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-01-19T21:43:30-05:00"^^xsd:dateTime ;
+  as:tag "food", "my Thai", "restaurant" ;
+  blog:cost "$23.35" ;
+  as:summary "Soup, tofu cigars, pumpkin curry (My Thai)" .
+

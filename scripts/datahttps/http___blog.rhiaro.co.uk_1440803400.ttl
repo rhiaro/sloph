@@ -1,0 +1,13 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1440803400>
+  as:published "2015-08-29T00:10:00+0100"^^xsd:datetime ;
+  blog: 0 ;
+  as:content """<!---
+published: 29 Aug 2015, 00:10
+
+location: location/home
+-->""" .
+

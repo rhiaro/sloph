@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/1439457439>
+  a as:Announce ;
+  as:published "2015-08-13T10:17:19+0100"^^xsd:datetime ;
+  as:tag "socialwg", "social web", "decentralization", "open web", "web we want" ;
+  as:content """<!---
+tags: social web,socialwg,decentralization,open web,web we want
+share-of: http://jacquesmattheij.com/aol-20
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://jacquesmattheij.com/aol-20> .
+

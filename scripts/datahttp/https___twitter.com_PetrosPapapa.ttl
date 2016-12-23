@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/PetrosPapapa>
+  foaf:name "Petros Papapa" ;
+  foaf:homepage <https://twitter.com/PetrosPapapa> ;
+  foaf:depiction <https://twitter.com/PetrosPapapa/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/e7ad12272c1ca8c8cc64806464eae238e0f5221be4688cc0b0548005da625858.jpeg> .
+

@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/nuts>
+  a as:Collection ;
+  as:name "nuts" ;
+  as:items <https://rhiaro.co.uk/2016/07/brown-rice-black>, <https://rhiaro.co.uk/2016/07/greens-almonds>, <https://rhiaro.co.uk/2016/08/lentils-potatoes> .
+

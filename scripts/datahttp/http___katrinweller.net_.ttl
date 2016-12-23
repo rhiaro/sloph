@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://katrinweller.net/>
+  foaf:name "Katrin Weller" ;
+  foaf:homepage <http://katrinweller.net/> ;
+  foaf:depiction <https://twitter.com/kwelle/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/4f5c536bc51d901ba523d00e6a6c59f22a95fab398166fa6cc63155f9ebdf8c6.jpeg> .
+

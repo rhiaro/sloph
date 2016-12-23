@@ -1,0 +1,34 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2011/09/hi-amy>
+  a sioc:Comment ;
+  as:published "2011-09-23T20:48:37.535Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2483112656392046304" ;
+  as:content """hi Amy  
+Dr Mark Wright from Informatics. Good to meet you last week. Glad to see you
+experimenting with stuff like this. I am interested in interactive narrative.
+I did stuff related to Joyce and Ulysses played out in the city using mobile
+phones.  
+It occurred to me that the same thing could start happening to people who
+visited the site, like the film crew. Maybe you could make a site that was
+like a wasp trap jam jar that brings real visitors into a story and then
+"kills" or freezes them and then in time and makes them part of the next
+victims story. If it was facebook maybe you could use their profile
+info/image. A feeling like the end of the Shining when the camera pans through
+the hotel and you see a young Jack in a picture from 1921.  
+http://www.youtube.com/watch?v=BCUGYgWSz8c  
+Maybe you could put facebook visitors in a picture something like that. So
+they know they have been captured and then the crowd just grows and grows with
+new victims of the page?  
+  
+best regards  
+  
+Mark
+
+""" ;
+  as:actor <http://www.blogger.com/profile/03397581150789452230> ;
+  as:updated "2011-09-23T20:48:37.535Z"^^xsd:datetime .
+

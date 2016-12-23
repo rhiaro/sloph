@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/07/waiting-bus>
+  blog:tmpcontent """Waiting for the bus to Birmingham for Festival of Code! Excited... Exhausted in anticipation..
+
+![](https://rhiaro.co.uk/photos/1508yrs/codebase.jpg)""" ;
+  as:published "2015-07-31T09:39:27+0100"^^xsd:datetime ;
+  as:tag "prewired", "foc2015", "yrs" ;
+  as:content """<!---
+tags: yrs,foc2015,prewired
+-->
+
+Waiting for the bus to Birmingham for Festival of Code! Excited... Exhausted in anticipation..
+
+![](https://rhiaro.co.uk/photos/1508yrs/codebase.jpg)""" ;
+  sioc:has_reply <https://twitter.com/rhiaro/status/627403237507878912>, <https://twitter.com/nevali/status/627403067386920961>, <https://twitter.com/rhiaro/status/627404564266917888>, <https://twitter.com/nevali/status/627403893861949440>, <https://twitter.com/c_aramelle/status/627196275637809152>, <https://brid-gy.appspot.com/like/twitter/rhiaro/627054945112621057/455064135>, <https://twitter.com/WeeBletherer/status/627111173264134144>, <https://brid-gy.appspot.com/like/twitter/rhiaro/627054945112621057/10110832>, <https://twitter.com/Prewired/status/627055004793311232> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

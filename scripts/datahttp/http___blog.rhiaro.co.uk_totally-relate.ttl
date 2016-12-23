@@ -1,0 +1,19 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/totally-relate>
+  dcterms:created "2015-10-26T10:22:26+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: tpac,tpac2015,jaffathecake,service workers
+-->
+
+Totally relate to 'lie-fi' described by [@jaffathecake](http://twitter.com/jaffathecake) at tpac2015""" ;
+  sioc:topic "tpac", "tpac2015", "jaffathecake", "service workers" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/10/totally-relate> ;
+  blog:tmpcontent "Totally relate to 'lie-fi' described by [@jaffathecake](http://twitter.com/jaffathecake) at tpac2015" .
+

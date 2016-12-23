@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://edinbr.org/>
+  foaf:name "EdinbR" ;
+  foaf:homepage <http://edinbr.org/> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/06e9a54d126726e3c45e36c7d18f2e6ba24faf68ec12a5f43b06d5ddffc88fce.png> .
+

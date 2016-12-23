@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/sideshowbarker/status/659256305593389056>
+  a as:Announce ;
+  as:published "2015-10-28T06:32:06+00:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """[reposts this.][1]
+
+[1]: https://twitter.com/rhiaro/status/659240903958069248
+""" ;
+  as:actor <https://people.w3.org/mike/> ;
+  as:object <https://rhiaro.co.uk/2015/10/timblhttpswwww3orgpeopleberners> .
+

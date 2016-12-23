@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://blog.rhiaro.co.uk/1432974600-2>
+  sioc:topic "koper", "ljubljana", "slovenia", "journey", "bus", "travel" ;
+  as:startTime "2015-05-30T15:42:00+02:00"^^xsd:datetime ;
+  as:endTime "2015-05-30T18:13:00+02:00"^^xsd:datetime ;
+  blog:startLocation <http://dbpedia.org/resource/Ljubljana> ;
+  blog:endLocation <http://dbpedia.org/resource/Koper> ;
+  dcterms:published "2015-05-30T10:32:00+02:00"^^xsd:datetime .
+

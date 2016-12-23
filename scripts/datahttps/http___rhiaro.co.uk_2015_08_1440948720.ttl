@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/08/1440948720>
+  a as:Add ;
+  as:published "2015-08-30T16:32:00+0100"^^xsd:datetime ;
+  as:tag "phd" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 30th August 2015, 16:32 Europe/London
+bookmark-of: http://thesiswhisperer.com/2011/01/26/are-you-getting-in-the-way-of-your-phd/
+tags: phd
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://thesiswhisperer.com/2011/01/26/are-you-getting-in-the-way-of-your-phd/> .
+

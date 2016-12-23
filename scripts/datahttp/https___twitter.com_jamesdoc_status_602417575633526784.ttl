@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://twitter.com/jamesdoc/status/602417575633526784>
+  dcterms:title "@rhiaro thesis not high up there then!" ;
+  dcterms:created "2015-05-24T11:15:17+01:00"^^xsd:datetime ;
+  dc:creator <http://jamesdoc.com/> ;
+  sioc:content """[@rhiaro][1] thesis not high up there then!
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/05/todays-general> .
+

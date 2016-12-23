@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/a4>
+  a as:Collection ;
+  as:name "a4" ;
+  as:items <https://rhiaro.co.uk/2016/08/57a3f9304f7f6> .
+

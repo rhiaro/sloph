@@ -1,0 +1,16 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/04/woot-worked-2>
+  sioc:reply_of <http://http://blog.rhiaro.co.uk/t-happens-dont> ;
+  as:published "2015-04-22T11:38:30+0100"^^xsd:datetime ;
+  as:tag "test", "hacking" ;
+  as:content """<!---
+tags: hacking,test
+reply-to: http://blog.rhiaro.co.uk/t-happens-dont
+-->
+
+woot? worked!""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

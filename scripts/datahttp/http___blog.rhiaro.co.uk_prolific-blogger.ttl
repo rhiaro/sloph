@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/prolific-blogger>
+  dcterms:created "2015-06-30T12:44:56+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: websci15,blogging
+-->
+
+Prolific blogger motivations - ~"so parents know they're alive and don't have to call". That's why I tweet :)""" ;
+  sioc:topic "websci15", "blogging" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/06/prolific-blogger> ;
+  as:latitude "51.73855" ;
+  as:longitude "-1.23889" ;
+  blog:tmpcontent "Prolific blogger motivations - ~\"so parents know they're alive and don't have to call\". That's why I tweet :)" .
+

@@ -1,0 +1,25 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/week-review-small>
+  dcterms:title "Week in review: small events" ;
+  dcterms:created "2013-04-21T20:33:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-26T15:31:53.135Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-1900714949174151469" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """**15th - 21st April**  
+  
+Tuesday: meeting with Ewan, [thesis workshop](http://blog.rhiaro.co.uk/2013/04
+/notes-how-to-write-thesis-workshop.html).  
+Friday: Social Informatics Cluster (non-adoption of technology solutions in
+healthcare); Ontologies with a View (nothing of import discussed, delicious
+soup in bread bowls from Union of Genius soup cafe).
+
+""" ;
+  sioc:topic blog:Doing, "week in review", "phd" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/04/week-review-small> .
+

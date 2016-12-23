@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/11/1447334100>
+  a as:Add ;
+  as:published "2015-11-12T13:15:00+0000"^^xsd:datetime ;
+  as:tag "" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 12th November 2015, 13:15 Europe/London
+bookmark-of: http://csarven.ca/cooling-down-web-science
+tags: 
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://csarven.ca/cooling-down-web-science> .
+

@@ -1,0 +1,40 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/taking-mobility>
+  dcterms:title "Taking mobility for granted" ;
+  dcterms:created "2015-08-19T13:20:48+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: life,running,mobility,ableism
+-->
+
+# Taking mobility for granted
+
+On Monday evening my left knee started being painful, and very gradually has got worse over the past couple of days. I now can't use stairs comfortably in either direction, and sloping ground is starting to cause problems too.
+
+It hasn't taken much for me to realise how much I take good mobility for granted. I feel hugely guilty whenever I've stepped in a lift to travel one or two floors today, and keep forgetting and skipping at stairs like I usually would; one step is enough to remind me that that way lies only pain. I'm distressed that I'm unlikely to be able to run this week. 
+
+Other inconveniences include having to remember not to sit with my legs folded under or beside me or crossed over like I usually do, and tying my shoelaces and picking things up from the floor being more difficult.
+
+I'm not in *that* much pain, and it's all pretty minor really, and it'll probably be gone soon, but even this is having an impact on going about my day. I'm really posting this to remind myself, and anyone reading, to take more time to imagine life in this ableist world for people with more severe or long term mobility issues.
+
+(Yes Mum, I've made a doctor's appointment).""" ;
+  sioc:topic "ableism", "mobility", "running", "life" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/08/taking-mobility> ;
+  blog:tmpcontent """# Taking mobility for granted
+
+On Monday evening my left knee started being painful, and very gradually has got worse over the past couple of days. I now can't use stairs comfortably in either direction, and sloping ground is starting to cause problems too.
+
+It hasn't taken much for me to realise how much I take good mobility for granted. I feel hugely guilty whenever I've stepped in a lift to travel one or two floors today, and keep forgetting and skipping at stairs like I usually would; one step is enough to remind me that that way lies only pain. I'm distressed that I'm unlikely to be able to run this week. 
+
+Other inconveniences include having to remember not to sit with my legs folded under or beside me or crossed over like I usually do, and tying my shoelaces and picking things up from the floor being more difficult.
+
+I'm not in *that* much pain, and it's all pretty minor really, and it'll probably be gone soon, but even this is having an impact on going about my day. I'm really posting this to remind myself, and anyone reading, to take more time to imagine life in this ableist world for people with more severe or long term mobility issues.
+
+(Yes Mum, I've made a doctor's appointment).""" .
+

@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/episode-voyager>
+  as:published "2016-07-10T04:25:03+01:00"^^xsd:dateTime ;
+  as:tag "q", "voyager", "trek", "star", "life" ;
+  as:content """This episode of Voyager where Q is continuously sexist toward Janeway, was it funny when it was made or was it always appallingly real?
+
+In other news: "this ship will not survive the formation of the cosmos."""" .
+

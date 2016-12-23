@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://www.phdconnect.org/>
+  foaf:name "PhD Connect" ;
+  foaf:homepage <http://www.phdconnect.org/> ;
+  foaf:depiction <https://twitter.com/PhD_Connect/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/312b25efcc040e2389ce4a5f21193524ce77254069a58df168fc09ee72e61999.jpeg> .
+

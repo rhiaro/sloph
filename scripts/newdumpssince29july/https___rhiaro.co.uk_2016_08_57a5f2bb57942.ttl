@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/57a5f2bb57942>
+  a as:Activity, asext:Acquire ;
+  as:published "2016-08-06T10:22:36-04:00"^^xsd:dateTime, "2016-08-06T10:22:36-04:00" ;
+  as:tag "household", "laundry", <https://rhiaro.co.uk/tags/household>, <https://rhiaro.co.uk/tags/laundry> ;
+  as:summary "Laundry" ;
+  asext:cost "$1.50" .
+

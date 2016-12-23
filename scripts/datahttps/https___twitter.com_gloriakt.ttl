@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/gloriakt>
+  foaf:name "Kristine Gloria" ;
+  foaf:homepage <https://twitter.com/gloriakt> ;
+  foaf:depiction <https://twitter.com/gloriakt/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/1ba88939ed432d406db8e32f86da39c6ad3293ca951464f770e40640c1b2e6b2.jpeg> .
+

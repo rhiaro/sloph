@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/5729283526eda>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-03T18:37:02-04:00"^^xsd:dateTime ;
+  as:tag "household", "pill" ;
+  blog:cost "$2.13" ;
+  as:summary "Spare key (Pill)" .
+

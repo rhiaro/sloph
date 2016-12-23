@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Fries (Clover)",
+    "blog:cost": "$0",
+    "as:tag": [
+        "clover",
+        "food",
+        "restaurant",
+        "free"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-04-28T17:26:11-04:00",
+    "@id": "http://blog.rhiaro.co.uk/572280057fbcd",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/572280057fbcd"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-28T17:26:11-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

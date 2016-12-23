@@ -1,0 +1,23 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/05/1432294020>
+  as:latitude "43.78192" ;
+  as:longitude "11.24968" ;
+  as:published "2015-05-22T12:27:00+0100"^^xsd:datetime ;
+  as:tag "travel", "journey", "train", "italy" ;
+  as:startTime "2015-05-22T10:40:00+0100"^^xsd:datetime ;
+  as:endTime "2015-05-22T12:27:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/Florence" ;
+  blog:endLocation "http://dbpedia.org/resource/Faenza" ;
+  as:content """<!---
+published: 21st May 2015, 13:50 Europe/Berlin
+start: 22nd May 2015, 11:40 Europe/Berlin
+end: 22nd May 2015, 13:27 Europe/Berlin
+startLocation: http://dbpedia.org/resource/Florence
+endLocation: http://dbpedia.org/resource/Faenza
+tags: travel,train,journey,italy
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

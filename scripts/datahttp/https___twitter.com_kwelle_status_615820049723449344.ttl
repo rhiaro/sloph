@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://twitter.com/kwelle/status/615820049723449344>
+  dcterms:title "reposts this." ;
+  dcterms:created "2015-06-30T10:51:55+01:00"^^xsd:datetime ;
+  dc:creator <http://katrinweller.net/> ;
+  sioc:content """RT [@rhiaro][1]: Wow, 90% drop in comments on politics articles after Huffpost switched to commenting via facebook ~ Rol... #websci15 rhiaro.co.uk/2015/06/wow-90…
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  blog:share_of <http://rhiaro.co.uk/2015/06/wow-90-drop> .
+

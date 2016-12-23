@@ -1,0 +1,15 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://rhiaro.co.uk/about#me>
+  foaf:name "Amy Guy", "Amy" ;
+  foaf:homepage <https://rhiaro.co.uk>, <https://rhiaro.co.uk/about#me> ;
+  foaf:depiction <https://rhiaro.co.uk/stash/dp.png>, <https://webmention.io/avatar/rhiaro.co.uk/829d3f6e7083d7ee8bd7b20363da84d88ce5b4ce094f78fd1b27d8d3dc42560e.png> ;
+  a foaf:Person ;
+  owl:sameAs <https://my-profile.eu/people/rhiaro/card#me> ;
+  foaf:img <https://en.gravatar.com/userimage/5236560/4c00a524a0fd157160742d80907349ae.png> ;
+  foaf:workplaceHomepage <http://www.inf.ed.ac.uk/people/students/Amy_Guy.html> ;
+  foaf:basedNear <http://dbpedia.org/resource/Edinburgh> ;
+  foaf:givenName "Amy" ;
+  foaf:familyName "Guy" .
+

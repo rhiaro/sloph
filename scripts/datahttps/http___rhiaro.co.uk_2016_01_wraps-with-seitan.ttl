@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/wraps-with-seitan>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-01-18T20:30:00-05:00"^^xsd:dateTime, "2016-01-18T20:30:00-05:00" ;
+  as:tag "chilli" ;
+  as:name "Wraps with seitan, orange capsicum, green unknown pepper, jalapeno, habenero, red chili, mushrooms, cream cheese, jalapeno daiya, spinach" .
+

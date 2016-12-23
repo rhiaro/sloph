@@ -1,0 +1,19 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1438726380>
+  dcterms:created "2015-08-04T23:13:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 4th August 2015, 23:13 BST
+read-of: http://research.microsoft.com/EN-US/UM/PEOPLE/DESNEY/publications/CHI2013-Deception.pdf
+tags: chi,hci,phd,ambiguity,deceipt,lying,social science,audience,performativity,adar,tan,teevan,paper
+-->""" ;
+  sioc:topic "chi", "hci", "phd", "ambiguity", "deceipt", "lying", "social science", "audience", "performativity", "adar", "tan", "teevan", "paper" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/08/1438726380> ;
+  blog:read-of "http://research.microsoft.com/EN-US/UM/PEOPLE/DESNEY/publications/CHI2013-Deception.pdf" .
+

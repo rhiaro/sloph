@@ -1,0 +1,19 @@
+{
+    "h": "entry",
+    "content": "I'm looking forward to CHI. I think this plane might be full of CHI attendees, I can hear people asking about each other's research.",
+    "category": [
+        "ca2016",
+        "chi2016",
+        "travel"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-05-06T21:53:55+01:00",
+    "@id": "http://blog.rhiaro.co.uk/im-looking",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/im-looking"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-06T21:53:55+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

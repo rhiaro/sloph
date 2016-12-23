@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/5775bd77c31ab>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-06-30T20:05:30-04:00", "2016-06-30T20:05:30-04:00"^^xsd:dateTime ;
+  as:tag "food", "restaurant", "veggie galaxy" ;
+  blog:cost "$16.16" ;
+  as:summary "Starter share and main (Veggie Galaxy)" .
+

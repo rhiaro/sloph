@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/rice-barley-chili>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-06-18T20:00:22-04:00"^^xsd:dateTime, "2016-06-18T20:00:22-04:00" ;
+  as:tag "chili", "rice" ;
+  as:name "Rice, barley and chili: black beans, pinto beans, kidney beans, mushrooms, various peppers, onion. Guacamole with carrot tops" .
+

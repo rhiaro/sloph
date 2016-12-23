@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Curry not-meatballs, jalapenos, kale, tomato in wholewheat muffins, cucumber",
+    "as:tag": [
+        "salad",
+        "bread",
+        "soya",
+        "curry"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-25T22:29:54-04:00",
+    "@id": "http://blog.rhiaro.co.uk/curry-meatballs",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/curry-meatballs"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-25T22:29:54-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

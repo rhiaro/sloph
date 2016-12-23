@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/milano-centrale>
+  as:latitude "45.65272" ;
+  as:longitude "9.20482" ;
+  blog:tmpcontent "Milano Centrale. Full of people smoking, and few clues about where trains are headed." ;
+  as:published "2015-05-17T16:09:42+0100"^^xsd:datetime ;
+  as:tag "travel", "trains", "Italy" ;
+  as:location <http://dbpedia.org/resource/Milan> ;
+  as:content """<!---
+tags: travel,Italy,trains
+location: http://dbpedia.org/resource/Milan
+-->
+
+Milano Centrale. Full of people smoking, and few clues about where trains are headed.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

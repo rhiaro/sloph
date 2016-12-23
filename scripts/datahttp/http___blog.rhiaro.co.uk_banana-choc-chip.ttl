@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/banana-choc-chip>
+  a blog:Consumption ;
+  dcterms:created "2016-07-10T17:15:47-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/07/banana-choc-chip> ;
+  as:published "2016-07-10T17:15:47-04:00" ;
+  as:tag "cake", "procrastabaking" ;
+  as:name "Banana choc chip cakecookie" .
+

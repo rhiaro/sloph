@@ -1,0 +1,28 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Cuban sandwich with mash and gravy; peanut butter cookie dough milkshake; regret",
+    "as:tag": [
+        "milkshake",
+        "bread",
+        "sandwich",
+        "potato",
+        "chicago diner",
+        "us0816"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-14T17:14:03-04:00",
+    "@id": "http://blog.rhiaro.co.uk/cuban-sandwich",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/cuban-sandwich"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-14T17:14:03-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

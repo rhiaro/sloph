@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/homemade-chilli>
+  a as:Activity, asext:Consume ;
+  as:name "Homemade chilli ginger lemonade" ;
+  as:published "2016-08-03T19:13:54-04:00"^^xsd:dateTime, "2016-08-03T19:13:54-04:00" ;
+  as:tag "", <https://rhiaro.co.uk/tags/> .
+

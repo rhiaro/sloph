@@ -1,0 +1,51 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/05/amys-mini-alpine>
+  blog:tmpcontent """# Amy's mini Alpine Adventure
+
+I picked Innsbruck pretty randomly as a mid-point between Dusseldorf (where I was for IWC) and Florence (where I need to be for WWW). I haven't been to Austria before, or even the Alps bar a day-trip during a school trip to France like ten years ago. The first day I was here was clear, sunny and crazy hot, so I started loving Innsbruck pretty immediately. I wandered around town, got a feel for the place, and found the only place I could get vegan pizza and eiskaffee. 
+
+The Inn river is fast-flowing and a cartoonish blue-green. The houses are bright colours, and everywhere is walkable. The town is surrounded by a ring of snow-capped mountains.
+
+I booked a hostel so I wouldn't have to socialise too much, as I need a break from people between all of these conferences. The hostel is super quiet, and mostly pretty good. The first night I shared my dorm with two Canadian girls. They told me the funicular up one of the mountains is reasonably priced, and that it was silly to think of walking to the base as it's really far, and I should get the bus. Also that I should pay the EUR 2.60 for a bus ticket, as one of them didn't and got caught and fined ;)
+
+Yesterday I hacked a bunch on Slog'd in the morning, then at 2pm set off with vague intentions of either climbing a mountain or swimming in a lake, ideally both. I ignored the advice of the Canadian girls, and walked to Hungerburg where the cable car starts. It was less than an hour from the hostel, and the mountain parts were easy. Turns out the cable car to the top is over 25 EUR, and it's about a 3 hour climb to Seegrube. And climbing is WAY more interesting. However, from Seegrube to the summit at Halekefar I was advised there is too much snow for climbing, so the cable car for that stretch is mandatory (and Seegrube-Halekefar is EUR 6.10 return, which I can handle). So I figured I'd climb to Seegrube, take the cable car to the summit and back, and climb all the way back on foot. But by that point, the odds of me making it to Seegrube before the cablecar stopped running at 1730 were pretty slim. I toyed with trying to find an ATM and taking the cablecar all the way, but decided I'd prefer to climb anyway and can come back the next day, earlier.
+
+Then I walked to Lake Rossau, which the internet claims cost EUR 3.50 to swim in but I mean, it's a lake, so nobody seemed to be enforcing this. So I swam in the lake surrounded by mountains and it was beautiful.
+
+Then I came back to the hostel and added a first pass at ActivityStreams2.0 JSON to my site. Woo! Productive day.
+
+Today it is raining heavily and the mountains are shrouded in clouds. Naturally. Turns out I'm going to give getting to Halekefar a shot anyway, even if I can't see anything from the top, thanks to encouragement from my new hostel roomie, a fairly old Vietnamese lady who lives in Belgium.
+
+Also, I'll post some photos just as soon as I implement display of albums and attaching Collections to posts on Slog'd.... Aaaaany day now.""" ;
+  as:published "2015-05-15T09:42:17+0100"^^xsd:datetime ;
+  as:tag blog:Done, "slogd", "lake", "activitystreams2", "innsbruck", "mountain", "json", "austria", "travel", "as2", "hacking" ;
+  as:name "Amy's mini Alpine Adventure" ;
+  as:content """<!---
+tags: travel,austria,innsbruck,mountain,as2,activitystreams2,json,slogd,hacking,lake
+list: done
+-->
+
+# Amy's mini Alpine Adventure
+
+I picked Innsbruck pretty randomly as a mid-point between Dusseldorf (where I was for IWC) and Florence (where I need to be for WWW). I haven't been to Austria before, or even the Alps bar a day-trip during a school trip to France like ten years ago. The first day I was here was clear, sunny and crazy hot, so I started loving Innsbruck pretty immediately. I wandered around town, got a feel for the place, and found the only place I could get vegan pizza and eiskaffee. 
+
+The Inn river is fast-flowing and a cartoonish blue-green. The houses are bright colours, and everywhere is walkable. The town is surrounded by a ring of snow-capped mountains.
+
+I booked a hostel so I wouldn't have to socialise too much, as I need a break from people between all of these conferences. The hostel is super quiet, and mostly pretty good. The first night I shared my dorm with two Canadian girls. They told me the funicular up one of the mountains is reasonably priced, and that it was silly to think of walking to the base as it's really far, and I should get the bus. Also that I should pay the EUR 2.60 for a bus ticket, as one of them didn't and got caught and fined ;)
+
+Yesterday I hacked a bunch on Slog'd in the morning, then at 2pm set off with vague intentions of either climbing a mountain or swimming in a lake, ideally both. I ignored the advice of the Canadian girls, and walked to Hungerburg where the cable car starts. It was less than an hour from the hostel, and the mountain parts were easy. Turns out the cable car to the top is over 25 EUR, and it's about a 3 hour climb to Seegrube. And climbing is WAY more interesting. However, from Seegrube to the summit at Halekefar I was advised there is too much snow for climbing, so the cable car for that stretch is mandatory (and Seegrube-Halekefar is EUR 6.10 return, which I can handle). So I figured I'd climb to Seegrube, take the cable car to the summit and back, and climb all the way back on foot. But by that point, the odds of me making it to Seegrube before the cablecar stopped running at 1730 were pretty slim. I toyed with trying to find an ATM and taking the cablecar all the way, but decided I'd prefer to climb anyway and can come back the next day, earlier.
+
+Then I walked to Lake Rossau, which the internet claims cost EUR 3.50 to swim in but I mean, it's a lake, so nobody seemed to be enforcing this. So I swam in the lake surrounded by mountains and it was beautiful.
+
+Then I came back to the hostel and added a first pass at ActivityStreams2.0 JSON to my site. Woo! Productive day.
+
+Today it is raining heavily and the mountains are shrouded in clouds. Naturally. Turns out I'm going to give getting to Halekefar a shot anyway, even if I can't see anything from the top, thanks to encouragement from my new hostel roomie, a fairly old Vietnamese lady who lives in Belgium.
+
+Also, I'll post some photos just as soon as I implement display of albums and attaching Collections to posts on Slog'd.... Aaaaany day now.""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/599132929013460992/15090636> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

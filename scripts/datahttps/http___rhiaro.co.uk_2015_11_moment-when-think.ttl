@@ -1,0 +1,17 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/11/moment-when-think>
+  blog:tmpcontent "That moment when you think your server went down but actually it was your internet connection." ;
+  as:published "2015-11-13T21:24:41+0000"^^xsd:datetime ;
+  as:tag "life", "hacking" ;
+  as:content """<!---
+tags: life,hacking
+-->
+
+That moment when you think your server went down but actually it was your internet connection.""" ;
+  sioc:has_reply <https://twitter.com/camerongray1515/status/665279582791168001> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

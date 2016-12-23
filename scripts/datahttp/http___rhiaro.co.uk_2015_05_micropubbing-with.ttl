@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://rhiaro.co.uk/2015/05/micropubbing-with> sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/602591522383646720/7726162>, <https://twitter.com/CaptSolo/status/605133212252315649>, <https://brid-gy.appspot.com/like/twitter/rhiaro/602591522383646720/1111871>, <https://brid-gy.appspot.com/like/twitter/rhiaro/602591522383646720/1583811>, <https://twitter.com/elfpavlik/status/603273389319581698>, <https://brid-gy.appspot.com/like/twitter/rhiaro/602591522383646720/961661>, <https://twitter.com/kevinmarks/status/602605164109762560> .

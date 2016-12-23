@@ -1,0 +1,24 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2014/01/arc2-named-graphs>
+  as:published "2014-01-03T17:46:00+0000"^^xsd:datetime ;
+  as:tag "pedantics", "contexts", "named graph", "post", "semantic web", "blog", blog:Doing, "linked data", "slogd", "hacking" ;
+  as:name "ARC2 Named Graphs" ;
+  as:content """<!---
+published: 3rd January 2014, 17:46
+last-modified: 3rd January 2014, 17:46
+type: BlogPost
+tags: hacking,slogd,blog,post,named graph,contexts,linked data,semantic web,pedantics
+list: doing
+-->
+
+# ARC2 Named Graphs
+
+Dimly aware that ARC2's triplestore uses named graphs, I decided to check where all my triples are at the moment. Turns out any inserted from php scripts are inside a graph whose URI is the file path to the script, eg. `<http://localhost/testclasses.php>`.
+
+Maybe I should think about more proactively sorting my graphs.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:updated "2014-01-03T17:46:00+0000"^^xsd:datetime .
+

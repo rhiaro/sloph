@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/tacos-corn>
+  a asext:Consume, as:Activity ;
+  as:name "Tacos: corn tortillas, lettuce, black beans, serrano chilli, light green chili, mushrooms, daiya, cream cheese, hot sauce; coffee" ;
+  as:published "2016-08-02T07:28:19-04:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/tacos>, <https://rhiaro.co.uk/tags/coffee>, "tacos", "coffee" .
+

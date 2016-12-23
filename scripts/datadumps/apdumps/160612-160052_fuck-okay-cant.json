@@ -1,0 +1,14 @@
+{
+    "h": "entry",
+    "content": "fuck okay i can't social media today",
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-06-12T16:00:52+01:00",
+    "@id": "http://blog.rhiaro.co.uk/fuck-okay-cant",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/fuck-okay-cant"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-12T16:00:52+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/props>
+  as:latitude "55.94614" ;
+  as:longitude "-3.20078" ;
+  blog:tmpcontent "Props to [Elfalafel](http://www.elfalafel.com/) for feeding a hungry student who didn't quite have enough cash :)" ;
+  as:published "2015-06-13T16:10:29+0100"^^xsd:datetime ;
+  as:tag "food", "edinburgh", "falafel", "elfalafel" ;
+  as:content """<!---
+tags: food,edinburgh,falafel,elfalafel
+-->
+
+Props to [Elfalafel](http://www.elfalafel.com/) for feeding a hungry student who didn't quite have enough cash :)""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

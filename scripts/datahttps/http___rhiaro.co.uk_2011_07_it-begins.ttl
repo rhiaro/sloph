@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2011/07/it-begins>
+  as:published "2011-07-26T10:00:00.000Z"^^xsd:datetime ;
+  as:tag "adventure", "begin", blog:Done, "travel", "heathrow" ;
+  as:name "IT BEGINS" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-69618332186490786" ;
+  as:content """![](http://3.bp.blogspot.com/-hymYOClXgOg/Ti8sjfzkRGI/AAAAAAAAKuM/yb6ebpKtsC8/
+s320/P7263891.jpg)
+
+  
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:12:53.924Z"^^xsd:datetime .
+

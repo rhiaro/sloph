@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/Prewired/status/627994532542611456>
+  a as:Announce ;
+  as:published "2015-08-03T01:08:58+01:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: Around the wifi issues, preparation is underway! @prewired #foc2015 rhiaro.co.uk/2015/08/aroundâ€¦
+
+[ ][2]
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/Prewired/status/627994532542611456
+""" ;
+  as:actor <http://prewired.org/> ;
+  as:object <https://rhiaro.co.uk/2015/08/around-wifi> .
+

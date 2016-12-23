@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/pasta-tomato>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-07T22:15:36-04:00"^^xsd:dateTime, "2016-07-07T22:15:36-04:00" ;
+  as:tag "coffee", "leftovers", "pasta", "vegetables" ;
+  as:name "Pasta, tomato, aubergine, tofurky sausages, peas, courgette; iced coffee" .
+

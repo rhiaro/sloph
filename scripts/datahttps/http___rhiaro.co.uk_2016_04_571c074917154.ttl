@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/04/571c074917154>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-04-23T19:36:21-04:00"^^xsd:dateTime ;
+  as:tag "food", "restaurant", "true bistro", "vegan" ;
+  blog:cost "$79" ;
+  as:summary "Fancy pants dinner for two (True Bistro)" .
+

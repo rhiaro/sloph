@@ -1,0 +1,6 @@
+{
+  "@context": "https://www.w3.org/ns/activitystreams",
+  "id": "https://rhiaro.co.uk/2016/09/57e06ffa7981f",
+  "type": "Like",
+  "object": "https://linkedresearch.org/ldn/"
+}

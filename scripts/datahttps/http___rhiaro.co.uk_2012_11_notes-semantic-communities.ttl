@@ -1,0 +1,108 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2012/11/notes-semantic-communities>
+  as:published "2012-11-26T21:59:00.000Z"^^xsd:datetime ;
+  as:tag "ficnet", "fop", "online communties", "ontomedia", "trust", "ontologies", "foaf", "paper", "semantic web", blog:Doing, "phd", "provenance", "linked data" ;
+  as:name "Notes about Semantic Web tools for online communities" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8958570913820346159" ;
+  as:content """  
+**K. Faith Lawrence & Dr. Monica Schrafel (2007)  _Amateur Fiction Online - The Web of Community Trust: _****_A Case Study in Community Focused Design for the Semantic Web. _****Intelligence, Agents, Multimedia (IAM) Group, ****School of Electronics and Computer Science, ****University of Southampton.**  
+**  
+**_NB. Need to read her full thesis, of the same name.  Will probably clear up some of the questions I scribbled whilst reading the paper._  
+**  
+**Finding out if Semantic Web tools can be brought to hobbyist groups on the Web.  
+
+  * Uses the online fiction community; suggests they could benefit from:
+    * improved searching
+    * improved meta data
+    * automatic recommendations
+    * trust webs
+    * personalisation.
+  * A HCI project, so usability tests and comparisons with current systems are key.
+
+_Related work_
+
+  * Community centered design
+    * to determine user needs - through continual interactions and user studies.
+    * to consider how reader-facing apps present themselves and particular community
+      * responsibility of being a portal - need clear affordences and points of failure.
+  * Trust and Semantic Communities
+    * The semantic web â€œprovides a common framework that allows data to be shared and reused across application, enterprise, and community boundaries.â€ -_ Tim Berners-Lee, James Hendler, and Ora Lassila. The semantic web. Scientiï¬c American, May 2001._
+    * Do we trust:
+      * metadata
+      * data
+      * mechanism by which data is returned
+      * person requesting data?
+    * Many definitions of trust.
+    * Jennifer Golbeck's trust onotology to go with FOAF (_Jennifer Golbeck, Bijan Parsia, and James Hendler. Trust networks on the semantic web. In Proceedings of Cooperative Intelligent Agents 2003, 2003._): ratings of 1 - 9 for trust of associates.  Extended for FicNet (this paper) 
+    * Here, trust: "the expectations that arise that an individual will not act in a way that is detrimental to another individual or community."
+      * I might need to expand that for my stuff... maybe... maybe this will do.
+
+_Case study_
+
+  * Community predates the Internet. (duh)
+  * Necessary to get opinions from people outside of the amateur writing community, because it is broad. Such as parents/guardians of members.
+  * Questionnaire
+    * General information
+    * Reading habits
+    * Community involvement
+    * Access and distribution of materials
+  * Questionnaire distributed by:
+    * requests to archives to pass on to members
+    * LiveJournal
+    * emails to specific interested parties
+    * mailing lists / bulletin boards of relevant special interest groups.
+  * In two weeks, 1116 responses, from 30 countries.
+  * Used to inform ontology design for FicNet, and OntoMedia.
+
+_Fan Online Persona (FOP)_
+
+  * Extension of FOAF, tailored for needs of online readers and writers.
+  * foaf:person -> fop:persona
+  * Separates environments for on and offline
+  * fop:NomDe - context for name
+  * Illusion of anonymity is fundamental to fanfic community (who are a large part of online amateur writers)
+  * Most authors have one or more pseudonyms.
+  * 80% said email address is the most personal information they should be asked for.  ('of the 80%, 15% said _no_ personal information should be requested from anyone - does this make sense? Do they mean _other_ than email address?  but that's the 80... If they're in the 80, they can't be part of that 15...)
+  * Privacy is the main thing holding back FOAF (_Joseph Smarr. Technical and privacy challenges for integrating foaf into existing __applications. Presented at 1st Workshop on Friend of a Friend, Social Networking __and the Semantic Web, September 2004._)
+  * Personas aren't meaningless, because people become very attached to them, and only create new ones for specific reasons (says who? No citation..)
+  * Expands foaf:document and foaf:groups
+  * Creation, exchange and review of works is the point of these communities.
+  * FOP dismisses FOAF info like work and school as irrelevant or potentially dangerous.
+    * [Me]  I think the on/offline divide won't be so extreme for many amateur film makers (another story for _consumers_) because often their faces are in their movies... Also anecdotal evidence from my own experiences that I'm open to having proven to be a minority.  _Actors_ vs _characters_ is an interesting distinction too.  One amateur film maker can have many _personas_, even across one channel of output.
+  * Options for FOP determined through long term study of metadata commonly attached to works. (Something I can do, too).
+
+_Trust_
+
+  * FilmTrust by Golbeck (just joined, it was closed last time I looked).
+    * Could be prettier... but 2169 members!
+    * Visualisations of the network - I need to get good at this.
+  * Reader has to trust info from author falls within a certain level of accuracy.  In amateur writing, it is more acceptable to be over cautious than lenient.  Differing standards of acceptable content.
+    * Less trust is lost if a story is underrated than overrated (resulting in disappointment)
+    * A minority mislabeling work has a big effect on reputation of an archive/community (_HelpingHands community members. A place to pitch in and help - a website __creation resource and project. LiveJournal Community, 2005._)
+  * Writer has to trust reader to make the right decision.
+  * FicNet has a more specialised trust system than Golbeck's.
+    * Largest contention in this field is adult material and younger readers (debated because this contrasts with IRL - no restricted areas in book stores, or suitability rating scheme for books).
+    * Initially focussed on age.
+    * Personas could vouch for each other.  Creating fake personae to validate another wasn't worth payoff?  Non malicious statements of distrust?
+    * How to integrate trust and distrust webs?
+_Future_
+
+  * Ontologies developed, ready to be used by applications!
+    * Ontologies will be continually refined.
+    * Now designing applications.
+      * Using info already gathered via quesitonnaire, re: UI, functionality.
+  * Integrate with OntoMedia to describe works, and link works with people.
+  
+=> How did they get to talk to the parents of younger users?  Did they ask the
+members to put them in touch?  That doesn't seem like a realistic expectation
+to have, to me..
+
+  
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-04-01T00:10:03.477Z"^^xsd:datetime .
+

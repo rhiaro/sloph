@@ -1,0 +1,20 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/06/1435490298>
+  as:published "2015-06-28T12:18:18+0100"^^xsd:datetime ;
+  as:tag "travel", "journey", "uk", "train", "London" ;
+  as:startTime "2015-06-28T11:57:00+0100"^^xsd:datetime ;
+  as:endTime "2015-06-28T12:25:00+0100"^^xsd:datetime ;
+  blog:startLocation "http://dbpedia.org/resource/London" ;
+  blog:endLocation "http://dbpedia.org/resource/Reading,_Berkshire" ;
+  as:content """<!---
+start: 28th June 2015, 11:57 BST
+end: 28th June 2015, 12:25 BST
+startLocation: http://dbpedia.org/resource/London
+endLocation: http://dbpedia.org/resource/Reading,_Berkshire
+tags: travel,journey,uk,London,train
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

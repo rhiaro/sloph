@@ -1,0 +1,98 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/08/honeycomb-apple>
+  blog:tmpcontent """# Honeycomb apple cakes
+
+I made honeycomb! Strictly bee-exploitation free, of course. It was way easier than I expected, and didn't result in my entire kitchen becoming sticky. Just most of it.
+
+* 100g caster sugar
+* 4 tablespoons refined sugar [golden] syrup
+* 1.5 teaspoons bicarbonate of soda
+
+Mix the sugar and sugar syrup together and heat until bubbling and golden brown. Lots of people seem to have trouble with this (burning it etc), but I never have when making caramel in the past and didn't this time. Just gotta not take your eyes of it. It doesn't take long. The fun part is removing it from the heat and quickly mixing in the bicarb, when it bubbled up spectacularly. Poured into a lined tin to cool:
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/fizz.jpg)
+
+I have to deal with this later..
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/pan.jpg)
+
+It took about 20 minutes to cool fully:
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/top.jpg)
+
+And was amazing. Pretty much like the inside of a Cadbury's Crunchy:
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/edge.jpg)
+
+I crunched some up and added it to vegan apple cupcake mix:
+
+* 130g caster sugar + 100g dairy-free margarine
+* plus Three small apples very finely chopped
+* plus 190g self raising flour + teaspoon baking powder
+* plus ~140ml caramel rooibos, which I had brewed earlier (any liquid will do until cake batter consistency reached..)
+* plus...
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/mix.jpg)
+
+Equals:
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/cakes.jpg)
+
+(Icing was icing sugar, chopped apple and margarine).
+
+The exposed honeycomb in the cakes burnt though, so watch out for that. The icing is a coverup. Nobody will know.""" ;
+  as:published "2015-08-05T17:09:00+0100"^^xsd:datetime ;
+  as:tag "mbaking", "vegan", "cake", "recipe", "sugar", "apple", "honeycomb" ;
+  as:name "Honeycomb apple cakes" ;
+  as:content """<!---
+tags: mbaking,honeycomb,cake,recipe,apple,sugar,vegan
+published: 5th August 2015, 17:09 BST
+-->
+
+# Honeycomb apple cakes
+
+I made honeycomb! Strictly bee-exploitation free, of course. It was way easier than I expected, and didn't result in my entire kitchen becoming sticky. Just most of it.
+
+* 100g caster sugar
+* 4 tablespoons refined sugar [golden] syrup
+* 1.5 teaspoons bicarbonate of soda
+
+Mix the sugar and sugar syrup together and heat until bubbling and golden brown. Lots of people seem to have trouble with this (burning it etc), but I never have when making caramel in the past and didn't this time. Just gotta not take your eyes of it. It doesn't take long. The fun part is removing it from the heat and quickly mixing in the bicarb, when it bubbled up spectacularly. Poured into a lined tin to cool:
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/fizz.jpg)
+
+I have to deal with this later..
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/pan.jpg)
+
+It took about 20 minutes to cool fully:
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/top.jpg)
+
+And was amazing. Pretty much like the inside of a Cadbury's Crunchy:
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/edge.jpg)
+
+I crunched some up and added it to vegan apple cupcake mix:
+
+* 130g caster sugar + 100g dairy-free margarine
+* plus Three small apples very finely chopped
+* plus 190g self raising flour + teaspoon baking powder
+* plus ~140ml caramel rooibos, which I had brewed earlier (any liquid will do until cake batter consistency reached..)
+* plus...
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/mix.jpg)
+
+Equals:
+
+![bubbly boiled sugar](https://rhiaro.co.uk/photos/1508honeycomb/cakes.jpg)
+
+(Icing was icing sugar, chopped apple and margarine).
+
+The exposed honeycomb in the cakes burnt though, so watch out for that. The icing is a coverup. Nobody will know.""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/628962562953080834/18191576> .
+

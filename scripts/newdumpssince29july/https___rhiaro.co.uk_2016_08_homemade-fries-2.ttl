@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+
+<https://rhiaro.co.uk/2016/08/homemade-fries-2>
+  a as:Activity, asext:Consume ;
+  as:name "Homemade fries, pizza with mushrooms, tempeh, kale, jalapeno, red peppers, not-cheese" ;
+  as:published "2016-08-11T17:44:48-04:00" ;
+  as:tag <https://rhiaro.co.uk/tags/fries>, <https://rhiaro.co.uk/tags/pizza>, <https://rhiaro.co.uk/tags/vegetables> .
+

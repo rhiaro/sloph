@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/lots-people>
+  dcterms:created "2016-06-08T20:06:56+01:00"^^xsd:dateTime ;
+  sioc:content "Lots of people saying \"decentralised\" to each other and meaning different things at [dwebsummit](https://decentralizedweb.net)" ;
+  sioc:topic "decentralisation", "dwebsummit", "event", "socialwg", "solid", "web" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/lots-people> .
+

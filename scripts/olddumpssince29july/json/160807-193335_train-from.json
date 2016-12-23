@@ -1,0 +1,37 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "Train from Chicago to NYC",
+    "blog:cost": "$106",
+    "as:tag": [
+        "travel",
+        "journey",
+        "train",
+        "us0816",
+        "chicago",
+        "nyc",
+        "amtrak"
+    ],
+    "as:published": "2016-08-07T14:33:35-04:00",
+    "as:startTime": "2016-08-18T21:30:00-05:00",
+    "as:endTime": "2016-08-19T18:23:00-04:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Pennsylvania_Station_(New_York_City)"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Chicago"
+    },
+    "@id": "http://blog.rhiaro.co.uk/train-from",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/train-from"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-07T14:33:35-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

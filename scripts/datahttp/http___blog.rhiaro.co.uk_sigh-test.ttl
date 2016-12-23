@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/sigh-test>
+  dcterms:created "2016-06-10T05:59:17+01:00"^^xsd:dateTime ;
+  sioc:content "sigh. test." ;
+  sioc:topic "test" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/sigh-test> .
+

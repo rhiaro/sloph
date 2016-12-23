@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/57619b79da591>
+  a blog:Acquisition ;
+  dcterms:created "2016-06-15T13:15:02-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/57619b79da591> ;
+  blog:cost "$12" ;
+  as:published "2016-06-15T13:15:02-04:00" ;
+  as:summary "Lunch for two (Food Truck)" ;
+  as:tag "csarven", "food", "food truck", "takeaway" .
+

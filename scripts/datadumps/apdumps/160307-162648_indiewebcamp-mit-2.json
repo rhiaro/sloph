@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "Indiewebcamp MIT",
+    "blog:rsvp": "yes",
+    "as:tag": [
+        "rsvp",
+        "event",
+        "attendee",
+        "organiser",
+        "indiewebcamp",
+        "indieweb",
+        "social web",
+        "phd",
+        "slogd",
+        "hacking",
+        "hackathon"
+    ],
+    "as:published": "2016-03-07T11:26:48-05:00",
+    "as:startTime": "2016-03-14T09:30:00-05:00",
+    "as:endTime": "2016-03-15T17:00:00-05:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:location": {
+        "@id": "http://dbpedia.org/resource/Massachusetts_Institute_of_Technology"
+    },
+    "@id": "http://blog.rhiaro.co.uk/indiewebcamp-mit-2",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/03/indiewebcamp-mit"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-03-07T11:26:48-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,19 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/spent-fair-bit>
+  dcterms:created "2015-05-08T19:04:09+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,babies
+-->
+
+Spent a fair bit of time with an 8 year old and a 7 month old the past few days. 5% adorable, 95% ohgodpleaseneverletthishappentome""" ;
+  sioc:topic "travel", "babies" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/spent-fair-bit> ;
+  blog:tmpcontent "Spent a fair bit of time with an 8 year old and a 7 month old the past few days. 5% adorable, 95% ohgodpleaseneverletthishappentome" .
+

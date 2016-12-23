@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/DrDanielASmith/status/611919882347659264>
+  sioc:reply_of <https://rhiaro.co.uk/2015/06/okay-private> ;
+  as:published "2015-06-19T16:34:03+01:00"^^xsd:datetime ;
+  as:name "@rhiaro something something pull request" ;
+  as:content """[@rhiaro][1] something something pull request
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <https://danielsmith.eu/> .
+

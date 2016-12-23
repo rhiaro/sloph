@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56ca1211d113f>
+  a as:Travel ;
+  as:published "2016-02-21T14:36:44-05:00", "2016-02-21T14:36:44-05:00"^^xsd:dateTime ;
+  as:tag "boston", "iceland", "journey", "reykjavik", "sociam", "travel", "usa", "plane", "flight" ;
+  as:startTime "2016-02-21T20:35:00-05:00" ;
+  as:endTime "2016-02-22T06:40:00+00:00" ;
+  as:origin <http://dbpedia.org/resource/Boston> ;
+  as:target <http://dbpedia.org/resource/Reykjavik> .
+

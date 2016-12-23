@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://dannyayers.com/>
+  foaf:name "Danny Ayers" ;
+  foaf:homepage <http://dannyayers.com/> ;
+  foaf:depiction <https://twitter.com/danja/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/98dadcd71bfc50d03b18cc9769640c30a97a77fff49b87b278d8b969d724051f.jpeg> .
+

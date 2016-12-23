@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Various Ethiopian and injera (Muzita)",
+    "as:tag": [
+        "chickpeas",
+        "ethiopian",
+        "ca2016",
+        "curry"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-20T21:10:21-07:00",
+    "@id": "http://blog.rhiaro.co.uk/various-ethiopian",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/various-ethiopian"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-20T21:10:21-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

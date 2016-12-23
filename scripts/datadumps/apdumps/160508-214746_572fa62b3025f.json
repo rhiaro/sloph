@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Bubble tea (Boba Bar)",
+    "blog:cost": "$4.69",
+    "as:tag": [
+        "bubble tea",
+        "food",
+        "takeaway",
+        "boba bar",
+        "ca2016"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-08T13:47:46-07:00",
+    "@id": "http://blog.rhiaro.co.uk/572fa62b3025f",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/572fa62b3025f"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-08T13:47:46-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

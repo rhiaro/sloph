@@ -1,0 +1,106 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/06/eswc2015>
+  blog:tmpcontent """# ESWC2015
+
+This is a summary of a few bits and pieces that stood out to me from ESWC2015. I haven't covered every session I attended or paper I saw, just the ones that remained with me (other people will do full summaries of all the paper sessions I'm sure, or you can refer to [the programme](http://2015.eswc-conferences.org/program) or [Fabien Gandon's closing slides](http://www.slideshare.net/fabien_gandon/eswc-2015-closing-and-general-chairs-minute-of-madness) which have an excellent summary). For a more 'live' overview of my view on the conference you can see [everything I posted during it](https://rhiaro.co.uk/tag/eswc2015).
+
+Overall, I had a great experience, met some fantastic people and absorbed lots of interesting ideas. I feel more positive about work in linked data; I'd been slacking off following the community for a while, but I've been reassured that there are plenty of practical-minded researchers out there who are doing great things, and I'll be paying more attention again henceforth. Daily swims in the sea probably didn't hurt.
+
+## SemDev2015
+
+The developers workshop was great, full of people positive about building tools and applications, and finding ways to make the power of linked data accessible to actual end users. The focus was on building for web developers rather than on end-user applications, with projects being great libraries and tooling for working with linked data, as a way to bridge the gap. There was an air of frankness, with attendees keen to address problems openly, without handwaving or glossing over things that weren't working out. There was even live debugging during presentations.
+
+[Here's the program, with links to projects and repos](http://eswc2015.semdev.org/program/).
+
+I missed the final discussion session, but this was [recorded](https://www.youtube.com/watch?v=F4WN4XEpViA) and I hear it was good.
+
+## Philoweb
+
+For a philosophy of the web workshop, the talks and discussions during this workshop were around pretty pragmatic issues. In particular how we can obtain true decentralisation, problems with centralised DNS and internet infrastructure, the lack of attention paid in this community to security issues, and the importance of understanding social processes and current practice for ensuring the web continues to function and that we don't "break it by accident" (Henry Thompson). These aren't things that tend to get much of a forum at conferences like ESWC, but semantic web academics being at the forefront of a truly linked information space should definitely be encouraged to think about the effects of our work on society, particularly underprivileged and minorities.
+
+## USEWOD
+
+This workshop - [usage analysis and the web of data](http://usewod.org/usewod2015.html) - had a general focus on understanding and getting the most out of the web as we know it today, in order to shape the web we want in the future. As well as traditional paper submissions, they were also accepting submissions via blog posts, and will continue to accept articles on an ongoing basis, which is a great way to keep the discussion alive. I was gutted to miss [Max van Kleek's](http://hip.cat) keynote ["Not in my Castle"](http://usewod.org/files/workshops/2015/papers/USEWOD15_vankleek.pdf) because I got the timing wrong, but I hear it was awesome.
+
+## In Use & Industry
+
+Harry Halpin and Francesca Bria worked on an interesting project to map social innovation projects (like hacklabs, open data initiatives, community enterprises) across Europe. It wouldn't have been strictly necessary to use linked data for this, and doing so might have actually caused the site to be pretty slow. However, it allowed them to do a bunch of interesting network analysis on the hundreds of different projects and organisations mapped and gain some insights into how to strengthen such initiatives (for example, by increasing collaboration opportunities). Also, I suspect technologies for building sites on the back of linked data have probably improved quite a bit since this work was started, so the speed issue might easy to overcome. I paid attention cos I'm generally interested in putting stuff on maps but I'd really like to see more decentralised mapping things; projects/organisations publishing their information independently as linked data, such that they're in control over what's available, rather than having to submit their info to a centralised service.
+
+## Crowdsourcing and web science
+
+Seyi Feyisetan from Southampton discussed different factors that affected the performance of crowd workers, by looking at features of the tasks themselves rather than the platform or rewards, when asking workers to classify entities in tweets. It was suggested that their results could be used to work out if NER on your microposts dataset would be better performed by machine, human experts or crowdworkers, depending on the contents of the dataset.
+
+Revanthy Krishnamurthy presented about using general background knowledge and the contents of tweets to detect the location of twitter users, as most twitter users don't have geolocation enabled when posting. They did smart stuff like correlating mentions of events, landmarks and slang terms with physical places, but I don't remember them saying much about respecting the privacy of people who actively don't use geolocation..
+
+## Demos
+
+The demos and poster session I thought was particularly lively. I liked that it didn't overlap with any other sessions, and breakfast cakes and fruit were distributed through the demos area. It was pretty cramped though, and possibly would have been better off earlier in the week too (it was in the morning of the last day).
+
+I appreciate the principles and technologies behind [Sarven Capadisli's](http://csarven.ca/#i) [Linked Research](http://linked-research.270a.info) project, to the point that I implemented it for [one of my own papers](https://rhiaro.co.uk/pub/cim14) immediately. Encouraging web scientists to publish their research using the native web stack, using RDF to make research queryable and discoverable on a more granular level - in other words, to practice what we preach - is a worthy goal. And it was really easy to set up. Everyone should do it.
+
+Entity annotation isn't something I know much about, but I think I understood a bit more after talking to [Ricardo Usbeck](http://aksw.org/RicardoUsbeck.html) about [GERBIL](http://aksw.org/Projects/GERBIL.html), a tool for evaluating entity annotators. This easy to use online tool lets you compare some of the different annotators available against different types of datasets, to see which would perform the best for your particular use case, without you needing to access any of the test datasets yourself (as you often have to pay for licenses). You just plug your annotator in and leave it running, and it returns results. This also allowed them to check reported results of popular annotators and compare them according to different standards, for a more well rounded view of their capabilities. I dunno if the preceding paragraph made much sense, but that's what I got.
+
+## Other
+
+Had some great discussions about microformats, RDFa, schema.org, federated/decentralised social web stuff and whatnot. I was also approached by a bunch of people who knew who I was from reading my [WWW2015 post](https://rhiaro.co.uk/2015/05/www2015) o.O Which was weird, but most people seemed to like it..
+
+Finally, this was one of the better catered conferences I've been to, so props for that :)""" ;
+  as:published "2015-06-08T23:24:50+0100"^^xsd:datetime ;
+  as:tag "linked data", "conference notes", "semdev2015", "eswc2015", "workshop", "event", "semantic web" ;
+  as:name "ESWC2015" ;
+  as:content """<!---
+tags: eswc2015,semdev2015,linked data,semantic web,conference notes,event,workshop
+-->
+
+# ESWC2015
+
+This is a summary of a few bits and pieces that stood out to me from ESWC2015. I haven't covered every session I attended or paper I saw, just the ones that remained with me (other people will do full summaries of all the paper sessions I'm sure, or you can refer to [the programme](http://2015.eswc-conferences.org/program) or [Fabien Gandon's closing slides](http://www.slideshare.net/fabien_gandon/eswc-2015-closing-and-general-chairs-minute-of-madness) which have an excellent summary). For a more 'live' overview of my view on the conference you can see [everything I posted during it](https://rhiaro.co.uk/tag/eswc2015).
+
+Overall, I had a great experience, met some fantastic people and absorbed lots of interesting ideas. I feel more positive about work in linked data; I'd been slacking off following the community for a while, but I've been reassured that there are plenty of practical-minded researchers out there who are doing great things, and I'll be paying more attention again henceforth. Daily swims in the sea probably didn't hurt.
+
+## SemDev2015
+
+The developers workshop was great, full of people positive about building tools and applications, and finding ways to make the power of linked data accessible to actual end users. The focus was on building for web developers rather than on end-user applications, with projects being great libraries and tooling for working with linked data, as a way to bridge the gap. There was an air of frankness, with attendees keen to address problems openly, without handwaving or glossing over things that weren't working out. There was even live debugging during presentations.
+
+[Here's the program, with links to projects and repos](http://eswc2015.semdev.org/program/).
+
+I missed the final discussion session, but this was [recorded](https://www.youtube.com/watch?v=F4WN4XEpViA) and I hear it was good.
+
+## Philoweb
+
+For a philosophy of the web workshop, the talks and discussions during this workshop were around pretty pragmatic issues. In particular how we can obtain true decentralisation, problems with centralised DNS and internet infrastructure, the lack of attention paid in this community to security issues, and the importance of understanding social processes and current practice for ensuring the web continues to function and that we don't "break it by accident" (Henry Thompson). These aren't things that tend to get much of a forum at conferences like ESWC, but semantic web academics being at the forefront of a truly linked information space should definitely be encouraged to think about the effects of our work on society, particularly underprivileged and minorities.
+
+## USEWOD
+
+This workshop - [usage analysis and the web of data](http://usewod.org/usewod2015.html) - had a general focus on understanding and getting the most out of the web as we know it today, in order to shape the web we want in the future. As well as traditional paper submissions, they were also accepting submissions via blog posts, and will continue to accept articles on an ongoing basis, which is a great way to keep the discussion alive. I was gutted to miss [Max van Kleek's](http://hip.cat) keynote ["Not in my Castle"](http://usewod.org/files/workshops/2015/papers/USEWOD15_vankleek.pdf) because I got the timing wrong, but I hear it was awesome.
+
+## In Use & Industry
+
+Harry Halpin and Francesca Bria worked on an interesting project to map social innovation projects (like hacklabs, open data initiatives, community enterprises) across Europe. It wouldn't have been strictly necessary to use linked data for this, and doing so might have actually caused the site to be pretty slow. However, it allowed them to do a bunch of interesting network analysis on the hundreds of different projects and organisations mapped and gain some insights into how to strengthen such initiatives (for example, by increasing collaboration opportunities). Also, I suspect technologies for building sites on the back of linked data have probably improved quite a bit since this work was started, so the speed issue might easy to overcome. I paid attention cos I'm generally interested in putting stuff on maps but I'd really like to see more decentralised mapping things; projects/organisations publishing their information independently as linked data, such that they're in control over what's available, rather than having to submit their info to a centralised service.
+
+## Crowdsourcing and web science
+
+Seyi Feyisetan from Southampton discussed different factors that affected the performance of crowd workers, by looking at features of the tasks themselves rather than the platform or rewards, when asking workers to classify entities in tweets. It was suggested that their results could be used to work out if NER on your microposts dataset would be better performed by machine, human experts or crowdworkers, depending on the contents of the dataset.
+
+Revanthy Krishnamurthy presented about using general background knowledge and the contents of tweets to detect the location of twitter users, as most twitter users don't have geolocation enabled when posting. They did smart stuff like correlating mentions of events, landmarks and slang terms with physical places, but I don't remember them saying much about respecting the privacy of people who actively don't use geolocation..
+
+## Demos
+
+The demos and poster session I thought was particularly lively. I liked that it didn't overlap with any other sessions, and breakfast cakes and fruit were distributed through the demos area. It was pretty cramped though, and possibly would have been better off earlier in the week too (it was in the morning of the last day).
+
+I appreciate the principles and technologies behind [Sarven Capadisli's](http://csarven.ca/#i) [Linked Research](http://linked-research.270a.info) project, to the point that I implemented it for [one of my own papers](https://rhiaro.co.uk/pub/cim14) immediately. Encouraging web scientists to publish their research using the native web stack, using RDF to make research queryable and discoverable on a more granular level - in other words, to practice what we preach - is a worthy goal. And it was really easy to set up. Everyone should do it.
+
+Entity annotation isn't something I know much about, but I think I understood a bit more after talking to [Ricardo Usbeck](http://aksw.org/RicardoUsbeck.html) about [GERBIL](http://aksw.org/Projects/GERBIL.html), a tool for evaluating entity annotators. This easy to use online tool lets you compare some of the different annotators available against different types of datasets, to see which would perform the best for your particular use case, without you needing to access any of the test datasets yourself (as you often have to pay for licenses). You just plug your annotator in and leave it running, and it returns results. This also allowed them to check reported results of popular annotators and compare them according to different standards, for a more well rounded view of their capabilities. I dunno if the preceding paragraph made much sense, but that's what I got.
+
+## Other
+
+Had some great discussions about microformats, RDFa, schema.org, federated/decentralised social web stuff and whatnot. I was also approached by a bunch of people who knew who I was from reading my [WWW2015 post](https://rhiaro.co.uk/2015/05/www2015) o.O Which was weird, but most people seemed to like it..
+
+Finally, this was one of the better catered conferences I've been to, so props for that :)""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/608037855546490880/44687734>, <https://brid-gy.appspot.com/like/twitter/rhiaro/608037855546490880/12193532>, <https://twitter.com/olberger/status/608293109609472000>, <https://brid-gy.appspot.com/like/twitter/rhiaro/608037855546490880/55247494>, <https://twitter.com/csarven/status/608173523979366401> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

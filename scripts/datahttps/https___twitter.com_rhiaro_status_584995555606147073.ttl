@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/rhiaro/status/584995555606147073>
+  sioc:reply_of <https://rhiaro.co.uk/2015/04/blog-post-content> ;
+  as:published "2015-04-06T09:26:23+01:00"^^xsd:datetime ;
+  as:name "@LukasRosenstock thanks!" ;
+  as:content """[@LukasRosenstock][1] thanks!
+
+[1]: https://twitter.com/LukasRosenstock
+""" ;
+  as:actor <https://rhiaro.co.uk/> .
+

@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://llog.rhiaro.co.uk/1420475160>
+  a blog:LlogPost ;
+  as:published "2015-01-05T16:26:00+0000"^^xsd:datetime ;
+  as:tag "snack", "tea", "chocolate", "quantified self", "food", "eat", "life" ;
+  as:startTime "2015-01-05T16:26:00+0000"^^xsd:datetime ;
+  as:endTime "2015-01-05T16:26:00+0000"^^xsd:datetime ;
+  as:content """<!---
+start: 5th January 2015, 16:26
+end: 5th January 2015, 16:26
+type: LlogPost
+tags: eat,food,snack,tea,chocolate
+list: done
+-->
+
+Herby tea, 32g vegan chocolate bar.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Iced mate and lemon",
+    "as:tag": [
+        "tea"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-08T20:14:01-04:00",
+    "@id": "http://blog.rhiaro.co.uk/iced-mate-lemon",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/iced-mate-lemon"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-08T20:14:01-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

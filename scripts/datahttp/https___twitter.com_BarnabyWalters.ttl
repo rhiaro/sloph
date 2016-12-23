@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/BarnabyWalters>
+  foaf:name "Barnaby Walters" ;
+  foaf:homepage <https://twitter.com/BarnabyWalters> ;
+  foaf:depiction <https://twitter.com/BarnabyWalters/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/8fd9eba33f3f1587d25239a268e7c2a49e389b7302242c258fb98c2c568dc111.jpeg> .
+

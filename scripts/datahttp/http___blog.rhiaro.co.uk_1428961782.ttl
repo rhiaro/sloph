@@ -1,0 +1,23 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1428961782>
+  a as:Save ;
+  dcterms:created "2015-04-13T22:49:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!--- 
+published: 13th April 2015, 22:49
+bookmark-of: https://www.w3.org/wiki/Activity_Streams/Examples
+tags: linked data,activitystreams,socialwg,social web,as2,jasnell,w3c
+-->
+
+""" ;
+  sioc:topic "linked data", "activitystreams", "socialwg", "social web", "as2", "jasnell", "w3c" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/04/1428961782> ;
+  blog:bookmark_of <https://www.w3.org/wiki/Activity_Streams/Examples> .
+

@@ -1,0 +1,13 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/flight-from-lisbon>
+  a as:Travel ;
+  as:name "Flight from Lisbon to Boston" ;
+  as:published "2016-08-08T13:14:43-04:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/usa>, <https://rhiaro.co.uk/tags/travel>, <https://rhiaro.co.uk/tags/portugal>, <https://rhiaro.co.uk/tags/boston>, <https://rhiaro.co.uk/tags/journey>, <https://rhiaro.co.uk/tags/flight>, <https://rhiaro.co.uk/tags/lisbon>, <https://rhiaro.co.uk/tags/tpac2016>, <https://rhiaro.co.uk/tags/plane> ;
+  as:endTime "2016-09-25T16:55:00-04:00"^^xsd:dateTime ;
+  as:origin <http://dbpedia.org/resource/Lisbon> ;
+  as:startTime "2016-09-25T12:30:00+01:00"^^xsd:dateTime ;
+  as:target <http://dbpedia.org/resource/Boston> .
+

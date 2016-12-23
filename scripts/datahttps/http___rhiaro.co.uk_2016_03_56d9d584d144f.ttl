@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/56d9d584d144f>
+  a as:Add ;
+  as:published "2016-03-04T18:35:48+00:00"^^xsd:dateTime ;
+  as:tag "profiles", "phd", "academia", "LinkedResearch", "metrics" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:object <https://twitter.com/lutzid/status/705802780913618945> .
+

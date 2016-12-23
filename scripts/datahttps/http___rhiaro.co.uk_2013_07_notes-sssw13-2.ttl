@@ -1,0 +1,32 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/07/notes-sssw13-2>
+  as:published "2013-07-08T13:56:00.000Z"^^xsd:datetime ;
+  as:tag "mathieu d'aquin", "sssw13", "sssw2013", "notes", "semantic web", "events", "phd", blog:Done, "linked data" ;
+  as:name "[Notes] Introduction to Linked Data at #SSSW2013" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3215366757403317415" ;
+  as:content """(by Mathieu D'Aquin).  
+  
+  
+
+** [Introduction to Linked Data](http://www.slideshare.net/mdaquin/sssw13-ldtut) ** from **[Mathieu d'Aquin](http://www.slideshare.net/mdaquin)**
+
+  
+Linked Data = _universal_ connections, like Lego.  
+  
+Universal is why it's important.  
+  
+[Workshop instructions](http://sssw.org/13-ho/ho1/).  
+  
+The only problem we had during the workshop was disagreement about how to read
+the 'broader' and 'narrower' relations between courses.  It instinctively
+ready contrary to what (my) common sense suggested (eg. that 'arts and
+humanities' is broader than 'history', which some people disagreed with).  A
+quick reference to the ontology documentation resolved that.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-07-17T13:59:11.745Z"^^xsd:datetime .
+

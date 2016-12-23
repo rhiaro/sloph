@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/1432580283>
+  a as:Like ;
+  as:published "2015-05-25T19:58:03+0100"^^xsd:datetime ;
+  as:tag "" ;
+  as:content """<!---
+published: 25th May 2015, 19:58 Europe/London
+like-of: https://twitter.com/kylewmahan/status/602907385351385088
+tags: 
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/kylewmahan/status/602907385351385088> .
+

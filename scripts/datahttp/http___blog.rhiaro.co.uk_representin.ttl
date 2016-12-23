@@ -1,0 +1,29 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/representin>
+  dcterms:created "2015-05-18T14:59:33+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: www2015,twitter,poster,gordonnedwards
+cc: http://twitter.com/ewanhklein
+list: did
+-->
+
+Representin' [Gordon Edwards'](http://twitter.com/gordonnedwards) twitter spammer categorization poster at www2015
+
+![Gordon's poster](http://rhiaro.co.uk/stash/posterwww.jpg)""" ;
+  sioc:topic "www2015", "twitter", "poster", "gordonnedwards" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/representin> ;
+  as:latitude "43.78183" ;
+  as:longitude "11.24942" ;
+  blog:tmpcontent """Representin' [Gordon Edwards'](http://twitter.com/gordonnedwards) twitter spammer categorization poster at www2015
+
+![Gordon's poster](http://rhiaro.co.uk/stash/posterwww.jpg)""" ;
+  as:cc "http://twitter.com/ewanhklein" .
+

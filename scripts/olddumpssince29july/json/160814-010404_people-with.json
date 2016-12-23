@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "content": "People with connections gather on side of road as if looking worried and talking about how much this will cost [Greyhound](http://greyhound.com) will help",
+    "in-reply-to": "http://rhiaro.co.uk/2016/08/travelupdate-cool",
+    "category": [
+        "travel",
+        "bus",
+        "greyhound",
+        "us0816"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-08-14T01:04:04+01:00",
+    "@id": "http://blog.rhiaro.co.uk/people-with",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/people-with"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-14T01:04:04+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

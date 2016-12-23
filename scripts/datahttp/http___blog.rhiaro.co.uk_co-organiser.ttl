@@ -1,0 +1,34 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/co-organiser>
+  dcterms:title "Co-organiser, Smart Data Hack" ;
+  dcterms:created "2013-02-18T09:00:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 18th February 2013, 09:00
+start: 18th February 2013, 10:00
+end: 22nd February 2013, 19:00
+tags: cv,resume,volunteer,organiser,hackathon,smart data hack,ilwhack,university of edinburgh,innovative learning week
+-->
+
+# Co-organiser, Smart Data Hack
+
+## University of Edinburgh
+
+Dropped the ball on my PhD for months to wrangle sponsors, set up the website, recruit participants and generally get shit together. It went well, with feedback from students like "easily the most useful and fun week I've had since I started uni".""" ;
+  sioc:topic "cv", "resume", "volunteer", "organiser", "hackathon", "smart data hack", "ilwhack", "university of edinburgh", "innovative learning week" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/02/co-organiser> ;
+  as:startTime "2013-02-18T10:00:00+0000"^^xsd:datetime ;
+  as:endTime "2013-02-22T19:00:00+0000"^^xsd:datetime ;
+  blog:tmpcontent """# Co-organiser, Smart Data Hack
+
+## University of Edinburgh
+
+Dropped the ball on my PhD for months to wrangle sponsors, set up the website, recruit participants and generally get shit together. It went well, with feedback from students like "easily the most useful and fun week I've had since I started uni".""" .
+

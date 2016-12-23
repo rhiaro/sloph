@@ -1,0 +1,18 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/r/do-you-mind-if>
+  a sioc:Comment ;
+  dcterms:created "2012-05-13T13:54:21.190Z"^^xsd:datetime ;
+  dcterms:modified "2012-05-13T13:54:21.190Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2410272534488265724" ;
+  dc:creator <http://www.blogger.com/profile/09533442250516461068> ;
+  sioc:content """do you mind if I re-post this on my blog?
+
+""" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2012/05/do-you-mind-if> .
+

@@ -1,0 +1,19 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/made-korenica>
+  as:latitude "44.11937" ;
+  as:longitude "15.23136" ;
+  blog:tmpcontent "Made it to Korenica, to a really lovely two-week old hostel" ;
+  as:published "2015-05-27T17:37:25+0100"^^xsd:datetime ;
+  as:tag "travel", "croatia", "korenica", "plitvice" ;
+  as:location <http://dbpedia.org/resource/Korenica> ;
+  as:content """<!---
+tags: travel,croatia,korenica,plitvice
+location: http://dbpedia.org/resource/Korenica
+-->
+
+Made it to Korenica, to a really lovely two-week old hostel""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

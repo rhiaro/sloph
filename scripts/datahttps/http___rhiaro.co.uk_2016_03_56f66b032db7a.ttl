@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2016/03/56f66b032db7a>
+  a as:Travel ;
+  as:published "2016-03-26T10:56:08+00:00", "2016-03-26T10:56:08+00:00"^^xsd:dateTime ;
+  as:tag "boston", "canada", "coach", "conference", "journey", "montreal", "travel", "usa", "www2016" ;
+  as:startTime "2016-04-18T23:30:00-05:00" ;
+  as:endTime "2016-04-19T06:55:00-05:00" ;
+  blog:cost "$46" ;
+  as:origin <http://dbpedia.org/resource/Montreal> ;
+  as:target <http://dbpedia.org/resource/Boston> .
+

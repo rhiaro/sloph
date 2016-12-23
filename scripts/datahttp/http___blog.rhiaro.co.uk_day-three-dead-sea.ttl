@@ -1,0 +1,53 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/day-three-dead-sea>
+  dcterms:title "Day Three: The Dead Sea and Karak" ;
+  dcterms:created "2011-07-30T15:50:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2011-07-30T15:50:41.137Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2950374330151285714" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """We awoke on a mountainside at around 7. So far nighttime has proved to be
+uncomfortably hot, at least within a tent. Breakfast was french toast by
+Heather and Kath. We packed up and set off,driving for ages to find a secluded
+spot by the Dead Sea. We avoided the usual areas as the were populated by
+local tourists. We changed into swimwear and scrambled down to experience the
+30% salt water and apparently rejuvinating mud.  
+  
+The buoying sensation of the dense water was the perfect, effortless
+suspension. The water was not as painful as I'd been lead to believe it might
+be and I managed to avoid getting any in my eyes or mouth. Salt deposits
+around the edge were pretty stunning and I would have happily stayed in the
+warm water for longer than the time we had.  
+  
+Next stop was a town called Karak; apparently not the least nightmareish place
+out there, particularly for navigating with a truck the size of ours. We had a
+lengthy lunch (falafel pitta for me) and went to look for supplies for the
+evening meal. Food was massively overpriced (we were probably lied to). We
+visited an ancienr Crusader castle which turned out to be enormous and very
+underrated. Entry was 1JOD which did not include the services of an
+unavoidable local guide.  
+  
+We were off again, destined for our final stop of the day the Al-Alanbat
+hotel. We were sweaty and tired and so delighted when the first thing we saw
+upon dismounting the coach was a shadey pool.  
+  
+Everyone elso took a dip, whilst Helen, Al and I made no nonesense chilli with
+beans, vegetables and soya mince. Twas tasty.  
+  
+Finally I had chance to JUMP IN THE POOL. It was dark by this time and the
+pool was freezing to start with but the swim was heavenly. Although normal
+water is somewhat disappointing after the Dead Sea experience.  
+  
+We hit the sack early in our makeshift dorm in what may be a hotel outhouse.
+Insects and strange noises abound through the night. Always good for the night
+before a 6am start..
+
+""" ;
+  sioc:topic blog:Done, "travel", "jordan", "dead sea", "crusades", "castle" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/07/day-three-dead-sea> .
+

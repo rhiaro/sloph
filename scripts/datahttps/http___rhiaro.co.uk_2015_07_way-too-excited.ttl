@@ -1,0 +1,19 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/07/way-too-excited>
+  sioc:reply_of <https://ben.thatmustbe.me/photo/2015/7/12/9/> ;
+  blog:tmpcontent "Way too excited about SWAT0 right now." ;
+  as:published "2015-07-13T01:07:38+0100"^^xsd:datetime ;
+  as:tag "swat0", "indiewebcamp", "socialwg", "indieweb" ;
+  as:content """<!---
+reply-to: https://ben.thatmustbe.me/photo/2015/7/12/9/
+tags: swat0,indiewebcamp,indieweb,socialwg
+-->
+
+Way too excited about SWAT0 right now.""" ;
+  sioc:has_reply <http://known.kevinmarks.com/2015/the-real-excitement-is-how-fluid-responding-feels> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

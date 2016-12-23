@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/people-with>
+  a as:Note ;
+  as:published "2016-08-14T01:04:04+01:00"^^xsd:dateTime ;
+  as:tag "bus", "us0816", "greyhound", "travel", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/travel>, <https://rhiaro.co.uk/tags/bus>, <https://rhiaro.co.uk/tags/greyhound> ;
+  as:content "<p>People with connections gather on side of road as if looking worried and talking about how much this will cost <a href=\"http://greyhound.com\">Greyhound</a> will help</p>" ;
+  as:inReplyTo <https://rhiaro.co.uk/2016/08/travelupdate-cool> .
+

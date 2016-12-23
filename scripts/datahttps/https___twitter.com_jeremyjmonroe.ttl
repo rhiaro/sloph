@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/jeremyjmonroe>
+  foaf:name "Jeremy Monroe" ;
+  foaf:homepage <https://twitter.com/jeremyjmonroe> ;
+  foaf:depiction <https://twitter.com/jeremyjmonroe/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/496300328041b9c57d622d0fd7f282e1b342834c2187f9b60d029f7661451ff4.png> .
+

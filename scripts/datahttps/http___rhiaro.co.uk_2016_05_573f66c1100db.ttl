@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573f66c1100db>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-19T19:33:00-07:00"^^xsd:dateTime ;
+  as:tag "bus", "ca2016", "san diego", "travel" ;
+  blog:cost "$1.25 (+$1 from kind stranger)" ;
+  as:summary "Number 11" .
+

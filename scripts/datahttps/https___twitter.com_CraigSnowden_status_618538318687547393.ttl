@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/CraigSnowden/status/618538318687547393>
+  sioc:reply_of <https://rhiaro.co.uk/2015/07/group-50-50> ;
+  as:published "2015-07-07T22:53:21+01:00"^^xsd:datetime ;
+  as:name "@rhiaro What sort of languages you seeing? I would have said PHP at the time" ;
+  as:content """[@rhiaro][1] What sort of languages you seeing? I would have said PHP at the time
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <https://twitter.com/CraigSnowden> .
+

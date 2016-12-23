@@ -1,0 +1,12 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://known.kevinmarks.com/2015/micropub-in-the-pub>
+  dcterms:title "micropub in the pub?" ;
+  dcterms:created "2015-07-11T19:09:25+01:00"^^xsd:datetime ;
+  dc:creator <http://known.kevinmarks.com/profile/kevinmarks> ;
+  sioc:content "micropub in the pub?" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/07/yo-dawg-heard> .
+

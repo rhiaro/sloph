@@ -1,0 +1,25 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/want-completely>
+  blog:tmpcontent """I want to completely run my calendar from my website, even if it's just as a series of RSVPs. I think tomorrow at HWC I'll scope out exactly what I do for this to happen. Off the top of my head, I need:
+
+* Restricted access to event details (potentially just by obscurity).
+* Reoccurring events.
+* Inviting people, or at least tagging people I expect to be there.
+* Better location display.""" ;
+  as:published "2015-09-02T11:09:15+0100"^^xsd:datetime ;
+  as:tag "hwc", "calendar", "events", "indieweb", "slogd", "hacking" ;
+  as:content """<!---
+tags: calendar,slogd,hacking,indieweb,hwc,events
+-->
+
+I want to completely run my calendar from my website, even if it's just as a series of RSVPs. I think tomorrow at HWC I'll scope out exactly what I do for this to happen. Off the top of my head, I need:
+
+* Restricted access to event details (potentially just by obscurity).
+* Reoccurring events.
+* Inviting people, or at least tagging people I expect to be there.
+* Better location display.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

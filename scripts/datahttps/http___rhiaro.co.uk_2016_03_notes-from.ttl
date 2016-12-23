@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/notes-from>
+  as:published "2016-03-06T01:05:08+00:00"^^xsd:dateTime ;
+  as:tag "social", "phd", "academia", "research", "phdchat", "linked", "paywalls", "science" ;
+  as:content "Notes from reading social science research... Articles are way harder to get hold of outside of paywalls (than compsci) and.. they get to cite things from like 1800s." .
+

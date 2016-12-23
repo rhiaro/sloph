@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/couchsurfing>
+  as:published "2016-05-21T07:09:10+01:00"^^xsd:dateTime ;
+  as:tag "travel", "ca2016", "couchsurfing", "diego", "san" ;
+  as:content "CouchSurfing reminds me that people are SO NICE it warms my heart. And you know me, I don't even like people. Maybe it's just the kind of people who give strangers a key to their home, offer them anything in their fridge and even drive them around. I'm SO glad I didn't hostel San Diego, and cost isn't even on the list of reasons." .
+

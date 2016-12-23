@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/fries>
+  a as:Collection ;
+  as:name "fries" ;
+  as:items <https://rhiaro.co.uk/2016/08/homemade-fries>, <https://rhiaro.co.uk/2016/08/fries-watermelon>, <https://rhiaro.co.uk/2016/09/half-fries-bbq> .
+

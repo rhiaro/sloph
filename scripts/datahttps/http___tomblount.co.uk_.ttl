@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://tomblount.co.uk/>
+  foaf:name "Tom Blount" ;
+  foaf:homepage <http://tomblount.co.uk/> ;
+  foaf:depiction <https://twitter.com/Tom_Blount/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/f108782e284655b67cd196c1ab80d5273aedecc16e51d6684fcdd1597c950783.jpeg> .
+

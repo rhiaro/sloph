@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/indecisivecoder/status/600659580113297408>
+  sioc:reply_of <https://rhiaro.co.uk/2015/05/personal> ;
+  as:published "2015-05-19T14:49:38+01:00"^^xsd:datetime ;
+  as:name "@rhiaro I read their paper on emotional contagion and it was interesting but maybe they should take some ethics lessons." ;
+  as:content """[@rhiaro][1] I read their paper on emotional contagion and it was interesting but maybe they should take some ethics lessons.
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <https://twitter.com/indecisivecoder> .
+

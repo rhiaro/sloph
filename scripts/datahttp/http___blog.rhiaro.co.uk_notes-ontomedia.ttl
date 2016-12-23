@@ -1,0 +1,116 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/notes-ontomedia>
+  dcterms:title "Notes about Annotating Multimedia with OntoMediaLawrence, K.F., schraefel, m.c.: Bringing communities to the semantic web and the semantic web to communities. In: Proceedings of WWW2006. (2006)" ;
+  dcterms:created "2013-03-03T20:38:00.001Z"^^xsd:datetime ;
+  dcterms:modified "2013-04-01T00:06:44.021Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3415710226505767261" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """**Michael O. Jewell, K. Faith Lawrence, Adam Prugel-Bennett, and m. c. schraefel (200?) Annotation of Multimedia Using OntoMedia**  
+  
+[Check out a bit of discussion about this paper on Ontologies with a
+View](http://ontologieswithaview.blogspot.co.uk/2013/02/week-6-annotating-
+multimedia.html).  
+  
+OntoMedia for representing "diverse range of media".  
+  
+Others for media:  
+  
+
+  * CIDOC Conceptual Reference Model (museums)
+  * ABC Ontology (multimedia in libraries and digital archives)
+  * Functional Requirements for Bibliographic Records (attribute and relationshops for task performed when consulting bibliographic records)
+  * FictionFinder - FRBR to Online Computer Library Centre
+  * WorldCat db - Metadata about characters and fictional places
+    * Describe contents of films & comics etc for tracking things down to share you forgot?
+  
+None quite did what was needed.  
+So created to map to current models but specifically describe media content.  
+Hierarchical approach.  
+  
+1\\\\. Overview  
+Entity / Event system  
+Entity: object, concept  
+Event: interaction between one or more entities  
+0 or more Entities are modified OR new Entity created  
+Entities not destroyed, but may have not-exists attribute  
+  
+  
+Decompose to sub-ontologies.  
+  
+ontomedia.ecs.soton.ac.uk/ontologies  
+  
+Mediate? Graphical interface.
+interaction.ecs.soton.ac.uk/ir/projects/ontomedia/ontomedia  
+  
+Sub-ontologies  
+  
+
+  * Core
+    * Expression (primarily elements and subclasses; Entity, Event)
+    * Media (binding between media and Expression objects)
+    * Space (extension of Signage Location Ontology, buildings, and regions of structures)
+  * Extensions (more detailed subclasses to Core)
+    * Being (people)
+    * Trait (attributes of Entities)
+  * Events (extends Core->Event)
+    * Action
+    * Gain
+    * Loss
+    * Travel
+    * & properties thereof
+  * Fiction
+    * Character (on Being)
+    * spoiler info. and accuracy
+  * Media
+    * More detailed than the one in Core; includes audio, image, photo, text and video subclasses
+  * Misc - classes used by any or all of other classes, eg. colour, geometry
+  
+Specified in OWL  
+Developed in Protege and SWOOP.  
+  
+2\\\\. Case Study  
+Scene from Total Recall annotated.  Represent script and characters, and
+characters from related book, and links between two forms.  
+  
+Screenplay annotation - SiX - Screenplays in XML.  
+Wraps around existing content.  
+Transition (cuts, fades, blackouts), location, dialogue and direction (action
+taking place in the script)  
+  
+SiX allows for DC, for creators, date, descr, title.  
+Custom XSL to conform marked up scripts to Oscar requirements for readability.  
+  
+Script Item extends Media Item to link script representation to OntoMedia.  
+Use has-expression to tie to OntoMedia:Expression.  
+  
+Describing places and access etc, like lift, like IF.  
+\\\\- For describing character continuity, eg 'can character really see x' etc.  
+  
+Must describe events that don't occur.  Characters want to occur, etc.
+Multiple timelines, dreams.  
+  
+Declare events.  
+Create timeline and add occurances.  
+\\\\- events can be reused, and coincide.  
+  
+3\\\\. Testing / querying  
+Imported into Sesame triplestore.  
+RDQL queries (subset of SPARQL, simpler, only ever has 1 graph pattern,
+doesn't use RDF data typing)  
+  
+4\\\\. Conclusion  
+No examples of pictures - how to annotate comics?  
+  
+Combining OM with other apps.  
+Stuff integrated into Mediate.
+
+""" ;
+  sioc:topic blog:Doing, "phd", "paper", "ontomed", "ontologies", "online communities", "digital media" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/03/notes-ontomedia> .
+

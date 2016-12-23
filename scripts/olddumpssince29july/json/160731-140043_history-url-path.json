@@ -1,0 +1,32 @@
+{
+    "h": "entry",
+    "bookmark-of": "https://eager.io/blog/the-history-of-the-url-path-fragment-query-auth/",
+    "name": "The History of the URL: Path, Fragment, Query, and Auth - Eager Blog",
+    "category": [
+        "semantic",
+        "web",
+        "web",
+        "uri",
+        "urn",
+        "timbl",
+        "phd",
+        "websci",
+        "history",
+        "formencoded",
+        "auth",
+        "http",
+        "www",
+        "fragments",
+        "httprange14"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-07-31T14:00:43+01:00",
+    "@id": "http://blog.rhiaro.co.uk/history-url-path",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/07/history-url-path"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-07-31T14:00:43+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

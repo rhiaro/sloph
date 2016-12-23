@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/rhiaro/status/611878960415305728>
+  sioc:reply_of <https://rhiaro.co.uk/2015/06/starting-wonder> ;
+  as:published "2015-06-19T13:51:26+01:00"^^xsd:datetime ;
+  as:name "@anticitizen79 yeah I'm setting this up right now" ;
+  as:content """[@anticitizen79][1] yeah I'm setting this up right now
+
+[1]: https://twitter.com/anticitizen79
+""" ;
+  as:actor <https://rhiaro.co.uk/> .
+

@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/rhubarb-flapjack>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-06-23T22:12:31-04:00"^^xsd:dateTime, "2016-06-24T09:29:03-04:00"^^xsd:dateTime, "2016-06-24T09:29:03-04:00", "2016-06-23T22:12:31-04:00" ;
+  as:tag "coffee", "fruit", "oats", "cake" ;
+  as:name "Rhubarb flapjack, coffee", "Rhubarb flapjack" .
+

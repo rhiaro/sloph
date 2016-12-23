@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://www.youtube.com/user/seavord>
+  foaf:name "Dan pearson" ;
+  foaf:homepage <https://www.youtube.com/user/seavord> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/8e8461a4a086b1a816ba8714970c5a9850eaf34348d56d0a01c0b1314b9af82e.jpeg> .
+

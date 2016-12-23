@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/Tom_Blount/status/601331295344525312>
+  sioc:reply_of <https://rhiaro.co.uk/2015/05/our-epic-poster> ;
+  as:published "2015-05-21T11:18:47+01:00"^^xsd:datetime ;
+  as:name "@rhiaro @emax Is that poster available online?" ;
+  as:content """[@rhiaro][1] [@emax][2] Is that poster available online?
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/emax
+""" ;
+  as:actor <http://tomblount.co.uk/> .
+

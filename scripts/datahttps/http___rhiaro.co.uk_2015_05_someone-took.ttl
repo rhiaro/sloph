@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/someone-took>
+  blog:tmpcontent "Someone took my correctly labelled and desperately craved juice from the hostel fridge :((( I don't know how to react other than by sharing my anguish with the world." ;
+  as:published "2015-05-14T20:09:21+0100"^^xsd:datetime ;
+  as:tag "travel", "hostel" ;
+  as:content """<!---
+tags: travel,hostel
+-->
+
+Someone took my correctly labelled and desperately craved juice from the hostel fridge :((( I don't know how to react other than by sharing my anguish with the world.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

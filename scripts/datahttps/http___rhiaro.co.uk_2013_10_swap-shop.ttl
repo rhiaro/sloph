@@ -1,0 +1,29 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2013/10/swap-shop>
+  blog:tmpcontent """# Swap-shop volunteer
+
+## SHRUB: Swap and Reuse Hub Edinburgh
+
+The [SHRUB](http://shrubcoop.org) is an awesome cooperative dedicated to promoting reuse, recycling, repairing and upcycling. I helped with early sorting-out of the new shop premises, made some shelves.. spent a few hours per week working in the shop in exchange for swap tokens which which I have procured all manner of exciting things, and helped with the big university halls cleanup last year. I regret that I've only managed to make it in a couple of times in 2015.""" ;
+  as:published "2013-10-01T00:00:00+0100"^^xsd:datetime ;
+  as:tag "edinburgh", "resume", "cv", "volunteer", "work", "shop", "swap shop", "shrub", "sharing economy", "free stuff", "community" ;
+  as:name "Swap-shop volunteer" ;
+  as:startTime "2013-10-01T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2014-06-01T00:00:00+0100"^^xsd:datetime ;
+  as:content """<!---
+published: 1st October 2013
+start: October 2013
+end: June 2014
+tags: cv,resume,volunteer,swap shop,shrub,edinburgh,sharing economy,free stuff,community,shop,work
+-->
+
+# Swap-shop volunteer
+
+## SHRUB: Swap and Reuse Hub Edinburgh
+
+The [SHRUB](http://shrubcoop.org) is an awesome cooperative dedicated to promoting reuse, recycling, repairing and upcycling. I helped with early sorting-out of the new shop premises, made some shelves.. spent a few hours per week working in the shop in exchange for swap tokens which which I have procured all manner of exciting things, and helped with the big university halls cleanup last year. I regret that I've only managed to make it in a couple of times in 2015.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

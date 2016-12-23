@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Quinoa burger and fries. Watermelon juice",
+    "as:tag": [
+        "burger",
+        "swingers",
+        "juice",
+        "fries"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-16T23:13:44-07:00",
+    "@id": "http://blog.rhiaro.co.uk/quinoa-burger",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/quinoa-burger"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-16T23:13:44-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

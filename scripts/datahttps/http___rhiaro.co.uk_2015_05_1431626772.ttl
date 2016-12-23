@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/1431626772>
+  a as:Like ;
+  as:published "2015-05-14T19:06:12+0100"^^xsd:datetime ;
+  as:tag "" ;
+  as:content """<!---
+published: 14th May 2015, 19:06 Europe/London
+like-of: https://tommorris.org/posts/9298
+tags: 
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://tommorris.org/posts/9298> .
+

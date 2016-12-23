@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/work-wanted>
+  dcterms:title "Work wanted a website in an hour today." ;
+  dcterms:created "2011-05-13T19:27:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-03-31T23:57:13.068Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7666757292937788553" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """Their previous version of this particular site was the image from the event
+poster, with links mapped onto it.  It was mere moments before my progressive
+enhancement / responsive design OCD kicked in.  The site in question is to
+advertise this year's University of Lincoln Grad Ball, and is little more than
+an online poster.  So here goes.  
+  
+**1530**  
+Marked up the page, with HTML5 tags and the content from the poster, using
+currently non-existent classes where needed, and also including a few non-
+existant images. Added my own mini CSS reset for the elements I was using.  
+  
+**1545**  
+Cut the couple of images I needed out of the poster png and uploaded them.
+Spent a while trying to find something to match the obscure Mac font that had
+been used on the poster.  Impact was close, but didn't quite cut it at small
+sizes.  Played with weighting and letter spacing for ages, but eventually
+picked a font from [Google Web Fonts](http://www.google.com/webfonts) that did
+the trick and styled all the typography related stuff.  
+  
+**1605**  
+Aligned, padded, margined and weighted everything as I wanted.  Remembered to
+use a [HTML5 enabling script](http://www.google.co.uk/url?sa=t&source=web&cd=1
+&ved=0CBwQFjAA&url=http%3A%2F%2Fcode.google.com%2Fp%2Fhtml5shiv%2F&ei=rH_NTYP6
+IoqFhQej84TzDA&usg=AFQjCNErV22-6VKvkOOkRX0x64e0kudSvQ&sig2=zfx8iuSLHsyfvXzs9Gc
+7Tw) so versions of IE lte8 would actually bother to style things properly.  
+  
+**1625**  
+Took a step back to look at content.  The organisation of it was great for a
+poster, where you can pretty much see everything at once, but in any scenario
+where scrolling is a possibility, the most important stuff needs to go at the
+top.  So I rearranged some things.  
+  
+**1630**  
+Used CSS to hide a couple of elements that would do more harm than good on a
+device with a small display. Used media queries to show them for displays with
+a greater width than 480px.  With [help for IE](http://code.google.com/p/css3
+-mediaqueries-js/), of course.  
+  
+**Nasty, dirty cheating**  
+One of the images I used consisted mostly of text, with a few images plonked
+around it.  I didn't have the energy to recreate this in a two-column list,
+especially not with the apparently randomly floating images.  The image is
+only used for 480px+ of course.  Mobile get a list.  Unfortunately, I just
+used display:none.  So mobile browsers are still loading the image.  I hate
+me, too.  But hey, I had an hour.  It's better than the whole site being an
+image.  
+  
+[READ MORE ABOUT RESPONSIVE DESIGN](http://www.alistapart.com/articles
+/responsive-web-design/).  
+  
+I wrote that in capitals, because it is not a suggestion.  
+  
+And, if you're University of Lincoln final year student, [get your tickets for
+the Grad Ball](http://www.lincolngradball.com/), and resize your browser
+window while you're there.  It's going to be the best one yet, as they say
+every year.  
+  
+It doesn't really seem like much when summarised like this, but I _do_ wish I
+was paid more than £6 an hour.
+
+""" ;
+  sioc:topic "Lincoln", "hacking", "learning", "lincoln su", "responsive design", "web development", "work", blog:Done ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/05/work-wanted> .
+

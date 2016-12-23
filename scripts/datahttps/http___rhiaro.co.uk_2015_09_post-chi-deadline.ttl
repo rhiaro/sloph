@@ -1,0 +1,21 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/09/post-chi-deadline>
+  blog:tmpcontent """Post-chi-deadline celebration
+
+![nachos](https://rhiaro.co.uk/photos/150925_nachos.jpg)""" ;
+  as:published "2015-09-25T20:09:10+0100"^^xsd:datetime ;
+  as:tag "nachos", "auld hoose", "vegan", "chi2016" ;
+  as:content """<!---
+tags: chi2016,nachos,vegan,auld hoose
+-->
+
+Post-chi-deadline celebration
+
+![nachos](https://rhiaro.co.uk/photos/150925_nachos.jpg)""" ;
+  sioc:has_reply <https://twitter.com/jmahoney127/status/647491737183760384>, <https://brid-gy.appspot.com/like/twitter/rhiaro/647488707977707520/2580590426>, <https://brid-gy.appspot.com/like/twitter/rhiaro/647488707977707520/414227991>, <https://twitter.com/shaunlawson/status/647491175809728512>, <https://brid-gy.appspot.com/like/twitter/rhiaro/647488707977707520/25326285>, <https://brid-gy.appspot.com/like/twitter/rhiaro/647488707977707520/113492579> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

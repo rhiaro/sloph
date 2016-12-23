@@ -1,0 +1,20 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/r/hope-you-have-fun>
+  a sioc:Comment ;
+  dcterms:created "2011-07-27T10:26:05.293Z"^^xsd:datetime ;
+  dcterms:modified "2011-07-27T10:26:05.293Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-2576277635129023852" ;
+  dc:creator <http://www.blogger.com/profile/10705745642913528294> ;
+  sioc:content """Hope you have fun Amy! I'll be following to keep an eye on your progress :o)  
+  
+Ross
+
+""" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/07/hope-you-have-fun> .
+

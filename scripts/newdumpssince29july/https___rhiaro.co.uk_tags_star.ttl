@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/star>
+  a as:Collection ;
+  as:name "star" ;
+  as:items <https://rhiaro.co.uk/2016/08/may-apparent>, <https://rhiaro.co.uk/2016/08/okay-seven-nine>, <https://rhiaro.co.uk/2016/08/x-irrelevant>, <https://rhiaro.co.uk/2016/08/--everybody> .
+

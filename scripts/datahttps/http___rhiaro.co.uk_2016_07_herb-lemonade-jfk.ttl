@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/herb-lemonade-jfk>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-16T13:03:56-04:00"^^xsd:dateTime, "2016-07-16T13:03:56-04:00" ;
+  as:tag "cake", "jfk museum" ;
+  as:name "Herb lemonade (JFK Museum cafe), chocolate beet cake" .
+

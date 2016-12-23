@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/well-kes>
+  a as:Note ;
+  as:published "2016-08-13T00:59:45+01:00"^^xsd:dateTime ;
+  as:tag "voyager", "life", "star trek", <https://rhiaro.co.uk/tags/life>, <https://rhiaro.co.uk/tags/voyager>, <https://rhiaro.co.uk/tags/star+trek> ;
+  as:content "<p>Well, Kes is terrifying.</p>" ;
+  as:inReplyTo <https://rhiaro.co.uk/2016/06/kes-too-good> .
+

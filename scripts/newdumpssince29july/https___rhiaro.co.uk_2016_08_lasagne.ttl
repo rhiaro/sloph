@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/lasagne>
+  a as:Activity, asext:Consume ;
+  as:name "Lasagne" ;
+  as:published "2016-08-29T13:08:24-04:00"^^xsd:dateTime, "2016-08-29T13:08:24-04:00" ;
+  as:tag "lasagne", "leftovers", <https://rhiaro.co.uk/tags/leftovers>, <https://rhiaro.co.uk/tags/lasagne> .
+

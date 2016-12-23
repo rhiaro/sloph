@@ -1,0 +1,18 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1438677487>
+  dcterms:created "2015-08-04T09:38:07+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+share-of: https://medium.com/the-coffeelicious/you-may-have-seen-my-face-on-bart-8b9561003e0f
+tags: gender,tech,diversity,ilooklikeanengineer
+-->""" ;
+  sioc:topic "gender", "tech", "diversity", "ilooklikeanengineer" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/08/1438677487> ;
+  blog:share_of <https://medium.com/the-coffeelicious/you-may-have-seen-my-face-on-bart-8b9561003e0f> .
+

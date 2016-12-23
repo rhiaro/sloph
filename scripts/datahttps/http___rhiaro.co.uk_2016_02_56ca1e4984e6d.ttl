@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2016/02/56ca1e4984e6d>
+  a as:Travel ;
+  as:published "2016-02-21T15:26:53-05:00", "2016-02-21T15:26:53-05:00"^^xsd:dateTime ;
+  as:tag "grantham", "journey", "london", "train", "travel", "uk" ;
+  as:startTime "2016-03-25T20:30:00+00:00" ;
+  as:endTime "2016-03-25T21:31:00+00:00" ;
+  blog:cost "&pound;13.20" ;
+  as:origin <http://dbpedia.org/resource/London> ;
+  as:target <http://dbpedia.org/resource/Grantham> .
+

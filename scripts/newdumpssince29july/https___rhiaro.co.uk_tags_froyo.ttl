@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/froyo>
+  a as:Collection ;
+  as:name "froyo" ;
+  as:items <https://rhiaro.co.uk/2016/07/oreo-froyo-oolong>, <https://rhiaro.co.uk/2016/08/apricot-froyo> .
+

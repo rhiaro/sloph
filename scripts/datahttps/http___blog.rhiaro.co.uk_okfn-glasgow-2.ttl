@@ -1,0 +1,62 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/okfn-glasgow-2> as:content """I ventured to Glasgow for the second Open Knowledge Foundation meetup on
+Monday 18th. It was well attended, and there were six short talks:  
+  
+Lorna Campbell from Cetis talked about Open Scotland. I understood this to be
+a collaboration between Cetis, the SQA, JISC and the ALT Scotland, to do with
+the opening up of education, and influencing policy and practicein this area.
+[Here's a blog](http://openscot.wordpress.com/).  
+  
+Grianne Hamilton from JISC talked about Mozilla's Open Badges. You can use
+them to reward learning, skills and achievements in all sorts of areas, and
+any organisaiton can create and issue badge packs to people who have earned
+them. Recievers can then show them off anywhere they can put HTML.  
+  
+Graeme Arnott talked about a collaboration between Glasgow Womens' Library and
+Wikimedia, which resulted in the Scottish Women on Wikipedia event. This was a
+group of Scottish women getting together to edit Wikipedia articles about
+Scottish Women, and there was very positive feedback. They have more events
+planned. Graeme also reminded us about Wikimania, which is taking place next
+August in London.  
+  
+Jennifer Jones told us about the Digital Common Wealth project. She pointed
+out that with media-saturated global events like the Olympics, the official
+story is already decided before the event even starts. An alternative to
+relying on what is broadcast by the mainstream media is to turn the camera on
+the crowd, and get the 'real' version of what is going on. The Digital Common
+Wealth project will encourage citizen journalists to work together to craft
+the story of the Glasgow Commonwealth Games from their perspective. Jennifer
+also raised the point that although free tools like YouTube, AudioBoo and
+Twitter are great for spreading stories, the data is still held by third
+parties - what happens if they disappear? How should initiatives like this
+safely archive their stories, and keep them in context?  
+  
+Pippa Gardner talked about Glasgow's Future Cities project, for which they
+have Ã‚Â£24 million to develop. It's about "people and data", but she was here
+to talk about data. There's the Data Innovation Engagement (which apparently
+needs a better acronym) and [Glasgow's data
+portal](http://data.glasgow.gov.uk/) which has already launched. Not all of
+the data on their is 'properly' open, but it's more open than it was before.
+There's a maps portal coming soon. Follow
+[@openglasgow](http://twitter.com/openglasgow) to keep up to date. Someone
+asked how they can avoid inadvertantly widening the digital divide by making
+all this data available - as it will only improve things for people who
+already have understanding and access. Pippa said there's a dedicate group in
+the Council working on widening digital participation, so they're involved.  
+  
+Duncan Bain, and MPhil student at the University of Edinburgh, talked about
+Open Architecture. He says it's hard to define 'knowledge' and 'data' in
+architecture; architects create drawings/representations, not buildings. There
+are efforts towards opening certain aspects of this, like wikihouse.cc and the
+Open Architecture Network, but the culture of the architecture world, and
+where the money is, seems to be preventing things from going in the same
+direction as software development any time soon.  
+  
+Here are livestreams of the talks by Jennifer Jones:
+[one](http://bambuser.com/v/4109947) and [two](http://bambuser.com/v/4110096)
+and a [twitter timeline by Sheila
+Macneill](http://howsheilaseesit.wordpress.com/2013/11/19/twitter-timeline-
+from-2nd-opendatagla-meet-up-okfn/).
+
+""" .

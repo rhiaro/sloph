@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://thierry.marianne.io/>
+  foaf:name "Thierry Marianne" ;
+  foaf:homepage <https://thierry.marianne.io/> ;
+  foaf:depiction <https://twitter.com/thierrymarianne/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/5334196c4a3209ede7f245a3075bf5c17a29dd434bf09034acc117da7aca0872.jpeg> .
+

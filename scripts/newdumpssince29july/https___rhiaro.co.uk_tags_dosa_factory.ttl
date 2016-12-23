@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/dosa+factory>
+  a as:Collection ;
+  as:name "dosa factory" ;
+  as:items <https://rhiaro.co.uk/2016/09/half-coconut-dosa>, <https://rhiaro.co.uk/2016/09/57cb3be3b3bd0> .
+

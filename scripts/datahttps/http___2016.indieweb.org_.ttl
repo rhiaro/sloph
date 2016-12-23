@@ -1,0 +1,12 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://2016.indieweb.org/>
+  a as:Event ;
+  as:tag "attendee", "decentralised social web", "event", "hackathon", "hacking", "indieweb", "indiewebcamp", "portland", "rsvp", "social web", "usa" ;
+  as:name "Indieweb Summit 2016" ;
+  as:startTime "2016-06-03T19:00:00-07:00" ;
+  as:endTime "2016-06-05T18:00:00-07:00" ;
+  as:location <http://dbpedia.org/resource/Portland,_Oregon> ;
+  blog:cost "$0" .
+

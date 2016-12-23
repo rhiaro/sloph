@@ -1,0 +1,54 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/day-thirteen-luxor>
+  dcterms:title "Day Thirteen: Luxor" ;
+  dcterms:created "2011-08-12T21:55:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2011-08-12T21:55:48.061Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-7985985603442582572" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """After our sandy night, we had another drive day. We were all pretty grimy. We
+spent a majority of this journey learning interesting and enthralling 'facts'
+from a quiz book we found on the truck. This consumed hours.  
+  
+We stopped for lunch and supplies at La Senza Mall; made up for some great
+purchases at a super cheap Carrefour by spending the same amount on a single
+coffee at an overpriced chain. Totally worth it.  
+  
+We arrived at Rezieky Camp in Luxor late afternoon. First things first, we all
+upgraded to hotel rooms instead of the campsite. Secondly, we got in the
+swimming pool. Slightly disturbing that we couldn't see deeper than a few
+inches into the cloudy water, but we were all so filthy ourselves we were well
+beyond caring. After showering and cleaning up properly, Dave took us into
+town.  
+  
+Luxor may be the hassle capital of Egypt (reserving judgement on Cairo for
+now). In a jewellers shop, the owner of which was known to the crew, we were
+brought kushari and cold hibiscus (karkade). This may be my new favourite meal
+in the world, and sparked the beginning of a slight addiction to karkade from
+this point onwards. Unfortunately we were told that the ability to make
+kushari well is a rare skill indeed. But I'm going to damn well try.  
+  
+Later we met our Luxor guide who took us that evening to Luxor temple. The
+temple sits in the middle of the city, integrated with the local surroundings
+like no other. A lot of Luxor is currently being demolished by the government
+to make way for new excavations, as there is still apparently plenty left to
+be found.  
+  
+Luxor temple at night was stunning, particularly due to the distinct lack of
+other tourists in an area that we were told would usually be packed. Notably
+we learnt about Hatshepsut, the only female Pharaoh, and why lots of her
+likenesses have been erased in various temples. (Hint: her stepson hated her).  
+  
+Afterwards we walked back through the market and did some shopping. We got no
+end of attention from sellers and locals alike. As we haggled here, we quietly
+realised how royally ripped off we had all been in Dahab.
+
+""" ;
+  sioc:topic blog:Done, "travel", "luxor temple", "luxor", "hatshepsut", "egypt" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/08/day-thirteen-luxor> .
+

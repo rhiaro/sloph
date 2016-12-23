@@ -1,0 +1,47 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/day-four-petra>
+  dcterms:title "Day Four: Petra" ;
+  dcterms:created "2011-07-30T16:27:00.002Z"^^xsd:datetime ;
+  dcterms:modified "2011-08-02T09:16:51.328Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3165187360071506247" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """A mega early start to Dave's porridge, and the day was set in motion with a
+drive to the ancient (once lost) city of Petra. Entrance was a steep 50JOD but
+the stunning sights occupied us for about five to six hours.  
+  
+After entering through the gorge we walked along the cobbled pathway that lead
+to the treasury. Being 7am, other tourists were scarce and we got some good
+photos. We then began the inordinately long trek and climb in the increasing
+heat to the monestary, admiring the homes, tombs and other structures carved
+directly into the towering, naturally patterned red coloured rock faces.  
+  
+From the monestary we followed a trail to 'the end of the earth' where we sat
+to take in a huge and humbling view whilst our friends back home were still
+sleeping soundly. We got sidetracked on our return journey by the promise of a
+spring in which we couls swim. We ventured well off the beaten track and
+eventually found a trickle. We followed this a little way and enjoyed the cool
+clear water (probably the same as we'd been drinking all day from bottles).
+Some clambering and relaxing later we made our way back. Midday heat was
+intensifying and the return to the town took its toll (on little old me at
+least). We crashed in a pub for an hour or so to recouperate before catching a
+taxi back to the hotel.  
+  
+JUMPED IN THE POOL.  
+  
+Dave invented killer frisbee which involved standing around the edges of the
+pool and exchanging frisbee tosses, with the aim of catching them no matter
+what. So lots of stylish (occasionally unnecessary) leaping into the water.  
+  
+We chilled out and redied ourselves for a buffet dinner at the hotel. I spent
+the rest of the evening on the tenth floor roof of the hotel spying fireworks.
+
+""" ;
+  sioc:topic "petra", "lost city", "killer frisbee", "jordan", "indiana jones", "travel", blog:Done ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2011/07/day-four-petra> .
+

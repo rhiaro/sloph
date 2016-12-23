@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:tag": [
+        "travel",
+        "journey",
+        "plane",
+        "flight",
+        "crosscloud",
+        "qcri",
+        "london",
+        "usa",
+        "uk",
+        "boston"
+    ],
+    "as:published": "2016-02-21T16:23:30-05:00",
+    "as:startTime": "2016-03-31T16:40+00:00",
+    "as:endTime": "2016-03-31T19:50-05:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Boston"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/London"
+    },
+    "@id": "http://blog.rhiaro.co.uk/56ca2b119f63e",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56ca2b119f63e"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-21T16:23:30-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

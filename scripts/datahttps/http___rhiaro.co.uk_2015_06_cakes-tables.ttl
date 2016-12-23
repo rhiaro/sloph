@@ -1,0 +1,20 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/06/cakes-tables>
+  sioc:reply_of <https://rhiaro.co.uk/2015/06/wow-posters--demo> ;
+  as:latitude "45.51735" ;
+  as:longitude "13.56942" ;
+  blog:tmpcontent "Cakes on the tables probably doesn't hurt either" ;
+  as:published "2015-06-04T09:08:02+0100"^^xsd:datetime ;
+  as:tag "eswc2015" ;
+  as:content """<!---
+tags: eswc2015
+reply-to: https://rhiaro.co.uk/2015/06/wow-posters--demo
+-->
+
+Cakes on the tables probably doesn't hurt either""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

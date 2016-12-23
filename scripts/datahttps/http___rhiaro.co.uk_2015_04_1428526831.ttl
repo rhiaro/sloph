@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/04/1428526831>
+  a as:Add, as:Save ;
+  as:published "2015-04-08T22:00:00+0100"^^xsd:datetime ;
+  as:tag "social", "socialwg", "w3c" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!--- 
+published: 8th April 2015, 22:00
+bookmark-of: http://www.w3.org/Social/track/
+tags: socialwg,social,w3c
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://www.w3.org/Social/track/> .
+

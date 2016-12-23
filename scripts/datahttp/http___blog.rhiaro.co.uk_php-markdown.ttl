@@ -1,0 +1,36 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/php-markdown>
+  dcterms:title "PHP Markdown by Michel Fortin" ;
+  dcterms:created "2013-10-11T16:24:00+0000"^^xsd:datetime ;
+  dcterms:modified "2013-10-12T21:40:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 11th October 2013, 16:24
+last-modified: 12th October 2013, 21:40
+type: BlogPost
+tags: hacking,learning,semantic web,linked data,blog,markdown
+list: doing
+-->
+
+# PHP Markdown by Michel Fortin
+
+I'm using [Michel Fortin's PHP Markdown](http://michelf.ca/projects/php-markdown) to grab each md file in the posts directory and convert the contents to HTML.
+
+I'll add some custom stuff to parse labels and categories that I plan to use to organise my content.
+
+I also need to think about templating, and when the to-triples part is going to happen.
+
+**Updates (16:48)**
+
+1. PHP Markdown is already able to work with Smarty, but the Smarty docs are awful and the site hurts my brain.
+2. The site and docs for Twig seem much nicer, and it claims to be more modern and faster than Smarty, so that's leading the templating engine race at the moment.
+3. Do I need to use a templating engine at all? Isn't this kind of what I'm building..?""" ;
+  sioc:topic "hacking", "learning", "semantic web", "linked data", "blog", "markdown", blog:Doing ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/10/php-markdown> .
+

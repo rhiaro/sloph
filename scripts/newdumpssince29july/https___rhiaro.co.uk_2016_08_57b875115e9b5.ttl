@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/57b875115e9b5>
+  a as:Activity, asext:Acquire ;
+  as:published "2016-08-20T11:18:25-04:00"^^xsd:dateTime, "2016-08-20T11:18:25-04:00" ;
+  as:tag "financier", "food", "indecisivecoder", "takeaway", "us0816", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/food>, <https://rhiaro.co.uk/tags/takeaway>, <https://rhiaro.co.uk/tags/indecisivecoder>, <https://rhiaro.co.uk/tags/financier> ;
+  as:summary "Coffee for two (Financier)" ;
+  asext:cost "$6.25" .
+

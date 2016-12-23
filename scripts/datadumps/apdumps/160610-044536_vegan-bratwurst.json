@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Vegan bratwurst, wheat bread, mushrooms, sweet peppers, tater tots (Underdog)",
+    "as:tag": [
+        "underdog",
+        "sf",
+        "hotdog",
+        "bread"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-06-09T20:45:36-07:00",
+    "@id": "http://blog.rhiaro.co.uk/vegan-bratwurst",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/06/vegan-bratwurst"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-06-09T20:45:36-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

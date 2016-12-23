@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/native+foods>
+  a as:Collection ;
+  as:name "native foods" ;
+  as:items <https://rhiaro.co.uk/2016/08/57b7afbe8058c>, <https://rhiaro.co.uk/2016/08/fries-watermelon>, <https://rhiaro.co.uk/2016/08/wrap-with-greens> .
+

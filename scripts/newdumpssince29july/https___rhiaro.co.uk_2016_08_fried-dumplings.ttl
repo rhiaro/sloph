@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/fried-dumplings>
+  a as:Activity, asext:Consume ;
+  as:name "Fried dumplings, summer rolls, tempeh avocado sushi, peanut chilli noodles, mediterranean bibimbap, chilli red tea latte, black rice pudding " ;
+  as:published "2016-08-21T20:00:05-04:00"^^xsd:dateTime, "2016-08-21T20:00:05-04:00" ;
+  as:tag "desert", "dumplings", "franchia", "indecisivecoder", "lizpowersss", "noodles", "rice", "salad", "sushi", "tea", "us0816", <https://rhiaro.co.uk/tags/us0816>, <https://rhiaro.co.uk/tags/salad>, <https://rhiaro.co.uk/tags/tea>, <https://rhiaro.co.uk/tags/rice>, <https://rhiaro.co.uk/tags/noodles>, <https://rhiaro.co.uk/tags/lizpowersss>, <https://rhiaro.co.uk/tags/indecisivecoder>, <https://rhiaro.co.uk/tags/dumplings>, <https://rhiaro.co.uk/tags/franchia>, <https://rhiaro.co.uk/tags/desert>, <https://rhiaro.co.uk/tags/sushi> .
+

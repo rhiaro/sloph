@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573a3fd733c58>
+  a as:Add ;
+  as:published "2016-05-16T22:47:03+01:00"^^xsd:dateTime ;
+  as:tag "research", "data", "dokieli", "linked", "access", "linkedresearch", "open", "rufuspollock.org" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:object <http://rufuspollock.org/2016/05/16/open-scholarly-publishing/> .
+

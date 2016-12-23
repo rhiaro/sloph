@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/Ricardo_Usbeck/status/604708365089042432>
+  sioc:reply_of <https://rhiaro.co.uk/2015/05/arrived-portoroz> ;
+  as:published "2015-05-30T18:58:03+01:00"^^xsd:datetime ;
+  as:name "@rhiaro @akswgroup will meet at 9pm in front of hotel marko" ;
+  as:content """[@rhiaro][1] [@akswgroup][2] will meet at 9pm in front of hotel marko
+
+[1]: https://twitter.com/rhiaro
+[2]: https://twitter.com/akswgroup
+""" ;
+  as:actor <http://semanticsearch.eu01.aws.af.cm/> .
+

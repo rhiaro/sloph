@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/discussing-apps>
+  as:published "2016-01-21T16:03:53+00:00"^^xsd:dateTime ;
+  as:tag "solid", "access control", "apps" ;
+  as:content "Discussing apps and access control with the Solid crew, and dating apps always seem to be the go-to for when you don't want your activites to be public.." .
+

@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/5697f4b0a807f>
+  a blog:Acquisition ;
+  dcterms:created "2016-01-14T14:18:36-05:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/5697f4b0a807f> ;
+  blog:cost "$5" ;
+  as:published "2016-01-14T14:18:36-05:00"^^xsd:dateTime ;
+  as:summary "BBQ tofu, rice and salad (Food Truck)" ;
+  as:tag "food truck", "tofu" .
+

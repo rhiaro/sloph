@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <style type="text/css">
+      #mapid { height: 180px; }
+    </style>
+  </head>
+  <body>
+    <div id="mapid"></div>
+  </body>
+  <script>
+    var map = L.map('mapid').setView([51.505, -0.09], 13);
+    var pointA = new L.LatLng(28.635308, 77.22496);
+    var pointB = new L.LatLng(28.984461, 77.70641);
+    var pointList = [pointA, pointB];
+
+    var firstpolyline = new L.Polyline(pointList, {
+      color: 'red',
+      weight: 3,
+      opacity: 0.5,
+      smoothFactor: 1
+
+    });
+    firstpolyline.addTo(map);
+  </script>
+</html>

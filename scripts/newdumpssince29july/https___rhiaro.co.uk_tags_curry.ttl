@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/curry>
+  a as:Collection ;
+  as:name "curry" ;
+  as:items <https://rhiaro.co.uk/2016/08/curry-tofu-brown>, <https://rhiaro.co.uk/2016/08/cabbage-potato>, <https://rhiaro.co.uk/2016/08/curry-lettuce>, <https://rhiaro.co.uk/2016/08/wrap-with-curry>, <https://rhiaro.co.uk/2016/08/leftover-curry>, <https://rhiaro.co.uk/2016/08/veggie-peanuts>, <https://rhiaro.co.uk/2016/08/lentils-potatoes>, <https://rhiaro.co.uk/2016/08/curry-meatballs>, <https://rhiaro.co.uk/2016/08/curry-vegetables>, <https://rhiaro.co.uk/2016/08/black-bean-curry> .
+

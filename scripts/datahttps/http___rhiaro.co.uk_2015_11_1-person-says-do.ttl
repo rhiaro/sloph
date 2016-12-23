@@ -1,0 +1,49 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/11/1-person-says-do>
+  blog:tmpcontent """A. "That person says they do not agree with my experience, but I experienced it! They are wrong."
+
+B. "Maybe they just had a different experience to you."
+
+A. "If they had a different experience to me that means my experience was wrong, which it was not, therefore theirs is wrong."
+
+B. "You can both have equally valid yet different experiences, that have led you to different conclusions about the same thing."
+
+A. "I understand that they had a different experience, but their conclusion is wrong based on my experience. They are wrong!"
+
+B. "But their conclusion isn't based on your experience, it's based on their experience."
+
+A. "But their conclusion is different to mine, contradicting my experience."
+
+B. "It doesn't contradict or invalidate your experience. You can both have different experiences, reach different conclusions, and each are equally valid for each of you."
+
+A. "Okay, I see. They're wrong though, and I'm going to continue the argument on that basis."""" ;
+  as:published "2015-11-25T03:54:51+0000"^^xsd:datetime ;
+  as:tag "standards", "life" ;
+  as:content """<!---
+tags: life,standards
+published: 25 November 2015, 03:54:51 GMT
+-->
+
+A. "That person says they do not agree with my experience, but I experienced it! They are wrong."
+
+B. "Maybe they just had a different experience to you."
+
+A. "If they had a different experience to me that means my experience was wrong, which it was not, therefore theirs is wrong."
+
+B. "You can both have equally valid yet different experiences, that have led you to different conclusions about the same thing."
+
+A. "I understand that they had a different experience, but their conclusion is wrong based on my experience. They are wrong!"
+
+B. "But their conclusion isn't based on your experience, it's based on their experience."
+
+A. "But their conclusion is different to mine, contradicting my experience."
+
+B. "It doesn't contradict or invalidate your experience. You can both have different experiences, reach different conclusions, and each are equally valid for each of you."
+
+A. "Okay, I see. They're wrong though, and I'm going to continue the argument on that basis."""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/669363670586011649/10036452> .
+

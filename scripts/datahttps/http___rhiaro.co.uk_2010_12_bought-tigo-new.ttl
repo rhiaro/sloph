@@ -1,0 +1,21 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2010/12/bought-tigo-new>
+  as:published "2010-12-28T16:45:00.002Z"^^xsd:datetime ;
+  as:tag blog:Doing, "parrot", "Tigo", "unfounded fear", "retard parrot", "parrot toy", "conure", "bird boing" ;
+  as:name "I bought Tigo a new toy today." ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-921161478683483423" ;
+  as:content """Heâ€™s terrified of it.  
+  
+Great.  
+  
+Itâ€™s a brightly coloured
+[boing](http://image10.webshots.com/10/2/22/52/133322252QexBAP_ph.jpg).  I
+think he thinks its a snake.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2010-12-29T02:32:39.778Z"^^xsd:datetime .
+

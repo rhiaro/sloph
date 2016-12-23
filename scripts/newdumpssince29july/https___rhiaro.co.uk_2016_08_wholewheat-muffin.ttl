@@ -1,0 +1,10 @@
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/08/wholewheat-muffin>
+  a asext:Consume, as:Activity ;
+  as:name "Wholewheat muffin and jalapeno hummus" ;
+  as:published "2016-08-13T23:06:20-04:00"^^xsd:dateTime ;
+  as:tag <https://rhiaro.co.uk/tags/hummus>, <https://rhiaro.co.uk/tags/bread>, "coffee", "beans", "hummus", "bread" .
+

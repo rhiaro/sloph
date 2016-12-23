@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/cereal+bar>
+  a as:Collection ;
+  as:name "cereal bar" ;
+  as:items <https://rhiaro.co.uk/2016/08/pecan-larabar>, <https://rhiaro.co.uk/2016/09/coffee-mariposa> .
+

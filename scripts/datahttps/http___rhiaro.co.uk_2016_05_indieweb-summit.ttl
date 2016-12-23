@@ -1,0 +1,9 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/2016/05/indieweb-summit>
+  a as:Accept ;
+  as:published "2016-05-06T18:23:02-07:00" ;
+  as:name "Going to Indieweb Summit 2016" ;
+  as:content "Maybe I'll rebuild my website from scratch again." ;
+  as:object <http://2016.indieweb.org/> .
+

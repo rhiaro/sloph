@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Fries, tea, 2 mains (Veggie Galaxy)",
+    "blog:cost": "$36",
+    "as:tag": [
+        "veggie galaxy",
+        "food",
+        "restaurant"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-02-16T18:55:24-05:00",
+    "@id": "http://blog.rhiaro.co.uk/56c3b7c3d5c94",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/56c3b7c3d5c94"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-16T18:55:24-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

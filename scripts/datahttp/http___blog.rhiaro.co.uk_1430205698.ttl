@@ -1,0 +1,18 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1430205698>
+  dcterms:created "2015-04-28T08:21:38+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+repost-of: http://werd.io/2015/discussing-indiewebcamp-edinburgh-is-super-weird-if-you-believe-in-owning
+tags: indieweb,indiewebcamp,iwcedi,events,edinburgh
+-->""" ;
+  sioc:topic "indieweb", "indiewebcamp", "iwcedi", "events", "edinburgh" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/04/1430205698> ;
+  blog:repost-of "http://werd.io/2015/discussing-indiewebcamp-edinburgh-is-super-weird-if-you-believe-in-owning" .
+

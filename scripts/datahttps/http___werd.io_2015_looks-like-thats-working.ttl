@@ -1,0 +1,11 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://werd.io/2015/looks-like-thats-working>
+  sioc:reply_of <https://rhiaro.co.uk/2015/04/micropub-test> ;
+  as:published "2015-04-03T22:54:49+01:00"^^xsd:datetime ;
+  as:name "Looks like that's working!" ;
+  as:content "Looks like that's working!" ;
+  as:actor <http://werd.io/profile/benwerd> .
+

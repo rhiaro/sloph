@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/progressive>
+  dcterms:created "2016-01-19T21:19:19+00:00"^^xsd:dateTime ;
+  sioc:content "Progressive enhancement for catering: core dish is substantial and meets common dietary constraints. Sides/additions through less restrictive diets can be added optionally." ;
+  sioc:topic "food", "life", "vegan" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/progressive> .
+

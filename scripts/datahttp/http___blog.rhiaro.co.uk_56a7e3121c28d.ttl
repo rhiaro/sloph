@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/56a7e3121c28d>
+  a blog:Acquisition ;
+  dcterms:created "2016-01-26T16:19:44-05:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/56a7e3121c28d> ;
+  blog:cost "$9.25" ;
+  as:published "2016-01-26T16:19:44-05:00"^^xsd:dateTime ;
+  as:summary "Cappucino and chai latte with almond milk (Tatte)" ;
+  as:tag "coffee" .
+

@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/veggie-burger>
+  a blog:Consumption ;
+  dcterms:created "2016-06-22T20:43:25-04:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/veggie-burger> ;
+  as:published "2016-06-22T20:43:25-04:00" ;
+  as:tag "boston burger company", "burger" ;
+  as:name "Veggie burger with avocado, salad, jalapenos, red peppers, chips, fries (Boston Burger Company)" .
+

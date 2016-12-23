@@ -1,0 +1,200 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/notes-sssw13-4>
+  dcterms:title "[Notes] Lynda Hardman at #SSSW2013" ;
+  dcterms:created "2013-07-09T12:30:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-07-17T19:48:39.861Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-8036580643884823518" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """RELEVANT.  
+  
+Users (consumers?):  
+  
+
+  * Finding content
+  * Media types * mostly text at the moment, little integration of different types
+  * Specific tasks - not much connection of results with user tasks.
+  
+More data than just what you seen in the media (cue my Venn diagram).  
+  
+Plus, eg. paintings - lots of 'cultural baggage'.  
+  
+Care more about the story than the media.  
+Interpretation by end users.  Hopefully message that the author intended.  
+  
+Meaning of combination of assets.  
+eg. Exhibition of artists work.  
+  
+Interacting further with the media.  
+  
+
+  * Search - serendipitous or focussed around a theme (or both).  Different search goals.
+  * Sharing, passing it on.
+  
+(SW and multimedia community need to work together).  
+  
+-> Raphael Troncy on Friday - attaching semantics to multimedia on the Web.  
+  
+Need mechanisms:  
+  
+
+  * to identify (parts of) media assets.
+  * associate metadata with a fragment.
+  * agree on meaning of metadata.
+  * enable meaningful structures to be composed, identified and annotated.
+  
+Workflow for multimedia applications  
+  
+
+  * Canonical processes of media production
+    * Reduced to the simplest form possible without loss of generality.
+  
+Heard of MPEG-7? Don't bother.. very much from a media algorithms perspective.  
+  
+Applications:  
+  
+
+  * Feature extraction.
+  * News production.
+  * New media art.
+    * An interactive exhibit that responded to audience present.
+  * Hyper-video.
+    * Linked video.
+  * Photo book production (CeWe).
+    * (Using this example for explaining processes).
+  * Ambient multimedia systems with complex sensory networks.
+  
+**Canonical processes overview...**  
+  
+There's a paper.  
+  
+CeWe photobook - automatic selection, sorting and ordering of photos.  
+Context (timestamp, tags) analysis and content (colours, edges) analysis.  
+  
+Things from these you want to represent your digital system (ie with LOD):  
+  
+
+  * Premediate, eg.
+    * remember to take your camera on holiday.
+    * write scripts, plan shots.
+    * place a security camera in the right location.
+  * Construct Message (not really in the chain, appears all over the place); what to conveny with media? Intention? eg.
+    * show people a great holiday.
+    * sell a product.
+  * inform/advise.
+  * Create (method of creation might be important, so record in metadata), eg.
+    * take photos.
+    * make video.
+  * Annotate, eg.
+    * automatic or manual.  Stuff that is embedded by device vendors (but there's so much more...)
+    * domain annotations: landscapes/portraits, timestamps, face recognition.
+  * Publish, eg.
+    * compose images into photobook.
+  * Distribute, eg.
+    * print photo book and post.
+    * cyclic processes online.
+  
+  
+COMM - Core Ontology for Multimedia.  
+  
+Premediate and construct message - human parts, she doesn't expect them to be
+digitised any time soon.  
+  
+**Using Semantics to create stories with media**  
+  
+Can we link media assets to existing linked data and use this to improve
+presentation?  
+  
+How can annotations help?  
+  
+
+  * What can be expressed explicitly?
+    * Message (somewhere between a html page and poetry).
+    * Objects depicted.
+    * Domain information. <\\\\--- li="">
+    * Human communicaiton roles (discourse). <\\\\--- li="">
+  
+**Vox Populi** (PhD project)  
+  
+Traditionally video documentary is a set of shots decided by director/editor.  
+vs.  
+Annotating video material and showing what the user asks to see.  
+  
+interviewwithamerica.com  
+  
+Annotations for these documentary clips:  
+  
+
+  * Rhetorical statement; argumentation model (documentary techniques).
+  * Descriptive (which questions asked, interviewee, filmic).
+    * Filmic: continuity like camera movements, framing, direction of speaker, lighting, sound - rules that film directors know.
+  * Statement encoding (eg. summary what the interviewee said):
+    * subject - modifier - object statements.
+    * Thesauri for terms.
+    * Can make a statement graph, finding which statements contradict and which agree.
+    * (He encoded this stuff by hand - automated techniques aren't good enough).
+    * Argumentation model - claims, concessions, contradictions, support.
+  
+  
+Automatically generated coherant story.  
+  
+
+  * Are we more forgiving watching video? (Than reading these statements as text).  Peoples' own interpretations strongly affect understanding of the message.
+  
+  
+Vox Populi has (not for human consumption) GUI for querying annotated video
+content.  
+  
+User can determine subject and bias of presentation.  
+Documentary maker can just add in new videos and new annotations to easily
+generate new sequence options.  
+  
+  
+**User informatio needs - Ana Carina Palumbo**  
+  
+Linked TV.  Enhancing experience of watching TV.  What users need to make
+decisions / inform opinions.  
+  
+
+  * Expert interviews (governance, broadcast).
+  * User interviews - what people thought they need (215 ppts).
+  * User experiments - what people actually need.
+  
+Experiment - oil worth the risk?  
+  
+
+  * eg. people wanted factual information from independent sources; what the benefits are; community scale information.
+  
+  
+Published at EuroITV.  
+  
+**Conclusions**  
+  
+
+  * We can give useful annotations to media access, useful at different stages of interactive access (not just search).
+  * Clarify intended message. Explicity with annotations.
+  * Manual or automatic.
+  * Media content and annotations can be passed among systems.
+  * No community agreement in how to do this. <\\\\--- li="">
+  * How to store?
+  
+**Questions**  
+  
+Hand annotations are error prone - how to validate?  
+Media stuff - there can be uncertainty, people don't always care.  
+  
+Motivating researchers to annotate...  
+Make a game.  
+  
+Store whole video or segements?  
+W3C fragment identification standards - timestamps via URLs.
+
+""" ;
+  sioc:topic blog:Done, "semantic web", "phd", "ontologies", "notes", "media", "digital media", "content creators", "annotation" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/07/notes-sssw13-4> .
+

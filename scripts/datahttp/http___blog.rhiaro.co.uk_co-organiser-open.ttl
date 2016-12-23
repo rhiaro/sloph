@@ -1,0 +1,30 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/co-organiser-open>
+  dcterms:title "Co-organiser, Open Data Day Edinburgh" ;
+  dcterms:created "2013-02-23T09:00:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 23rd February 2013, 09:00
+start: 23rd February 2013, 09:00
+end: 23rd February 2013, 18:00
+tags: cv,resume,open data day,organiser,ilwhack,open data,open knowledge,okfn,unconference,event
+-->
+
+# Co-organiser, Open Data Day Edinburgh
+
+Helped organise the Edinburgh branch of [International Open Data Day](http://opendataday.org/) unconference.""" ;
+  sioc:topic "cv", "resume", "open data day", "organiser", "ilwhack", "open data", "open knowledge", "okfn", "unconference", "event" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/02/co-organiser-open> ;
+  as:startTime "2013-02-23T09:00:00+0000"^^xsd:datetime ;
+  as:endTime "2013-02-23T18:00:00+0000"^^xsd:datetime ;
+  blog:tmpcontent """# Co-organiser, Open Data Day Edinburgh
+
+Helped organise the Edinburgh branch of [International Open Data Day](http://opendataday.org/) unconference.""" .
+

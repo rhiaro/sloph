@@ -1,0 +1,4 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/5685fdf721cb4> as:published "2016-01-01T04:17:59+00:00"^^xsd:dateTime .

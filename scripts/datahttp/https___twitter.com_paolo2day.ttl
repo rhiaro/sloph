@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/paolo2day>
+  foaf:name "Paolo M" ;
+  foaf:homepage <https://twitter.com/paolo2day> ;
+  foaf:depiction <https://twitter.com/paolo2day/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/1dd2e9b67c6821033dd477ac5b4c8725e12ed246b42dadfbb2d5371b7b8cda43.jpeg> .
+

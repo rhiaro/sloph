@@ -1,0 +1,21 @@
+{
+    "h": "entry",
+    "content": "Okay Seven of Nine is my new idol. Every time I start typing a quote she says something better. I can't keep up.",
+    "category": [
+        "star",
+        "trek",
+        "voyager",
+        "sevenofnine",
+        "life"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-08-25T03:48:46+01:00",
+    "@id": "http://blog.rhiaro.co.uk/okay-seven-nine",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/okay-seven-nine"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-25T03:48:46+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

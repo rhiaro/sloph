@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/12/1450062360>
+  a as:Like ;
+  as:published "2015-12-14T03:06:00+0000"^^xsd:datetime ;
+  as:tag "" ;
+  as:content """<!---
+published: 14th December 2015, 3:06 Europe/London
+like-of: https://annbass.withknown.com/2015/first-blog-post
+tags: 
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://annbass.withknown.com/2015/first-blog-post> .
+

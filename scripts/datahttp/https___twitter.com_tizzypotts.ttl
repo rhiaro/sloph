@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/tizzypotts>
+  foaf:name "Tizzy Brown" ;
+  foaf:homepage <https://twitter.com/tizzypotts> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/f8e607fb108ffc854e2918885148ebcda97f8b01d21be54db4d74903e146773f.jpeg> .
+

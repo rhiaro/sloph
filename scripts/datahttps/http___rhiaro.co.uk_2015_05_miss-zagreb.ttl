@@ -1,0 +1,73 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/miss-zagreb>
+  blog:tmpcontent """# I miss Zagreb already
+
+I just jumped on the train from Zagreb to Ljubljana for the final leg of my trip. My stay in Zagreb was short but magical. I will be back. To make a positive generalisation, Croatians seem to be the most hospitable people ever. Perhaps too hospitable; over the past 24 hours I've been scolded many times for saying 'thank you' too much and offering to help move/carry/cook/clean things, I've overeaten, and eaten enough dairy that I feel a bit queasy because I was already being looked after far too well, and the delight with which fritula, biscuits, pancakes and cappucinos were sent my way was impossible to say no to. I did manage to turn down ice cream a couple of times, and communicate 'vegetarian' before it was too late.
+
+So remember L who I met in Split? He put me in touch with D, with whom he'd stayed in Zagreb. D was quick to offer me a bed too. She met me at the station on Friday morning, and I joined her, her neighbour S (who reminds me a lot of my grandma) and her daughter M in wandering around a flower exhibition for a couple of hours. D bought fritula with chocolate sauce and insisted I try this local speciality (they're like doughnut holes, but chewier). The flower exhibition was in Bundek park, and was a lovely, relaxing start to the day. We stopped in a cafe for a coffee, and S insisted on paying for mine. D shared wifi from her phone and I caught up on the internets.
+
+Then they bought some plants; I was really tempted by a teeny tiny cactus, but it would never have made it home.
+
+D dropped me in the city centre and headed home (with my rucksack so I didn't have to carry it). I wandered through the old town and upper town. Zagreb is pretty hilly. There were anti-government protests and lots of police near the government buildings. There also seemed to be some kind of police-escorted muscle car demo in the centre. I saw all of the main buildings listed on wikitravel, and thought about visiting the Museum of Broken Relationships but the weather was so good I didn't fancy spending the afternoon inside.
+
+Despite this, when I found Nishta, a vegetarian restaurant with power, wifi and incredible food, I bedded in and ended up being there for a productive and delicious three hours. I 'splashed out' and spent 112 kuna on amazingly floral iced tea, BBQ barley and tofu burger, almond cream panna cotta, and coffee. So. Good. So I stayed much longer than intended, and needed to hurry back to D's place, which is in the north of the city at the base of the mountain. I took what I thought was a short diversion via Mirogoj cemetery on the way, but this ended up adding over an hour to my route. What looked close on the map was actually separated by several hills and impenetrable forest. As usual.
+
+The cemetery was pretty spectacular, and I could spend more time there.
+
+The walk from there to D's was mostly uphill, but *so* scenic. There were some rad, modern houses and tons of foresty space. The city was well and truly out of sight; views from all balconies and gardens were green. I could definitely live there.
+
+I eventually navigated to D's, where I met her six excitable jack russells, and S's son, M. I had a room in D's attic, with a gorgeous view and my own bathroom. She made dinner, and even offered to wash my clothes. I ate rice and salad (with pumpkin oil), pancakes and homemade jam, outside on the terrace while the sun set over the mountain and M quizzed me about who controls the internet, why being vegetarian is reasonable when plants have feelings too, and why Tigo wouldn't be better off if I set him free.
+
+This morning D was out for a bit, and I was under instruction to visit S across the road for coffee when I got up. Not only coffee, it turns out, but chocolate wafers and bread and apricot jam (I managed to stop her from cooking eggs for me) but I wasn't at any point allowed to *stop* eating the bread and jam >.< Again, I wasn't allowed to help, either. We sat in the garden, in the blistering sun until D got back.
+
+D drove me to the train station, but not before S had wrapped up an armful of chocolate wafers for me, and D made me jam pancakes for the road.
+
+Wow I'm full.
+
+Need to go back to Zagreb.
+
+I just reached Dobova, and Croatian and Slovenian police came through to check passports. I think the train is sitting here for about half an hour. The train is super nice! Power sockets, and every six seats are in their own little compartments with doors.
+
+I think Croatia is my favourite country so far.""" ;
+  as:published "2015-05-30T12:33:00+0100"^^xsd:datetime ;
+  as:tag "travel", "croatia", "zagreb", "vegan" ;
+  as:name "I miss Zagreb already" ;
+  as:content """<!---
+published: 30th May 2015, 13:33 Europe/Berlin
+tags: travel,croatia,zagreb,vegan
+-->
+
+# I miss Zagreb already
+
+I just jumped on the train from Zagreb to Ljubljana for the final leg of my trip. My stay in Zagreb was short but magical. I will be back. To make a positive generalisation, Croatians seem to be the most hospitable people ever. Perhaps too hospitable; over the past 24 hours I've been scolded many times for saying 'thank you' too much and offering to help move/carry/cook/clean things, I've overeaten, and eaten enough dairy that I feel a bit queasy because I was already being looked after far too well, and the delight with which fritula, biscuits, pancakes and cappucinos were sent my way was impossible to say no to. I did manage to turn down ice cream a couple of times, and communicate 'vegetarian' before it was too late.
+
+So remember L who I met in Split? He put me in touch with D, with whom he'd stayed in Zagreb. D was quick to offer me a bed too. She met me at the station on Friday morning, and I joined her, her neighbour S (who reminds me a lot of my grandma) and her daughter M in wandering around a flower exhibition for a couple of hours. D bought fritula with chocolate sauce and insisted I try this local speciality (they're like doughnut holes, but chewier). The flower exhibition was in Bundek park, and was a lovely, relaxing start to the day. We stopped in a cafe for a coffee, and S insisted on paying for mine. D shared wifi from her phone and I caught up on the internets.
+
+Then they bought some plants; I was really tempted by a teeny tiny cactus, but it would never have made it home.
+
+D dropped me in the city centre and headed home (with my rucksack so I didn't have to carry it). I wandered through the old town and upper town. Zagreb is pretty hilly. There were anti-government protests and lots of police near the government buildings. There also seemed to be some kind of police-escorted muscle car demo in the centre. I saw all of the main buildings listed on wikitravel, and thought about visiting the Museum of Broken Relationships but the weather was so good I didn't fancy spending the afternoon inside.
+
+Despite this, when I found Nishta, a vegetarian restaurant with power, wifi and incredible food, I bedded in and ended up being there for a productive and delicious three hours. I 'splashed out' and spent 112 kuna on amazingly floral iced tea, BBQ barley and tofu burger, almond cream panna cotta, and coffee. So. Good. So I stayed much longer than intended, and needed to hurry back to D's place, which is in the north of the city at the base of the mountain. I took what I thought was a short diversion via Mirogoj cemetery on the way, but this ended up adding over an hour to my route. What looked close on the map was actually separated by several hills and impenetrable forest. As usual.
+
+The cemetery was pretty spectacular, and I could spend more time there.
+
+The walk from there to D's was mostly uphill, but *so* scenic. There were some rad, modern houses and tons of foresty space. The city was well and truly out of sight; views from all balconies and gardens were green. I could definitely live there.
+
+I eventually navigated to D's, where I met her six excitable jack russells, and S's son, M. I had a room in D's attic, with a gorgeous view and my own bathroom. She made dinner, and even offered to wash my clothes. I ate rice and salad (with pumpkin oil), pancakes and homemade jam, outside on the terrace while the sun set over the mountain and M quizzed me about who controls the internet, why being vegetarian is reasonable when plants have feelings too, and why Tigo wouldn't be better off if I set him free.
+
+This morning D was out for a bit, and I was under instruction to visit S across the road for coffee when I got up. Not only coffee, it turns out, but chocolate wafers and bread and apricot jam (I managed to stop her from cooking eggs for me) but I wasn't at any point allowed to *stop* eating the bread and jam >.< Again, I wasn't allowed to help, either. We sat in the garden, in the blistering sun until D got back.
+
+D drove me to the train station, but not before S had wrapped up an armful of chocolate wafers for me, and D made me jam pancakes for the road.
+
+Wow I'm full.
+
+Need to go back to Zagreb.
+
+I just reached Dobova, and Croatian and Slovenian police came through to check passports. I think the train is sitting here for about half an hour. The train is super nice! Power sockets, and every six seats are in their own little compartments with doors.
+
+I think Croatia is my favourite country so far.""" ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

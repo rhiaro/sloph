@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/ten-years-linked>
+  a as:Add ;
+  as:published "2016-07-22T21:08:29+01:00"^^xsd:dateTime ;
+  as:name "Ten Years of Linked Data at the BBC" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:object <http://www.slideshare.net/ConnectedDataLondon/ten-years-of-linked-data-at-the-bbc> .
+

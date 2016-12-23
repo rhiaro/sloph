@@ -1,0 +1,37 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "blog:cost": "$252.10",
+    "as:tag": [
+        "travel",
+        "journey",
+        "plane",
+        "flight",
+        "socl2016",
+        "portland",
+        "usa",
+        "boston"
+    ],
+    "as:published": "2016-05-18T16:24:08-07:00",
+    "as:startTime": "2016-06-02T18:38:00-04:00",
+    "as:endTime": "2016-06-02T21:50:00-07:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Portland,_Oregon"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Boston"
+    },
+    "@id": "http://blog.rhiaro.co.uk/573cfa00ce8d5",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/573cfa00ce8d5"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-18T16:24:08-07:00",
+        "@type": "xsd:dateTime"
+    }
+}

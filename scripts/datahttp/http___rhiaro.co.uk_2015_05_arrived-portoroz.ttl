@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://rhiaro.co.uk/2015/05/arrived-portoroz> sioc:has_reply <https://twitter.com/eswc_conf/status/604789953671929857>, <https://twitter.com/gray_alasdair/status/604749394244694017>, <https://twitter.com/rhiaro/status/604710955474415616>, <https://twitter.com/rhiaro/status/604711011959062529>, <https://twitter.com/cryomaniac/status/604708357774184449>, <https://twitter.com/Ricardo_Usbeck/status/604708365089042432> .

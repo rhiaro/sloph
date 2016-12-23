@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/03/git-problems>
+  as:published "2016-03-08T22:51:05+00:00"^^xsd:dateTime ;
+  as:tag "fml", "git", "hacking" ;
+  as:content "All git problems are definitely solved by deleting branches/repos and starting over." .
+

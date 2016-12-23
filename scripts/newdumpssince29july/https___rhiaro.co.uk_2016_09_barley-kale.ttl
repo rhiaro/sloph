@@ -1,0 +1,10 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix asext: <https://terms.rhiaro.co.uk/as#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/09/barley-kale>
+  a as:Activity, asext:Consume ;
+  as:name "Barley, kale, tomatoes, celery, miso, hot sauce" ;
+  as:published "2016-09-02T12:50:05-04:00"^^xsd:dateTime, "2016-09-02T12:50:05-04:00" ;
+  as:tag "barley", "stew", "vegetables", <https://rhiaro.co.uk/tags/vegetables>, <https://rhiaro.co.uk/tags/barley>, <https://rhiaro.co.uk/tags/stew> .
+

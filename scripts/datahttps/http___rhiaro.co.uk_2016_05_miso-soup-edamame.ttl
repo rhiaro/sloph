@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/miso-soup-edamame>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-05-22T20:27:18-07:00"^^xsd:dateTime, "2016-05-22T20:27:18-07:00" ;
+  as:tag "asian", "ca2016", "jeannie", "rice", "sipz", "sushi", "tofu" ;
+  as:name "Miso soup, edamame, spicy basil not-chicken, brown rice, dragon roll, BBQ 'pork' bun (Sipz)" .
+

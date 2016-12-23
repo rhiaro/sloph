@@ -1,0 +1,25 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://llog.rhiaro.co.uk/1432585287>
+  a blog:LlogPost ;
+  dcterms:created "2015-05-25T21:21:27+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+start: 2015-05-25T22:21:27+02:00
+end: 2015-05-25T22:21:27+02:00
+type: LlogPost
+tags: eat,food,quantified self,life
+-->
+
+Quinoa, vegetables, seitan (Vege)""" ;
+  sioc:topic "eat", "food", "quantified self", "life" ;
+  as:startTime "2015-05-25T21:21:27+0100"^^xsd:datetime ;
+  as:endTime "2015-05-25T21:21:27+0100"^^xsd:datetime ;
+  as:latitude "43.51213" ;
+  as:longitude "16.437" .
+

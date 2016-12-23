@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Household stuff (CVS)",
+    "blog:cost": "$11.47",
+    "as:tag": [
+        "household"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-05-29T14:15:00-04:00",
+    "@id": "http://blog.rhiaro.co.uk/574b9d6ec6aea",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/574b9d6ec6aea"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-29T14:15:00-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

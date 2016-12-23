@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/cornflakes-orange>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-05-18T10:15:00-07:00"^^xsd:dateTime, "2016-05-19T10:36:40-07:00"^^xsd:dateTime, "2016-05-19T10:36:40-07:00", "2016-05-18T10:15:00-07:00" ;
+  as:tag "bread", "ca2016", "cereal", "coffee" ;
+  as:name "Cornflakes, orange juice, toast, coffee" .
+

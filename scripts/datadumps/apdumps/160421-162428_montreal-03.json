@@ -1,0 +1,23 @@
+{
+    "h": "entry",
+    "content": "# Montreal 03\r\n\r\nTrapped in La Banquise. Weighed down by the poutine in my belly. The air outside is cold and wet, but people in here are warm and in the process of making the same mistake I just did. Or are they? I ate half a large Rachel and half a large Mexicania, but now I'm noticing other diners are sharing one large between two, or eating a small each. Why didn't the waiter warn us? Substituting vegan cheese and vegan gravy was a steep $5.50 extra, but worth it. Comfort food and-a-half, and almost makes the rainy day worthwhile. The Rachel was topped with onions, mushrooms and green peppers; the Mexicania with tomatoes, olives and chilli peppers.\r\n\r\nThis morning I walked to and around Ile Sainte Helene and Ile Notre Dame. The Biodome was closed (everything is closed on Mondays) but there were outside galleries and scuplture and greenery to see. Ile Notre Dame has the Olympic basin, and Formula One track to wander around. We found ourselves in the Casino, surrounded by old people and slot machines and extravagance. Warmed up there, before heading back into the rain to catch the metro back to the city, to warm safe poutine.\r\n\r\nLater: coffee in Cafe Gonzo; more walking in the rain; hearty, homely, friendly, dubiously-vegan Taiwanese food from Le Roi du Wonton. A walk through the underground shopping malls and a couple of hours listening to a traditional music jam in teeny tiny L'Escalier (which has lots of vegan food, though I didn't try it). Overnight bus back to Boston.",
+    "category": [
+        "travel",
+        "canada",
+        "montreal",
+        "food",
+        "vegan",
+        "walking"
+    ],
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-04-21T16:24:28+01:00",
+    "http://purl.org/dc/terms/title": "Montreal 03\r",
+    "@id": "http://blog.rhiaro.co.uk/montreal-03",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/04/montreal-03"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-04-21T16:24:28+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

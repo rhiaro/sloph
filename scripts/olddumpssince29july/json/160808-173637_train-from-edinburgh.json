@@ -1,0 +1,38 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "Train from Edinburgh to Manchester Airport",
+    "blog:cost": "&pound;25.50",
+    "as:tag": [
+        "travel",
+        "journey",
+        "train",
+        "tpac2016",
+        "edinburgh",
+        "manchester",
+        "uk",
+        "firsttranspennine"
+    ],
+    "as:published": "2016-08-08T12:36:37-04:00",
+    "as:startTime": "2016-09-18T10:12:00+00:00",
+    "as:endTime": "2016-09-18T13:47:00-04:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:target": {
+        "@id": "http://dbpedia.org/resource/Manchester_Airport"
+    },
+    "as:origin": {
+        "@id": "http://dbpedia.org/resource/Edinburgh"
+    },
+    "@id": "http://blog.rhiaro.co.uk/train-from-edinburgh",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/train-from"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-08T12:36:37-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/1442518380>
+  a as:Add ;
+  as:published "2015-09-17T20:33:00+0100"^^xsd:datetime ;
+  as:tag "social web", "phd", "decentralised", "identity", "dcent", "authentication" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 17th September 2015, 20:33 Europe/London
+bookmark-of: http://www.nesta.org.uk/publications/d-cent-research-digital-identity-ecosystems
+tags: dcent,decentralised,identity,phd,social web,authentication
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://www.nesta.org.uk/publications/d-cent-research-digital-identity-ecosystems> .
+

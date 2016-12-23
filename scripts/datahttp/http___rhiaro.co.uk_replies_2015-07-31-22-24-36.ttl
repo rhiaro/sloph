@@ -1,0 +1,10 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://rhiaro.co.uk/replies/2015-07-31-22-24-36>
+  dcterms:title "Maybe that’s not a regex, but an actual check that tries to connect to the SMTP server?" ;
+  dcterms:created "2015-07-31T23:24:00+01:00"^^xsd:datetime ;
+  sioc:content "Maybe that's not a regex, but an actual check that tries to connect to the SMTP server?" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/07/would-like-chat> .
+

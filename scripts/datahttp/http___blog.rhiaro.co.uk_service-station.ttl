@@ -1,0 +1,23 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/service-station>
+  dcterms:created "2015-05-08T13:03:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: travel,paris,belgium
+location: http://dbpedia.org/resource/Belgium
+published: 8th May 2015, 14:03 Europe/Berlin
+-->
+
+A service station in Belgium""" ;
+  sioc:topic "travel", "paris", "belgium" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/05/service-station> ;
+  as:location <http://dbpedia.org/resource/Belgium> ;
+  blog:tmpcontent "A service station in Belgium" .
+

@@ -1,0 +1,32 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2015/02/indiewebcamp-edinburgh>
+  sioc:reply_of <http://https://opentechcalendar.co.uk/event/2777-indiewebcamp-edinburgh> ;
+  as:published "2015-02-11T13:34:00+0000"^^xsd:datetime ;
+  as:tag "decentralised web", "hackathon", "rsvp", blog:Todo, "edinburgh", "events", "indiewebcamp", "social web", "indieweb" ;
+  as:name "Indiewebcamp Edinburgh" ;
+  as:startTime "2015-07-25T10:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-07-26T18:00:00+0000"^^xsd:datetime ;
+  as:content """<!---
+published: 11th February 2015, 13:34
+type: BlogPost
+tags: events,social web,indiewebcamp,indieweb,decentralised web,hackathon,edinburgh,rsvp
+reply-to: https://opentechcalendar.co.uk/event/2777-indiewebcamp-edinburgh
+start: 25th July 2015, 10:00
+end: 26th July 2015, 18:00
+list: todo
+-->
+
+# Indiewebcamp Edinburgh
+
+Along with [James](http://jamesbaster.co.uk) and [Harry](http://harryreeder.co.uk), I'm organising an [indiewebcamp](http://indiewebcamp.com/2015/Edinburgh) here in Edinburgh! Indiewebcamp is a 2-day unconference-style event, with lots of hacking, and support to help you take ownership of your social data and launch your own website which can interoperate with other people's, as well as with social silos like twitter.
+
+Planning is in early stages, but we've settled on 25/26th July and Skyscanner have offered us their office as a venue, but this is to be confirmed.
+
+We're (naturally) looking for sponsorship for lunches: if you're part of a tech company who would like to help out, we'd love to hear from you! You can [find out more about sponsoring IWC events here](http://indiewebcamp.com/how-to-sponsor).
+
+Keep an eye on the [event wiki page](http://indiewebcamp.com/2015/Edinburgh)) for more details; you can register your interest or contribute to planning and brainstorming there too.""" .
+

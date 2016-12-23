@@ -1,0 +1,17 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/04/1428874483>
+  a as:Like ;
+  as:published "2015-04-12T22:34:00+0100"^^xsd:datetime ;
+  as:tag "" ;
+  as:content """<!--- 
+published: 12th April 2015, 22:34
+like-of: https://aaronparecki.com/notes/2015/04/09/2/thebest
+tags: 
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://aaronparecki.com/notes/2015/04/09/2/thebest> .
+

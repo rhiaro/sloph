@@ -1,0 +1,14 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/sideshowbarker/status/658525643299098624>
+  a as:Announce ;
+  as:published "2015-10-26T06:08:42+00:00"^^xsd:datetime ;
+  as:name "reposts this." ;
+  as:content """RT [@rhiaro][1]: #TPAC2015 call for vegan-inclined to venture across town [...] for dinner Wednesday evening. Ping here or IRC! #tpac rhiaro.co.uk/2015/10/tpac20â€¦
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  as:actor <https://people.w3.org/mike/> ;
+  as:object <https://rhiaro.co.uk/2015/10/tpac2015-call> .
+

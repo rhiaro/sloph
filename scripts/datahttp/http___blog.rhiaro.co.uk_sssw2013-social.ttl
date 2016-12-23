@@ -1,0 +1,84 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/sssw2013-social>
+  dcterms:title "#SSSW2013: Social semantics and serendipity" ;
+  dcterms:created "2013-07-11T21:30:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-07-30T18:22:38.186Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-4981764477729666207" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """We started work on the serendipity project before breakfast today, although I
+didn't make it down as early as some of my teammates.  
+  
+To start the day, Fabio Ciravenga talked about some really exciting practical
+applications of monitoring and analysing social media streams.  It's
+particularly interesting during emergencies, or large events where problems
+might occur.  The people on the ground make the perfect sensors if you can
+work out the differences between people who are saying something useful and
+who aren't; people who are really there, and people who are speculating or
+asking about the situation.  A main problem has been that _people tweet crap_.
+They were trying to monitor a house fire, but so many people were tweeting
+lyrics from Adele's various singles at the time, which all apparently contain
+references to fire, it was almost impossible.  
+  
+They also put (or tapped into existing) sensors in peoples' cars to monitor
+driving patterns with the aim of more fairly charging for car insurance.  I
+told my Mum about this the other day, and she was pretty alarmed by the idea.
+Which made me wonder how they'll get mass adoption, if it's going to go
+anywhere.  
+  
+Fabio did have some interesting things to say about using all this data
+ethically though, and never working for someone who is going to take that away
+from you.  But in case the 'bad guys' do find out about all this data you have
+about people, keep a magnet handy.  
+  
+[My notes are here](http://blog.rhiaro.co.uk/2013/07/notes-fabio-ciravenga-at-
+sssw2013.html).  
+  
+This was followed by a hands-on session where we got to mess with a mini
+version of the twitter topic monitoring system that Fabio's team use at large
+events, to try to answer questions about the Tour de France only by
+manipulating the incoming social media streams and following only links which
+came through that.  
+  
+Spanish omelette sandwiches were an amazing outdoor leisurely lunch.  We
+headed to the pool down the road and chilled out there for a couple of hours.
+Us tough British folk found the water pleasantly tepid, whilst all those wimpy
+Europeans and Latin Americans shivered on the grass.  They'd made such a fuss
+in advance about how cold the pool was going to be.  
+  
+We regrouped that afternoon to work on Project Cusack, creating a slide deck
+of pictures from Serendipity.  I don't like slides with too much to read on,
+so I enforced this.  The imagery from the movie will be lost on most people,
+but we have at least managed to choose pictures of John Cusack with
+appropriate expressions for each part of the presentation.  We worked outside
+in the forest, because Oscar's 3G was faster than the residence wifi.  
+  
+
+![](http://2.bp.blogspot.com/-6npNfqAYE2Q/UfgDAtp7t4I/AAAAAAAAHwg/H1mq-
+qrISPA/s320/workingoutside.jpg)
+
+  
+  
+We also brainstormed for the required short film, which we only just
+discovered doesn't have to be about our project.  
+  
+We returned to the residence to find everyone eating ham and cheese, and
+attempted to get some shots for our film, but other people were unwilling to
+participate.  
+  
+That evening we ate tasty vegetable soup, weird (in a bad way) pasta in a
+creamy onion sauce, and chocolatey ice cream cake.  The tutors spontaneously
+organised a game where students had to arrange the tutors by age, which was
+funny.  Someone suggested the tutors ought to play it with the students.
+Obviously there were too many students, but they elected to find the youngest
+student, and that turned out to be me.
+
+""" ;
+  sioc:topic blog:Done, "sssw2013", "sssw13", "social media streams", "social media", "social machine", "serendipity", "semantics", "semantic web", "pool", "phd", "fabio ciravenga" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/07/sssw2013-social> .
+

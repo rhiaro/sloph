@@ -1,0 +1,43 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/10/owning-linked>
+  as:published "2013-10-20T11:30:00+0000"^^xsd:datetime ;
+  as:tag "unhosted", "sparql", "learning", "semantic web", blog:Doing, "phd", "rdf", "linked data", "slogd", "hacking" ;
+  as:name "Owning your Linked Data" ;
+  as:content """<!---
+published: 20th October 2013, 11:30
+last-modified: 20th October 2013, 13:44
+type: BlogPost
+list: doing
+tags: slogd, hacking, learning, phd, semantic web, linked data, rdf, sparql, unhosted
+-->
+
+# Owning your Linked Data
+
+Thinking about the options for hosting the Linked Data for Slog'd implementations, and also thinking about hosting personal and shared Linked Data in general, and Linked Data authored by an Agent who isn't the subject, because this is likely to be appropriate in a lot if cases.
+
+For Slog'd it's a bit easier, because people setting up a Slog'd implementation would have a bit of knowledge / interest in the Semantic Web and data ownership, in theory.  Such people will probably have already a unique URI (like a [WebID](http://www.w3.org/wiki/WebID)) or the ability to set one up.  The data is also most likely to be authored by the subject.
+
+I'm thinking about it in broader terms because (PhD-related) I want content creators (who don't know or care about the Semantic Web) to publish Linked Data about their involvement in the creation of different digital media and online creative works.
+
+Where does this data live, to give them absolute and definitive control over it?  If they can author data about anyone and anything (which of course, they can) how do we verify what they say when there are no conflicts, or deal with conflicts that arise?  __*Is content attribution data stored in a giant graph that anyone can update?*__
+
+How do we handle IDs?  Is there a central service for generating URIs for people who can't use their own domains (like the [MyProfile demo](https://my-profile.eu))?  How do we link - or not - multiple identities of the same person, according to what they want other people to know?
+
+
+## Things found during this braindump:
+
+* [Socially Aware Cloud Storage](http://www.w3.org/DesignIssues/CloudStorage.html) by Tim Berners-Lee (2011)
+* [WebDAV](http://en.wikipedia.org/wiki/WebDAV)
+* [WebID](https://dvcs.w3.org/hg/WebID/raw-file/tip/spec/identity-respec.html)
+* [MyProfile](http://myprofile-project.org): unified user profile service which you sign into with WebID and stores data about you with FOAF.  There's a hosted [demo](http://my-profile.eu), but it's intended for people to host their own instance I think. [Code on Github](https://github.com/MyProfile/myprofile)
+* [RWW.IO](http://rww.io/): a personal Linked Data store; looks like RemoteStorage but for LD. [Code on Github](https://github.com/deiu/rww.io)
+* [Read/Write Linked Data](http://www.w3.org/DesignIssues/ReadWriteLinkedData) by Tim Berners-Lee (2013)
+* Not particularly helpful list of things that support [editing Linked Data on the Web](http://www.w3.org/wiki/EditingData)
+* [Identity Interoperability](http://www.w3.org/2005/Incubator/webid/wiki/Identity_Interoperability): need to read this properly.
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:updated "2013-10-20T13:44:00+0000"^^xsd:datetime .
+

@@ -1,0 +1,8 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://midnightoildesign.com/web-what-is-it-good-for/>
+  dcterms:created "2015-06-09T08:12:39+01:00"^^xsd:datetime ;
+  blog:mentions <http://rhiaro.co.uk/2015/05/www2015> .
+

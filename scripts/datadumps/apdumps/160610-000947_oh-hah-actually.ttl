@@ -1,0 +1,24 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://blog.rhiaro.co.uk/oh-hah-actually> dct:created "2016-06-10T00:09:47+01:00"^^<xsd:dateTime> ;
+    sioc:content "Oh hah actually if brexit means the UK will be forced into Schengen (as a result of having nothing else to negotiate trade deals with) maybe it's worth destroying the economy and human rights regulation. More scary foreigners will be able to come in and fix the place up, and the xenophobic Brits won't be able to afford to leave and make other places look untidy" ;
+    sioc:topic "brexit",
+        "eu",
+        "europe",
+        "politics",
+        "referendum",
+        "schengen",
+        "uk" ;
+    foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/06/oh-hah-actually> .
+

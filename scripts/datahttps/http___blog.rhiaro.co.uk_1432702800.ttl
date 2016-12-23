@@ -1,0 +1,13 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://blog.rhiaro.co.uk/1432702800>
+  as:tag "travel", "bus", "journey", "croatia", "zadar", "korenica" ;
+  as:startTime "2015-05-27T15:10:00+02:00"^^xsd:datetime ;
+  as:endTime "2015-05-30T17:35:00+02:00"^^xsd:datetime ;
+  blog:startLocation <http://dbpedia.org/resource/Zadar> ;
+  blog:endLocation <http://dbpedia.org/resource/Korenica> ;
+  dcterms:published "2015-05-27T07:00:00+02:00"^^xsd:datetime .
+

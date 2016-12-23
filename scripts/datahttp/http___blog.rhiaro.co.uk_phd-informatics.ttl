@@ -1,0 +1,48 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/phd-informatics>
+  dcterms:title "PhD in Informatics" ;
+  dcterms:created "2012-10-01T09:00:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 1st October 2012, 09:00 BST
+tags: education,academia,phd,university of edinburgh,informatics,linked data,semantic web,user-generated content,social web,social profiles,online personas,social machines,cv,resume
+start: 1st October 2012
+-->
+
+# PhD in Informatics
+
+## <span class="h-card p-org">School of Informatics, University of Edinburgh</span>
+
+Something something linked data something social profiles something context-aware self-representation on the web doodah online personas social machines uhhhh decentralisation.
+
+I guess I'll update this when I'm feeling more sure of myself.
+
+**Graduation expected:** July 2016 (funding runs out) / late 2017 (more realistically)
+
+**Publications:** See [/pub](/pub)
+
+**~~Humoured~~ Supervised by:** <a href="http://homepages.inf.ed.ac.uk/ewan/" class="u-url p-name h-card">Ewan Klein</a> and <a href="http://www.dai.ed.ac.uk/groups/ssp/members/dave.htm" class="h-card p-name u-url">Dave Robertson</a>.""" ;
+  sioc:topic "education", "academia", "phd", "university of edinburgh", "informatics", "linked data", "semantic web", "user-generated content", "social web", "social profiles", "online personas", "social machines", "cv", "resume" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2012/10/phd-informatics> ;
+  as:startTime "2012-10-01T00:00:00+0100"^^xsd:datetime ;
+  blog:tmpcontent """# PhD in Informatics
+
+## <span class="h-card p-org">School of Informatics, University of Edinburgh</span>
+
+Something something linked data something social profiles something context-aware self-representation on the web doodah online personas social machines uhhhh decentralisation.
+
+I guess I'll update this when I'm feeling more sure of myself.
+
+**Graduation expected:** July 2016 (funding runs out) / late 2017 (more realistically)
+
+**Publications:** See [/pub](/pub)
+
+**~~Humoured~~ Supervised by:** <a href="http://homepages.inf.ed.ac.uk/ewan/" class="u-url p-name h-card">Ewan Klein</a> and <a href="http://www.dai.ed.ac.uk/groups/ssp/members/dave.htm" class="h-card p-name u-url">Dave Robertson</a>.""" .
+

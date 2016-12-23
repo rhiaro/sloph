@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/jindrichmynarz>
+  foaf:name "Jindřich Mynarz" ;
+  foaf:homepage <https://twitter.com/jindrichmynarz> ;
+  foaf:depiction <https://webmention.io/avatar/twitter.com/169a75dcfc0f8403477241d39672e83220d256e82d4764d704fcea77908d03c7.jpeg> .
+

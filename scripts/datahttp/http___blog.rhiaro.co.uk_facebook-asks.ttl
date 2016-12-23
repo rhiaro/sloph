@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/facebook-asks>
+  dcterms:created "2015-06-30T10:24:49+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: websci15,emax,online personas,social media,privacy,identity
+-->
+
+Facebook asks 'what is your name'. If you think about it too long, you violate the terms of service. - [@emax](http://twitter.com/emax)""" ;
+  sioc:topic "websci15", "emax", "online personas", "social media", "privacy", "identity" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/06/facebook-asks> ;
+  as:latitude "51.73854" ;
+  as:longitude "-1.23887" ;
+  blog:tmpcontent "Facebook asks 'what is your name'. If you think about it too long, you violate the terms of service. - [@emax](http://twitter.com/emax)" .
+

@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://twitter.com/eswc_conf/status/604914518293118976>
+  dcterms:title "reposts this." ;
+  dcterms:created "2015-05-31T08:37:14+01:00"^^xsd:datetime ;
+  dc:creator <http://www.eswc-conferences.org/> ;
+  sioc:content """RT [@rhiaro][1]: I'm *really* hoping #ESWC2015 reignites my excitement about linked data, which has been kinda damp for a while. #S... rhiaro.co.uk/2015/05/im-rea…
+
+[1]: https://twitter.com/rhiaro
+""" ;
+  blog:share_of <http://rhiaro.co.uk/2015/05/im-really-hoping> .
+

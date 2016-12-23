@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/573965a169d93>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-05-15T23:15:01-07:00"^^xsd:dateTime ;
+  as:tag "hostel", "la", "shelter", "travel", "walk of fame hostel" ;
+  blog:cost "$39.90" ;
+  as:summary "1 night shelter (Walk of Fame Hostel)" .
+

@@ -1,0 +1,23 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Coconut chocolate ice cream, 1 spoon",
+    "as:tag": [
+        "ice cream"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-05-27T22:18:08-04:00",
+    "@id": "http://blog.rhiaro.co.uk/coconut-chocolate-ice",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/coconut-chocolate"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-27T22:18:08-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

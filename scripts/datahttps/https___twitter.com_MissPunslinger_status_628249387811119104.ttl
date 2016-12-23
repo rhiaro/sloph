@@ -1,0 +1,15 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/MissPunslinger/status/628249387811119104>
+  sioc:reply_of <https://rhiaro.co.uk/2015/08/noticing-posters> ;
+  as:published "2015-08-03T18:01:41+01:00"^^xsd:datetime ;
+  as:name "@rhiaro Would you consider mine? x tickets.edfringe.com/whats-on/kirstâ€¦" ;
+  as:content """[@rhiaro][1] Would you consider mine? x [tickets.edfringe.com/whats-on/kirstâ€¦][2]
+
+[1]: https://twitter.com/rhiaro
+[2]: https://tickets.edfringe.com/whats-on/kirsten-macgregor-hello-cruel-world
+""" ;
+  as:actor <https://twitter.com/MissPunslinger> .
+

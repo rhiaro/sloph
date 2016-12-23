@@ -1,0 +1,56 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/junior-data>
+  dcterms:title "Junior Data Architect, Linked Data Platform" ;
+  dcterms:created "2014-06-16T09:00:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 16th June 2014, 09:00
+start: 16th June 2014
+end: 1st October 2014
+tags: linked data,semantic web,ldp,python,sparql,triplestore,ontotext,bbc,work,london,data architect,rdf,cv,resume
+-->
+
+# Junior Data Architect, Linked Data Platform
+
+## <span class="p-org h-card">BBC</span>, London
+
+Worked with an *amazing* team to boost the profits of [Mr. Falafel in Shepherd's Bush](http://www.mrfalafel.co.uk/About-Us.html) and on the side helped with modelling the world as the BBC sees it, and learnt all of the corners to cut and ideologies to give up in order to develop linked data applications to improve the lives of people who don't know/care about linked data.
+
+Key achievements include:
+
+* Wrote some of the longest SPARQL queries I've ever seen.
+* [Disambiguated](https://twitter.com/rhiaro/status/513015894914924544) [all the things](https://twitter.com/rhiaro/status/499591280180346880).
+* [Added all the Things to DBpedia](https://github.com/dbpedia/dbpedia-links/commit/5fe5e99142b5953dfec58363559b99e62964ec5d).
+* Got my very own [BBC/things guid](http://www.bbc.co.uk/things/e6a0941e-f964-4a78-a2ea-3d47c6405df6).
+* Corrected typos in public ontology documentation.
+* Discovered rewriting a script from scratch in Python is easier than learning Scala to make a couple of small changes.
+* Wrote an IRC bot script that replied in the affirmative if anyone mentioned falafel in the team channel.
+* [Accidentally](https://twitter.com/rhiaro/status/515444118433304576) made every artist in the triplestore `owl:sameAs` [David Bowie](http://dbpedia.org/resource/David_Bowie).""" ;
+  sioc:topic "linked data", "semantic web", "ldp", "python", "sparql", "triplestore", "ontotext", "bbc", "work", "london", "data architect", "rdf", "cv", "resume" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2014/06/junior-data> ;
+  as:startTime "2014-06-16T00:00:00+0100"^^xsd:datetime ;
+  as:endTime "2014-10-01T00:00:00+0100"^^xsd:datetime ;
+  blog:tmpcontent """# Junior Data Architect, Linked Data Platform
+
+## <span class="p-org h-card">BBC</span>, London
+
+Worked with an *amazing* team to boost the profits of [Mr. Falafel in Shepherd's Bush](http://www.mrfalafel.co.uk/About-Us.html) and on the side helped with modelling the world as the BBC sees it, and learnt all of the corners to cut and ideologies to give up in order to develop linked data applications to improve the lives of people who don't know/care about linked data.
+
+Key achievements include:
+
+* Wrote some of the longest SPARQL queries I've ever seen.
+* [Disambiguated](https://twitter.com/rhiaro/status/513015894914924544) [all the things](https://twitter.com/rhiaro/status/499591280180346880).
+* [Added all the Things to DBpedia](https://github.com/dbpedia/dbpedia-links/commit/5fe5e99142b5953dfec58363559b99e62964ec5d).
+* Got my very own [BBC/things guid](http://www.bbc.co.uk/things/e6a0941e-f964-4a78-a2ea-3d47c6405df6).
+* Corrected typos in public ontology documentation.
+* Discovered rewriting a script from scratch in Python is easier than learning Scala to make a couple of small changes.
+* Wrote an IRC bot script that replied in the affirmative if anyone mentioned falafel in the team channel.
+* [Accidentally](https://twitter.com/rhiaro/status/515444118433304576) made every artist in the triplestore `owl:sameAs` [David Bowie](http://dbpedia.org/resource/David_Bowie).""" .
+

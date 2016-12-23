@@ -1,0 +1,11 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/location/volunteer>
+  a as:Place ;
+  as:name "volunteer" ;
+  rdfs:label "volunteer" ;
+  blog:pastLabel "went to help with something" ;
+  blog:presentLabel "is out helping with something" .
+

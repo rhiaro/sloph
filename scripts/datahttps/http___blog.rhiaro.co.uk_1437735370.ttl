@@ -1,0 +1,14 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/1437735370>
+  blog:cost "Â£10.60" ;
+  as:content """<!---
+start: 11th August 2015, 16:44 BST
+end: 11th August 2015, 20:13 BST
+endLocation: http://dbpedia.org/resource/Edinburgh
+startLocation: http://dbpedia.org/resource/Newark-on-Trent
+tags: train,journey,uk,travel
+cost: Â£10.60
+-->""" .
+

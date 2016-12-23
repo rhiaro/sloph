@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/really-shouldnt-trusted>
+  as:published "2016-01-01T16:29:03-05:00"^^xsd:dateTime ;
+  as:tag "fml", "indieweb", "test", "slogd", "hacking" ;
+  as:content "I really shouldn't be trusted with websites." .
+

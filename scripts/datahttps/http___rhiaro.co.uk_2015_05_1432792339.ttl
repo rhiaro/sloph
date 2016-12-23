@@ -1,0 +1,16 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/05/1432792339>
+  as:latitude "44.74785" ;
+  as:longitude "15.70295" ;
+  a as:Announce ;
+  as:published "2015-05-28T06:52:19+0100"^^xsd:datetime ;
+  as:tag "w3c", "httprange14" ;
+  as:content """<!---
+tags: w3c,httprange14
+share-of: https://twitter.com/roessler/status/603418587361976321
+-->""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <https://twitter.com/roessler/status/603418587361976321> .
+

@@ -1,0 +1,70 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2013/07/madrid-first>
+  as:published "2013-07-07T23:30:00.000Z"^^xsd:datetime ;
+  as:tag "gay pride", "party", "spain", "summer", "too sodding hot", "madrid", "festival", "travel", blog:Done ;
+  as:name "Madrid: First impressions" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-4679201487544513759" ;
+  as:content """I've never been to Spain, and for some reason the Spanish language baffles me.
+It's the least guessable European language, in my humble opinion, and I can't
+get my head (/tongue) around the pronunciation.  I've never studied Spanish,
+but I can get by just fine with French and German, and when I've been in
+Switzerland, Holland and even Italy I could make a go of communicating to a
+reasonable degree, so I thought I'd pick it things up.  
+  
+But apparently my brain is resistant to Spanish.  
+  
+That aside, locals are very friendly and even when they don't speak English
+they don't seem to give you disparaging looks.  
+  
+We arrived on Saturday evening (having successfully got our poster tube past
+various levels of EasyJet staff who would have been within their rights, if
+unreasonable, to tell us it was too big for hand luggage).  We were met at the
+airport by new friends, who we later accompanied into the centre of the city
+to watch the Gay Pride Parade.  
+  
+The streets were packed, the heat was stifling, and the costumes varied and
+outrageous.  The party atmosphere filled the air with a tangible excitement.
+The parade itself was slow to start, but eventually lasted for several hours.
+We explored a little, taking in this version of the city as the empty streets
+of the Sunday morning to follow would have a very different feel.  
+  
+But mostly we sat on the grass, chilling with our hosts and their friends, who
+were mixing cheap wine and lemonade and bobbing to the waves of techno, trance
+or cheesy pop that came by with every float.  
+  
+The night was hot, but not unbearable; about 37 degrees, yet there was a
+slight breeze and no humidity which made all the difference.  
+  
+On Sunday we braved the sun to do the tourist circuit recommended to us to
+take in as much of the city as possible in the time we had.  
+  
+We deviated somewhat to explore various gardens (beautiful, although I was too
+distracted by the heat to really appreciate them) and pop into some impressive
+looking cathedrals (a nice break from the heat, but I find Christian art,
+architecture and interior decoration disturbingly morbid).  
+  
+Never having thought about visiting Madrid before, and thus never having
+planned out what I might like to see when I got here, none of the monuments,
+buildings or squares stood out to me.  Architecture is pale and old-looking,
+and mostly very ornate.  Similarly pale sculptures, statues and fountains are
+in abundance.  
+  
+Distinguishing vegetarian options in restaurants and cafes seemed more
+challenging than I had the energy for; not to mention, most didn't start
+serving food until at least one-thirty which wouldn't have allowed us time to
+catch our train, so I'm ashamed to say we grabbed snacks from a supermarket
+instead.  
+  
+We (eventually) caught a train from Atocha station in the centre to Cercedilla
+(EUR 5.30).  And thus began the Summer School adventure... Continued in
+another post.  
+
+  
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-07-17T13:50:54.075Z"^^xsd:datetime .
+

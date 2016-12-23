@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/lost>
+  dcterms:created "2016-01-12T19:20:46+00:00"^^xsd:dateTime ;
+  sioc:content """So if I see you
+And I tell you
+How I've watched you
+Don't make fun of me later
+I'm just lost""", """So if I see you
+
+And I tell you
+
+How I've watched you
+
+Don't make fun of me later
+
+I'm just lost""" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/01/lost> .
+

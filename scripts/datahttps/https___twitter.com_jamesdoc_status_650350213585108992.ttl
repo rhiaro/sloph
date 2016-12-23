@@ -1,0 +1,14 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://twitter.com/jamesdoc/status/650350213585108992>
+  sioc:reply_of <https://rhiaro.co.uk/2015/10/moved-desksedi> ;
+  as:published "2015-10-03T17:42:28+01:00"^^xsd:datetime ;
+  as:name "@rhiaro So your visa came through then!" ;
+  as:content """[@rhiaro][1] So your visa came through then!
+
+[1]: https://twitter.com/rhiaro
+""", "" ;
+  as:actor <http://jamesdoc.com/> .
+

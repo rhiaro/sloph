@@ -1,0 +1,30 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/community>
+  dcterms:title "Community Coordinator for Edinburgh" ;
+  dcterms:created "2012-12-01T09:00:00+0000"^^xsd:datetime ;
+  sioc:content """<!---
+published: 1st December 2012, 09:00
+start: December 2012
+tags: cv,resume,open knowledge,ok,okfn,community coordinator,volunteer,events
+-->
+
+# Community Coordinator for Edinburgh
+
+## Open Knowledge Scotland
+
+I help with organising Open Knowledge Meetups and Open Data Maker Nights. This definitely has nothing to do with my PhD supervisor being the OK Scotland Ambassador.""" ;
+  sioc:topic "events", "volunteer", "community coordinator", "okfn", "ok", "open knowledge", "resume", "cv" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2012/12/community> ;
+  as:startTime "2012-12-01T00:00:00+0000"^^xsd:datetime ;
+  blog:tmpcontent """# Community Coordinator for Edinburgh
+
+## Open Knowledge Scotland
+
+I help with organising Open Knowledge Meetups and Open Data Maker Nights. This definitely has nothing to do with my PhD supervisor being the OK Scotland Ambassador.""" .
+

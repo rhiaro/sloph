@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/07/smoothie-kale>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-07-24T12:34:51-04:00"^^xsd:dateTime, "2016-07-24T12:34:51-04:00" ;
+  as:tag "smoothie" ;
+  as:name "Smoothie: kale, apple, apricot, tomato, cucumber, almond milk" .
+

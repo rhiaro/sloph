@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/explain-ownership>
+  dcterms:created "2015-06-28T16:49:14+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+reply-to: http://rhiaro.co.uk/2015/06/whats-problem
+tags: websci15,social web,ownmydata,privacy,indieweb,htp://twitter.com/gloriakt
+-->
+
+To explain ownership, [@gloriakt](http://twitter.com/gloriakt) suggests data use in divorce/legal proceedings.""" ;
+  sioc:topic "htp://twitter.com/gloriakt", "indieweb", "privacy", "ownmydata", "social web", "websci15" ;
+  sioc:reply_of <http://rhiaro.co.uk/2015/06/whats-problem> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/06/explain-ownership> ;
+  blog:tmpcontent "To explain ownership, [@gloriakt](http://twitter.com/gloriakt) suggests data use in divorce/legal proceedings." .
+

@@ -1,0 +1,27 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<https://rhiaro.co.uk/2015/07/steampunk-vegan>
+  as:latitude "51.55216" ;
+  as:longitude "0.16166" ;
+  blog:tmpcontent """This steampunk vegan wedding is the best wedding I've ever been to.
+
+![cake!!](https://rhiaro.co.uk/photos/1507laurel/1.jpg)
+
+![laurel](https://rhiaro.co.uk/photos/1507laurel/2.jpg)""" ;
+  as:published "2015-07-19T12:36:51+0100"^^xsd:datetime ;
+  as:tag "vegan", "laurel", "wedding", "steampunk" ;
+  as:content """<!---
+tags: laurel,vegan,wedding,steampunk
+-->
+
+This steampunk vegan wedding is the best wedding I've ever been to.
+
+![cake!!](https://rhiaro.co.uk/photos/1507laurel/1.jpg)
+
+![laurel](https://rhiaro.co.uk/photos/1507laurel/2.jpg)""" ;
+  sioc:has_reply <https://brid-gy.appspot.com/like/twitter/rhiaro/622797827312328705/2599600650>, <https://twitter.com/MisfitWedding/status/624516922487476224>, <https://aaronparecki.com/likes/2015/07/21/1/>, <https://brid-gy.appspot.com/like/twitter/rhiaro/622797827312328705/12124462>, <https://brid-gy.appspot.com/like/twitter/rhiaro/622797827312328705/40343747>, <https://twitter.com/WeeBletherer/status/622799408401354752> ;
+  as:actor <https://rhiaro.co.uk/about#me> .
+

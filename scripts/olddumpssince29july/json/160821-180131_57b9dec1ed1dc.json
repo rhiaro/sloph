@@ -1,0 +1,27 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:summary": "Lunch (Eataly)",
+    "blog:cost": "$15.51",
+    "as:tag": [
+        "food",
+        "restaurant",
+        "takeaway",
+        "us0816",
+        "eataly"
+    ],
+    "@type": [
+        "blog:Acquisition"
+    ],
+    "as:published": "2016-08-21T13:01:31-04:00",
+    "@id": "http://blog.rhiaro.co.uk/57b9dec1ed1dc",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/57b9dec1ed1dc"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-21T13:01:31-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

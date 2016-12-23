@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/01/even-though-im>
+  as:published "2016-01-21T23:30:42+00:00"^^xsd:dateTime ;
+  as:tag "selfdogfooding", "academia", "linked research", "hacking" ;
+  as:content "Even though I'm fully sold on the whole selfdogfooding thing, I'm continuously impressed at how many suddenly-urgent bugs are being thrown up by using the subject of our paper as the tool to write the paper." .
+

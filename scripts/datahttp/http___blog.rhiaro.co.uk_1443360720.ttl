@@ -1,0 +1,21 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/1443360720>
+  dcterms:created "2015-09-27T14:32:00+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 27th September 2015, 14:32 Europe/London
+bookmark-of: http://www.csdl.tamu.edu/~marshall/pubs.html
+tags: marshall,phd,resources,papers,web,social,social web,social media,content creation,ugc,social science,attribution,identity,profiles
+-->
+
+""" ;
+  sioc:topic "marshall", "phd", "resources", "papers", "web", "social", "social web", "social media", "content creation", "ugc", "social science", "attribution", "identity", "profiles" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/09/1443360720> ;
+  blog:bookmark_of <http://www.csdl.tamu.edu/~marshall/pubs.html> .
+

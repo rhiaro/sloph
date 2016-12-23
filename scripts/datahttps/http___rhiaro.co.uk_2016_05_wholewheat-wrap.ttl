@@ -1,0 +1,10 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/05/wholewheat-wrap>
+  a blog:Consumption, as:Activity ;
+  as:published "2016-05-30T12:43:42-04:00"^^xsd:dateTime, "2016-05-31T14:47:34-04:00"^^xsd:dateTime, "2016-05-31T14:47:34-04:00", "2016-05-30T12:43:42-04:00" ;
+  as:tag "bread", "seitan", "vegetables" ;
+  as:name "Wholewheat wrap with various peppers, tomato, not-mayo, not-cheese, not-bacon, spinach", "Wholewheat wrap with peanut butter" .
+

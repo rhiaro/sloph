@@ -1,0 +1,31 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/www-2015-florence>
+  dcterms:title "WWW 2015, Florence" ;
+  dcterms:created "2015-04-21T03:00:00+0000"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+published: 21st April 2015, 03:00
+type: BlogPost
+tags: rsvp,florence,conferences,phd,www2015,making sense of microposts,events
+start: 18th May 2015, 10:00
+end: 22nd May 2015, 18:00
+reply-to: http://www.www2015.it/
+list: todo
+-->
+
+# WWW 2015, Florence
+
+I'll be presenting a paper about twitter spam bots, written with (mostly by) Gordon Edwards, at the Making Sense of Microposts workshop.""" ;
+  sioc:topic blog:Todo, "events", "making sense of microposts", "www2015", "phd", "conferences", "florence", "rsvp" ;
+  sioc:reply_of <http://http://www.www2015.it/> ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/04/www-2015-florence> ;
+  as:startTime "2015-05-18T10:00:00+0000"^^xsd:datetime ;
+  as:endTime "2015-05-22T18:00:00+0000"^^xsd:datetime .
+

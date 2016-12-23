@@ -1,0 +1,45 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<https://rhiaro.co.uk/2012/11/remediating-social>
+  as:published "2012-11-05T18:47:00.000Z"^^xsd:datetime ;
+  as:tag "twitter wall", "twitter squares", "remediating the social", "electronic literature", "elmcip", "interactive fiction", "speaker", "conference", "edinburgh", "events", blog:Done, "hacking" ;
+  as:name "Remediating the Social #elmcip" ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-3044622027455090554" ;
+  as:content """I spent the last few days in Edinburgh College of Art, helping out at the
+[Remediating the Social](http://elmcip.net/confernece) conference.  I was in
+charge of making sure everyone's microphones were on, and slides were being
+projected, which turned out to be more work than anyone anticipated.  Only
+minor hiccups occurred though, usually when I unplugged something I shouldn't
+have by accident.  I couldn't have done it without my glamourous assistant
+JosÃ©, who was the master of fiddling with Macbook screen resolutions to make
+them play nice with the projector.  
+  
+More importantly, I saw some super interesting talks, and met and talked to
+[some](http://www.motorhueso.net/) [fantastic](http://nickm.com/)
+[smart](http://jilltxt.net/) [people](http://www.simanowski.info/) about
+electronic literature, and other things.  
+  
+I also presented about [Palimpsest](http://literarycities.org/), in front of
+the biggest audience I have ever talked in front of.  Go me.  
+  
+Videos of everything from the conference are
+[here](http://bambuser.com/channel/ELMCIP).  
+  
+On the last day I implemented an idea that had been kicking around the back of
+my mind for a while, which was the Uninformative Twitter Wall, or [Twitter
+Squares](https://rhiaro.co.uk/twittersquares).  It's nothing particularly
+complex; it uses jQuery and probably has memory leaks.  I'd love for people to
+help themselves to the code and improve it. Converting a hash of a tweet text
+into a hex code, I generated coloured squares for the results of a search
+term.  If the feed you choose is updating a lot, then the squares move around
+quickly and it looks pretty funky.  If there are only occasional new tweets,
+then it looks less exciting, but is still equally useless for seeing what
+people are saying.  (Unless you hover over the squares).  That's okay though,
+because it's Art.
+
+""" ;
+  as:actor <http://www.blogger.com/profile/12227954801080178130> ;
+  as:updated "2013-05-18T16:48:28.540Z"^^xsd:datetime .
+

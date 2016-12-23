@@ -1,0 +1,7 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://twitter.com/c_aramelle>
+  foaf:name "Andreea" ;
+  foaf:homepage <https://twitter.com/c_aramelle> ;
+  foaf:depiction <https://twitter.com/c_aramelle/profile_image?size=original>, <https://webmention.io/avatar/twitter.com/9b1260da9b406a96769ef527146bcc8d1f2387f4c7cec00d4d595a49579eff50.jpeg> .
+

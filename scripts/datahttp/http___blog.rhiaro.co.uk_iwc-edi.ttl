@@ -1,0 +1,115 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/iwc-edi>
+  dcterms:title "IndieWebCamp Edinburgh" ;
+  dcterms:created "2015-06-10T00:58:00+0100"^^xsd:datetime ;
+  dcterms:modified "2015-06-11T13:35:00+0100"^^xsd:datetime ;
+  sioc:content """<!---
+published: 10th June 2015, 00:58 BST
+modified: 11th June 2015, 13:35 BST
+tags: event,indieweb,indiewebcamp,tmu,edinburgh
+-->
+
+# IndieWebCamp Edinburgh
+
+![IWC Logo](https://indiewebcamp.com/wiki/skins/indieweb/indiewebcamp-logo-500px.png)
+
+## What?
+
+Two-day practical unconference about decentralised social web, owning your data and online presence, and digital empowerment.
+
+* Day 1: Brainstorming, teaching, learning, discussing
+* Day 2: Hacking, building, improving
+
+## When?
+
+**Saturday 25th and Sunday 26th July**
+
+## Where?
+
+<a href="#venue" id="venue" style="text-decoration:none;color:black;" onclick="this.innerHTML='Skyscanner Edinburgh!'">TBC</a>
+
+## Sign me up?!
+
+[Register on the IndieWebCamp wiki](http://indiewebcamp.com/2015/Edinburgh) one of two ways:
+
+* Step 1: Add your homepage URL to your profile on twitter, github, last.fm or google+, eg:
+
+![http://rhiaro.co.uk on @rhiaro's twitter profile](http://rhiaro.co.uk/posts/imgs/201506_iwcedi/indieauthtwitter.png)
+
+* Step 2: Add a link to your chosen profile(s) on your homepage with `rel="me"`, eg:
+
+![rel=me links](http://rhiaro.co.uk/posts/imgs/201506_iwcedi/indieauthrelme.png)
+
+* Step 3: Sign into the wiki...
+
+![IWC wiki sign-in](http://rhiaro.co.uk/posts/imgs/201506_iwcedi/wikisignin.png)
+
+* Step 4: Add yourself to the Guest List (feel free to also add dietary or accessibility requirements here, or ping me directly):
+
+![IWC Edinburgh guest list](http://rhiaro.co.uk/posts/imgs/201506_iwcedi/iwcedlist.png)
+
+*OR* if you don't have your own domain name yet or can't edit your homepage for some other reason, ping me on IRC (#indiewebcamp on Freenode), [twitter](http://twitter.com/rhiaro) or email (order of preference) and I'll be happy to sign you up.
+
+## Sponsors
+
+![Matrix logo](http://matrix.org/blog/wp-content/uploads/2015/01/logo1.png)
+
+Ambitious new open standard for distributed, real-time communication - interoperable Instant Messaging and VoIP
+
+We could do with one or two more to make sure we keep everyone thoroughly fed and coffee-ed, so if you work for a company who might like to support this kind of thing, let me know!""" ;
+  sioc:topic "edinburgh", "tmu", "indiewebcamp", "indieweb", "event" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/06/iwc-edi> ;
+  blog:tmpcontent """# IndieWebCamp Edinburgh
+
+![IWC Logo](https://indiewebcamp.com/wiki/skins/indieweb/indiewebcamp-logo-500px.png)
+
+## What?
+
+Two-day practical unconference about decentralised social web, owning your data and online presence, and digital empowerment.
+
+* Day 1: Brainstorming, teaching, learning, discussing
+* Day 2: Hacking, building, improving
+
+## When?
+
+**Saturday 25th and Sunday 26th July**
+
+## Where?
+
+<a href="#venue" id="venue" style="text-decoration:none;color:black;" onclick="this.innerHTML='Skyscanner Edinburgh!'">TBC</a>
+
+## Sign me up?!
+
+[Register on the IndieWebCamp wiki](http://indiewebcamp.com/2015/Edinburgh) one of two ways:
+
+* Step 1: Add your homepage URL to your profile on twitter, github, last.fm or google+, eg:
+
+![http://rhiaro.co.uk on @rhiaro's twitter profile](http://rhiaro.co.uk/posts/imgs/201506_iwcedi/indieauthtwitter.png)
+
+* Step 2: Add a link to your chosen profile(s) on your homepage with `rel="me"`, eg:
+
+![rel=me links](http://rhiaro.co.uk/posts/imgs/201506_iwcedi/indieauthrelme.png)
+
+* Step 3: Sign into the wiki...
+
+![IWC wiki sign-in](http://rhiaro.co.uk/posts/imgs/201506_iwcedi/wikisignin.png)
+
+* Step 4: Add yourself to the Guest List (feel free to also add dietary or accessibility requirements here, or ping me directly):
+
+![IWC Edinburgh guest list](http://rhiaro.co.uk/posts/imgs/201506_iwcedi/iwcedlist.png)
+
+*OR* if you don't have your own domain name yet or can't edit your homepage for some other reason, ping me on IRC (#indiewebcamp on Freenode), [twitter](http://twitter.com/rhiaro) or email (order of preference) and I'll be happy to sign you up.
+
+## Sponsors
+
+![Matrix logo](http://matrix.org/blog/wp-content/uploads/2015/01/logo1.png)
+
+Ambitious new open standard for distributed, real-time communication - interoperable Instant Messaging and VoIP
+
+We could do with one or two more to make sure we keep everyone thoroughly fed and coffee-ed, so if you work for a company who might like to support this kind of thing, let me know!""" .
+

@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Baked beans and cream cheese on toast; coffee",
+    "as:tag": [
+        "coffee",
+        "beans",
+        "bread"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-08-05T08:36:54-04:00",
+    "@id": "http://blog.rhiaro.co.uk/baked-beans-cream",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/08/baked-beans-cream"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-08-05T08:36:54-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

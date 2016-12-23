@@ -1,0 +1,14 @@
+{
+    "h": "entry",
+    "like-of": "https://twitter.com/philip_roberts/status/684730801557245952",
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-01-06T13:54:17+00:00",
+    "@id": "http://blog.rhiaro.co.uk/568d1c89921da",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/01/568d1c89921da"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-01-06T13:54:17+00:00",
+        "@type": "xsd:dateTime"
+    }
+}

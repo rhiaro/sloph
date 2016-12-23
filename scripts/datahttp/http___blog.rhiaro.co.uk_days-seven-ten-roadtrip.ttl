@@ -1,0 +1,22 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://blog.rhiaro.co.uk/days-seven-ten-roadtrip>
+  dcterms:title "Days seven to ten: Road-trippin' (Alice Springs, Ayers Rock, King's Canyon)" ;
+  dcterms:created "2013-06-07T23:30:00.000Z"^^xsd:datetime ;
+  dcterms:modified "2013-07-04T18:46:58.862Z"^^xsd:datetime ;
+  blog:bloggerid "tag:blogger.com,1999:blog-18505529.post-92299008787436754" ;
+  dc:creator <http://www.blogger.com/profile/12227954801080178130> ;
+  sioc:content """Car, wandered, pool, noodles.  
+Uluru.  
+Uluru & King's Canyon.  
+King's Canyon, Alice Springs, desert park.
+
+""" ;
+  sioc:topic "travel", "rocks", "roadtrip", "outback", "king's canyon", "kangeroo", "drive", "desert", "ayers rock", "australia", "alice springs", "aboriginals", "uluru", "walk", "wildlife", blog:Done ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2013/06/days-seven-ten-roadtrip> .
+

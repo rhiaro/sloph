@@ -1,0 +1,18 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2015/09/1442004060>
+  a as:Add ;
+  as:published "2015-09-11T21:41:00+0100"^^xsd:datetime ;
+  as:tag "acl", "access control", "capability" ;
+  as:target <https://rhiaro.co.uk/bookmarks/> ;
+  as:content """<!---
+published: 11th September 2015, 21:41 Europe/London
+bookmark-of: http://www.eros-os.org/essays/capintro.html
+tags: access control,acl,capability
+-->
+
+""" ;
+  as:actor <https://rhiaro.co.uk/about#me> ;
+  as:object <http://www.eros-os.org/essays/capintro.html> .
+

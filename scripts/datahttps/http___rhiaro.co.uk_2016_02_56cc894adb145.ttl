@@ -1,0 +1,11 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/02/56cc894adb145>
+  a blog:Acquisition, as:Activity ;
+  as:published "2016-02-23T15:30:13+00:00"^^xsd:dateTime ;
+  as:tag "coffee", "food", "restaurant", "snax" ;
+  blog:cost "&pound;5.70" ;
+  as:summary "Afternoon breakfast (Snax)" .
+

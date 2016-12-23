@@ -1,0 +1,8 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://rhiaro.co.uk/2016/06/57585a15acb0c>
+  a as:Announce ;
+  as:published "2016-06-08T18:47:01+01:00"^^xsd:dateTime ;
+  as:object <https://twitter.com/nicolagreco/status/740599970210795520> .
+

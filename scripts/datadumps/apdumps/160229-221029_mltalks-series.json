@@ -1,0 +1,36 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "as:name": "MLTalks Series: Sherry Turkle in Conversation with Mitch Resnick",
+    "blog:rsvp": "yes",
+    "as:tag": [
+        "rsvp",
+        "event",
+        "attendee",
+        "mit",
+        "media lab",
+        "sherry turkle",
+        "phd",
+        "social",
+        "social media"
+    ],
+    "as:published": "2016-02-29T17:10:29-05:00",
+    "as:startTime": "2016-03-03T15:00:00-05:00",
+    "as:endTime": "2016-03-03T16:30:00-05:00",
+    "@type": [
+        "as:Travel"
+    ],
+    "as:location": {
+        "@id": "http://dbpedia.org/resource/MIT_Media_Lab"
+    },
+    "@id": "http://blog.rhiaro.co.uk/mltalks-series",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/02/mltalks-series"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-02-29T17:10:29-05:00",
+        "@type": "xsd:dateTime"
+    }
+}

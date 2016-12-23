@@ -1,0 +1,15 @@
+@prefix blog: <http://vocab.amy.so/blog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<http://blog.rhiaro.co.uk/56f57932f011c>
+  a blog:Acquisition ;
+  dcterms:created "2016-03-24T19:34:47+03:00"^^xsd:dateTime ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2016/03/56f57932f011c> ;
+  blog:cost "120 QR" ;
+  as:published "2016-03-24T19:34:47+03:00"^^xsd:dateTime ;
+  as:summary "Dodgy boat for 2" ;
+  as:tag "boat", "csarven", "doha", "travel" .
+

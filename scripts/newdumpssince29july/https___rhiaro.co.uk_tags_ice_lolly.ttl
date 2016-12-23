@@ -1,0 +1,7 @@
+@prefix as: <http://www.w3.org/ns/activitystreams#> .
+
+<https://rhiaro.co.uk/tags/ice+lolly>
+  a as:Collection ;
+  as:name "ice lolly" ;
+  as:items <https://rhiaro.co.uk/2016/08/pink-lemonade-ice>, <https://rhiaro.co.uk/2016/08/57ba0b26a3dd8> .
+

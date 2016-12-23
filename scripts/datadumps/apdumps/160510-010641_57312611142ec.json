@@ -1,0 +1,14 @@
+{
+    "h": "entry",
+    "like-of": "https://twitter.com/benki/status/729823023360966656",
+    "@context": "http://rhiaro.co.uk/vocab",
+    "published": "2016-05-10T01:06:41+01:00",
+    "@id": "http://blog.rhiaro.co.uk/57312611142ec",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/05/57312611142ec"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-05-10T01:06:41+01:00",
+        "@type": "xsd:dateTime"
+    }
+}

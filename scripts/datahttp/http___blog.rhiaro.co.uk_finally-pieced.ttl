@@ -1,0 +1,19 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix blog: <http://vocab.amy.so/blog#> .
+
+<http://blog.rhiaro.co.uk/finally-pieced>
+  dcterms:created "2015-10-21T22:08:32+0100"^^xsd:datetime ;
+  dc:creator <http://rhiaro.co.uk/about#me> ;
+  sioc:content """<!---
+tags: socialwg,social api,phd,social web,decentralized,w3c,standards,specification,editors draft,cv,resume
+-->
+
+I finally pieced together my thoughts on the Social API over the last couple of weeks, and yesterday it was accepted as an [Editor's Draft](w3c-social.github.io/SocialAPI/socialapi) for the W3C Social WG. Over the next month or so I'm hoping the group can work together to plug the gaps and reach consensus where there are various alternative ways of doing things so we can have a First Public Working Draft by our next face-to-face on the 1st of December.""" ;
+  sioc:topic "socialwg", "social api", "phd", "social web", "decentralized", "w3c", "standards", "specification", "editors draft", "cv", "resume" ;
+  foaf:isPrimaryTopicOf <http://rhiaro.co.uk/2015/10/finally-pieced> ;
+  blog:tmpcontent "I finally pieced together my thoughts on the Social API over the last couple of weeks, and yesterday it was accepted as an [Editor's Draft](w3c-social.github.io/SocialAPI/socialapi) for the W3C Social WG. Over the next month or so I'm hoping the group can work together to plug the gaps and reach consensus where there are various alternative ways of doing things so we can have a First Public Working Draft by our next face-to-face on the 1st of December." .
+

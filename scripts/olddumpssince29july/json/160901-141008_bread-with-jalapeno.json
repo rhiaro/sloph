@@ -1,0 +1,24 @@
+{
+    "@context": {
+        "as": "http://www.w3.org/ns/activitystreams#",
+        "blog": "http://vocab.amy.so/blog#"
+    },
+    "replicated": "Post",
+    "as:name": "Bread with jalapeno daiya and avocado; coffee",
+    "as:tag": [
+        "coffee",
+        "bread"
+    ],
+    "@type": [
+        "blog:Consumption"
+    ],
+    "as:published": "2016-09-01T09:10:08-04:00",
+    "@id": "http://blog.rhiaro.co.uk/bread-with-jalapeno",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": {
+        "@id": "http://rhiaro.co.uk/2016/09/bread-with"
+    },
+    "http://purl.org/dc/terms/created": {
+        "@value": "2016-09-01T09:10:08-04:00",
+        "@type": "xsd:dateTime"
+    }
+}

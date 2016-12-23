@@ -1,0 +1,3 @@
+@prefix sioc: <http://rdfs.org/sioc/types#> .
+
+<http://blog.rhiaro.co.uk/> sioc:content "" .
