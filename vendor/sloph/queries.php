@@ -79,6 +79,12 @@ LIMIT $limit
   return $q;
 }
 
+function query_construct_graph($graph){
+  $q = "CONSTRUCT { ?s ?p ?o . } 
+WHERE { GRAPH <$graph> { ?s ?p ?o . } }";
+  return $q;
+}
+
 function query_select_s($limit=0, $graph="http://blog.rhiaro.co.uk#"){
   
   if($graph === null){
