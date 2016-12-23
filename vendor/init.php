@@ -73,6 +73,7 @@ $ns = new EasyRdf_Namespace();
 foreach($_PREF as $prefix => $uri){
   EasyRdf_Namespace::set($prefix, $uri);
 }
+$_CONTEXT = json_encode($_PREF);
 
 /* ActivityStreams 2.0 handling (needs work probably) */
 require_once('easyrdf/easyrdf/lib/EasyRdf/Serialiser/ActivityStreams.php');
