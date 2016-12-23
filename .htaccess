@@ -11,11 +11,13 @@ Header add Link '<https://rhiaro.co.uk/pub.php>; rel="outbox"'
 Header add Link '<https://webmention.io/rhiaro.co.uk/webmention>; rel="webmention"'
 Header add Link '<https://indieauth.com/auth>; rel="authorization_endpoint"'
 Header add Link '<https://tokens.indieauth.com/token>; rel="token_endpoint"'
-Header add Link '<https://rhiaro.co.uk/ldn.php>; rel="http://www.w3.org/ns/ldp#inbox"'
+Header add Link '<https://rhiaro.co.uk/incoming/>; rel="http://www.w3.org/ns/ldp#inbox"'
 Header add Link '<https://rhiaro.co.uk/preferencesfile>; rel="http://www.w3.org/ns/pim/space#preferencesFile"'
 
 RewriteEngine on
 RewriteBase /
+
+RewriteRule ^incoming(/)?$ /vendor/sloph/ldn.php [QSA,L]
 
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
