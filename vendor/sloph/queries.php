@@ -402,9 +402,9 @@ function query_delete($uri){
   return $q;
 }
 
-function query_insert($turtle){
+function query_insert($turtle, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
-  $q .= "INSERT INTO <http://blog.rhiaro.co.uk#> { ".$turtle." }";
+  $q .= "INSERT INTO <$graph> { ".$turtle." }";
   return $q;
 }
 
