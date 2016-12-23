@@ -40,11 +40,25 @@ function supported_content_type($ct){
 function valid_data($data){
   $valid = false;
   $parsed = json_decode($data, true);
+  // Reject anything that isn't JSON for now
   if($parsed !== null){
-    $valid = true;
-    // TODO: Valid JSON-LD
+    $new = new EasyRdf_Graph();
+    try{
+      $new->parse($data, 'jsonld');
+      $valid = true;
+    }catch(EasyRdf_Parser_Exception $e){
+      // TODO: try other syntaxes one day
+    }
   }
   return $valid;
+}
+
+function verify_data($data){
+  // If it came from webmention.io, it's a valid webmention.
+  // If it contains a URL I can parse as RDF and it contains a link to me, it's valid.
+  // If it's something I subscribed to, it's valid.
+  // If it contains an authorization header I recognise, it's valid.
+  // TODO: Add other verification rules.
 }
 
 /*** Other stuff ***/
@@ -62,6 +76,24 @@ function this_form($post){
 function webmentionio($json){
   // TODO
   // Use webmention.io webhook to LDN these up
+  // {
+  //   "secret": "1234abcd",
+  //   "source": "http://rhiaro.co.uk/2015/11/1446953889",
+  //   "target": "http://aaronparecki.com/notes/2015/11/07/4/indiewebcamp",
+  //   "post": {
+  //     "type": "entry",
+  //     "author": {
+  //       "name": "Amy Guy",
+  //       "photo": "http://webmention.io/avatar/rhiaro.co.uk/829d3f6e7083d7ee8bd7b20363da84d88ce5b4ce094f78fd1b27d8d3dc42560e.png",
+  //       "url": "http://rhiaro.co.uk/about#me"
+  //     },
+  //     "url": "http://rhiaro.co.uk/2015/11/1446953889",
+  //     "published": "2015-11-08T03:38:09+00:00",
+  //     "name": "repost of http://aaronparecki.com/notes/2015/11/07/4/indiewebcamp",
+  //     "repost-of": "http://aaronparecki.com/notes/2015/11/07/4/indiewebcamp",
+  //     "wm-property": "repost-of"
+  //   }
+  // }
   return $json;
 }
 
@@ -73,9 +105,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
   $body = file_get_contents('php://input');
   $headers = apache_request_headers();
-  $ct = $headers["Accept"];
+  $ct = $headers["Content-Type"];
 
-  if(isset($_POST) && !empty($_POST)){
+  if(isset($_POST) && !empty($_POST['content'])){
   
     $data = this_form($_POST);
     $was_form = true;
