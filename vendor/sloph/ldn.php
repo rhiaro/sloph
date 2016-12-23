@@ -10,10 +10,8 @@ function on_get($ep){
   $acceptheaders = new AcceptHeader($ct);
   $contains = get_container_dynamic($ep, "https://rhiaro.co.uk/incoming/", "query_select_s", array(0, "https://rhiaro.co.uk/incoming/"), $ct);
   $result = conneg($acceptheaders, $contains);
-  $header = $result['header'];
-  $content = $result['content'];
-
-  return $content;
+  
+  return $result;
 }
 
 function on_post($ep, $data){
@@ -107,7 +105,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 }elseif($_SERVER['REQUEST_METHOD'] === 'GET'){
   
-  $content = on_get($ep);
+  $result = on_get($ep);
+  $header = $result['header'];
+  $content = $result['content'];
   if(gettype($content) == "string"){
     
     header($header);
