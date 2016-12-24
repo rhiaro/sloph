@@ -159,6 +159,22 @@ function query_select_s_where($vals, $limit=10, $sort=null){
   return $q;
 }
 
+function query_select_o_where($vals, $limit=0, $sort=null){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s WHERE { \n";
+  foreach($vals as $s => $p){
+    $q .= "<$s> $p ?s .\n";
+  }
+  $q .= "} ";
+  if(isset($sort)){
+    $q .= "\nORDER BY ASC(?$sort)";
+  }
+  if($limit > 0){
+    $q .= "\nLIMIT $limit";
+  }
+  return $q;
+}
+
 function query_select_s_views($score, $limit=10){
   $q = get_prefixes();
   $ps = score_predicates();
