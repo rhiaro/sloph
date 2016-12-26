@@ -169,7 +169,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   }elseif(isset($body) && !empty($body)){
 
     $data = $body;
-    $was_form = false;
+    $was_form = false; $robot = false;
 
     if(!supported_content_type($ct)){
       header("HTTP/1.1 415 Unsupported Media Type");
