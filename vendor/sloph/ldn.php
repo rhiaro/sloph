@@ -36,22 +36,36 @@ function on_post($ep, $data){
   }
   // Insert all sent triples into notification graph
   //  $uri { s p o }
+  $modg = "https://rhiaro.co.uk/incoming/#moderation";
   $triples = $updated->serialise('ntriples');
   $q1 = query_insert($triples, $uri);  
   $res1 = execute_query($ep, $q1);
   if($res1){
-    // Insert notification into moderation graph
-    //  #moderation { #moderation as:item $uri }
-    $modg = "https://rhiaro.co.uk/incoming/#moderation";
-    $triples2 = "
-<$modg> <http://www.w3.org/ns/ldp#contains> <$uri> .
-<$modg> <http://www.w3.org/ns/activitystreams#items> <$uri> . ";
-    $q2 = query_insert($triples2, $modg);
+    // Insert triples in #moderation graph, so I can do per-triple acl in future
+    $q2 = query_insert($triples, $modg);  
     $res2 = execute_query($ep, $q2);
-    var_dump($res2);
+    if($res2){
+      // Insert notification into moderation graph and container/collection
+      //  #moderation { #moderation as:items $uri }
+      //  #moderation { #moderation ldp:contains $uri }
+      $triples2 = "
+  <$modg> <http://www.w3.org/ns/ldp#contains> <$uri> .
+  <$modg> <http://www.w3.org/ns/activitystreams#items> <$uri> . ";
+      $q3 = query_insert($triples2, $modg);
+      $res3 = execute_query($ep, $q3);
+      if($res3){
+        // Return Location
+        return $uri;
+      }else{
+        echo "Query 3 failed";
+      }
+    }else{
+      echo "Query 2 failed";
+    }
+  }else{
+    echo "Query 1 failed";
   }
-  // Return Location
-  return $uri;
+  return false;
 }
 
 /*** Validating input ***/
@@ -170,8 +184,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   $uri = on_post($ep, $data);
   
   if(!$was_form){
-    header("HTTP/1.1 201 Created");
-    header("Location: $uri");
+    if($uri){
+        header("HTTP/1.1 201 Created");
+        header("Location: $uri");
+    }else{
+      header("HTTP/1.1 500 Internal Server Error");
+      echo "Everything you sent was fine but I failed to store notification, sorry :( Try again?";
+      die();
+    }
   }else{
     $content = on_get($ep, "text/html");
     $content = $content['content'];
