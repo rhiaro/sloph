@@ -15,9 +15,22 @@
     <link rel="stylesheet" href="../views/core.css" />
     <style type="text/css">
       textarea, input[type=submit] {
-        width: 100%;
+        width: 99%;
         border: 1px solid silver;
         padding: 0.4em;
+      }
+      .robot {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        max-width: 440px; margin-left: auto; margin-right: auto;
+      }
+      .robot img { position: relative; margin-bottom: -2em; z-index: -1; }
+      .robot input {
+        z-index: 1;
+        border: 1px solid silver;
+        padding: 0.4em;
+        width: 99%; max-width: 380px;
       }
     </style>
   </head>
@@ -31,10 +44,20 @@
         <p class="win"><em>Thanks! Your message has been queued for moderation.</em></p>
       <?endif?>
 
+      <?if(isset($robot) && $robot):?>
+        <p class="fail"><em>...but you are so magnetic.. you pick up all the pins.</em></p>
+      <?endif?>
+
       <form method="post">
         <p>
           <label for="content">Leave a message</label>
           <textarea id="content" name="content"></textarea>
+        </p>
+        <p class="robot">
+          <label for="notawhat"><a href="https://www.youtube.com/watch?v=S_oMD6-6q5Y" target="_blank"><img src="/views/notarobot.jpg" alt="Better to be hated than loved, loved, loved for what you're not (Marina Diamandis)" /></a></label>
+          <input type="text" id="notawhat" name="notawhat" placeholder="I am not a .. " />
+        </p>
+        <p>
           <input type="submit" value="Send" />
         </p>
       </form>

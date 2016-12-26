@@ -156,9 +156,16 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
   if(isset($_POST) && !empty($_POST['content'])){
   
-    $data = this_form($_POST);
-    $was_form = true;
-  
+    if(isset($_POST['notawhat']) && strtolower($_POST['notawhat']) == "i am not a robot"){
+      $data = this_form($_POST);
+      $was_form = true;
+      $robot = false;
+    }else{
+      $data = array();
+      $was_form = true;
+      $robot = true;
+    }
+
   }elseif(isset($body) && !empty($body)){
 
     $data = $body;
@@ -181,7 +188,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     die();
   }
 
-  $uri = on_post($ep, $data);
+  if(!$robot){
+    $uri = on_post($ep, $data);
+    $sent = true;
+  }
   
   if(!$was_form){
     if($uri){
@@ -196,7 +206,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $content = on_get($ep, "text/html");
     $content = $content['content'];
     $contains = $content->toRdfPhp();
-    $sent = true;
     include '../../views/incoming.php';
   }
 
