@@ -64,7 +64,7 @@
       <?if(isset($contains["https://rhiaro.co.uk/incoming/#moderation"]["http://www.w3.org/ns/ldp#contains"]) && !empty($contains["https://rhiaro.co.uk/incoming/#moderation"]["http://www.w3.org/ns/ldp#contains"])):?>
         <ul>
           <?foreach($contains["https://rhiaro.co.uk/incoming/#moderation"]["http://www.w3.org/ns/ldp#contains"] as $item):?>
-            <li><a href="$item["value"]"><?=$item["value"]?></a></li>
+            <li><a href="<?=$item["value"]?>"><?=$item["value"]?></a></li>
           <?endforeach?>
         </ul>
       <?else:?>

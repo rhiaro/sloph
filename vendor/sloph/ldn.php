@@ -10,7 +10,7 @@ function on_get($ep, $ct=null){
     $ct = $headers["Accept"];
   }
   $acceptheaders = new AcceptHeader($ct);
-  $contains = get_container_dynamic($ep, "https://rhiaro.co.uk/incoming/#moderation", "query_select_o_where", array(array("https://rhiaro.co.uk/incoming/#moderation" => "ldp:contains"), "https://rhiaro.co.uk/incoming/#moderation"), $ct);
+  $contains = get_container_dynamic($ep, "https://rhiaro.co.uk/incoming/", "query_select_o_where", array(array("https://rhiaro.co.uk/incoming/#moderation" => "ldp:contains"), "https://rhiaro.co.uk/incoming/#moderation"), $ct);
   // var_dump($contains);
   $result = conneg($acceptheaders, $contains);
   
