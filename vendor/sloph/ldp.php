@@ -5,13 +5,24 @@
 /*************************/
 
 function get_resource($ep, $uri){
-  
+
+  $graph = new EasyRdf_Graph($uri);
+
+  // Get triples in this ($uri) graph
+  $rg = array();
+  $qg = query_construct_graph($uri);
+  $rg = execute_query($ep, $qg);
+  if($rg){
+    $graph->parse($rg, 'php', $uri);
+    return $graph;
+  }
+
+  // If no triples in graph, get triples with $uri as subject
   $r = array();
   $q = query_construct($uri);
   $r = execute_query($ep, $q);
-
-  $graph = new EasyRdf_Graph($uri);
   $graph->parse($r, 'php', $uri);
+  
   // Get primaryTopic of this URI as well.
   $pt = $graph->primaryTopic($uri);
   if($pt){
