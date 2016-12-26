@@ -60,15 +60,7 @@ if($_SERVER['REQUEST_METHOD'] === "GET" || $_SERVER['REQUEST_METHOD'] === "HEAD"
       $resource = $g->toRdfPhp();
       include 'views/top.php';
       include 'views/nav.php';
-      //echo "<hr/>";
-
       include 'views/'.view_router($resource).'.php';
-
-      if(isset($_GET['debug'])){
-        // var_dump($resource);
-        echo "<hr/>".$resource->dump();
-      }
-
       include 'views/end.php';
     }
   }catch(Exception $e){

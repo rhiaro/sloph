@@ -117,11 +117,10 @@ function has_type($graph, $type, $s=null){
   global $ns;
   $vs = get_values($graph, "rdf:type", $s);
   $type = $ns->expand($type);
-  if(in_array($type, $vs)){
+  if(is_array($vs) && in_array($type, $vs)){
     return true;
-  }else{
-    return false;
   }
+  return false;
 }
 function get_uri($graph){
   return $s = array_keys($graph)[0];

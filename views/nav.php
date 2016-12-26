@@ -7,17 +7,18 @@ $next_types = array();
 $prev_types = array();
 $this_types = get_values($resource, $ns->expand("rdf:type"));
 
-foreach($this_types as $type){
-  $n = nav($ep, $resource, "next", $type);
-  $p = nav($ep, $resource, "prev", $type);
-  if($n){
-    $next_types = array_merge($next_types, $n);
+if(is_array($this_types)){
+  foreach($this_types as $type){
+    $n = nav($ep, $resource, "next", $type);
+    $p = nav($ep, $resource, "prev", $type);
+    if($n){
+      $next_types = array_merge($next_types, $n);
+    }
+    if($p){
+      $prev_types = array_merge($prev_types, $p);
+    }
   }
-  if($p){
-    $prev_types = array_merge($prev_types, $p);
-  }
-}
-?>
+}?>
 
 <nav>
   <a href="/"><img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" /></a>
