@@ -72,13 +72,9 @@ function on_post($ep, $data){
 
 function supported_content_type($ct){
   $supported = false;
-  $sent = explode(",", $ct);
-  foreach($sent as $k => $s){
-    $sent[$k] = trim($s);
-  }
+  $sent = new AcceptHeader($ct);
   $cts = array("application/ld+json", "application/activity+json", "text/html");
-  $match = array_intersect($sent, $cts);
-  if(count($match) > 0){
+  if(in_array($sent[0]["raw"], $cts)){
     $supported = true;
   }
   return $supported;
