@@ -123,7 +123,7 @@ function has_type($graph, $type, $s=null){
   return false;
 }
 function get_uri($graph){
-  return $s = array_keys($graph)[0];
+  return array_keys($graph)[0];
 }
 
 function merge_graphs($array_of_graphs, $graph_uri = null){
