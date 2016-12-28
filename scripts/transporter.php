@@ -5,6 +5,18 @@ if(!isset($_GET['month'])){
 }
 $mn = new DateTime("00:00:00 1st ".$_GET['month']);
 
+// Process
+if(isset($_GET['engage'])){
+  $insq = get_prefixes()."\nINSERT INTO <http://blog.rhiaro.co.uk#> { <".$_GET['post']."> as:image <".$_GET['image']."> . }";
+  $insr = execute_query($ep, $insq);
+  if($insr){
+    echo "saved";
+  }else{
+    echo "fail";
+    var_dump($insr);
+  }
+}
+
 // Get all acquire posts in one month
 $q = query_select_s_where(array("rdf:type" => "asext:Acquire"), 0);
 $res = execute_query($ep, $q);
@@ -62,6 +74,9 @@ foreach($collection['items'] as $img){
 
     <form class="w1of1">
 
+      <p><input type="submit" value="Engage" name="engage" /></p>
+      <input type="hidden" name="month" value="<?=$_GET['month']?>" />
+
       <div class="w1of4">
         <div class="inner">
 
@@ -86,7 +101,7 @@ foreach($collection['items'] as $img){
         </div>
       </div>
 
-      <p><input type="submit" value="Engage" /></p>
+      <p><input type="submit" value="Engage" name="engage" /></p>
 
     </form>
   
