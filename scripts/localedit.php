@@ -145,7 +145,8 @@ elseif(isset($_POST['data']) && count($_POST['data']) > 0){
   }
 }
 
-$q = query_select_s(0, null);
+
+$q = query_select_s();
 if(isset($_GET['flag'])){
   if($_GET['flag'] == "doublecontents"){
     $q = "PREFIX as: <http://www.w3.org/ns/activitystreams#> .
@@ -170,18 +171,10 @@ if(isset($_GET['uri'])){
 if(!isset($_SESSION['uris'])){
   $r = execute_query($ep, $q);
   if($r){
-
-    $_SESSION['uris'] = select_to_list($r, array("uri"), "s");
-
-    if(!isset($_SESSION['graphs'])){
-      foreach($r['rows'] as $row){
-        $_SESSION['graphs'][$row['s']][] = $row['g'];
-      }
-    }
+    $_SESSION['uris'] = select_to_list($r, array("uri"));
   }
 }
 
-    var_dump($_SESSION['graphs']);
 if(isset($_GET['offset']) && is_numeric($_GET['offset'])){
   $offset = $_GET['offset'];
 }else{
@@ -230,14 +223,7 @@ if($_GET['flag'] == "notype"){
     </div>
     <?foreach($posts as $uri => $post):?>
       <form id="<?=$uri?>" method="post" action="#<?=$uri?>">
-        <p>
-          <a href="<?=$uri?>"><?=$uri?></a> <input type="submit" value="Save"/>
-        </p>
-        <p><input type="text" name="graph" id="graph" /></p>
-        <?foreach($_SESSION['graphs'][$uri] as $g):?>
-          <p><?=$g?> <input type="checkbox" name="keepgraph" id="keepgraph" title="keep current graph" /> </p>
-        <?endforeach?>
-
+        <p><a href="<?=$uri?>"><?=$uri?></a> <input type="submit" value="Save"/></p>
         <input type="hidden" value="<?=$uri?>" name="data[uri]" />
         <?if(isset($result[$uri])):?>
           <div style="overflow:hidden; width: 100%;">
