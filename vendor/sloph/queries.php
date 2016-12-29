@@ -459,16 +459,13 @@ function query_insert_items($collection, $items, $graph="http://blog.rhiaro.co.u
   return $q;
 }
 
-function query_insert_add($uri, $collection, $items, $summary = "", $graph="http://blog.rhiaro.co.uk#"){
-
-  if(empty($summary)){
-    $summary = "Amy added ".count($items)." things to ".$collection;
-  }
+function query_insert_add($uri, $collection, $items, $published, $summary, $graph="http://blog.rhiaro.co.uk#"){
 
   $q = get_prefixes();
   $q .= "INSERT INTO <$graph> { ";
   $q .= "  <$uri> a as:Add .";
   $q .= "  <$uri> as:summary \"\"\"$summary\"\"\" .";
+  $q .= "  <$uri> as:published \"$published\"^^xsd:dateTime .";
   $q .= "  <$uri> as:target <$collection> .";
   $q .= "  <$uri> as:object ";
   foreach($items as $item){
