@@ -446,4 +446,38 @@ function query_remove_from_graph($uri, $graph){
   return $q;
 }
 
+function query_insert_items($collection, $items, $graph="http://blog.rhiaro.co.uk#"){
+  $q = get_prefixes();
+  $q .= "INSERT INTO <$graph> { ";
+  $q .= "  <$collection> as:items ";
+  foreach($items as $item){
+    $q .= "<$item>, ";
+  }
+  $q = rtrim($q, ", ");
+  $q .= " . }";
+
+  return $q;
+}
+
+function query_insert_add($uri, $collection, $items, $summary = "", $graph="http://blog.rhiaro.co.uk#"){
+
+  if(empty($summary)){
+    $summary = "Amy added ".count($items)." things to ".$collection;
+  }
+
+  $q = get_prefixes();
+  $q .= "INSERT INTO <$graph> { ";
+  $q .= "  <$uri> a as:Add .";
+  $q .= "  <$uri> as:summary \"\"\"$summary\"\"\" .";
+  $q .= "  <$uri> as:target <$collection> .";
+  $q .= "  <$uri> as:object ";
+  foreach($items as $item){
+    $q .= "<$item>, ";
+  }
+  $q = rtrim($q, ", ");
+  $q .= " . }";
+
+  return $q;
+}
+
 ?>
