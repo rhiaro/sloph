@@ -1,5 +1,70 @@
 <?
 require_once('../vendor/init.php');
+
+$now = new DateTime();
+
+function fetch_album($url){
+  curl_setopt_array($ch = curl_init(), array(
+    CURLOPT_URL => $url,
+    CURLOPT_HTTPHEADER => array("Accept" => "application/ld+json"),
+    CURLOPT_RETURNTRANSFER => 1
+  ));
+  $response = curl_exec($ch);
+  curl_close($ch);
+  return $response;
+}
+
+function rhiaro_url_to_date($url){
+  $str = explode("/", $url);
+  return array("m" => $str[4], "y" => $str[3]);
+}
+
+function img_url_to_date($url){
+  $i = explode("/", $url);
+  $fn = $i[4];
+  $dt = str_replace("IMG_", "", $fn);
+  $dt = str_replace(".jpg", "", $dt);
+  $y = intval(substr($dt, 0, 4));
+  $m = intval(substr($dt, 4, 2));
+  $d = intval(substr($dt, 6, 2));
+  $h = intval(substr($dt, 9, 2));
+  $i = intval(substr($dt, 11, 2));
+  $s = intval(substr($dt, 13, 2));
+  $date = new DateTime();
+  $date->setDate($y, $m, $d);
+  $date->setTime($h, $i, $s);
+  return $date;
+}
+
+function in_collection($resource, $collection){
+  if(!is_array($collection)){
+    // todo: construct
+  }else{
+    foreach($collection["http://www.w3.org/ns/activitystreams#items"] as $i){
+      if($resource == $i['value']){
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function in_add($resource, $add){
+  if(!is_array($add)){
+    // todo: construct
+  }else{
+    foreach($add["http://www.w3.org/ns/activitystreams#object"] as $i){
+      if($resource == $i['value']){
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+/*********************************************************************************/
+/* Add to Acquire posts */
+
 if(!isset($_GET['month'])){
   $_GET['month'] = "june";
 }
@@ -21,8 +86,7 @@ if(isset($_GET['engage'])){
 $q = query_select_s_where(array("rdf:type" => "asext:Acquire"), 0);
 $res = execute_query($ep, $q);
 foreach($res['rows'] as $r){
-  $str = explode("/", $r['s']);
-  $m = $str[4];
+  $m = rhiaro_url_to_date($r['s'])["m"];
   if($m == $mn->format("m")){
     $qc = query_construct($r['s']);
     $rc = execute_query($ep, $qc);
@@ -32,22 +96,11 @@ foreach($res['rows'] as $r){
 
 // Get all images for that month plus one week after
 $images = array();
-curl_setopt_array($ch = curl_init(), array(
-  CURLOPT_URL => "https://i.amy.gy/obtainium/",
-  CURLOPT_HTTPHEADER => array("Accept" => "application/ld+json"),
-  CURLOPT_RETURNTRANSFER => 1
-));
-$response = curl_exec($ch);
-curl_close($ch);
+$response = fetch_album("https://i.amy.gy/obtainium/");
 $collection = json_decode($response, true);
 foreach($collection['items'] as $img){
-  $i = explode("/", $img);
-  $fn = $i[4];
-  $dt = str_replace("IMG_", "", $fn);
-  $dt = str_replace(".jpg", "", $dt);
-  $m = substr($dt, 4, 2);
-  if($m == $mn->format("m")){
-
+  $date = img_url_to_date($img);
+  if($date->format("m") == $mn->format("m")){
     // Check not already used
     $checkq = get_prefixes()."\nSELECT ?s WHERE { ?s as:image <".$img."> }";
     $checkr = execute_query($ep, $checkq);
@@ -56,6 +109,41 @@ foreach($collection['items'] as $img){
     }
   }
 }
+
+/*********************************************************************************/
+/* Create Add Activities */
+
+if(isset($_GET['add'])){
+
+  // Get all add posts
+  $q = query_select_s_where(array("rdf:type" => "as:Add"), 0);
+  $res = execute_query($ep, $q);
+  $adds = array();
+  foreach($res['rows'] as $r){
+    $qa = query_construct($r['s']);
+    $ra = execute_query($ep, $qa);
+    $adds[$r['s']] = $ra[$r['s']];
+  }
+
+  if(!isset($_SESSION['items']) && isset($_GET['collection'])){
+    $response = fetch_album($_GET['collection']);
+    $collection = json_decode($response, true);
+    $_SESSION['items'] = $collection['items'];
+  }
+
+  if(isset($_POST['engage'])){
+    $collection = $_GET['collection'];
+    $items = $_POST['items'];
+    $uri = $_POST['uri'];
+    $published = $_POST['published'];
+    $summary = "Amy added ".count($items)." photos to ".$collection;
+    $addq = query_insert_add($uri, $collection, $items, $published, $summary);
+    var_dump(htmlentities($addq));
+  }
+}
+
+/*********************************************************************************/
+
 ?>
 
 <!doctype html>
@@ -70,40 +158,89 @@ foreach($collection['items'] as $img){
     </style>
   </head>
   <body>
-    <h1><?=$_GET['month']?></h1>
 
-    <form class="w1of1">
+    <?if(isset($_GET['add'])):?>
 
-      <p><input type="submit" value="Engage" name="engage" /></p>
-      <input type="hidden" name="month" value="<?=$_GET['month']?>" />
+      <h1>Add</h1>
 
-      <div class="w1of4">
-        <div class="inner">
+      <form>
+        <p>
+          <label for="collection">Collection</label>: <input type="text" value="<?=isset($_GET['collection']) ? $_GET['collection'] : "https://i.amy.gy/"?>" id="collection" name="collection" />
+          <input type="submit" value="Fetch" name="add" />
+        </p>
+      </form>
 
-          <?foreach($posts as $uri => $data):?>
-            <?if(!isset($data['http://www.w3.org/ns/activitystreams#image'])):?>
-              <p><input type="radio" name="post" value="<?=$uri?>" /> <a href="<?=$uri?>" target="_blank"><?=$data['http://www.w3.org/ns/activitystreams#published'][0]['value']?></a></p>
-              <p><?=$data['http://www.w3.org/ns/activitystreams#content'][0]['value']?></p>
-            <?endif?>
-          <?endforeach?>
+      <form class="w1of1" method="post" id="adds">
 
-        </div>
-      </div>
+        <p><label for="published">Published</label>: <input type="text" value="<?=$now->format(DATE_ATOM)?>" name="published" id="published" /></p>
 
-      <div class="w3of4">
-        <div class="inner">
-          <?foreach($images as $image):?>
-            <div style="float:left">
-              <p><input type="radio" name="image" value="<?=$image?>" /> <?=$image?></p>
-              <p><img src="<?=$image?>" title="<?=$image?>" /></p>
+        <p><input type="submit" value="Engage" name="engage" /></p>
+
+        <?if(isset($_SESSION['items'])):?>
+          <?foreach($_SESSION['items'] as $item):?>
+            <?
+            if(isset($adds)){
+              $added = false;
+              foreach($adds as $add){
+                $added = in_add($item, $add);
+              }
+            }
+            ?>
+            <div style="float:left;<?=!$added ? " font-weight: bold;" : ""?>">
+              <p><input type="checkbox" name="items[]" value="<?=$item?>" /> <?=$item?></p>
+              <p><img src="<?=$item?>" /></p>
             </div>
           <?endforeach?>
+        <?endif?>
+
+        <p><input type="submit" value="Engage" name="engage" /></p>
+
+      </form>
+      <? //var_dump($adds);?>
+      <?if(isset($adds)):?>
+        <ul>
+          <?foreach($adds as $auri => $add):?>
+            <li><a href="<?=$auri?>"><?=isset($add["http://www.w3.org/ns/activitystreams#summary"]) ? $add["http://www.w3.org/ns/activitystreams#summary"][0]["value"] : $auri?></a></li>
+          <?endforeach?>
+        </ul>
+      <?endif?>
+
+    <?else:?>
+      <h1><a href="?month=<?=$_GET['month']?>"><?=$_GET['month']?></a></h1>
+
+      <form class="w1of1">
+
+        <p><input type="submit" value="Engage" name="engage" /></p>
+        <input type="hidden" name="month" value="<?=$_GET['month']?>" />
+
+        <div class="w1of4">
+          <div class="inner">
+
+            <?foreach($posts as $uri => $data):?>
+              <?if(!isset($data['http://www.w3.org/ns/activitystreams#image'])):?>
+                <p><input type="radio" name="post" value="<?=$uri?>" /> <a href="<?=$uri?>" target="_blank"><?=$data['http://www.w3.org/ns/activitystreams#published'][0]['value']?></a></p>
+                <p><?=$data['http://www.w3.org/ns/activitystreams#content'][0]['value']?></p>
+              <?endif?>
+            <?endforeach?>
+
+          </div>
         </div>
-      </div>
 
-      <p><input type="submit" value="Engage" name="engage" /></p>
+        <div class="w3of4">
+          <div class="inner">
+            <?foreach($images as $image):?>
+              <div style="float:left">
+                <p><input type="radio" name="image" value="<?=$image?>" /> <?=$image?></p>
+                <p><img src="<?=$image?>" title="<?=$image?>" /></p>
+              </div>
+            <?endforeach?>
+          </div>
+        </div>
 
-    </form>
+        <p><input type="submit" value="Engage" name="engage" /></p>
+
+      </form>
+    <?endif?>
   
   </body>
 </html>
