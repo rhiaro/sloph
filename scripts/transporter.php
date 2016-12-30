@@ -115,16 +115,6 @@ foreach($collection['items'] as $img){
 
 if(isset($_GET['add'])){
 
-  // Get all add posts
-  $q = query_select_s_where(array("rdf:type" => "as:Add"), 0);
-  $res = execute_query($ep, $q);
-  $adds = array();
-  foreach($res['rows'] as $r){
-    $qa = query_construct($r['s']);
-    $ra = execute_query($ep, $qa);
-    $adds[$r['s']] = $ra[$r['s']];
-  }
-
   if(!isset($_SESSION['items']) && isset($_GET['collection'])){
     $response = fetch_album($_GET['collection']);
     $collection = json_decode($response, true);
@@ -138,7 +128,22 @@ if(isset($_GET['add'])){
     $published = $_POST['published'];
     $summary = "Amy added ".count($items)." photos to ".$collection;
     $addq = query_insert_add($uri, $collection, $items, $published, $summary);
-    var_dump(htmlentities($addq));
+    $addr = execute_query($ep, $addq);
+    if($addr){
+      echo "saved";
+    }else{
+      var_dump(htmlentities($addq));
+    }
+  }
+  
+  // Get all add posts
+  $q = query_select_s_where(array("rdf:type" => "as:Add"), 0);
+  $res = execute_query($ep, $q);
+  $adds = array();
+  foreach($res['rows'] as $r){
+    $qa = query_construct($r['s']);
+    $ra = execute_query($ep, $qa);
+    $adds[$r['s']] = $ra[$r['s']];
   }
 }
 
