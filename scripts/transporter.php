@@ -155,6 +155,7 @@ if(isset($_GET['add'])){
     <link rel="stylesheet" href="../views/core.css" />
     <style type="text/css">
     img { width: 300px; }
+    input[type=text] { width: 50%; }
     </style>
   </head>
   <body>
@@ -173,6 +174,7 @@ if(isset($_GET['add'])){
       <form class="w1of1" method="post" id="adds">
 
         <p><label for="published">Published</label>: <input type="text" value="<?=$now->format(DATE_ATOM)?>" name="published" id="published" /></p>
+        <p><label for="uri">URI</label>: <input type="text" value="https://rhiaro.co.uk/<?=$now->format("Y")?>/<?=$now->format("m")?>/<?=uniqid()?>" name="uri" id="uri" /></p>
 
         <p><input type="submit" value="Engage" name="engage" /></p>
 
@@ -187,8 +189,8 @@ if(isset($_GET['add'])){
             }
             ?>
             <div style="float:left;<?=!$added ? " font-weight: bold;" : ""?>">
-              <p><input type="checkbox" name="items[]" value="<?=$item?>" /> <?=$item?></p>
-              <p><img src="<?=$item?>" /></p>
+              <p><input type="checkbox" name="items[]" value="<?=$item?>" id="<?=$item?>" /> <label for="<?=$item?>"><?=$item?> <br/>
+              <img src="<?=$item?>" /></label></p>
             </div>
           <?endforeach?>
         <?endif?>
