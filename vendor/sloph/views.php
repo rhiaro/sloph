@@ -32,10 +32,15 @@ function get_icon_from_type($type, $skip=array()){
       ,"as:Travel" => "&#10239;"
       ,"as:Object" => "&#133;"
     );
-  if(isset($icons[$type]) && !in_array($type, $skip)){
-    return $icons[$type];
-  }else{
-    return false;
+  if(!is_array($type)){
+    $type = array($type);
+  }
+  foreach($type as $t){
+    if(isset($icons[$t]) && !in_array($t, $skip)){
+      return $icons[$t];
+    }else{
+      return false;
+    }
   }
 }
 
