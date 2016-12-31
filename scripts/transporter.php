@@ -165,6 +165,12 @@ if(isset($_GET['add'])){
   </head>
   <body>
 
+    <nav>
+      <p>
+        <a href="?add=1">Add</a> | <a href="?">Attach</a>
+      </p>
+    </nav>
+
     <?if(isset($_GET['add'])):?>
 
       <h1>Add</h1>
