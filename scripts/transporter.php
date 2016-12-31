@@ -127,7 +127,8 @@ if(isset($_GET['add'])){
     $uri = $_POST['uri'];
     $published = $_POST['published'];
     $summary = "Amy added ".count($items)." photos to ".$collection;
-    $addq = query_insert_add($uri, $collection, $items, $published, $summary);
+    if(isset($_POST['content'])){ $content = $_POST['content']; }else{ $content = ""; }
+    $addq = query_insert_add($uri, $collection, $items, $published, $summary, $content);
     $addr = execute_query($ep, $addq);
     if($addr){
       echo "saved";
@@ -160,7 +161,7 @@ if(isset($_GET['add'])){
     <link rel="stylesheet" href="../views/core.css" />
     <style type="text/css">
     img { width: 300px; }
-    input[type=text] { width: 50%; }
+    input[type=text], textarea { width: 50%; padding: 0.6em; }
     </style>
   </head>
   <body>
@@ -186,6 +187,9 @@ if(isset($_GET['add'])){
 
         <p><label for="published">Published</label>: <input type="text" value="<?=$now->format(DATE_ATOM)?>" name="published" id="published" /></p>
         <p><label for="uri">URI</label>: <input type="text" value="https://rhiaro.co.uk/<?=$now->format("Y")?>/<?=$now->format("m")?>/<?=uniqid()?>" name="uri" id="uri" /></p>
+
+        <p><label for="content">Content</label></p>
+        <p><textarea id="content" name="content" ></textarea></p>
 
         <p><input type="submit" value="Engage" name="engage" /></p>
 
