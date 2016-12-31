@@ -23,7 +23,22 @@
   <?elseif(in_array('as:Like', $types)):?>
   The last thing I liked was <a href="<?=get_value(array($uri=>$resource),  'as:object')?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a>
   <?elseif(in_array('as:Add', $types)):?>
-  The last thing I saved was <a href="<?=get_uri($resource) ?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a> to <?=get_value(array($uri=>$resource),  'as:target')?>
+    
+    The last collection I added to was <a href="<?=get_value(array($uri=>$resource),  'as:target')?>"><?=get_value(array($uri=>$resource),  'as:target')?></a>
+    <? $objects = get_values(array($uri=>$resource), 'as:object');
+    $max = 5;
+    if(count($objects < 6)){ $max = count($objects); }
+    if(count($objects > 1)):?>
+      (<?=count($objects)?> items)
+      <div class="w1of1 clearfix">
+        <?for($i=0;$i<$max;$i++):?>
+          <a href="<?=$objects[$i]?>"><img class="w1of5" src="<?=$objects[$i]?>" alt="<?=$objects[$i]?>" /></a>
+        <?endfor?>
+      </div>
+    <?else:?>
+     (<a href="<?=get_uri($resource) ?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a>)
+    <?endif?>
+
   <?elseif(in_array('as:Announce', $types)):?>
   The last thing I reposted was <a href="<?=get_uri($resource) ?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a>
   <?elseif(in_array('as:Note', $types)):?>
