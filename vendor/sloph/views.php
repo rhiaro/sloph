@@ -299,6 +299,10 @@ function get_style($resource){
 function view_router($resource){
 
     if(has_type($resource, "as:Add") || has_type($resource, "as:Like") || has_type($resource, "as:Announce") || has_type($resource, "as:Follow")){
+      if(has_type($resource, "as:Add") && get_value($resource, 'as:target') != "https://rhiaro.co.uk/bookmarks/"){
+        // TODO: check if target is an album instead of just excluding bookmarks
+        return 'objects';
+      } 
       return 'link';
     }elseif(has_type($resource, "as:Arrive")){ 
       return 'checkin';
