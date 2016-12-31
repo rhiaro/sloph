@@ -8,7 +8,7 @@ $objects = get_values($resource, 'as:object');
   <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
   <div class="w1of1 clearfix">
     <?foreach($objects as $item):?>
-      <p class="w1of5"><img src="<?=$item?>" alt="<?=$item?>" /></p>
+      <img class="w1of5" src="<?=$item?>" alt="<?=$item?>" />
     <?endforeach?>
   </div>
 

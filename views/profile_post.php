@@ -25,15 +25,17 @@
   <?elseif(in_array('as:Add', $types)):?>
     
     The last collection I added to was <a href="<?=get_value(array($uri=>$resource),  'as:target')?>"><?=get_value(array($uri=>$resource),  'as:target')?></a>
-    <? $objects = get_values(array($uri=>$resource), 'as:object');
-    $max = 5;
-    if(count($objects < 6)){ $max = count($objects); }
-    if(count($objects > 1)):?>
+    <? $objects = get_values(array($uri=>$resource), 'as:object'); ?>
+    <?if(count($objects > 1)):?>
       (<?=count($objects)?> items)
+      <? $max = 4;
+      if(count($objects) < 5){ $max = count($objects); }
+      echo $max; ?>
       <div class="w1of1 clearfix">
         <?for($i=0;$i<$max;$i++):?>
           <a href="<?=$objects[$i]?>"><img class="w1of5" src="<?=$objects[$i]?>" alt="<?=$objects[$i]?>" /></a>
         <?endfor?>
+          <a class="w1of5" href="<?=$uri?>" title="more" style="font-size: 3em; line-height: 2; text-decoration: none">&nbsp;&nbsp; ... </a>
       </div>
     <?else:?>
      (<a href="<?=get_uri($resource) ?>"><?=get_value(array($uri=>$resource),  'as:name') ? get_value(array($uri=>$resource),  'as:name') : get_value(array($uri=>$resource),  'as:object')?></a>)
