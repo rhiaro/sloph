@@ -95,11 +95,17 @@ function get_name($ep, $uri){
   return str_replace("http://dbpedia.org/resource/", "", $uri);
 }
 
-function nav($ep, $resource, $dir="next", $type=null){
+function nav($ep, $resource, $dir="next", $type=0){
 
   $out = array();
 
-  if(isset($type)){
+  if(is_array($resource)){
+    $uri = get_uri($resource);
+  }else{
+    $uri = $resource;
+  }
+
+  if($type !== 0){
 
     if(substr($type, 0, 4) == "http"){
       $type = EasyRdf_Namespace::shorten($type);
@@ -108,27 +114,29 @@ function nav($ep, $resource, $dir="next", $type=null){
     if($type != 'as:Activity'){ // Crude but effective. 
 
       if($dir == "next"){
-        $q = query_select_s_next_of_type(get_uri($resource), $type);
+        $q = query_select_s_next_of_type($uri, $type);
       }elseif($dir == "prev"){
-        $q = query_select_s_prev_of_type(get_uri($resource), $type);
+        $q = query_select_s_prev_of_type($uri, $type);
       }
     }else{
       return null;
     }
 
   }else{
-    $type = 0;
     if($dir == "next"){
-      $q = query_select_s_next(get_uri($resource));
+      $q = query_select_s_next($uri);
     }elseif($dir == "prev"){
-      $q = query_select_s_prev(get_uri($resource));
+      $q = query_select_s_prev($uri);
     }
-    $res = execute_query($ep, $q);
   }
-  
   $res = execute_query($ep, $q);
   if(!empty($res['rows'])){
     $out[$type] = $res['rows'][0]['s'];
+  }
+
+  // TODO: This is a hack until I remove posts that aren't mine from my graph
+  if(substr($out[$type], 0, 21) != "https://rhiaro.co.uk/"){
+    return nav($ep, $out[$type], $dir, $type);
   }
 
   return $out;

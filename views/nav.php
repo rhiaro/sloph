@@ -18,7 +18,8 @@ if(is_array($this_types)){
       $prev_types = array_merge($prev_types, $p);
     }
   }
-}?>
+}
+?>
 
 <nav>
   <a href="/"><img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" /></a>
