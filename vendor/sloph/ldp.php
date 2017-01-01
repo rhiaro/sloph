@@ -124,6 +124,24 @@ function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/h
   return $current;
 }
 
+function get_container_dynamic_from_items($ep, $uri, $name="", $items=array()){
+  $g = new EasyRdf_Graph($uri);
+  $collection[$uri] = array(
+      "http://www.w3.org/ns/activitystreams#name" => array(array("value" => $name, "type" => "literal")),
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" => array(array("value" => "http://www.w3.org/ns/activitystreams#Collection",
+                                                                       "type" => "uri"),
+                                                                 array("value" => "http://www.w3.org/ns/ldp#Container",
+                                                                       "type" => "uri"),
+                                                                ),
+    );
+  foreach($items as $id => $data){
+    $collection[$uri]["http://www.w3.org/ns/activitystreams#items"][] = array("value" => $id, "type" => "uri");
+    $g->parse(array($id=>$data), 'php');
+  }
+  $g->parse($collection, 'php');
+  return $g;
+}
+
 function get_container($ep, $container, $content_type){
 
   $return = array("header" => null, "content" => null, "errors" => null);
