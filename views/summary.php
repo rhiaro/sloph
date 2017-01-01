@@ -9,9 +9,7 @@
   <body>
     <article>
       <h1>from <?=$from->format("d M y")?> to <?=$to == $now ? "now" : $to->format("d M y")?></h1>
-      <p>...</p>
-
-      
+      <p>
 
     </article>
   </body>

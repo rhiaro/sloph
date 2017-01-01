@@ -10,7 +10,7 @@ function aggregate_acquires($ep, $from, $to){
 }
 
 function aggregate_consumes($ep, $from, $to){
-  
+
 }
 
 function aggregate_writing($ep, $from, $to){
@@ -37,6 +37,12 @@ if(isset($_GET['to'])){
   $to = $now;
 }
 
+$checkins = aggregate_checkins($ep, $from, $to);
+$acquires = aggregate_acquires($ep, $from, $to);
+$consumes = aggregate_consumes($ep, $from, $to);
+$writing = aggregate_writing($ep, $from, $to);
+$socials = aggregate_socials($ep, $from, $to);
+$total = $checkins['total'] + $acquires['total'] + $consumes['total'] + $writing['total'] + $socials['total'];
 
 include '../../views/summary.php';
 ?>
