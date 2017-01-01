@@ -18,6 +18,7 @@ RewriteEngine on
 RewriteBase /
 
 RewriteRule ^incoming(/)?$ /vendor/sloph/ldn.php [QSA,L]
+RewriteRule ^summary(/)?$ /vendor/sloph/summary.php [QSA,L]
 
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
