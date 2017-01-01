@@ -85,6 +85,20 @@ WHERE { GRAPH <$graph> { ?s ?p ?o . } }";
   return $q;
 }
 
+function query_construct_type($type, $sort=null){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { ?s ?p ?o . }
+WHERE { ?s ?p ?o. ?s a $type . ";
+  if(isset($sort)){
+    $q .= "?s $sort ?sort . ";
+  }
+  $q .="}";
+  if(isset($sort)){
+    $q .= "ORDER BY DESC(?sort)";
+  }
+  return $q;
+}
+
 function query_select_s($limit=0, $graph="http://blog.rhiaro.co.uk#"){
   
   if($graph === null){
