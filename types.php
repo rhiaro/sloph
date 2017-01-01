@@ -5,6 +5,7 @@ require_once('vendor/init.php');
 $headers = apache_request_headers();
 $relUri = $_SERVER['REQUEST_URI'];
 $ct = $headers["Accept"];
+$acceptheaders = new AcceptHeader($ct);
 
 $typemap = array("checkins" => "as:Arrive"
                 ,"arrives" => "as:Arrive"
@@ -23,45 +24,52 @@ $typemap = array("checkins" => "as:Arrive"
                 ,"follows" => "as:Follow"
   );
 
+$locations = get_locations($ep);
+$locations = $locations->toRdfPhp();
+$tags = get_tags($ep);
+
 if($_GET['type'] == "places"){
-  $vals = array("rdf:type" => $typemap[$_GET['type']], "as:name" => "?sort");
+  $sort = "as:name";
 }else{
-  $vals = array("rdf:type" => $typemap[$_GET['type']], "as:published" => "?sort");
+  $sort = "as:published";
 }
-$result = get_container_dynamic($ep, $relUri, "query_select_s_where", array($vals, 0, "sort"), $ct);
-$header = $result['header'];
-$content = $result['content'];
 
-try {
-  if(gettype($content) == "string"){
-    header($header);
-    echo $content;
-  }else{
-    $resource = $content->resource($relUri);
-    $items = $content->all($relUri, 'as:items');
+$q = query_construct_type($typemap[$_GET['type']], $sort);
+$res = execute_query($ep, $q);
 
-    if(!$resource->get('view:css')){
-      $resource->addLiteral('view:css', 'views/'.get_style($resource).".css");
-    }
-
-    include 'views/top.php';
-    include 'views/header.php';
-
-    foreach($items as $item){
-      $uri = $item->getUri();
-      $result = get($ep, $uri);
-      $header = $result['header'];
-      $content = $result['content'];
-      $resource = $content->resource($uri);
-
-      include 'views/article.php';
-    }
-
-    include 'views/end.php';
-
+if($res){
+  
+  // TODO: Temporary until other people stuff isn't in my graph
+  foreach($res as $k => $v){
+    if(substr($k, 0, 21) != "https://rhiaro.co.uk/"){ unset($res[$k]); }
   }
-}catch(Exception $e){
-  var_dump($e);
+  $name = ucfirst($_GET['type']);
+  
+  $g = get_container_dynamic_from_items($ep, $relUri, $name, $res);
+  $result = conneg($acceptheaders, $g);
+  $content = $result['content'];
+  $header = $result['header'];
+
+  try {
+    if(gettype($content) == "string"){
+      header($header);
+      echo $content;
+    }else{
+
+      $resource = set_views($ep, $content->resource());
+      $collection = $content->toRdfPhp();
+      $resource = array($relUri => $collection[$relUri]);
+
+      include 'views/top.php';
+      include 'views/nav.php';
+      include 'views/collection.php';
+
+      include 'views/end.php';
+
+    }
+  }catch(Exception $e){
+    var_dump($e);
+  }
 }
 
 ?>
