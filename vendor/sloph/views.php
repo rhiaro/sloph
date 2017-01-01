@@ -135,7 +135,7 @@ function nav($ep, $resource, $dir="next", $type=0){
   }
 
   // TODO: This is a hack until I remove posts that aren't mine from my graph
-  if(substr($out[$type], 0, 21) != "https://rhiaro.co.uk/"){
+  if(isset($out[$type]) && substr($out[$type], 0, 21) != "https://rhiaro.co.uk/"){
     return nav($ep, $out[$type], $dir, $type);
   }
 
