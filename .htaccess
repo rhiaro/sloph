@@ -20,6 +20,8 @@ RewriteBase /
 RewriteRule ^incoming(/)?$ /vendor/sloph/ldn.php [QSA,L]
 RewriteRule ^summary(/)?$ /vendor/sloph/summary.php [QSA,L]
 
+RewriteRule ^(writes|articles|likes|checkins|arrives|consumes|eats|acquires|stuff|events|bookmarks|reposts|rsvps|notes|places|follows)(/)?$ /types.php?type=$1 [QSA,L]
+
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 

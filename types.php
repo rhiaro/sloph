@@ -19,10 +19,18 @@ $typemap = array("checkins" => "as:Arrive"
                 ,"reposts" => "as:Announce"
                 ,"rsvps" => "as:Accept"
                 ,"articles" => "as:Article"
+                ,"writes" => "as:Article"
                 ,"notes" => "as:Note"
                 ,"places" => "as:Place"
                 ,"follows" => "as:Follow"
   );
+
+if(!isset($_GET['type']) || !array_key_exists($_GET['type'], $typemap)){
+  header("HTTP/1.1 404 Not Found");
+  echo $_GET['type']."<br/>";
+  echo "HTTP 404 Not Found. How about <a href=\"https://rhiaro.co.uk/writes/\">/writes</a>?";
+  die();
+}
 
 $locations = get_locations($ep);
 $locations = $locations->toRdfPhp();
