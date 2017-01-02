@@ -99,6 +99,17 @@ WHERE { ?s ?p ?o. ?s a $type . ";
   return $q;
 }
 
+function construct_between($from, $to){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { ?s ?p ?o . } WHERE { ?s ?p ?o . \n";
+  $q .= " ?s as:published ?d . \n";
+  $q .= " FILTER(?d > \"$from\") . \n";
+  $q .= " FILTER(?d <= \"$to\") . \n";
+  $q .= "} \n";
+  $q .= "ORDER BY DESC(?d)";
+  return $q;
+}
+
 function query_select_s($limit=0, $graph="http://blog.rhiaro.co.uk#"){
   
   if($graph === null){
