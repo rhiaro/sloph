@@ -143,10 +143,15 @@ function nav($ep, $resource, $dir="next", $type=0){
 }
 
 function time_ago($date){
-  if(gettype($date) != "DateTime"){
-    $date = new DateTime($date);
-  }
-  $duration = $date->diff(new DateTime());
+  $now = new DateTime();
+  return time_diff_to_human($date, $now)." ago";
+}
+
+function time_diff_to_human($date, $date2){
+  if(get_class($date) != "DateTime"){ $date = new DateTime($date); }
+  if(get_class($date2) != "DateTime"){ $date = new DateTime($date2); }
+  $duration = $date->diff($date2);
+  
   $ago = array();
   if($duration->y > 0){ 
     $y = $duration->y . " year"; 
@@ -178,7 +183,7 @@ function time_ago($date){
     if($duration->s > 1){ $y .=  "s"; }
     $ago[] = $y;
   }
-  $ago[count($ago)-1] = " and ".$ago[count($ago)-1] . " ago";
+  $ago[count($ago)-1] = " and ".$ago[count($ago)-1];
   return implode(", ", $ago);
 }
 
