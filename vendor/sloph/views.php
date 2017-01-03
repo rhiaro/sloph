@@ -148,8 +148,8 @@ function time_ago($date){
 }
 
 function time_diff_to_human($date, $date2){
-  if(get_class($date) != "DateTime"){ $date = new DateTime($date); }
-  if(get_class($date2) != "DateTime"){ $date = new DateTime($date2); }
+  if(gettype($date) == "string" || get_class($date) != "DateTime"){ $date = new DateTime($date); }
+  if(gettype($date2) == "string" || get_class($date2) != "DateTime"){ $date2 = new DateTime($date2); }
   $duration = $date->diff($date2);
   
   $ago = array();
