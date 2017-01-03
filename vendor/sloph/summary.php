@@ -132,8 +132,10 @@ function aggregate_writing($posts, $from, $to, $alltags){
     }
   }
   arsort($tags);
-  $top = array_slice($tags, 0, 11, true);
-  $last = array_slice($tags, 11, 1, true);
+  $max = count($tags)-1;
+  if($max > 11){ $max = 11; }
+  $top = array_slice($tags, 0, $max, true);
+  $last = array_slice($tags, $max, 1, true);
   $out['toptags'] = "";
   foreach($top as $t => $c){
     $out['toptags'] .= "<a href=\"$t\">".$alltags[$t]["name"]."</a> (".$c."), ";
