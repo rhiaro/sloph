@@ -1,0 +1,729 @@
+{
+
+    "results": {
+        "WST": {
+            "currencyName": "Samoan tala",
+            "id": "WST"
+        },
+        "BTN": {
+            "currencyName": "Bhutanese ngultrum",
+            "id": "BTN"
+        },
+        "PGK": {
+            "currencyName": "Papua New Guinean kina",
+            "id": "PGK"
+        },
+        "AMD": {
+            "currencyName": "Armenian dram",
+            "id": "AMD"
+        },
+        "CVE": {
+            "currencyName": "Cape Verdean escudo",
+            "id": "CVE"
+        },
+        "LYD": {
+            "currencyName": "Libyan dinar",
+            "id": "LYD"
+        },
+        "RWF": {
+            "currencyName": "Rwandan franc",
+            "id": "RWF"
+        },
+        "GEL": {
+            "currencyName": "Georgian lari",
+            "id": "GEL"
+        },
+        "ERN": {
+            "currencyName": "Eritrean nakfa",
+            "id": "ERN"
+        },
+        "KWD": {
+            "currencyName": "Kuwaiti dinar",
+            "id": "KWD"
+        },
+        "BHD": {
+            "currencyName": "Bahraini dinar",
+            "id": "BHD"
+        },
+        "HTG": {
+            "currencyName": "Haitian gourde",
+            "id": "HTG"
+        },
+        "MZN": {
+            "currencyName": "Mozambican metical",
+            "id": "MZN"
+        },
+        "JOD": {
+            "currencyName": "Jordanian dinar",
+            "id": "JOD"
+        },
+        "MRO": {
+            "currencyName": "Mauritanian ouguiya",
+            "id": "MRO"
+        },
+        "SLL": {
+            "currencyName": "Sierra Leonean leone",
+            "id": "SLL"
+        },
+        "MWK": {
+            "currencyName": "Malawian kwacha",
+            "id": "MWK"
+        },
+        "XPF": {
+            "currencyName": "CFP franc",
+            "id": "XPF"
+        },
+        "RSD": {
+            "currencyName": "Serbian dinar",
+            "currencySymbol": "Дин.",
+            "id": "RSD"
+        },
+        "OMR": {
+            "currencyName": "Omani rial",
+            "currencySymbol": "﷼",
+            "id": "OMR"
+        },
+        "CRC": {
+            "currencyName": "Costa Rican colon",
+            "currencySymbol": "₡",
+            "id": "CRC"
+        },
+        "MNT": {
+            "currencyName": "Mongolian tugrik",
+            "currencySymbol": "₮",
+            "id": "MNT"
+        },
+        "NGN": {
+            "currencyName": "Nigerian naira",
+            "currencySymbol": "₦",
+            "id": "NGN"
+        },
+        "STD": {
+            "currencyName": "Sao Tome and Principe dobra",
+            "id": "STD"
+        },
+        "AOA": {
+            "currencyName": "Angolan kwanza",
+            "id": "AOA"
+        },
+        "BIF": {
+            "currencyName": "Burundi franc",
+            "id": "BIF"
+        },
+        "LSL": {
+            "currencyName": "Lesotho loti",
+            "id": "LSL"
+        },
+        "MMK": {
+            "currencyName": "Myanma kyat",
+            "id": "MMK"
+        },
+        "TOP": {
+            "currencyName": "Paanga",
+            "id": "TOP"
+        },
+        "VEF": {
+            "currencyName": "Venezuelan bolivar",
+            "id": "VEF"
+        },
+        "DZD": {
+            "currencyName": "Algerian dinar",
+            "id": "DZD"
+        },
+        "CDF": {
+            "currencyName": "Congolese franc",
+            "id": "CDF"
+        },
+        "GMD": {
+            "currencyName": "Gambian dalasi",
+            "id": "GMD"
+        },
+        "IQD": {
+            "currencyName": "Iraqi dinar",
+            "id": "IQD"
+        },
+        "MGA": {
+            "currencyName": "Malagasy ariary",
+            "id": "MGA"
+        },
+        "MDL": {
+            "currencyName": "Moldovan leu",
+            "id": "MDL"
+        },
+        "MAD": {
+            "currencyName": "Moroccan dirham",
+            "id": "MAD"
+        },
+        "TRY": {
+            "currencyName": "Turkish new lira",
+            "id": "TRY"
+        },
+        "AED": {
+            "currencyName": "UAE dirham",
+            "id": "AED"
+        },
+        "VUV": {
+            "currencyName": "Vanuatu vatu",
+            "id": "VUV"
+        },
+        "BDT": {
+            "currencyName": "Bangladeshi taka",
+            "id": "BDT"
+        },
+        "ETB": {
+            "currencyName": "Ethiopian birr",
+            "id": "ETB"
+        },
+        "KMF": {
+            "currencyName": "Comorian franc",
+            "id": "KMF"
+        },
+        "MVR": {
+            "currencyName": "Maldivian rufiyaa",
+            "id": "MVR"
+        },
+        "SZL": {
+            "currencyName": "Swazi lilangeni",
+            "id": "SZL"
+        },
+        "DJF": {
+            "currencyName": "Djiboutian franc",
+            "id": "DJF"
+        },
+        "GNF": {
+            "currencyName": "Guinean franc",
+            "id": "GNF"
+        },
+        "GHS": {
+            "currencyName": "Ghanaian cedi",
+            "id": "GHS"
+        },
+        "ZMW": {
+            "currencyName": "Zambian kwacha",
+            "id": "ZMW"
+        },
+        "XDR": {
+            "currencyName": "Special Drawing Rights",
+            "id": "XDR"
+        },
+        "MOP": {
+            "currencyName": "Macanese pataca",
+            "id": "MOP"
+        },
+        "TJS": {
+            "currencyName": "Tajikistani somoni",
+            "id": "TJS"
+        },
+        "TND": {
+            "currencyName": "Tunisian dinar",
+            "id": "TND"
+        },
+        "XOF": {
+            "currencyName": "West African CFA franc",
+            "id": "XOF"
+        },
+        "XAF": {
+            "currencyName": "Central African CFA franc",
+            "id": "XAF"
+        },
+        "XCD": {
+            "currencyName": "East Caribbean dollar",
+            "currencySymbol": "$",
+            "id": "XCD"
+        },
+        "SDG": {
+            "currencyName": "Sudanese pound",
+            "id": "SDG"
+        },
+        "ALL": {
+            "currencyName": "Albanian lek",
+            "currencySymbol": "Lek",
+            "id": "ALL"
+        },
+        "BBD": {
+            "currencyName": "Barbadian dollar",
+            "currencySymbol": "$",
+            "id": "BBD"
+        },
+        "BND": {
+            "currencyName": "Brunei dollar",
+            "currencySymbol": "$",
+            "id": "BND"
+        },
+        "HUF": {
+            "currencyName": "Hungarian forint",
+            "currencySymbol": "Ft",
+            "id": "HUF"
+        },
+        "JMD": {
+            "currencyName": "Jamaican dollar",
+            "currencySymbol": "J$",
+            "id": "JMD"
+        },
+        "AUD": {
+            "currencyName": "Australian dollar",
+            "currencySymbol": "$",
+            "id": "AUD"
+        },
+        "GIP": {
+            "currencyName": "Gibraltar pound",
+            "currencySymbol": "£",
+            "id": "GIP"
+        },
+        "NZD": {
+            "currencyName": "New Zealand dollar",
+            "currencySymbol": "$",
+            "id": "NZD"
+        },
+        "FKP": {
+            "currencyName": "Falkland Islands pound",
+            "currencySymbol": "£",
+            "id": "FKP"
+        },
+        "MKD": {
+            "currencyName": "Macedonian denar",
+            "currencySymbol": "ден",
+            "id": "MKD"
+        },
+        "INR": {
+            "currencyName": "Indian rupee",
+            "currencySymbol": "₹",
+            "id": "INR"
+        },
+        "TZS": {
+            "currencyName": "Tanzanian shilling",
+            "currencySymbol": "TSh",
+            "id": "TZS"
+        },
+        "BAM": {
+            "currencyName": "Bosnia and Herzegovina konvertibilna marka",
+            "currencySymbol": "KM",
+            "id": "BAM"
+        },
+        "SEK": {
+            "currencyName": "Swedish krona",
+            "currencySymbol": "kr",
+            "id": "SEK"
+        },
+        "CNY": {
+            "currencyName": "Chinese renminbi",
+            "currencySymbol": "¥",
+            "id": "CNY"
+        },
+        "BSD": {
+            "currencyName": "Bahamian dollar",
+            "currencySymbol": "$",
+            "id": "BSD"
+        },
+        "BWP": {
+            "currencyName": "Botswana pula",
+            "currencySymbol": "P",
+            "id": "BWP"
+        },
+        "LAK": {
+            "currencyName": "Lao kip",
+            "currencySymbol": "₭",
+            "id": "LAK"
+        },
+        "SYP": {
+            "currencyName": "Syrian pound",
+            "currencySymbol": "£",
+            "id": "SYP"
+        },
+        "CZK": {
+            "currencyName": "Czech koruna",
+            "currencySymbol": "Kč",
+            "id": "CZK"
+        },
+        "ANG": {
+            "currencyName": "Netherlands Antillean gulden",
+            "currencySymbol": "ƒ",
+            "id": "ANG"
+        },
+        "KRW": {
+            "currencyName": "South Korean won",
+            "currencySymbol": "₩",
+            "id": "KRW"
+        },
+        "GTQ": {
+            "currencyName": "Guatemalan quetzal",
+            "currencySymbol": "Q",
+            "id": "GTQ"
+        },
+        "SOS": {
+            "currencyName": "Somali shilling",
+            "currencySymbol": "S",
+            "id": "SOS"
+        },
+        "DKK": {
+            "currencyName": "Danish krone",
+            "currencySymbol": "kr",
+            "id": "DKK"
+        },
+        "PEN": {
+            "currencyName": "Peruvian nuevo sol",
+            "currencySymbol": "S/.",
+            "id": "PEN"
+        },
+        "COP": {
+            "currencyName": "Colombian peso",
+            "currencySymbol": "$",
+            "id": "COP"
+        },
+        "LBP": {
+            "currencyName": "Lebanese lira",
+            "currencySymbol": "£",
+            "id": "LBP"
+        },
+        "QAR": {
+            "currencyName": "Qatari riyal",
+            "currencySymbol": "﷼",
+            "id": "QAR"
+        },
+        "BZD": {
+            "currencyName": "Belize dollar",
+            "currencySymbol": "BZ$",
+            "id": "BZD"
+        },
+        "KZT": {
+            "currencyName": "Kazakhstani tenge",
+            "currencySymbol": "лв",
+            "id": "KZT"
+        },
+        "MUR": {
+            "currencyName": "Mauritian rupee",
+            "currencySymbol": "₨",
+            "id": "MUR"
+        },
+        "AWG": {
+            "currencyName": "Aruban florin",
+            "currencySymbol": "ƒ",
+            "id": "AWG"
+        },
+        "KYD": {
+            "currencyName": "Cayman Islands dollar",
+            "currencySymbol": "$",
+            "id": "KYD"
+        },
+        "IDR": {
+            "currencyName": "Indonesian rupiah",
+            "currencySymbol": "Rp",
+            "id": "IDR"
+        },
+        "EUR": {
+            "currencyName": "European Euro",
+            "currencySymbol": "€",
+            "id": "EUR"
+        },
+        "IRR": {
+            "currencyName": "Iranian rial",
+            "currencySymbol": "﷼",
+            "id": "IRR"
+        },
+        "ILS": {
+            "currencyName": "Israeli new sheqel",
+            "currencySymbol": "₪",
+            "id": "ILS"
+        },
+        "MYR": {
+            "currencyName": "Malaysian ringgit",
+            "currencySymbol": "RM",
+            "id": "MYR"
+        },
+        "HNL": {
+            "currencyName": "Honduran lempira",
+            "currencySymbol": "L",
+            "id": "HNL"
+        },
+        "PAB": {
+            "currencyName": "Panamanian balboa",
+            "currencySymbol": "B/.",
+            "id": "PAB"
+        },
+        "PHP": {
+            "currencyName": "Philippine peso",
+            "currencySymbol": "₱",
+            "id": "PHP"
+        },
+        "ZAR": {
+            "currencyName": "South African rand",
+            "currencySymbol": "R",
+            "id": "ZAR"
+        },
+        "SAR": {
+            "currencyName": "Saudi riyal",
+            "currencySymbol": "﷼",
+            "id": "SAR"
+        },
+        "SGD": {
+            "currencyName": "Singapore dollar",
+            "currencySymbol": "$",
+            "id": "SGD"
+        },
+        "RON": {
+            "currencyName": "Romanian leu",
+            "currencySymbol": "lei",
+            "id": "RON"
+        },
+        "SRD": {
+            "currencyName": "Surinamese dollar",
+            "currencySymbol": "$",
+            "id": "SRD"
+        },
+        "TWD": {
+            "currencyName": "New Taiwan dollar",
+            "currencySymbol": "NT$",
+            "id": "TWD"
+        },
+        "ARS": {
+            "currencyName": "Argentine peso",
+            "currencySymbol": "$",
+            "id": "ARS"
+        },
+        "AZN": {
+            "currencyName": "Azerbaijani manat",
+            "currencySymbol": "ман",
+            "id": "AZN"
+        },
+        "BYR": {
+            "currencyName": "Belarusian ruble",
+            "currencySymbol": "p.",
+            "id": "BYR"
+        },
+        "BGN": {
+            "currencyName": "Bulgarian lev",
+            "currencySymbol": "лв",
+            "id": "BGN"
+        },
+        "BOB": {
+            "currencyName": "Bolivian boliviano",
+            "currencySymbol": "$b",
+            "id": "BOB"
+        },
+        "CAD": {
+            "currencyName": "Canadian dollar",
+            "currencySymbol": "$",
+            "id": "CAD"
+        },
+        "CLP": {
+            "currencyName": "Chilean peso",
+            "currencySymbol": "$",
+            "id": "CLP"
+        },
+        "DOP": {
+            "currencyName": "Dominican peso",
+            "currencySymbol": "RD$",
+            "id": "DOP"
+        },
+        "FJD": {
+            "currencyName": "Fijian dollar",
+            "currencySymbol": "$",
+            "id": "FJD"
+        },
+        "GYD": {
+            "currencyName": "Guyanese dollar",
+            "currencySymbol": "$",
+            "id": "GYD"
+        },
+        "ISK": {
+            "currencyName": "Icelandic króna",
+            "currencySymbol": "kr",
+            "id": "ISK"
+        },
+        "JPY": {
+            "currencyName": "Japanese yen",
+            "currencySymbol": "¥",
+            "id": "JPY"
+        },
+        "KPW": {
+            "currencyName": "North Korean won",
+            "currencySymbol": "₩",
+            "id": "KPW"
+        },
+        "LVL": {
+            "currencyName": "Latvian lats",
+            "currencySymbol": "Ls",
+            "id": "LVL"
+        },
+        "CHF": {
+            "currencyName": "Swiss franc",
+            "currencySymbol": "Fr.",
+            "id": "CHF"
+        },
+        "NPR": {
+            "currencyName": "Nepalese rupee",
+            "currencySymbol": "₨",
+            "id": "NPR"
+        },
+        "NIO": {
+            "currencyName": "Nicaraguan cordoba",
+            "currencySymbol": "C$",
+            "id": "NIO"
+        },
+        "PKR": {
+            "currencyName": "Pakistani rupee",
+            "currencySymbol": "₨",
+            "id": "PKR"
+        },
+        "PYG": {
+            "currencyName": "Paraguayan guarani",
+            "currencySymbol": "Gs",
+            "id": "PYG"
+        },
+        "SHP": {
+            "currencyName": "Saint Helena pound",
+            "currencySymbol": "£",
+            "id": "SHP"
+        },
+        "SBD": {
+            "currencyName": "Solomon Islands dollar",
+            "currencySymbol": "$",
+            "id": "SBD"
+        },
+        "LKR": {
+            "currencyName": "Sri Lankan rupee",
+            "currencySymbol": "₨",
+            "id": "LKR"
+        },
+        "YER": {
+            "currencyName": "Yemeni rial",
+            "currencySymbol": "﷼",
+            "id": "YER"
+        },
+        "TTD": {
+            "currencyName": "Trinidad and Tobago dollar",
+            "currencySymbol": "TT$",
+            "id": "TTD"
+        },
+        "BRL": {
+            "currencyName": "Brazilian real",
+            "currencySymbol": "R$",
+            "id": "BRL"
+        },
+        "HRK": {
+            "currencyName": "Croatian kuna",
+            "currencySymbol": "kn",
+            "id": "HRK"
+        },
+        "SCR": {
+            "currencyName": "Seychellois rupee",
+            "currencySymbol": "₨",
+            "id": "SCR"
+        },
+        "THB": {
+            "currencyName": "Thai baht",
+            "currencySymbol": "฿",
+            "id": "THB"
+        },
+        "AFN": {
+            "currencyName": "Afghan afghani",
+            "currencySymbol": "؋",
+            "id": "AFN"
+        },
+        "NOK": {
+            "currencyName": "Norwegian krone",
+            "currencySymbol": "kr",
+            "id": "NOK"
+        },
+        "KHR": {
+            "currencyName": "Cambodian riel",
+            "currencySymbol": "៛",
+            "id": "KHR"
+        },
+        "EGP": {
+            "currencyName": "Egyptian pound",
+            "currencySymbol": "£",
+            "id": "EGP"
+        },
+        "HKD": {
+            "currencyName": "Hong Kong dollar",
+            "currencySymbol": "$",
+            "id": "HKD"
+        },
+        "LRD": {
+            "currencyName": "Liberian dollar",
+            "currencySymbol": "$",
+            "id": "LRD"
+        },
+        "NAD": {
+            "currencyName": "Namibian dollar",
+            "currencySymbol": "$",
+            "id": "NAD"
+        },
+        "RUB": {
+            "currencyName": "Russian ruble",
+            "currencySymbol": "руб",
+            "id": "RUB"
+        },
+        "KGS": {
+            "currencyName": "Kyrgyzstani som",
+            "currencySymbol": "лв",
+            "id": "KGS"
+        },
+        "PLN": {
+            "currencyName": "Polish zloty",
+            "currencySymbol": "zł",
+            "id": "PLN"
+        },
+        "UYU": {
+            "currencyName": "Uruguayan peso",
+            "currencySymbol": "$U",
+            "id": "UYU"
+        },
+        "VND": {
+            "currencyName": "Vietnamese dong",
+            "currencySymbol": "₫",
+            "id": "VND"
+        },
+        "KES": {
+            "currencyName": "Kenyan shilling",
+            "currencySymbol": "KSh",
+            "id": "KES"
+        },
+        "MXN": {
+            "currencyName": "Mexican peso",
+            "currencySymbol": "$",
+            "id": "MXN"
+        },
+        "UGX": {
+            "currencyName": "Ugandan shilling",
+            "currencySymbol": "USh",
+            "id": "UGX"
+        },
+        "UZS": {
+            "currencyName": "Uzbekistani som",
+            "currencySymbol": "лв",
+            "id": "UZS"
+        },
+        "UAH": {
+            "currencyName": "Ukrainian hryvnia",
+            "currencySymbol": "₴",
+            "id": "UAH"
+        },
+        "GBP": {
+            "currencyName": "British pound",
+            "currencySymbol": "£",
+            "id": "GBP"
+        },
+        "USD": {
+            "currencyName": "United States dollar",
+            "currencySymbol": "$",
+            "id": "USD"
+        },
+        "CUP": {
+            "currencyName": "Cuban peso",
+            "currencySymbol": "$",
+            "id": "CUP"
+        },
+        "BTC": {
+            "currencyName": "Bitcoin",
+            "currencySymbol": "BTC",
+            "id": "BTC"
+        },
+        "TMT": {
+            "currencyName": "Turkmenistan manat",
+            "id": "TMT"
+        }
+    }
+
+}

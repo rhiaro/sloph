@@ -25,7 +25,7 @@
 
       <h2>Acquisitions</h2>
 
-      <p>I purchased or otherwise acquired something on x occasions, spending a total of &pound;y. I used z different currencies (USD, GBP, JPY, EUR, MYR, ...). This is an average expenditure of x per week, or z per month. I mostly bought [food] (%) of which % was takeaway and % was in restaurants. I spent x on groceries and y on household. I also spent z on travel or transit. On x occasions I got something for free. The most expensive thing I bought was x and the cheapest thing (which wasn't free) was y. I spent on average z per time. Other categories of expenditure are: ... .</p>
+      <p>I purchased or otherwise acquired something on <?=$acquires['total']?> occasions, spending a total of approximately &dollar;<?=number_format($acquires['usd'], 2)?>. I used <?=count($acquires['currencies'])?> different currencies (<?=implode(", ", $acquires['currencies'])?>). This is an average expenditure of &dollar;<?=$acquires['day']?> per day, &dollar;<?=$acquires['week']?> per week, or &dollar;<?=$acquires['month']?> per month. Some things I acquired the most often were <?=$acquires['toptags']?>. On x occasions I got something for free. The most expensive thing I bought was x and the cheapest thing (which wasn't free) was y. I spent on average z per time. Three other random categories of expenditure are: <?=$acquires['othertags']?>.</p>
 
       <p>% of my acquire posts have photos attached. You can see them all at <a href="/stuff">/stuff</a>.</p>
 
