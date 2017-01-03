@@ -27,7 +27,8 @@
 
       <p>I purchased or otherwise acquired something on <?=$acquires['total']?> occasions, spending a total of approximately &dollar;<?=number_format($acquires['usd'], 2)?>. I used <?=count($acquires['currencies'])?> different currencies (<?=implode(", ", $acquires['currencies'])?>). This is an average expenditure of &dollar;<?=$acquires['day']?> per day, &dollar;<?=$acquires['week']?> per week, or &dollar;<?=$acquires['month']?> per month. Some things I acquired the most often were <?=$acquires['toptags']?>. On x occasions I got something for free. The most expensive thing I bought was x and the cheapest thing (which wasn't free) was y. I spent on average z per time. Three other random categories of expenditure are: <?=$acquires['othertags']?>.</p>
 
-      <p>% of my acquire posts have photos attached. You can see them all at <a href="/stuff">/stuff</a>.</p>
+      <p><?=$acquires['photosp']?>% of my acquire posts have photos attached. You can see them all at <a href="/stuff">/stuff</a>. Here's a random one (this was <?=$acquires['photocost']?> and I acquired it on <?=$acquires['photodate']->format("jS F Y \a\\t h:ia")?>):</p>
+      <p class="w1of1"><img src=<?=$acquires['photo']?> alt="<?=$acquires['photocont']?>" title="<?=$acquires['photocont']?>" /></p>
 
       <h2>Consumption</h2>
       <p>I logged x meals or snacks, an average of y per day. The thing I consumed most was [probably coffee] (x instances), followed by [bread] and [vegetables].</p>

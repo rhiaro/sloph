@@ -80,6 +80,8 @@ function aggregate_acquires($posts, $from, $to, $alltags){
   $out['currencies'] = array();
   $tallys = array();
 
+  $photoposts = array();
+
   // OMG this is stupid.
   // Accounting for terrible human input.
   $cheat = array("&pound;" => "GBP", "&dollar;" => "USD", "$" => "USD", "£" => "GBP", "QR" => "QAR", "&euro;" => "EUR");
@@ -88,6 +90,10 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $cost = get_value(array($uri=>$post), "asext:cost");
     $date = new DateTime(get_value(array($uri=>$post), "as:published"));
     $tags = get_values(array($uri=>$post), "as:tag");
+    $photo = get_value(array($uri=>$post), "as:image");
+    if($photo){
+      $photoposts[$uri] = $post;
+    }
 
     foreach($cheat as $s => $c){
       if(stripos($cost, $s) !== false){
@@ -149,9 +155,17 @@ function aggregate_acquires($posts, $from, $to, $alltags){
   $rand_tags[$rand[0]] = $others[$rand[0]];
   $rand_tags[$rand[1]] = $others[$rand[1]];
   $rand_tags[$rand[2]] = $others[$rand[2]];
-  var_dump($rand_tags);
   $out['othertags'] = top_tags($rand_tags, 3, $alltags);
   $out['toptags'] = top_tags($top, 6, $alltags).$foodstr;
+
+  // Photos
+  $randph = array_rand($photoposts);
+  $out['photo'] = get_value(array($randph => $photoposts[$randph]), "as:image");
+  $out['photodate'] = new DateTime(get_value(array($randph => $photoposts[$randph]), "as:published"));
+  $out['photocost'] = get_value(array($randph => $photoposts[$randph]), "asext:cost");
+  $out['photocont'] = get_value(array($randph => $photoposts[$randph]), "as:content");
+  $perc = count($photoposts) / count($typed) * 100;
+  $out['photosp'] = number_format($perc, 1);
 
   return $out;
 }
