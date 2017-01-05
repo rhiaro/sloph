@@ -201,9 +201,25 @@ function total_in_usd($date, $values){
   return $total;
 }
 
-function aggregate_consumes($posts, $from, $to){
+function aggregate_consumes($posts, $from, $to, $alltags){
   $typed = get_type($posts, "asext:Consume");
+  $diff = $from->diff($to);
+  $days = $diff->format("%a");
   $out['total'] = count($typed);
+  $out['day'] = $out['total'] / $days;
+
+  $tags = tally_tags($typed);
+  $top = array_slice($tags, 0, 1);
+  $toprest = array_slice($tags, 1, 4);
+  $out['top'] = top_tags($top, 1, $alltags);
+  $out['toptags'] = top_tags($toprest, 6, $alltags);
+  $topar = explode("(", $out['top']);
+  $topc = str_replace(")", "", $topar[1]);
+  $out['topday'] = $topc / $days;
+
+  $randk = array_rand($typed);
+  $out['random'] = "<a href=\"$randk\">".get_value(array($randk => $typed[$randk]), "as:content")."</a>";
+
   return $out;
 }
 
@@ -265,10 +281,14 @@ function top_tags($tags, $max, $alltags){
   $top = array_slice($tags, 0, $max, true);
   $last = array_slice($tags, $max, 1, true);
   $topstr = "";
-  foreach($top as $t => $c){
-    $topstr .= "<a href=\"$t\">".$alltags[$t]["name"]."</a> (".$c."), ";
+  if(count($top) > 1){
+    foreach($top as $t => $c){
+      $topstr .= "<a href=\"$t\">".$alltags[$t]["name"]."</a> (".$c."), ";
+    }
+    $topstr .= " and <a href=\"".key($last)."\">".$alltags[key($last)]["name"]."</a> (".$last[key($last)].")";
+  }else{
+    $topstr = "<a href=\"".key($last)."\">".$alltags[key($last)]["name"]."</a> (".$last[key($last)].")";
   }
-  $topstr .= " and <a href=\"".key($last)."\">".$alltags[key($last)]["name"]."</a> (".$last[key($last)].")";
   return $topstr;
 }
 
@@ -301,7 +321,7 @@ $locations = $locations->toRdfPhp();
 
 $checkins = aggregate_checkins($posts, $from, $to, $locations);
 $acquires = aggregate_acquires($posts, $from, $to, $tags);
-$consumes = aggregate_consumes($posts, $from, $to);
+$consumes = aggregate_consumes($posts, $from, $to, $tags);
 $writing = aggregate_writing($posts, $from, $to, $tags);
 $socials = aggregate_socials($posts, $from, $to);
 $total = $checkins['total'] + $acquires['total'] + $consumes['total'] + $writing['total'] + $socials['total'];
