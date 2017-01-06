@@ -23,6 +23,7 @@ $typemap = array("checkins" => "as:Arrive"
                 ,"notes" => "as:Note"
                 ,"places" => "as:Place"
                 ,"follows" => "as:Follow"
+                ,"where" => "as:Arrive"
   );
 
 if(!isset($_GET['type']) || !array_key_exists($_GET['type'], $typemap)){
@@ -52,8 +53,23 @@ if($res){
     if(substr($k, 0, 21) != "https://rhiaro.co.uk/"){ unset($res[$k]); }
   }
   $name = ucfirst($_GET['type']);
-  
-  $g = get_container_dynamic_from_items($ep, $relUri, $name, $res);
+
+  if($_GET['type'] == "where"){
+    $where = array_slice($res, 0, 1);
+    $uri = key($where);
+    $g = new EasyRdf_Graph($uri);
+    $relUri = $uri;
+    $g->parse($where, 'php');
+    // Temporary for checkins
+    $g->addLiteral($uri, 'view:banality', 5);
+    $g->addLiteral($uri, 'view:intimacy', 5);
+    $g->addLiteral($uri, 'view:wanderlust', 4);
+    $template = "checkin";
+  }else{
+    $g = get_container_dynamic_from_items($ep, $relUri, $name, $res);
+    $template = "collection";
+  }
+
   $result = conneg($acceptheaders, $g);
   $content = $result['content'];
   $header = $result['header'];
@@ -70,7 +86,7 @@ if($res){
 
       include 'views/top.php';
       include 'views/nav.php';
-      include 'views/collection.php';
+      include 'views/'.$template.'.php';
 
       include 'views/end.php';
 
@@ -78,6 +94,7 @@ if($res){
   }catch(Exception $e){
     var_dump($e);
   }
+  
 }
 
 ?>
