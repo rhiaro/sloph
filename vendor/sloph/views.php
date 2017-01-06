@@ -208,6 +208,38 @@ function prev_tile_x($tile){
   return implode("/", $url);
 }
 
+function make_checkin_summary($checkin, $locations=null, $end=null){
+  
+  $location = get_value($checkin, "as:location");
+  if($locations === null){
+    $locations = get_locations();
+  }
+  if(isset($locations[$location])){
+    $location = array($location => $locations[$location]);
+  }else{
+    $location = array($location=>array());
+  }
+
+  $pub = new DateTime(get_value($checkin, "as:published"));
+  if($end === null){
+    $end = new DateTime();
+    $location_label = get_value($location, "blog:presentLabel");
+    $end_label = "now";
+  }else{
+    $end = new DateTime($end);
+    $location_label = get_value($location, "blog:pastLabel");
+    $end_label = $end->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F");
+  }
+  
+  $diff = time_diff_to_human($pub, $end);
+  if(empty($location_label)){
+    $location_label = "was last spotted at ".key($location);
+  }
+
+  $label = "rhiaro ".$location_label." for ".$diff." (from ".$pub->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")." until ".$end_label.")";
+  return $label;
+}
+
 function get_tags($ep){
   $q = query_select_tags();
   $res = execute_query($ep, $q);

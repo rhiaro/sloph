@@ -64,6 +64,8 @@ if($res){
     $g->addLiteral($uri, 'view:banality', 5);
     $g->addLiteral($uri, 'view:intimacy', 5);
     $g->addLiteral($uri, 'view:wanderlust', 4);
+    $summary = make_checkin_summary($where, $locations);
+    $g->addLiteral($uri, 'as:summary', $summary);
     $template = "checkin";
   }else{
     $g = get_container_dynamic_from_items($ep, $relUri, $name, $res);
