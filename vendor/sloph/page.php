@@ -2,7 +2,7 @@
 require_once('../init.php');
 
 if(isset($_GET['start'])){ $start = $_GET['start']; }
-else{ $start = ""; }
+else{ $start = "https://rhiaro.co.uk/2017/01/586de63a68be8"; } // TODO: get latest
 
 if(isset($_GET['length'])){ $length = $_GET['length']; }
 else { $length = 10; }
@@ -26,7 +26,8 @@ foreach($uris as $r){
   $content = $result['content'];
   $resource = $content->resource($r['s']);
 
-  var_dump(view_router($resource));
+  $resource = set_views($ep, $content->resource());
+  $resource = $content->toRdfPhp();
 
   ob_start();
   include '../../views/'.view_router($resource).'.php';
