@@ -76,12 +76,12 @@ function aggregate_acquires($posts, $from, $to, $alltags){
   $months = floor($days / 30);
 
   $out['total'] = count($typed);
-  $out['totalgbp'] = "";
+  $out['totalusd'] = 0;
   $out['currencies'] = array();
-  $tallys = array();
 
   $photoposts = array();
 
+  $rates = array();
   // OMG this is stupid.
   // Accounting for terrible human input.
   $cheat = array("&pound;" => "GBP", "&dollar;" => "USD", "$" => "USD", "£" => "GBP", "QR" => "QAR", "&euro;" => "EUR");
@@ -111,22 +111,41 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $cur = str_replace($amt, "", $cur);
     $cur = trim(str_replace("0", "", $cur));
     $code = currency_code($cur);
+    
     if($code){
       $out['currencies'][] = $code;
   
-      if(!isset($tallys[$code])){
-        $tallys[$code] = $amt;
-      }else{
-        $tallys[$code] += $amt;
+      $d = $date->format("Y-m-d");
+      if(!isset($rates[$d]) || (isset($rates[$d]) && !in_array($code, $rates[$d]))){
+        $rates[$d][] = $code;
       }
+
+      $typed[$uri]["cost"] = array(
+          "amount" => $amt,
+          "currency" => $code
+        );
     }
   }
   
   $out['currencies'] = array_unique($out['currencies']);
-  $out['usd'] = total_in_usd($date, $tallys);
-  if($weeks > 0) { $out['week'] = number_format($out['usd'] / $weeks, 2); }else{ $out['week'] = "n/a"; }
-  if($months > 0) { $out['month'] = number_format($out['usd'] / $months, 2); }else{ $out['month'] = "n/a"; }
-  if($days > 0) { $out['day'] = number_format($out['usd'] / $days, 2); }else{ $out['day'] = "n/a"; }
+
+  $convert = array();
+  foreach($rates as $date => $currency){
+    $d = new DateTime($date);
+    $todayrates = exchange_rate($currency, $d);
+    $convert[$d->format("Ymd")] = $todayrates["rates"];
+  }
+  foreach($typed as $uri => $data){
+    $d = new DateTime(get_value(array($uri=>$post), "as:published"));
+    $usd = $data["cost"]["amount"] / $convert[$d->format("Ymd")][$data["cost"]["currency"]];
+    // echo $usd . " - ".$data["cost"]["amount"] . "(".$data["cost"]["currency"].")";
+    // echo "<hr/>";
+    $out['totalusd'] += $usd;
+  }
+
+  if($weeks > 0) { $out['week'] = number_format($out['totalusd'] / $weeks, 2); }else{ $out['week'] = "n/a"; }
+  if($months > 0) { $out['month'] = number_format($out['totalusd'] / $months, 2); }else{ $out['month'] = "n/a"; }
+  if($days > 0) { $out['day'] = number_format($out['totalusd'] / $days, 2); }else{ $out['day'] = "n/a"; }
 
   // Tags
   $tags = tally_tags($typed);
@@ -180,25 +199,41 @@ function currency_code($symbol){
   }
 }
 
-function total_in_usd($date, $values){
-  // TODO: shit this is all wrong, I need to do the conversion separately for each day
-  global $CURRENCYAPI;
+function exchange_rate($currencies, $date){
   $d = $date->format("Y-m-d");
-  $ep = "http://apilayer.net/api/historical?access_key=$CURRENCYAPI&date=$d&currencies=";
-  foreach($values as $currency => $amount){
-    $ep .= $currency.",";
-  }
-  $ep = substr($ep, 0, strlen($ep)-1)."&format=1";
-  $rates = file_get_contents($ep);
-  $rates = json_decode($rates, true);
-  $total = 0;
-  foreach($values as $currency => $amount){
-    if(isset($rates["quotes"]["USD".$currency])){
-      $total += $amount / $rates["quotes"]["USD".$currency];
+  $ep = "https://api.fixer.io/".$d."?base=USD&symbols=".implode(",",$currencies);
+  $resp = file_get_contents($ep);
+  $resp = json_decode($resp, true);
+  $missing = array();
+  $out["date"] = $date;
+  $out["rates"] = $resp["rates"];
+  foreach($currencies as $c){
+    if(!isset($resp["rates"][$c])){
+      $missing[] = $c;
     }
   }
-  
-  return $total;
+  if(!empty($missing)){
+    $cs = implode(",", $missing);
+    // This is a rate-limited API which contains currencies not in the fixerio set and only converts to USD.
+    global $CURRENCYAPI;
+    $ep = "http://apilayer.net/api/historical?access_key=$CURRENCYAPI&date=$d&currenciess=$cs&format=1";
+    $rates = file_get_contents($ep);
+    $rates = json_decode($rates, true);
+    foreach($missing as $currency){
+      if(isset($rates["quotes"]["USD".$currency])){
+        $out["rates"][$currency] = $rates["quotes"]["USD".$currency];
+      }
+    }
+  }
+  return $out;
+}
+
+function convert_to_usd($from, $amount, $rates){
+  if(isset($rates["rates"][$from])){
+    return $amount / $rates["rates"][$from];
+  }else{
+    return false;
+  }
 }
 
 function aggregate_consumes($posts, $from, $to, $alltags){
