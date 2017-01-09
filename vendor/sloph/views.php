@@ -240,6 +240,36 @@ function make_checkin_summary($checkin, $locations=null, $end=null){
   return $label;
 }
 
+function structure_cost($cost){
+  // This is terrible.
+  // Accounting for messy human input.
+  // Replace this with retreiving the currency code from however you store the cost of something.
+  $cheat = array("&pound;" => "GBP", "&dollar;" => "USD", "$" => "USD", "£" => "GBP", "QR" => "QAR", "&euro;" => "EUR");
+  foreach($cheat as $s => $c){
+    if(stripos($cost, $s) !== false){
+      $cur = $cheat[$s];
+      $amt = str_replace($s, "", $cost);
+      break;
+    }else{
+      $cur = $cost;
+      $amt = $cost;
+    }
+  }
+  $amt = str_replace(",", "", $amt);
+  $cur = str_replace(",", "", $cur);
+  $amt = floatval($amt);
+  $cur = str_replace($amt, "", $cur);
+  $cur = trim(str_replace("0", "", $cur));
+  $currencies = json_decode(file_get_contents('currencies.json'), true);
+  $currencies = $currencies['results'];
+  if(array_key_exists(strtoupper($cur), $currencies)){
+    $code = strtoupper($cur);
+  }else{
+    $code = null;
+  }
+  return array("currency" => $code, "value" => $amt);
+}
+
 function get_tags($ep){
   $q = query_select_tags();
   $res = execute_query($ep, $q);
