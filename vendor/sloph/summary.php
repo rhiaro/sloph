@@ -81,7 +81,7 @@ function aggregate_acquires($posts, $from, $to, $alltags){
 
   $photoposts = array();
 
-  $rates = array();
+  $rates = json_decode(file_get_contents("rates.json"), true);
   // OMG this is stupid.
   // Accounting for terrible human input.
   $cheat = array("&pound;" => "GBP", "&dollar;" => "USD", "$" => "USD", "£" => "GBP", "QR" => "QAR", "&euro;" => "EUR");
@@ -91,57 +91,27 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $date = new DateTime(get_value(array($uri=>$post), "as:published"));
     $tags = get_values(array($uri=>$post), "as:tag");
     $photo = get_value(array($uri=>$post), "as:image");
+    $convert = array();
     if($photo){
       $photoposts[$uri] = $post;
     }
 
-    foreach($cheat as $s => $c){
-      if(stripos($cost, $s) !== false){
-        $cur = $cheat[$s];
-        $amt = str_replace($s, "", $cost);
-        break;
-      }else{
-        $cur = $cost;
-        $amt = $cost;
-      }
-    }
-    $amt = str_replace(",", "", $amt);
-    $cur = str_replace(",", "", $cur);
-    $amt = floatval($amt);
-    $cur = str_replace($amt, "", $cur);
-    $cur = trim(str_replace("0", "", $cur));
-    $code = currency_code($cur);
+    $structured_cost = structure_cost($cost);
+    $code = $structured_cost["currency"];
+    $amt = $structured_cost["value"];
     
     if($code){
       $out['currencies'][] = $code;
-  
       $d = $date->format("Y-m-d");
-      if(!isset($rates[$d]) || (isset($rates[$d]) && !in_array($code, $rates[$d]))){
-        $rates[$d][] = $code;
+      if(isset($rates[$d]) && array_key_exists($code, $rates[$d])){
+        $usd = $amt / $rates[$d][$code];
+        $out['totalusd'] += $usd;
       }
-
-      $typed[$uri]["cost"] = array(
-          "amount" => $amt,
-          "currency" => $code
-        );
+      // $typed[$uri]["cost"] = $structured_cost;
     }
   }
   
   $out['currencies'] = array_unique($out['currencies']);
-
-  $convert = array();
-  foreach($rates as $date => $currency){
-    $d = new DateTime($date);
-    $todayrates = exchange_rate($currency, $d);
-    $convert[$d->format("Ymd")] = $todayrates["rates"];
-  }
-  foreach($typed as $uri => $data){
-    $d = new DateTime(get_value(array($uri=>$post), "as:published"));
-    $usd = $data["cost"]["amount"] / $convert[$d->format("Ymd")][$data["cost"]["currency"]];
-    // echo $usd . " - ".$data["cost"]["amount"] . "(".$data["cost"]["currency"].")";
-    // echo "<hr/>";
-    $out['totalusd'] += $usd;
-  }
 
   if($weeks > 0) { $out['week'] = number_format($out['totalusd'] / $weeks, 2); }else{ $out['week'] = "n/a"; }
   if($months > 0) { $out['month'] = number_format($out['totalusd'] / $months, 2); }else{ $out['month'] = "n/a"; }
@@ -186,45 +156,6 @@ function aggregate_acquires($posts, $from, $to, $alltags){
   $perc = count($photoposts) / count($typed) * 100;
   $out['photosp'] = number_format($perc, 1);
 
-  return $out;
-}
-
-function currency_code($symbol){
-  $currencies = json_decode(file_get_contents('currencies.json'), true);
-  $currencies = $currencies['results'];
-  if(array_key_exists(strtoupper($symbol), $currencies)){
-    return strtoupper($symbol);
-  }else{
-    return null;
-  }
-}
-
-function exchange_rate($currencies, $date){
-  $d = $date->format("Y-m-d");
-  $ep = "https://api.fixer.io/".$d."?base=USD&symbols=".implode(",",$currencies);
-  $resp = file_get_contents($ep);
-  $resp = json_decode($resp, true);
-  $missing = array();
-  $out["date"] = $date;
-  $out["rates"] = $resp["rates"];
-  foreach($currencies as $c){
-    if(!isset($resp["rates"][$c])){
-      $missing[] = $c;
-    }
-  }
-  if(!empty($missing)){
-    $cs = implode(",", $missing);
-    // This is a rate-limited API which contains currencies not in the fixerio set and only converts to USD.
-    global $CURRENCYAPI;
-    $ep = "http://apilayer.net/api/historical?access_key=$CURRENCYAPI&date=$d&currenciess=$cs&format=1";
-    $rates = file_get_contents($ep);
-    $rates = json_decode($rates, true);
-    foreach($missing as $currency){
-      if(isset($rates["quotes"]["USD".$currency])){
-        $out["rates"][$currency] = $rates["quotes"]["USD".$currency];
-      }
-    }
-  }
   return $out;
 }
 
