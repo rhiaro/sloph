@@ -32,15 +32,14 @@
   }
   $from_date = new DateTime(get_value($resource, 'as:startTime'));
   $to_date = new DateTime(get_value($resource, 'as:endTime'));
-  $from_map = lat_lon_to_map($from_lat, $from_lon);
-  $to_map = lat_lon_to_map($to_lat, $to_lon);
+  $map = map_path(array($from_lon, $from_lat), array($to_lon, $to_lat));
 ?>
 
 <article>
-  <h1><?=get_value($resource, 'as:name') ? get_value($resource, 'as:name') : "Travel plan"?></h1>
+  <h1><?=get_value($resource, 'as:name') ? get_value($resource, 'as:name') : "Travel plan"?> <?=get_travel_icon_from_tags(get_values($resource, 'as:tag'))?></h1>
   <p>Made on 
     <datetime>
-      <a href="<?=str_replace("https://rhiaro.co.uk/", "", get_uri($resource))?>"><?=$date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?></a>
+      <a href="<?=str_replace("https://rhiaro.co.uk/", "", get_uri($resource))?>"><?=$date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?></a>
     </datetime>
     <?=get_value($resource, 'asext:cost') ? " at a cost of ".get_value($resource, 'asext:cost') : ""?>
   </p>
@@ -49,30 +48,11 @@
   <?if($err):?>
     <p class="fail"><em>Tried to get place information and maps from dbpedia, but could not connect :(</em></p>
   <?endif?>
-    <div class="map">
-      <?if(!$err):?>
-        <div class="map-holder">
-          <div style="background-image: url('<?=prev_tile_x($from_map)?>')"></div>
-          <div style="background-image: url('<?=$from_map?>')"></div>
-          <div style="background-image: url('<?=next_tile_x($from_map)?>')"></div>
-        </div>
-      <?endif?>
-      <p>Leaving <a href="<?=get_value($resource, 'as:origin')?>"><?=$from_name?></a> at <?=$from_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?></p>
-    </div>
-    <div class="map">
-      <?if(!$err):?>
-        <div class="map-holder">
-          <div style="background-image: url('<?=prev_tile_x($to_map)?>')"></div>
-          <div style="background-image: url('<?=$to_map?>')"></div>
-          <div style="background-image: url('<?=next_tile_x($to_map)?>')"></div>
-        </div>
-      <?endif?>
-      <p>Arriving in <a href="<?=get_value($resource, 'as:target')?>"><?=$to_name?></a> at <?=$to_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?></p>
-    </div>
-  <hr/>
-  <p class="arrow"><?=get_travel_icon_from_tags(get_values($resource, 'as:tag'))?></p>
+  <?if(!$err):?>
+    <p class="w1of1"><img src="<?=$map?>" /></p>
+    <p>Leaving <a href="<?=get_value($resource, 'as:origin')?>"><?=$from_name?></a> at <?=$from_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?> and arriving in <a href="<?=get_value($resource, 'as:target')?>"><?=$to_name?></a> at <?=$to_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?></p>
+  <?endif?>
 
-  <?=get_value($resource, 'as:summary')?>
   <?=get_value($resource, 'as:content')?>
 
 </article>

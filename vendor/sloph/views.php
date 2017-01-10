@@ -194,6 +194,10 @@ function lat_lon_to_map($lat, $lon, $zoom=8){
   $map = "http://a.basemaps.cartocdn.com/light_all/$zoom/$x/$y.png";
   return $map;
 }
+function map_path($start, $end){
+  $map = "https://atlas.p3k.io/map/img?basemap=gray&width=800&height=240&path[]=[".$start[0].",".$start[1]."],[".$end[0].",".$end[1]."]&bezier=25";
+  return $map;
+}
 
 function next_tile_x($tile){
   $url = explode("/", $tile);
