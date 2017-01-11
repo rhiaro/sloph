@@ -10,12 +10,15 @@ else { $length = 10; }
 if(isset($_GET['dir'])){ $dir = $_GET['dir']; }
 else { $dir = "prev"; }
 
-if($dir == "prev"){
-  $q = query_select_s_prev_count($start, $length);
-}elseif($dir == "next"){
-  $q = query_select_s_next_count($start, $length);
-}
+if(isset($_GET['type'])){ $type = explode(",", $_GET['type']); }
+else { $type = null; } // HERENOW do a query per type and then combine.. but ordering by date will be butts
 
+if($dir == "prev"){
+  $q = query_select_s_prev_of_type_count($start, $length, $type);
+}elseif($dir == "next"){
+  $q = query_select_s_next_of_type_count($start, $length, $type);
+}
+// var_dump(htmlentities($q));
 $res = execute_query($ep, $q);
 $g = new EasyRdf_Graph();
 $html = "";
