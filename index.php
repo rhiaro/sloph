@@ -163,6 +163,7 @@ try {
           }
           httpRequest.onreadystatechange = alertContents;
           httpRequest.open('GET', url);
+          httpRequest.setRequestHeader('Accept', 'text/html');
           httpRequest.send();
         }
 
