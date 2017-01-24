@@ -55,6 +55,10 @@ function in_add($resource, $add){
   }else{
     foreach($add["http://www.w3.org/ns/activitystreams#object"] as $i){
       if($resource == $i['value']){
+        // echo $i['value'];
+        // echo "<br/>";
+        // echo $resource;
+        // echo "<hr/>";
         return true;
       }
     }
@@ -197,15 +201,21 @@ if(isset($_GET['add'])){
           <?foreach($_SESSION['items'] as $item):?>
             <?
             if(isset($adds)){
-              $added = false;
+              $added = array();
               foreach($adds as $add){
-                $added = in_add($item, $add);
+                if(in_add($item, $add)){
+                  $added[] = $item;
+                  break;
+                }
               }
             }
             ?>
-            <div style="float:left;<?=!$added ? " font-weight: bold;" : ""?>">
-              <p><input type="checkbox" name="items[]" value="<?=$item?>" id="<?=$item?>" /> <label for="<?=$item?>"><?=$item?> <br/>
-              <img src="<?=$item?>" /></label></p>
+            <div style="float:left;<?=!in_array($item, $added) ? " font-weight: bold;" : ""?>">
+              <p><input type="checkbox" name="items[]" value="<?=$item?>" id="<?=$item?>" /> <label for="<?=$item?>"><a href="<?=$item?>"><?=$item?></a> <br/>
+              <?if(!in_array($item, $added)):?>
+                <img src="<?=$item?>" />
+              <?endif?>
+              </label></p>
             </div>
           <?endforeach?>
         <?endif?>
