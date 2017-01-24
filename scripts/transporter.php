@@ -55,10 +55,6 @@ function in_add($resource, $add){
   }else{
     foreach($add["http://www.w3.org/ns/activitystreams#object"] as $i){
       if($resource == $i['value']){
-        // echo $i['value'];
-        // echo "<br/>";
-        // echo $resource;
-        // echo "<hr/>";
         return true;
       }
     }
@@ -70,7 +66,7 @@ function in_add($resource, $add){
 /* Add to Acquire posts */
 
 if(!isset($_GET['month'])){
-  $_GET['month'] = "june";
+  $_GET['month'] = strtolower($now->format("F"));
 }
 $mn = new DateTime("00:00:00 1st ".$_GET['month']);
 
