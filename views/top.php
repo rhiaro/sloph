@@ -4,7 +4,10 @@
     <title><?=get_value($resource, 'as:name')?></title>
     <link rel="stylesheet" type="text/css" href="/views/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="/views/core.css" />
-    <link rel="stylesheet" type="text/css" href="/<?=get_value($resource, 'view:stylesheet')?>" />
+    <? $styles = get_values($resource, 'view:stylesheet'); ?>
+  <?foreach($styles as $style):?>
+    <link rel="stylesheet" type="text/css" href="/<?=$style?>" />
+  <?endforeach?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       <?=get_value($resource, 'view:css')?>

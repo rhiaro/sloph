@@ -58,6 +58,8 @@ if($_SERVER['REQUEST_METHOD'] === "GET" || $_SERVER['REQUEST_METHOD'] === "HEAD"
       $resource = set_views($ep, $content->resource());
       $g = $resource->getGraph();
       $resource = $g->toRdfPhp();
+
+      $scripts = get_values($resource, 'view:script');
       include 'views/top.php';
       include 'views/nav.php';
       include 'views/'.view_router($resource).'.php';

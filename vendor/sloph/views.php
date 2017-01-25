@@ -352,7 +352,7 @@ function get_style($resource){
       ,"intimate" => array("view:intimacy" => 3)
       ,"tasty" => array("view:tastiness" => 5)
       ,"wander" => array("view:wanderlust" => 3)
-      ,"scholar" => array("view:informative" => 3)
+      ,"scholar" => array("view:informative" => 4) // this is acm
       ,"checkin" => array("view:wanderlust" => 4, "view:banality" => 5, "view:intimacy" => 5)
       ,"travel" => array("view:wanderlust" => 5, "view:banality" => 3, "view:intimacy" => 5)
     );
