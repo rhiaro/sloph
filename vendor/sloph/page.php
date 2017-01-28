@@ -1,6 +1,10 @@
 <?
 require_once('../init.php');
 
+$headers = apache_request_headers();
+$ct = $headers["Accept"];
+$acceptheaders = new AcceptHeader($ct);
+
 if(isset($_GET['start'])){ $start = $_GET['start']; }
 else{ 
   $qlatest = query_select_s_desc(1);
@@ -36,24 +40,34 @@ $uris = select_to_list($results);
 $sorted = construct_and_sort($ep, $uris, "as:published");
 $sorted = array_slice($sorted, 0, $length);
 
-foreach($sorted as $uri => $r){
-  $content = new EasyRdf_Graph($uri);
-  $content->parse(array($uri=>$r), 'php');
-  $resource = $content->resource($uri);
+$content = new EasyRdf_Graph("https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+$content->parse($sorted, 'php');
+$result = conneg($acceptheaders, $content);
 
-  $resource = set_views($ep, $content->resource());
-  $resource = $content->toRdfPhp();
+if(gettype($result['content']) == "string"){
+  header($result['header']);
+  echo $result['content'];
+}else{
 
-  ob_start();
-  include '../../views/'.view_router($resource).'.php';
-  $html .= ob_get_clean();
-  
-  if(!isset($nextpg)){ $nextpg = $uri; }
-  $prevpg = $uri;
+  foreach($sorted as $uri => $r){
+
+    $g = new EasyRdf_Graph($uri);
+    $g->parse(array($uri=>$r), 'php');
+    $resource = $g->resource($uri);
+    $resource = set_views($ep, $g->resource());
+    $resource = $g->toRdfPhp();
+
+    ob_start();
+    include '../../views/'.view_router($resource).'.php';
+    $html .= ob_get_clean();
+    
+    if(!isset($nextpg)){ $nextpg = $uri; }
+    $prevpg = $uri;
+  }
+
+  $return = json_encode(array("html" => $html, "next" => $nextpg, "prev" => $prevpg));
+  header("Content-Type: application/json");
+  echo $return;
+  return $return;
 }
-
-$return = json_encode(array("html" => $html, "next" => $nextpg, "prev" => $prevpg));
-header("Content-Type: application/json");
-echo $return;
-return $return;
 ?>
