@@ -10,24 +10,32 @@ else { $length = 10; }
 if(isset($_GET['dir'])){ $dir = $_GET['dir']; }
 else { $dir = "prev"; }
 
-if(isset($_GET['type'])){ $type = explode(",", $_GET['type']); }
-else { $type = null; } // HERENOW do a query per type and then combine.. but ordering by date will be butts
+if(isset($_GET['type'])){ $types = explode(",", $_GET['type']); }
+else { $types = array(null); }
 
-if($dir == "prev"){
-  $q = query_select_s_prev_of_type_count($start, $length, $type);
-}elseif($dir == "next"){
-  $q = query_select_s_next_of_type_count($start, $length, $type);
+foreach($types as $type){
+  if($dir == "prev"){
+    $qs[] = query_select_s_prev_of_type_count($start, $length, $type);
+  }elseif($dir == "next"){
+    $qs[] = query_select_s_next_of_type_count($start, $length, $type);
+  }
 }
-// var_dump(htmlentities($q));
-$res = execute_query($ep, $q);
-$g = new EasyRdf_Graph();
-$html = "";
-$uris = $res['rows'];
+$results["variables"] = array("s");
+$results["rows"] = array();
+foreach($qs as $q){
+  $res = execute_query($ep, $q);
+  $results["rows"] = array_merge($results["rows"], $res["rows"]);
+}
 
-foreach($uris as $r){
-  $result = get($ep, $r['s']);
-  $content = $result['content'];
-  $resource = $content->resource($r['s']);
+$html = "";
+$uris = select_to_list($results);
+$sorted = construct_and_sort($ep, $uris, "as:published");
+$sorted = array_slice($sorted, 0, $length);
+
+foreach($sorted as $uri => $r){
+  $content = new EasyRdf_Graph($uri);
+  $content->parse(array($uri=>$r), 'php');
+  $resource = $content->resource($uri);
 
   $resource = set_views($ep, $content->resource());
   $resource = $content->toRdfPhp();
@@ -36,8 +44,8 @@ foreach($uris as $r){
   include '../../views/'.view_router($resource).'.php';
   $html .= ob_get_clean();
   
-  if(!isset($nextpg)){ $nextpg = $r['s']; }
-  $prevpg = $r['s'];
+  if(!isset($nextpg)){ $nextpg = $uri; }
+  $prevpg = $uri;
 }
 
 $return = json_encode(array("html" => $html, "next" => $nextpg, "prev" => $prevpg));
