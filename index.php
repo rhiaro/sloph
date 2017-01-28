@@ -152,7 +152,7 @@ try {
         var posts = document.getElementById("latest");
         var prevLink = document.getElementById("prev");
         var prevUri = prevLink.href;
-        prevLink.onclick = function(e) { e.preventDefault(); makeRequest('vendor/sloph/page.php?start='+prevUri); };
+        prevLink.onclick = function(e) { e.preventDefault(); makeRequest('vendor/sloph/page.php?type=as:Article,as:Note&start='+prevUri); };
 
         function makeRequest(url) {
           httpRequest = new XMLHttpRequest();
@@ -177,7 +177,7 @@ try {
               newNav.querySelector("#prev").href = res.prev;
               posts.insertAdjacentHTML('beforeEnd', res.html);
               posts.appendChild(newNav);
-              newNav.querySelector("#prev").onclick = function(e) { e.preventDefault(); makeRequest('vendor/sloph/page.php?start='+res.prev); };
+              newNav.querySelector("#prev").onclick = function(e) { e.preventDefault(); makeRequest('vendor/sloph/page.php?type=as:Article,as:Note&start='+res.prev); };
             } else {
               console.log('There was a problem with the request.');
             }
