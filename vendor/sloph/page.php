@@ -2,7 +2,11 @@
 require_once('../init.php');
 
 if(isset($_GET['start'])){ $start = $_GET['start']; }
-else{ $start = "https://rhiaro.co.uk/2017/01/586de63a68be8"; } // TODO: get latest
+else{ 
+  $qlatest = query_select_s_desc(1);
+  $latest = execute_query($ep, $qlatest);
+  $start = $latest['rows'][0]['s'];
+}
 
 if(isset($_GET['length'])){ $length = $_GET['length']; }
 else { $length = 10; }
