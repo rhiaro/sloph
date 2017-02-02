@@ -40,8 +40,15 @@ $uris = select_to_list($results);
 $sorted = construct_and_sort($ep, $uris, "as:published");
 $sorted = array_slice($sorted, 0, $length);
 
-$content = new EasyRdf_Graph("https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+$collectionuri = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+$content = new EasyRdf_Graph($collectionuri);
 $content->parse($sorted, 'php');
+
+/* AS2 CollectionPage */
+// HERENOW
+$content->add($collectionuri, 'rdf:type', 'as:CollectionPage');
+
+/* Conneg */
 $result = conneg($acceptheaders, $content);
 
 if(gettype($result['content']) == "string"){
