@@ -71,9 +71,11 @@ if(gettype($result['content']) == "string"){
     if(!isset($nextpg)){ $nextpg = $uri; }
     $prevpg = $uri;
   }
+  $html .= "<nav id=\"nav\"><p><a href=\"$nextpg\" id=\"next\" rel=\"next\">later</a></p><p><a href=\"$prevpg\" id=\"prev\" rel=\"prev\">earlier</a></p></nav>";
 
-  $return = json_encode(array("html" => $html, "next" => $nextpg, "prev" => $prevpg));
-  header("Content-Type: application/json");
+  // $return = json_encode(array("html" => $html, "next" => $nextpg, "prev" => $prevpg));
+  $return = $html;
+  header("Content-Type: text/html");
   echo $return;
   return $return;
 }
