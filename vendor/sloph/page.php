@@ -40,13 +40,38 @@ $uris = select_to_list($results);
 $sorted = construct_and_sort($ep, $uris, "as:published");
 $sorted = array_slice($sorted, 0, $length);
 
-$collectionuri = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+/* AS2 CollectionPage */
+$pageuri = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+echo $pageuri;
+var_dump($_SERVER['QUERY_STRING']); // HERENOW when use curl it's only keeping the first query param
+
+/* Get the URI of the collection (vs the URI of the page) */
+/*
+    parts of collection url: type, dir
+    parts of page url: start, length
+*/
+$parseduri = parse_url($pageuri);
+var_dump($_GET['type']);
+$collectionuri = $parseduri['scheme']."://".$parseduri['host'].$parseduri['path'];
+$params = explode("&", $parseduri['query']);
+$collectionparams = array();
+foreach($params as $p){
+  $kv = explode("=", $p);
+  if($kv[0] == "type" || $kv[0] == "dir"){
+    $collectionparams[] = $p;
+  }
+}
+if(count($collectionparams > 0)){
+  $collectionuri .= "?".implode($collectionparams, "&");
+}
+
 $content = new EasyRdf_Graph($collectionuri);
 $content->parse($sorted, 'php');
 
-/* AS2 CollectionPage */
 // HERENOW
-$content->add($collectionuri, 'rdf:type', 'as:CollectionPage');
+$content->add($pageuri, 'rdf:type', 'as:CollectionPage');
+$content->add($pageuri, 'as:summary', "a collection of posts");
+$content->addResource($pageuri, 'as:partOf', $collectionuri);
 
 /* Conneg */
 $result = conneg($acceptheaders, $content);
