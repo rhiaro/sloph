@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title><?=get_value($resource, 'as:name')?></title>
     <link rel="stylesheet" type="text/css" href="/views/normalize.min.css" />
