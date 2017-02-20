@@ -26,7 +26,7 @@
   <?endif?>
 
   <?if(get_value($resource, 'as:generator')):?>
-    <p class="wee"><em>Post created with </em><a property="as:updated" href="<?=get_value($resource, 'as:generator')?>"><?=get_value($resource, 'as:generator')?></a></p>
+    <p class="wee"><em>Post created with </em><a property="as:generator" href="<?=get_value($resource, 'as:generator')?>"><?=get_value($resource, 'as:generator')?></a></p>
   <?endif?>
   
 </article>
