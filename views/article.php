@@ -24,5 +24,9 @@
     <? $date = new DateTime(get_value($resource, 'as:updated')); ?>
     <p><em>Last modified: </em><time class="dt-updated"><a property="as:updated" href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("d M Y, H:i (e)")?></a></time></p>
   <?endif?>
+
+  <?if(get_value($resource, 'as:generator')):?>
+    <p class="wee"><em>Post created with </em><a property="as:updated" href="<?=get_value($resource, 'as:generator')?>"><?=get_value($resource, 'as:generator')?></a></p>
+  <?endif?>
   
 </article>
