@@ -174,13 +174,11 @@ try {
               var res = httpRequest.responseText;
               nav.parentNode.removeChild(nav);
               posts.insertAdjacentHTML('beforeEnd', res);
-              var prevnav = posts.querySelector("#prev");
-              prevnav.onclick = function(e) { 
-                e.preventDefault(); 
-                makeRequest('vendor/sloph/page.php?type=as:Article,as:Note&start='+prevnav.href); 
-              };
               var nextnav = posts.querySelector("#next");
-              nextnav.parentNode.removeChild(nextnav);
+              nextnav.onclick = function(e) { 
+                e.preventDefault(); 
+                makeRequest('vendor/sloph/page.php?type=as:Article,as:Note&start='+nextnav.href); 
+              };
             } else {
               console.log('There was a problem with the request.');
             }
