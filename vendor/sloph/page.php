@@ -15,18 +15,11 @@ else{
 if(isset($_GET['length'])){ $length = $_GET['length']; }
 else { $length = 10; }
 
-if(isset($_GET['dir'])){ $dir = $_GET['dir']; }
-else { $dir = "prev"; }
-
 if(isset($_GET['type'])){ $types = explode(",", $_GET['type']); }
 else { $types = array(null); }
 
 foreach($types as $type){
-  if($dir == "prev"){
-    $qs[] = query_select_s_prev_of_type_count($start, $length, $type);
-  }elseif($dir == "next"){
-    $qs[] = query_select_s_next_of_type_count($start, $length, $type);
-  }
+  $qs[] = query_select_s_prev_of_type_count($start, $length, $type);
 }
 $results["variables"] = array("s");
 $results["rows"] = array();
@@ -37,27 +30,34 @@ foreach($qs as $q){
 
 $html = "";
 $uris = select_to_list($results);
-$sorted = construct_and_sort($ep, $uris, "as:published");
-$sorted = array_slice($sorted, 0, $length);
+$sorted_all = construct_and_sort($ep, $uris, "as:published");
+$sorted_all_uris = array_keys($sorted_all);
+$sorted = array_slice($sorted_all, 0, $length);
+
 
 /* AS2 CollectionPage */
 $pageuri = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-echo $pageuri;
-var_dump($_SERVER['QUERY_STRING']); // HERENOW when use curl it's only keeping the first query param
+
+/* Prev and Next URIs */
+end($sorted);
+$next_start = key($sorted);
+$first_i = array_search($start, $sorted_all_uris);
+if($first_i - $length >= 0){ $back = $first_i-$length; }
+else{ $back = 0; }
+// $prev_start = array_slice($sorted_all, $back, 1); // TODO
 
 /* Get the URI of the collection (vs the URI of the page) */
 /*
-    parts of collection url: type, dir
-    parts of page url: start, length
+    parts of collection url: type
+    parts of page url: collection + start, length
 */
 $parseduri = parse_url($pageuri);
-var_dump($_GET['type']);
 $collectionuri = $parseduri['scheme']."://".$parseduri['host'].$parseduri['path'];
 $params = explode("&", $parseduri['query']);
 $collectionparams = array();
 foreach($params as $p){
   $kv = explode("=", $p);
-  if($kv[0] == "type" || $kv[0] == "dir"){
+  if($kv[0] == "type"){
     $collectionparams[] = $p;
   }
 }
@@ -68,10 +68,17 @@ if(count($collectionparams > 0)){
 $content = new EasyRdf_Graph($collectionuri);
 $content->parse($sorted, 'php');
 
-// HERENOW
 $content->add($pageuri, 'rdf:type', 'as:CollectionPage');
-$content->add($pageuri, 'as:summary', "a collection of posts");
+$content->add($pageuri, 'as:summary', "a page of this collection of length ".$length);
 $content->addResource($pageuri, 'as:partOf', $collectionuri);
+$content->addResource($pageuri, 'as:next', $collectionuri."&length=".$length."&start=".$next_start);
+// $content->addResource($pageuri, 'as:prev', $collectionuri."&start=".$prev_start); // TODO
+// $content->add($pageuri, 'as:startIndex', $first_i); // TODO
+foreach($sorted as $item => $data){
+  $content->addResource($pageuri, 'as:items', $item);
+}
+$content->addResource($collectionuri, 'rdf:type', 'as:Collection');
+$content->add($collectionuri, 'as:summary', "A collection containing types ".implode($types, ", "));
 
 /* Conneg */
 $result = conneg($acceptheaders, $content);
@@ -93,12 +100,10 @@ if(gettype($result['content']) == "string"){
     include '../../views/'.view_router($resource).'.php';
     $html .= ob_get_clean();
     
-    if(!isset($nextpg)){ $nextpg = $uri; }
     $prevpg = $uri;
   }
-  $html .= "<nav id=\"nav\"><p><a href=\"$nextpg\" id=\"next\" rel=\"next\">later</a></p><p><a href=\"$prevpg\" id=\"prev\" rel=\"prev\">earlier</a></p></nav>";
+  $html .= "<nav id=\"nav\"><p><a href=\"".$next_start."\" id=\"next\" rel=\"next\">earlier</a></p></nav>";
 
-  // $return = json_encode(array("html" => $html, "next" => $nextpg, "prev" => $prevpg));
   $return = $html;
   header("Content-Type: text/html");
   echo $return;
