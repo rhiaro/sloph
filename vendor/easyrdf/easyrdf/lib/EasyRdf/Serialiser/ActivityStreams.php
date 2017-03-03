@@ -126,7 +126,7 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
         $data = $ld_graph->toJsonLd($use_native_types);
 
         // compact
-        $compact_context = "http://www.w3.org/ns/activitystreams#";
+        $compact_context = "https://www.w3.org/ns/activitystreams#";
         $compact_options = array(
             'useNativeTypes' => $use_native_types,
             'compactArrays' => true,
@@ -134,7 +134,7 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
         );
 
         $data = \ML\JsonLD\JsonLD::compact($data, $compact_context, $compact_options);
-        $data->{'@context'} = "http://www.w3.org/ns/activitystreams#"; // Not sure about this, could screw up with other vocabs..
+        $data->{'@context'} = "https://www.w3.org/ns/activitystreams#"; // Not sure about this, could screw up with other vocabs..
 
         return \ML\JsonLD\JsonLD::toString($data);
     }

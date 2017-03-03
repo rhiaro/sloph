@@ -127,15 +127,15 @@ function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/h
 function get_container_dynamic_from_items($ep, $uri, $name="", $items=array()){
   $g = new EasyRdf_Graph($uri);
   $collection[$uri] = array(
-      "http://www.w3.org/ns/activitystreams#name" => array(array("value" => $name, "type" => "literal")),
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" => array(array("value" => "http://www.w3.org/ns/activitystreams#Collection",
+      "https://www.w3.org/ns/activitystreams#name" => array(array("value" => $name, "type" => "literal")),
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" => array(array("value" => "https://www.w3.org/ns/activitystreams#Collection",
                                                                        "type" => "uri"),
                                                                  array("value" => "http://www.w3.org/ns/ldp#Container",
                                                                        "type" => "uri"),
                                                                 ),
     );
   foreach($items as $id => $data){
-    $collection[$uri]["http://www.w3.org/ns/activitystreams#items"][] = array("value" => $id, "type" => "uri");
+    $collection[$uri]["https://www.w3.org/ns/activitystreams#items"][] = array("value" => $id, "type" => "uri");
     $g->parse(array($id=>$data), 'php');
   }
   $g->parse($collection, 'php');

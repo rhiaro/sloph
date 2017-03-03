@@ -386,6 +386,7 @@ function query_for_places(){
   $q .= "CONSTRUCT { ?s ?p ?o . } WHERE {
   ?s a as:Place . ?s ?p ?o .
 }";
+var_dump(htmlentities($q));
   return $q;
 }
 

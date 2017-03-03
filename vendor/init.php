@@ -57,7 +57,7 @@ $_PREF = array(
         ,'dct' => 'http://purl.org/dc/terms/'
         ,'sioc' => 'http://rdfs.org/sioc/types#'
         ,'blog' => 'http://vocab.amy.so/blog#'
-        ,'as' => 'http://www.w3.org/ns/activitystreams#'
+        ,'as' => 'https://www.w3.org/ns/activitystreams#'
         ,'mf2' => 'http://microformats.org/profile/'
         ,'ldp' => 'http://www.w3.org/ns/ldp#'
         ,'solid' => 'http://www.w3.org/ns/solid#'
@@ -80,7 +80,7 @@ require_once('easyrdf/easyrdf/lib/EasyRdf/Serialiser/ActivityStreams.php');
 EasyRdf_Format::register(
     'as2',
     'ActivityStreams 2.0',
-    'http://www.w3.org/TR/activitystreams-core/',
+    'https://www.w3.org/TR/activitystreams-core/',
     array(
         'application/activity+json' => 1.0,
         'application/ld+json' => 0.9,
