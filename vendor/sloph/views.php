@@ -60,6 +60,21 @@ function get_travel_icon($tag){
   }
 }
 
+function get_exercise_icon($tag){
+  $icons = array(
+     "https://rhiaro.co.uk/tags/yoga" => "icon_namaste.png"
+    ,"https://rhiaro.co.uk/tags/yin" => "icon_sit.png"
+    ,"https://rhiaro.co.uk/tags/hatha" => "icon_tree.png"
+    ,"https://rhiaro.co.uk/tags/vinyasa" => "icon_downdog.png"
+    ,"https://rhiaro.co.uk/tags/power" => "icon_triangle.png"
+  );
+  if(isset($icons[$tag])){
+    return $icons[$tag];
+  }else{
+    return false;
+  }
+}
+
 function get_travel_icon_from_tags($tags){
   foreach($tags as $tag){
     $icon = get_travel_icon($tag);
@@ -68,6 +83,19 @@ function get_travel_icon_from_tags($tags){
     }
   }
   return get_icon_from_type('as:Travel');
+}
+
+function get_icons_from_tags($tags){
+  $icons = array();
+  foreach($tags as $tag){
+    if(get_travel_icon($tag){
+      $icons[$tag] = get_travel_icon($tag);
+    }
+    if(get_exercise_icon($tag){
+      $icons[$tag] = get_exercise_icon($tag);
+    }
+  }
+  return $icons;
 }
 
 function get_locations($ep){
