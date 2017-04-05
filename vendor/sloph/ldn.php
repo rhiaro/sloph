@@ -18,11 +18,11 @@ function on_get($ep, $ct=null){
 }
 
 function on_post($ep, $data){
-  $notification = new EasyRdf_Graph();
-  $notification->parse($data, 'jsonld');
-  $ar = $notification->toRdfPhp();
   // Generate notification URI
   $uri = "https://rhiaro.co.uk".str_replace(".", "", uniqid("/n/", true));
+  $notification = new EasyRdf_Graph();
+  $notification->parse($data, 'jsonld', $uri);
+  $ar = $notification->toRdfPhp();
   $updated = new EasyRdf_Graph($uri);
   // If notification contains bnode subjects, replace with the graph uri
   $subject_uris = get_subject_uris($notification);
