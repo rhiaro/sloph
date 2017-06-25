@@ -131,3 +131,51 @@ nav a:hover img {
 article img {
   max-width: 100%;
 }
+
+.imgholder {
+  position: absolute; top: 0px; left: 0px;
+  width: 100%; padding-top: 8px; padding-bottom: 8px;
+  background-color: #2d2d2d;
+  text-align: center;
+  cursor: pointer;
+  color: #555555;
+}
+.imgholder:after {
+  content: "x";
+  position: absolute; top: 8px; right: 16px;
+  font-size: 2em;
+  clear: both;
+}
+.imgholder img {
+  width: 80%;
+}
+
+.stuff {
+  background-size: cover;
+  height: 264px; width: 264px; float: left;
+  margin: 0;
+}
+.stuff p {
+  display: none;
+}
+.stuff:hover p {
+  display: block;
+  background-color: #2d2d2d;
+  opacity: 0.6;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+}
+.stuff p {
+  margin: 0; padding: 0;
+}
+.stuff datetime {
+  font-size: 0.6em;
+  font-family: sans-serif;
+  color: white;
+  line-height: 1;
+}
+.stuff .cost {
+  font-size: 3em;
+}
