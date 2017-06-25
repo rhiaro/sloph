@@ -151,7 +151,7 @@ article img {
   z-index: 2;
 }
 .imgholder img {
-  width: 80%; max-height: 90%;
+  width: auto; max-height: 90%;
   z-index: -1;
 }
 
