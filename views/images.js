@@ -18,7 +18,7 @@
       }
     }
 
-    if(y < 64){
+    if(y < Math.abs(ele.offsetTop)+64){
       par.removeChild(ele);
     }else if(w/2 > x){
       if(imgs[j-1] != undefined){
@@ -41,10 +41,12 @@
 
   photos.forEach(function(p, i, photos){
     p.addEventListener('click', function(e){
+      e.preventDefault();
       var article = document.querySelector('article');
       article.insertAdjacentHTML('afterbegin', '<div class="imgholder"><img src="'+p.src+'" /><p>'+(i+1)+'/'+photos.length+'</p></div>');
 
       var holder = document.querySelector('div.imgholder');
+      holder.style.top = holder.getBoundingClientRect().top+'px';
       holder.addEventListener('click', function(e){
         changeImg(e.target, e.pageX, e.pageY, photos);
       });
