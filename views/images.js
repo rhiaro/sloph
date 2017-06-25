@@ -46,7 +46,7 @@
       article.insertAdjacentHTML('afterbegin', '<div class="imgholder"><img src="'+p.src+'" /><p>'+(i+1)+'/'+photos.length+'</p></div>');
 
       var holder = document.querySelector('div.imgholder');
-      holder.style.top = holder.getBoundingClientRect().top+'px';
+      holder.style.top = -holder.getBoundingClientRect().top+'px';
       holder.addEventListener('click', function(e){
         changeImg(e.target, e.pageX, e.pageY, photos);
       });
