@@ -130,6 +130,7 @@ nav a:hover img {
 
 article img {
   max-width: 100%;
+  cursor: pointer;
 }
 
 .imgholder {
