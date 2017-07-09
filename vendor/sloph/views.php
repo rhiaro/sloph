@@ -88,10 +88,10 @@ function get_travel_icon_from_tags($tags){
 function get_icons_from_tags($tags){
   $icons = array();
   foreach($tags as $tag){
-    if(get_travel_icon($tag){
+    if(get_travel_icon($tag)){
       $icons[$tag] = get_travel_icon($tag);
     }
-    if(get_exercise_icon($tag){
+    if(get_exercise_icon($tag)){
       $icons[$tag] = get_exercise_icon($tag);
     }
   }

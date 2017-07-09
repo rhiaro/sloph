@@ -41,4 +41,8 @@
     <? include 'map.php'; ?>
   <?endif?>
 
+  <?if(get_values($resource, 'as:tag')):?>
+
+  <?endif?>
+
 </article>
