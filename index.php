@@ -32,6 +32,7 @@ try {
 
     $locations = get_locations($ep);
     $locations = $locations->toRdfPhp();
+    // var_dump($locations);
     $color = "transparent";
     $tags = get_tags($ep);
     
