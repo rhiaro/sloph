@@ -124,7 +124,7 @@ function construct_between($from, $to){
   return $q;
 }
 
-function query_select_s($limit=0, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s($limit=0, $graph="https://blog.rhiaro.co.uk/"){
   
   if($graph === null){
     $graph = "?g";
@@ -145,7 +145,7 @@ function query_select_s($limit=0, $graph="http://blog.rhiaro.co.uk#"){
   return $q;
 }
 
-function query_select_s_desc($limit=0, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s_desc($limit=0, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {
   GRAPH <$graph> { ?s ?p ?o . }
@@ -158,7 +158,7 @@ ORDER BY DESC(?d)";
   return $q;
 }
 
-function query_select_s_and_type_desc($limit=0, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s_and_type_desc($limit=0, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s ?t ?l WHERE {
   GRAPH <$graph> { ?s ?p ?o . }
@@ -173,7 +173,7 @@ ORDER BY DESC(?d)";
   return $q;
 }
 
-function query_select_all($limit, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_all($limit, $graph="https://blog.rhiaro.co.uk/"){
   $q = "SELECT * WHERE {
   GRAPH <$graph> { ?s ?p ?o . }
 }
@@ -230,7 +230,7 @@ function query_select_s_views($score, $limit=10){
   return $q;
 }
 
-function query_select_s_next($uri, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s_next($uri, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
@@ -247,7 +247,7 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_next_of_type($uri, $type, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s_next_of_type($uri, $type, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
@@ -265,7 +265,7 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_prev($uri, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s_prev($uri, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
@@ -282,7 +282,7 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_prev_of_type($uri, $type, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s_prev_of_type($uri, $type, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
@@ -300,7 +300,7 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_next_count($uri, $count=10, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s_next_count($uri, $count=10, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
 
   $q .= "SELECT DISTINCT ?s WHERE { \n";
@@ -317,7 +317,7 @@ LIMIT $count
   return $q;
 }
 
-function query_select_s_prev_count($uri, $count=10, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s_prev_count($uri, $count=10, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
 
   $q .= "SELECT DISTINCT ?s WHERE { \n";
@@ -334,7 +334,7 @@ LIMIT $count
   return $q;
 }
 
-function query_select_s_next_of_type_count($uri, $count=10, $type=null, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s_next_of_type_count($uri, $count=10, $type=null, $graph="https://blog.rhiaro.co.uk/"){
   
   if($type === null){
     return query_select_s_next_count($uri, $count, $graph);
@@ -357,7 +357,7 @@ function query_select_s_next_of_type_count($uri, $count=10, $type=null, $graph="
   }
 }
 
-function query_select_s_prev_of_type_count($uri, $count=10, $type=null, $graph="http://blog.rhiaro.co.uk#"){
+function query_select_s_prev_of_type_count($uri, $count=10, $type=null, $graph="https://blog.rhiaro.co.uk/"){
   if($type === null){
     return query_select_s_prev_count($uri, $count, $graph);
   }else{
@@ -384,9 +384,8 @@ function query_select_s_prev_of_type_count($uri, $count=10, $type=null, $graph="
 function query_for_places(){
   $q = get_prefixes();
   $q .= "CONSTRUCT { ?s ?p ?o . } WHERE {
-  GRAPH <https://rhiaro.co.uk/locations> { ?s a as:Place . ?s ?p ?o . }
+  GRAPH <https://rhiaro.co.uk/locations/> { ?s a as:Place . ?s ?p ?o . }
 }";
-var_dump(htmlentities($q));
   return $q;
 }
 
@@ -464,7 +463,7 @@ function query_select_hasPrimaryTopic($uri){
 
 /* Setting */
 
-function query_load($file, $graph="http://blog.rhiaro.co.uk#"){
+function query_load($file, $graph="https://blog.rhiaro.co.uk/"){
   $q = "LOAD <$file> INTO <$graph>";
   return $q;
 }
@@ -474,13 +473,13 @@ function query_delete($uri){
   return $q;
 }
 
-function query_insert($turtle, $graph="http://blog.rhiaro.co.uk#"){
+function query_insert($turtle, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "INSERT INTO <$graph> { ".$turtle." }";
   return $q;
 }
 
-function query_insert_n($ntriples, $graph="http://blog.rhiaro.co.uk#"){
+function query_insert_n($ntriples, $graph="https://blog.rhiaro.co.uk/"){
   $q = "INSERT INTO <$graph> { ".$ntriples." }";
   return $q;
 }
@@ -501,7 +500,7 @@ function query_remove_from_graph($uri, $graph){
   return $q;
 }
 
-function query_insert_items($collection, $items, $graph="http://blog.rhiaro.co.uk#"){
+function query_insert_items($collection, $items, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "INSERT INTO <$graph> { ";
   $q .= "  <$collection> as:items ";
@@ -514,7 +513,7 @@ function query_insert_items($collection, $items, $graph="http://blog.rhiaro.co.u
   return $q;
 }
 
-function query_insert_add($uri, $collection, $items, $published, $summary, $content="", $graph="http://blog.rhiaro.co.uk#"){
+function query_insert_add($uri, $collection, $items, $published, $summary, $content="", $graph="https://blog.rhiaro.co.uk/"){
 
   $q = get_prefixes();
   $q .= "INSERT INTO <$graph> { ";
