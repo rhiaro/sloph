@@ -384,7 +384,7 @@ function query_select_s_prev_of_type_count($uri, $count=10, $type=null, $graph="
 function query_for_places(){
   $q = get_prefixes();
   $q .= "CONSTRUCT { ?s ?p ?o . } WHERE {
-  ?s a as:Place . ?s ?p ?o .
+  GRAPH <https://rhiaro.co.uk/locations> { ?s a as:Place . ?s ?p ?o . }
 }";
 var_dump(htmlentities($q));
   return $q;
@@ -477,6 +477,11 @@ function query_delete($uri){
 function query_insert($turtle, $graph="http://blog.rhiaro.co.uk#"){
   $q = get_prefixes();
   $q .= "INSERT INTO <$graph> { ".$turtle." }";
+  return $q;
+}
+
+function query_insert_n($ntriples, $graph="http://blog.rhiaro.co.uk#"){
+  $q = "INSERT INTO <$graph> { ".$ntriples." }";
   return $q;
 }
 
