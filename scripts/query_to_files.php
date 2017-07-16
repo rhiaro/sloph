@@ -3,7 +3,7 @@ require_once('../vendor/init.php');
 
 function write($data, $fn){
     
-  $log = "../data/graphs_201705/$fn";
+  $log = "../data/graphs_20170716/$fn";
 
   $h = fopen($log, 'a');
   fwrite($h, $data);
@@ -38,7 +38,43 @@ LIMIT 50000
 
 }
 
-select_triple($ep);
+function select_dated($ep){
+  $all = array();
+  $q = "PREFIX as: <http://www.w3.org/ns/activitystreams#>
+SELECT ?g ?s ?p ?o
+WHERE { 
+  {
+    GRAPH ?g { ?s ?p ?o . } 
+    GRAPH ?g { ?s as:published ?d . } 
+    FILTER ( ?d > \"2017-05-22T00:00:00+01:00\" )
+  } UNION {
+    GRAPH ?g { ?s ?p ?o . } 
+    GRAPH ?g { ?s as:updated ?u . } 
+    FILTER ( ?u > \"2017-05-22T00:00:00+01:00\" )
+  }
+}
+ORDER BY ?g
+LIMIT 50000
+  ";
+  $r = execute_query($ep, $q);
+  $parser = ARC2::getRDFParser();
+  foreach($r["rows"] as $res){
+      $ttl = $parser->toNTriples(array($res));
+    if(!array_key_exists($res["g"], $all)){
+      $all = array_merge($all, array($res["g"] => array($ttl)));
+    }else{
+      $all[$res["g"]][] = $ttl;
+    }
+  }
+
+  foreach($all as $graph => $triples){
+    $data = implode("\n", $triples);
+    echo write($data, str_replace("/", "%", $graph))."\n";
+  }
+}
+
+// select_triple($ep);
+select_dated($ep);
 
 // $posts = array();
 
