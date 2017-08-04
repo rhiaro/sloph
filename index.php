@@ -31,8 +31,10 @@ try {
     $items = array_reverse($items);
 
     $locations = get_locations($ep);
-    $locations = $locations->toRdfPhp();
     // var_dump($locations);
+    if($locations != null){
+      $locations = $locations->toRdfPhp();
+    }
     $color = "transparent";
     $tags = get_tags($ep);
     
