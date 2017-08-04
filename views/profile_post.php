@@ -57,13 +57,13 @@
         // See if event is in the store
         $event = get($ep, $event_uri);
         if($event['content']){
-          $event = $event['content'];
-          $start = new DateTime($event->get('as:startTime'));
+          $event = $event['content']->toRdfPhp();
+          $start = new DateTime(get_value($event, 'as:startTime'));
           $start = $start->format("d F");
-          $end = new DateTime($event->get('as:endTime'));
+          $end = new DateTime(get_value($event, 'as:endTime'));
           $end = $end->format("d F");
-          $ename = $event->get('as:name') ? $event->get('as:name') : $event_uri;
-          $elocation = $event->get('as:location');
+          $ename = get_value($event, 'as:name') ? get_value($event, 'as:name') : $event_uri;
+          $elocation = get_value($event, 'as:location');
         }else{
           $start = $end = "unknown time";
           $ename = $event_uri;
