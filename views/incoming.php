@@ -1,8 +1,8 @@
 <?
 // Moderation
-// /incoming/#moderation
-// /incoming/#public
-// /incoming/#private
+// /incoming/moderation
+// /incoming/public
+// /incoming/private
 // can eventually use this for more granular acl, and on a triple level. things can be in more than one graph.
 // can check access token and determine which graph to fetch from
 ?>

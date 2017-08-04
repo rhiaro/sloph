@@ -6,6 +6,19 @@ require_once('Parsedown.php');
 $now = new DateTime();
 
 if(isset($_GET['reset'])){ unset($_SESSION[$_GET['reset']]); }
+if(isset($_GET['graph'])){ $graph = $_GET['graph']; }else{ $graph = "https://blog.rhiaro.co.uk/"; }
+
+function graphs($ep){
+  $q = query_get_graphs();
+  $res = execute_query($ep, $q);
+  $graphs = array();
+  if($res){
+    foreach($res["rows"] as $row){
+      $graphs[] = $row["g"];
+    }
+  }
+  return $graphs;
+}
 
 function remove_empty($haystack){
   foreach ($haystack as $property => $values) {
@@ -23,15 +36,9 @@ function remove_empty($haystack){
   return $haystack;
 }
 
-function markdown_to_html($md){
-  $Parsedown = new Parsedown();
-  $html = $Parsedown->text($md);
-  return $html;
-}
-
 function plustype($i=0){
   $types = array(
-      "http://www.w3.org/ns/activitystreams#" => array("Actor", "Person", "Note", "Article", "Profile", "Organization", "Event", "Arrive", "Activity", "Object", "Like", "Announce", "Add", "Travel", "Accept", "Place", "Relationship", "Collection"),
+      "https://www.w3.org/ns/activitystreams#" => array("Actor", "Person", "Note", "Article", "Profile", "Organization", "Event", "Arrive", "Activity", "Object", "Like", "Announce", "Add", "Travel", "Accept", "Place", "Relationship", "Collection"),
       "https://terms.rhiaro.co.uk/as#" => array("Consume", "Acquire", "Sleep")
     );
   $out = '<p><label><strong>+ type</strong>: </label>';
@@ -49,7 +56,7 @@ function plustype($i=0){
 
 function plusproperty(){
   $properties = array(
-      "http://www.w3.org/ns/activitystreams#" => array("name", "published", "updated", "summary", "content", "startTime", "endTime", "image", "inReplyTo", "location", "tag", "url", "to", "bto", "cc", "bcc", "duration", "actor", "object", "target", "origin", "result", "items", "relationship"),
+      "https://www.w3.org/ns/activitystreams#" => array("name", "published", "updated", "summary", "content", "startTime", "endTime", "image", "inReplyTo", "location", "tag", "url", "to", "bto", "cc", "bcc", "duration", "actor", "object", "target", "origin", "result", "items", "relationship"),
       "https://terms.rhiaro.co.uk/as#" => array("cost"),
       "https://terms.rhiaro.co.uk/view#" => array("banality", "intimacy", "tastiness", "informative", "wanderlust", "css", "color")
     );
@@ -98,28 +105,34 @@ function process_new($data){
   return $data;
 }
 
-function delete($ep, $uri){
-  $q = query_delete($uri);
+function delete($ep, $uri, $graph){
+  $q = query_remove_from_graph($uri, $graph);
   $r = execute_query($ep, $q);
   return $r;
 }
 
-function insert($ep, $turtle){
-  $q = query_insert($turtle);
+function insert($ep, $turtle, $graph){
+  $q = query_insert($turtle, $graph);
   $r = execute_query($ep, $q);
   return $r;
+}
+
+if(isset($_GET['uri'])){
+  $uri_for_new = $_GET['uri'];
+}else{
+  $uri_for_new = "https://rhiaro.co.uk/".$now->format("Y")."/".$now->format("m").uniqid();
 }
 
 if(isset($_POST['savenew'])){
-  $uri = $_POST['uri'];
+  $uri = trim($_POST['uri']);
   $rdfphp[$uri] = process_new($_POST['data']);
   $newgraph = new EasyRdf_Graph($uri);
   $newgraph->parse($rdfphp, 'php');
   $turtle = $newgraph->serialise('ntriples');
-  $ins = insert($ep, $turtle);
+  $ins = insert($ep, $turtle, $graph);
   if($ins){
     $result[$uri] = "Updated";
-    header('Location: ?uri='.$uri);
+    header('Location: ?uri='.$uri.'&graph='.$graph);
   }else{
     $result[$uri] = "Error: could not insert";
   }
@@ -132,9 +145,9 @@ elseif(isset($_POST['data']) && count($_POST['data']) > 0){
   $rdfphp[$uri] = remove_empty($_POST);
   $newgraph->parse($rdfphp, 'php');
   $turtle = $newgraph->serialise('ntriples');
-  $del = delete($ep, $uri);
+  $del = delete($ep, $uri, $graph);
   if($del){
-    $ins = insert($ep, $turtle);
+    $ins = insert($ep, $turtle, $graph);
     if($ins){
       $result[$uri] = "Updated";
     }else{
@@ -146,17 +159,17 @@ elseif(isset($_POST['data']) && count($_POST['data']) > 0){
 }
 
 
-$q = query_select_s();
+$q = query_select_s(0, $graph);
 if(isset($_GET['flag'])){
   if($_GET['flag'] == "doublecontents"){
-    $q = "PREFIX as: <http://www.w3.org/ns/activitystreams#> .
+    $q = "PREFIX as: <https://www.w3.org/ns/activitystreams#> .
 SELECT ?s WHERE {
   ?s as:content ?con1 .
   ?s as:content ?con2 .
   filter(?con1 != ?con2) .
 }";
   }elseif($_GET['flag'] == "doubledate"){
-    $q = "PREFIX as: <http://www.w3.org/ns/activitystreams#> .
+    $q = "PREFIX as: <https://www.w3.org/ns/activitystreams#> .
 SELECT ?s WHERE {
   ?s as:published ?con1 .
   ?s as:published ?con2 .
@@ -188,9 +201,10 @@ if(isset($_GET['length']) && is_numeric($_GET['length'])){
 
 $uris = array_slice($_SESSION['uris'], $offset, $length);
 $posts = array();
-$posts = construct_uris($ep, $uris);
+$posts = construct_uris_in_graph($ep, $uris, $graph);
+$graphs = graphs($ep);
 
-if($_GET['flag'] == "notype"){
+if(isset($_GET['flag']) && $_GET['flag'] == "notype"){
   $untyped_uris = array();
   $untyped_posts = array();
   foreach($posts as $uri => $post){
@@ -219,8 +233,29 @@ if($_GET['flag'] == "notype"){
   </head>
   <body>
     <div class="info">
-      <p>Resources <?=$offset?> to <?=$offset+$length?> of <?=count($_SESSION['uris'])?> | <a href="?offset=<?=$offset-$length?>">prev</a> | <a href="?offset=<?=$offset+$length?>">next</a> | <a href="?reset=uris">reset</a></p>
+      <p>
+        <strong>Graph: <?=$graph?></strong> 
+        <form id="changegraph">
+          <select name="graph">
+            <?foreach($graphs as $g):?>
+              <option name="graph" value="<?=$g?>"><?=$g?></option>
+            <?endforeach?>
+          </select>
+          <?if(isset($_GET['uri'])):?>
+            <input type="hidden" name="uri" value="<?=$_GET['uri']?>" />
+          <?endif?>
+          <input type="hidden" name="reset" value="uris" />
+          <input type="submit" value="Change" />
+        </form>
+        </p>
+      <p>Resources <?=$offset?> to <?=$offset+$length?> of <?=count($_SESSION['uris'])?> | <a href="?offset=<?=$offset-$length?>">prev</a> | <a href="?offset=<?=$offset+$length?>">next</a> | <a href="?reset=uris">reset</a> | <a href="#new">new</a></p>
     </div>
+    <?if(isset($_GET['uri'])):?>
+      <p><strong>URI: </strong><?=$_GET['uri'];?></p>
+      <?if(count($posts) < 1):?>
+        <p>No triples in this graph for this URI.. make some!</p>
+      <?endif?>
+    <?endif?>
     <?foreach($posts as $uri => $post):?>
       <form id="<?=$uri?>" method="post" action="#<?=$uri?>">
         <p><a href="<?=$uri?>"><?=$uri?></a> <input type="submit" value="Save"/></p>
@@ -274,7 +309,7 @@ if($_GET['flag'] == "notype"){
     <form id="new" method="post">
       <p>
         <label for="uri">URI: </label>
-        <input type="text" name="uri" value="https://rhiaro.co.uk/<?=$now->format("Y")?>/<?=$now->format("m")?>/<?=uniqid()?>" /> 
+        <input type="text" name="uri" value="<?=$uri_for_new?>" /> 
         <input type="submit" value="Create" name="savenew"/>
       </p>
       <?=plustype()?>
@@ -282,6 +317,7 @@ if($_GET['flag'] == "notype"){
     </form>
 
     <div class="info">
+      <p><strong>Graph: <?=$graph?></strong></p>
       <p>Resources <?=$offset?> to <?=$offset+$length?> of <?=count($_SESSION['uris'])?> | <a href="?offset=<?=$offset-$length?>">prev</a> | <a href="?offset=<?=$offset+$length?>">next</a> | <a href="?reset=uris">reset</a></p>
     </div>
   </body>

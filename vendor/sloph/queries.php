@@ -52,6 +52,20 @@ function construct_uris($ep, $uris){
   return $items;
 }
 
+function construct_uris_in_graph($ep, $uris, $graph){
+  $items = array();
+  foreach($uris as $uri){
+    if(is_string($uri)){
+      $q = query_construct_uri_graph($uri, $graph);
+      $r = execute_query($ep, $q);
+      if($r){
+        $items = array_merge($items, $r);
+      }
+    }
+  }
+  return $items;
+}
+
 function construct_and_sort($ep, $uris, $sort="as:published"){
   $items = construct_uris($ep, $uris);
   $order = array();
@@ -99,6 +113,12 @@ WHERE { GRAPH <$graph> { ?s ?p ?o . } }";
   return $q;
 }
 
+function query_construct_uri_graph($uri, $graph){
+  $q = "CONSTRUCT { <$uri> ?p ?o . } 
+WHERE { GRAPH <$graph> { <$uri> ?p ?o . } }";
+  return $q;
+}
+
 function query_construct_type($type, $sort=null){
   $q = get_prefixes();
   $q .= "CONSTRUCT { ?s ?p ?o . }
@@ -121,6 +141,13 @@ function construct_between($from, $to){
   $q .= " FILTER(?d <= \"$to\") . \n";
   $q .= "} \n";
   $q .= "ORDER BY DESC(?d)";
+  return $q;
+}
+
+function query_get_graphs(){
+  $q = "SELECT DISTINCT ?g WHERE {
+  GRAPH ?g { ?s ?p ?o . }
+}";
   return $q;
 }
 

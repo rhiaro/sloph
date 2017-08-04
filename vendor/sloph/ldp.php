@@ -18,8 +18,10 @@ function get_resource($ep, $uri){
   }
 
   // If no triples in graph, get triples with $uri as subject
+  // Restrict to blog.rhiaro graph.. 
+  // TODO: need some way of configuring this and passing multiple
   $r = array();
-  $q = query_construct($uri);
+  $q = query_construct_uri_graph($uri, "https://blog.rhiaro.co.uk/");
   $r = execute_query($ep, $q);
   $graph->parse($r, 'php', $uri);
   
