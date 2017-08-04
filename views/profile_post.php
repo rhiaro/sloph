@@ -51,18 +51,28 @@
   The last trip I planned was from <?=get_name($ep, get_value(array($uri=>$resource),  'as:origin'))?> on <?=get_value(array($uri=>$resource),  'as:startTime')?> to <?=get_name($ep, get_value(array($uri=>$resource),  'as:target'))?> at <?=get_value(array($uri=>$resource),  'as:endTime')?> 
   <?elseif(in_array('as:Accept', $types)):?>
     <?
-      $event = get($ep, get_value(array($uri=>$resource),  'as:object'));
-      $event = $event['content'];
-      $event = $event->resource(get_value(array($uri=>$resource),  'as:object'));
-      if(!$event){
-        $event = get($ep, get_value(array($uri=>$resource),  'as:inReplyTo'));
-        $event = $event['content'];
-        $event = $event->resource(get_value(array($uri=>$resource),  'as:inReplyTo'));
+      $event_uri = get_value(array($uri=>$resource),  'as:object');
+      if(!$event_uri){ $event_uri = get_value(array($uri=>$resource),  'as:inReplyTo'); }
+      if($event_uri){
+        // See if event is in the store
+        $event = get($ep, $event_uri);
+        if($event['content']){
+          $event = $event['content'];
+          $start = new DateTime($event->get('as:startTime'));
+          $start = $start->format("d F");
+          $end = new DateTime($event->get('as:endTime'));
+          $end = $end->format("d F");
+          $ename = $event->get('as:name') ? $event->get('as:name') : $event_uri;
+          $elocation = $event->get('as:location');
+        }else{
+          $start = $end = "unknown time";
+          $ename = $event_uri;
+          $elocation = "https://rhiaro.co.uk/location/event";
+        }
       }
-      $start = new DateTime($event->get('as:startTime'));
-      $end = new DateTime($event->get('as:endTime'));
+      
     ?>
-    The last event I RSVP'd to was <strong><?=$event->get('as:name') ? $event->get('as:name') : $event->getUri() ?></strong>, taking place from <?=$start->format("d F")?> to <?=$end->format("d F")?> at <?=get_name($ep, $event->get('as:location'))?>,  
+    The last event I RSVP'd to was <strong><?=$ename?></strong>, taking place from <?=$start?> to <?=$end?> at <?=get_name($ep, $elocation)?>,  
   <?endif?>
 
   <?if(get_value(array($uri=>$resource),  'as:published')):?>
