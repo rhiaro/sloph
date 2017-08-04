@@ -145,6 +145,13 @@ function query_select_s($limit=0, $graph="https://blog.rhiaro.co.uk/"){
   return $q;
 }
 
+function query_select_count_graph($graph="https://blog.rhiaro.co.uk/"){
+  $q = "SELECT COUNT(?s) AS ?c WHERE {
+  GRAPH <$graph> { ?s ?p ?o . }
+}";
+  return $q;
+}
+
 function query_select_s_desc($limit=0, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {
