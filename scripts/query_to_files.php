@@ -3,7 +3,7 @@ require_once('../vendor/init.php');
 
 function write($data, $fn){
     
-  $log = "../data/graphs_20170716/$fn";
+  $log = "../data/graphs_20170804/$fn";
 
   $h = fopen($log, 'a');
   fwrite($h, $data);
@@ -46,11 +46,11 @@ WHERE {
   {
     GRAPH ?g { ?s ?p ?o . } 
     GRAPH ?g { ?s as:published ?d . } 
-    FILTER ( ?d > \"2017-05-22T00:00:00+01:00\" )
+    FILTER ( ?d > \"2017-07-15T00:00:00+01:00\" )
   } UNION {
     GRAPH ?g { ?s ?p ?o . } 
     GRAPH ?g { ?s as:updated ?u . } 
-    FILTER ( ?u > \"2017-05-22T00:00:00+01:00\" )
+    FILTER ( ?u > \"2017-07-15T00:00:00+01:00\" )
   }
 }
 ORDER BY ?g
