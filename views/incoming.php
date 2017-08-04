@@ -5,6 +5,7 @@
 // /incoming/private
 // can eventually use this for more granular acl, and on a triple level. things can be in more than one graph.
 // can check access token and determine which graph to fetch from
+$listing = get_values($contains, "ldp:contains");
 ?>
 <!doctype html>
 <html>
@@ -61,15 +62,7 @@
           <input type="submit" value="Send" />
         </p>
       </form>
-      <?if(isset($contains["https://rhiaro.co.uk/incoming/"]["http://www.w3.org/ns/ldp#contains"]) && !empty($contains["https://rhiaro.co.uk/incoming/"]["http://www.w3.org/ns/ldp#contains"])):?>
-        <ul>
-          <?foreach($contains["https://rhiaro.co.uk/incoming/"]["http://www.w3.org/ns/ldp#contains"] as $item):?>
-            <li><a href="<?=$item["value"]?>"><?=$item["value"]?></a></li>
-          <?endforeach?>
-        </ul>
-      <?else:?>
-        <p>Nothing here :(</p>
-      <?endif?>
+      <p><?=count($listing)?> notifications in my moderation queue.</p>
 
     </article>
   </body>
