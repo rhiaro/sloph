@@ -68,54 +68,47 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
             throw new EasyRdf_Exception(__CLASS__.' does not support: '.$format);
         }
 
-
         $ld_graph = new \ML\JsonLD\Graph();
         $nodes = array(); // cache for id-to-node association
 
         foreach ($graph->toRdfPhp() as $resource => $properties) {
+   
+            if (array_key_exists($resource, $nodes)) {
+                $node = $nodes[$resource];
+            } else {
+                $node = $ld_graph->createNode($resource);
+                $nodes[$resource] = $node;
+            }
 
-            if($graph->getUri() == $resource){ // Only return one resource
-                
-                if (array_key_exists($resource, $nodes)) {
-                    $node = $nodes[$resource];
-                } else {
-                    $node = $ld_graph->createNode($resource);
-                    $nodes[$resource] = $node;
-                }
-
-                foreach ($properties as $property => $values) {
-                    foreach ($values as $value) {
-                        if ($value['type'] == 'bnode' or $value['type'] == 'uri') {
-                            if (array_key_exists($value['value'], $nodes)) {
-                                $_value = $nodes[$value['value']];
-                            } else {
-                                $_value = $ld_graph->createNode($value['value']);
-                                $nodes[$value['value']] = $_value;
-                            }
-                        } elseif ($value['type'] == 'literal') {
-                            if (isset($value['lang'])) {
-                                $_value = new \ML\JsonLD\LanguageTaggedString($value['value'], $value['lang']);
-                            } elseif (isset($value['datatype'])) {
-                                $_value = new \ML\JsonLD\TypedValue($value['value'], $value['datatype']);
-                            } else {
-                                $_value = $value['value'];
-                            }
+            foreach ($properties as $property => $values) {
+                foreach ($values as $value) {
+                    if ($value['type'] == 'bnode' or $value['type'] == 'uri') {
+                        if (array_key_exists($value['value'], $nodes)) {
+                            $_value = $nodes[$value['value']];
                         } else {
-                            throw new EasyRdf_Exception(
-                                "Unable to serialise object to AS2 JSON-LD: ".$value['type']
-                            );
+                            $_value = $ld_graph->createNode($value['value']);
+                            $nodes[$value['value']] = $_value;
                         }
-
-                        if ($property == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") {
-                            $node->addType($_value);
+                    } elseif ($value['type'] == 'literal') {
+                        if (isset($value['lang'])) {
+                            $_value = new \ML\JsonLD\LanguageTaggedString($value['value'], $value['lang']);
+                        } elseif (isset($value['datatype'])) {
+                            $_value = new \ML\JsonLD\TypedValue($value['value'], $value['datatype']);
                         } else {
-                            $node->addPropertyValue($property, $_value);
+                            $_value = $value['value'];
                         }
+                    } else {
+                        throw new EasyRdf_Exception(
+                            "Unable to serialise object to AS2 JSON-LD: ".$value['type']
+                        );
+                    }
+
+                    if ($property == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") {
+                        $node->addType($_value);
+                    } else {
+                        $node->addPropertyValue($property, $_value);
                     }
                 }
-            }else{
-                // TODO: Attempt to nest things if multiple resources in the graph
-                //       Actually I should probably do this after JSON-LD serialisation, not here.
             }
         }
 
@@ -136,6 +129,54 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
         $data = \ML\JsonLD\JsonLD::compact($data, $compact_context, $compact_options);
         $data->{'@context'} = "https://www.w3.org/ns/activitystreams#"; // Not sure about this, could screw up with other vocabs..
 
-        return \ML\JsonLD\JsonLD::toString($data);
+        $nested = $this->nest_graph($data);
+
+        return \ML\JsonLD\JsonLD::toString($nested);
+    }
+
+    private function nest_graph($data){
+
+        $update = $data;
+
+        $graph = $data->{'@graph'};
+        if(count($graph) > 1){
+            $ids = array();
+            foreach($graph as $i => $object){
+                $ids[$i] = $object->id;
+            }
+            $pointers = array_flip($ids);
+            foreach($graph as $k => $s){
+                foreach($s as $p => $o){
+                    // Do not nest id. Maybe should actually have a whitelist?
+                    if($p != 'id'){
+                        if(!is_array($o)){
+                            if(in_array($o, $ids)){
+                                $thing = $graph[$pointers[$o]];
+                                // Replace $o with $thing
+                            }
+                        }else{
+                            $overlaps = array_intersect($o, $ids);
+                            if(count($overlaps) >= 1){
+                                foreach($o as $j => $one){
+                                    $thing = $graph[$pointers[$one]];
+                                    // Replace each $o with $thing
+                                    $update->{'@graph'}[$k]->{$p}[$j] = $thing;
+                                    // Remove $thing
+                                    unset($update->{'@graph'}[$pointers[$one]]);
+                                    // Graph should no longer be multiple
+                                    // Move everything down a level from graph
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return $update;
+
+        }else{
+            // TODO: Check there's an AS2 type
+            return $data;
+        }
+        
     }
 }
