@@ -227,12 +227,15 @@ ORDER BY DESC(?d)";
 }
 
 function query_select_s_and_type_desc($limit=0, $graph="https://blog.rhiaro.co.uk/"){
+  $now = new DateTime();
+  $now = $now->format(DATE_ATOM);
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s ?t ?l WHERE {
   GRAPH <$graph> { ?s ?p ?o . }
   OPTIONAL { ?s a ?t }
   OPTIONAL { ?s as:location ?l }
   ?s as:published ?d .
+  FILTER ( ?d < \"$now\" ) . 
 }
 ORDER BY DESC(?d)";
   if($limit > 0){
