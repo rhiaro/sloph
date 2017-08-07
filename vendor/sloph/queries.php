@@ -119,6 +119,40 @@ WHERE { GRAPH <$graph> { <$uri> ?p ?o . } }";
   return $q;
 }
 
+function query_construct_graphs($graphs){
+  if(count($graphs) < 2){
+    return query_construct_graph($graphs[0]);
+  }
+  $q = "CONSTRUCT { ?s ?p ?o . } WHERE {";
+  foreach($graphs as $graph){
+    $i = 0;
+    $q .= "  { GRAPH <$graph> { ?s ?p ?o . } }";
+    if($i < count($graphs)){
+      $q .= "  UNION ";
+    }
+    $i++;
+  }
+  $q .= "}";
+  return $q;
+}
+
+function query_construct_uri_graphs($uri, $graphs){
+  if(count($graphs) < 2){
+    return query_construct_graph($graphs[0]);
+  }
+  $q = "CONSTRUCT { <$uri> ?p ?o . } WHERE {";
+  foreach($graphs as $graph){
+    $i = 0;
+    $q .= "  { GRAPH <$graph> { <$uri> ?p ?o . } }";
+    if($i < count($graphs)){
+      $q .= "  UNION ";
+    }
+    $i++;
+  }
+  $q .= "}";
+  return $q;
+}
+
 function query_construct_type($type, $sort=null){
   $q = get_prefixes();
   $q .= "CONSTRUCT { ?s ?p ?o . }

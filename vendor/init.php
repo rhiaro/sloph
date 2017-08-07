@@ -160,6 +160,7 @@ function get_subject_resources($graph){
 require_once("AcceptHeader.php");
 require_once("sloph/views.php");
 require_once("sloph/queries.php");
+require_once("sloph/acl.php");
 require_once("sloph/ldp.php");
 
 ?>
