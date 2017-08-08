@@ -31,7 +31,6 @@ try {
     $items = array_reverse($items);
 
     $locations = get_locations($ep);
-    // var_dump($locations);
     if($locations != null){
       $locations = $locations->toRdfPhp();
     }
