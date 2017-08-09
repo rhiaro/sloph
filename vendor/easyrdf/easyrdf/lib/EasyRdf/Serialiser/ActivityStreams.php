@@ -127,9 +127,13 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
         );
 
         $data = \ML\JsonLD\JsonLD::compact($data, $compact_context, $compact_options);
-        $data->{'@context'} = "https://www.w3.org/ns/activitystreams#"; // Not sure about this, could screw up with other vocabs..
+        $data->{'@context'} = "https://www.w3.org/ns/activitystreams#";
 
-        $nested = $this->nest_graph($data);
+        if(isset($data->{'@graph'})){
+            $nested = $this->nest_graph($data);
+        }else{
+            $nested = $data;
+        }
 
         return \ML\JsonLD\JsonLD::toString($nested);
     }
@@ -137,46 +141,104 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
     private function nest_graph($data){
 
         $update = $data;
+        var_dump($data);
 
         $graph = $data->{'@graph'};
         if(count($graph) > 1){
+
+            // Get each subject in the graph
             $ids = array();
             foreach($graph as $i => $object){
                 $ids[$i] = $object->id;
             }
+            // This is where they are in the graph
             $pointers = array_flip($ids);
+
+            // Thoughts
+            // is the requested URI a subject in the graph? If so, maybe only look for nesting locations here?
+
+            
+            // @graph is an array of other graphs (php objects)
             foreach($graph as $k => $s){
+                // Each subject graph has predicates and objects
                 foreach($s as $p => $o){
-                    // Do not nest id. Maybe should actually have a whitelist?
+                    // id is actually the subject, we only want objects as nesting locations
                     if($p != 'id'){
-                        if(!is_array($o)){
-                            if(in_array($o, $ids)){
-                                $thing = $graph[$pointers[$o]];
-                                // Replace $o with $thing
+
+                        $nest = $this->has_nest($o, $ids);
+                        if($nest){
+                            // Replace this o with whole thing
+                            $whole = $graph[$pointers[$nest]];
+                            $update->{'@graph'}[$k]->{$p} = $this->replace_object($o, $whole);
+                            // Remove whole thing from @graph
+                            unset($update->{'@graph'}[$pointers[$nest]]);
+                        }
+
+                        // Things that could not be nested may remain
+                        if(count($update->{'@graph'}) > 1){
+                            // IGNORE AND JUST TAKE FIRST FOR NOW.. TODO
+                            $final = $update->{'@graph'}[0];
+                            unset($update->{'@graph'});
+                            foreach($update as $k => $v){
+                                $final->{$k} = $v;
                             }
+                        // Everything is done!
                         }else{
-                            $overlaps = array_intersect($o, $ids);
-                            if(count($overlaps) >= 1){
-                                foreach($o as $j => $one){
-                                    $thing = $graph[$pointers[$one]];
-                                    // Replace each $o with $thing
-                                    $update->{'@graph'}[$k]->{$p}[$j] = $thing;
-                                    // Remove $thing
-                                    unset($update->{'@graph'}[$pointers[$one]]);
-                                    // Graph should no longer be multiple
-                                    // Move everything down a level from graph
-                                }
+                            // Move everything down a level from @graph
+                            $final = $update->{'@graph'}[0];
+                            unset($update->{'@graph'});
+                            foreach($update as $k => $v){
+                                $final->{$k} = $v;
                             }
                         }
+
                     }
                 }
             }
-            return $update;
+            return $final;
 
         }else{
             // TODO: Check there's an AS2 type
             return $data;
         }
         
+    }
+
+    private function has_nest($object, $ids){
+        /* Looks for graph subjects present as an object.
+        /* If the object is a php object, value could be in @id
+        /* If the object is a list, could be in a flat list of URIs, or a list of php objects with @id */
+        if(!is_array($object)){
+            $object = array($object);
+        }
+
+        foreach($object as $o){
+            if(is_object($object)){
+                // Should already have been through the AS2 @context so not checking for @id
+                if(isset($o->id) && in_array($o->id, $ids)){
+                    return $o->id;
+                }
+            }else{
+                if(in_array($o, $ids)){
+                    return $o;
+                }
+            }
+        }
+        return false;
+    }
+
+    private function replace_object($object, $replacement){
+        if(is_array($object)){
+            foreach($object as $k => $o){
+                if( ($o == $replacement->id) || (is_object($o) && isset($o->id) && $o->id == $replacement->id) ){
+                    $object[$k] = $replacement;
+                }
+            }
+        }else
+            if( ($object == $replacement->id) || (is_object($object) && isset($object->id) && $object->id == $replacement->id) ){
+                $object = $replacement;
+        }
+
+        return $object;
     }
 }
