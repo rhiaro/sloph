@@ -141,9 +141,8 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
     private function nest_graph($data){
 
         $update = $data;
-        var_dump($data);
-
         $graph = $data->{'@graph'};
+
         if(count($graph) > 1){
 
             // Get each subject in the graph
@@ -154,44 +153,51 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
             // This is where they are in the graph
             $pointers = array_flip($ids);
 
-            // Thoughts
+            // Thoughts:
             // is the requested URI a subject in the graph? If so, maybe only look for nesting locations here?
-
             
             // @graph is an array of other graphs (php objects)
             foreach($graph as $k => $s){
                 // Each subject graph has predicates and objects
                 foreach($s as $p => $o){
+
                     // id is actually the subject, we only want objects as nesting locations
                     if($p != 'id'){
 
                         $nest = $this->has_nest($o, $ids);
+
                         if($nest){
-                            // Replace this o with whole thing
-                            $whole = $graph[$pointers[$nest]];
-                            $update->{'@graph'}[$k]->{$p} = $this->replace_object($o, $whole);
-                            // Remove whole thing from @graph
-                            unset($update->{'@graph'}[$pointers[$nest]]);
+                            $replacements = array();
+                            foreach($nest as $id){
+                                // Replace this o with whole thing
+                                $whole = $graph[$pointers[$id]];
+                                $replacements[$id] = $whole;
+                                // Remove whole thing from @graph
+                                unset($update->{'@graph'}[$pointers[$id]]);
+                            }
+                            $replacement = $this->replace_object($o, $replacements);
+                            $update->{'@graph'}[$k]->{$p} = $replacement;
                         }
 
-                        // Things that could not be nested may remain
-                        if(count($update->{'@graph'}) > 1){
-                            // IGNORE AND JUST TAKE FIRST FOR NOW.. TODO
-                            $final = $update->{'@graph'}[0];
-                            unset($update->{'@graph'});
-                            foreach($update as $k => $v){
-                                $final->{$k} = $v;
-                            }
-                        // Everything is done!
-                        }else{
-                            // Move everything down a level from @graph
-                            $final = $update->{'@graph'}[0];
-                            unset($update->{'@graph'});
-                            foreach($update as $k => $v){
-                                $final->{$k} = $v;
-                            }
-                        }
-
+                    }
+                }
+            }
+            // Things that could not be nested remain
+            if(isset($update->{'@graph'})){
+                if(count($update->{'@graph'}) > 1){
+                    // IGNORE AND JUST TAKE FIRST FOR NOW.. TODO
+                    $final = $update->{'@graph'}[0];
+                    unset($update->{'@graph'});
+                    foreach($update as $j => $v){
+                        $final->{$j} = $v;
+                    }
+                // Everything is done!
+                }else{
+                    // Move everything down a level from @graph
+                    $final = current($update->{'@graph'});
+                    unset($update->{'@graph'});
+                    foreach($update as $j => $v){
+                        $final->{$j} = $v;
                     }
                 }
             }
@@ -208,6 +214,10 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
         /* Looks for graph subjects present as an object.
         /* If the object is a php object, value could be in @id
         /* If the object is a list, could be in a flat list of URIs, or a list of php objects with @id */
+        /* Whatever it is, if it's the subject of the @graph (in $ids) return its id. */
+
+        $matches = array();
+
         if(!is_array($object)){
             $object = array($object);
         }
@@ -216,27 +226,33 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
             if(is_object($object)){
                 // Should already have been through the AS2 @context so not checking for @id
                 if(isset($o->id) && in_array($o->id, $ids)){
-                    return $o->id;
+                    $matches[] = $o->id;
                 }
             }else{
                 if(in_array($o, $ids)){
-                    return $o;
+                    $matches[] = $o;
                 }
             }
         }
-        return false;
+        if(!empty($matches)){
+            return $matches;
+        }else{
+            return false;
+        }
     }
 
     private function replace_object($object, $replacement){
         if(is_array($object)){
             foreach($object as $k => $o){
-                if( ($o == $replacement->id) || (is_object($o) && isset($o->id) && $o->id == $replacement->id) ){
-                    $object[$k] = $replacement;
+                if( ($o == $replacement[$o]->id) || (is_object($o) && isset($o->id) && $o->id == $replacement[$o]->id) ){
+                    $object[$k] = $replacement[$o];
                 }
             }
-        }else
+        }else{
+            $replacement = current($replacement);
             if( ($object == $replacement->id) || (is_object($object) && isset($object->id) && $object->id == $replacement->id) ){
                 $object = $replacement;
+            }
         }
 
         return $object;
