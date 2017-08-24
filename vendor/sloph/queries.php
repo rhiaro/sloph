@@ -80,6 +80,70 @@ function construct_and_sort($ep, $uris, $sort="as:published"){
   return $sorted;
 }
 
+function construct_collection_page($ep, $collection, $start, $limit, $sort){
+  
+  $items_q = query_select_collection_items($collection, $start, $sort, "DESC", $limit);
+  $item_uris = select_to_list(execute_query($ep, $items_q));
+  $nextstart = array_pop($item_uris);
+
+  $prev_items_q = query_select_collection_items($collection, $start, $sort, "ASC", $limit);
+  $prev_items = select_to_list(execute_query($ep, $prev_items_q));
+  $prevstart = $prev_items[0];
+
+  $page_uri = $collection."?start=".$item_uris[0]."&limit=".$limit;
+  // $page_uri = $collection."/page/".$items[0]."/".$limit;
+  $page_q = query_construct_collection_page($page_uri, $collection);
+  $page_res = execute_query($ep, $page_q);
+
+  var_dump($prevstart);
+
+  $page = new EasyRdf_Graph($page_uri);
+  $page->parse($page_res, 'php');
+
+  return $page;
+}
+
+function query_select_collection_items($collection, $start=null, $sort="as:published", $sortdir="DESC", $limit=16){
+
+  if($sortdir == "DESC"){
+    $dir = ">=";
+  }else{
+    $dir = "<";
+  }
+
+  $q = get_prefixes();
+  $q .= "SELECT ?s WHERE {
+  <$collection> as:items ?s .";
+  if(isset($sort)){
+    $q .= " ?s $sort ?sort . \n";
+  }
+  if($start != null){
+    $q .= " <$start> $sort ?startval .\n";
+    $q .= " FILTER(?sort $dir ?startval) . \n";
+  }
+  $q .="}";
+  if(isset($sort)){
+    $q .= "ORDER BY $sortdir(?sort)";
+  }
+  if($limit > 0){
+    $q .= "
+LIMIT $limit\n";
+  }
+  return $q;
+}
+
+function query_construct_collection_page($page_uri, $collection){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { 
+  <$page_uri> a as:CollectionPage .
+  <$page_uri> as:name ?name .
+  <$page_uri> as:partOf <$collection> .
+} WHERE {
+  <$collection> as:name ?name .
+}";
+  return $q;
+}
+
 /* Building queries */
 
 function get_prefixes(){
