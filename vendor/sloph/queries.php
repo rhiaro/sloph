@@ -80,56 +80,41 @@ function construct_and_sort($ep, $uris, $sort="as:published"){
   return $sorted;
 }
 
-function construct_collection_page($ep, $collection, $start, $limit, $sort){
-  
-  $items_q = query_select_collection_items($collection, $start, $sort, "DESC", $limit);
+function construct_collection_page($ep, $collection, $before, $limit, $sort){
+
+  if(!isset($before)){
+    $qlimit = $limit+1;
+  }else{
+    $qlimit = $limit;
+  }
+
+  $items_q = query_select_prev_items($collection, $before, $sort, $qlimit);
   $item_uris = select_to_list(execute_query($ep, $items_q));
-  $nextstart = array_pop($item_uris);
-
-  $prev_items_q = query_select_collection_items($collection, $start, $sort, "ASC", $limit);
-  $prev_items = select_to_list(execute_query($ep, $prev_items_q));
-  $prevstart = $prev_items[0];
-
-  $page_uri = $collection."?start=".$item_uris[0]."&limit=".$limit;
+  $prevstart = array_pop($item_uris);
+  var_dump($prevstart);
+  echo " (prev)<hr/>";
+  if(isset($before)){
+    array_unshift($item_uris, $before);
+    $next_q = query_select_next_items($collection, $before, "as:published", $limit);
+    $next_uris = select_to_list(execute_query($ep, $next_q));
+    if(count($next_uris) > 0){
+      $nextstart = $next_uris[count($next_uris)-1];
+      var_dump($nextstart);
+    }
+  }
+  
+  $page_uri = $collection."?before=".$item_uris[0]."&limit=".$limit;
   // $page_uri = $collection."/page/".$items[0]."/".$limit;
   $page_q = query_construct_collection_page($page_uri, $collection);
   $page_res = execute_query($ep, $page_q);
 
-  var_dump($prevstart);
+  echo " (next)<hr/>";
+  var_dump($item_uris);
 
   $page = new EasyRdf_Graph($page_uri);
   $page->parse($page_res, 'php');
 
   return $page;
-}
-
-function query_select_collection_items($collection, $start=null, $sort="as:published", $sortdir="DESC", $limit=16){
-
-  if($sortdir == "DESC"){
-    $dir = ">=";
-  }else{
-    $dir = "<";
-  }
-
-  $q = get_prefixes();
-  $q .= "SELECT ?s WHERE {
-  <$collection> as:items ?s .";
-  if(isset($sort)){
-    $q .= " ?s $sort ?sort . \n";
-  }
-  if($start != null){
-    $q .= " <$start> $sort ?startval .\n";
-    $q .= " FILTER(?sort $dir ?startval) . \n";
-  }
-  $q .="}";
-  if(isset($sort)){
-    $q .= "ORDER BY $sortdir(?sort)";
-  }
-  if($limit > 0){
-    $q .= "
-LIMIT $limit\n";
-  }
-  return $q;
 }
 
 function query_construct_collection_page($page_uri, $collection){
@@ -512,6 +497,46 @@ function query_select_s_prev_of_type_count($uri, $count=10, $type=null, $graph="
   ";
     return $q;
   }
+}
+
+function query_select_next_items($collection, $after, $sortby="as:published", $count=16){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s WHERE {
+  <$collection> as:items ?s .
+  ?s $sortby ?sort .";
+
+  if(isset($after)){
+    $q .=  "
+  <$after> $sortby ?sortafter .
+  FILTER ( ?sort > ?sortafter ) .\n";
+  }
+  $q .= "}
+  ORDER BY ASC(?sort)";
+  if($count > 0){
+    $q .= "
+    LIMIT $count";
+  }
+  return $q;
+}
+
+function query_select_prev_items($collection, $before, $sortby="as:published", $count=16){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s WHERE {
+  <$collection> as:items ?s .
+  ?s $sortby ?sort .";
+
+  if(isset($before)){
+    $q .=  "
+  <$before> $sortby ?sortbefore .
+  FILTER ( ?sort < ?sortbefore ) .\n";
+  }
+  $q .= "}
+  ORDER BY DESC(?sort)";
+  if($count > 0){
+    $q .= "
+    LIMIT $count";
+  }
+  return $q;
 }
 
 /* Specific queries */
