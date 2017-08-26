@@ -80,65 +80,6 @@ function construct_and_sort($ep, $uris, $sort="as:published"){
   return $sorted;
 }
 
-function construct_collection_page($ep, $collection, $before, $limit, $sort){
-
-  if(!isset($before)){
-    $qlimit = $limit+1;
-  }else{
-    $qlimit = $limit;
-  }
-
-  $items_q = query_select_prev_items($collection, $before, $sort, $qlimit);
-  $item_uris = select_to_list(execute_query($ep, $items_q));
-  if(count($item_uris) > $limit){
-    $prevstart = array_pop($item_uris);
-    $prev = $collection . "?before=" . $prevstart . "&limit=" . $limit;
-  }
-  
-  if(isset($before)){
-    array_unshift($item_uris, $before);
-    $next_q = query_select_next_items($collection, $before, "as:published", $limit);
-    $next_uris = select_to_list(execute_query($ep, $next_q));
-    if(count($next_uris) > 0){
-      $nextstart = $next_uris[count($next_uris)-1];
-      $next = $collection . "?before=" . $nextstart . "&limit=" . $limit;
-    }
-  }
-  
-  $page_uri = $collection."?before=".$item_uris[0]."&limit=".$limit;
-  $page_q = query_construct_collection_page($page_uri, $collection);
-  $page_res = execute_query($ep, $page_q);
-
-  $page = new EasyRdf_Graph($page_uri);
-  $page->parse($page_res, 'php');
-  if(isset($prev)){
-    $page->addResource($page_uri, "as:prev", $prev);
-  }
-  if(isset($next)){
-    $page->addResource($page_uri, "as:next", $next);
-  }
-  $items = construct_uris_in_graph($ep, $item_uris, "https://blog.rhiaro.co.uk/");
-  $items_g = new EasyRdf_Graph();
-  $items_g->parse($items, 'php');
-  foreach($item_uris as $item){
-    $page->addResource($page_uri, "as:items", $item);
-  }
-  $final = merge_graphs(array($page, $items_g), $page_uri);
-  return $final;
-}
-
-function query_construct_collection_page($page_uri, $collection){
-  $q = get_prefixes();
-  $q .= "CONSTRUCT { 
-  <$page_uri> a as:CollectionPage .
-  <$page_uri> as:name ?name .
-  <$page_uri> as:partOf <$collection> .
-} WHERE {
-  <$collection> as:name ?name .
-}";
-  return $q;
-}
-
 /* Building queries */
 
 function get_prefixes(){
@@ -234,6 +175,18 @@ function construct_between($from, $to){
   $q .= " FILTER(?d <= \"$to\") . \n";
   $q .= "} \n";
   $q .= "ORDER BY DESC(?d)";
+  return $q;
+}
+
+function query_construct_collection_page($page_uri, $collection){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { 
+  <$page_uri> a as:CollectionPage .
+  <$page_uri> as:name ?name .
+  <$page_uri> as:partOf <$collection> .
+} WHERE {
+  <$collection> as:name ?name .
+}";
   return $q;
 }
 

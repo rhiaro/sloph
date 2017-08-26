@@ -1,5 +1,9 @@
 <?
 
+/**********************/
+/* Visual things      */
+/**********************/
+
 function get_icon($resource){
   $types = get_values($resource, "rdf:type");
   foreach($types as $type){
@@ -98,6 +102,10 @@ function get_icons_from_tags($tags){
   return $icons;
 }
 
+/********************/
+/* Data things      */
+/********************/
+
 function get_locations($ep){
   $q = query_for_places();
   $r = execute_query($ep, $q);
@@ -169,6 +177,61 @@ function nav($ep, $resource, $dir="next", $type=0){
 
   return $out;
 }
+
+/***********************/
+/* Composite things    */
+/***********************/
+
+function construct_collection_page($ep, $collection, $before, $limit, $sort){
+
+  if(!isset($before)){
+    $qlimit = $limit+1;
+  }else{
+    $qlimit = $limit;
+  }
+
+  $items_q = query_select_prev_items($collection, $before, $sort, $qlimit);
+  $item_uris = select_to_list(execute_query($ep, $items_q));
+  if(count($item_uris) > $limit){
+    $prevstart = array_pop($item_uris);
+    $prev = $collection . "?before=" . $prevstart . "&limit=" . $limit;
+  }
+  
+  if(isset($before)){
+    array_unshift($item_uris, $before);
+    $next_q = query_select_next_items($collection, $before, "as:published", $limit);
+    $next_uris = select_to_list(execute_query($ep, $next_q));
+    if(count($next_uris) > 0){
+      $nextstart = $next_uris[count($next_uris)-1];
+      $next = $collection . "?before=" . $nextstart . "&limit=" . $limit;
+    }
+  }
+  
+  $page_uri = $collection."?before=".$item_uris[0]."&limit=".$limit;
+  $page_q = query_construct_collection_page($page_uri, $collection);
+  $page_res = execute_query($ep, $page_q);
+
+  $page = new EasyRdf_Graph($page_uri);
+  $page->parse($page_res, 'php');
+  if(isset($prev)){
+    $page->addResource($page_uri, "as:prev", $prev);
+  }
+  if(isset($next)){
+    $page->addResource($page_uri, "as:next", $next);
+  }
+  $items = construct_uris_in_graph($ep, $item_uris, "https://blog.rhiaro.co.uk/");
+  $items_g = new EasyRdf_Graph();
+  $items_g->parse($items, 'php');
+  foreach($item_uris as $item){
+    $page->addResource($page_uri, "as:items", $item);
+  }
+  $final = merge_graphs(array($page, $items_g), $page_uri);
+  return $final;
+}
+
+/***********************/
+/* Helpers             */
+/***********************/
 
 function time_ago($date){
   $now = new DateTime();
