@@ -1,5 +1,28 @@
 <?
 
+function view_router($resource){
+
+    if(has_type($resource, "as:Add") || has_type($resource, "as:Like") || has_type($resource, "as:Announce") || has_type($resource, "as:Follow")){
+      if(has_type($resource, "as:Add") && get_value($resource, 'as:target') != "https://rhiaro.co.uk/bookmarks/"){
+        // TODO: check if target is an album instead of just excluding bookmarks
+        return 'objects';
+      } 
+      return 'link';
+    }elseif(has_type($resource, "as:Arrive")){ 
+      return 'checkin';
+    }elseif(has_type($resource, "as:Travel") && get_value($resource, 'as:origin') && get_value($resource, 'as:target')){
+      return 'travel';
+    }elseif(has_type($resource, "asext:Consume") || has_type($resource, "asext:Acquire")){
+      return 'stuff';
+    }elseif(has_type($resource, "as:Invite") || has_type($resource, "as:Accept") || has_type($resource, "as:Event")){
+      return 'event';
+    }elseif(has_type($resource, "as:Collection")){
+      return 'collection';
+    }else{
+      return 'article';
+    }
+}
+
 /**********************/
 /* Visual things      */
 /**********************/
@@ -131,6 +154,29 @@ function get_name($ep, $uri){
   return str_replace("http://dbpedia.org/resource/", "", $uri);
 }
 
+function get_tags($ep){
+  $q = query_select_tags();
+  $res = execute_query($ep, $q);
+  // var_dump($res);
+  $tags = array(); $i = 0;
+  foreach($res['rows'] as $tag){
+    if($tag["tag type"] == "uri"){
+      $uri = $tag["tag"];
+      if(isset($tag["name"])){
+        $tags[$uri]['name'] = $tag["name"];
+      }else{
+        $tags[$uri]['name'] = $tag["tag"];
+      }
+      $tags[$uri]['count'] = $tag["c"];
+    }
+  }
+  return $tags;
+}
+
+/***********************/
+/* Composite things    */
+/***********************/
+
 function nav($ep, $resource, $dir="next", $type=0){
 
   $out = array();
@@ -178,10 +224,6 @@ function nav($ep, $resource, $dir="next", $type=0){
   return $out;
 }
 
-/***********************/
-/* Composite things    */
-/***********************/
-
 function construct_collection_page($ep, $collection, $before, $limit, $sort){
 
   if(!isset($before)){
@@ -227,6 +269,38 @@ function construct_collection_page($ep, $collection, $before, $limit, $sort){
   }
   $final = merge_graphs(array($page, $items_g), $page_uri);
   return $final;
+}
+
+function make_checkin_summary($checkin, $locations=null, $end=null){
+  
+  $location = get_value($checkin, "as:location");
+  if($locations === null){
+    $locations = get_locations();
+  }
+  if(isset($locations[$location])){
+    $location = array($location => $locations[$location]);
+  }else{
+    $location = array($location=>array());
+  }
+
+  $pub = new DateTime(get_value($checkin, "as:published"));
+  if($end === null){
+    $end = new DateTime();
+    $location_label = get_value($location, "blog:presentLabel");
+    $end_label = "now";
+  }else{
+    $end = new DateTime($end);
+    $location_label = get_value($location, "blog:pastLabel");
+    $end_label = $end->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F");
+  }
+  
+  $diff = time_diff_to_human($pub, $end);
+  if(empty($location_label)){
+    $location_label = "was last spotted at ".key($location);
+  }
+
+  $label = "rhiaro ".$location_label." for ".$diff." (from ".$pub->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")." until ".$end_label.")";
+  return $label;
 }
 
 /***********************/
@@ -303,38 +377,6 @@ function prev_tile_x($tile){
   return implode("/", $url);
 }
 
-function make_checkin_summary($checkin, $locations=null, $end=null){
-  
-  $location = get_value($checkin, "as:location");
-  if($locations === null){
-    $locations = get_locations();
-  }
-  if(isset($locations[$location])){
-    $location = array($location => $locations[$location]);
-  }else{
-    $location = array($location=>array());
-  }
-
-  $pub = new DateTime(get_value($checkin, "as:published"));
-  if($end === null){
-    $end = new DateTime();
-    $location_label = get_value($location, "blog:presentLabel");
-    $end_label = "now";
-  }else{
-    $end = new DateTime($end);
-    $location_label = get_value($location, "blog:pastLabel");
-    $end_label = $end->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F");
-  }
-  
-  $diff = time_diff_to_human($pub, $end);
-  if(empty($location_label)){
-    $location_label = "was last spotted at ".key($location);
-  }
-
-  $label = "rhiaro ".$location_label." for ".$diff." (from ".$pub->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")." until ".$end_label.")";
-  return $label;
-}
-
 function structure_cost($cost){
   // This is terrible.
   // Accounting for messy human input.
@@ -365,26 +407,9 @@ function structure_cost($cost){
   return array("currency" => $code, "value" => $amt);
 }
 
-function get_tags($ep){
-  $q = query_select_tags();
-  $res = execute_query($ep, $q);
-  // var_dump($res);
-  $tags = array(); $i = 0;
-  foreach($res['rows'] as $tag){
-    if($tag["tag type"] == "uri"){
-      $uri = $tag["tag"];
-      if(isset($tag["name"])){
-        $tags[$uri]['name'] = $tag["name"];
-      }else{
-        $tags[$uri]['name'] = $tag["tag"];
-      }
-      $tags[$uri]['count'] = $tag["c"];
-    }
-  }
-  return $tags;
-}
-
-/* Scoring */
+/*****************/
+/* Scoring       */
+/*****************/
 
 function score_predicates(){
   return array(
@@ -469,28 +494,5 @@ function get_style($resource){
   }
   arsort($s);
   return key($s);
-}
-
-function view_router($resource){
-
-    if(has_type($resource, "as:Add") || has_type($resource, "as:Like") || has_type($resource, "as:Announce") || has_type($resource, "as:Follow")){
-      if(has_type($resource, "as:Add") && get_value($resource, 'as:target') != "https://rhiaro.co.uk/bookmarks/"){
-        // TODO: check if target is an album instead of just excluding bookmarks
-        return 'objects';
-      } 
-      return 'link';
-    }elseif(has_type($resource, "as:Arrive")){ 
-      return 'checkin';
-    }elseif(has_type($resource, "as:Travel") && get_value($resource, 'as:origin') && get_value($resource, 'as:target')){
-      return 'travel';
-    }elseif(has_type($resource, "asext:Consume") || has_type($resource, "asext:Acquire")){
-      return 'stuff';
-    }elseif(has_type($resource, "as:Invite") || has_type($resource, "as:Accept") || has_type($resource, "as:Event")){
-      return 'event';
-    }elseif(has_type($resource, "as:Collection")){
-      return 'collection';
-    }else{
-      return 'article';
-    }
 }
 ?>
