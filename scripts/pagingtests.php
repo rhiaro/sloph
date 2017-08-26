@@ -6,9 +6,6 @@ if(isset($_GET['before'])){
 }else{
   $before = null;
 }
+$g = construct_collection_page($ep, $collection, $before, 16, "as:published");
+echo $g->dump();
 ?>
-<pre>
-<?
-var_dump(construct_collection_page($ep, $collection, $before, 16, "as:published"));
-?>
-</pre>
