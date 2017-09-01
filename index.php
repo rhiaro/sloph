@@ -53,13 +53,15 @@ try {
 
         if($type == $ns->expand("as:Arrive")){
           $color = get_value($locations, 'view:color', get_value(array($uri => $item), "as:location"));
-          $currentlocation = get_value(array($uri => $item), $ns->expand("as:location"));
         }
       }
 
       $items[$uri]['color'] = $color;
 
     }
+
+    $lastcheckin = construct_uris($ep, select_to_list(execute_query($ep, query_select_one_of_type("as:Arrive"))));
+    $currentlocation = get_value($lastcheckin, $ns->expand("as:location"));
 
     /* Views stuff */
     if(!$resource->get('view:stylesheet')){

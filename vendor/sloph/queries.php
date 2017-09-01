@@ -330,6 +330,23 @@ LIMIT 1
   return $q;
 }
 
+function query_select_one_of_type($type, $sort="as:published", $dir="DESC", $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT ?s WHERE {
+  GRAPH <$graph> {
+    ?s a $type .";
+  if(isset($sort)){
+    $q .= "    ?s $sort ?sort .";
+  }
+  $q .=" }
+}";
+  if(isset($sort)){
+    $q .= "ORDER BY $dir(?sort)";
+  }
+  $q .= "LIMIT 1";
+  return $q;
+}
+
 function query_select_s_next_of_type($uri, $type, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
 
