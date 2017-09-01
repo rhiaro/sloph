@@ -14,25 +14,43 @@ function get_resource($ep, $uri){
   $rg = execute_query($ep, $qg);
   if($rg){
     $graph->parse($rg, 'php', $uri);
-    return $graph;
+  }else{
+
+    // If no triples in graph, get triples with $uri as subject
+    // TODO: pass graphs in
+    //  and probably merge this with above
+    $fromgraphs = my_public_graphs();
+    $r = array();
+    $q = query_construct_uri_graphs($uri, $fromgraphs);
+    $r = execute_query($ep, $q);
+    $graph->parse($r, 'php', $uri);
+    
+    // Get primaryTopic of this URI as well.
+    $pt = $graph->primaryTopic($uri);
+    if($pt){
+      $ptUri = $pt->getUri();
+      $qpt = query_construct($ptUri);
+      $rpt = execute_query($ep, $qpt);
+      $graph->parse($rpt, 'php', $ptUri);
+    }
   }
 
-  // If no triples in graph, get triples with $uri as subject
-  // TODO: pass graphs in
-  //  and probably merge this with above
-  $fromgraphs = my_public_graphs();
-  $r = array();
-  $q = query_construct_uri_graphs($uri, $fromgraphs);
-  $r = execute_query($ep, $q);
-  $graph->parse($r, 'php', $uri);
-  
-  // Get primaryTopic of this URI as well.
-  $pt = $graph->primaryTopic($uri);
-  if($pt){
-    $ptUri = $pt->getUri();
-    $qpt = query_construct($ptUri);
-    $rpt = execute_query($ep, $qpt);
-    $graph->parse($rpt, 'php', $ptUri);
+  if($graph->isA($graph->resource(), "as:Collection")){
+    // Page it!
+    $collection = $graph->getUri();
+    if(isset($_GET['before'])){
+      $before = $_GET['before'];
+    }else{
+      $before = null;
+    }
+    if(isset($_GET['limit'])){
+      $limit = $_GET['limit'];
+    }else{
+      $limit = 16;
+    }
+    $sort = "as:published";
+    $collection_page = construct_collection_page($ep, $collection, $before, $limit, $sort); 
+    return $collection_page;
   }
 
   return $graph;
