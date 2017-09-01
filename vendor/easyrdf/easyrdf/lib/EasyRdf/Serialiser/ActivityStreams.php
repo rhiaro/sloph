@@ -244,7 +244,10 @@ class EasyRdf_Serialiser_ActivityStreams extends EasyRdf_Serialiser
     private function replace_object($object, $replacement){
         if(is_array($object)){
             foreach($object as $k => $o){
-                if( ($o == $replacement[$o]->id) || (is_object($o) && isset($o->id) && $o->id == $replacement[$o]->id) ){
+                if( 
+                    (isset($replacement[$o]) && $o == $replacement[$o]->id) || 
+                    (is_object($o) && isset($o->id) 
+                        && $o->id == $replacement[$o]->id) ){
                     $object[$k] = $replacement[$o];
                 }
             }
