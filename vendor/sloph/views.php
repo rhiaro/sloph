@@ -16,7 +16,7 @@ function view_router($resource){
       return 'stuff';
     }elseif(has_type($resource, "as:Invite") || has_type($resource, "as:Accept") || has_type($resource, "as:Event")){
       return 'event';
-    }elseif(has_type($resource, "as:Collection")){
+    }elseif(has_type($resource, "as:Collection") || has_type($resource, "as:CollectionPage")){
       return 'collection';
     }else{
       return 'article';
