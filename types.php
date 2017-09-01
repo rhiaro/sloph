@@ -48,10 +48,6 @@ $res = execute_query($ep, $q);
 
 if($res){
   
-  // TODO: Temporary until other people stuff isn't in my graph
-  foreach($res as $k => $v){
-    if(substr($k, 0, 21) != "https://rhiaro.co.uk/"){ unset($res[$k]); }
-  }
   $name = ucfirst($_GET['type']);
 
   if($_GET['type'] == "where"){
