@@ -69,10 +69,15 @@
           $ename = $event_uri;
           $elocation = "https://rhiaro.co.uk/location/event";
         }
+        if($elocation){
+          $elocation_str = "at ".get_name($ep, $elocation);
+        }else{
+          $elocation_str = "";
+        }
       }
       
     ?>
-    The last event I RSVP'd to was <strong><?=$ename?></strong>, taking place from <?=$start?> to <?=$end?> at <?=get_name($ep, $elocation)?>,  
+    The last event I RSVP'd to was <strong><?=$ename?></strong>, taking place from <?=$start?> to <?=$end?> <?=$elocation_str?>,  
   <?endif?>
 
   <?if(get_value(array($uri=>$resource),  'as:published')):?>
