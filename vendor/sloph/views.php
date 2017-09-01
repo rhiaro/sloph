@@ -224,7 +224,7 @@ function nav($ep, $resource, $dir="next", $type=0){
   return $out;
 }
 
-function construct_collection_page($ep, $collection, $before, $limit, $sort){
+function construct_collection_page($ep, $collection, $before=null, $limit=16, $sort="as:published"){
 
   if(!isset($before)){
     $qlimit = $limit+1;
@@ -234,11 +234,6 @@ function construct_collection_page($ep, $collection, $before, $limit, $sort){
 
   $items_q = query_select_prev_items($collection, $before, $sort, $qlimit);
   $item_uris = select_to_list(execute_query($ep, $items_q));
-  if(count($item_uris) > $limit){
-    $prevstart = array_pop($item_uris);
-    $prev = $collection . "?before=" . $prevstart . "&limit=" . $limit;
-  }
-  
   if(isset($before)){
     array_unshift($item_uris, $before);
     $next_q = query_select_next_items($collection, $before, "as:published", $limit);
@@ -247,6 +242,11 @@ function construct_collection_page($ep, $collection, $before, $limit, $sort){
       $nextstart = $next_uris[count($next_uris)-1];
       $next = $collection . "?before=" . $nextstart . "&limit=" . $limit;
     }
+  }
+
+  if(count($item_uris) > $limit){
+    $prevstart = array_pop($item_uris);
+    $prev = $collection . "?before=" . $prevstart . "&limit=" . $limit;
   }
   
   $page_uri = $collection."?before=".$item_uris[0]."&limit=".$limit;
