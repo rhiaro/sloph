@@ -178,6 +178,18 @@ function construct_between($from, $to){
   return $q;
 }
 
+function query_construct_collection_page($page_uri, $collection){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { 
+  <$page_uri> a as:CollectionPage .
+  <$page_uri> as:name ?name .
+  <$page_uri> as:partOf <$collection> .
+} WHERE {
+  <$collection> as:name ?name .
+}";
+  return $q;
+}
+
 function query_get_graphs(){
   $q = "SELECT DISTINCT ?g WHERE {
   GRAPH ?g { ?s ?p ?o . }
@@ -318,6 +330,23 @@ LIMIT 1
   return $q;
 }
 
+function query_select_one_of_type($type, $sort="as:published", $dir="DESC", $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT ?s WHERE {
+  GRAPH <$graph> {
+    ?s a $type .";
+  if(isset($sort)){
+    $q .= "    ?s $sort ?sort .";
+  }
+  $q .=" }
+}";
+  if(isset($sort)){
+    $q .= "ORDER BY $dir(?sort)";
+  }
+  $q .= "LIMIT 1";
+  return $q;
+}
+
 function query_select_s_next_of_type($uri, $type, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
 
@@ -448,6 +477,55 @@ function query_select_s_prev_of_type_count($uri, $count=10, $type=null, $graph="
   ";
     return $q;
   }
+}
+
+function query_select_next_items($collection, $after, $sortby="as:published", $count=16){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s WHERE {
+  <$collection> as:items ?s .
+  ?s $sortby ?sort .";
+
+  if(isset($after)){
+    $q .=  "
+  <$after> $sortby ?sortafter .
+  FILTER ( ?sort > ?sortafter ) .\n";
+  }
+  $q .= "}
+  ORDER BY ASC(?sort)";
+  if($count > 0){
+    $q .= "
+    LIMIT $count";
+  }
+  return $q;
+}
+
+function query_select_prev_items($collection, $before, $sortby="as:published", $count=16){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s WHERE {
+  <$collection> as:items ?s .
+  ?s $sortby ?sort .";
+
+  if(isset($before)){
+    $q .=  "
+  <$before> $sortby ?sortbefore .
+  FILTER ( ?sort < ?sortbefore ) .\n";
+  }
+  $q .= "}
+  ORDER BY DESC(?sort)";
+  if($count > 0){
+    $q .= "
+    LIMIT $count";
+  }
+  return $q;
+}
+
+function query_count_items($collection){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT COUNT(?item) AS ?c WHERE {
+  <$collection> as:items ?item .
+}
+GROUP BY ?s";
+  return $q;
 }
 
 /* Specific queries */

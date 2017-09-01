@@ -1,12 +1,19 @@
-<? $items = get_values($resource, 'as:items'); ?>
-<h1><?=get_value($resource, 'as:name')?> (<?=count($items)?>)</h1>
+<? 
+$items = get_values($resource, 'as:items');
+$itemsh = count($items);
+if(get_value($resource, 'as:partOf')){
+  $collection_uri = get_value($resource, 'as:partOf');
+  $itemsh .= " out of ".get_value(array($collection_uri => $resource[$collection_uri]), 'as:totalItems');
+}
+?>
+<h1><?=get_value($resource, 'as:name')?> (<?=$itemsh?>)</h1>
 <ul>
   <?
-  if(!isset($collection)){
-    $sorted = get_and_sort($ep, $items);
-  }else{
+  if(isset($collection)){
     $sorted = $collection;
     unset($sorted[key($resource)]);
+  }else{
+    $sorted = get_and_sort($ep, $items); // TODO: this is unnecessary for collectionpages which come with items already in the graph
   }
   foreach($sorted as $uri => $resource){
     $resource = array($uri => $resource);

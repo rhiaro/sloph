@@ -1,7 +1,22 @@
 <?
-// Get next/prev resource by date
-$next = nav($ep, $resource, "next");
-$prev = nav($ep, $resource, "prev");
+$next = null;
+$prev = null;
+if(get_value($resource, $ns->expand("as:next"))){
+  $next = get_value($resource, $ns->expand("as:next"));
+}else{
+  $next = nav($ep, $resource, "next");
+  if(!empty($next)){
+    $next = $next[0];
+  }
+}
+if(get_value($resource, $ns->expand("as:prev"))){
+  $prev = get_value($resource, $ns->expand("as:prev"));
+}else{
+  $prev = nav($ep, $resource, "prev");
+  if(!empty($prev)){
+    $prev = $prev[0];
+  }
+}
 // Get next resource by date of the same type
 $next_types = array();
 $prev_types = array();
@@ -25,10 +40,10 @@ if(is_array($this_types)){
   <a href="/"><img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" /></a>
 
   <?if($next):?>
-    <p><a class="right" href="<?=str_replace("https://rhiaro.co.uk", "", $next[0])?>">Next</a></p>
+    <p><a class="right" href="<?=$next?>">Next</a></p>
   <?endif?>
   <?if($prev):?>
-    <p><a class="left" href="<?=str_replace("https://rhiaro.co.uk", "", $prev[0])?>">Prev</a></p>
+    <p><a class="left" href="<?=$prev?>">Prev</a></p>
   <?endif?>
 
   <?foreach($prev_types as $type => $prev_one):?>
