@@ -283,6 +283,53 @@ function construct_collection_page($ep, $collection, $before=null, $limit=16, $s
   return $final;
 }
 
+function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=16, $sort="as:published"){
+
+  if(!isset($before)){
+    $qlimit = $limit+1;
+  }else{
+    $qlimit = $limit;
+  }
+
+  if(isset($before)){
+    array_unshift($item_uris, $before);
+
+    if(isset($nav["next"])){
+      $next = $uri . "?before=" . $nav["next"] . "&limit=" . $limit;
+    }
+  }
+
+  if(isset($nav["prev"])){
+    $prev = $uri . "?before=" . $nav["prev"] . "&limit=" . $limit;
+  }
+  
+  $page_uri = $uri."?before=".$item_uris[0]."&limit=".$limit;
+  $page_q = query_construct_collection_page($page_uri, $uri);
+  $page_res = execute_query($ep, $page_q);
+
+  $page = new EasyRdf_Graph($page_uri);
+  $page->parse($page_res, 'php');
+  if(isset($prev)){
+    $page->addResource($page_uri, "as:prev", $prev);
+  }
+  if(isset($next)){
+    $page->addResource($page_uri, "as:next", $next);
+  }
+
+  // $page->addLiteral($collection, "as:totalItems", $total);
+  $page->addResource($uri, "rdf:type", "as:Collection");
+  $page->addResource($page_uri, "rdf:type", "as:CollectionPage");
+
+  $items = construct_uris_in_graph($ep, $item_uris, "https://blog.rhiaro.co.uk/");
+  $items_g = new EasyRdf_Graph();
+  $items_g->parse($items, 'php');
+  foreach($item_uris as $item){
+    $page->addResource($page_uri, "as:items", $item);
+  }
+  $final = merge_graphs(array($page, $items_g), $page_uri);
+  return $final;
+}
+
 function make_checkin_summary($checkin, $locations=null, $end=null){
   
   $location = get_value($checkin, "as:location");
@@ -450,7 +497,6 @@ function set_views($ep, $resource){
       $resource->addLiteral('view:css', "body { background-color: ".$loc->get($resource->get('as:location'), 'view:color')."; }\n");  
     }
   }
-
   return $resource;
 }
 

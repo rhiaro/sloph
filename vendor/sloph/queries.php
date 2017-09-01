@@ -218,6 +218,24 @@ function query_select_s($limit=0, $graph="https://blog.rhiaro.co.uk/"){
   return $q;
 }
 
+function query_select_s_type($type, $sort="as:published", $dir="DESC", $limit=0, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s WHERE {
+  GRAPH <$graph> { ?s a $type .";
+  if(isset($sort)){
+    $q .= "  ?s $sort ?sort .";
+  }
+  $q .= "  }
+}";
+  if(isset($sort)){
+    $q .= "ORDER BY $dir(?sort)";
+  }
+  if($limit > 0){
+    $q .= "LIMIT $limit";
+  }
+  return $q;
+}
+
 function query_select_count_graph($graph="https://blog.rhiaro.co.uk/"){
   $q = "SELECT COUNT(?s) AS ?c WHERE {
   GRAPH <$graph> { ?s ?p ?o . }

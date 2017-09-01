@@ -114,6 +114,7 @@ function get($ep, $uri, $content_type="text/html"){
 }
 
 function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/html"){
+  // Deprecated??
   
   $return = array("header" => null, "content" => null, "errors" => null);
 
@@ -145,22 +146,33 @@ function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/h
   return $current;
 }
 
-function get_container_dynamic_from_items($ep, $uri, $name="", $items=array()){
-  $g = new EasyRdf_Graph($uri);
-  $collection[$uri] = array(
-      "https://www.w3.org/ns/activitystreams#name" => array(array("value" => $name, "type" => "literal")),
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" => array(array("value" => "https://www.w3.org/ns/activitystreams#Collection",
-                                                                       "type" => "uri"),
-                                                                 array("value" => "http://www.w3.org/ns/ldp#Container",
-                                                                       "type" => "uri"),
-                                                                ),
-    );
-  foreach($items as $id => $data){
-    $collection[$uri]["https://www.w3.org/ns/activitystreams#items"][] = array("value" => $id, "type" => "uri");
-    $g->parse(array($id=>$data), 'php');
+function get_container_dynamic_from_items($ep, $uri, $sort="as:published", $name="", $items=array(), $nav=array()){
+  
+  // Page it!
+  if(isset($_GET['before'])){
+    $before = $_GET['before'];
+  }else{
+    $before = null;
   }
-  $g->parse($collection, 'php');
-  return $g;
+  if(isset($_GET['limit'])){
+    $limit = $_GET['limit'];
+  }else{
+    $limit = 16;
+  }
+  $collection_page = make_collection_page($ep, $uri, $items, $nav, $before, $limit, $sort);
+  $page_uri = $collection_page->getUri();
+  $collection_page->addLiteral($uri, "as:name", $name);
+  $collection_page->addLiteral($page_uri, "as:name", $name);
+
+  // LDP stuff
+  $collection_page->addResource($page_uri, "rdf:type", "ldp:Container");
+  $collection_page->addResource($uri, "rdf:type", "ldp:Container");
+  foreach($items as $item){
+    $collection_page->addResource($page_uri, "ldp:contains", $item);
+    $collection_page->addResource($uri, "ldp:contains", $item);
+  }
+
+  return $collection_page;
 }
 
 function get_container($ep, $container, $content_type){
