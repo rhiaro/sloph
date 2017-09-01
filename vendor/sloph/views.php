@@ -173,6 +173,12 @@ function get_tags($ep){
   return $tags;
 }
 
+function count_items($ep, $collection){
+  $total_q = query_count_items($collection);
+  $total_res = execute_query($ep, $total_q);
+  return $total_res["rows"][0]["c"];
+}
+
 /***********************/
 /* Composite things    */
 /***********************/
@@ -226,6 +232,8 @@ function nav($ep, $resource, $dir="next", $type=0){
 
 function construct_collection_page($ep, $collection, $before=null, $limit=16, $sort="as:published"){
 
+  $total = count_items($ep, $collection);
+
   if(!isset($before)){
     $qlimit = $limit+1;
   }else{
@@ -261,6 +269,10 @@ function construct_collection_page($ep, $collection, $before=null, $limit=16, $s
   if(isset($next)){
     $page->addResource($page_uri, "as:next", $next);
   }
+
+  $page->addLiteral($collection, "as:totalItems", $total);
+  $page->addResource($collection, "rdf:type", "as:Collection");
+
   $items = construct_uris_in_graph($ep, $item_uris, "https://blog.rhiaro.co.uk/");
   $items_g = new EasyRdf_Graph();
   $items_g->parse($items, 'php');

@@ -519,6 +519,15 @@ function query_select_prev_items($collection, $before, $sortby="as:published", $
   return $q;
 }
 
+function query_count_items($collection){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT COUNT(?item) AS ?c WHERE {
+  <$collection> as:items ?item .
+}
+GROUP BY ?s";
+  return $q;
+}
+
 /* Specific queries */
 
 function query_for_places(){
