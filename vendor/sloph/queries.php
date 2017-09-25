@@ -517,6 +517,26 @@ function query_select_next_items($collection, $after, $sortby="as:published", $c
   return $q;
 }
 
+function query_select_prev_type($type, $before, $sortby="as:published", $count=16, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s WHERE { GRAPH <$graph> {
+  ?s rdf:type $type .
+  ?s $sortby ?sort . }";
+
+  if(isset($before)){
+    $q .=  "
+  <$before> $sortby ?sortbefore .
+  FILTER ( ?sort < ?sortbefore ) .\n";
+  }
+  $q .= "}
+  ORDER BY DESC(?sort)";
+  if($count > 0){
+    $q .= "
+    LIMIT $count";
+  }
+  return $q;
+}
+
 function query_select_prev_items($collection, $before, $sortby="as:published", $count=16){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {

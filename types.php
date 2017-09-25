@@ -4,6 +4,7 @@ require_once('vendor/init.php');
 
 $headers = apache_request_headers();
 $relUri = $_SERVER['REQUEST_URI'];
+$uri = "https://rhiaro.co.uk".$relUri;
 $ct = $headers["Accept"];
 $acceptheaders = new AcceptHeader($ct);
 
@@ -43,56 +44,51 @@ if($_GET['type'] == "places"){
   $sort = "as:published";
 }
 
-$q = query_construct_type($typemap[$_GET['type']], $sort);
-$res = execute_query($ep, $q);
+if(isset($_GET['before'])){
+  $q = query_select_prev_type($typemap[$_GET['type']], $_GET['before'], $sort, 16, "https://blog.rhiaro.co.uk/");
+}else{
+  $q = query_select_s_type($typemap[$_GET['type']], $sort, "DESC", 17, "https://blog.rhiaro.co.uk/");
+}
+$item_uris = select_to_list(execute_query($ep, $q));
+$prev_uri = array_pop($item_uris);
 
-if($res){
-  
-  $name = ucfirst($_GET['type']);
+$name = ucfirst($_GET['type']);
+$nav = array("next" => "next", "prev" => $prev_uri); // TODO HERENOW
 
-  if($_GET['type'] == "where"){
-    $where = array_slice($res, 0, 1);
-    $uri = key($where);
-    $g = new EasyRdf_Graph($uri);
-    $relUri = $uri;
-    $g->parse($where, 'php');
-    // Temporary for checkins
-    $g->addLiteral($uri, 'view:banality', 5);
-    $g->addLiteral($uri, 'view:intimacy', 5);
-    $g->addLiteral($uri, 'view:wanderlust', 4);
-    $summary = make_checkin_summary($where, $locations);
-    $g->addLiteral($uri, 'as:summary', $summary);
-    $template = "checkin";
+if($_GET['type'] == "where"){
+  // TODO: move this somewhere else
+  $where = get_resource($ep, $item_uris[0]);
+  // Temporary for checkins
+  $g->addLiteral($uri, 'view:banality', 5);
+  $g->addLiteral($uri, 'view:intimacy', 5);
+  $g->addLiteral($uri, 'view:wanderlust', 4);
+  $summary = make_checkin_summary($where, $locations);
+  $g->addLiteral($uri, 'as:summary', $summary);
+}else{
+  $g = get_container_dynamic_from_items($ep, $uri, $sort, $name, $item_uris, $nav);
+}
+
+$result = conneg($acceptheaders, $g);
+$content = $result['content'];
+$header = $result['header'];
+
+try {
+  if(gettype($content) == "string"){
+    header($header);
+    echo $content;
   }else{
-    $g = get_container_dynamic_from_items($ep, $relUri, $name, $res);
-    $template = "collection";
+    $styled = set_views($ep, $content->resource($content->getUri()));
+    $resource = merge_graphs(array(new EasyRdf_Graph($styled), $content), $content->getUri());
+    $resource = $resource->toRdfPhp();
+
+    include 'views/top.php';
+    include 'views/nav.php';
+    include 'views/'.view_router($resource).'.php';
+    include 'views/end.php';
+
   }
-
-  $result = conneg($acceptheaders, $g);
-  $content = $result['content'];
-  $header = $result['header'];
-
-  try {
-    if(gettype($content) == "string"){
-      header($header);
-      echo $content;
-    }else{
-
-      $resource = set_views($ep, $content->resource());
-      $collection = $content->toRdfPhp();
-      $resource = array($relUri => $collection[$relUri]);
-
-      include 'views/top.php';
-      include 'views/nav.php';
-      include 'views/'.$template.'.php';
-
-      include 'views/end.php';
-
-    }
-  }catch(Exception $e){
-    var_dump($e);
-  }
-  
+}catch(Exception $e){
+  var_dump($e);
 }
 
 ?>
