@@ -2,6 +2,7 @@
 require_once('../vendor/init.php');
 
 $now = new DateTime();
+$posts = array();
 
 function fetch_album($url){
   curl_setopt_array($ch = curl_init(), array(
@@ -40,7 +41,7 @@ function in_collection($resource, $collection){
   if(!is_array($collection)){
     // todo: construct
   }else{
-    foreach($collection["http://www.w3.org/ns/activitystreams#items"] as $i){
+    foreach($collection["https://www.w3.org/ns/activitystreams#items"] as $i){
       if($resource == $i['value']){
         return true;
       }
@@ -53,7 +54,7 @@ function in_add($resource, $add){
   if(!is_array($add)){
     // todo: construct
   }else{
-    foreach($add["http://www.w3.org/ns/activitystreams#object"] as $i){
+    foreach($add["https://www.w3.org/ns/activitystreams#object"] as $i){
       if($resource == $i['value']){
         return true;
       }
@@ -72,7 +73,7 @@ $mn = new DateTime("00:00:00 1st ".$_GET['month']);
 
 // Process
 if(isset($_GET['engage'])){
-  $insq = get_prefixes()."\nINSERT INTO <http://blog.rhiaro.co.uk#> { <".$_GET['post']."> as:image <".$_GET['image']."> . }";
+  $insq = get_prefixes()."\nINSERT INTO <https://blog.rhiaro.co.uk/> { <".$_GET['post']."> as:image <".$_GET['image']."> . }";
   $insr = execute_query($ep, $insq);
   if($insr){
     echo "saved";
@@ -87,7 +88,8 @@ $q = query_select_s_where(array("rdf:type" => "asext:Acquire"), 0);
 $res = execute_query($ep, $q);
 foreach($res['rows'] as $r){
   $m = rhiaro_url_to_date($r['s'])["m"];
-  if($m == $mn->format("m")){
+  $y = rhiaro_url_to_date($r['s'])["y"];
+  if($m == $mn->format("m") && $y == $mn->format("Y")){
     $qc = query_construct($r['s']);
     $rc = execute_query($ep, $qc);
     $posts[$r['s']] = $rc[$r['s']];
@@ -100,7 +102,7 @@ $response = fetch_album("https://i.amy.gy/obtainium/");
 $collection = json_decode($response, true);
 foreach($collection['items'] as $img){
   $date = img_url_to_date($img);
-  if($date->format("m") == $mn->format("m")){
+  if($date->format("m") == $mn->format("m") && $date->format("y") == $mn->format("y")){
     // Check not already used
     $checkq = get_prefixes()."\nSELECT ?s WHERE { ?s as:image <".$img."> }";
     $checkr = execute_query($ep, $checkq);
@@ -223,7 +225,7 @@ if(isset($_GET['add'])){
       <?if(isset($adds)):?>
         <ul>
           <?foreach($adds as $auri => $add):?>
-            <li><a href="<?=$auri?>"><?=isset($add["http://www.w3.org/ns/activitystreams#summary"]) ? $add["http://www.w3.org/ns/activitystreams#summary"][0]["value"] : $auri?></a></li>
+            <li><a href="<?=$auri?>"><?=isset($add["https://www.w3.org/ns/activitystreams#summary"]) ? $add["https://www.w3.org/ns/activitystreams#summary"][0]["value"] : $auri?></a></li>
           <?endforeach?>
         </ul>
       <?endif?>
@@ -240,9 +242,9 @@ if(isset($_GET['add'])){
           <div class="inner">
 
             <?foreach($posts as $uri => $data):?>
-              <?if(!isset($data['http://www.w3.org/ns/activitystreams#image'])):?>
-                <p><input type="radio" name="post" value="<?=$uri?>" /> <a href="<?=$uri?>" target="_blank"><?=$data['http://www.w3.org/ns/activitystreams#published'][0]['value']?></a></p>
-                <p><?=$data['http://www.w3.org/ns/activitystreams#content'][0]['value']?></p>
+              <?if(!isset($data['https://www.w3.org/ns/activitystreams#image'])):?>
+                <p><input type="radio" name="post" value="<?=$uri?>" /> <a href="<?=$uri?>" target="_blank"><?=$data['https://www.w3.org/ns/activitystreams#published'][0]['value']?></a></p>
+                <p><?=$data['https://www.w3.org/ns/activitystreams#content'][0]['value']?></p>
               <?endif?>
             <?endforeach?>
 
