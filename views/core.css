@@ -10,14 +10,27 @@
 .boxes {
   overflow:hidden;
   text-align: center;
-  margin-left: auto; margin-right: auto;
 }
 .box {
   width: 32px; height: 32px;
   margin: 2px; padding: 2px;
-  float: left;
+  float: right;
   color: white;
   font-weight: bold; text-align: center; font-size: 1.6em;
+}
+.wrapper {
+  margin-top: 2em;
+}
+
+.wrapper h1 {
+  font-size: 1.2em; text-align: left;
+}
+.wrapper h1 img {
+  margin: 0;
+  margin-bottom: -2em;
+  width: 64px; 
+  /*margin-top: calc(-32px - 2em);*/
+  border: 3px solid white;
 }
 
 article {
@@ -57,22 +70,12 @@ nav a:hover img {
 
 #me {
   background-color: white;
-  /*opacity: 0.9;*/
-  padding: 1em; margin: 1em; margin-top: 32px;
 }
-#me h1 {
-  font-size: 1.2em; text-align: left;
-  font-family: serif;
-  line-height: 1.6;
-  font-style: italic;
-}
-#me h1 img {
-  width: 64px; margin-top: calc(-32px - 2em);
-  border: 3px solid white;
-}
+
 #me article {
-  width: 98%;
+  width: 64%;
   border-bottom: 1px solid #eee;
+  padding: 2em;
 }
 #me a, #me a:visited {
   text-decoration: underline;
@@ -94,6 +97,16 @@ nav a:hover img {
   width: 264px;
   padding: 4px; border: 1px solid #ccc;
   text-decoration: none;
+}
+#latest h1 {
+  font-size: 2em;
+}
+
+#stats {
+  background-color: white;
+  text-align: left;
+  line-height: 1.2;
+  padding: 1em 2em 1em 2em;
 }
 
 .tags a {

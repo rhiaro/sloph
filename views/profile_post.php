@@ -16,7 +16,7 @@
     The last thing I acquired was <?=get_value(array($uri=>$resource),  'as:content')?>, for <?=get_value(array($uri=>$resource),  'asext:cost')?>, 
   <?elseif(in_array('as:Arrive', $types)):?>
     <?if(get_value($locations, 'blog:presentLabel', get_value(array($uri=>$resource),  'as:location'))):?>
-    <a href="<?=get_value(array($uri=>$resource),  'as:location')?>"><?=get_value($locations, 'blog:presentLabel', get_value(array($uri=>$resource),  'as:location'))?></a> since 
+    I <a href="<?=get_value(array($uri=>$resource),  'as:location')?>"><?=get_value($locations, 'blog:pastLabel', get_value(array($uri=>$resource),  'as:location'))?></a>
     <?else:?>
     I checked into <a href="<?=get_value(array($uri=>$resource),  'as:location')?>"><?=get_value(array($uri=>$resource),  'as:location')?></a>, 
     <?endif?>
