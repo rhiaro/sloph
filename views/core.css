@@ -35,8 +35,14 @@
 
 article {
   margin-left: auto; margin-right: auto;
-  width: 50%;
+  width: 90%;
   height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  article {
+    width: 50%;
+  }
 }
 
 nav {
