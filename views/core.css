@@ -19,7 +19,7 @@
   font-weight: bold; text-align: center; font-size: 1.6em;
 }
 .wrapper {
-  margin-top: 2em;
+  padding-top: 2em;
 }
 
 .wrapper h1 {
@@ -27,7 +27,7 @@
 }
 .wrapper h1 img {
   margin: 0;
-  margin-bottom: -2em;
+  margin-bottom: -2.8em; margin-left: 2em;
   width: 64px; 
   /*margin-top: calc(-32px - 2em);*/
   border: 3px solid white;
@@ -42,6 +42,13 @@ article {
 @media screen and (min-width: 1024px) {
   article {
     width: 50%;
+  }
+  .wrapper {
+    background-image: url('https://i.amy.gy/headers/20170910_portobello.jpg');
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: top center;
+    padding-top: 20em;
   }
 }
 

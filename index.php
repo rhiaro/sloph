@@ -125,6 +125,7 @@ try {
           <?foreach($last_of_type as $type => $resource):?>
             <? include 'views/profile_post.php';      ?>
           <?endforeach?>
+          <p>&#128241; The header image is my current phone background. This one is <a href="https://i.amy.gy/201709-uk/IMG_20170910_163334.jpg">chips and Irn Bru on Portobello beach (Edinburgh) in September 2017</a>.</p>
           <p>&#128169; Here are the 1600 last things I posted. Some of them are <em>quite</em> banal:</p>
         </div>
 
