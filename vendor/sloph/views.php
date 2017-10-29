@@ -23,6 +23,19 @@ function view_router($resource){
     }
 }
 
+function collection_sort_predicate($collection){
+
+  $mapping = array(
+    "https://rhiaro.co.uk/location" => "as:name",
+    "https://rhiaro.co.uk/locations" => "as:name"
+  );
+  if(array_key_exists($collection, $mapping)){
+    return $mapping[$collection];
+  }
+
+  return "as:published";
+}
+
 /**********************/
 /* Visual things      */
 /**********************/
@@ -241,6 +254,7 @@ function construct_collection_page($ep, $collection, $before=null, $limit=16, $s
   }
 
   $items_q = query_select_prev_items($collection, $before, $sort, $qlimit);
+  
   $item_uris = select_to_list(execute_query($ep, $items_q));
   if(isset($before)){
     array_unshift($item_uris, $before);
@@ -256,7 +270,7 @@ function construct_collection_page($ep, $collection, $before=null, $limit=16, $s
     $prevstart = array_pop($item_uris);
     $prev = $collection . "?before=" . $prevstart . "&limit=" . $limit;
   }
-  
+
   $page_uri = $collection."?before=".$item_uris[0]."&limit=".$limit;
   $page_q = query_construct_collection_page($page_uri, $collection);
   $page_res = execute_query($ep, $page_q);
@@ -270,7 +284,8 @@ function construct_collection_page($ep, $collection, $before=null, $limit=16, $s
     $page->addResource($page_uri, "as:next", $next);
   }
 
-  $page->addLiteral($collection, "as:totalItems", $total);
+  $totalItems = new EasyRdf_Literal($total, null, "xsd:nonNegativeInteger");
+  $page->add($collection, "as:totalItems", $totalItems);
   $page->addResource($collection, "rdf:type", "as:Collection");
 
   $items = construct_uris_in_graph($ep, $item_uris, "https://blog.rhiaro.co.uk/");
@@ -280,6 +295,7 @@ function construct_collection_page($ep, $collection, $before=null, $limit=16, $s
     $page->addResource($page_uri, "as:items", $item);
   }
   $final = merge_graphs(array($page, $items_g), $page_uri);
+
   return $final;
 }
 
