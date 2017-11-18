@@ -5,9 +5,11 @@
     <link rel="stylesheet" type="text/css" href="/views/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="/views/core.css" />
     <? $styles = get_values($resource, 'view:stylesheet'); ?>
-  <?foreach($styles as $style):?>
-    <link rel="stylesheet" type="text/css" href="/<?=$style?>" />
-  <?endforeach?>
+  <?if(isset($styles) && is_array($styles)):?>
+    <?foreach($styles as $style):?>
+      <link rel="stylesheet" type="text/css" href="/<?=$style?>" />
+    <?endforeach?>
+  <?endif?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       <?=get_value($resource, 'view:css')?>
