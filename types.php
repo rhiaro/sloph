@@ -44,6 +44,10 @@ if($_GET['type'] == "places"){
   $sort = "as:published";
 }
 
+$qc = query_count_type($typemap[$_GET['type']]);
+$resc = execute_query($ep, $qc);
+$total = $resc["rows"][0]["c"];
+
 if(isset($_GET['before'])){
   $q = query_select_prev_type($typemap[$_GET['type']], $_GET['before'], $sort, 16, "https://blog.rhiaro.co.uk/");
 }else{
@@ -65,7 +69,7 @@ if($_GET['type'] == "where"){
   $summary = make_checkin_summary($where, $locations);
   $g->addLiteral($uri, 'as:summary', $summary);
 }else{
-  $g = get_container_dynamic_from_items($ep, $uri, $sort, $name, $item_uris, $nav);
+  $g = get_container_dynamic_from_items($ep, $uri, $sort, $name, $item_uris, $total, $nav);
 }
 
 $result = conneg($acceptheaders, $g);

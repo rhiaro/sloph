@@ -566,6 +566,14 @@ GROUP BY ?s";
   return $q;
 }
 
+function query_count_type($type, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT COUNT(?s) AS ?c WHERE {
+  ?s rdf:type $type .
+}";
+  return $q;
+}
+
 /* Specific queries */
 
 function query_for_places(){
