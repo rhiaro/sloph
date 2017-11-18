@@ -65,6 +65,7 @@ $_PREF = array(
         ,'asext' => 'https://terms.rhiaro.co.uk/as#'
         ,'dbp' => 'http://dbpedia.org/property/'
         ,'geo' => 'http://www.w3.org/2003/01/geo/wgs84_pos#'
+        ,'doap' => 'http://usefulinc.com/ns/doap#'
       );
 $_NS = array_flip($_PREF);
 $ns = new EasyRdf_Namespace();
