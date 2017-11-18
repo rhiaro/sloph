@@ -8,23 +8,13 @@ function get_resource($ep, $uri){
 
   $graph = new EasyRdf_Graph($uri);
 
-  // Get triples in this ($uri) graph
-  $rg = array();
-  $qg = query_construct_graph($uri);
-  $rg = execute_query($ep, $qg);
-  if($rg){
-    $graph->parse($rg, 'php', $uri);
-  }else{
-
-    // If no triples in graph, get triples with $uri as subject
-    // TODO: pass graphs in
-    //  and probably merge this with above
-    $fromgraphs = my_public_graphs();
-    $r = array();
-    $q = query_construct_uri_graphs($uri, $fromgraphs);
-    $r = execute_query($ep, $q);
+  // Get triples with this $uri as the subject
+  $fromgraphs = my_public_graphs();
+  $r = array();
+  $q = query_construct_uri_graphs($uri, $fromgraphs);
+  $r = execute_query($ep, $q);
+  if($r){
     $graph->parse($r, 'php', $uri);
-    
     // Get primaryTopic of this URI as well.
     $pt = $graph->primaryTopic($uri);
     if($pt){
@@ -32,6 +22,21 @@ function get_resource($ep, $uri){
       $qpt = query_construct($ptUri);
       $rpt = execute_query($ep, $qpt);
       $graph->parse($rpt, 'php', $ptUri);
+    }
+  // If none, see if there are triples in this graph
+  }else{
+    $rg = array();
+    $qg = query_construct_graph($uri);
+    $rg = execute_query($ep, $qg);
+    if($rg){
+      $graph->parse($rg, 'php', $uri);
+
+      // If the graph has triples but no triples about itself, show an index of subjects
+      $self_triples = count($graph->properties($graph->getUri()));
+      $all_triples = $graph->countTriples();
+      if($self_triples < $all_triples){
+        //..
+      }
     }
   }
 
@@ -48,11 +53,13 @@ function get_resource($ep, $uri){
     }else{
       $limit = 16;
     }
-    $sort = "as:published";
-    $collection_page = construct_collection_page($ep, $collection, $before, $limit, $sort); 
-    return $collection_page;
-  }
+    $sort = collection_sort_predicate($collection);
+    $from_graph = collection_items_graph($collection);
+    $collection_page = construct_collection_page($ep, $collection, $before, $limit, $sort, $from_graph); 
 
+    return $collection_page;
+
+  }
   return $graph;
 }
 
@@ -200,7 +207,6 @@ function get_and_sort($ep, $resources, $by="as:published"){
         $item = $item->toRdfPhp(); 
         $full = array_merge($full, $item);
       }
-      // else { var_dump($resource); }
     }
     $dates = array();
     foreach($full as $uri => $r){

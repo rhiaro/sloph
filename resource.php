@@ -31,32 +31,39 @@ if($_SERVER['REQUEST_METHOD'] === "GET" || $_SERVER['REQUEST_METHOD'] === "HEAD"
       if(isset($_GET['debug'])){
         echo "<hr/>".$content->dump();
       }
-      
-      if($content->isA($content->resource(), "as:Arrive")){
-        // Temporary for checkins
-        $content->addLiteral($content->resource(), 'view:banality', 5);
-        $content->addLiteral($content->resource(), 'view:intimacy', 5);
-        $content->addLiteral($content->resource(), 'view:wanderlust', 4);
+
+      $subject_properties = $content->properties($resource);
+
+      if(empty($subject_properties)){
+        $g = $content;
+      }else{      
+        if($content->isA($content->resource(), "as:Arrive")){
+          // Temporary for checkins
+          $content->addLiteral($content->resource(), 'view:banality', 5);
+          $content->addLiteral($content->resource(), 'view:intimacy', 5);
+          $content->addLiteral($content->resource(), 'view:wanderlust', 4);
+        }
+
+        if($content->isA($content->resource(), "as:Travel")){
+          // Temporary for journeys
+          $content->addLiteral($content->resource(), 'view:banality', 3);
+          $content->addLiteral($content->resource(), 'view:intimacy', 5);
+          $content->addLiteral($content->resource(), 'view:wanderlust', 5);
+        }
+
+        if($content->isA($content->resource(), "asext:Consume") || $content->isA($content->resource(), "asext:Acquire")){
+          // Temporary for food logs
+          $content->addLiteral($content->resource(), 'view:banality', 5);
+          $content->addLiteral($content->resource(), 'view:intimacy', 3);
+          $content->addLiteral($content->resource(), 'view:tastiness', 5);
+        }
+
+        $tags = get_tags($ep);
+        // var_dump($content->toRdfPhp());
+        $resource = set_views($ep, $content->resource());
+        // var_dump($content->resource()->toRdfPhp());
+        $g = $resource->getGraph();
       }
-
-      if($content->isA($content->resource(), "as:Travel")){
-        // Temporary for journeys
-        $content->addLiteral($content->resource(), 'view:banality', 3);
-        $content->addLiteral($content->resource(), 'view:intimacy', 5);
-        $content->addLiteral($content->resource(), 'view:wanderlust', 5);
-      }
-
-      if($content->isA($content->resource(), "asext:Consume") || $content->isA($content->resource(), "asext:Acquire")){
-        // Temporary for food logs
-        $content->addLiteral($content->resource(), 'view:banality', 5);
-        $content->addLiteral($content->resource(), 'view:intimacy', 3);
-        $content->addLiteral($content->resource(), 'view:tastiness', 5);
-      }
-
-      $tags = get_tags($ep);
-
-      $resource = set_views($ep, $content->resource());
-      $g = $resource->getGraph();
       $resource = $g->toRdfPhp();
 
       $scripts = get_values($resource, 'view:script');

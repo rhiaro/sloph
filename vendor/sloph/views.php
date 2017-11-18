@@ -1,7 +1,6 @@
 <?
 
 function view_router($resource){
-
     if(has_type($resource, "as:Add") || has_type($resource, "as:Like") || has_type($resource, "as:Announce") || has_type($resource, "as:Follow")){
       if(has_type($resource, "as:Add") && get_value($resource, 'as:target') != "https://rhiaro.co.uk/bookmarks/"){
         // TODO: check if target is an album instead of just excluding bookmarks
@@ -19,6 +18,9 @@ function view_router($resource){
     }elseif(has_type($resource, "as:Collection") || has_type($resource, "as:CollectionPage")){
       return 'collection';
     }else{
+      if(count($resource) > 1){
+        return 'index';
+      }
       return 'article';
     }
 }
@@ -34,6 +36,18 @@ function collection_sort_predicate($collection){
   }
 
   return "as:published";
+}
+
+function collection_items_graph($collection){
+  $mapping = array(
+    "https://rhiaro.co.uk/location" => "https://rhiaro.co.uk/locations/",
+    "https://rhiaro.co.uk/locations" => "https://rhiaro.co.uk/locations/"
+  );
+  if(array_key_exists($collection, $mapping)){
+    return $mapping[$collection];
+  }
+
+  return "https://blog.rhiaro.co.uk/";
 }
 
 /**********************/
@@ -170,7 +184,6 @@ function get_name($ep, $uri){
 function get_tags($ep){
   $q = query_select_tags();
   $res = execute_query($ep, $q);
-  // var_dump($res);
   $tags = array(); $i = 0;
   foreach($res['rows'] as $tag){
     if($tag["tag type"] == "uri"){
@@ -243,7 +256,7 @@ function nav($ep, $resource, $dir="next", $type=0){
   return $out;
 }
 
-function construct_collection_page($ep, $collection, $before=null, $limit=16, $sort="as:published"){
+function construct_collection_page($ep, $collection, $before=null, $limit=16, $sort="as:published", $from_graph="https://blog.rhiaro.co.uk/"){
 
   $total = count_items($ep, $collection);
 
@@ -288,7 +301,7 @@ function construct_collection_page($ep, $collection, $before=null, $limit=16, $s
   $page->add($collection, "as:totalItems", $totalItems);
   $page->addResource($collection, "rdf:type", "as:Collection");
 
-  $items = construct_uris_in_graph($ep, $item_uris, "https://blog.rhiaro.co.uk/");
+  $items = construct_uris_in_graph($ep, $item_uris, $from_graph);
   $items_g = new EasyRdf_Graph();
   $items_g->parse($items, 'php');
   foreach($item_uris as $item){
@@ -299,7 +312,7 @@ function construct_collection_page($ep, $collection, $before=null, $limit=16, $s
   return $final;
 }
 
-function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=16, $sort="as:published"){
+function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=16, $sort="as:published", $from_graph="https://blog.rhiaro.co.uk/"){
 
   $uri = drop_collection_page_params($uri);
 
@@ -338,7 +351,7 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
   $page->addResource($uri, "rdf:type", "as:Collection");
   $page->addResource($page_uri, "rdf:type", "as:CollectionPage");
 
-  $items = construct_uris_in_graph($ep, $item_uris, "https://blog.rhiaro.co.uk/");
+  $items = construct_uris_in_graph($ep, $item_uris, $from_graph);
   $items_g = new EasyRdf_Graph();
   $items_g->parse($items, 'php');
   foreach($item_uris as $item){
