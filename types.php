@@ -44,20 +44,33 @@ if($_GET['type'] == "places"){
   $sort = "as:published";
 }
 
+if(isset($_GET['limit']) && is_numeric($_GET['limit']) && $_GET['limit'] < 64){
+  $limit = $_GET['limit'];
+}else{
+  $limit = 16;
+}
+
 $qc = query_count_type($typemap[$_GET['type']]);
 $resc = execute_query($ep, $qc);
 $total = $resc["rows"][0]["c"];
 
+$next_uri = null;
 if(isset($_GET['before'])){
-  $q = query_select_prev_type($typemap[$_GET['type']], $_GET['before'], $sort, 16, "https://blog.rhiaro.co.uk/");
+  $q = query_select_prev_type($typemap[$_GET['type']], $_GET['before'], $sort, $limit, "https://blog.rhiaro.co.uk/");
+  
+  $next_q = query_select_next_type($typemap[$_GET['type']], $_GET['before'], $sort, $limit, "https://blog.rhiaro.co.uk/");
+  $next_uris = select_to_list(execute_query($ep, $next_q));
+  if(count($next_uris) > 0){
+    $next_uri = $next_uris[count($next_uris)-1];
+  }
 }else{
-  $q = query_select_s_type($typemap[$_GET['type']], $sort, "DESC", 17, "https://blog.rhiaro.co.uk/");
+  $q = query_select_s_type($typemap[$_GET['type']], $sort, "DESC", $limit+1, "https://blog.rhiaro.co.uk/");
 }
 $item_uris = select_to_list(execute_query($ep, $q));
 $prev_uri = array_pop($item_uris);
 
 $name = ucfirst($_GET['type']);
-$nav = array("next" => "next", "prev" => $prev_uri); // TODO HERENOW
+$nav = array("next" => $next_uri, "prev" => $prev_uri);
 
 if($_GET['type'] == "where"){
   // TODO: move this somewhere else

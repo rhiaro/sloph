@@ -499,13 +499,15 @@ function structure_cost($cost){
 
 function drop_collection_page_params($uri){
   $parsed = parse_url($uri);
-  parse_str($parsed["query"], $params);
-  if(isset($params["before"])){ unset($params["before"]); }
-  if(isset($params["limit"])){ unset($params["limit"]); }
-  if(!empty($params)){
-    $parsed["query"] = http_build_query($params);
-  }else{
-    unset($parsed["query"]);
+  if(isset($parsed["query"])) { 
+    parse_str($parsed["query"], $params); 
+    if(isset($params["before"])){ unset($params["before"]); }
+    if(isset($params["limit"])){ unset($params["limit"]); }
+    if(!empty($params)){
+      $parsed["query"] = http_build_query($params);
+    }else{
+      unset($parsed["query"]);
+    }
   }
   return unparse_url($parsed);
 }

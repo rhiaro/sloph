@@ -166,6 +166,7 @@ function get_container_dynamic_from_items($ep, $uri, $sort="as:published", $name
   }else{
     $limit = 16;
   }
+
   $collection_page = make_collection_page($ep, $uri, $items, $nav, $before, $limit, $sort);
   $page_uri = $collection_page->getUri();
   $collection_page->addLiteral($uri, "as:name", $name);
