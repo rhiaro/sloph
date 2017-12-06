@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+
+  mysql:
+    image: mysql:5.6
+    environment:
+      - MYSQL_ROOT_PASSWORD=tigo
+      - MYSQL_DATABASE=slogd
+    ports:
+      - "3306:3306"
+    volumes:
+      - /home/rhiaro/Documents/rhiaro/sloph/db:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
+
+  sloph:
+    build: ./php
+    ports:
+      - 80:80
+    volumes:
+      - /home/rhiaro/Documents/rhiaro/sloph:/var/www/html
+    depends_on:
+      - mysql
