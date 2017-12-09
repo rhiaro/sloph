@@ -124,6 +124,9 @@ function has_type($graph, $type, $s=null){
   return false;
 }
 function get_uri($graph){
+  if(!is_array($graph)){
+    return $graph;
+  }
   return array_keys($graph)[0];
 }
 
