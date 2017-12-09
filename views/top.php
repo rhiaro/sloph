@@ -4,6 +4,10 @@
     <title><?=get_value($resource, 'as:name')?></title>
     <link rel="stylesheet" type="text/css" href="/views/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="/views/core.css" />
+    <? $outbox = get_values("https://rhiaro.co.uk/#me", "as:outbox"); ?>
+    <?if(isset($outbox)):?>
+      <link about="https://rhiaro.co.uk/#me" rel="as:outbox" href="<?=$outbox?>" />
+    <?endif?>
     <? $styles = get_values($resource, 'view:stylesheet'); ?>
   <?if(isset($styles) && is_array($styles)):?>
     <?foreach($styles as $style):?>

@@ -42,8 +42,10 @@ if(isset($headers['Authorization'])) {
   $token = $headers['Authorization'];
   
   /* !!!!! */
-  if($token == "tigoasdf"){
+  if($token == $EP_KEY){
     $response = array("me"=>"https://rhiaro.co.uk/#me", "scope"=>"post", "issued_by"=>"localhost");
+  }elseif($token == $GUEST_KEY){
+    $response = array("me"=>"http://csarven.ca/#i", "scope"=>"post", "issued_by"=>"https://rhiaro.co.uk/sloph");
   }else{
   /* !!!!! */  
 
@@ -57,6 +59,7 @@ if(isset($headers['Authorization'])) {
 }else{
   header("HTTP/1.1 403 Forbidden");
   echo "403: No authorization header set.";
+  echo "\n... TODO: dump publicly accessible posts here";
   exit;
 }
 
@@ -64,33 +67,35 @@ if(empty($response)){
   header("HTTP/1.1 401 Unauthorized");
   echo "401: Access token could not be verified.";
   exit;
-}elseif(stripos($me, "rhiaro.co.uk") === false || $scope != "post"){
+}elseif((stripos($me, "rhiaro.co.uk") === false && !is_guest($me)) || $scope != "post"){
   header("HTTP/1.1 403 Forbidden");
+  var_dump($me);
+  var_dump(is_guest($me));
   echo "403: Access token was not valid.";
+  echo "\n... TODO: dump publicly accessible posts here";
   exit;
 }else{
   // Good to go
   // Do stuff
-  if(empty($_POST)){
-    $post = file_get_contents('php://input');
-  }else{
+  $post = file_get_contents('php://input');
+  if(empty($post)){
     $post = $_POST;
   }
   
   if(isset($post) && !empty($post)){
   
   // Get content-type header
-  if($headers["Content-type"] == "application/x-www-form-urlencoded"){
+  if($headers["Content-Type"] == "application/x-www-form-urlencoded"){
     // if it's form-encoded convert to json-ld
     // TODO: actual conversion
     if(!isset($post["@context"])){ $post["@context"] = "https://rhiaro.co.uk/vocab"; }
     if(isset($post['access_token'])) unset($post['access_token']);
   
-  }elseif($headers["Content-type"] == "application/activity+json"){
+  }elseif($headers["Content-Type"] == "application/activity+json"){
     // if it's activity+json add default context
-    if(!isset($post["@context"])){ $post["@context"] = "http://www.w3.org/ns/activitystreams#"; }
+    if(!isset($post["@context"])){ $post["@context"] = "https://www.w3.org/ns/activitystreams#"; }
   
-  }elseif($headers["Content-type"] == "application/ld+json"){
+  }elseif($headers["Content-Type"] == "application/ld+json"){
     // pass
   }else{
     header("HTTP/1.1 415 Unsupported Media Type");
@@ -103,84 +108,50 @@ if(empty($response)){
   if(isset($post['slug'])){ 
     $slug = urlencode($post['slug']); 
     unset($post['slug']);
-  }elseif(isset($headers['Slug'])){ $slug = urlencode($headers['Slug']); }
+  }elseif(isset($headers['Slug'])){
+    $slug = urlencode($headers['Slug']); 
+  }
 
   // parse and validate
-  var_dump($post); // HERENOW this is turning into JSON weirdly
   $data = json_encode($post);
+  if(!$data){
+    header("HTTP/1.1 400 Bad Request");
+    echo "400: Bad JSON-LD";
+    exit;
+  }
   $g = new EasyRdf_Graph();
-  $g->parse(json_encode($data), "jsonld");
-  $r = $g->resources();
-  $resource = array_pop($r);
-  var_dump(post($ep, $resource));
-
-  // Convert back to JSON
-  // echo $data;
-
-  // make post uri
-  // insert
-
-  /*  
-    
-  
-      
-    // Find published key and value
-    $published = find_published($post);
-    if(!$published) {
-      $post['published'] = date(DATE_ATOM);
-      $published = array("key"=>"published", "value"=>$post['published']);
-    }
-    $pub = $published['value'];
-      
-    // Make post URI
-    if($slug === null){
-      // Find title or content for slug
-      $slug = find_title($post);
-      if(!$slug) {
-        $content = find_content($post);
-        $title = get_inner_string("# ", "\n", $post[$content['key']]);
-        if(strlen($title) > 0) {
-          $post["http://purl.org/dc/terms/title"] = $title;
-          $slug = $title;
-        }else{
-          $slug = $content['value'];
+  $g->parse($post, "jsonld");
+  $resources = $g->resources();
+  $named = new EasyRdf_Graph();
+  foreach($resources as $id => $data){
+    if($g->resource($id)->isBNode()){
+      $new_uri = make_uri($ep, $g->resource($id));
+      $s = new EasyRdf_Resource($new_uri);
+      $ps = $data->properties();
+      foreach($ps as $p){
+        $os = $g->all($id, $p);
+        foreach($os as $o){
+          $named->add($s, $p, $o);
         }
       }
-      if(!$slug) $slug = uniqid();
-      // Pass title/content to makeUri
-      $uri = Slogd_makeUri($ep, $slug, strtotime($pub));
-      $pto = Slogd_makeUri($ep, $slug, strtotime($pub), "BlogPost", false);
-    }else{
-      $uri = uri_from_slug($slug, strtotime($pub), true);
-      $pto = uri_from_slug($slug, strtotime($pub), false);
     }
-      
-    // Fill in needed post data if missing with defaults
-    $post["@id"] = $uri;
-    $post["http://xmlns.com/foaf/0.1/isPrimaryTopicOf"] = array("@id" => $pto);
-    if($published['key'] != "dct:created"){
-      $post["http://purl.org/dc/terms/created"] = array("@value" => $pub, "@type" => "xsd:dateTime");
-    }
-    
-    // Deal with listy properties
-    foreach($post as $key => $value){
-      if(is_listy($key) && !is_array($value)){
-        $values = explode(",", $value);
-				$values = array_map('trim', $values);
-				$post[$key] = $values;
-      }
-    }
-    
-    
-    
-    var_dump($response);
-    echo "\n----\n";
-    var_dump($slug);
-    echo "\n----\n";
-    var_dump($data);
-    echo "\n----\n";
-    var_dump($res);
-    */
+  }
+  // TODO: add default data like author etc
+  // insert
+  if($me != "https://rhiaro.co.uk/#me"){
+    $graph = "https://blog.rhiaro.co.uk/guest/";
+  }else{
+    $graph = "https://blog.rhiaro.co.uk/";
+  }
+  $ntriples = $named->serialise("ntriples");
+  $q = query_insert_n($ntriples, $graph);
+  $res = execute_query($ep, $q);
+  if(isset($res["t_count"])){
+    header("HTTP/1.1 201 Created");
+    header("Location: ".$new_uri);
+    echo "201 Created: ".$new_uri;
+  }
+
   }else{
     header("HTTP/1.1 400 Bad Request");
     echo "400: Nothing posted";
