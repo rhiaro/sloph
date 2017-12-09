@@ -47,4 +47,12 @@ function is_mine($graph){
 function public_and_mine($graph){
   return is_public($graph) && is_mine($graph);
 }
+
+function is_guest($id){
+  global $GUESTS;
+  if(isset($GUESTS)){
+    return in_array($id, $GUESTS);
+  }
+  return false;
+}
 ?>
