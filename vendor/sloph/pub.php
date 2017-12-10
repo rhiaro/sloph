@@ -1,14 +1,20 @@
 <?
 require_once('../init.php');
 
-function on_get($ep, $ct=null){
+function on_get($ep, $guest=false, $ct=null){
+
+  if($guest){
+    $graph = "https://blog.rhiaro.co.uk/guest/";
+  }else{
+    $graph = "https://blog.rhiaro.co.uk/";
+  }
 
   if($ct === null){
     $headers = apache_request_headers();
     $ct = $headers["Accept"];
   }
   $acceptheaders = new AcceptHeader($ct);
-  $q = query_construct_outbox("https://blog.rhiaro.co.uk/");
+  $q = query_construct_outbox($graph);
   $res = execute_query($ep, $q);
   $graph = new EasyRdf_Graph("https://rhiaro.co.uk/outgoing/");
   // var_dump($res);
@@ -159,7 +165,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   }
 }elseif($_SERVER['REQUEST_METHOD'] === 'GET'){
   
-  $result = on_get($ep);
+  $guest = false;
+  if(isset($_GET['guest']) && $_GET['guest'] == '1'){
+    $guest = true;
+  }
+
+  $result = on_get($ep, $guest);
   $header = $result['header'];
   $content = $result['content'];
   if(gettype($content) == "string"){
