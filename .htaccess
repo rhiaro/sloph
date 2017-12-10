@@ -13,12 +13,17 @@ Header add Link '<https://indieauth.com/auth>; rel="authorization_endpoint"'
 Header add Link '<https://tokens.indieauth.com/token>; rel="token_endpoint"'
 Header add Link '<https://rhiaro.co.uk/incoming/>; rel="http://www.w3.org/ns/ldp#inbox"'
 Header add Link '<https://rhiaro.co.uk/preferencesfile>; rel="http://www.w3.org/ns/pim/space#preferencesFile"'
+Header add Link '<https://rhiaro.co.uk/ldn/constraints>; rel="http://www.w3.org/ns/ldp#constrainedBy"'
 
 RewriteEngine on
 RewriteBase /
 
 RewriteRule ^incoming(/)?$ /vendor/sloph/ldn.php [QSA,L]
+RewriteRule ^outgoing(/)?$ /vendor/sloph/pub.php [QSA,L]
 RewriteRule ^summary(/)?$ /vendor/sloph/summary.php [QSA,L]
+RewriteRule ^set(/)?$ /vendor/sloph/page.php [QSA,L]
+
+RewriteRule ^thesis(/)?$ http://dr.amy.gy [L]
 
 RewriteRule ^(writes|articles|likes|checkins|arrives|consumes|eats|acquires|stuff|events|bookmarks|reposts|rsvps|notes|places|follows|where)(/)?$ /types.php?type=$1 [QSA,L]
 
