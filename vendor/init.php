@@ -14,6 +14,7 @@ require_once("JsonLD/Node.php");
 require_once("JsonLD/Graph.php");
 require_once("JsonLD/RdfConstants.php");
 require_once("JsonLD/Value.php");
+require_once("JsonLD/LanguageTaggedString.php");
 require_once("JsonLD/TypedValue.php");
 
 require_once("easyrdf/easyrdf/lib/EasyRdf.php");
