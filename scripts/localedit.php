@@ -56,7 +56,7 @@ function plustype($i=0){
 
 function plusproperty(){
   $properties = array(
-      "https://www.w3.org/ns/activitystreams#" => array("name", "published", "updated", "summary", "content", "startTime", "endTime", "image", "inReplyTo", "location", "tag", "url", "to", "bto", "cc", "bcc", "duration", "actor", "object", "target", "origin", "result", "items", "relationship"),
+      "https://www.w3.org/ns/activitystreams#" => array("name", "published", "updated", "summary", "content", "startTime", "endTime", "image", "inReplyTo", "location", "tag", "url", "to", "bto", "cc", "bcc", "duration", "actor", "object", "target", "origin", "result", "items", "relationship", "outbox"),
       "https://terms.rhiaro.co.uk/as#" => array("cost"),
       "https://terms.rhiaro.co.uk/view#" => array("banality", "intimacy", "tastiness", "informative", "wanderlust", "css", "color")
     );
@@ -115,12 +115,6 @@ function insert($ep, $turtle, $graph){
   $q = query_insert($turtle, $graph);
   $r = execute_query($ep, $q);
   return $r;
-}
-
-if(isset($_GET['uri'])){
-  $uri_for_new = $_GET['uri'];
-}else{
-  $uri_for_new = "https://rhiaro.co.uk/".$now->format("Y")."/".$now->format("m").uniqid();
 }
 
 if(isset($_POST['savenew'])){
@@ -215,6 +209,12 @@ if(isset($_GET['flag']) && $_GET['flag'] == "notype"){
   }
   $_SESSION['uris'] = $untyped_uris;
   $posts = $untyped_posts;
+}
+
+if(isset($_GET['uri']) && count($posts) < 1){
+  $uri_for_new = $_GET['uri'];
+}else{
+  $uri_for_new = "https://rhiaro.co.uk/".$now->format("Y")."/".$now->format("m")."/".uniqid();
 }
 
 ?>
