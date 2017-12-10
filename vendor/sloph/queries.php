@@ -113,6 +113,34 @@ WHERE { GRAPH <$graph> { ?s ?p ?o . } }";
   return $q;
 }
 
+function query_construct_outbox($graph="https://blog.rhiaro.co.uk/"){
+  // This is temporary and should be replaced with proper paging and stuff.
+  // The particular properties are to help dokieli for now.
+  // Ultimately it should return everything, but paged.
+  $q = get_prefixes();
+  $q .= "CONSTRUCT {
+  <https://rhiaro.co.uk/outgoing/> a as:OrderedCollection .
+  <https://rhiaro.co.uk/outgoing/> as:items ?s .
+  ?s a ?t .
+  ?s as:published ?d .
+  ?s as:target ?target .
+  ?s as:object ?object .
+  ?s as:inReplyTo ?repl .
+}WHERE {
+  GRAPH <$graph> { 
+    ?s a ?t . 
+    ?s as:published ?d .
+    OPTIONal { ?s as:target ?target . }
+    OPTIONal { ?s as:object ?object . }
+    OPTIONal { ?s as:inReplyTo ?repl . }
+  }
+}
+ORDER BY DESC(?d)
+LIMIT 15000"; // Graph times out if I make it get everything
+  return $q;
+}
+
+
 function query_construct_uri_graph($uri, $graph){
   $q = "CONSTRUCT { <$uri> ?p ?o . } 
 WHERE { GRAPH <$graph> { <$uri> ?p ?o . } }";
