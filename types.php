@@ -76,11 +76,13 @@ if($_GET['type'] == "where"){
   // TODO: move this somewhere else
   $where = get_resource($ep, $item_uris[0]);
   // Temporary for checkins
-  $g->addLiteral($uri, 'view:banality', 5);
-  $g->addLiteral($uri, 'view:intimacy', 5);
-  $g->addLiteral($uri, 'view:wanderlust', 4);
-  $summary = make_checkin_summary($where, $locations);
-  $g->addLiteral($uri, 'as:summary', $summary);
+  $where->addLiteral($uri, 'view:banality', 5);
+  $where->addLiteral($uri, 'view:intimacy', 5);
+  $where->addLiteral($uri, 'view:wanderlust', 4);
+  $summary = make_checkin_summary($where->toRdfPhp(), $locations);
+  $where->addLiteral($uri, 'as:summary', $summary);
+
+  $g = $where;
 }else{
   $g = get_container_dynamic_from_items($ep, $uri, $sort, $name, $item_uris, $total, $nav);
 }
