@@ -69,7 +69,10 @@ function in_add($resource, $add){
 if(!isset($_GET['month'])){
   $_GET['month'] = strtolower($now->format("F"));
 }
-$mn = new DateTime("00:00:00 1st ".$_GET['month']);
+if(!isset($_GET['year'])){
+  $_GET['year'] = $now->format("Y");
+}
+$mn = new DateTime("00:00:00 1st ".$_GET['month']." ".$_GET['year']);
 
 // Process
 if(isset($_GET['engage'])){
@@ -237,6 +240,7 @@ if(isset($_GET['add'])){
 
         <p><input type="submit" value="Engage" name="engage" /></p>
         <input type="hidden" name="month" value="<?=$_GET['month']?>" />
+        <input type="hidden" name="year" value="<?=$_GET['year']?>" />
 
         <div class="w1of4">
           <div class="inner">
