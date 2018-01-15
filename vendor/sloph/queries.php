@@ -38,6 +38,29 @@ function select_to_list($result, $types=array(), $key=null){
   return $list;
 }
 
+function select_to_list_sorted($result, $sortkey, $types=array(), $key=null){
+  if(!is_array($types) || !isset($types) || empty($types)) { $types = false; }
+  
+  if($key === null) { $var = $result['variables'][0]; }
+  else { $var = $key; }
+  
+  $list = array();
+
+  if(in_array($var, $result['variables'])){
+    
+    foreach($result['rows'] as $row){
+      if(!$types || ($types && in_array($row[$var." type"], $types))){
+        $list[$row[$sortkey]] = $row[$var];
+      }
+    }
+
+  }else{
+    return false;
+  }
+  ksort($list);
+  return array_values($list);
+}
+
 function construct_uris($ep, $uris){
   $items = array();
   foreach($uris as $uri){
@@ -271,7 +294,26 @@ function query_select_s_between($from, $to, $graph="https://blog.rhiaro.co.uk/")
   FILTER(?d > \"$from\")
   FILTER(?d <= \"$to\")
 }
-ORDER BY DESC(?d)";
+ORDER BY ASC(?d)";
+  return $q;
+}
+
+function query_select_s_between_types($from, $to, $types, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s ?d WHERE {";
+  foreach($types as $type){
+    $i = 0;
+    $q .= "  { GRAPH <$graph> { ?s a $type . ?s as:published ?d . } }";
+    if($i < count($types)){
+      $q .= "  UNION ";
+    }
+    $i++;
+  }
+  $q .= "
+  FILTER(?d > \"$from\")
+  FILTER(?d <= \"$to\")
+}
+ORDER BY ASC(?d)";
   return $q;
 }
 

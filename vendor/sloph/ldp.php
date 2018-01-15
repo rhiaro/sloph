@@ -153,7 +153,7 @@ function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/h
   return $current;
 }
 
-function get_container_dynamic_from_items($ep, $uri, $sort="as:published", $name="", $items=array(), $total=0, $nav=array()){
+function get_container_dynamic_from_items($ep, $uri, $sort="as:published", $name="", $items=array(), $total=0, $nav=array(), $nav_override=false){
   
   // Page it!
   if(isset($_GET['before'])){
@@ -174,6 +174,13 @@ function get_container_dynamic_from_items($ep, $uri, $sort="as:published", $name
   $total_items = new EasyRdf_Literal($total, null, "xsd:nonNegativeInteger");
   $collection_page->add($uri, "as:totalItems", $total_items);
   $collection_page->addResource($page_uri, "as:partOf", $uri);
+
+  if($nav_override){
+    $collection_page->delete($page_uri, "as:prev");
+    $collection_page->delete($page_uri, "as:next");
+    $collection_page->addResource($page_uri, "as:prev", $nav["prev"]);
+    $collection_page->addResource($page_uri, "as:next", $nav["next"]);
+  }
 
   // LDP stuff
   $collection_page->addResource($page_uri, "rdf:type", "ldp:Container");
