@@ -8,6 +8,8 @@ $uri = "https://rhiaro.co.uk".$relUri;
 $ct = $headers["Accept"];
 $acceptheaders = new AcceptHeader($ct);
 
+$tags = get_tags($ep);
+
 $y = $nexty = $_GET['y'];
 $prevy = $y-1;
 if(isset($_GET['m'])){
