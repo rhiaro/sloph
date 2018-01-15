@@ -27,6 +27,9 @@ RewriteRule ^thesis(/)?$ http://dr.amy.gy [L]
 
 RewriteRule ^(writes|articles|likes|checkins|arrives|consumes|eats|acquires|stuff|events|bookmarks|reposts|rsvps|notes|places|follows|where)(/)?$ /types.php?type=$1 [QSA,L]
 
+RewriteRule ^([0-9]{4})(/)?$ /dates.php?y=$1 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})(/)?$ /dates.php?y=$1&m=$2 [QSA,L]
+
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
