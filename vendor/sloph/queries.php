@@ -264,6 +264,17 @@ function query_select_s_type($type, $sort="as:published", $dir="DESC", $limit=0,
   return $q;
 }
 
+function query_select_s_between($from, $to, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s WHERE {
+  GRAPH <$graph> { ?s as:published ?d . }
+  FILTER(?d > \"$from\")
+  FILTER(?d <= \"$to\")
+}
+ORDER BY DESC(?d)";
+  return $q;
+}
+
 function query_select_count_graph($graph="https://blog.rhiaro.co.uk/"){
   $q = "SELECT COUNT(?s) AS ?c WHERE {
   GRAPH <$graph> { ?s ?p ?o . }

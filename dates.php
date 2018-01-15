@@ -1,0 +1,75 @@
+<?
+session_start();
+require_once('vendor/init.php');
+
+$headers = apache_request_headers();
+$relUri = $_SERVER['REQUEST_URI'];
+$uri = "https://rhiaro.co.uk".$relUri;
+$ct = $headers["Accept"];
+$acceptheaders = new AcceptHeader($ct);
+
+$y = $nexty = $_GET['y'];
+$prevy = $y-1;
+if(isset($_GET['m'])){
+    $m = $_GET['m'];
+    $nextm = str_pad($m + 1, 2, '0', STR_PAD_LEFT);
+
+    if($nextm == '13'){
+        $nextm = '01';
+        $nexty = $y + 1;
+    }
+
+    $next_uri = "https://rhiaro.co.uk/$nexty/$nextm/";
+    $prevm = str_pad($m-1, 2, '0', STR_PAD_LEFT);
+    if($prevm == '00'){
+        $prevm = '12';
+        $prevy = $y-1;
+    }else{
+        $prevy = $y;
+    }
+    $prev_uri = "https://rhiaro.co.uk/$prevy/$prevm/";
+
+}else{
+    $m = $nextm = '01';
+    $nexty = $y + 1;
+
+    $next_uri = "https://rhiaro.co.uk/$nexty/";
+    $prev_uri = "https://rhiaro.co.uk/$prevy/";
+}
+
+$after = new DateTime("$y-$m-01T00:00:00+00:00");
+$before = new DateTime("$nexty-$nextm-01T00:00:00+00:00");
+$after = $after->format(DateTime::ATOM);
+$before = $before->format(DateTime::ATOM);
+
+$q = query_select_s_between($after, $before, "https://blog.rhiaro.co.uk/");
+$item_uris = select_to_list(execute_query($ep, $q));
+
+$name = "Posts between $y/$m and $nexty/$nextm";
+$nav = array("next" => $next_uri, "prev" => $prev_uri);
+
+$g = get_container_dynamic_from_items($ep, $uri, 'as:published', $name, $item_uris, count($item_uris), $nav);
+
+$result = conneg($acceptheaders, $g);
+$content = $result['content'];
+$header = $result['header'];
+
+try {
+  if(gettype($content) == "string"){
+    header($header);
+    echo $content;
+  }else{
+    $styled = set_views($ep, $content->resource($content->getUri()));
+    $resource = merge_graphs(array(new EasyRdf_Graph($styled), $content), $content->getUri());
+    $resource = $resource->toRdfPhp();
+
+    include 'views/top.php';
+    include 'views/nav.php';
+    include 'views/'.view_router($resource).'.php';
+    include 'views/end.php';
+
+  }
+}catch(Exception $e){
+  var_dump($e);
+}
+?>
