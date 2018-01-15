@@ -333,8 +333,12 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
   if(isset($nav["prev"])){
     $prev = $uri . "?before=" . $nav["prev"] . "&limit=" . $limit;
   }
-  
-  $page_uri = $uri."?before=".$item_uris[0]."&limit=".$limit;
+
+  if(is_array($item_uris) && count($item_uris) > 0){
+    $page_uri = $uri."?before=".$item_uris[0]."&limit=".$limit;
+  }else{
+    $page_uri = $uri;
+  }
   $page_q = query_construct_collection_page($page_uri, $uri);
   $page_res = execute_query($ep, $page_q);
 

@@ -1,5 +1,8 @@
 <? 
 $items = get_values($resource, 'as:items');
+if($items == null){
+  $items = array();
+}
 $itemsh = count($items);
 if(get_value($resource, 'as:partOf')){
   $collection_uri = get_value($resource, 'as:partOf');
