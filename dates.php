@@ -42,13 +42,14 @@ $before = new DateTime("$nexty-$nextm-01T00:00:00+00:00");
 $after = $after->format(DateTime::ATOM);
 $before = $before->format(DateTime::ATOM);
 
-$q = query_select_s_between($after, $before, "https://blog.rhiaro.co.uk/");
-$item_uris = select_to_list(execute_query($ep, $q));
+$types = ["as:Article", "as:Note"];
+$q = query_select_s_between_types($after, $before, $types, "https://blog.rhiaro.co.uk/");
+$item_uris = select_to_list_sorted(execute_query($ep, $q), 'd');
 
 $name = "Posts between $y/$m and $nexty/$nextm";
 $nav = array("next" => $next_uri, "prev" => $prev_uri);
 
-$g = get_container_dynamic_from_items($ep, $uri, 'as:published', $name, $item_uris, count($item_uris), $nav);
+$g = get_container_dynamic_from_items($ep, $uri, 'as:published', $name, $item_uris, count($item_uris), $nav, true);
 
 $result = conneg($acceptheaders, $g);
 $content = $result['content'];
