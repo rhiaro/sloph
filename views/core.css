@@ -135,7 +135,7 @@ nav a:hover img {
 }
 
 /* Grid */
-.w1of1, .w1of2, .w1of3, .w1of4, .w1of5,
+.w1of1, .w1of2, .w1of3, .w1of4, .w1of5, .w1of7,
 .w2of3, .w3of4, .w2of5, .w3of5, .w4of5 {
     width: 100%;
     word-wrap: break-word;
@@ -147,6 +147,7 @@ nav a:hover img {
   .w1of3 { width: 33%; float: left; }
   .w1of4 { width: 25%; float: left; }
   .w1of5 { width: 20%; float: left; }
+  .w1of7 { width: 14.2%; float: left; }
   .w2of3 { width: 66%; float: left; }
   .w3of4 { width: 75%; float: left; }
   .w2of5 { width: 40%; float: left; }
