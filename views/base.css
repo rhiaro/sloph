@@ -40,6 +40,11 @@ time a {
   color: inherit;
 }
 
+summary {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .object, .object:visited, .object:hover {
   text-decoration: none;
   color: inherit;
