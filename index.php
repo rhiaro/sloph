@@ -116,7 +116,7 @@ try {
       <div class="boxes w1of2"><div class="inner">
         
         <div id="stats">
-          <p>&#128236; IRL I am <span property="as:name foaf:name">Amy</span>. 
+          <p>&#128236; IRL I am <span property="as:name foaf:name">Amy</span>. My current timezone is <?=current_timezone($ep)?>. 
           I store code on <a href="https://github.com/rhiaro" rel="me">github</a> and <a href="https://bitbucket.org/rhiaro">bitbucket</a>. 
           On IRC find me as rhiaro on Freenode, imaginarynet and w3.org.
           On twitter I am <a href="https://twitter.com/rhiaro" rel="me">@rhiaro</a>.

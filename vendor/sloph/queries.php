@@ -136,6 +136,12 @@ WHERE { GRAPH <$graph> { ?s ?p ?o . } }";
   return $q;
 }
 
+function query_select_timezone(){
+  $q = get_prefixes();
+  $q .= "SELECT ?tz WHERE { ?s a time:TimeZone . ?s time:timeZone ?tz . } ";
+  return $q;
+}
+
 function query_construct_outbox($graph="https://blog.rhiaro.co.uk/"){
   // This is temporary and should be replaced with proper paging and stuff.
   // The particular properties are to help dokieli for now.

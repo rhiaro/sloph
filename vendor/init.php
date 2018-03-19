@@ -67,6 +67,7 @@ $_PREF = array(
         ,'dbp' => 'http://dbpedia.org/property/'
         ,'geo' => 'http://www.w3.org/2003/01/geo/wgs84_pos#'
         ,'doap' => 'http://usefulinc.com/ns/doap#'
+        ,'time' => 'http://www.w3.org/2006/time#'
       );
 $_NS = array_flip($_PREF);
 $ns = new EasyRdf_Namespace();
@@ -168,4 +169,15 @@ require_once("sloph/queries.php");
 require_once("sloph/acl.php");
 require_once("sloph/ldp.php");
 
+date_default_timezone_set(current_timezone($ep));
+
+function current_timezone($ep){
+  $q = query_select_timezone();
+  $r = execute_query($ep, $q);
+  if(count($r['rows']) < 1){
+    return 'Europe/Sarajevo';
+  }else{
+    return $r['rows'][0]['tz'];
+  }
+}
 ?>
