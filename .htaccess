@@ -23,7 +23,7 @@ RewriteRule ^outgoing(/)?$ /vendor/sloph/pub.php [QSA,L]
 RewriteRule ^summary(/)?$ /vendor/sloph/summary.php [QSA,L]
 RewriteRule ^set(/)?$ /vendor/sloph/page.php [QSA,L]
 
-RewriteRule ^thesis(/)?$ http://dr.amy.gy [L]
+RewriteRule ^thesis(/)?$ https://rhiaro.github.io/thesis [L]
 
 RewriteRule ^(writes|articles|likes|checkins|arrives|consumes|eats|acquires|stuff|events|bookmarks|reposts|rsvps|notes|places|follows|where)(/)?$ /types.php?type=$1 [QSA,L]
 
