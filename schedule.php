@@ -6,9 +6,9 @@ $base = 'https://rhiaro.co.uk';
 $uri = 'https://rhiaro.co.uk/schedule';
 
 if(isset($_GET['key'])){
-    $key = $_GET['key'];
+    $graph = restricted_graph_by_key($_GET['key']);
 }else{
-    $key = null;
+    $graph = "https://blog.rhiaro.co.uk"
 }
 
 function schedule_text($resource, $subject, $key=null){
