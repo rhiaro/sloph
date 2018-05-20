@@ -1,39 +1,6 @@
 <?
 require_once('../vendor/init.php');
-
-function exchange_rate($currencies, $date){
-  $ep = "https://api.fixer.io/".$date."?base=USD&symbols=".implode(",",$currencies);
-  $resp = file_get_contents($ep);
-  $resp = json_decode($resp, true);
-  $missing = array();
-  $out["date"] = $date;
-  $out["rates"] = $resp["rates"];
-  $out["rates"]["USD"] = 1;
-  foreach($currencies as $c){
-    if(!isset($resp["rates"][$c]) && $c != "USD"){
-      $missing[] = $c;
-    }
-  }
-  if(!empty($missing)){
-    $cs = implode(",", $missing);
-    // This is a rate-limited API which contains currencies not in the fixerio set and only converts to USD.
-    global $CURRENCYAPI;
-    $ep = "http://apilayer.net/api/historical?access_key=$CURRENCYAPI&date=$date&currencies=$cs&format=1";
-    $rates = file_get_contents($ep);
-    $rates = json_decode($rates, true);
-    foreach($missing as $currency){
-      if(isset($rates["quotes"]["USD".$currency])){
-        $out["rates"][$currency] = $rates["quotes"]["USD".$currency];
-      }
-    }
-  }
-  return $out;
-}
-
-function currency_from_cost($cost){
-  $s = structure_cost($cost);
-  return $s["currency"];
-}
+require_once('../vendor/cashcache/cashcache.php');
 
 function posts_between($from, $to){
   // Fetch all acquire posts from triplestore.
@@ -52,53 +19,48 @@ function posts_between($from, $to){
   return $out;
 }
 
-function get_rates($from, $to, $current){
-  $posts = posts_between($from, $to);
+function currency_from_cost($cost){
+  $s = structure_cost($cost);
+  return $s["currency"];
+}
 
-  // Don't re-fetch rates I already have stored
-  $exclude = array();
-  if(file_exists($current)){
-    $ar = json_decode(file_get_contents($current), true);
-    $exclude = array_keys($ar);
-  }
+function convert_all($ep, $posts){
   
-  $currencies = array();
-  $rates = array();
   foreach($posts as $uri => $data){
-    // Update this to match what your posts look like, including how to get the currency code from each one.
-    $date = get_value(array($uri => $data), 'as:published');
+
+    $date = get_value(array($uri=>$data), 'as:published');
     $date = new DateTime($date);
-    $d = $date->format("Y-m-d");
-    if(!in_array($d, $exclude)){
-      $code = currency_from_cost(get_value(array($uri => $data), 'asext:cost'));
-      if(!isset($currencies[$d]) || !in_array($code, $currencies[$d])){
-        $currencies[$d][] = $code;
+    $datef = $date->format("Y-m-d");
+    
+    $cost = structure_cost(get_value(array($uri => $data), 'asext:cost'));
+    $amount = $cost["value"];
+    $currency = $cost["currency"];
+
+    if($amount == "0"){
+      $usd = $eur = $gbp = 0;
+    }else{
+
+      $existing = read_rates($date);
+      if(!isset($existing["EUR"][$currency])){
+        $rates = get_fixer_deprecated($date, $currency);
+        write_rates($date, $rates);
       }
+      
+      $eur = convert_any_to_eur($amount, $currency, $date);
+      $usd = convert_eur_to_any($eur, "USD", $date);
+      $gbp = convert_eur_to_any($eur, "GBP", $date);
     }
+
+    echo $date->format("Y-m-d H:i:s").": $amount $currency ($usd USD / $eur EUR / $gbp GBP)";
+    echo "<hr/>";
+
   }
-  foreach($currencies as $date => $curs){
-    $r = exchange_rate($curs, $date);
-    $rates[$date] = $r["rates"];
-  }
-  return $rates;
+
 }
 
-function write_rates($rates, $fn){
-  if(file_exists($fn)){
-    $existing = json_decode(file_get_contents($fn), true);
-    if(is_array($existing)){
-      $rates = array_merge($existing, $rates);
-    }
-  }
-  $json = json_encode($rates);
-  file_put_contents($fn, $json);
-  header('Content-Type: application/json');
-  echo $json;
-}
 
 $from = new DateTime("2016-01-01");
-$to = new DateTime("2017-01-10");
-$current = "rates.json";
-$rates = get_rates($from, $to, $current);
-write_rates($rates, $current);
+$to = new DateTime("2016-01-23");
+$posts = posts_between($from, $to);
+convert_all($ep, $posts);
 ?>
