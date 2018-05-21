@@ -133,6 +133,9 @@ nav a:hover img {
 .tags a:hover {
   background-color: #ccc;
 }
+.wee {
+  font-size: 1em;
+}
 
 /* Grid */
 .w1of1, .w1of2, .w1of3, .w1of4, .w1of5, .w1of7,
