@@ -201,7 +201,15 @@ function aggregate_acquires($posts, $from, $to, $alltags){
             "cost" => get_value(array($uri => $post), "asext:cost")
         );
     }
-    $out['accomMean'] = number_format($out['accomEur'] / $days, 2);
+    if($days > 0){
+        $out['accomMean'] = number_format($out['accomEur'] / $days, 2);
+    }else{ $out['accomMean'] = "n/a"; }
+    if($weeks > 0){
+        $out['accomWeeks'] = number_format($out['accomEur'] / $weeks, 2);
+    }else{ $out['accomWeeks'] = "n/a"; }
+    if($months > 0){
+        $out['accomMonth'] = number_format($out['accomEur'] / $months, 2);
+    }else{ $out['accomMonth'] = "n/a"; }
 
     // Tags
     $tags = tally_tags($typed);
