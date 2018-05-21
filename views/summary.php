@@ -28,7 +28,7 @@
 
       <p>Some things I acquired the most often were <?=$acquires['toptags']?>. I spent &euro;<?=$acquires['accomEur']?> on <a href="https://rhiaro.co.uk/tags/accommodation">accommodation</a> (<?=$acquires['accomNum']?> place<?=$acquires['accomNum'] > 1 ? "s" : ""?>). I spent &euro;<?=$acquires['transitEur']?> on <a href="https://rhiaro.co.uk/tags/transit">transit</a>/<a href="https://rhiaro.co.uk/tags/transport">transport</a>, over <?=$acquires['transitNum']?> journeys<?=$acquires['transitMeans']?>.</p>
 
-      <p>On <?=$acquires['free']?> occasions I got something for free. The most expensive thing I bought was <?=$acquires['dearest']['content']?> (&euro;<?=$acquires['dearest']['amountEur']?>) and the cheapest thing (which wasn't free) was <?=$acquires['cheapest']['content']?> (&euro;<?=$acquires['cheapest']['amountEur']?>). I spent on average &euro;<?=$acquires['meaneur']?> per time. Three other random categories of expenditure are: <?=$acquires['othertags']?>.</p>
+      <p>On <?=$acquires['free']?> occasions I got something for free. The most expensive thing I bought was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['dearest']['content']?></a> (&euro;<?=$acquires['dearest']['amountEur']?>) and the cheapest thing (which wasn't free) was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['cheapest']['content']?></a> (&euro;<?=$acquires['cheapest']['amountEur']?>). I spent on average &euro;<?=$acquires['meaneur']?> per time. Three other random categories of expenditure are: <?=$acquires['othertags']?>.</p>
 
       <p><?=$acquires['photosp']?>% of my acquire posts have photos attached. You can see them all at <a href="/stuff">/stuff</a>. Here's a random one (this was <?=$acquires['photocost']?> and I acquired it on <?=$acquires['photodate']->format("jS F Y \a\\t h:ia")?>):</p>
       <p class="w1of1" style="text-align:center;"><img src=<?=$acquires['photo']?> alt="<?=$acquires['photocont']?>" title="<?=$acquires['photocont']?>" /></p>
@@ -37,6 +37,15 @@
       <p>I logged <?=$consumes['total']?> meals or snacks, an average of <?=number_format($consumes['day'], 1)?> per day. The thing I consumed most was <?=$consumes['top']?>, followed by <?=$consumes['toptags']?>. I consumed <?=$consumes['top']?> on average <?=number_format($consumes['topday'], 1)?> times per day.</p>
 
       <p>One random thing I ate was <?=$consumes['random']?>. You can see everything at <a href="/eats">/eats</a>.</p>
+
+      <h2>Shelter</h2>
+
+      <p>I lay my head in (approximately; logs may be incomplete) <?=count($acquires['accom'])?> different places:</p>
+      <ul>
+        <?foreach($acquires['accom'] as $accom):?>
+          <li><a href="<?=$accom['uri']?>"><?=$accom['content']?></a> (<?=$accom['cost']?>)</li>
+        <?endforeach?>
+      </ul>
 
       <h2>Socialling</h2>
 

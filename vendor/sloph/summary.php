@@ -183,6 +183,13 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     foreach($accom_posts as $uri => $post){
         $eur = get_value(array($uri=>$post), "asext:amountEur");
         $out['accomEur'] += $eur;
+
+        $out['accom'][] = array(
+            "uri" => $uri,
+            "content" => get_value(array($uri => $post), "as:content"),
+            "date" => get_value(array($uri => $post), "as:published"),
+            "cost" => get_value(array($uri => $post), "asext:cost")
+        );
     }
 
     // Tags
