@@ -91,10 +91,16 @@ function insert_conversion($ep, $uri, $currency, $amount){
     return null;
   }
 
-  $turtle = '<'.$uri.'> '.$p.' """'.$amount.'""" .';
-  $q = query_insert($turtle);
-  $r = execute_query($ep, $q);
-  return $r;
+  $del = query_delete_objects($uri, $p);
+  $delres = execute_query($ep, $del);
+  if($delres){
+    $turtle = '<'.$uri.'> '.$p.' """'.$amount.'""" .';
+    $q = query_insert($turtle);
+    $r = execute_query($ep, $q);
+    return $r;
+  }else{
+    return false;
+  }
 }
 
 if(isset($_GET['from'])){
