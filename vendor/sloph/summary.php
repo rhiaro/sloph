@@ -74,6 +74,10 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $weeks = floor($days / 7);
     $months = floor($days / 30);
 
+    $tagp = "https://rhiaro.co.uk/tags";
+    $accom_posts = array();
+    $transit_posts = array();
+
     $out['total'] = count($typed);
     $out['totalusd'] = 0;
     $out['totalgbp'] = 0;
@@ -89,10 +93,17 @@ function aggregate_acquires($posts, $from, $to, $alltags){
         $structured_cost = structure_cost($cost);
         $out['currencies'][] = $structured_cost['currency'];
 
-        $tags = get_values(array($uri=>$post), "as:tag");
         $photo = get_value(array($uri=>$post), "as:image");
         if($photo){
           $photoposts[$uri] = $post;
+        }
+
+        $tags = get_values(array($uri=>$post), "as:tag");
+        if(in_array("$tagp/accommodation", $tags) || in_array("$tagp/shelter", $tags)){
+            $accom_posts[$uri] = $post;
+        }
+        if(in_array("$tagp/transit", $tags) || in_array("$tagp/transport", $tags)){
+            $transit_posts[$uri] = $post;
         }
     }
 
@@ -114,6 +125,41 @@ function aggregate_acquires($posts, $from, $to, $alltags){
         $out['day'] = "n/a"; 
     }
 
+    // Get specific stats for transit
+    $out['transitNum'] = count($transit_posts);
+    $out['transitEur'] = 0;
+    foreach($transit_posts as $uri => $post){
+        $eur = get_value(array($uri=>$post), "asext:amountEur");
+        $out['transitEur'] += $eur;
+    }
+    $transit_tags = tally_tags($transit_posts, true);
+    if(array_key_exists("$tagp/transit", $transit_tags)){
+        unset($transit_tags["$tagp/transit"]);
+    }
+    if(array_key_exists("$tagp/travel", $transit_tags)){
+        unset($transit_tags["$tagp/travel"]);
+    }
+    if(array_key_exists("$tagp/transport", $transit_tags)){
+        unset($transit_tags["$tagp/transport"]);
+    }
+    if(count($transit_tags) > 0){
+        foreach($transit_tags as $tag => $num){
+          $means = str_replace($tagp."/", "", $tag);
+          $meansAr[] = "$num by $means";
+        }
+        $out['transitMeans'] = " (".implode(", ", $meansAr).")";
+    }else{
+        $out['transitMeans'] = "";
+    }
+
+    // Get specific stats for accommodation
+    $out['accomNum'] = count($accom_posts);
+    $out['accomEur'] = 0;
+    foreach($accom_posts as $uri => $post){
+        $eur = get_value(array($uri=>$post), "asext:amountEur");
+        $out['accomEur'] += $eur;
+    }
+
     // Tags
     $tags = tally_tags($typed);
     $top = array_slice($tags, 0, 11);
@@ -121,20 +167,20 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $out['tags'] = count($tags);
 
     // Get specific stats about food purchases
-    if(array_key_exists("https://rhiaro.co.uk/tags/food", $top)){
-        unset($top["https://rhiaro.co.uk/tags/food"]);
-        $food = $tags["https://rhiaro.co.uk/tags/food"];
-        if(isset($tags["https://rhiaro.co.uk/tags/restaurant"])){
-            $rest = $tags["https://rhiaro.co.uk/tags/restaurant"];
-            unset($top["https://rhiaro.co.uk/tags/restaurant"]);
+    if(array_key_exists("$tagp/food", $top)){
+        unset($top["$tagp/food"]);
+        $food = $tags["$tagp/food"];
+        if(isset($tags["$tagp/restaurant"])){
+            $rest = $tags["$tagp/restaurant"];
+            unset($top["$tagp/restaurant"]);
         }
-        if(isset($tags["https://rhiaro.co.uk/tags/takeaway"])){
-            $take = $tags["https://rhiaro.co.uk/tags/takeaway"];
-            unset($top["https://rhiaro.co.uk/tags/takeaway"]);
+        if(isset($tags["$tagp/takeaway"])){
+            $take = $tags["$tagp/takeaway"];
+            unset($top["$tagp/takeaway"]);
         }
         $restp = $rest / $food * 100;
         $takep = $take / $food * 100;
-        $foodstr = ". I bought <a href=\"https://rhiaro.co.uk/tags/food\">food</a> on ".$food." occasions, ".number_format($restp, 1)."% of the time in <a href=\"https://rhiaro.co.uk/tags/restaurant\">restaurants</a> and ".number_format($takep, 1)."% of the time for <a href=\"https://rhiaro.co.uk/tags/takeaway\">takeaway</a>";
+        $foodstr = ". I bought <a href=\"$tagp/food\">food</a> on ".$food." occasions, ".number_format($restp, 1)."% of the time in <a href=\"$tagp/restaurant\">restaurants</a> and ".number_format($takep, 1)."% of the time for <a href=\"$tagp/takeaway\">takeaway</a>";
     }else{
         $foodstr = "";
     }
