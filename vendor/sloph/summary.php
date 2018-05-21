@@ -68,103 +68,96 @@ function aggregate_checkins($posts, $from, $to, $locations){
 }
 
 function aggregate_acquires($posts, $from, $to, $alltags){
+    $typed = get_type($posts, "asext:Acquire");
+    $diff = $from->diff($to);
+    $days = $diff->format("%a");
+    $weeks = floor($days / 7);
+    $months = floor($days / 30);
 
-  $typed = get_type($posts, "asext:Acquire");
-  $diff = $from->diff($to);
-  $days = $diff->format("%a");
-  $weeks = floor($days / 7);
-  $months = floor($days / 30);
+    $out['total'] = count($typed);
+    $out['totalusd'] = 0;
+    $out['totalgbp'] = 0;
+    $out['totaleur'] = 0;
+    $out['currencies'] = array();
 
-  $out['total'] = count($typed);
-  $out['totalusd'] = 0;
-  $out['currencies'] = array();
+    foreach($typed as $uri => $post){
+        $cost = get_value(array($uri=>$post), "asext:cost");
+        $out['totalusd'] += get_value(array($uri=>$post), "asext:amountUsd");
+        $out['totaleur'] += get_value(array($uri=>$post), "asext:amountEur");
+        $out['totalgbp'] += get_value(array($uri=>$post), "asext:amountGbp");
 
-  $photoposts = array();
+        $structured_cost = structure_cost($cost);
+        $out['currencies'][] = $structured_cost['currency'];
 
-  $rates = json_decode(file_get_contents("rates.json"), true);
-  // OMG this is stupid.
-  // Accounting for terrible human input.
-  $cheat = array("&pound;" => "GBP", "&dollar;" => "USD", "$" => "USD", "£" => "GBP", "QR" => "QAR", "&euro;" => "EUR");
-  foreach($typed as $uri => $post){
-    
-    $cost = get_value(array($uri=>$post), "asext:cost");
-    $date = new DateTime(get_value(array($uri=>$post), "as:published"));
-    $tags = get_values(array($uri=>$post), "as:tag");
-    $photo = get_value(array($uri=>$post), "as:image");
-    $convert = array();
-    if($photo){
-      $photoposts[$uri] = $post;
+        $tags = get_values(array($uri=>$post), "as:tag");
+        $photo = get_value(array($uri=>$post), "as:image");
+        if($photo){
+          $photoposts[$uri] = $post;
+        }
     }
 
-    $structured_cost = structure_cost($cost);
-    $code = $structured_cost["currency"];
-    $amt = $structured_cost["value"];
-    
-    if($code){
-      $out['currencies'][] = $code;
-      $d = $date->format("Y-m-d");
-      if(isset($rates[$d]) && array_key_exists($code, $rates[$d])){
-        $usd = $amt / $rates[$d][$code];
-        $out['totalusd'] += $usd;
-      }
-      // $typed[$uri]["cost"] = $structured_cost;
+    $out['currencies'] = array_unique($out['currencies']);
+
+    if($weeks > 0) { 
+        $out['week'] = number_format($out['totaleur'] / $weeks, 2); 
+    }else{ 
+        $out['week'] = "n/a"; 
     }
-  }
-  
-  $out['currencies'] = array_unique($out['currencies']);
-
-  if($weeks > 0) { $out['week'] = number_format($out['totalusd'] / $weeks, 2); }else{ $out['week'] = "n/a"; }
-  if($months > 0) { $out['month'] = number_format($out['totalusd'] / $months, 2); }else{ $out['month'] = "n/a"; }
-  if($days > 0) { $out['day'] = number_format($out['totalusd'] / $days, 2); }else{ $out['day'] = "n/a"; }
-
-  // Tags
-  $tags = tally_tags($typed);
-  $top = array_slice($tags, 0, 11);
-  $others = array_diff_assoc($tags, $top);
-  $out['tags'] = count($tags);
-  if(array_key_exists("https://rhiaro.co.uk/tags/food", $top)){
-    unset($top["https://rhiaro.co.uk/tags/food"]);
-    $food = $tags["https://rhiaro.co.uk/tags/food"];
-    if(isset($tags["https://rhiaro.co.uk/tags/restaurant"])){
-      $rest = $tags["https://rhiaro.co.uk/tags/restaurant"];
-      unset($top["https://rhiaro.co.uk/tags/restaurant"]);
+    if($months > 0) { 
+        $out['month'] = number_format($out['totaleur'] / $months, 2); 
+    }else{ 
+        $out['month'] = "n/a"; 
     }
-    if(isset($tags["https://rhiaro.co.uk/tags/takeaway"])){
-      $take = $tags["https://rhiaro.co.uk/tags/takeaway"];
-      unset($top["https://rhiaro.co.uk/tags/takeaway"]);
+    if($days > 0) { 
+        $out['day'] = number_format($out['totaleur'] / $days, 2); 
+    }else{ 
+        $out['day'] = "n/a"; 
     }
-    $restp = $rest / $food * 100;
-    $takep = $take / $food * 100;
-    $foodstr = ". I bought <a href=\"https://rhiaro.co.uk/tags/food\">food</a> on ".$food." occasions, ".number_format($restp, 1)."% of the time in <a href=\"https://rhiaro.co.uk/tags/restaurant\">restaurants</a> and ".number_format($takep, 1)."% of the time for <a href=\"https://rhiaro.co.uk/tags/takeaway\">takeaway</a>";
-  }else{
-    $foodstr = "";
-  }
 
-  $rand = array_rand($others, 3);
-  $rand_tags[$rand[0]] = $others[$rand[0]];
-  $rand_tags[$rand[1]] = $others[$rand[1]];
-  $rand_tags[$rand[2]] = $others[$rand[2]];
-  $out['othertags'] = top_tags($rand_tags, 3, $alltags);
-  $out['toptags'] = top_tags($top, 6, $alltags).$foodstr;
+    // Tags
+    $tags = tally_tags($typed);
+    $top = array_slice($tags, 0, 11);
+    $others = array_diff_assoc($tags, $top);
+    $out['tags'] = count($tags);
 
-  // Photos
-  $randph = array_rand($photoposts);
-  $out['photo'] = get_value(array($randph => $photoposts[$randph]), "as:image");
-  $out['photodate'] = new DateTime(get_value(array($randph => $photoposts[$randph]), "as:published"));
-  $out['photocost'] = get_value(array($randph => $photoposts[$randph]), "asext:cost");
-  $out['photocont'] = get_value(array($randph => $photoposts[$randph]), "as:content");
-  $perc = count($photoposts) / count($typed) * 100;
-  $out['photosp'] = number_format($perc, 1);
+    // Get specific stats about food purchases
+    if(array_key_exists("https://rhiaro.co.uk/tags/food", $top)){
+        unset($top["https://rhiaro.co.uk/tags/food"]);
+        $food = $tags["https://rhiaro.co.uk/tags/food"];
+        if(isset($tags["https://rhiaro.co.uk/tags/restaurant"])){
+            $rest = $tags["https://rhiaro.co.uk/tags/restaurant"];
+            unset($top["https://rhiaro.co.uk/tags/restaurant"]);
+        }
+        if(isset($tags["https://rhiaro.co.uk/tags/takeaway"])){
+            $take = $tags["https://rhiaro.co.uk/tags/takeaway"];
+            unset($top["https://rhiaro.co.uk/tags/takeaway"]);
+        }
+        $restp = $rest / $food * 100;
+        $takep = $take / $food * 100;
+        $foodstr = ". I bought <a href=\"https://rhiaro.co.uk/tags/food\">food</a> on ".$food." occasions, ".number_format($restp, 1)."% of the time in <a href=\"https://rhiaro.co.uk/tags/restaurant\">restaurants</a> and ".number_format($takep, 1)."% of the time for <a href=\"https://rhiaro.co.uk/tags/takeaway\">takeaway</a>";
+    }else{
+        $foodstr = "";
+    }
 
-  return $out;
-}
+    // Get random tags
+    $rand = array_rand($others, 3);
+    $rand_tags[$rand[0]] = $others[$rand[0]];
+    $rand_tags[$rand[1]] = $others[$rand[1]];
+    $rand_tags[$rand[2]] = $others[$rand[2]];
+    $out['othertags'] = top_tags($rand_tags, 3, $alltags);
+    $out['toptags'] = top_tags($top, 6, $alltags).$foodstr;
 
-function convert_to_usd($from, $amount, $rates){
-  if(isset($rates["rates"][$from])){
-    return $amount / $rates["rates"][$from];
-  }else{
-    return false;
-  }
+    // Photos
+    $randph = array_rand($photoposts);
+    $out['photo'] = get_value(array($randph => $photoposts[$randph]), "as:image");
+    $out['photodate'] = new DateTime(get_value(array($randph => $photoposts[$randph]), "as:published"));
+    $out['photocost'] = get_value(array($randph => $photoposts[$randph]), "asext:cost");
+    $out['photocont'] = get_value(array($randph => $photoposts[$randph]), "as:content");
+    $perc = count($photoposts) / count($typed) * 100;
+    $out['photosp'] = number_format($perc, 1);
+
+    return $out;
+
 }
 
 function aggregate_consumes($posts, $from, $to, $alltags){
