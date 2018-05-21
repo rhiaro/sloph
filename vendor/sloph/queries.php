@@ -775,6 +775,12 @@ function query_delete($uri){
   return $q;
 }
 
+function query_delete_objects($uri, $p, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "DELETE FROM <$graph> { <$uri> $p ?o . }";
+  return $q;
+}
+
 function query_insert($turtle, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "INSERT INTO <$graph> { ".$turtle." }";
