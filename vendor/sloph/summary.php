@@ -88,6 +88,10 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $out['totaleur'] = 0;
     $out['currencies'] = array();
 
+    $out['food'] = array();
+    $out['food']['groceriesEur'] = 0;
+    $out['food']['foodEur'] = 0;
+
     foreach($typed as $uri => $post){
         $cost = get_value(array($uri=>$post), "asext:cost");
         $eur = get_value(array($uri=>$post), "asext:amountEur");
@@ -124,6 +128,12 @@ function aggregate_acquires($posts, $from, $to, $alltags){
         }
         if(in_array("$tagp/transit", $tags) || in_array("$tagp/transport", $tags)){
             $transit_posts[$uri] = $post;
+        }
+        if(in_array("$tagp/food", $tags)){
+            $out['food']['foodEur'] += $eur;
+        }
+        if(in_array("$tagp/groceries", $tags)){
+            $out['food']['groceriesEur'] += $eur;
         }
     }
 
@@ -191,6 +201,7 @@ function aggregate_acquires($posts, $from, $to, $alltags){
             "cost" => get_value(array($uri => $post), "asext:cost")
         );
     }
+    $out['accomMean'] = number_format($out['accomEur'] / $days, 2);
 
     // Tags
     $tags = tally_tags($typed);
@@ -200,22 +211,26 @@ function aggregate_acquires($posts, $from, $to, $alltags){
 
     // Get specific stats about food purchases
     if(array_key_exists("$tagp/food", $top)){
-        unset($top["$tagp/food"]);
         $food = $tags["$tagp/food"];
-        if(isset($tags["$tagp/restaurant"])){
-            $rest = $tags["$tagp/restaurant"];
-            unset($top["$tagp/restaurant"]);
-        }
-        if(isset($tags["$tagp/takeaway"])){
-            $take = $tags["$tagp/takeaway"];
-            unset($top["$tagp/takeaway"]);
-        }
-        $restp = $rest / $food * 100;
-        $takep = $take / $food * 100;
-        $foodstr = ". I bought <a href=\"$tagp/food\">food</a> on ".$food." occasions, ".number_format($restp, 1)."% of the time in <a href=\"$tagp/restaurant\">restaurants</a> and ".number_format($takep, 1)."% of the time for <a href=\"$tagp/takeaway\">takeaway</a>";
-    }else{
-        $foodstr = "";
-    }
+    }else{ $food = 0; }
+    if(array_key_exists("$tagp/groceries", $top)){
+        $groceries = $tags["$tagp/groceries"];
+    }else{ $groceries = 0; }
+    if(isset($tags["$tagp/restaurant"])){
+        $rest = $tags["$tagp/restaurant"];
+    }else{ $rest = 0; }
+    if(isset($tags["$tagp/takeaway"])){
+        $take = $tags["$tagp/takeaway"];
+    }else{ $take = 0; }
+    $restp = $rest / $food * 100;
+    $takep = $take / $food * 100;
+
+    $out['food']['total'] = $food;
+    $out['food']['foodEur'] = number_format($out['food']['foodEur'], 2);
+    $out['food']['restaurant'] = number_format($restp, 1);
+    $out['food']['takeaway'] = number_format($takep, 1);
+    $out['food']['groceries'] = $groceries;
+    $out['food']['groceriesEur'] = number_format($out['food']['groceriesEur'], 2);
 
     // Get random tags
     $rand = array_rand($others, 3);
@@ -223,7 +238,7 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $rand_tags[$rand[1]] = $others[$rand[1]];
     $rand_tags[$rand[2]] = $others[$rand[2]];
     $out['othertags'] = top_tags($rand_tags, 3, $alltags);
-    $out['toptags'] = top_tags($top, 6, $alltags).$foodstr;
+    $out['toptags'] = top_tags($top, 6, $alltags);
 
     // Photos
     $randph = array_rand($photoposts);
