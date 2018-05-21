@@ -62,15 +62,65 @@ function convert_all($ep, $posts){
       $gbp = convert_eur_to_any($eur, "GBP", $date);
     }
 
-    echo $date->format("Y-m-d H:i:s").": $amount $currency ($usd USD / $eur EUR / $gbp GBP)";
+    echo "<p><strong>".$date->format("Y-m-d H:i:s").": <a href='$uri' target='_blank'>$uri</a></strong></p>";
+    echo "<p>".implode(" ",$cost)."</p>";
+    echo "<p>USD: $usd (";
+    $rusd = insert_conversion($ep, $uri, "USD", $usd);
+    if($rusd){ echo "inserted"; }else{ echo "failed"; }
+    echo ") | EUR: $eur (";
+    $reur = insert_conversion($ep, $uri, "EUR", $eur);
+    if($reur){ echo "inserted"; }else{ echo "failed"; }
+    echo ") | GBP: $gbp (";
+    $rgbp = insert_conversion($ep, $uri, "GBP", $gbp);
+    if($rgbp){ echo "inserted"; }else{ echo "failed"; }
+    echo ")</p>";
     echo "<hr/>";
-
   }
 
 }
 
-$from = new DateTime("2016-01-01");
-$to = new DateTime("2016-05-21");
+function insert_conversion($ep, $uri, $currency, $amount){
+  if($currency == "USD"){
+    $p = "asext:amountUsd";
+  }elseif($currency == "EUR"){
+    $p = "asext:amountEur";
+  }elseif($currency == "GBP"){
+    $p = "asext:amountGbp";
+  }else{
+    echo "Unsupported currencty $currency";
+    return null;
+  }
+
+  $turtle = '<'.$uri.'> '.$p.' """'.$amount.'""" .';
+  $q = query_insert($turtle);
+  $r = execute_query($ep, $q);
+  return $r;
+}
+
+if(isset($_GET['from'])){
+  $from = $_GET['from'];
+}else{
+  $from = "24 hours ago";
+}
+
+if(isset($_GET['to'])){
+  $to = $_GET['to'];
+}else{
+  $to = "now";
+}
+$from = new DateTime($from);
+$to = new DateTime($to);
+
+?>
+<!doctype html>
+<html>
+  <head><title>Currency conversion</title></head>
+  <body>
+    <h1>Posts between <?=$from->format("Y-m-d")?> and <?=$to->format("Y-m-d")?></h1>
+<?
 $posts = posts_between($from, $to);
 convert_all($ep, $posts);
 ?>
+
+  </body>
+</html>
