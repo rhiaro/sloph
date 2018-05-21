@@ -40,13 +40,24 @@ function convert_all($ep, $posts){
       $usd = $eur = $gbp = 0;
     }else{
 
-      $existing = read_rates($date);
-      if(!isset($existing["EUR"][$currency])){
-        $rates = get_fixer_deprecated($date, $currency);
-        write_rates($date, $rates);
+      if($currency == "EUR"){
+        $eur = $amount;
+      }else{
+
+        $existing = read_rates($date);
+        if(!isset($existing["EUR"][$currency])){
+          $rates = get_fixer_deprecated($date, $currency);
+          if(!array_key_exists($currency, $rates)){
+            if(!isset($existing["USD"][$currency])){
+              $usdrates = get_currencylayer_rates($date, $currency);
+              write_rates($date, $usdrates, "USD");
+            }
+          }
+          write_rates($date, $rates);
+        }
+        
+        $eur = convert_any_to_eur($amount, $currency, $date);
       }
-      
-      $eur = convert_any_to_eur($amount, $currency, $date);
       $usd = convert_eur_to_any($eur, "USD", $date);
       $gbp = convert_eur_to_any($eur, "GBP", $date);
     }
@@ -58,9 +69,8 @@ function convert_all($ep, $posts){
 
 }
 
-
 $from = new DateTime("2016-01-01");
-$to = new DateTime("2016-01-23");
+$to = new DateTime("2016-05-21");
 $posts = posts_between($from, $to);
 convert_all($ep, $posts);
 ?>
