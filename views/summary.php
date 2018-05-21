@@ -22,6 +22,9 @@
       <?endfor?>
       and was <a href="<?=$checkins['top'][count($checkins['top'])-1]['location']?>"><?=$checkins['top'][count($checkins['top'])-1]['label']?></a> for <?=$checkins['top'][count($checkins['top'])-1]['duration']?>.
       </p>
+
+      <p>I spent &euro;<?=$acquires['transitEur']?> on <a href="https://rhiaro.co.uk/tags/transit">transit</a>/<a href="https://rhiaro.co.uk/tags/transport">transport</a>, over <?=$acquires['transitNum']?> journeys<?=$acquires['transitMeans']?>.</p>
+
       <p>I planned x journeys, to y different places. I travelled primarily by x, followed by y and z. Some places I visited are a, b, c, d, e and f.</p>
 
       <h2 id="shelter">Shelter</h2>
@@ -45,7 +48,7 @@
       <h2 id="acquisitions">Acquisitions</h2>
       <p>I purchased or otherwise acquired something on <?=$acquires['total']?> occasions, spending a total of approximately &euro;<?=$acquires['totaleur']?>. I used <?=count($acquires['currencies'])?> different currencies (<?=implode(", ", $acquires['currencies'])?>). This is an average expenditure of &euro;<?=$acquires['day']?> per day, &euro;<?=$acquires['week']?> per week, or &euro;<?=$acquires['month']?> per month. </p>
 
-      <p>Some things I acquired the most often were <?=$acquires['toptags']?>. I spent &euro;<?=$acquires['transitEur']?> on <a href="https://rhiaro.co.uk/tags/transit">transit</a>/<a href="https://rhiaro.co.uk/tags/transport">transport</a>, over <?=$acquires['transitNum']?> journeys<?=$acquires['transitMeans']?>.</p>
+      <p>Some things I acquired the most often were <?=$acquires['toptags']?>. </p>
 
       <p>On <?=$acquires['free']?> occasions I got something for free. The most expensive thing I bought was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['dearest']['content']?></a> (&euro;<?=$acquires['dearest']['amountEur']?>) and the cheapest thing (which wasn't free) was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['cheapest']['content']?></a> (&euro;<?=$acquires['cheapest']['amountEur']?>). I spent on average &euro;<?=$acquires['meaneur']?> per time. Three other random categories of expenditure are: <?=$acquires['othertags']?>.</p>
 
