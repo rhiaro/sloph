@@ -78,6 +78,10 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $accom_posts = array();
     $transit_posts = array();
 
+    $cheapest = array("amountEur" => 0);
+    $dearest = array("amountEur" => 0);
+    $free = 0;
+
     $out['total'] = count($typed);
     $out['totalusd'] = 0;
     $out['totalgbp'] = 0;
@@ -86,9 +90,25 @@ function aggregate_acquires($posts, $from, $to, $alltags){
 
     foreach($typed as $uri => $post){
         $cost = get_value(array($uri=>$post), "asext:cost");
+        $eur = get_value(array($uri=>$post), "asext:amountEur");
         $out['totalusd'] += get_value(array($uri=>$post), "asext:amountUsd");
-        $out['totaleur'] += get_value(array($uri=>$post), "asext:amountEur");
+        $out['totaleur'] += $eur;
         $out['totalgbp'] += get_value(array($uri=>$post), "asext:amountGbp");
+
+        if($eur == 0){
+            $free += 1;
+        }else{
+          if($cheapest['amountEur'] == 0 || $eur < $cheapest['amountEur']){
+            $cheapest['amountEur'] = $eur;
+            $cheapest['uri'] = $uri;
+            $cheapest['content'] = get_value(array($uri=>$post), "as:content");
+          }
+          if($dearest['amountEur'] == 0 || $eur > $dearest['amountEur']){
+            $dearest['amountEur'] = $eur;
+            $dearest['uri'] = $uri;
+            $dearest['content'] = get_value(array($uri=>$post), "as:content");
+          }
+        }
 
         $structured_cost = structure_cost($cost);
         $out['currencies'][] = $structured_cost['currency'];
@@ -106,6 +126,11 @@ function aggregate_acquires($posts, $from, $to, $alltags){
             $transit_posts[$uri] = $post;
         }
     }
+
+    $out['cheapest'] = $cheapest;
+    $out['dearest'] = $dearest;
+    $out['free'] = $free;
+    $out['meaneur'] = number_format($out['totaleur'] / $out['total'], 2);
 
     $out['currencies'] = array_unique($out['currencies']);
 

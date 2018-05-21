@@ -28,7 +28,7 @@
 
       <p>Some things I acquired the most often were <?=$acquires['toptags']?>. I spent &euro;<?=$acquires['accomEur']?> on <a href="https://rhiaro.co.uk/tags/accommodation">accommodation</a> (<?=$acquires['accomNum']?> place<?=$acquires['accomNum'] > 1 ? "s" : ""?>). I spent &euro;<?=$acquires['transitEur']?> on <a href="https://rhiaro.co.uk/tags/transit">transit</a>/<a href="https://rhiaro.co.uk/tags/transport">transport</a>, over <?=$acquires['transitNum']?> journeys<?=$acquires['transitMeans']?>.</p>
 
-      <p>On x occasions I got something for free. The most expensive thing I bought was x and the cheapest thing (which wasn't free) was y. I spent on average z per time. Three other random categories of expenditure are: <?=$acquires['othertags']?>.</p>
+      <p>On <?=$acquires['free']?> occasions I got something for free. The most expensive thing I bought was <?=$acquires['dearest']['content']?> (&euro;<?=$acquires['dearest']['amountEur']?>) and the cheapest thing (which wasn't free) was <?=$acquires['cheapest']['content']?> (&euro;<?=$acquires['cheapest']['amountEur']?>). I spent on average &euro;<?=$acquires['meaneur']?> per time. Three other random categories of expenditure are: <?=$acquires['othertags']?>.</p>
 
       <p><?=$acquires['photosp']?>% of my acquire posts have photos attached. You can see them all at <a href="/stuff">/stuff</a>. Here's a random one (this was <?=$acquires['photocost']?> and I acquired it on <?=$acquires['photodate']->format("jS F Y \a\\t h:ia")?>):</p>
       <p class="w1of1" style="text-align:center;"><img src=<?=$acquires['photo']?> alt="<?=$acquires['photocont']?>" title="<?=$acquires['photocont']?>" /></p>
