@@ -29,5 +29,6 @@ services:
       - 80:80
     volumes:
       - /home/rhiaro/Documents/rhiaro/sloph:/var/www/html
+      - /home/rhiaro/Documents/rhiaro/apps:/var/www/html/apps
     depends_on:
       - mysql
