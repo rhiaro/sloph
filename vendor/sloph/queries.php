@@ -712,6 +712,22 @@ ORDER BY DESC(?c)";
   return $q;
 }
 
+function query_construct_tag_collections($uri=null){
+  if($uri == null){
+    $uri = "?post";
+  }else{
+    $uri = "<".$uri.">";
+  }
+  $q = get_prefixes();
+  $q .= "CONSTRUCT {
+    ?tag a as:Collection .
+    ?tag as:items $uri .
+  } WHERE {
+  $uri as:tag ?tag .
+  }";
+  return $q;
+}
+
 /* The count is unpredictable.. messed up when ?o is an array...
 function query_select_vars($vars, $vals, $limit=10, $sort=null){
   $q = get_prefixes();
@@ -841,5 +857,7 @@ function query_insert_add($uri, $collection, $items, $published, $summary, $cont
 
   return $q;
 }
+
+
 
 ?>
