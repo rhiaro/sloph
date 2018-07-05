@@ -50,6 +50,8 @@ if (!$ep->isSetUp()) {
   $ep->setUp(); /* create MySQL tables */
 }
 
+$_RHIARO = "https://rhiaro.co.uk/#me";
+
 $_PREF = array(
          'rdf' => 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
         ,'rdfs' => 'http://www.w3.org/2000/01/rdf-schema#'
@@ -168,6 +170,7 @@ require_once("sloph/views.php");
 require_once("sloph/queries.php");
 require_once("sloph/acl.php");
 require_once("sloph/ldp.php");
+require_once("sloph/outbox_side_effects.php");
 
 date_default_timezone_set(current_timezone($ep));
 

@@ -1,5 +1,4 @@
 <?
-require_once("../init.php");
 
 function create_create($ep, $object, $create_date=null){
     global $_RHIARO;
