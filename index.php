@@ -147,7 +147,6 @@ try {
         <?endforeach?>
         <div class="w1of1">
           <h3>The 128 things I write about most are:</h3>
-          <p><em>(TODO: My tags are broken. Clicking these will link you to all posts cutting off around December 2016).</em></p>
           <? $i = 0; ?>
           <p class="tags"><?foreach($tags as $uri => $tag):?>
            <?if($i < 128):?>
