@@ -32,7 +32,7 @@ function remove_old_tags($ep){
     $i = 0;
 
     foreach($tags as $tag){
-      if($i < 100 && $tag != "archive"){ // something weird wrong with 'archive'
+      if($i < 200){
           $i++;
           $taguri = str_replace(" ", "+", strtolower($tag));
           $taguri = str_replace("'", "", $taguri);
@@ -61,7 +61,9 @@ function remove_old_tags($ep){
                 echo "<p><strong>Delete failed</strong>: $tag</p>";
               }
           }else{
+            break;
             echo "<p><strong>Insert failed</strong>: $taguri</p>";
+            var_dump(htmlentities($qins));
           }
       }
         
