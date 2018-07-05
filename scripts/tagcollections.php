@@ -50,13 +50,18 @@ function remove_old_tags($ep){
     ?post as:tag \"\"\"$tag\"\"\" .
   }";
           $rins = execute_query($ep, $qins);
-          var_dump($rins);
 
           if($rins){
               $qdel = get_prefixes();
               $qdel .= "DELETE { ?post as:tag \"\"\"$tag\"\"\" . }";
               $rdel = execute_query($ep, $qdel);
-              var_dump($rdel);
+              if($rdel){
+                echo "<p><strong>Success:</strong> $tag -> $taguri</p>";
+              }else{
+                echo "<p><strong>Delete failed</strong>: $tag</p>";
+              }
+          }else{
+            echo "<p><strong>Insert failed</strong>: $taguri</p>";
           }
       }
         
@@ -66,18 +71,10 @@ function remove_old_tags($ep){
 
 function do_tags($ep, $posts){
 
-    // Step 1
-    // remove_old_tags($ep);
-    // $strtags = get_string_tags($ep);
-    // echo "<p>".count($strtags)." (1768)</p>";
-
-    // Step 2
     // Construct tag collections
     // var_dump($posts);
     foreach($posts as $uri => $data){
-        $posttypes = get_values(array($uri => $data), 'rdf:type');
-        $posttype = implode(', ', $posttypes);
-        echo "<p>$uri ($posttype)</p>";
+        echo "<p>$uri</p>";
         $q = query_construct_tag_collections($uri);
         var_dump(htmlentities($q));
         $r = execute_query($ep, $q);
@@ -85,7 +82,7 @@ function do_tags($ep, $posts){
           $g = new EasyRdf_Graph();
           $g->parse($r, 'php');
           $ttl = $g->serialise('ntriples');
-          echo $g->dump();
+          // echo $g->dump();
 
           $ins_q = query_insert($ttl, "https://rhiaro.co.uk/tags/");
           $ins_r = execute_query($ep, $ins_q);
@@ -113,16 +110,32 @@ if(isset($_GET['to'])){
 $from = new DateTime($from);
 $to = new DateTime($to);
 
+if(isset($_GET['action'])){
+  $action = $_GET['action'];
+}else{
+  $action = "collate";
+}
+
 ?>
 
 <!doctype html>
 <html>
   <head><title>Tag stuff</title></head>
   <body>
+    <nav>
+      <a href="?action=collate&from=<?=$from->format("Y-m-d")?>&to=<?=$to->format("Y-m-d")?>">Collate</a> | <a href="?action=clean&from=<?=$from->format("Y-m-d")?>&to=<?=$to->format("Y-m-d")?>">Clean</a>
+    </nav>
     <h1>Posts between <?=$from->format("Y-m-d")?> and <?=$to->format("Y-m-d")?></h1>
 <?
 $posts = posts_between($ep, $from, $to);
-do_tags($ep, $posts);
+if($action == "collate"){
+  do_tags($ep, $posts);
+}
+if($action == "clean"){
+  $strtags = get_string_tags($ep);
+  echo "<p>".count($strtags)." (1768)</p>"; 
+  remove_old_tags($ep);
+}
 ?>
 
   </body>
