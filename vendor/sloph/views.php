@@ -186,15 +186,13 @@ function get_tags($ep){
   $res = execute_query($ep, $q);
   $tags = array(); $i = 0;
   foreach($res['rows'] as $tag){
-    if($tag["tag type"] == "uri"){
-      $uri = $tag["tag"];
-      if(isset($tag["name"])){
-        $tags[$uri]['name'] = $tag["name"];
-      }else{
-        $tags[$uri]['name'] = $tag["tag"];
-      }
-      $tags[$uri]['count'] = $tag["c"];
+    $uri = $tag["tag"];
+    if(isset($tag["name"])){
+      $tags[$uri]['name'] = $tag["name"];
+    }else{
+      $tags[$uri]['name'] = $tag["tag"];
     }
+    $tags[$uri]['count'] = $tag["c"];
   }
   return $tags;
 }
