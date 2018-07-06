@@ -1,6 +1,7 @@
 var ul = document.getElementById("tagslist");
-var li = document.getElementsByTagName("li");
+var li = ul.getElementsByTagName("li");
 var search = document.getElementById("tagsearch");
+document.getElementById("searchsubmit").style.display = "none";
 
 search.addEventListener('keyup', function(event){
 	var filter = search.value.toLowerCase();
