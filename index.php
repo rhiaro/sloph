@@ -146,14 +146,15 @@ try {
           <?endforeach?>
         <?endforeach?>
         <div class="w1of1">
-          <h3>The 128 things I write about most are:</h3>
+          <h3>The 64 things I write about most are:</h3>
           <? $i = 0; ?>
           <p class="tags"><?foreach($tags as $uri => $tag):?>
-           <?if($i < 128):?>
+           <?if($i < 64):?>
              <a href="<?=$uri?>"><?=$tag['name']?> (<?=$tag['count']?>)</a>
              <? $i++; ?>
            <?endif?>
           <?endforeach?></p>
+          <p class="tags"><strong><a href="/tags">Find posts by tag</a></strong></p>
         </div>
       </div></div>
     </div>
