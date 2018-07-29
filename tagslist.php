@@ -18,6 +18,8 @@ $uri = "https://rhiaro.co.uk/tags/";
 $g = new EasyRdf_Graph($uri);
 $g->add($uri, 'rdf:type', 'as:Collection');
 $g->add($uri, 'as:name', count($tags)." tags");
+$g->add($uri, 'view:stylesheet', 'views/base.css');
+$g->add($uri, 'view:stylesheet', 'views/search.css');
 $resource = $g->toRdfPhp();
 
 include 'views/top.php';

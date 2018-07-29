@@ -1,0 +1,15 @@
+form {
+	text-align: center;
+}
+input[type=text], input[type=submit] {
+	width: 100%;
+	border: 1px solid silver;
+	padding: 8px 0 8px 0px;
+	text-align: center;
+}
+input[type=submit] {
+	background-color: #eee;
+}
+input[type=submit]:hover {
+	background-color: #ccc;
+}
