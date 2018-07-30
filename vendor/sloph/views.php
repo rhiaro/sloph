@@ -254,6 +254,54 @@ function nav($ep, $resource, $dir="next", $type=0){
   return $out;
 }
 
+function post_nav($ep, $ns, $resource){
+
+  $out = array();
+
+  $next = null;
+  $prev = null;
+  if(get_value($resource, $ns->expand("as:next"))){
+    $next = get_value($resource, $ns->expand("as:next"));
+  }else{
+    $next = nav($ep, $resource, "next");
+    if(!empty($next)){
+      $next = $next[0];
+    }
+  }
+  if(get_value($resource, $ns->expand("as:prev"))){
+    $prev = get_value($resource, $ns->expand("as:prev"));
+  }else{
+    $prev = nav($ep, $resource, "prev");
+    if(!empty($prev)){
+      $prev = $prev[0];
+    }
+  }
+  // Get next resource by date of the same type
+  $next_types = array();
+  $prev_types = array();
+  $this_types = get_values($resource, $ns->expand("rdf:type"));
+
+  if(is_array($this_types)){
+    foreach($this_types as $type){
+      $n = nav($ep, $resource, "next", $type);
+      $p = nav($ep, $resource, "prev", $type);
+      if($n){
+        $next_types = array_merge($next_types, $n);
+      }
+      if($p){
+        $prev_types = array_merge($prev_types, $p);
+      }
+    }
+  }
+
+  $out["next"] = $next;
+  $out["prev"] = $prev;
+  $out["nexttype"] = $next_types;
+  $out["prevtype"] = $prev_types;
+
+  return $out;
+}
+
 function construct_collection_page($ep, $collection, $before=null, $limit=16, $sort="as:published", $from_graph="https://blog.rhiaro.co.uk/"){
 
   $total = count_items($ep, $collection);

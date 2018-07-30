@@ -70,6 +70,7 @@ if($_SERVER['REQUEST_METHOD'] === "GET" || $_SERVER['REQUEST_METHOD'] === "HEAD"
       include 'views/top.php';
       include 'views/nav.php';
       include 'views/'.view_router($resource).'.php';
+      include 'views/nav.php';
       include 'views/end.php';
     }
   }catch(Exception $e){

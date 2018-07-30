@@ -70,7 +70,7 @@ $item_uris = select_to_list(execute_query($ep, $q));
 $prev_uri = array_pop($item_uris);
 
 $name = ucfirst($_GET['type']);
-$nav = array("next" => $next_uri, "prev" => $prev_uri);
+$nav_prep = array("next" => $next_uri, "prev" => $prev_uri);
 
 if($_GET['type'] == "where"){
   // TODO: move this somewhere else
@@ -84,7 +84,7 @@ if($_GET['type'] == "where"){
 
   $g = $where;
 }else{
-  $g = get_container_dynamic_from_items($ep, $uri, $sort, $name, $item_uris, $total, $nav);
+  $g = get_container_dynamic_from_items($ep, $uri, $sort, $name, $item_uris, $total, $nav_prep);
 }
 
 $result = conneg($acceptheaders, $g);
@@ -103,6 +103,7 @@ try {
     include 'views/top.php';
     include 'views/nav.php';
     include 'views/'.view_router($resource).'.php';
+    include 'views/nav.php';
     include 'views/end.php';
 
   }
