@@ -25,6 +25,7 @@ $typemap = array("checkins" => "as:Arrive"
                 ,"places" => "as:Place"
                 ,"follows" => "as:Follow"
                 ,"where" => "as:Arrive"
+                ,"words" => "asext:Write"
   );
 
 if(!isset($_GET['type']) || !array_key_exists($_GET['type'], $typemap)){

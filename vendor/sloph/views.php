@@ -17,6 +17,8 @@ function view_router($resource){
       return 'event';
     }elseif(has_type($resource, "as:Collection") || has_type($resource, "as:CollectionPage")){
       return 'collection';
+    }elseif(has_type($resource, "asext:Write")){
+      return 'words';
     }else{
       if(count($resource) > 1){
         return 'index';
