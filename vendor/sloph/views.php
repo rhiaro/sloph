@@ -445,6 +445,19 @@ function make_checkin_summary($checkin, $locations=null, $end=null){
   return $label;
 }
 
+function wordcount_total($ep, $date=null){
+  if($date == null){
+    $date = new DateTime();
+  }
+  $q = query_select_wordcount($date->format(DATE_ATOM));
+  $r = execute_query($ep, $q);
+  $total = 0;
+  foreach($r["rows"] as $res){
+    $total = $total + $res['wc'];
+  }
+  return number_format($total, 0, ".", ",");
+}
+
 /***********************/
 /* Helpers             */
 /***********************/

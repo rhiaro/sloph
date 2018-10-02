@@ -121,6 +121,7 @@ try {
           On IRC find me as rhiaro on Freenode, imaginarynet and w3.org.
           On twitter I am <a href="https://twitter.com/rhiaro" rel="me">@rhiaro</a>.
           By email I am <a href="mailto:amy@rhiaro.co.uk" rel="me">amy@rhiaro.co.uk</a>.</p>
+          <p><a href="https://nanowrimo.org"><img src="https://i.amy.gy/posts/nanowrimo.png" alt="" /></a> <strong>Nanowrimo 2018</strong>: <a href="https://nanowrimo.org/participants/rhiaro/novels/birds-1421058">Birds</a> [<?=wordcount_total($ep)?> / 50,000 words] </p>
           <a href="https://rhiaro.co.uk/ldn.php" rel="ldp:inbox"></a>
           <?foreach($last_of_type as $type => $resource):?>
             <? include 'views/profile_post.php';      ?>

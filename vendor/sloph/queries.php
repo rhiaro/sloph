@@ -728,6 +728,17 @@ function query_construct_tag_collections($uri=null){
   return $q;
 }
 
+function query_select_wordcount($date){
+  $q = get_prefixes();
+  $q .= "SELECT ?p ?d ?wc WHERE {
+  ?p a asext:Write .
+  ?p asext:wordCount ?wc .
+  ?p as:published ?d .
+  FILTER(?d <= \"$date\") .
+}";
+  return $q;
+}
+
 /* The count is unpredictable.. messed up when ?o is an array...
 function query_select_vars($vars, $vals, $limit=10, $sort=null){
   $q = get_prefixes();
