@@ -17,10 +17,8 @@
 
       <?foreach($years as $year=>$novel):?>
         <section id="<?=$year?>">
-          <h2><?=$year?></h2>
-          <p><?=$novel['intro']?></p>
-          <h3><?=$novel['name']?></h3>
-          <p><strong>Wordcount:</strong> <?=$novel['wordcount']?></p>
+          <h2><?=$year?>: <?=$novel['name']?></h2>
+          <p><strong>Wordcount:</strong> <?=number_format($novel['wordcount'], 0, ".", ",")?></p>
           <?=$novel['content']?>
         </section>
       <?endforeach?>
