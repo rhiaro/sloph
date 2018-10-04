@@ -18,7 +18,7 @@
       <?foreach($years as $year=>$novel):?>
         <section id="<?=$year?>">
           <h2><?=$year?>: <?=$novel['name']?></h2>
-          <p><strong>Wordcount:</strong> <?=number_format($novel['wordcount'], 0, ".", ",")?></p>
+          <p><strong>Wordcount:</strong> <?=$novel['wordcount']?></p>
           <?=$novel['content']?>
         </section>
       <?endforeach?>

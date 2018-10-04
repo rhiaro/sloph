@@ -22,7 +22,7 @@ function get_novel_data($ep){
         "content" => get_value($post_r, "as:content"),
       );
       if(get_value($post_r, "asext:wordCount")){
-        $data[$year]["wordcount"] = get_value($post_r, "asext:wordCount");
+        $data[$year]["wordcount"] = number_format(get_value($post_r, "asext:wordCount"), 0, ".", ",");
       }else{
         $data[$year]["wordcount"] = nanowrimo_total($ep, $year);
       }
