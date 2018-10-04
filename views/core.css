@@ -144,6 +144,9 @@ nav a:hover img {
     word-wrap: break-word;
     overflow: hidden;
 }
+.inner {
+  padding: 8px;
+}
 @media screen and (min-width: 768px){
 
   .w1of2 { width: 50%; float: left; }

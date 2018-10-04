@@ -35,6 +35,53 @@ function get_novel_data($ep){
   return $data;
 }
 
+function nanowrimo_yet($ep){
+  $now = new DateTime();
+  $day = $now->format("d");
+  $month = $now->format("m");
+  $year = $now->format("Y");
+
+  $out = array();
+
+  if(($year == "2018" && $month == "10") || ($year != "2018" && $month == "11")){
+    $current_count = nanowrimo_total($ep, $year);
+    $goal = 1667*$day;
+    $c = (int)str_replace(",", "", $current_count);
+    $diff = $goal - $c;
+
+    $msg = "(on target!)";
+    if($diff < 0){
+      $diff = number_format(abs($diff), 0, ".", ",");
+      $msg = "<span class=\"wee\">($diff words ahead!)</span>";
+    }elseif($diff > 0){
+      $diff = number_format($diff, 0, ".", ",");
+      $msg = "<span class=\"wee\">($diff behind..)</span>";
+    }
+
+    $out["big"] = "YES || $current_count / 50,000 $msg";
+    $out["small"] = "Hear me out. NaNoWriMo is usually in November, but in 2018 I'm doing it in October because I have lots of travel plus a 10 day <a href=\"https://dhamma.org\">Vipassana</a> retreat planned in November.";
+
+  }elseif($year == "2018" && $month == "11"){
+    $out["big"] = "YES .. but I did it last month.";
+    $out["small"] = "See below. I'm too much away from computers and paper and anything else this month.";
+
+  }else{
+    if($month == "12"){
+      $year = $year + 1;
+    }
+    $next = new DateTime("$year-11-01");
+    $interval = $now->diff($next);
+    $togo = $interval->format("%d");
+    $out["big"] = "NO ... $togo days to go";
+    $out["small"] = "Find out more and sign up at <a href=\"https://nanowrimo.org\">nanowrimo.org</a>";
+  }
+
+  return $out;
+
+}
+
 $years = get_novel_data($ep);
+$isit = nanowrimo_yet($ep);
+
 include '../../views/nanowrimo.php';
 ?>
