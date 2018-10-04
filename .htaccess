@@ -21,6 +21,7 @@ RewriteBase /
 RewriteRule ^incoming(/)?$ /vendor/sloph/ldn.php [QSA,L]
 RewriteRule ^outgoing(/)?$ /vendor/sloph/pub.php [QSA,L]
 RewriteRule ^summary(/)?$ /vendor/sloph/summary.php [QSA,L]
+RewriteRule ^nanowrimo(/)?$ /vendor/sloph/nanowrimo.php [QSA,L]
 RewriteRule ^set(/)?$ /vendor/sloph/page.php [QSA,L]
 
 RewriteRule ^thesis(/)?$ https://rhiaro.github.io/thesis [L]

@@ -728,13 +728,24 @@ function query_construct_tag_collections($uri=null){
   return $q;
 }
 
-function query_select_wordcount($date){
+function query_select_wordcount($startdate=null, $enddate=null){
+
+  if($startdate == null){
+    $beg = new DateTime("10 August 1990");
+    $startdate = $beg->format(DATE_ATOM);
+  }
+  if($enddate == null){
+    $now = new DateTime();
+    $enddate = $now->format(DATE_ATOM);
+  }
+
   $q = get_prefixes();
   $q .= "SELECT ?p ?d ?wc WHERE {
   ?p a asext:Write .
   ?p asext:wordCount ?wc .
   ?p as:published ?d .
-  FILTER(?d <= \"$date\") .
+  FILTER(?d >= \"$startdate\") .
+  FILTER(?d <= \"$enddate\") .
 }";
   return $q;
 }

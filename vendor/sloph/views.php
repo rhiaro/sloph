@@ -445,11 +445,16 @@ function make_checkin_summary($checkin, $locations=null, $end=null){
   return $label;
 }
 
-function wordcount_total($ep, $date=null){
-  if($date == null){
-    $date = new DateTime();
+function nanowrimo_total($ep, $year=null){
+  if($year == null){
+    $now = new DateTime();
+    $year = $now->format("Y");
   }
-  $q = query_select_wordcount($date->format(DATE_ATOM));
+  if($year == "2018"){ $month = "10"; }
+  else{ $month = "11"; }
+  $from = $year."-".$month."-01T00:00:00";
+  $to = $year."-".$month."-30T23:59:59";
+  $q = query_select_wordcount($from, $to);
   $r = execute_query($ep, $q);
   $total = 0;
   foreach($r["rows"] as $res){
