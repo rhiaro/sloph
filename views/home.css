@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: center;
+}
+.projects {
+    text-align: right;
+    padding: 1em;
+    flex: 2;
+}
+.rhiaro {
+    text-align: center;
+    padding: 1em;
+    flex: 1;
+    max-width: 200px;
+}
+.rhiaro img {
+    max-width: 100%;
+}
+.stats {
+    text-align: left;
+    padding: 1em;
+    flex: 2;
+}
+
+.stat-box {
+    padding: 0.2em;
+    width: 100%;
+    border: 2px solid silver;
+}
+.stat-box div {
+    height: 1em;
+}

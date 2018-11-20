@@ -154,6 +154,102 @@ function get_icons_from_tags($tags){
   return $icons;
 }
 
+function calculate_stats($data){
+
+}
+
+function calculate_words_stats(){
+  // Add up wordcount and note and article contents for this week
+}
+
+function calculate_consume_stats($ep){
+  $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
+  $q = query_select_s_type("asext:Consume", "as:published", "DESC", 1);
+  $res = execute_query($ep, $q);
+  if($res){
+    $uri = select_to_list($res);
+    $obj = execute_query($ep, query_construct($uri[0]));
+    if($obj){
+      $now = new DateTime();
+      $date = new DateTime(get_value($obj, "as:published"));
+      $stats["value"] = time_ago($date);
+      $diff = $date->diff($now);
+      if ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 4){
+        $stats["color"] = "green";
+        $stats["width"] = "100%";
+      }
+      elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 6){
+        $stats["color"] = "green";
+        $stats["width"] = "80%";
+      }
+      elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 8){
+        $stats["color"] = "orange";
+        $stats["width"] = "60%";
+      }
+      elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <=12){
+        $stats["color"] = "orange";
+        $stats["width"] = "40%";
+      }
+      elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 18){
+        $stats["color"] = "red";
+        $stats["width"] = "20%";
+      }
+      else{
+        $stats["color"] = "red";
+        $stats["width"] = "1%";
+      }
+    }
+  }
+  return $stats;
+}
+
+function calculate_budget_stats(){
+  // Amount spent in EUR
+}
+
+function calculate_exercise_stats($ep){
+  $q = query_select_last_time_at("https://rhiaro.co.uk/location/exercise");
+  $res = execute_query($ep, $q);
+  $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
+  if($res){
+    $now = new DateTime();
+    $date = new DateTime($res["rows"][0]["d"]);
+    $stats["value"] = time_ago($date);
+    $diff = $date->diff($now);
+    if ($diff->y == 0 and $diff->m == 0 and $diff->d == 1){
+      $stats["color"] = "green";
+      $stats["width"] = "100%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 7){
+      $stats["color"] = "green";
+      $stats["width"] = "80%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 30){
+      $stats["color"] = "orange";
+      $stats["width"] = "50%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 60){
+      $stats["color"] = "red";
+      $stats["width"] = "30%";
+    }
+    else{
+      $stats["color"] = "red";
+      $stats["width"] = "5%";
+    }
+  }
+  return $stats;
+}
+
+function stat_box($ep, $type){
+  $tmp = array(
+    "consume" => calculate_consume_stats($ep),
+    "exercise" => calculate_exercise_stats($ep),
+    "budget" => array("color" => "green", "width" => "60%"),
+    "words" => array("color" => "green", "width" => "70%"),
+  );
+  return $tmp[$type];
+}
+
 /********************/
 /* Data things      */
 /********************/

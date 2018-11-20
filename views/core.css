@@ -43,13 +43,6 @@ article {
   article {
     width: 50%;
   }
-  .wrapper {
-    background-image: url('https://i.amy.gy/headers/20180929_dahlia.jpg');
-    background-size: contain;
-    background-repeat: repeat-x;
-    background-position: top center;
-    padding-top: 20em;
-  }
 }
 
 nav {
@@ -113,13 +106,6 @@ nav a:hover img {
 }
 #latest h1 {
   font-size: 2em;
-}
-
-#stats {
-  background-color: white;
-  text-align: left;
-  line-height: 1.2;
-  padding: 1em 2em 1em 2em;
 }
 
 .tags a {

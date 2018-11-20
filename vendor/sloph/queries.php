@@ -750,6 +750,18 @@ function query_select_wordcount($startdate=null, $enddate=null){
   return $q;
 }
 
+function query_select_last_time_at($location){
+  $q = get_prefixes();
+  $q .= "SELECT ?p ?d WHERE {
+  ?p a as:Arrive .
+  ?p as:published ?d .
+  ?p as:location <$location> .
+}
+ORDER BY DESC(?d)
+LIMIT 1";
+  return $q;
+}
+
 /* The count is unpredictable.. messed up when ?o is an array...
 function query_select_vars($vars, $vals, $limit=10, $sort=null){
   $q = get_prefixes();
