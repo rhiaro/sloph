@@ -154,12 +154,40 @@ function get_icons_from_tags($tags){
   return $icons;
 }
 
-function calculate_stats($data){
+function calculate_words_stats($ep){
+  require_once(__DIR__."/summary.php");
+  $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
+  $now = new DateTime();
+  $from = new DateTime($now->format("Y-m-01"));
+  $to = new DateTime($now->format("Y-m-t"));
+  $days = $now->format("t");
 
-}
+  $posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
+  $tags = get_tags($ep);
+  $poststats = aggregate_writing($posts, $from, $to, $tags);
+  $postwcs = $poststats["words"];
+  $postwords = $poststats["dailywords"];
 
-function calculate_words_stats(){
-  // Add up wordcount and note and article contents for this week
+  $wrotewords = 0; // HERENOW
+
+  $total_words = $postwcs + $wrotewords;
+  $dailywords = ($total_words / $days);
+
+  if($dailywords >= 1667){
+    $stats["color"] = "green";
+  }elseif($dailywords >= 750){
+    $stats["color"] = "orange";
+  }else{
+    $stats["color"] = "red";
+  }
+
+  $monthtotal = 1667 * $now->format("t");
+  $percent = $postwcs / $monthtotal * 100;
+  $stats["width"] = $percent."%";
+
+  $stats["value"] = $total_words;
+
+  return $stats;
 }
 
 function calculate_consume_stats($ep){
@@ -203,8 +231,29 @@ function calculate_consume_stats($ep){
   return $stats;
 }
 
-function calculate_budget_stats(){
-  // Amount spent in EUR
+function calculate_budget_stats($ep){
+  require_once(__DIR__."/summary.php");
+  $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
+  $now = new DateTime();
+  $from = new DateTime($now->format("Y-m-01"));
+  $to = new DateTime($now->format("Y-m-t"));
+  $posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
+  $tags = get_tags($ep);
+  $acquires = aggregate_acquires($posts, $from, $to, $tags);
+  $eur = $acquires["totaleur"];
+  $percent = round($eur / 1000 * 100);
+
+  $stats["width"] = 100 - $percent."%";
+  $monthpercent = round($now->format("d") / $now->format("t") * 100);
+  if($percent > $monthpercent){
+    $stats["color"] = "red";
+  }elseif($percent == $monthpercent){
+    $stats["color"] = "orange";
+  }else{
+    $stats["color"] = "green";
+  }
+
+  return $stats;
 }
 
 function calculate_exercise_stats($ep){
@@ -244,8 +293,8 @@ function stat_box($ep, $type){
   $tmp = array(
     "consume" => calculate_consume_stats($ep),
     "exercise" => calculate_exercise_stats($ep),
-    "budget" => array("color" => "green", "width" => "60%"),
-    "words" => array("color" => "green", "width" => "70%"),
+    "budget" => calculate_budget_stats($ep),
+    "words" => calculate_words_stats($ep),
   );
   return $tmp[$type];
 }
