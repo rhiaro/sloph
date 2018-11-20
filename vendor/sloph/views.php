@@ -633,7 +633,7 @@ function prev_tile_x($tile){
   return implode("/", $url);
 }
 
-function structure_cost($cost){
+function structure_cost($cost, $currencies_file="currencies.json"){
   // This is terrible.
   // Accounting for messy human input.
   // Replace this with retreiving the currency code from however you store the cost of something.
@@ -653,7 +653,7 @@ function structure_cost($cost){
   $amt = floatval($amt);
   $cur = str_replace($amt, "", $cur);
   $cur = trim(str_replace("0", "", $cur));
-  $currencies = json_decode(file_get_contents('currencies.json'), true);
+  $currencies = json_decode(file_get_contents($currencies_file), true);
   $currencies = $currencies['results'];
   if(array_key_exists(strtoupper($cur), $currencies)){
     $code = strtoupper($cur);

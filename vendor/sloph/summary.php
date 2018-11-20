@@ -112,7 +112,7 @@ function aggregate_acquires($posts, $from, $to, $alltags){
           }
         }
 
-        $structured_cost = structure_cost($cost);
+        $structured_cost = structure_cost($cost, __DIR__."/currencies.json");
         $out['currencies'][] = $structured_cost['currency'];
 
         $photo = get_value(array($uri=>$post), "as:image");
