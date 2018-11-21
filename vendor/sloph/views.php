@@ -196,42 +196,37 @@ function calculate_words_stats($ep, $posts){
 
 function calculate_consume_stats($ep){
   $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
-  $q = query_select_s_type("asext:Consume", "as:published", "DESC", 1);
-  $res = execute_query($ep, $q);
-  if($res){
-    $uri = select_to_list($res);
-    $obj = execute_query($ep, query_construct($uri[0]));
-    if($obj){
-      $now = new DateTime();
-      $date = new DateTime(get_value($obj, "as:published"));
-      $stats["published"] = $date;
-      $stats["content"] = get_value($obj, "as:content");
-      $stats["uri"] = key($obj);
-      $diff = $date->diff($now);
-      if ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 4){
-        $stats["color"] = "green";
-        $stats["width"] = "100%";
-      }
-      elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 6){
-        $stats["color"] = "green";
-        $stats["width"] = "80%";
-      }
-      elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 8){
-        $stats["color"] = "orange";
-        $stats["width"] = "60%";
-      }
-      elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <=12){
-        $stats["color"] = "orange";
-        $stats["width"] = "40%";
-      }
-      elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 18){
-        $stats["color"] = "red";
-        $stats["width"] = "20%";
-      }
-      else{
-        $stats["color"] = "red";
-        $stats["width"] = "1%";
-      }
+  $obj = construct_last_of_type($ep, "asext:Consume");
+  if($obj){
+    $now = new DateTime();
+    $date = new DateTime(get_value($obj, "as:published"));
+    $stats["published"] = $date;
+    $stats["content"] = get_value($obj, "as:content");
+    $stats["uri"] = key($obj);
+    $diff = $date->diff($now);
+    if ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 4){
+      $stats["color"] = "green";
+      $stats["width"] = "100%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 6){
+      $stats["color"] = "green";
+      $stats["width"] = "80%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 8){
+      $stats["color"] = "orange";
+      $stats["width"] = "60%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <=12){
+      $stats["color"] = "orange";
+      $stats["width"] = "40%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 18){
+      $stats["color"] = "red";
+      $stats["width"] = "20%";
+    }
+    else{
+      $stats["color"] = "red";
+      $stats["width"] = "1%";
     }
   }
   return $stats;
@@ -582,6 +577,8 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
 }
 
 function make_checkin_summary($checkin, $locations=null, $end=null){
+
+  $summary = array();
   
   $location = get_value($checkin, "as:location");
   if($locations === null){
@@ -609,8 +606,16 @@ function make_checkin_summary($checkin, $locations=null, $end=null){
     $location_label = "was last spotted at ".key($location);
   }
 
+  $summary["location"] = $location_label;
+  $summary["location_uri"] = key($location);
+  $summary["for"] = $diff;
+  $summary["from"] = $pub;
+  $summary["to"] = $end;
+
   $label = "rhiaro ".$location_label." for ".$diff." (from ".$pub->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")." until ".$end_label.")";
-  return $label;
+  $summary["string"] = $label;
+
+  return $summary;
 }
 
 function nanowrimo_total($ep, $year=null){

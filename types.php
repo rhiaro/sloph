@@ -81,7 +81,7 @@ if($_GET['type'] == "where"){
   $where->addLiteral($uri, 'view:intimacy', 5);
   $where->addLiteral($uri, 'view:wanderlust', 4);
   $summary = make_checkin_summary($where->toRdfPhp(), $locations);
-  $where->addLiteral($uri, 'as:summary', $summary);
+  $where->addLiteral($uri, 'as:summary', $summary["string"]);
 
   $g = $where;
 }else{

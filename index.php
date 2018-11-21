@@ -63,9 +63,6 @@ try {
 
     }
 
-    $lastcheckin = construct_uris($ep, select_to_list(execute_query($ep, query_select_one_of_type("as:Arrive"))));
-    $currentlocation = get_value($lastcheckin, $ns->expand("as:location"));
-
     /* Views stuff */
     if(!$resource->get('view:stylesheet')){
       $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
@@ -100,6 +97,9 @@ try {
     $to = new DateTime($now->format("Y-m-t"));
     $month_posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
 
+    $last_checkin = construct_last_of_type($ep, "as:Arrive");
+    $checkin_summary = make_checkin_summary($last_checkin, $locations);
+
     $consume_stats = stat_box($ep, "consume");
     $exercise_stats = stat_box($ep, "exercise");
     $budget_stats = stat_box($ep, "budget", $month_posts);
@@ -110,7 +110,7 @@ try {
       <div class="projects">
         <p>You may know me from</p>
         <p>a b c d e f g h i j</p>
-        <p>Currently ...</p>
+        <p>Currently <a href="<?=$checkin_summary["location_uri"]?>"><?=$checkin_summary["location"]?></a> (for <?=$checkin_summary["for"]?>)</p>
         <p>Timezone: <?=current_timezone($ep);?></p>
       </div>
       <div class="rhiaro">
