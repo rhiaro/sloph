@@ -1,12 +1,12 @@
-.header {
+header {
     display: flex;
     justify-content: flex-start;
-    background-image: url('https://i.amy.gy/headers/20180929_dahlia.jpg');
     background-width: 100%;
     background-repeat: no-repeat;
     background-position: top left;
     padding: 1em;
 }
+
 .rhiaro {
     text-align: center;
     flex: 1; flex-grow: 1;
@@ -61,4 +61,22 @@
 .stat-box div {
     height: 1em;
     border-radius: 1em;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+    text-transform: lowercase;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul a {
+    text-decoration: none;
+    padding: 0.6em;
+}
+nav ul a:hover {
+    background-color: silver;
 }
