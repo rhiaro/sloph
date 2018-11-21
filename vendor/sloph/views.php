@@ -154,15 +154,15 @@ function get_icons_from_tags($tags){
   return $icons;
 }
 
-function calculate_words_stats($ep){
-  require_once(__DIR__."/summary.php");
+function calculate_words_stats($ep, $posts){
+  // require_once(__DIR__."/summary.php");
   $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
   $now = new DateTime();
   $from = new DateTime($now->format("Y-m-01"));
   $to = new DateTime($now->format("Y-m-t"));
   $days = $now->format("d"); // this month so far
 
-  $posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
+  // $posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
   $tags = get_tags($ep);
   $poststats = aggregate_writing($posts, $from, $to, $tags);
   $postwords = $poststats["words"];
@@ -204,7 +204,9 @@ function calculate_consume_stats($ep){
     if($obj){
       $now = new DateTime();
       $date = new DateTime(get_value($obj, "as:published"));
-      $stats["value"] = time_ago($date);
+      $stats["published"] = $date;
+      $stats["content"] = get_value($obj, "as:content");
+      $stats["uri"] = key($obj);
       $diff = $date->diff($now);
       if ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 4){
         $stats["color"] = "green";
@@ -235,13 +237,13 @@ function calculate_consume_stats($ep){
   return $stats;
 }
 
-function calculate_budget_stats($ep){
-  require_once(__DIR__."/summary.php");
+function calculate_budget_stats($ep, $posts){
+
   $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
   $now = new DateTime();
   $from = new DateTime($now->format("Y-m-01"));
   $to = new DateTime($now->format("Y-m-t"));
-  $posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
+  
   $tags = get_tags($ep);
   $acquires = aggregate_acquires($posts, $from, $to, $tags);
   $eur = $acquires["totaleur"];
@@ -257,6 +259,14 @@ function calculate_budget_stats($ep){
     $stats["color"] = "green";
   }
 
+  $acqs = get_type($posts, "asext:Acquire");
+  reset($acqs);
+  $latest[key($acqs)] = $acqs[key($acqs)];
+
+  $stats["cost"] = get_value($latest, "asext:cost");
+  $stats["content"] = get_value($latest, "as:content");
+  $stats["uri"] = key($latest);
+
   return $stats;
 }
 
@@ -267,7 +277,8 @@ function calculate_exercise_stats($ep){
   if($res){
     $now = new DateTime();
     $date = new DateTime($res["rows"][0]["d"]);
-    $stats["value"] = time_ago($date);
+    $stats["published"] = $date;
+    $stats["uri"] = $res["rows"][0]["p"];
     $diff = $date->diff($now);
     if ($diff->y == 0 and $diff->m == 0 and $diff->d == 1){
       $stats["color"] = "green";
@@ -293,14 +304,22 @@ function calculate_exercise_stats($ep){
   return $stats;
 }
 
-function stat_box($ep, $type){
-  $tmp = array(
-    "consume" => calculate_consume_stats($ep),
-    "exercise" => calculate_exercise_stats($ep),
-    "budget" => calculate_budget_stats($ep),
-    "words" => calculate_words_stats($ep),
-  );
-  return $tmp[$type];
+function stat_box($ep, $type, $posts=null){
+  switch($type){
+    case "consume": 
+      $r = calculate_consume_stats($ep);
+      break;
+    case "exercise":
+      $r = calculate_exercise_stats($ep);
+      break;
+    case "budget":
+      $r = calculate_budget_stats($ep, $posts);
+      break;
+    case "words":
+      $r = calculate_words_stats($ep, $posts);
+      break;
+  }
+  return $r;
 }
 
 /********************/

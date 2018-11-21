@@ -1,12 +1,13 @@
 <?
 session_start();
 require_once('vendor/init.php');
+require_once('vendor/sloph/summary.php');
 
 $headers = apache_request_headers();
 $relUri = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $ct = $headers["Accept"];
 $acceptheaders = new AcceptHeader($ct);
-$graph = get_container_dynamic($ep, $relUri, "query_select_s_and_type_desc", array(1600), $ct);
+$graph = get_container_dynamic($ep, $relUri, "query_select_s_and_type_desc", array(1), $ct);
 $me = get_resource($ep, "https://rhiaro.co.uk/#me");
 $out = merge_graphs(array($graph, $me), $relUri);
 $result = conneg($acceptheaders, $out);
@@ -23,7 +24,6 @@ try {
 
     $resource = $content->resource($relUri);
 
-    $last_of_derp = array();
     $latest_post_uris = array();
     $latest_posts = array();
 
@@ -84,26 +84,27 @@ try {
     include 'views/top.php';
     include 'views/header.php';
 
-    $items = array_reverse($items);
-    $latest_post_uris = array_reverse(array_slice($latest_post_uris, count($latest_post_uris)-6, 6));
-    $next = array_pop($latest_post_uris);
+    // $items = array_reverse($items);
+    // $latest_post_uris = array_reverse(array_slice($latest_post_uris, count($latest_post_uris)-6, 6));
+    // $next = array_pop($latest_post_uris);
 
-    foreach($latest_post_uris as $uri){
-      $result = get($ep, $uri);
-      $content = $result['content'];
-      $resource = $content->toRdfPhp();
-      $latest_posts[] = $resource;
-    }
-    foreach($last_of_derp as $type => $uri){
-      $result = get($ep, $uri);
-      $content = $result['content'];
-      $resource = $content->toRdfPhp();
-      $last_of_type[$type] = array($uri => array_shift($resource));
-    }
+    // foreach($latest_post_uris as $uri){
+    //   $result = get($ep, $uri);
+    //   $content = $result['content'];
+    //   $resource = $content->toRdfPhp();
+    //   $latest_posts[] = $resource;
+    // }
 
+    $now = new DateTime();
+    $from = new DateTime($now->format("Y-m-01"));
+    $to = new DateTime($now->format("Y-m-t"));
+    $month_posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
+
+    $consume_stats = stat_box($ep, "consume");
     $exercise_stats = stat_box($ep, "exercise");
+    $budget_stats = stat_box($ep, "budget", $month_posts);
+    $words_stats = stat_box($ep, "words", $month_posts);
 
-    // var_dump($last_of_type);
     ?>
     <div class="header">
       <div class="projects">
@@ -116,14 +117,14 @@ try {
         <img src="https://rhiaro.co.uk/stash/dp.png" />
       </div>
       <div class="stats">
-        <p>Last ate <?=time_ago(get_value($last_of_type['asext:Consume'], 'as:published'))?></p>
-        <div class="stat-box"><div style="width: <?=stat_box($ep, "consume")["width"]?>; background-color: <?=stat_box($ep, "consume")["color"]?>"></div></div>
-        <p>Last exercised <?=$exercise_stats["value"]?></p>
+        <p>Last ate <?=time_ago($consume_stats["published"])?> (<a href="<?=$consume_stats["uri"]?>"><?=$consume_stats["content"]?></a>)</p>
+        <div class="stat-box"><div style="width: <?=$consume_stats["width"]?>; background-color: <?=$consume_stats["color"]?>"></div></div>
+        <p>Last exercised <?=time_ago($exercise_stats["published"])?></p>
         <div class="stat-box"><div style="width: <?=$exercise_stats["width"]?>; background-color: <?=$exercise_stats["color"]?>"></div></div>
-        <p>Monthly budget</p>
-        <div class="stat-box"><div style="width: <?=stat_box($ep, "budget")["width"]?>; background-color: <?=stat_box($ep, "budget")["color"]?>"></div></div>
-        <p>Words written this month (posts and fiction): <?=stat_box($ep, "words")["value"]?></p>
-        <div class="stat-box"><div style="width: <?=stat_box($ep, "words")["width"]?>; background-color: <?=stat_box($ep, "words")["color"]?>"></div></div>
+        <p>Monthly budget (<a href="<?=$budget_stats["uri"]?>">last spent</a> <?=$budget_stats["cost"]?> on <?=$budget_stats["content"]?>)</p>
+        <div class="stat-box"><div style="width: <?=$budget_stats["width"]?>; background-color: <?=$budget_stats["color"]?>"></div></div>
+        <p>Words written this month (<?=$words_stats["value"]?> of posts and fiction)</p>
+        <div class="stat-box"><div style="width: <?=$words_stats["width"]?>; background-color: <?=$words_stats["color"]?>"></div></div>
       </div>
     </div>
 
