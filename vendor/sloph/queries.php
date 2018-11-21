@@ -103,6 +103,16 @@ function construct_and_sort($ep, $uris, $sort="as:published"){
   return $sorted;
 }
 
+function construct_last_of_type($ep, $type, $sort="as:published"){
+  $q = query_select_s_type($type, $sort, "DESC", 1);
+  $res = execute_query($ep, $q);
+  if($res){
+    $uri = select_to_list($res);
+    $obj = execute_query($ep, query_construct($uri[0]));
+    return $obj;
+  }
+}
+
 /* Building queries */
 
 function get_prefixes(){
