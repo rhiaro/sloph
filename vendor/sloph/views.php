@@ -160,17 +160,21 @@ function calculate_words_stats($ep){
   $now = new DateTime();
   $from = new DateTime($now->format("Y-m-01"));
   $to = new DateTime($now->format("Y-m-t"));
-  $days = $now->format("t");
+  $days = $now->format("d"); // this month so far
 
   $posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
   $tags = get_tags($ep);
   $poststats = aggregate_writing($posts, $from, $to, $tags);
-  $postwcs = $poststats["words"];
-  $postwords = $poststats["dailywords"];
+  $postwords = $poststats["words"];
 
-  $wrotewords = 0; // HERENOW
+  $wrotewords = 0;
+  $wroteq = query_select_wordcount($from->format(DATE_ATOM), $to->format(DATE_ATOM));
+  $wroteres = execute_query($ep, $wroteq);
+  foreach($wroteres["rows"] as $res){
+    $wrotewords = $wrotewords + $res['wc'];
+  }
 
-  $total_words = $postwcs + $wrotewords;
+  $total_words = $postwords + $wrotewords;
   $dailywords = ($total_words / $days);
 
   if($dailywords >= 1667){
@@ -181,8 +185,8 @@ function calculate_words_stats($ep){
     $stats["color"] = "red";
   }
 
-  $monthtotal = 1667 * $now->format("t");
-  $percent = $postwcs / $monthtotal * 100;
+  $monthgoal = 1667 * $now->format("t");
+  $percent = $total_words / $monthgoal * 100;
   $stats["width"] = $percent."%";
 
   $stats["value"] = $total_words;

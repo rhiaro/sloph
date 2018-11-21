@@ -122,7 +122,7 @@ try {
         <div class="stat-box"><div style="width: <?=$exercise_stats["width"]?>; background-color: <?=$exercise_stats["color"]?>"></div></div>
         <p>Monthly budget</p>
         <div class="stat-box"><div style="width: <?=stat_box($ep, "budget")["width"]?>; background-color: <?=stat_box($ep, "budget")["color"]?>"></div></div>
-        <p>Words written this week</p>
+        <p>Words written this month (posts and fiction): <?=stat_box($ep, "words")["value"]?></p>
         <div class="stat-box"><div style="width: <?=stat_box($ep, "words")["width"]?>; background-color: <?=stat_box($ep, "words")["color"]?>"></div></div>
       </div>
     </div>
