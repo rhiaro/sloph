@@ -24,78 +24,16 @@ try {
 
     $resource = $content->resource($relUri);
 
-    $latest_post_uris = array();
-    $latest_posts = array();
-
-    $items = $content->toRdfPhp();
-    $items = array_reverse($items);
+    $now = new DateTime();
+    $from = new DateTime($now->format("Y-m-01"));
+    $to = new DateTime($now->format("Y-m-t"));
+    $month_posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
 
     $locations = get_locations($ep);
     if($locations != null){
       $locations = $locations->toRdfPhp();
     }
-    $color = "transparent";
-    $tags = get_tags($ep);
-
-    $now = new DateTime();
-    $day = $now->format("j");
-    
-    foreach($items as $uri => $item){
-
-      $types = $item[$ns->expand("rdf:type")];
-
-      foreach($types as $t){
-        $type = $t['value'];
-        if($type != $ns->expand("as:Activity") && $type != $ns->expand("as:Collection") && $type != EasyRdf_Namespace::expand("ldp:Container")){
-          $last_of_derp[$ns->shorten($type)] = $uri;
-        }
-
-        if($type == $ns->expand("as:Article") || $type == $ns->expand("as:Note")){
-          $latest_post_uris[] = $uri;
-        }
-
-        if($type == $ns->expand("as:Arrive")){
-          $color = get_value($locations, 'view:color', get_value(array($uri => $item), "as:location"));
-        }
-      }
-
-      $items[$uri]['color'] = $color;
-
-    }
-
-    /* Views stuff */
-    if(!$resource->get('view:stylesheet')){
-      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
-    }
-    // if($locations){
-    //   $wherestyle = "body, #me a:hover { background-color: ".get_value($locations, 'view:color', $currentlocation)."}\n";
-    //   if(!$resource->get('view:css')){
-    //     $resource->addLiteral('view:css', $wherestyle);
-    //   }
-    // }
-
-    // Don't need this to be an EasyRdf Resource any more
-    $g = $resource->getGraph();
-    $resource = $g->toRdfPhp();
-
-    include 'views/top.php';
-    include 'views/header.php';
-
-    // $items = array_reverse($items);
-    // $latest_post_uris = array_reverse(array_slice($latest_post_uris, count($latest_post_uris)-6, 6));
-    // $next = array_pop($latest_post_uris);
-
-    // foreach($latest_post_uris as $uri){
-    //   $result = get($ep, $uri);
-    //   $content = $result['content'];
-    //   $resource = $content->toRdfPhp();
-    //   $latest_posts[] = $resource;
-    // }
-
-    $now = new DateTime();
-    $from = new DateTime($now->format("Y-m-01"));
-    $to = new DateTime($now->format("Y-m-t"));
-    $month_posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
+    $tags = get_tags($ep);  
 
     $last_checkin = construct_last_of_type($ep, "as:Arrive");
     $checkin_summary = make_checkin_summary($last_checkin, $locations);
@@ -107,10 +45,65 @@ try {
 
     $project_icons = get_project_icons($ep);
 
+    // Massively overshoot on first count to balance out disproportionate number of notes vs articles
+    $notes_q = query_select_s_type_sort("as:Note", "as:published", "DESC", 16);
+    $articles_q = query_select_s_type_sort("as:Article", "as:published", "DESC", 16);
+    $notes_res = execute_query($ep, $notes_q);
+    $articles_res = execute_query($ep, $articles_q);
+
+    $posts_res = array();
+    $posts_res["variables"] = $articles_res["variables"];
+    $posts_res["rows"] = array_merge($articles_res["rows"], $notes_res["rows"]);
+    $toomany_post_uris = array_reverse(select_to_list_sorted($posts_res, "sort"));
+    $latest_post_uris = array_slice($toomany_post_uris, 0, 9);
+    $next = array_pop($latest_post_uris);
+
+    $latest_posts = construct_and_sort($ep, $latest_post_uris, "as:published");
+
+    $contact_q = query_construct("https://rhiaro.co.uk/contact");
+    $contact_post = execute_query($ep, $contact_q);
+
+    /* Views stuff */
+    if(!$resource->get('view:stylesheet')){
+      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
+    }
+    // Hardcoding some stuff for homepage..
+    // TODO: get this from the store
+    $resource->addLiteral('view:stylesheet', "views/home.css");
+    $colorschemecss = "
+    header { 
+      background-image: url('https://i.amy.gy/headers/20180929_dahlia.jpg'); 
+      background-color: #470229;
+    }
+    nav {
+      border-bottom: 2px solid #470229;
+    }
+    header h1 {
+      color: #470229;
+    } 
+    nav a {
+      color: #470229;
+    }
+    nav li a:hover {
+      color: #fff;
+      background-color: #470229;
+    }
+    footer {
+      background-color: #470229;
+    }
+    ";
+    $resource->addLiteral('view:css', $colorschemecss);
+
+    // Don't need this to be an EasyRdf Resource any more
+    $g = $resource->getGraph();
+    $resource = $g->toRdfPhp();
+
+    include 'views/top.php';
+
     ?>
-    <div class="header">
+    <header>
       <div class="rhiaro">
-        <img src="https://rhiaro.co.uk/stash/dp.png" />
+        <img src="https://rhiaro.co.uk/stash/dp.png" id="me" />
       </div>
       <div class="projects">
         <h1><span>rhiaro</span></h1>
@@ -135,7 +128,39 @@ try {
         <p>Words written this month (<?=$words_stats["value"]?> of posts and fiction)</p>
         <div class="stat-box"><div style="width: <?=$words_stats["width"]?>; background-color: <?=$words_stats["color"]?>"></div></div>
       </div>
-    </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#latest">Posts</a></li>
+        <li><a href="#archive">Archive</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="wrapper w1of1">
+      <div id="latest">
+        <?foreach($latest_posts as $uri => $data):?>
+          <? $resource = array($uri => $data); ?>
+          <? include 'views/article.php'; ?>
+        <?endforeach?>
+        <nav id="nav"><p><a href="<?=$next?>" id="prev" rel="prev">earlier</a></p></nav>
+      </div>
+
+      <div id="archive">
+        <? include 'views/archive.php'; ?>
+      </div>
+      <nav><p><a href="#top">top</a></p></nav>
+
+      <div id="contact">
+        <?if($contact_post):?>
+          <? $resource = $contact_post; ?>
+          <? include 'views/article.php'; ?>
+        <?endif?>
+      </div>
+
+      <nav><p><a href="#top">top</a></p></nav>
+    </main>
 
     <script>
 
