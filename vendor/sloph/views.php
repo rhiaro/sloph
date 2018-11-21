@@ -109,15 +109,15 @@ function get_project_icons($ep){
         "icon" => "views/icon_nanowrimo.png", "color" => "white"),
     ),
     array(
-      array("name" => "Social Web Protocols", "uri" => "https://w3.org/TR/social-web-protocols",
+      array("name" => "Social Web Protocols", "uri" => "https://w3.org/TR/social-web-protocols/",
         "icon" => "views/icon_swp.png", "color" => "white"),
-      array("name" => "ActivityPub", "uri" => "https://w3.org/TR/activitypub",
+      array("name" => "ActivityPub", "uri" => "https://w3.org/TR/activitypub/",
         "icon" => "views/icon_ap.png", "color" => "white"),
-      array("name" => "Linked Data Notifications", "uri" => "https://w3.org/TR/ldn",
+      array("name" => "Linked Data Notifications", "uri" => "https://w3.org/TR/ldn/",
         "icon" => "views/icon_ldn.png", "color" => "white"),
-      array("name" => "LinkedResearch", "uri" => "https://linkedresearch.org",
+      array("name" => "LinkedResearch", "uri" => "https://linkedresearch.org/",
         "icon" => "views/icon_lr.png", "color" => "white"),
-      array("name" => "dokieli", "uri" => "https://dokie.li",
+      array("name" => "dokieli", "uri" => "https://dokie.li/",
         "icon" => "views/icon_do.png", "color" => "white"),
       array("name" => "Indieweb", "uri" => "https://indieweb.org/User:Rhiaro.co.uk",
         "icon" => "views/icon_iwc.png", "color" => "white"),
@@ -310,6 +310,7 @@ function calculate_budget_stats($ep, $posts){
   $stats["cost"] = get_value($latest, "asext:cost");
   $stats["content"] = get_value($latest, "as:content");
   $stats["uri"] = key($latest);
+  $stats["perc"] = $percent;
 
   return $stats;
 }
