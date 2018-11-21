@@ -1,32 +1,64 @@
 .header {
     display: flex;
-    justify-content: center;
-}
-.projects {
-    text-align: right;
+    justify-content: flex-start;
+    background-image: url('https://i.amy.gy/headers/20180929_dahlia.jpg');
+    background-width: 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
     padding: 1em;
-    flex: 2;
 }
 .rhiaro {
     text-align: center;
-    padding: 1em;
-    flex: 1;
-    max-width: 200px;
+    flex: 1; flex-grow: 1;
+    max-width: 100px;
 }
 .rhiaro img {
     max-width: 100%;
+    border: 4px solid #fff;
 }
-.stats {
+.projects {
     text-align: left;
-    padding: 1em;
     flex: 2;
+    flex-grow: 3;
+    margin-left: 1em;
+}
+.projects h1 {
+    margin: 0.4em 0 1em 0;
+    font-size: 1.6em;
+    text-align: left;
+    font-family: "Times New Roman", serif;
+}
+.projects p span, h1 span {
+    padding: 0.4em 0.6em;
+    background-color: #fff;
+}
+.projects .project-box {
+    width: 30px; height: 30px;
+    display: inline-block;
+    margin: 0.2em;
+    overflow: hidden;
+}
+.projects .project-box img {
+    width: 100%;
+    height: 100%;
 }
 
+.stats {
+    text-align: left;
+    padding: 0 1em 1em 1em;
+    background-color: #fff;
+    background: rgba(250, 250, 250, 0.5);
+    flex: 3; flex-grow: 2;
+}
+.stats p {
+}
 .stat-box {
     padding: 0.2em;
-    width: 100%;
-    border: 2px solid silver;
+    border: 2px solid #fff;
+    border-radius: 1em;
+    margin-top: -1em;
 }
 .stat-box div {
     height: 1em;
+    border-radius: 1em;
 }

@@ -105,16 +105,25 @@ try {
     $budget_stats = stat_box($ep, "budget", $month_posts);
     $words_stats = stat_box($ep, "words", $month_posts);
 
+    $project_icons = get_project_icons($ep);
+
     ?>
     <div class="header">
-      <div class="projects">
-        <p>You may know me from</p>
-        <p>a b c d e f g h i j</p>
-        <p>Currently <a href="<?=$checkin_summary["location_uri"]?>"><?=$checkin_summary["location"]?></a> (for <?=$checkin_summary["for"]?>)</p>
-        <p>Timezone: <?=current_timezone($ep);?></p>
-      </div>
       <div class="rhiaro">
         <img src="https://rhiaro.co.uk/stash/dp.png" />
+      </div>
+      <div class="projects">
+        <h1><span>rhiaro</span></h1>
+        <p><span>Timezone: <strong><?=current_timezone($ep);?></strong></span></p>
+        <p><span>Currently <strong><a href="<?=$checkin_summary["location_uri"]?>"><?=$checkin_summary["location"]?></a></strong> (for <?=$checkin_summary["for"]?>)</span></p>
+        <p><span style="opacity: 0.8">You may know me from..</span></p>
+        <?foreach($project_icons as $group):?>
+          <div>
+            <?foreach($group as $project):?>
+              <a href="<?=$project["uri"]?>"><div class="project-box" title="<?=$project["name"]?>" style="background-color: <?=$project["color"]?>"><img src="<?=$project["icon"]?>" alt="" title="<?=$project["name"]?>" /></div></a>
+            <?endforeach?>
+          </div>
+        <?endforeach?>
       </div>
       <div class="stats">
         <p>Last ate <?=time_ago($consume_stats["published"])?> (<a href="<?=$consume_stats["uri"]?>"><?=$consume_stats["content"]?></a>)</p>

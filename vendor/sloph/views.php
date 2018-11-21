@@ -100,6 +100,55 @@ function get_icon_from_type($type, $skip=array()){
   }
 }
 
+function get_project_icons($ep){
+  $icons = array(
+    array(
+      array("name" => "Open Data Services", "uri" => "http://opendataservices.coop",
+        "icon" => "views/icon_ods.png", "color" => ""),
+      array("name" => "NaNoWriMo", "uri" => "https://nanowrimo.org/participants/rhiaro",
+        "icon" => "views/icon_nanowrimo.png", "color" => "white"),
+    ),
+    array(
+      array("name" => "Social Web Protocols", "uri" => "https://w3.org/TR/social-web-protocols",
+        "icon" => "views/icon_swp.png", "color" => "white"),
+      array("name" => "ActivityPub", "uri" => "https://w3.org/TR/activitypub",
+        "icon" => "views/icon_ap.png", "color" => "white"),
+      array("name" => "Linked Data Notifications", "uri" => "https://w3.org/TR/ldn",
+        "icon" => "views/icon_ldn.png", "color" => "white"),
+      array("name" => "LinkedResearch", "uri" => "https://linkedresearch.org",
+        "icon" => "views/icon_lr.png", "color" => "white"),
+      array("name" => "dokieli", "uri" => "https://dokie.li",
+        "icon" => "views/icon_do.png", "color" => "white"),
+      array("name" => "Indieweb", "uri" => "https://indieweb.org/User:Rhiaro.co.uk",
+        "icon" => "views/icon_iwc.png", "color" => "white"),
+    ),
+    array(
+      array("name" => "OCCRP", "uri" => "https://occrp.org",
+        "icon" => "views/icon_occrp.png", "color" => ""),
+      array("name" => "W3C", "uri" => "https://w3.org",
+        "icon" => "views/icon_w3c.png", "color" => "white"),
+      array("name" => "MIT CSAIL", "uri" => "http://dig.csail.mit.edu/",
+        "icon" => "views/icon_mit.png", "color" => "white"),
+      array("name" => "The Solid Project", "uri" => "https://solid.mit.edu",
+        "icon" => "views/icon_solid.png", "color" => ""),
+      array("name" => "University of Edinburgh", "uri" => "https://www.ed.ac.uk/informatics",
+        "icon" => "views/icon_edi.png", "color" => "white"),
+      array("name" => "SOCIAM", "uri" => "https://sociam.org/",
+        "icon" => "views/icon_sociam.png", "color" => "white"),
+      array("name" => "Prewired", "uri" => "https://prewired.org",
+        "icon" => "views/icon_prewired.png", "color" => "white"),
+      array("name" => "SocieTea", "uri" => "https://edinburghsocietea.co.uk",
+        "icon" => "views/icon_societea.png", "color" => "white"),
+      array("name" => "BBC", "uri" => "http://www.bbc.co.uk/blogs/internet/tags/linked-data",
+        "icon" => "views/icon_bbc.png", "color" => "white"),
+      array("name" => "University of Lincoln", "uri" => "https://www.lincoln.ac.uk/home/socs/",
+        "icon" => "views/icon_lincoln.png", "color" => "white"),
+    ),
+  );
+  // TODO: get projects from store
+  return $icons;
+}
+
 function get_travel_icon($tag){
   $icons = array(
      "https://rhiaro.co.uk/tags/bus" => "&#128652;"
