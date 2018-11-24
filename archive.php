@@ -25,49 +25,36 @@ foreach($types_count as $type => $data){
   $types_count[$type]["count"] = $res["rows"][0]["c"];
 }
 
-$now = new DateTime();
-$start_year = 2004;
-$current_year = $now->format("Y");
-// $types = array("as:Article", "as:Note", "as:Add");
-$types = array("as:Article", "as:Note");
 $dates_count = array();
-for($y = $start_year; $y <= $current_year; $y++){
-  // Count posts in year
-  $year_c = 0;
-  $from = new DateTime($y."-01-01");
-  $to = new DateTime($y."-12-31");
+$now = new DateTime();
+$start = new DateTime("2004-01-01");
+// $types = array("as:Article", "as:Note", "as:Add");
 
-  foreach($types as $type){
-    $q = query_select_count_between_type($from->format(DATE_ATOM), $to->format(DATE_ATOM), $type);
-    $res = execute_query($ep, $q);
-    $year_c += $res["rows"][0]["c"];
+$types = array("as:Article", "as:Note");
+$from = $start->format(DATE_ATOM);
+$to = $now->format(DATE_ATOM);
+$q = query_select_s_between_types($from, $to, $types);
+$res = execute_query($ep, $q);
+
+foreach($res["rows"] as $r){
+  $pub = new DateTime($r["d"]);
+  $year = $pub->format("Y");
+  $month = $pub->format("F");
+
+  if(!isset($dates_count[$year])){
+    $dates_count[$year]["total"] = 1;
+  }else{
+    $dates_count[$year]["total"] += 1;
+  }
+  if(!isset($dates_count[$year][$month])){
+    $dates_count[$year][$month] = 1;
+  }else{
+    $dates_count[$year][$month] += 1;
   }
 
-  if($year_c > 0){
-    $dates_count[$y]["total"] = $year_c;
-  }
-
-  for($m = 1; $m <= 12; $m++){
-    // Count posts in month
-    $month_c = 0;
-    $from = new DateTime($y."-".$m."-01");
-    $to = new DateTime($from->format("Y-m-t"));
-
-    foreach($types as $type){
-      $q = query_select_count_between_type($from->format(DATE_ATOM), $to->format(DATE_ATOM), $type);
-      $res = execute_query($ep, $q);
-      $month_c += $res["rows"][0]["c"];
-    }
-
-    if($month_c > 0){
-      $dates_count[$y][str_pad($m, 2, "0", STR_PAD_LEFT)] = $month_c;
-    }
-  }
 }
+
 krsort($dates_count);
-foreach($dates_count as $month=>$counts){
-  krsort($dates_count[$month]);
-}
 
 require_once('vendor/sloph/header_stats.php');
 
