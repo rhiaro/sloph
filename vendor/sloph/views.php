@@ -204,14 +204,12 @@ function get_icons_from_tags($tags){
 }
 
 function calculate_words_stats($ep, $posts){
-  // require_once(__DIR__."/summary.php");
   $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
   $now = new DateTime();
   $from = new DateTime($now->format("Y-m-01"));
   $to = new DateTime($now->format("Y-m-t"));
   $days = $now->format("d"); // this month so far
 
-  // $posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
   $tags = get_tags($ep);
   $poststats = aggregate_writing($posts, $from, $to, $tags);
   $postwords = $poststats["words"];
@@ -227,11 +225,11 @@ function calculate_words_stats($ep, $posts){
   $dailywords = ($total_words / $days);
 
   if($dailywords >= 1667){
-    $stats["color"] = "green";
+    $stats["color"] = "good";
   }elseif($dailywords >= 750){
-    $stats["color"] = "orange";
+    $stats["color"] = "med";
   }else{
-    $stats["color"] = "red";
+    $stats["color"] = "bad";
   }
 
   $monthgoal = 1667 * $now->format("t");
@@ -254,27 +252,27 @@ function calculate_consume_stats($ep){
     $stats["uri"] = key($obj);
     $diff = $date->diff($now);
     if ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 4){
-      $stats["color"] = "green";
+      $stats["color"] = "good";
       $stats["width"] = "100%";
     }
     elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 6){
-      $stats["color"] = "green";
+      $stats["color"] = "good";
       $stats["width"] = "80%";
     }
     elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 8){
-      $stats["color"] = "orange";
+      $stats["color"] = "med";
       $stats["width"] = "60%";
     }
     elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <=12){
-      $stats["color"] = "orange";
+      $stats["color"] = "med";
       $stats["width"] = "40%";
     }
     elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 18){
-      $stats["color"] = "red";
+      $stats["color"] = "bad";
       $stats["width"] = "20%";
     }
     else{
-      $stats["color"] = "red";
+      $stats["color"] = "bad";
       $stats["width"] = "1%";
     }
   }
@@ -296,11 +294,11 @@ function calculate_budget_stats($ep, $posts){
   $stats["width"] = 100 - $percent."%";
   $monthpercent = round($now->format("d") / $now->format("t") * 100);
   if($percent > $monthpercent){
-    $stats["color"] = "red";
+    $stats["color"] = "bad";
   }elseif($percent == $monthpercent){
-    $stats["color"] = "orange";
+    $stats["color"] = "med";
   }else{
-    $stats["color"] = "green";
+    $stats["color"] = "good";
   }
 
   $acqs = get_type($posts, "asext:Acquire");
@@ -326,23 +324,23 @@ function calculate_exercise_stats($ep){
     $stats["uri"] = $res["rows"][0]["p"];
     $diff = $date->diff($now);
     if ($diff->y == 0 and $diff->m == 0 and $diff->d == 1){
-      $stats["color"] = "green";
+      $stats["color"] = "good";
       $stats["width"] = "100%";
     }
     elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 7){
-      $stats["color"] = "green";
+      $stats["color"] = "good";
       $stats["width"] = "80%";
     }
     elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 30){
-      $stats["color"] = "orange";
+      $stats["color"] = "med";
       $stats["width"] = "50%";
     }
     elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 60){
-      $stats["color"] = "red";
+      $stats["color"] = "bad";
       $stats["width"] = "30%";
     }
     else{
-      $stats["color"] = "red";
+      $stats["color"] = "bad";
       $stats["width"] = "5%";
     }
   }
