@@ -61,6 +61,16 @@ header {
 .stat-box div {
     height: 1em;
     border-radius: 1em;
+    background-color: silver;
+}
+.stat-box div.bad {
+    background-color: #FA7D7D;
+}
+.stat-box div.med {
+    background-color: #FAC975;
+}
+.stat-box div.good {
+    background-color: #ADE899;
 }
 
 nav {

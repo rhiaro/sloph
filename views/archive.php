@@ -6,13 +6,13 @@
     <ul>
       <?foreach($dates_count as $year => $counts):?>
         <li>
-          <a href="/<?=$year?>"><?=$year?></a> (<?=$counts["total"]?>)
+          <a href="/<?=$year?>"><?=$year?></a> (<?=number_format($counts["total"])?>)
           <?if(count($counts) > 1):?>
             <ul>
               <?foreach($counts as $month => $count):?>
                 <?if($month != "total"):?>
                   <? $m = new DateTime($year."-".$month."-01"); ?>
-                  <li><a href="/<?=$year?>/<?=$month?>"><?=$m->format("F")?></a> (<?=$count?>)</li>
+                  <li><a href="/<?=$year?>/<?=$month?>"><?=$m->format("F")?></a> (<?=number_format($count)?>)</li>
                 <?endif?>
               <?endforeach?>
             </ul>
@@ -30,6 +30,6 @@
       <?endforeach?>
     </ul>
 
-    <p>I also used <?=count($tags)?> different tags, you can <a href="/tags">find posts by tag here</a>.</p>
+    <p>I also used <?=number_format(count($tags))?> different tags, you can <a href="/tags">find posts by tag here</a>.</p>
   </div></div>
 </article>
