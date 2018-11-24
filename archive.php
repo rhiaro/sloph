@@ -3,9 +3,17 @@ session_start();
 require_once('vendor/init.php');
 require_once('vendor/sloph/summary.php');
 
+$headers = apache_request_headers();
+$ct = $headers["Accept"];
+$acceptheaders = new AcceptHeader($ct);
+
+$base = "https://rhiaro.co.uk";
+
 $archive_uri = "https://rhiaro.co.uk/archive";
 $graph = new EasyRdf_Graph($archive_uri);
-$resource = $graph->resource($archive_uri);
+$graph->addType($archive_uri, "as:Collection");
+$graph->add($archive_uri, "as:name", "Archive");
+$graph->add($archive_uri, "as:summary", "Contains links to collections of posts by date and by type.");
 
 $types_count = array(
   "as:Article" => array("label" => "articles", "url" => "/articles"), 
@@ -23,13 +31,14 @@ foreach($types_count as $type => $data){
   $q = query_count_type($type);
   $res = execute_query($ep, $q);
   $types_count[$type]["count"] = $res["rows"][0]["c"];
+  $graph->addResource($archive_uri, "as:items", $base.$data["url"]);
 }
 
 $dates_count = array();
 $now = new DateTime();
 $start = new DateTime("2004-01-01");
-// $types = array("as:Article", "as:Note", "as:Add");
 
+// $types = array("as:Article", "as:Note", "as:Add");
 $types = array("as:Article", "as:Note");
 $from = $start->format(DATE_ATOM);
 $to = $now->format(DATE_ATOM);
@@ -54,26 +63,52 @@ foreach($res["rows"] as $r){
 
 }
 
+foreach($dates_count as $year => $data){
+  $graph->addResource($archive_uri, "as:items", $base."/$year/");
+  foreach($data as $month => $count){
+    if($month != "total"){
+      $m = new DateTime($month);
+      $graph->addResource($archive_uri, "as:items", $base."/$year/".$m->format("m")."/");
+    }
+  }
+}
+
 krsort($dates_count);
 
-require_once('vendor/sloph/header_stats.php');
+$result = conneg($acceptheaders, $graph);
+$header = $result['header'];
+$content = $result['content'];
 
-$g = $resource->getGraph();
-$resource = $g->toRdfPhp();
+try {
+  if(gettype($content) == "string"){
+    header($header);
+    echo $content;
+  }else{
 
-include 'views/top.php';
-include 'views/header_stats.php';
-include 'views/nav_header.php';
+    $resource = $graph->resource($archive_uri);
+
+    require_once('vendor/sloph/header_stats.php');
+
+    $g = $resource->getGraph();
+    $resource = $g->toRdfPhp();
+
+    include 'views/top.php';
+    include 'views/header_stats.php';
+    include 'views/nav_header.php';
 ?>
 
-<main class="wrapper w1of1">
+    <main class="wrapper w1of1">
 
-  <div id="archive">
-    <? include 'views/archive.php'; ?>
-  </div>
-  <nav><p><a href="#top">top</a></p></nav>
-</main>
+      <div id="archive">
+        <? include 'views/archive.php'; ?>
+      </div>
+      <nav><p><a href="#top">top</a></p></nav>
+    </main>
 
 <?
-include 'views/end.php';
+    include 'views/end.php';
+  }
+}catch(Exception $e){
+  var_dump($e);
+}
 ?>
