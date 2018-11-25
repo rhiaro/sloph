@@ -257,6 +257,32 @@ function query_construct_collection_page($page_uri, $collection){
   return $q;
 }
 
+function query_construct_collections_from_adds(){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT {
+  ?coll a as:Collection .
+  ?coll as:items ?item .
+  ?coll as:name ?name .
+  ?coll as:summary ?summary .
+  ?coll as:content ?content .
+  ?coll as:tag ?tag .
+  ?coll as:updated ?upd .
+  ?coll rdf:type ?type .
+} WHERE {
+  ?add a as:Add .
+  ?add as:target ?coll .
+  ?add as:object ?item .
+  OPTIONAL { ?add as:published ?upd . }
+  OPTIONAL { ?coll as:name ?name . }
+  OPTIONAL { ?coll as:summary ?summary . }
+  OPTIONAL { ?coll as:content ?content . }
+  OPTIONAL { ?coll as:tag ?tag . }
+  OPTIONAL { ?coll rdf:type ?type . }
+}
+    "; 
+  return $q;
+}
+
 function query_get_graphs(){
   $q = "SELECT DISTINCT ?g WHERE {
   GRAPH ?g { ?s ?p ?o . }
