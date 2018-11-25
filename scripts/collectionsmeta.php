@@ -27,29 +27,38 @@ function replace_properties($ep, $uri, $data){
   $uris = array("rdf:type", "as:tag", "as:item");
 
   $g = new EasyRdf_Graph($uri);
-  foreach($data as $key => $property){
-    if(empty($property)){
-      unset($data[$key]);
-    }
-  }
-
+  
   foreach($data as $pred => $obj){
 
     if(!is_array($obj)){
       $obj = array($obj);
     }
-    foreach($obj as $o){
-      if(in_array($pred, $lits)){
-        $g->add($uri, $pred, $o);
-      }elseif(in_array($pred, $uris)){
-        $g->addResource($uri, $pred, $o);
-      }
-    }
+
     $delq = query_delete_objects($uri, $pred);
     // var_dump(htmlentities($delq));
     $delres = execute_query($ep, $delq);
     if(!$delres){
         echo "Delete for $uri/$pred failed";
+    }
+
+    if(empty($obj)){
+      unset($obj);
+    }
+    if(is_array($obj)){
+      $obj = array_filter($obj);
+    }
+
+    foreach($obj as $o){
+
+      if($pred == "as:tag"){
+          $o = "https://rhiaro.co.uk/tags/".$o;
+      }
+      
+      if(in_array($pred, $lits)){
+        $g->add($uri, $pred, $o);
+      }elseif(in_array($pred, $uris)){
+        $g->addResource($uri, $pred, $o);
+      }
     }
   }
   $turtle = $g->serialise('ntriples');
@@ -87,8 +96,8 @@ $addtargets = get_add_targets($ep);
   <article class="wrapper">
     <h1>Collections</h1>
     <?foreach($addtargets as $uri => $data):?>
-      <h2><a href="/scripts/localedit.php?uri=<?=$uri?>" target="_blank"><?=$uri?></a></h2>
-      <form>
+      <h2 id="<?=$uri?>"><a href="/scripts/localedit.php?uri=<?=$uri?>" target="_blank"><?=$uri?></a></h2>
+      <form action="#<?=$uri?>">
         <input type="hidden" name="uri" value="<?=$uri?>" />
         <h3>
           <input name="as:name" placeholder="Name" type="text" value="<?=get_value(array($uri => $data), "as:name")?>" />
@@ -112,6 +121,15 @@ $addtargets = get_add_targets($ep);
         </p>
         <p>
           <textarea placeholder="content" name="as:content"><?=get_value(array($uri => $data), "as:content")?></textarea>
+        </p>
+        <p>
+            <? $tags = get_values(array($uri => $data), "as:tag");?>
+            <?if(isset($tags)):?>
+                <?foreach($tags as $tag):?>
+                    <input type="text" name="as:tag[]" value="<?=str_replace("https://rhiaro.co.uk/tags/", "", $tag)?>" />
+                <?endforeach?>
+            <?endif?>
+            <input type="text" name="as:tag[]" placeholder="+ tag" />
         </p>
         <p>Items: <?=count(get_values(array($uri => $data), "as:items"))?></p>
         <p>Last updated: <?=last_updated(array($uri => $data))?></p>
