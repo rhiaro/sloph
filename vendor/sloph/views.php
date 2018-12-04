@@ -323,19 +323,19 @@ function calculate_exercise_stats($ep){
     $stats["published"] = $date;
     $stats["uri"] = $res["rows"][0]["p"];
     $diff = $date->diff($now);
-    if ($diff->y == 0 and $diff->m == 0 and $diff->d == 1){
+    if ($diff->y == 0 and $diff->m == 0 and $diff->d <= 1){
       $stats["color"] = "good";
       $stats["width"] = "100%";
     }
-    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 7){
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d <= 7){
       $stats["color"] = "good";
       $stats["width"] = "80%";
     }
-    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 30){
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d <= 30){
       $stats["color"] = "med";
       $stats["width"] = "50%";
     }
-    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 60){
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d <= 60){
       $stats["color"] = "bad";
       $stats["width"] = "30%";
     }
@@ -688,48 +688,85 @@ function nanowrimo_total($ep, $year=null){
 /* Helpers             */
 /***********************/
 
-function time_ago($date){
+function time_ago($date, $round=false){
   $now = new DateTime();
-  return time_diff_to_human($date, $now)." ago";
+  return time_diff_to_human($date, $now, $round)." ago";
 }
 
-function time_diff_to_human($date, $date2){
+function time_diff_to_human($date, $date2, $round=false){
   if(gettype($date) == "string" || get_class($date) != "DateTime"){ $date = new DateTime($date); }
   if(gettype($date2) == "string" || get_class($date2) != "DateTime"){ $date2 = new DateTime($date2); }
+
   $duration = $date->diff($date2);
+  $y = $duration->y;
+  $m = $duration->m;
+  $d = $duration->d;
+  $h = $duration->h;
+  $i = $duration->i;
+  $s = $duration->s;
+
+  if($round == "years"){
+    if($m >= 6){
+      $y = $y + 1;
+    }
+    $m = $d = $h = $i = $s = 0;
+  }elseif($round == "months"){
+    if($d >= 15){
+      $m = $m + 1;
+    }
+    $d = $h = $i = $s = 0;
+  }elseif($round == "days"){
+    if($h >= 12){
+      $d = $d + 1;
+    }
+    $h = $i = $s = 0;
+  }elseif($round == "hours"){
+    if($m >= 30){
+      $h = $h + 1;
+    }
+    $i = $s = 0;
+  }elseif($round == "minutes"){
+    if($s >= 30){
+      $i = $i + 1;
+    }
+    $s = 0;
+  }
   
   $ago = array();
-  if($duration->y > 0){ 
-    $y = $duration->y . " year"; 
-    if($duration->y > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($y > 0){ 
+    $str = $y . " year"; 
+    if($y > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  if($duration->m > 0){ 
-    $y = $duration->m . " month"; 
-    if($duration->m > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($m > 0){ 
+    $str = $m . " month"; 
+    if($m > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  if($duration->d > 0){ 
-    $y = $duration->d . " day"; 
-    if($duration->d > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($d > 0){ 
+    $str = $d . " day"; 
+    if($d > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  if($duration->h > 0){ 
-    $y = $duration->h . " hour"; 
-    if($duration->h > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($h > 0){ 
+    $str = $h . " hour"; 
+    if($h > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  if($duration->i > 0){ 
-    $y = $duration->i . " minute"; 
-    if($duration->i > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($i > 0){ 
+    $str = $i . " minute"; 
+    if($i > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  if($duration->s > 0){ 
-    $y = $duration->s . " second"; 
-    if($duration->s > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($s > 0){ 
+    $str = $s . " second"; 
+    if($s > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  $ago[count($ago)-1] = " and ".$ago[count($ago)-1];
+
+  if(count($ago) > 1){
+    $ago[count($ago)-1] = " and ".$ago[count($ago)-1];
+  }
   return implode(", ", $ago);
 }
 
