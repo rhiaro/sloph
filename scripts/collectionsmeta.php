@@ -25,6 +25,7 @@ function replace_properties($ep, $uri, $data){
 
   $lits = array("as:name", "as:content", "as:summary");
   $uris = array("rdf:type", "as:tag", "as:item");
+  $dates = array("as:published", "as:updated");
 
   $g = new EasyRdf_Graph($uri);
   
@@ -35,7 +36,6 @@ function replace_properties($ep, $uri, $data){
     }
 
     $delq = query_delete_objects($uri, $pred);
-    // var_dump(htmlentities($delq));
     $delres = execute_query($ep, $delq);
     if(!$delres){
         echo "Delete for $uri/$pred failed";
@@ -54,10 +54,14 @@ function replace_properties($ep, $uri, $data){
           $o = "https://rhiaro.co.uk/tags/".$o;
       }
       
-      if(in_array($pred, $lits)){
-        $g->add($uri, $pred, $o);
+      if(in_array($pred, $dates)){
+        $dateresource = new EasyRdf_Literal_DateTime($o);
+        // $dateresource->create($o);
+        $g->addLiteral($uri, $pred, $dateresource);
       }elseif(in_array($pred, $uris)){
         $g->addResource($uri, $pred, $o);
+      }else{
+        $g->add($uri, $pred, $o);
       }
     }
   }
@@ -132,7 +136,8 @@ $addtargets = get_add_targets($ep);
             <input type="text" name="as:tag[]" placeholder="+ tag" />
         </p>
         <p>Items: <?=count(get_values(array($uri => $data), "as:items"))?></p>
-        <p>Last updated: <?=last_updated(array($uri => $data))?></p>
+        <p><input type="text" placeholder="last updated" name="as:updated" value="<?=last_updated(array($uri => $data))?>" /></p>
+        <p><input type="text" placeholder="cover image" name="as:image" value="<?=get_value(array($uri => $data), "as:image")?>" /> (<a href="<?=$uri?>" target="_blank">>></a>)</p>
         <input name="submit" type="submit" value="Save" />
       </form>
       <hr/>
