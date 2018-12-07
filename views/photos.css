@@ -15,7 +15,7 @@
     overflow: hidden;
 }
 .photos h3 {
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: left;
     background-color: #000;
     background: rgba(0, 0, 0, 0.5);
@@ -33,6 +33,7 @@
 .photos a > p {
     color: #fff;
     font-size: 0.8em;
+    font-family: Arial, sans-serif;
     text-align: right;
     padding: 0.6em; margin: 0;
     z-index: 2;
@@ -40,6 +41,7 @@
 }
 .photos p.count {
     font-size: 1em;
+    font-family: Arial, sans-serif;
     font-weight: bold;
     z-index: 2;
     bottom: 1em;
@@ -67,4 +69,18 @@
 }
 .photos a:hover > p {
     color: #2d2d2d;
+}
+
+.photos-holder {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    width: 100%;
+}
+.photos-holder img {
+    width: 20%;
+}
+time {
+    text-align: right;
 }

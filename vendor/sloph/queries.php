@@ -842,6 +842,17 @@ ORDER BY DESC(?updated)
   return $q;
 }
 
+function query_construct_adds($collection_uri){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT {
+  ?add ?p ?o .
+} WHERE {
+  ?add as:target <$collection_uri> .
+  ?add ?p ?o .
+}";
+  return $q;
+}
+
 function query_select_wordcount($startdate=null, $enddate=null){
 
   if($startdate == null){
