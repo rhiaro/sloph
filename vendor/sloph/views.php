@@ -705,6 +705,22 @@ function time_diff_to_human($date, $date2, $round=false){
   $i = $duration->i;
   $s = $duration->s;
 
+  if($round == "years" && $y == 0 && $m < 6){
+    $round = "months";
+  }
+  if($round == "months" && $m == 0 && $d < 15){
+    $round = "days";
+  }
+  if($round == "days" && $d == 0 && $h < 12){
+    $round = "hours";
+  }
+  if($round == "hours" && $h == 0 && $i < 30){
+    $round = "minutes";
+  }
+  if($round == "minutes" && $i == 0 && $s < 30){
+    $round = "seconds";
+  }
+
   if($round == "years"){
     if($m >= 6){
       $y = $y + 1;
@@ -721,7 +737,7 @@ function time_diff_to_human($date, $date2, $round=false){
     }
     $h = $i = $s = 0;
   }elseif($round == "hours"){
-    if($m >= 30){
+    if($i >= 30){
       $h = $h + 1;
     }
     $i = $s = 0;
@@ -763,11 +779,16 @@ function time_diff_to_human($date, $date2, $round=false){
     if($s > 1){ $str .=  "s"; }
     $ago[] = $str;
   }
-
-  if(count($ago) > 1){
+  if(count($ago) == 1){
+    $out = $ago[0];
+  }elseif(count($ago) > 1){
     $ago[count($ago)-1] = " and ".$ago[count($ago)-1];
+    $out = implode(", ", $ago);
+  }else{
+    $out = "less than a second";
   }
-  return implode(", ", $ago);
+
+  return $out;
 }
 
 function lat_lon_to_map($lat, $lon, $zoom=8){
