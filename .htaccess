@@ -30,6 +30,7 @@ RewriteRule ^(writes|articles|likes|checkins|arrives|consumes|eats|acquires|stuf
 RewriteRule ^archive(/)?$ /archive.php [QSA,L]
 RewriteRule ^contact(/)?$ /contact.php [QSA,L]
 RewriteRule ^summary(/)?$ /summary.php [QSA,L]
+RewriteRule ^photos(/)?$ /photos.php [QSA,L]
 RewriteRule ^tags(/)?$ /tagslist.php [QSA,L]
 
 RewriteRule ^([0-9]{4})(/)?$ /dates.php?y=$1 [QSA,L]
