@@ -736,8 +736,16 @@ function query_count_items($collection){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT COUNT(?item) AS ?c WHERE {
   <$collection> as:items ?item .
+}";
+  return $q;
 }
-GROUP BY ?s";
+
+function query_count_added_items($collection){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT COUNT(?item) AS ?c WHERE {
+  ?add as:object ?item .
+  ?add as:target <$collection> .
+}";
   return $q;
 }
 
@@ -746,6 +754,25 @@ function query_count_type($type, $graph="https://blog.rhiaro.co.uk/"){
   $q .= "SELECT DISTINCT COUNT(?s) AS ?c WHERE {
   ?s rdf:type $type .
 }";
+  return $q;
+}
+
+function query_select_image($collection=null, $limit=1, $graph="https://blog.rhiaro.co.uk/"){
+  
+  if(empty($collection)){
+    $collection = "?coll";
+  }else{
+    $collection = "<$collection>";
+  }
+
+  $q = get_prefixes();
+  $q .= "SELECT ?img WHERE {
+  ?add a as:Add .
+  ?add as:target $collection .
+  ?add as:object ?img .
+}
+LIMIT $limit";
+
   return $q;
 }
 
@@ -793,6 +820,25 @@ function query_construct_tag_collections($uri=null){
   } WHERE {
   $uri as:tag ?tag .
   }";
+  return $q;
+}
+
+function query_construct_albums(){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT {
+  ?album ?p ?o .
+  ?album a asext:Album .
+  ?album as:updated ?updated .
+  ?album as:items ?items .
+} WHERE {
+  ?album ?p ?o .
+  ?album a asext:Album .
+  ?album as:updated ?updated .
+  ?add as:object ?items .
+  ?add as:target ?album .
+}
+ORDER BY DESC(?updated)
+  ";
   return $q;
 }
 
