@@ -1,12 +1,12 @@
 .photos {
     width: 100%; height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-flow: row wrap;
     align-content: flex-start;
 }
 .photos a {
-    width: 300px; height: 100%;
+    width: 30%; height: 100%;
     display: inline-block;
     position: relative;
     text-decoration: none;
