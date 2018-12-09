@@ -266,6 +266,7 @@ function query_construct_collections_from_adds(){
   ?coll as:summary ?summary .
   ?coll as:content ?content .
   ?coll as:tag ?tag .
+  ?coll as:image ?image .
   ?coll as:updated ?upd .
   ?coll rdf:type ?type .
 } WHERE {
@@ -278,6 +279,7 @@ function query_construct_collections_from_adds(){
   OPTIONAL { ?coll as:content ?content . }
   OPTIONAL { ?coll as:tag ?tag . }
   OPTIONAL { ?coll rdf:type ?type . }
+  OPTIONAL { ?coll as:image ?image . }
 }
     "; 
   return $q;
@@ -826,14 +828,20 @@ function query_construct_tag_collections($uri=null){
 function query_construct_albums(){
   $q = get_prefixes();
   $q .= "CONSTRUCT {
-  ?album ?p ?o .
   ?album a asext:Album .
   ?album as:updated ?updated .
   ?album as:items ?items .
+  ?album as:name ?name .
+  ?album as:content ?content .
+  ?album as:image ?image .
+  ?album as:tag ?tag .
 } WHERE {
-  ?album ?p ?o .
   ?album a asext:Album .
   ?album as:updated ?updated .
+  OPTIONAL { ?album as:image ?image . }
+  OPTIONAL { ?album as:name ?name . }
+  OPTIONAL { ?album as:content ?content . }
+  OPTIONAL { ?album as:tag ?tag . }
   ?add as:object ?items .
   ?add as:target ?album .
 }

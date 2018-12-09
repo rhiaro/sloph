@@ -24,7 +24,7 @@ function replace_properties($ep, $uri, $data){
   unset($data["uri"]);
 
   $lits = array("as:name", "as:content", "as:summary");
-  $uris = array("rdf:type", "as:tag", "as:item");
+  $uris = array("rdf:type", "as:tag", "as:item", "as:image");
   $dates = array("as:published", "as:updated");
 
   $g = new EasyRdf_Graph($uri);
