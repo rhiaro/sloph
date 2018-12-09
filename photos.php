@@ -58,7 +58,7 @@ if($album_data){
       $imgr = execute_query($ep, $imgq);
       $img = select_to_list($imgr);
       $img = $img[0];
-      $graph->addResource($album, "as:image", new EasyRdf_Resource($img));
+      $graph->addResource($album, "as:image", $img);
     }
 
     $totalitems = get_value(array($album => $res[$album]), "as:totalItems");
