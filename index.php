@@ -14,6 +14,8 @@ $result = conneg($acceptheaders, $out);
 $header = $result['header'];
 $content = $result['content'];
 
+$now = new DateTime();
+
 try {
   if(gettype($content) == "string"){
     header($header);

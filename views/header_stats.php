@@ -4,7 +4,7 @@
   </div>
   <div class="projects">
     <h1><span>rhiaro</span></h1>
-    <p><span>Timezone: <strong><?=current_timezone($ep);?></strong></span></p>
+    <p><span>Timezone: <strong><?=current_timezone($ep);?></strong> (<?=$now->format("jS M H:i")?>)</span></p>
     <p><span>Currently <strong><a href="<?=$checkin_summary["location_uri"]?>"><?=$checkin_summary["location"]?></a></strong> (for <?=$checkin_summary["for"]?>)</span></p>
     <p><span style="opacity: 0.8">You may know me from..</span></p>
     <?foreach($project_icons as $group):?>
