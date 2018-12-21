@@ -9,7 +9,7 @@
       <?=get_value(array($uri => $data), "as:content")?>
       <div class="photos-holder">
         <?foreach(get_values(array($uri => $data), "as:object") as $item):?>
-          <img src="<?=$item?>" />
+          <img src="<?=$_IMG?>200/0/<?=$item?>" />
         <?endforeach?>
       </div>
     <?endif?>

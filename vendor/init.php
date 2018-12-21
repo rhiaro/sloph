@@ -51,6 +51,7 @@ if (!$ep->isSetUp()) {
 }
 
 $_RHIARO = "https://rhiaro.co.uk/#me";
+$_IMG = "https://i.amy.gy/resize/";
 
 $_PREF = array(
          'rdf' => 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'

@@ -4,7 +4,7 @@
     <?foreach($resource as $uri => $album):?>
       <?if($uri != "https://rhiaro.co.uk/photos"):?>
         <a href="?album=<?=$uri?>">
-          <img src="<?=get_value(array($uri => $album), "as:image")?>" alt="Photo from the album <?=get_value(array($uri => $album), "as:name")?>" />
+          <img src="<?=$_IMG?>400/0/<?=get_value(array($uri => $album), "as:image")?>" alt="Photo from the album <?=get_value(array($uri => $album), "as:name")?>" />
           <h3><?=get_value(array($uri => $album), "as:name")?></h3>
           <div class="descr">
             <?=get_value(array($uri => $album), "as:content")?>
