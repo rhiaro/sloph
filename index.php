@@ -28,20 +28,24 @@ try {
 
     require_once('vendor/sloph/header_stats.php');
 
-    // Massively overshoot on first count to balance out disproportionate number of notes vs articles
+    // Massively overshoot on first count to balance out disproportionate number of notes vs articles vs adds
     $notes_q = query_select_s_type_sort("as:Note", "as:published", "DESC", 16);
     $articles_q = query_select_s_type_sort("as:Article", "as:published", "DESC", 16);
+    $adds_q = query_select_s_type_sort("as:Add", "as:published", "DESC", 16);
     $notes_res = execute_query($ep, $notes_q);
     $articles_res = execute_query($ep, $articles_q);
+    $adds_res = execute_query($ep, $adds_q);
 
     $posts_res = array();
     $posts_res["variables"] = $articles_res["variables"];
-    $posts_res["rows"] = array_merge($articles_res["rows"], $notes_res["rows"]);
+    $posts_res["rows"] = array_merge($articles_res["rows"], $notes_res["rows"], $adds_res["rows"]);
     $toomany_post_uris = array_reverse(select_to_list_sorted($posts_res, "sort"));
     $latest_post_uris = array_slice($toomany_post_uris, 0, 9);
     $next = array_pop($latest_post_uris);
 
     $latest_posts = construct_and_sort($ep, $latest_post_uris, "as:published");
+
+    $in_feed = true;
 
     // Don't need this to be an EasyRdf Resource any more
     $g = $resource->getGraph();
@@ -56,7 +60,7 @@ try {
       <div id="latest">
         <?foreach($latest_posts as $uri => $data):?>
           <? $resource = array($uri => $data); ?>
-          <? include 'views/article.php'; ?>
+          <? include 'views/'.view_router($resource).'.php'; ?>
         <?endforeach?>
         <nav id="nav"><p><a href="<?=$next?>" id="prev" rel="prev">earlier</a></p></nav>
         <nav><p><a href="#top">top</a></p></nav>
@@ -70,7 +74,7 @@ try {
         var posts = document.getElementById("latest");
         var prevLink = document.getElementById("prev");
         var prevUri = prevLink.href;
-        prevLink.onclick = function(e) { e.preventDefault(); makeRequest('vendor/sloph/page.php?type=as:Article,as:Note&start='+prevUri); };
+        prevLink.onclick = function(e) { e.preventDefault(); makeRequest('vendor/sloph/page.php?type=as:Article,as:Note,as:Add&start='+prevUri); };
 
         function makeRequest(url) {
           httpRequest = new XMLHttpRequest();
@@ -95,7 +99,7 @@ try {
               var nextnav = posts.querySelector("#next");
               nextnav.onclick = function(e) { 
                 e.preventDefault(); 
-                makeRequest('vendor/sloph/page.php?type=as:Article,as:Note&start='+nextnav.href); 
+                makeRequest('vendor/sloph/page.php?type=as:Article,as:Note,as:Add&start='+nextnav.href); 
               };
             } else {
               console.log('There was a problem with the request.');

@@ -10,19 +10,19 @@
       <?endforeach?>
     </em></p>
   <?endif?>
-  
+
   <div class="p-summary" property="as:summary" style="display: none"><?=get_value($resource, 'as:summary')?></div>
   <div class="e-content" property="as:content"><?=get_value($resource, 'as:content')?></div>
   
   <? include('tags.php'); ?>
   <?if(get_value($resource, 'as:published')):?>
     <? $date = new DateTime(get_value($resource, 'as:published')); ?>
-    <p><time class="dt-published"><a property="as:published" class="u-url" href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("d M Y, H:i (e)")?></a></time></p>
+    <p><time class="dt-published"><a property="as:published" class="u-url" href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("D jS \o\\f F \a\\t g:ia (e)")?></a></time></p>
   <?endif?>
 
   <?if(get_value($resource, 'as:updated')):?>
     <? $date = new DateTime(get_value($resource, 'as:updated')); ?>
-    <p><em>Last modified: </em><time class="dt-updated"><a property="as:updated" href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("d M Y, H:i (e)")?></a></time></p>
+    <p><em>Last modified: </em><time class="dt-updated"><a property="as:updated" href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("D jS \o\\f F \a\\t g:ia (e)")?></a></time></p>
   <?endif?>
 
   <?if(get_value($resource, 'as:generator')):?>

@@ -97,6 +97,8 @@ if(gettype($result['content']) == "string"){
     $resource = set_views($ep, $g->resource());
     $resource = $g->toRdfPhp();
 
+    $in_feed = true;
+
     ob_start();
     include '../../views/'.view_router($resource).'.php';
     $html .= ob_get_clean();
