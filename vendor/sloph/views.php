@@ -381,17 +381,25 @@ function get_locations($ep){
 }
 
 function get_name($ep, $uri){
-
-  $resource = get($ep, $uri);
-  if($resource['content']){
-    $r = $resource['content']->toRdfPhp();
-    $name = get_value($r, 'as:name');
-    if(!empty($name)){
-      return $name;
-    }
+  $q = query_select_o($uri, "as:name");
+  $r = execute_query($ep, $q);
+  $name = select_to_list($r);
+  if(count($name) > 0){
+    return $name[0];
   }
   // todo: deref other uris and look for various name properties
   return str_replace("http://dbpedia.org/resource/", "", $uri);
+}
+
+function get_types($ep, $uri){
+  global $ns;
+  $q = query_select_o($uri, "rdf:type");
+  $types = select_to_list(execute_query($ep, $q));
+  $shorttypes = array();
+  foreach($types as $type){
+    $shorttypes[] = $ns->shorten($type);
+  }
+  return $shorttypes;
 }
 
 function get_tags($ep){
