@@ -111,7 +111,7 @@ try {
       var proxyUrl ='<?=$_IMG?>';
     </script>
     <?
-    $scripts = array("views/images.js");
+    $scripts = array("/views/images.js");
     include 'views/end.php';
   }
 }catch(Exception $e){
