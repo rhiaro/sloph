@@ -60,6 +60,7 @@
 
     if(y < Math.abs(ele.offsetTop)+64){
       par.removeChild(ele);
+      window.location.hash = "";
     }else if(w/2 > x){
       if(imgs[nextImg-1] != undefined){
         var newImg = imgs[nextImg-1].src;
