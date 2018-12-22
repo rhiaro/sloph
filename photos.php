@@ -107,8 +107,11 @@ try {
       </div>
       <nav><p><a href="#top">top</a></p></nav>
     </main>
-
-<?
+    <script>
+      var proxyUrl ='<?=$_IMG?>';
+    </script>
+    <?
+    $scripts = array("views/images.js");
     include 'views/end.php';
   }
 }catch(Exception $e){

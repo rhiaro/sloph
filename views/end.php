@@ -3,6 +3,5 @@
       <script src="<?=$script?>"></script>
     <?endforeach?>
   <?endif?>
-  <script src="/views/images.js"></script>
   </body>
 </html>
