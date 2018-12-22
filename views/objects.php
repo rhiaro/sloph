@@ -1,6 +1,7 @@
 <?
 $date = new DateTime(get_value($resource, 'as:published'));
 $objects = get_values($resource, 'as:object');
+$scripts = array("/views/images.js");
 ?>
 <article>
   <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("l \\t\h\\e jS \o\\f F \a\\t g:ia (e)")?></a></datetime></p>
@@ -8,10 +9,13 @@ $objects = get_values($resource, 'as:object');
   <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
   <div class="w1of1 clearfix">
     <?foreach($objects as $item):?>
-      <img class="w1of5" src="<?=$item?>" alt="<?=$item?>" />
+      <img class="w1of5" src="<?=$_IMG?>200/0/<?=$item?>" alt="" />
     <?endforeach?>
   </div>
 
   <? include('tags.php'); ?>
   
 </article>
+<script>
+  var proxyUrl ='<?=$_IMG?>';
+</script>
