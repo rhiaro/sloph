@@ -15,6 +15,20 @@ function fetch_album($url){
   return $response;
 }
 
+function update_album_date($ep, $album, $date){
+  $delq = query_delete_objects($album, "as:updated");
+  $delr = execute_query($ep, $delq);
+  if($delr){
+    $insq = query_insert_lit($album, "as:updated", $date, "xsd:dateTime");
+    $insr = execute_query($ep, $insq);
+    if($insr){
+      return true;
+    }
+    return false;
+  }
+  return false;
+}
+
 function rhiaro_url_to_date($url){
   $str = explode("/", $url);
   return array("m" => $str[4], "y" => $str[3]);
@@ -137,6 +151,7 @@ if(isset($_GET['add'])){
     $addr = execute_query($ep, $addq);
     if($addr){
       echo "saved";
+      $updatealbum = update_album_date($ep, $collection, $published);
     }else{
       var_dump(htmlentities($addq));
     }
