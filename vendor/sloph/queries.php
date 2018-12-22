@@ -456,6 +456,12 @@ function query_select_s_where($vals, $limit=10, $sort=null){
   return $q;
 }
 
+function query_select_o($s, $p, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT ?o WHERE { GRAPH <$graph> { <$s> $p ?o . } }";
+  return $q;
+}
+
 function query_select_o_where($vals, $limit=0, $sort=null){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE { \n";
