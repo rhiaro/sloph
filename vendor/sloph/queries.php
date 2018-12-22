@@ -964,6 +964,22 @@ function query_delete_objects($uri, $p, $graph="https://blog.rhiaro.co.uk/"){
   return $q;
 }
 
+function query_insert_lit($s, $p, $o, $type=null, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "INSERT INTO <$graph> { <$s> $p \"\"\"$o\"\"\"";
+  if($type != null){
+    $q .= "^^".$type;
+  }
+  $q .= " . }";
+  return $q;
+}
+
+function query_insert_uri($s, $p, $o, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "INSERT INTO <$graph> { <$s> $p <$o> . }";
+  return $q;
+}
+
 function query_insert($turtle, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "INSERT INTO <$graph> { ".$turtle." }";
