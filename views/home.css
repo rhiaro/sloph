@@ -1,0 +1,92 @@
+header {
+    display: flex;
+    justify-content: flex-start;
+    background-width: 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 1em;
+}
+
+.rhiaro {
+    text-align: center;
+    flex: 1; flex-grow: 1;
+    max-width: 100px;
+}
+.rhiaro img {
+    max-width: 100%;
+    border: 4px solid #fff;
+}
+.projects {
+    text-align: left;
+    flex: 2;
+    flex-grow: 3;
+    margin-left: 1em;
+}
+.projects h1 {
+    margin: 0.4em 0 1em 0;
+    font-size: 1.6em;
+    text-align: left;
+    font-family: "Times New Roman", serif;
+}
+.projects p span, h1 span {
+    padding: 0.4em 0.6em;
+    background-color: #fff;
+}
+.projects .project-box {
+    width: 30px; height: 30px;
+    display: inline-block;
+    margin: 0.2em;
+    overflow: hidden;
+}
+.projects .project-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.stats {
+    text-align: left;
+    padding: 0 1em 1em 1em;
+    background-color: #fff;
+    background: rgba(250, 250, 250, 0.5);
+    flex: 3; flex-grow: 2;
+}
+.stats p {
+}
+.stat-box {
+    padding: 0.2em;
+    border: 2px solid #fff;
+    border-radius: 1em;
+    margin-top: -1em;
+}
+.stat-box div {
+    height: 1em;
+    border-radius: 1em;
+    background-color: silver;
+}
+.stat-box div.bad {
+    background-color: #FA7D7D;
+}
+.stat-box div.med {
+    background-color: #FAC975;
+}
+.stat-box div.good {
+    background-color: #ADE899;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+    text-transform: lowercase;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul a {
+    text-decoration: none;
+    padding: 0.6em;
+}
+nav ul a:hover {
+    background-color: silver;
+}

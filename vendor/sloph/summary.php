@@ -1,6 +1,4 @@
 <?
-require_once('../init.php');
-
 function get_posts($ep, $from, $to){
   $q = construct_between($from, $to);
   $res = execute_query($ep, $q);
@@ -114,7 +112,7 @@ function aggregate_acquires($posts, $from, $to, $alltags){
           }
         }
 
-        $structured_cost = structure_cost($cost);
+        $structured_cost = structure_cost($cost, __DIR__."/currencies.json");
         $out['currencies'][] = $structured_cost['currency'];
 
         $photo = get_value(array($uri=>$post), "as:image");
@@ -241,21 +239,27 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $out['food']['groceriesEur'] = number_format($out['food']['groceriesEur'], 2);
 
     // Get random tags
-    $rand = array_rand($others, 3);
-    $rand_tags[$rand[0]] = $others[$rand[0]];
-    $rand_tags[$rand[1]] = $others[$rand[1]];
-    $rand_tags[$rand[2]] = $others[$rand[2]];
-    $out['othertags'] = top_tags($rand_tags, 3, $alltags);
-    $out['toptags'] = top_tags($top, 6, $alltags);
+    if(count($others) >= 3){
+      $rand = array_rand($others, 3);
+      $rand_tags[$rand[0]] = $others[$rand[0]];
+      $rand_tags[$rand[1]] = $others[$rand[1]];
+      $rand_tags[$rand[2]] = $others[$rand[2]];
+      $out['othertags'] = top_tags($rand_tags, 3, $alltags);
+      $out['toptags'] = top_tags($top, 6, $alltags);
+    }
 
     // Photos
-    $randph = array_rand($photoposts);
-    $out['photo'] = get_value(array($randph => $photoposts[$randph]), "as:image");
-    $out['photodate'] = new DateTime(get_value(array($randph => $photoposts[$randph]), "as:published"));
-    $out['photocost'] = get_value(array($randph => $photoposts[$randph]), "asext:cost");
-    $out['photocont'] = get_value(array($randph => $photoposts[$randph]), "as:content");
-    $perc = count($photoposts) / count($typed) * 100;
-    $out['photosp'] = number_format($perc, 1);
+    if(!empty($photoposts)){
+      $randph = array_rand($photoposts);
+      $out['photo'] = get_value(array($randph => $photoposts[$randph]), "as:image");
+      $out['photodate'] = new DateTime(get_value(array($randph => $photoposts[$randph]), "as:published"));
+      $out['photocost'] = get_value(array($randph => $photoposts[$randph]), "asext:cost");
+      $out['photocont'] = get_value(array($randph => $photoposts[$randph]), "as:content");
+      $perc = count($photoposts) / count($typed) * 100;
+      $out['photosp'] = number_format($perc, 1);
+    }else{
+      $out['photosp'] = 0;
+    }
 
     return $out;
 
@@ -266,7 +270,11 @@ function aggregate_consumes($posts, $from, $to, $alltags){
   $diff = $from->diff($to);
   $days = $diff->format("%a");
   $out['total'] = count($typed);
-  $out['day'] = $out['total'] / $days;
+  if($days > 0){
+    $out['day'] = $out['total'] / $days;
+  }else{
+    $out['day'] = 0;
+  }
 
   $tags = tally_tags($typed);
   $top = array_slice($tags, 0, 1);
@@ -275,7 +283,11 @@ function aggregate_consumes($posts, $from, $to, $alltags){
   $out['toptags'] = top_tags($toprest, 6, $alltags);
   $topar = explode("(", $out['top']);
   $topc = str_replace(")", "", $topar[1]);
-  $out['topday'] = $topc / $days;
+  if($days > 0){
+    $out['topday'] = $topc / $days;
+  }else{
+    $out['topday'] = 0;
+  }
 
   $randk = array_rand($typed);
   $out['random'] = "<a href=\"$randk\">".get_value(array($randk => $typed[$randk]), "as:content")."</a>";
@@ -304,8 +316,13 @@ function aggregate_writing($posts, $from, $to, $alltags){
     $out['words'] = count($words) + $out['words'];
   }
 
-  $out['dailywords'] = $out['words'] / $days;
-  $out['dailynotes'] = $out['total'] / $days;
+  if($days > 0){
+    $out['dailywords'] = $out['words'] / $days;
+    $out['dailynotes'] = $out['total'] / $days;
+  }else{
+    $out['dailywords'] = 0;
+    $out['dailynotes'] = 0;
+  }
 
   // Tags
   $tags = tally_tags($typed);
@@ -336,18 +353,20 @@ function tally_tags($posts){
 }
 
 function top_tags($tags, $max, $alltags){
+  $topstr = "";
   $limit = count($tags)-1;
   if($max > $limit){ $max = $limit; }
   $top = array_slice($tags, 0, $max, true);
   $last = array_slice($tags, $max, 1, true);
-  $topstr = "";
-  if(count($top) > 1){
-    foreach($top as $t => $c){
-      $topstr .= "<a href=\"$t\">".$alltags[$t]["name"]."</a> (".$c."), ";
+  if(!empty($last)){
+    if(count($top) > 1){
+      foreach($top as $t => $c){
+        $topstr .= "<a href=\"$t\">".$alltags[$t]["name"]."</a> (".$c."), ";
+      }
+      $topstr .= " and <a href=\"".key($last)."\">".$alltags[key($last)]["name"]."</a> (".$last[key($last)].")";
+    }else{
+      $topstr = "<a href=\"".key($last)."\">".$alltags[key($last)]["name"]."</a> (".$last[key($last)].")";
     }
-    $topstr .= " and <a href=\"".key($last)."\">".$alltags[key($last)]["name"]."</a> (".$last[key($last)].")";
-  }else{
-    $topstr = "<a href=\"".key($last)."\">".$alltags[key($last)]["name"]."</a> (".$last[key($last)].")";
   }
   return $topstr;
 }
@@ -362,29 +381,4 @@ function aggregate_socials($posts, $from, $to){
   return $out;
 }
 
-$now = new DateTime();
-if(isset($_GET['from'])){
-  $from = new DateTime($_GET['from']);
-}else{
-  $from = new DateTime("7 days ago");
-}
-if(isset($_GET['to'])){
-  $to = new DateTime($_GET['to']);
-}else{
-  $to = $now;
-}
-
-$posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
-$tags = get_tags($ep);
-$locations = get_locations($ep);
-$locations = $locations->toRdfPhp();
-
-$checkins = aggregate_checkins($posts, $from, $to, $locations);
-$acquires = aggregate_acquires($posts, $from, $to, $tags);
-$consumes = aggregate_consumes($posts, $from, $to, $tags);
-$writing = aggregate_writing($posts, $from, $to, $tags);
-$socials = aggregate_socials($posts, $from, $to);
-$total = $checkins['total'] + $acquires['total'] + $consumes['total'] + $writing['total'] + $socials['total'];
-
-include '../../views/summary.php';
 ?>

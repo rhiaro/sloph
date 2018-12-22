@@ -22,9 +22,6 @@
   padding-top: 2em;
 }
 
-.wrapper h1 {
-  font-size: 1.2em; text-align: left;
-}
 .wrapper h1 img {
   margin: 0;
   margin-bottom: -2.8em; margin-left: 2em;
@@ -42,13 +39,6 @@ article {
 @media screen and (min-width: 1024px) {
   article {
     width: 50%;
-  }
-  .wrapper {
-    background-image: url('https://i.amy.gy/headers/20180929_dahlia.jpg');
-    background-size: contain;
-    background-repeat: repeat-x;
-    background-position: top center;
-    padding-top: 20em;
   }
 }
 
@@ -113,13 +103,6 @@ nav a:hover img {
 }
 #latest h1 {
   font-size: 2em;
-}
-
-#stats {
-  background-color: white;
-  text-align: left;
-  line-height: 1.2;
-  padding: 1em 2em 1em 2em;
 }
 
 .tags a {

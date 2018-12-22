@@ -20,7 +20,6 @@ RewriteBase /
 
 RewriteRule ^incoming(/)?$ /vendor/sloph/ldn.php [QSA,L]
 RewriteRule ^outgoing(/)?$ /vendor/sloph/pub.php [QSA,L]
-RewriteRule ^summary(/)?$ /vendor/sloph/summary.php [QSA,L]
 RewriteRule ^nanowrimo(/)?$ /vendor/sloph/nanowrimo.php [QSA,L]
 RewriteRule ^set(/)?$ /vendor/sloph/page.php [QSA,L]
 
@@ -28,6 +27,10 @@ RewriteRule ^thesis(/)?$ https://rhiaro.github.io/thesis [L]
 
 RewriteRule ^(writes|articles|likes|checkins|arrives|consumes|eats|acquires|stuff|events|bookmarks|reposts|rsvps|notes|places|follows|where|words)(/)?$ /types.php?type=$1 [QSA,L]
 
+RewriteRule ^archive(/)?$ /archive.php [QSA,L]
+RewriteRule ^contact(/)?$ /contact.php [QSA,L]
+RewriteRule ^summary(/)?$ /summary.php [QSA,L]
+RewriteRule ^photos(/)?$ /photos.php [QSA,L]
 RewriteRule ^tags(/)?$ /tagslist.php [QSA,L]
 
 RewriteRule ^([0-9]{4})(/)?$ /dates.php?y=$1 [QSA,L]

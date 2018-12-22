@@ -1,0 +1,86 @@
+.photos {
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+.photos a {
+    width: 30%; height: 100%;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    /*border: 1px solid silver;*/
+    margin: 0.6em;
+    overflow: hidden;
+}
+.photos h3 {
+    font-size: 1.2em;
+    text-align: left;
+    background-color: #000;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0; padding: 0.4em;
+    color: white;
+    position: absolute; top: 0; left: 0;
+    z-index: 2;
+}
+
+.photos a > img {
+    background-color: silver;
+    color: white;
+    z-index: -1;
+}
+.photos a > p {
+    color: #fff;
+    font-size: 0.8em;
+    font-family: Arial, sans-serif;
+    text-align: right;
+    padding: 0.6em; margin: 0;
+    z-index: 2;
+    position: absolute; right: 0; bottom: 0;
+}
+.photos p.count {
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    z-index: 2;
+    bottom: 1em;
+}
+.photos p.count img {
+    height: 1em;
+    padding-right: 0.4em;
+    z-index: 2;
+}
+
+.photos .descr {
+    color: #000;
+    z-index: 2;
+    position: absolute; top: 1.6em;
+    padding: 0.4em; margin: 0;
+    visibility: hidden;
+}
+.photos a:hover .descr {
+    visibility: visible;
+    /*background-color: #000;
+    background: rgba(0, 0, 0, 0.5);*/
+}
+.photos a:hover img {
+    opacity: 0.4;
+}
+.photos a:hover > p {
+    color: #2d2d2d;
+}
+
+.photos-holder {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    width: 100%;
+}
+.photos-holder img {
+    width: 20%;
+}
+time {
+    text-align: right;
+}

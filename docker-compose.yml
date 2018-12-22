@@ -11,6 +11,7 @@ services:
       - "3306:3306"
     volumes:
       - /home/rhiaro/Documents/rhiaro/sloph/db:/var/lib/mysql
+      - /home/rhiaro/Documents/rhiaro/sloph/mysql:/etc/mysql/mysql.conf.d
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin

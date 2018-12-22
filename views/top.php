@@ -19,4 +19,4 @@
       <?=get_value($resource, 'view:css')?>
     </style>
   </head>
-  <body about="" typeof="as:Document" prefix="as: http://www.w3.org/ns/activitystreams# foaf: http://xmlns.com/foaf/0.1/ ldp: http://www.w3.org/ns/ldp# view: https://terms.rhiaro.co.uk/view# asext: https://terms.rhiaro.co.uk/as# pimspace: http://www.w3.org/ns/pim/space# cc: http://creativecommons.org/ns# sioc: http://rdfs.org/sioc/ns# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ cito: http://purl.org/spar/cito/ oa: http://www.w3.org/ns/oa# schema: http://schema.org/">
+  <body about="" typeof="as:Document" prefix="as: https://www.w3.org/ns/activitystreams# foaf: http://xmlns.com/foaf/0.1/ ldp: http://www.w3.org/ns/ldp# view: https://terms.rhiaro.co.uk/view# asext: https://terms.rhiaro.co.uk/as# pimspace: http://www.w3.org/ns/pim/space# cc: http://creativecommons.org/ns# sioc: http://rdfs.org/sioc/ns# dbr: http://dbpedia.org/resource/ dbp: http://dbpedia.org/property/ cito: http://purl.org/spar/cito/ oa: http://www.w3.org/ns/oa# schema: http://schema.org/">

@@ -88,6 +88,7 @@ if(gettype($result['content']) == "string"){
   echo $result['content'];
 }else{
 
+  $tags = get_tags($ep);
   foreach($sorted as $uri => $r){
 
     $g = new EasyRdf_Graph($uri);
@@ -95,6 +96,8 @@ if(gettype($result['content']) == "string"){
     $resource = $g->resource($uri);
     $resource = set_views($ep, $g->resource());
     $resource = $g->toRdfPhp();
+
+    $in_feed = true;
 
     ob_start();
     include '../../views/'.view_router($resource).'.php';

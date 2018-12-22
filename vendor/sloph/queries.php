@@ -103,6 +103,16 @@ function construct_and_sort($ep, $uris, $sort="as:published"){
   return $sorted;
 }
 
+function construct_last_of_type($ep, $type, $sort="as:published"){
+  $q = query_select_s_type($type, $sort, "DESC", 1);
+  $res = execute_query($ep, $q);
+  if($res){
+    $uri = select_to_list($res);
+    $obj = execute_query($ep, query_construct($uri[0]));
+    return $obj;
+  }
+}
+
 /* Building queries */
 
 function get_prefixes(){
@@ -247,6 +257,34 @@ function query_construct_collection_page($page_uri, $collection){
   return $q;
 }
 
+function query_construct_collections_from_adds(){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT {
+  ?coll a as:Collection .
+  ?coll as:items ?item .
+  ?coll as:name ?name .
+  ?coll as:summary ?summary .
+  ?coll as:content ?content .
+  ?coll as:tag ?tag .
+  ?coll as:image ?image .
+  ?coll as:updated ?upd .
+  ?coll rdf:type ?type .
+} WHERE {
+  ?add a as:Add .
+  ?add as:target ?coll .
+  ?add as:object ?item .
+  OPTIONAL { ?add as:published ?upd . }
+  OPTIONAL { ?coll as:name ?name . }
+  OPTIONAL { ?coll as:summary ?summary . }
+  OPTIONAL { ?coll as:content ?content . }
+  OPTIONAL { ?coll as:tag ?tag . }
+  OPTIONAL { ?coll rdf:type ?type . }
+  OPTIONAL { ?coll as:image ?image . }
+}
+    "; 
+  return $q;
+}
+
 function query_get_graphs(){
   $q = "SELECT DISTINCT ?g WHERE {
   GRAPH ?g { ?s ?p ?o . }
@@ -293,6 +331,24 @@ function query_select_s_type($type, $sort="as:published", $dir="DESC", $limit=0,
   return $q;
 }
 
+function query_select_s_type_sort($type, $sort="as:published", $dir="DESC", $limit=0, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?s ?sort WHERE {
+  GRAPH <$graph> { ?s a $type .";
+  if(isset($sort)){
+    $q .= "  ?s $sort ?sort .";
+  }
+  $q .= "  }
+}";
+  if(isset($sort)){
+    $q .= "ORDER BY $dir(?sort)";
+  }
+  if($limit > 0){
+    $q .= "LIMIT $limit";
+  }
+  return $q;
+}
+
 function query_select_s_between($from, $to, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {
@@ -316,6 +372,20 @@ function query_select_s_between_types($from, $to, $types, $graph="https://blog.r
     $i++;
   }
   $q .= "
+  FILTER(?d > \"$from\")
+  FILTER(?d <= \"$to\")
+}
+ORDER BY ASC(?d)";
+  return $q;
+}
+
+function query_select_count_between_type($from, $to, $type, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT COUNT(?s) AS ?c WHERE {
+  GRAPH <$graph> { 
+    ?s a $type . 
+    ?s as:published ?d . 
+  }
   FILTER(?d > \"$from\")
   FILTER(?d <= \"$to\")
 }
@@ -383,6 +453,12 @@ function query_select_s_where($vals, $limit=10, $sort=null){
   if($limit > 0){
     $q .= "\nLIMIT $limit";
   }
+  return $q;
+}
+
+function query_select_o($s, $p, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT ?o WHERE { GRAPH <$graph> { <$s> $p ?o . } }";
   return $q;
 }
 
@@ -668,8 +744,16 @@ function query_count_items($collection){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT COUNT(?item) AS ?c WHERE {
   <$collection> as:items ?item .
+}";
+  return $q;
 }
-GROUP BY ?s";
+
+function query_count_added_items($collection){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT COUNT(?item) AS ?c WHERE {
+  ?add as:object ?item .
+  ?add as:target <$collection> .
+}";
   return $q;
 }
 
@@ -678,6 +762,25 @@ function query_count_type($type, $graph="https://blog.rhiaro.co.uk/"){
   $q .= "SELECT DISTINCT COUNT(?s) AS ?c WHERE {
   ?s rdf:type $type .
 }";
+  return $q;
+}
+
+function query_select_image($collection=null, $limit=1, $graph="https://blog.rhiaro.co.uk/"){
+  
+  if(empty($collection)){
+    $collection = "?coll";
+  }else{
+    $collection = "<$collection>";
+  }
+
+  $q = get_prefixes();
+  $q .= "SELECT ?img WHERE {
+  ?add a as:Add .
+  ?add as:target $collection .
+  ?add as:object ?img .
+}
+LIMIT $limit";
+
   return $q;
 }
 
@@ -728,6 +831,42 @@ function query_construct_tag_collections($uri=null){
   return $q;
 }
 
+function query_construct_albums(){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT {
+  ?album a asext:Album .
+  ?album as:updated ?updated .
+  ?album as:items ?items .
+  ?album as:name ?name .
+  ?album as:content ?content .
+  ?album as:image ?image .
+  ?album as:tag ?tag .
+} WHERE {
+  ?album a asext:Album .
+  ?album as:updated ?updated .
+  OPTIONAL { ?album as:image ?image . }
+  OPTIONAL { ?album as:name ?name . }
+  OPTIONAL { ?album as:content ?content . }
+  OPTIONAL { ?album as:tag ?tag . }
+  ?add as:object ?items .
+  ?add as:target ?album .
+}
+ORDER BY DESC(?updated)
+  ";
+  return $q;
+}
+
+function query_construct_adds($collection_uri){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT {
+  ?add ?p ?o .
+} WHERE {
+  ?add as:target <$collection_uri> .
+  ?add ?p ?o .
+}";
+  return $q;
+}
+
 function query_select_wordcount($startdate=null, $enddate=null){
 
   if($startdate == null){
@@ -747,6 +886,18 @@ function query_select_wordcount($startdate=null, $enddate=null){
   FILTER(?d >= \"$startdate\") .
   FILTER(?d <= \"$enddate\") .
 }";
+  return $q;
+}
+
+function query_select_last_time_at($location){
+  $q = get_prefixes();
+  $q .= "SELECT ?p ?d WHERE {
+  ?p a as:Arrive .
+  ?p as:published ?d .
+  ?p as:location <$location> .
+}
+ORDER BY DESC(?d)
+LIMIT 1";
   return $q;
 }
 
@@ -816,6 +967,22 @@ function query_delete($uri){
 function query_delete_objects($uri, $p, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "DELETE FROM <$graph> { <$uri> $p ?o . }";
+  return $q;
+}
+
+function query_insert_lit($s, $p, $o, $type=null, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "INSERT INTO <$graph> { <$s> $p \"\"\"$o\"\"\"";
+  if($type != null){
+    $q .= "^^".$type;
+  }
+  $q .= " . }";
+  return $q;
+}
+
+function query_insert_uri($s, $p, $o, $graph="https://blog.rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "INSERT INTO <$graph> { <$s> $p <$o> . }";
   return $q;
 }
 

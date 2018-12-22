@@ -100,6 +100,55 @@ function get_icon_from_type($type, $skip=array()){
   }
 }
 
+function get_project_icons($ep){
+  $icons = array(
+    array(
+      array("name" => "Open Data Services", "uri" => "http://opendataservices.coop",
+        "icon" => "views/icon_ods.png", "color" => ""),
+      array("name" => "NaNoWriMo", "uri" => "https://nanowrimo.org/participants/rhiaro",
+        "icon" => "views/icon_nanowrimo.png", "color" => "white"),
+    ),
+    array(
+      array("name" => "Social Web Protocols", "uri" => "https://w3.org/TR/social-web-protocols/",
+        "icon" => "views/icon_swp.png", "color" => "white"),
+      array("name" => "ActivityPub", "uri" => "https://w3.org/TR/activitypub/",
+        "icon" => "views/icon_ap.png", "color" => "white"),
+      array("name" => "Linked Data Notifications", "uri" => "https://w3.org/TR/ldn/",
+        "icon" => "views/icon_ldn.png", "color" => "white"),
+      array("name" => "LinkedResearch", "uri" => "https://linkedresearch.org/",
+        "icon" => "views/icon_lr.png", "color" => "white"),
+      array("name" => "dokieli", "uri" => "https://dokie.li/",
+        "icon" => "views/icon_do.png", "color" => "white"),
+      array("name" => "Indieweb", "uri" => "https://indieweb.org/User:Rhiaro.co.uk",
+        "icon" => "views/icon_iwc.png", "color" => "white"),
+    ),
+    array(
+      array("name" => "OCCRP", "uri" => "https://occrp.org",
+        "icon" => "views/icon_occrp.png", "color" => ""),
+      array("name" => "W3C", "uri" => "https://w3.org",
+        "icon" => "views/icon_w3c.png", "color" => "white"),
+      array("name" => "MIT CSAIL", "uri" => "http://dig.csail.mit.edu/",
+        "icon" => "views/icon_mit.png", "color" => "white"),
+      array("name" => "The Solid Project", "uri" => "https://solid.mit.edu",
+        "icon" => "views/icon_solid.png", "color" => ""),
+      array("name" => "University of Edinburgh", "uri" => "https://www.ed.ac.uk/informatics",
+        "icon" => "views/icon_edi.png", "color" => "white"),
+      array("name" => "SOCIAM", "uri" => "https://sociam.org/",
+        "icon" => "views/icon_sociam.png", "color" => "white"),
+      array("name" => "Prewired", "uri" => "https://prewired.org",
+        "icon" => "views/icon_prewired.png", "color" => "white"),
+      array("name" => "SocieTea", "uri" => "https://edinburghsocietea.co.uk",
+        "icon" => "views/icon_societea.png", "color" => "white"),
+      array("name" => "BBC", "uri" => "http://www.bbc.co.uk/blogs/internet/tags/linked-data",
+        "icon" => "views/icon_bbc.png", "color" => "white"),
+      array("name" => "University of Lincoln", "uri" => "https://www.lincoln.ac.uk/home/socs/",
+        "icon" => "views/icon_lincoln.png", "color" => "white"),
+    ),
+  );
+  // TODO: get projects from store
+  return $icons;
+}
+
 function get_travel_icon($tag){
   $icons = array(
      "https://rhiaro.co.uk/tags/bus" => "&#128652;"
@@ -154,6 +203,168 @@ function get_icons_from_tags($tags){
   return $icons;
 }
 
+function calculate_words_stats($ep, $posts){
+  $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
+  $now = new DateTime();
+  $from = new DateTime($now->format("Y-m-01"));
+  $to = new DateTime($now->format("Y-m-t"));
+  $days = $now->format("d"); // this month so far
+
+  $tags = get_tags($ep);
+  $poststats = aggregate_writing($posts, $from, $to, $tags);
+  $postwords = $poststats["words"];
+
+  $wrotewords = 0;
+  $wroteq = query_select_wordcount($from->format(DATE_ATOM), $to->format(DATE_ATOM));
+  $wroteres = execute_query($ep, $wroteq);
+  foreach($wroteres["rows"] as $res){
+    $wrotewords = $wrotewords + $res['wc'];
+  }
+
+  $total_words = $postwords + $wrotewords;
+  $dailywords = ($total_words / $days);
+
+  if($dailywords >= 1667){
+    $stats["color"] = "good";
+  }elseif($dailywords >= 750){
+    $stats["color"] = "med";
+  }else{
+    $stats["color"] = "bad";
+  }
+
+  $monthgoal = 1667 * $now->format("t");
+  $percent = $total_words / $monthgoal * 100;
+  $stats["width"] = $percent."%";
+
+  $stats["value"] = $total_words;
+
+  return $stats;
+}
+
+function calculate_consume_stats($ep){
+  $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
+  $obj = construct_last_of_type($ep, "asext:Consume");
+  if($obj){
+    $now = new DateTime();
+    $date = new DateTime(get_value($obj, "as:published"));
+    $stats["published"] = $date;
+    $stats["content"] = get_value($obj, "as:content");
+    $stats["uri"] = key($obj);
+    $diff = $date->diff($now);
+    if ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 4){
+      $stats["color"] = "good";
+      $stats["width"] = "100%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 6){
+      $stats["color"] = "good";
+      $stats["width"] = "80%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 8){
+      $stats["color"] = "med";
+      $stats["width"] = "60%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <=12){
+      $stats["color"] = "med";
+      $stats["width"] = "40%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d == 0 and $diff->h <= 18){
+      $stats["color"] = "bad";
+      $stats["width"] = "20%";
+    }
+    else{
+      $stats["color"] = "bad";
+      $stats["width"] = "1%";
+    }
+  }
+  return $stats;
+}
+
+function calculate_budget_stats($ep, $posts){
+
+  $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
+  $now = new DateTime();
+  $from = new DateTime($now->format("Y-m-01"));
+  $to = new DateTime($now->format("Y-m-t"));
+  
+  $tags = get_tags($ep);
+  $acquires = aggregate_acquires($posts, $from, $to, $tags);
+  $eur = $acquires["totaleur"];
+  $percent = round($eur / 1000 * 100);
+
+  $stats["width"] = 100 - $percent."%";
+  $monthpercent = round($now->format("d") / $now->format("t") * 100);
+  if($percent > $monthpercent){
+    $stats["color"] = "bad";
+  }elseif($percent == $monthpercent){
+    $stats["color"] = "med";
+  }else{
+    $stats["color"] = "good";
+  }
+
+  $acqs = get_type($posts, "asext:Acquire");
+  reset($acqs);
+  $latest[key($acqs)] = $acqs[key($acqs)];
+
+  $stats["cost"] = get_value($latest, "asext:cost");
+  $stats["content"] = get_value($latest, "as:content");
+  $stats["uri"] = key($latest);
+  $stats["perc"] = $percent;
+
+  return $stats;
+}
+
+function calculate_exercise_stats($ep){
+  $q = query_select_last_time_at("https://rhiaro.co.uk/location/exercise");
+  $res = execute_query($ep, $q);
+  $stats = array("color" => "silver", "width" => "0%", "value" => "unknown");
+  if($res){
+    $now = new DateTime();
+    $date = new DateTime($res["rows"][0]["d"]);
+    $stats["published"] = $date;
+    $stats["uri"] = $res["rows"][0]["p"];
+    $diff = $date->diff($now);
+    if ($diff->y == 0 and $diff->m == 0 and $diff->d <= 1){
+      $stats["color"] = "good";
+      $stats["width"] = "100%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d <= 7){
+      $stats["color"] = "good";
+      $stats["width"] = "80%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d <= 30){
+      $stats["color"] = "med";
+      $stats["width"] = "50%";
+    }
+    elseif ($diff->y == 0 and $diff->m == 0 and $diff->d <= 60){
+      $stats["color"] = "bad";
+      $stats["width"] = "30%";
+    }
+    else{
+      $stats["color"] = "bad";
+      $stats["width"] = "5%";
+    }
+  }
+  return $stats;
+}
+
+function stat_box($ep, $type, $posts=null){
+  switch($type){
+    case "consume": 
+      $r = calculate_consume_stats($ep);
+      break;
+    case "exercise":
+      $r = calculate_exercise_stats($ep);
+      break;
+    case "budget":
+      $r = calculate_budget_stats($ep, $posts);
+      break;
+    case "words":
+      $r = calculate_words_stats($ep, $posts);
+      break;
+  }
+  return $r;
+}
+
 /********************/
 /* Data things      */
 /********************/
@@ -170,17 +381,25 @@ function get_locations($ep){
 }
 
 function get_name($ep, $uri){
-
-  $resource = get($ep, $uri);
-  if($resource['content']){
-    $r = $resource['content']->toRdfPhp();
-    $name = get_value($r, 'as:name');
-    if(!empty($name)){
-      return $name;
-    }
+  $q = query_select_o($uri, "as:name");
+  $r = execute_query($ep, $q);
+  $name = select_to_list($r);
+  if(count($name) > 0){
+    return $name[0];
   }
   // todo: deref other uris and look for various name properties
   return str_replace("http://dbpedia.org/resource/", "", $uri);
+}
+
+function get_types($ep, $uri){
+  global $ns;
+  $q = query_select_o($uri, "rdf:type");
+  $types = select_to_list(execute_query($ep, $q));
+  $shorttypes = array();
+  foreach($types as $type){
+    $shorttypes[] = $ns->shorten($type);
+  }
+  return $shorttypes;
 }
 
 function get_tags($ep){
@@ -414,6 +633,8 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
 }
 
 function make_checkin_summary($checkin, $locations=null, $end=null){
+
+  $summary = array();
   
   $location = get_value($checkin, "as:location");
   if($locations === null){
@@ -441,8 +662,16 @@ function make_checkin_summary($checkin, $locations=null, $end=null){
     $location_label = "was last spotted at ".key($location);
   }
 
+  $summary["location"] = $location_label;
+  $summary["location_uri"] = key($location);
+  $summary["for"] = $diff;
+  $summary["from"] = $pub;
+  $summary["to"] = $end;
+
   $label = "rhiaro ".$location_label." for ".$diff." (from ".$pub->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")." until ".$end_label.")";
-  return $label;
+  $summary["string"] = $label;
+
+  return $summary;
 }
 
 function nanowrimo_total($ep, $year=null){
@@ -467,49 +696,107 @@ function nanowrimo_total($ep, $year=null){
 /* Helpers             */
 /***********************/
 
-function time_ago($date){
+function time_ago($date, $round=false){
   $now = new DateTime();
-  return time_diff_to_human($date, $now)." ago";
+  return time_diff_to_human($date, $now, $round)." ago";
 }
 
-function time_diff_to_human($date, $date2){
+function time_diff_to_human($date, $date2, $round=false){
   if(gettype($date) == "string" || get_class($date) != "DateTime"){ $date = new DateTime($date); }
   if(gettype($date2) == "string" || get_class($date2) != "DateTime"){ $date2 = new DateTime($date2); }
+
   $duration = $date->diff($date2);
+  $y = $duration->y;
+  $m = $duration->m;
+  $d = $duration->d;
+  $h = $duration->h;
+  $i = $duration->i;
+  $s = $duration->s;
+
+  if($round == "years" && $y == 0 && $m < 6){
+    $round = "months";
+  }
+  if($round == "months" && $m == 0 && $d < 15){
+    $round = "days";
+  }
+  if($round == "days" && $d == 0 && $h < 12){
+    $round = "hours";
+  }
+  if($round == "hours" && $h == 0 && $i < 30){
+    $round = "minutes";
+  }
+  if($round == "minutes" && $i == 0 && $s < 30){
+    $round = "seconds";
+  }
+
+  if($round == "years"){
+    if($m >= 6){
+      $y = $y + 1;
+    }
+    $m = $d = $h = $i = $s = 0;
+  }elseif($round == "months"){
+    if($d >= 15){
+      $m = $m + 1;
+    }
+    $d = $h = $i = $s = 0;
+  }elseif($round == "days"){
+    if($h >= 12){
+      $d = $d + 1;
+    }
+    $h = $i = $s = 0;
+  }elseif($round == "hours"){
+    if($i >= 30){
+      $h = $h + 1;
+    }
+    $i = $s = 0;
+  }elseif($round == "minutes"){
+    if($s >= 30){
+      $i = $i + 1;
+    }
+    $s = 0;
+  }
   
   $ago = array();
-  if($duration->y > 0){ 
-    $y = $duration->y . " year"; 
-    if($duration->y > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($y > 0){ 
+    $str = $y . " year"; 
+    if($y > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  if($duration->m > 0){ 
-    $y = $duration->m . " month"; 
-    if($duration->m > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($m > 0){ 
+    $str = $m . " month"; 
+    if($m > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  if($duration->d > 0){ 
-    $y = $duration->d . " day"; 
-    if($duration->d > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($d > 0){ 
+    $str = $d . " day"; 
+    if($d > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  if($duration->h > 0){ 
-    $y = $duration->h . " hour"; 
-    if($duration->h > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($h > 0){ 
+    $str = $h . " hour"; 
+    if($h > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  if($duration->i > 0){ 
-    $y = $duration->i . " minute"; 
-    if($duration->i > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($i > 0){ 
+    $str = $i . " minute"; 
+    if($i > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  if($duration->s > 0){ 
-    $y = $duration->s . " second"; 
-    if($duration->s > 1){ $y .=  "s"; }
-    $ago[] = $y;
+  if($s > 0){ 
+    $str = $s . " second"; 
+    if($s > 1){ $str .=  "s"; }
+    $ago[] = $str;
   }
-  $ago[count($ago)-1] = " and ".$ago[count($ago)-1];
-  return implode(", ", $ago);
+  if(count($ago) == 1){
+    $out = $ago[0];
+  }elseif(count($ago) > 1){
+    $ago[count($ago)-1] = " and ".$ago[count($ago)-1];
+    $out = implode(", ", $ago);
+  }else{
+    $out = "less than a second";
+  }
+
+  return $out;
 }
 
 function lat_lon_to_map($lat, $lon, $zoom=8){
@@ -537,7 +824,7 @@ function prev_tile_x($tile){
   return implode("/", $url);
 }
 
-function structure_cost($cost){
+function structure_cost($cost, $currencies_file="currencies.json"){
   // This is terrible.
   // Accounting for messy human input.
   // Replace this with retreiving the currency code from however you store the cost of something.
@@ -557,7 +844,7 @@ function structure_cost($cost){
   $amt = floatval($amt);
   $cur = str_replace($amt, "", $cur);
   $cur = trim(str_replace("0", "", $cur));
-  $currencies = json_decode(file_get_contents('currencies.json'), true);
+  $currencies = json_decode(file_get_contents($currencies_file), true);
   $currencies = $currencies['results'];
   if(array_key_exists(strtoupper($cur), $currencies)){
     $code = strtoupper($cur);

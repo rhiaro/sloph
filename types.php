@@ -17,6 +17,8 @@ $typemap = array("checkins" => "as:Arrive"
                 ,"likes" => "as:Like"
                 ,"events" => "as:Event"
                 ,"bookmarks" => "as:Add"
+                ,"adds" => "as:Add"
+                ,"collections" => "as:Add"
                 ,"reposts" => "as:Announce"
                 ,"rsvps" => "as:Accept"
                 ,"articles" => "as:Article"
@@ -67,9 +69,14 @@ if(isset($_GET['before'])){
 }else{
   $q = query_select_s_type($typemap[$_GET['type']], $sort, "DESC", $limit+1, "https://blog.rhiaro.co.uk/");
 }
+
+if($_GET["type"] == "bookmarks"){
+  $vals = array("as:published" => "?published", "rdf:type" => "as:Add", "as:target" => "<https://rhiaro.co.uk/bookmarks/>");
+  $q = query_select_s_where($vals, 0, "published");
+}
+
 $item_uris = select_to_list(execute_query($ep, $q));
 $prev_uri = array_pop($item_uris);
-
 $name = ucfirst($_GET['type']);
 $nav_prep = array("next" => $next_uri, "prev" => $prev_uri);
 
@@ -81,7 +88,7 @@ if($_GET['type'] == "where"){
   $where->addLiteral($uri, 'view:intimacy', 5);
   $where->addLiteral($uri, 'view:wanderlust', 4);
   $summary = make_checkin_summary($where->toRdfPhp(), $locations);
-  $where->addLiteral($uri, 'as:summary', $summary);
+  $where->addLiteral($uri, 'as:summary', $summary["string"]);
 
   $g = $where;
 }else{

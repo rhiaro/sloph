@@ -29,12 +29,16 @@
 
       <h2 id="shelter">Shelter</h2>
 
-      <p>I lay my head in (approximately; logs may be incomplete) <?=count($acquires['accom'])?> different places:</p>
-      <ul>
-        <?foreach($acquires['accom'] as $accom):?>
-          <li><a href="<?=$accom['uri']?>"><?=$accom['content']?></a> (<?=$accom['cost']?>)</li>
-        <?endforeach?>
-      </ul>
+      <?if(!empty($accom)):?>
+        <p>I lay my head in (approximately; logs may be incomplete) <?=count($acquires['accom'])?> different places:</p>
+        <ul>
+          <?foreach($acquires['accom'] as $accom):?>
+            <li><a href="<?=$accom['uri']?>"><?=$accom['content']?></a> (<?=$accom['cost']?>)</li>
+          <?endforeach?>
+        </ul>
+      <?else:?>
+        <p>No logs for where I stayed yet during this time.</p>
+      <?endif?>
 
       <p>I spent &euro;<?=$acquires['accomEur']?> in total, averaging &euro;<?=$acquires['accomMean']?> per night, and &euro;<?=$acquires['accomMonth']?> per month.</p>
 
@@ -48,12 +52,22 @@
       <h2 id="acquisitions">Acquisitions</h2>
       <p>I purchased or otherwise acquired something on <?=$acquires['total']?> occasions, spending a total of approximately &euro;<?=$acquires['totaleur']?>. I used <?=count($acquires['currencies'])?> different currencies (<?=implode(", ", $acquires['currencies'])?>). This is an average expenditure of &euro;<?=$acquires['day']?> per day, &euro;<?=$acquires['week']?> per week, or &euro;<?=$acquires['month']?> per month. </p>
 
-      <p>Some things I acquired the most often were <?=$acquires['toptags']?>. </p>
+      <?if(!empty($acquires['toptags'])):?>
+        <p>Some things I acquired the most often were <?=$acquires['toptags']?>. </p>
+      <?endif?>
 
-      <p>On <?=$acquires['free']?> occasions I got something for free. The most expensive thing I bought was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['dearest']['content']?></a> (&euro;<?=$acquires['dearest']['amountEur']?>) and the cheapest thing (which wasn't free) was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['cheapest']['content']?></a> (&euro;<?=$acquires['cheapest']['amountEur']?>). I spent on average &euro;<?=$acquires['meaneur']?> per time. Three other random categories of expenditure are: <?=$acquires['othertags']?>.</p>
+      <p>On <?=$acquires['free']?> occasions I got something for free. The most expensive thing I bought was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['dearest']['content']?></a> (&euro;<?=$acquires['dearest']['amountEur']?>) and the cheapest thing (which wasn't free) was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['cheapest']['content']?></a> (&euro;<?=$acquires['cheapest']['amountEur']?>). I spent on average &euro;<?=$acquires['meaneur']?> per time. 
+      <?if(!empty($acquires['othertags'])):?>
+        Three other random categories of expenditure are: <?=$acquires['othertags']?>.
+      <?endif?>
+      </p>
 
-      <p><?=$acquires['photosp']?>% of my acquire posts have photos attached. You can see them all at <a href="/stuff">/stuff</a>. Here's a random one (this was <?=$acquires['photocost']?> and I acquired it on <?=$acquires['photodate']->format("jS F Y \a\\t h:ia")?>):</p>
-      <p class="w1of1" style="text-align:center;"><img src=<?=$acquires['photo']?> alt="<?=$acquires['photocont']?>" title="<?=$acquires['photocont']?>" /></p>
+      <p><?=$acquires['photosp']?>% of my acquire posts have photos attached. 
+      <?if($acquires['photosp'] > 0):?>
+        You can see them all at <a href="/stuff">/stuff</a>. Here's a random one (this was <?=$acquires['photocost']?> and I acquired it on <?=$acquires['photodate']->format("jS F Y \a\\t h:ia")?>):</p>
+        <p class="w1of1" style="text-align:center;"><img src=<?=$acquires['photo']?> alt="<?=$acquires['photocont']?>" title="<?=$acquires['photocont']?>" />
+      <?endif?>
+      </p>
 
       <h2 id="socialling">Socialling</h2>
 
