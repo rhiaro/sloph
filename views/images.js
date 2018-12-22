@@ -95,6 +95,7 @@
       i = findImgNo(imgUrl, photos);  
     }
     if(i == null){
+      window.location.hash = "";
       console.log("Image does not exist on this page [" + imgUrl + "]");
       return;
     }
