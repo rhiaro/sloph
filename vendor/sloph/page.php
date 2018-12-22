@@ -88,6 +88,7 @@ if(gettype($result['content']) == "string"){
   echo $result['content'];
 }else{
 
+  $tags = get_tags($ep);
   foreach($sorted as $uri => $r){
 
     $g = new EasyRdf_Graph($uri);
