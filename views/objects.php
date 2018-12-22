@@ -15,7 +15,7 @@ if($in_feed){
 }
 ?>
 <article>
-  <h2><span>&#128449;</span>Added <?=$count?> photos to album <a href="<?=get_value($resource, 'as:target')?>"><?=get_name($ep, get_value($resource, 'as:target'))?></a>.</h2>
+  <h2><span>&#128449;</span>Added <?=$count?> photos to album <a href="/photos/?album=<?=get_value($resource, 'as:target')?>"><?=get_name($ep, get_value($resource, 'as:target'))?></a>.</h2>
   
   <?if(count($objects) > 8):?>
       <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
