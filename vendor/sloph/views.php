@@ -1,15 +1,15 @@
 <?
 
 function view_router($resource){
+    global $ep;
     if(has_type($resource, "as:Add") || has_type($resource, "as:Like") || has_type($resource, "as:Announce") || has_type($resource, "as:Follow")){
-      if(has_type($resource, "as:Add") && get_value($resource, 'as:target') != "https://rhiaro.co.uk/bookmarks/"){
-        // TODO: check if target is an album instead of just excluding bookmarks
+      if(has_type($resource, "as:Add") && in_array("asext:Album", get_types($ep, get_value($resource, "as:target")))){
         return 'objects';
       } 
       return 'link';
     }elseif(has_type($resource, "as:Arrive")){ 
       return 'checkin';
-    }elseif(has_type($resource, "as:Travel") && get_value($resource, 'as:origin') && get_value($resource, 'as:target')){
+    }elseif(has_type($resource, "as:Travel") && get_value($resource, "as:origin") && get_value($resource, "as:target")){
       return 'travel';
     }elseif(has_type($resource, "asext:Consume") || has_type($resource, "asext:Acquire")){
       return 'stuff';
