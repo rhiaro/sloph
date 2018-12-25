@@ -229,7 +229,7 @@ if(isset($_GET['add'])){
             <div style="float:left;<?=!in_array($item, $added) ? " font-weight: bold;" : ""?>">
               <p><input type="checkbox" name="items[]" value="<?=$item?>" id="<?=$item?>" /> <label for="<?=$item?>"><a href="<?=$item?>"><?=$item?></a> <br/>
               <?if(!in_array($item, $added)):?>
-                <img src="<?=$item?>" />
+                <img src="<?=$_IMG?>200/0/<?=$item?>" />
               <?endif?>
               </label></p>
             </div>
