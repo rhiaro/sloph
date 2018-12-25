@@ -40,6 +40,7 @@ if(!isset($_GET['type']) || !array_key_exists($_GET['type'], $typemap)){
 $locations = get_locations($ep);
 $locations = $locations->toRdfPhp();
 $tags = get_tags($ep);
+$in_feed = true;
 
 if($_GET['type'] == "places"){
   $sort = "as:name";

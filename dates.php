@@ -43,8 +43,9 @@ $after = new DateTime("$y-$m-01T00:00:00+00:00");
 $before = new DateTime("$nexty-$nextm-01T00:00:00+00:00");
 $after = $after->format(DateTime::ATOM);
 $before = $before->format(DateTime::ATOM);
+$in_feed = true;
 
-$types = ["as:Article", "as:Note"];
+$types = ["as:Article", "as:Note", "as:Add"];
 $q = query_select_s_between_types($after, $before, $types, "https://blog.rhiaro.co.uk/");
 $item_uris = select_to_list_sorted(execute_query($ep, $q), 'd');
 
