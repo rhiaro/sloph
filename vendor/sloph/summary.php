@@ -302,12 +302,13 @@ function aggregate_writing($posts, $from, $to, $alltags){
 
   $articles = get_type($posts, "as:Article");
   $notes = get_type($posts, "as:Note");
-  $typed = array_merge($articles, $notes);
+  $adds = get_type($posts, "as:Add");
+  $typed = array_merge($articles, $notes, $adds);
 
   // Counts
   $out['total'] = count($typed);
   $out['articles'] = count($articles);
-  $out['notes'] = count($notes);
+  $out['notes'] = count($notes) + count($adds);
   
   $out['words'] = 0;
   foreach($typed as $uri => $post){
