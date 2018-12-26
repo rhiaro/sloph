@@ -214,14 +214,7 @@ function calculate_words_stats($ep, $posts){
   $poststats = aggregate_writing($posts, $from, $to, $tags);
   $postwords = $poststats["words"];
 
-  $wrotewords = 0;
-  $wroteq = query_select_wordcount($from->format(DATE_ATOM), $to->format(DATE_ATOM));
-  $wroteres = execute_query($ep, $wroteq);
-  foreach($wroteres["rows"] as $res){
-    $wrotewords = $wrotewords + $res['wc'];
-  }
-
-  $total_words = $postwords + $wrotewords;
+  $total_words = $postwords;
   $dailywords = ($total_words / $days);
 
   if($dailywords >= 1667){

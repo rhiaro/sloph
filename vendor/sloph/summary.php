@@ -305,10 +305,22 @@ function aggregate_writing($posts, $from, $to, $alltags){
   $adds = get_type($posts, "as:Add");
   $typed = array_merge($articles, $notes, $adds);
 
+  global $ep;
+  $wrotewords = 0;
+  $wroteposts = array();
+  $wroteq = query_select_wordcount($from->format(DATE_ATOM), $to->format(DATE_ATOM));
+  $wroteres = execute_query($ep, $wroteq);
+  foreach($wroteres["rows"] as $res){
+    $wrotewords = $wrotewords + $res['wc'];
+    $wroteposts[] = $res['p'];
+  }
+
   // Counts
   $out['total'] = count($typed);
   $out['articles'] = count($articles);
   $out['notes'] = count($notes) + count($adds);
+  $out['wrote'] = count($wroteposts);
+  $out['wrotetotal'] = $wrotewords;
   
   $out['words'] = 0;
   foreach($typed as $uri => $post){
@@ -316,6 +328,7 @@ function aggregate_writing($posts, $from, $to, $alltags){
     $words = explode(" ", $content);
     $out['words'] = count($words) + $out['words'];
   }
+  $out['words'] = $out['words'] + $wrotewords;
 
   if($days > 0){
     $out['dailywords'] = $out['words'] / $days;

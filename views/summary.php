@@ -12,7 +12,7 @@
       <p>I posted to my site <?=number_format($total)?> times.</p>
       
       <h2 id="writing">Writing</h2>
-      <p>I wrote <?=number_format($writing['total'])?> things on my site. <?=number_format($writing['notes'])?> were short notes or commentary with photos, <?=number_format($writing['articles'])?> were longer articles, and they comprise approximately <?=number_format($writing['words'])?> words in total. That's a mean of <?=number_format($writing['dailywords'], 2)?> words and <?=number_format($writing['dailynotes'], 2)?> posts per day.</p>
+      <p>I wrote <?=number_format($writing['total'])?> things. On my site I posted <?=number_format($writing['notes'])?> short notes or commentary with photos, and <?=number_format($writing['articles'])?> longer articles. I also logged non-blogpost writing <?=number_format($writing['wrote'])?> times. These all comprise approximately <?=number_format($writing['words'])?> words in total (<?=number_format($writing['wrotetotal'])?> off-site). That's a mean of <?=number_format($writing['dailywords'], 2)?> words and <?=number_format($writing['dailynotes'], 2)?> posts per day.</p>
       <p>I wrote about <?=$writing['tags']?> different topics, with the most common being <?=$writing['toptags']?>.</p>
 
       <h2 id="travel">Travel</h2>
