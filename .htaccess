@@ -35,6 +35,7 @@ RewriteRule ^tags(/)?$ /tagslist.php [QSA,L]
 
 RewriteRule ^([0-9]{4})(/)?$ /dates.php?y=$1 [QSA,L]
 RewriteRule ^([0-9]{4})/([0-9]{2})(/)?$ /dates.php?y=$1&m=$2 [QSA,L]
+RewriteRule ^([0-9]{4})/([0-9]{2})/(articles|arrives|eats|stuff|notes|where|words)/?$ /dates.php?y=$1&m=$2&t=$3 [QSA,L]
 
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f

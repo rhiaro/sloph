@@ -45,8 +45,22 @@ $after = $after->format(DateTime::ATOM);
 $before = $before->format(DateTime::ATOM);
 $in_feed = true;
 
-$types = ["as:Article", "as:Note", "as:Add"];
+$typesar = array(
+    "stuff" => array("asext:Acquire"),
+    "articles" => array("as:Article"),
+    "arrives" => array("as:Arrive"),
+    "where" => array("as:Arrive"),
+    "eats" => array("asext:Consume"),
+    "notes" => array("as:Note"),
+    "words" => array("asext:Write")
+);
+if(isset($_GET['t']) && array_key_exists($_GET['t'], $typesar)){
+    $types = $typesar[$_GET['t']];
+}else{
+    $types = ["as:Article", "as:Note", "as:Add"];
+}
 $q = query_select_s_between_types($after, $before, $types, "https://blog.rhiaro.co.uk/");
+// var_dump(htmlentities($q));
 $item_uris = select_to_list_sorted(execute_query($ep, $q), 'd');
 
 $name = "Posts between $y/$m and $nexty/$nextm";
