@@ -2,7 +2,7 @@ SetEnvIfNoCase ORIGIN (.*) ORIGIN=$1
 Header set Access-Control-Allow-Origin "%{ORIGIN}e" env=ORIGIN
 Header set Access-Control-Allow-Credentials "true"
 Header set Access-Control-Allow-Methods "POST, GET, HEAD, OPTIONS, TRACE"
-Header set Access-Control-Allow-Headers "Link, Location, Accept-Post, Content-Type, Slug, Origin"
+Header set Access-Control-Allow-Headers "Link, Location, Accept-Post, Content-Type, Slug, Origin, Authorization"
 Header set Access-Control-Expose-Headers "User, Location, Link, Vary, Last-Modified, ETag, Accept-Patch, Accept-Post, Updates-Via, Allow, Content-Length"
 Header set Vary "Origin, Accept-Encoding"
 
@@ -17,6 +17,8 @@ Header add Link '<https://rhiaro.co.uk/ldn/constraints>; rel="http://www.w3.org/
 
 RewriteEngine on
 RewriteBase /
+
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 RewriteRule ^incoming(/)?$ /vendor/sloph/ldn.php [QSA,L]
 RewriteRule ^outgoing(/)?$ /vendor/sloph/pub.php [QSA,L]
