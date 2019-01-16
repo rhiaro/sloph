@@ -121,7 +121,7 @@ function get($ep, $uri, $content_type="text/html"){
 }
 
 function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/html"){
-  // Deprecated??
+  // Deprecated?? NO index.php!!
   
   $return = array("header" => null, "content" => null, "errors" => null);
 
@@ -235,7 +235,7 @@ function get_and_sort($ep, $resources, $by="as:published"){
 /**************************/
 
 
-function make_uri($ep, $resource, $path=null, $unique=true){
+function make_uri($ep, $resource, $path=null, $slug=null, $unique=true){
 
   $base = "https://rhiaro.co.uk/";
 
@@ -245,7 +245,11 @@ function make_uri($ep, $resource, $path=null, $unique=true){
 
   $done = false;
   $max = 16;
-  $fullslug = make_slug($resource);
+  if(isset($slug)){
+    $fullslug = format_slug($slug);
+  }else{
+    $fullslug = make_slug($resource);
+  }
   while(!$done){
     $slug = decide_when_to_stop($fullslug, $max);
     $uri = $base.$path.$slug;
@@ -299,8 +303,12 @@ function make_slug($resource){
     }
   }
 
-  $slug = substr(strtolower(str_replace(" ", "-", preg_replace("/[^\w\d \-]/ui", '',strip_tags($string)))), 0);
+  $slug = format_slug($string);
   return remove_stopwords($slug);
+}
+
+function format_slug($string){
+  return substr(strtolower(str_replace(" ", "-", preg_replace("/[^\w\d \-]/ui", '',strip_tags($string)))), 0);
 }
 
 function path_for_type($resource){
