@@ -70,6 +70,7 @@ $name = "Posts between $y/$m and $nexty/$nextm";
 $nav = array("next" => $next_uri, "prev" => $prev_uri);
 
 $g = get_container_dynamic_from_items($ep, $uri, 'as:published', $name, $item_uris, count($item_uris), $nav, true);
+// TODO: URI for CollectionPage is bad. Should remove it altogether?
 
 $result = conneg($acceptheaders, $g);
 $content = $result['content'];
