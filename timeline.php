@@ -35,8 +35,8 @@ $nav = array("next" => $next_uri, "prev" => $prev_uri);
 $g = get_container_dynamic_from_items($ep, $archive_uri, 'as:published', $name, $item_uris, count($item_uris), $nav, true);
 $g->add($archive_uri, "view:stylesheet", "views/timeline.css");
 $g->addLiteral($archive_uri, "as:summary", $summary);
-
-echo $g->dump();
+// TODO: delete the CollectionPage? URI is bad anyway.
+// echo $g->dump();
 
 $result = conneg($acceptheaders, $graph);
 $header = $result['header'];
