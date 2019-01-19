@@ -595,7 +595,7 @@ function construct_collection_page($ep, $collection, $before=null, $limit=16, $s
   $item_uris = select_to_list(execute_query($ep, $items_q));
   if(isset($before)){
     array_unshift($item_uris, $before);
-    $next_q = query_select_next_items($collection, $before, "as:published", $limit);
+    $next_q = query_select_next_items($collection, $before, $sort, $limit);
     $next_uris = select_to_list(execute_query($ep, $next_q));
     if(count($next_uris) > 0){
       $nextstart = $next_uris[count($next_uris)-1];
@@ -675,7 +675,9 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
     $page->addResource($page_uri, "as:next", $next);
   }
 
-  // $page->addLiteral($collection, "as:totalItems", $total);
+  $total = count($item_uris);
+  $totalItems = new EasyRdf_Literal($total, null, "xsd:nonNegativeInteger");
+  $page->addLiteral($uri, "as:totalItems", $totalItems);
   $page->addResource($uri, "rdf:type", "as:Collection");
   $page->addResource($page_uri, "rdf:type", "as:CollectionPage");
 
