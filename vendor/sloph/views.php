@@ -685,6 +685,7 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
   $items_g->parse($items, 'php');
   foreach($item_uris as $item){
     $page->addResource($page_uri, "as:items", $item);
+    $page->addResource($uri, "as:items", $item);
   }
 
   $final = merge_graphs(array($page, $items_g), $page_uri);
