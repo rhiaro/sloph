@@ -48,7 +48,7 @@ $res = execute_query($ep, $q);
 foreach($res["rows"] as $r){
   $pub = new DateTime($r["d"]);
   $year = $pub->format("Y");
-  $month = $pub->format("F");
+  $month = $pub->format("m");
 
   if(!isset($dates_count[$year])){
     $dates_count[$year]["total"] = 1;
@@ -64,11 +64,11 @@ foreach($res["rows"] as $r){
 }
 
 foreach($dates_count as $year => $data){
+  ksort($dates_count[$year]);
   $graph->addResource($archive_uri, "as:items", $base."/$year/");
   foreach($data as $month => $count){
     if($month != "total"){
-      $m = new DateTime($month);
-      $graph->addResource($archive_uri, "as:items", $base."/$year/".$m->format("m")."/");
+      $graph->addResource($archive_uri, "as:items", $base."/$year/".$month."/");
     }
   }
 }

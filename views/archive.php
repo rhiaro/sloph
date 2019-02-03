@@ -12,7 +12,7 @@
               <?foreach($counts as $month => $count):?>
                 <?if($month != "total"):?>
                   <? $m = new DateTime($year."-".$month."-01"); ?>
-                  <li><a href="/<?=$year?>/<?=$month?>"><?=$m->format("F")?></a> (<?=number_format($count)?>)</li>
+                  <li><a href="/<?=$year?>/<?=$month?>/"><?=$m->format("F")?></a> (<?=number_format($count)?>)</li>
                 <?endif?>
               <?endforeach?>
             </ul>
