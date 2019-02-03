@@ -50,6 +50,9 @@ try {
 
     $resource = $graph->resource($archive_uri);
 
+    // HERENOW
+    // Turn into a structure with time diffs etc.
+
     require_once('vendor/sloph/header_stats.php');
 
     $g = $resource->getGraph();
