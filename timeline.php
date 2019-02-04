@@ -35,8 +35,13 @@ $nav = array("next" => $next_uri, "prev" => $prev_uri);
 $g = get_container_dynamic_from_items($ep, $archive_uri, 'as:published', $name, $item_uris, count($item_uris), $nav, true);
 $g->add($archive_uri, "view:stylesheet", "views/timeline.css");
 $g->addLiteral($archive_uri, "as:summary", $summary);
-// TODO: delete the CollectionPage? URI is bad anyway.
-// echo $g->dump();
+
+// Well this is stupid, but having the (broken and useless) CollectionPage in the graph breaks all kinda things.
+$page_uri = $g->getUri();
+$tmp = $g->toRdfPhp();
+unset($tmp[$page_uri]);
+$graph = new EasyRdf_Graph($archive_uri);
+$graph->parse($tmp);
 
 $result = conneg($acceptheaders, $graph);
 $header = $result['header'];
@@ -55,8 +60,8 @@ try {
 
     require_once('vendor/sloph/header_stats.php');
 
-    $g = $resource->getGraph();
-    $resource = $g->toRdfPhp();
+    $graph = $resource->getGraph();
+    $resource = $graph->toRdfPhp();
 
     include 'views/top.php';
     include 'views/header_stats.php';
