@@ -322,7 +322,6 @@ function calculate_budget_stats($ep, $posts){
     $stats["uri"] = key($latest);
     $stats["perc"] = $percent;
   }
-
   return $stats;
 }
 

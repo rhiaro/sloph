@@ -5,8 +5,6 @@ function get_posts($ep, $from, $to){
   if($res){
     return $res;
   }else{
-    // var_dump($res);
-    // echo "hello";
     return array();
   }
 }
@@ -168,7 +166,6 @@ function aggregate_acquires($posts, $from, $to, $alltags){
       $out['meaneur'] = number_format($out['totaleur'] / $out['total'], 2);
     }
     $out['expensed'] = number_format($out['expensed'], 2);
-
     $out['currencies'] = array_unique($out['currencies']);
 
     if($weeks > 0) {
