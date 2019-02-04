@@ -55,13 +55,31 @@ try {
 
     $resource = $graph->resource($archive_uri);
 
-    // HERENOW
-    // Turn into a structure with time diffs etc.
 
     require_once('vendor/sloph/header_stats.php');
 
     $graph = $resource->getGraph();
     $resource = $graph->toRdfPhp();
+
+    $items = get_values($resource, "as:items");
+    $timeline = array();
+    foreach($items as $uri){
+      $published = get_value(array($uri=>$resource[$uri]), "as:published");
+      $timeline[$published] = $resource[$uri];
+      $timeline[$published]["uri"] = $uri;
+    }
+    krsort($timeline);
+    reset($timeline);
+    $i = 0;
+    while($i < count($timeline)){
+      $current = each($timeline);
+      $current_date = new DateTime($current["key"]);
+      $next = current($timeline);
+      $next_date = new DateTime(get_value(array($next["uri"] => $next), "as:published"));
+      $diff = $current_date->getTimestamp() - $next_date->getTimestamp();
+      $timeline[$current["key"]]["diff"] = $diff;
+      $i++;
+    }
 
     include 'views/top.php';
     include 'views/header_stats.php';
