@@ -13,6 +13,11 @@ if(get_value($resource, 'asext:amountGbp')){
 if(!empty($amounts)){
   $amounts = implode(" / ", $amounts);
 }
+$coststring = get_value($resource, 'asext:cost');
+if(get_value($resource, 'asext:expensedTo')){
+  $coststring = "<del>".$coststring."</del> (expensed)";
+}
+
 ?>
 <article>
   <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("l \\t\h\\e jS \o\\f F \a\\t g:ia (e)")?></a></datetime></p>
@@ -28,11 +33,11 @@ if(!empty($amounts)){
     <?endif?>
     <?=get_value($resource, 'as:name') ? "<p><strong>".get_value($resource, 'as:name')."</strong></p>" : "" ?>
     <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
-    <?=get_value($resource, 'asext:cost') ? "<p><strong>".get_value($resource, 'asext:cost')."</strong></p>" : "" ?>
+    <?=get_value($resource, 'asext:cost') ? "<p><strong>$coststring</strong></p>" : "" ?>
 
     <?=$amounts ? '<p class="wee">('.$amounts.')</p>' : "" ?>
   </div>
 
   <? include('tags.php'); ?>
-  
+
 </article>
