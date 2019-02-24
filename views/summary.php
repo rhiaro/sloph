@@ -10,7 +10,7 @@
     <article>
       <h1>from <?=$from->format("d M y")?> to <?=$to == $now ? "now" : $to->format("d M y")?></h1>
       <p>I posted to my site <?=number_format($total)?> times.</p>
-      
+
       <h2 id="writing">Writing</h2>
       <p>I wrote <?=number_format($writing['total'])?> things. On my site I posted <?=number_format($writing['notes'])?> short notes or commentary with photos, and <?=number_format($writing['articles'])?> longer articles. I also logged non-blogpost writing <?=number_format($writing['wrote'])?> times. These all comprise approximately <?=number_format($writing['words'])?> words in total (<?=number_format($writing['wrotetotal'])?> off-site). That's a mean of <?=number_format($writing['dailywords'], 2)?> words and <?=number_format($writing['dailynotes'], 2)?> posts per day.</p>
       <p>I wrote about <?=$writing['tags']?> different topics, with the most common being <?=$writing['toptags']?>.</p>
@@ -18,7 +18,7 @@
       <h2 id="travel">Travel</h2>
       <p>I checked in <?=number_format($checkins['total'])?> times. I spent the most time <a href="<?=$checkins['top'][0]['location']?>"><?=$checkins['top'][0]['label']?></a>, which was <?=$checkins['top'][0]['duration']?>, followed by <?=$checkins['top'][1]['duration']?> <a href="<?=$checkins['top'][1]['location']?>"><?=$checkins['top'][1]['label']?></a>. I also spent
       <?for($i=2;$i<count($checkins['top'])-1;$i++):?>
-        <?=$checkins['top'][$i]['duration']?> <a href="<?=$checkins['top'][$i]['location']?>"><?=$checkins['top'][$i]['label']?></a>; 
+        <?=$checkins['top'][$i]['duration']?> <a href="<?=$checkins['top'][$i]['location']?>"><?=$checkins['top'][$i]['label']?></a>;
       <?endfor?>
       and was <a href="<?=$checkins['top'][count($checkins['top'])-1]['location']?>"><?=$checkins['top'][count($checkins['top'])-1]['label']?></a> for <?=$checkins['top'][count($checkins['top'])-1]['duration']?>.
       </p>
@@ -56,13 +56,13 @@
         <p>Some things I acquired the most often were <?=$acquires['toptags']?>. </p>
       <?endif?>
 
-      <p>On <?=$acquires['free']?> occasions I got something for free. The most expensive thing I bought was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['dearest']['content']?></a> (&euro;<?=$acquires['dearest']['amountEur']?>) and the cheapest thing (which wasn't free) was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['cheapest']['content']?></a> (&euro;<?=$acquires['cheapest']['amountEur']?>). I spent on average &euro;<?=$acquires['meaneur']?> per time. 
+      <p>On <?=$acquires['free']?> occasions I got something for free. I expensed &euro;<?=$acquires['expensed']?> of stuff for work. The most expensive thing I bought was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['dearest']['content']?></a> (&euro;<?=$acquires['dearest']['amountEur']?>) and the cheapest thing (which wasn't free) was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['cheapest']['content']?></a> (&euro;<?=$acquires['cheapest']['amountEur']?>). I spent on average &euro;<?=$acquires['meaneur']?> per time.
       <?if(!empty($acquires['othertags'])):?>
         Three other random categories of expenditure are: <?=$acquires['othertags']?>.
       <?endif?>
       </p>
 
-      <p><?=$acquires['photosp']?>% of my acquire posts have photos attached. 
+      <p><?=$acquires['photosp']?>% of my acquire posts have photos attached.
       <?if($acquires['photosp'] > 0):?>
         You can see them all at <a href="/stuff">/stuff</a>. Here's a random one (this was <?=$acquires['photocost']?> and I acquired it on <?=$acquires['photodate']->format("jS F Y \a\\t h:ia")?>):</p>
         <p class="w1of1" style="text-align:center;"><img src=<?=$acquires['photo']?> alt="<?=$acquires['photocont']?>" title="<?=$acquires['photocont']?>" />

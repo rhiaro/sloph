@@ -32,7 +32,7 @@ function aggregate_checkins($posts, $from, $to, $locations){
       $num[] = $post;
     }
   }
-  
+
   // Total durations
   $tally = array();
   foreach($num as $i => $post){
@@ -84,6 +84,7 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $out['totalusd'] = 0;
     $out['totalgbp'] = 0;
     $out['totaleur'] = 0;
+    $out['expensed'] = 0;
     $out['currencies'] = array();
 
     $out['food'] = array();
@@ -91,11 +92,16 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $out['food']['foodEur'] = 0;
 
     foreach($typed as $uri => $post){
+        $expensed = get_value(array($uri=>$post), "asext:expensedTo");
         $cost = get_value(array($uri=>$post), "asext:cost");
         $eur = get_value(array($uri=>$post), "asext:amountEur");
-        $out['totalusd'] += get_value(array($uri=>$post), "asext:amountUsd");
-        $out['totaleur'] += $eur;
-        $out['totalgbp'] += get_value(array($uri=>$post), "asext:amountGbp");
+        if(!isset($expensed)){
+          $out['totalusd'] += get_value(array($uri=>$post), "asext:amountUsd");
+          $out['totaleur'] += $eur;
+          $out['totalgbp'] += get_value(array($uri=>$post), "asext:amountGbp");
+        }else{
+          $out['expensed'] += $eur;
+        }
 
         if($eur == 0){
             $free += 1;
@@ -139,23 +145,24 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $out['dearest'] = $dearest;
     $out['free'] = $free;
     $out['meaneur'] = number_format($out['totaleur'] / $out['total'], 2);
+    $out['expensed'] = number_format($out['expensed'], 2);
 
     $out['currencies'] = array_unique($out['currencies']);
 
-    if($weeks > 0) { 
-        $out['week'] = number_format($out['totaleur'] / $weeks, 2); 
-    }else{ 
-        $out['week'] = "n/a"; 
+    if($weeks > 0) {
+        $out['week'] = number_format($out['totaleur'] / $weeks, 2);
+    }else{
+        $out['week'] = "n/a";
     }
-    if($months > 0) { 
-        $out['month'] = number_format($out['totaleur'] / $months, 2); 
-    }else{ 
-        $out['month'] = "n/a"; 
+    if($months > 0) {
+        $out['month'] = number_format($out['totaleur'] / $months, 2);
+    }else{
+        $out['month'] = "n/a";
     }
-    if($days > 0) { 
-        $out['day'] = number_format($out['totaleur'] / $days, 2); 
-    }else{ 
-        $out['day'] = "n/a"; 
+    if($days > 0) {
+        $out['day'] = number_format($out['totaleur'] / $days, 2);
+    }else{
+        $out['day'] = "n/a";
     }
 
     // Get specific stats for transit
@@ -321,7 +328,7 @@ function aggregate_writing($posts, $from, $to, $alltags){
   $out['notes'] = count($notes) + count($adds);
   $out['wrote'] = count($wroteposts);
   $out['wrotetotal'] = $wrotewords;
-  
+
   $out['words'] = 0;
   foreach($typed as $uri => $post){
     $content = get_value(array($uri=>$post), "as:content");

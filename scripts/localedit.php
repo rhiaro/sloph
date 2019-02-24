@@ -57,7 +57,7 @@ function plustype($i=0){
 function plusproperty(){
   $properties = array(
       "https://www.w3.org/ns/activitystreams#" => array("name", "published", "updated", "summary", "content", "startTime", "endTime", "image", "inReplyTo", "location", "tag", "url", "to", "bto", "cc", "bcc", "duration", "actor", "object", "target", "origin", "result", "items", "relationship", "outbox", "inbox"),
-      "https://terms.rhiaro.co.uk/as#" => array("cost", "wordCount"),
+      "https://terms.rhiaro.co.uk/as#" => array("cost", "wordCount", "expensedTo"),
       "https://terms.rhiaro.co.uk/view#" => array("banality", "intimacy", "tastiness", "informative", "wanderlust", "css", "color"),
       "http://www.w3.org/2006/time#" => array("timeZone")
     );
@@ -235,7 +235,7 @@ if(isset($_GET['uri']) && count($posts) < 1){
   <body>
     <div class="info">
       <p>
-        <strong>Graph: <?=$graph?></strong> 
+        <strong>Graph: <?=$graph?></strong>
         <form id="changegraph">
           <select name="graph">
             <?foreach($graphs as $g):?>
@@ -310,7 +310,7 @@ if(isset($_GET['uri']) && count($posts) < 1){
     <form id="new" method="post">
       <p>
         <label for="uri">URI: </label>
-        <input type="text" name="uri" value="<?=$uri_for_new?>" /> 
+        <input type="text" name="uri" value="<?=$uri_for_new?>" />
         <input type="submit" value="Create" name="savenew"/>
       </p>
       <?=plustype()?>
