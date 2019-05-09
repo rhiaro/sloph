@@ -5,9 +5,9 @@ function view_router($resource){
     if(has_type($resource, "as:Add") || has_type($resource, "as:Like") || has_type($resource, "as:Announce") || has_type($resource, "as:Follow")){
       if(has_type($resource, "as:Add") && in_array("asext:Album", get_types($ep, get_value($resource, "as:target")))){
         return 'objects';
-      } 
+      }
       return 'link';
-    }elseif(has_type($resource, "as:Arrive")){ 
+    }elseif(has_type($resource, "as:Arrive")){
       return 'checkin';
     }elseif(has_type($resource, "as:Travel") && get_value($resource, "as:origin") && get_value($resource, "as:target")){
       return 'travel';
@@ -278,7 +278,7 @@ function calculate_budget_stats($ep, $posts){
   $now = new DateTime();
   $from = new DateTime($now->format("Y-m-01"));
   $to = new DateTime($now->format("Y-m-t"));
-  
+
   $tags = get_tags($ep);
   $acquires = aggregate_acquires($posts, $from, $to, $tags);
   $eur = $acquires["totaleur"];
@@ -342,7 +342,7 @@ function calculate_exercise_stats($ep){
 
 function stat_box($ep, $type, $posts=null){
   switch($type){
-    case "consume": 
+    case "consume":
       $r = calculate_consume_stats($ep);
       break;
     case "exercise":
@@ -437,7 +437,7 @@ function nav($ep, $resource, $dir="next", $type=0){
       $type = EasyRdf_Namespace::shorten($type);
     }
 
-    if($type != 'as:Activity'){ // Crude but effective. 
+    if($type != 'as:Activity'){ // Crude but effective.
 
       if($dir == "next"){
         $q = query_select_s_next_of_type($uri, $type);
@@ -527,7 +527,7 @@ function construct_collection_page($ep, $collection, $before=null, $limit=16, $s
   }
 
   $items_q = query_select_prev_items($collection, $before, $sort, $qlimit);
-  
+
   $item_uris = select_to_list(execute_query($ep, $items_q));
   if(isset($before)){
     array_unshift($item_uris, $before);
@@ -628,7 +628,7 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
 function make_checkin_summary($checkin, $locations=null, $end=null){
 
   $summary = array();
-  
+
   $location = get_value($checkin, "as:location");
   if($locations === null){
     $locations = get_locations();
@@ -649,7 +649,7 @@ function make_checkin_summary($checkin, $locations=null, $end=null){
     $location_label = get_value($location, "blog:pastLabel");
     $end_label = $end->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F");
   }
-  
+
   $diff = time_diff_to_human($pub, $end);
   if(empty($location_label)){
     $location_label = "was last spotted at ".key($location);
@@ -748,35 +748,35 @@ function time_diff_to_human($date, $date2, $round=false){
     }
     $s = 0;
   }
-  
+
   $ago = array();
-  if($y > 0){ 
-    $str = $y . " year"; 
+  if($y > 0){
+    $str = $y . " year";
     if($y > 1){ $str .=  "s"; }
     $ago[] = $str;
   }
-  if($m > 0){ 
-    $str = $m . " month"; 
+  if($m > 0){
+    $str = $m . " month";
     if($m > 1){ $str .=  "s"; }
     $ago[] = $str;
   }
-  if($d > 0){ 
-    $str = $d . " day"; 
+  if($d > 0){
+    $str = $d . " day";
     if($d > 1){ $str .=  "s"; }
     $ago[] = $str;
   }
-  if($h > 0){ 
-    $str = $h . " hour"; 
+  if($h > 0){
+    $str = $h . " hour";
     if($h > 1){ $str .=  "s"; }
     $ago[] = $str;
   }
-  if($i > 0){ 
-    $str = $i . " minute"; 
+  if($i > 0){
+    $str = $i . " minute";
     if($i > 1){ $str .=  "s"; }
     $ago[] = $str;
   }
-  if($s > 0){ 
-    $str = $s . " second"; 
+  if($s > 0){
+    $str = $s . " second";
     if($s > 1){ $str .=  "s"; }
     $ago[] = $str;
   }
@@ -849,8 +849,8 @@ function structure_cost($cost, $currencies_file="currencies.json"){
 
 function drop_collection_page_params($uri){
   $parsed = parse_url($uri);
-  if(isset($parsed["query"])) { 
-    parse_str($parsed["query"], $params); 
+  if(isset($parsed["query"])) {
+    parse_str($parsed["query"], $params);
     if(isset($params["before"])){ unset($params["before"]); }
     if(isset($params["limit"])){ unset($params["limit"]); }
     if(!empty($params)){
@@ -873,7 +873,7 @@ function unparse_url($parsed_url) {
   $query    = isset($parsed_url['query']) ? '?' . $parsed_url['query'] : '';
   $fragment = isset($parsed_url['fragment']) ? '#' . $parsed_url['fragment'] : '';
   return "$scheme$user$pass$host$port$path$query$fragment";
-} 
+}
 
 /*****************/
 /* Scoring       */
@@ -903,7 +903,7 @@ function set_views($ep, $resource){
     $loc = get($ep, $resource->get('as:location'));
     $loc = $loc['content'];
     if($loc){
-      $resource->addLiteral('view:css', "body { background-color: ".$loc->get($resource->get('as:location'), 'view:color')."; }\n");  
+      $resource->addLiteral('view:css', "body { background-color: ".$loc->get($resource->get('as:location'), 'view:color')."; }\n");
     }
   }
   return $resource;
@@ -913,9 +913,9 @@ function get_style($resource){
 
   $score = array();
   $scorepreds = score_predicates();
-  
+
   foreach($scorepreds as $p){
-    if($resource->hasProperty($p)){ 
+    if($resource->hasProperty($p)){
       $score[$p] = $resource->get($p)->getValue();
     }
   }
@@ -942,7 +942,7 @@ function get_style($resource){
 
   $s = array();
   foreach($styles as $name => $numbers){
-    
+
     if($numbers == $score){
       return $name;
     }else{
