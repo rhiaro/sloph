@@ -1,6 +1,7 @@
 <?
 $date = new DateTime(get_value($resource, 'as:published'));
 $objects = get_values($resource, 'as:object');
+sort($objects);
 $count = count($objects);
 $scripts = array("/views/images.js");
 if(!isset($in_feed)){
