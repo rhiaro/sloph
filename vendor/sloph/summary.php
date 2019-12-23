@@ -95,11 +95,16 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     foreach($typed as $uri => $post){
         $expensed = get_value(array($uri=>$post), "asext:expensedTo");
         $cost = get_value(array($uri=>$post), "asext:cost");
+        $usd = get_value(array($uri=>$post), "asext:amountUsd");
         $eur = get_value(array($uri=>$post), "asext:amountEur");
+        $gbp = get_value(array($uri=>$post), "asext:amountGbp");
+        if(!is_numeric($usd)){ $usd = 0; }
+        if(!is_numeric($eur)){ $eur = 0; }
+        if(!is_numeric($gbp)){ $gbp = 0; }
         if(!isset($expensed)){
-          $out['totalusd'] += get_value(array($uri=>$post), "asext:amountUsd");
+          $out['totalusd'] += $usd;
           $out['totaleur'] += $eur;
-          $out['totalgbp'] += get_value(array($uri=>$post), "asext:amountGbp");
+          $out['totalgbp'] += $gbp;
         }else{
           $out['expensed'] += $eur;
         }
