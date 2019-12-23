@@ -628,11 +628,12 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
 
 function make_checkin_summary($checkin, $locations=null, $end=null){
 
+  global $ep;
   $summary = array();
 
   $location = get_value($checkin, "as:location");
   if($locations === null){
-    $locations = get_locations();
+    $locations = get_locations($ep);
   }
   if(isset($locations[$location])){
     $location = array($location => $locations[$location]);
