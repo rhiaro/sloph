@@ -295,13 +295,14 @@ function calculate_budget_stats($ep, $posts){
   }
 
   $acqs = get_type($posts, "asext:Acquire");
-  reset($acqs);
-  $latest[key($acqs)] = $acqs[key($acqs)];
-
-  $stats["cost"] = get_value($latest, "asext:cost");
-  $stats["content"] = get_value($latest, "as:content");
-  $stats["uri"] = key($latest);
-  $stats["perc"] = $percent;
+  if(!empty($acqs)){
+    reset($acqs);
+    $latest[key($acqs)] = $acqs[key($acqs)];
+    $stats["cost"] = get_value($latest, "asext:cost");
+    $stats["content"] = get_value($latest, "as:content");
+    $stats["uri"] = key($latest);
+    $stats["perc"] = $percent;
+  }
 
   return $stats;
 }
@@ -627,11 +628,12 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
 
 function make_checkin_summary($checkin, $locations=null, $end=null){
 
+  global $ep;
   $summary = array();
 
   $location = get_value($checkin, "as:location");
   if($locations === null){
-    $locations = get_locations();
+    $locations = get_locations($ep);
   }
   if(isset($locations[$location])){
     $location = array($location => $locations[$location]);

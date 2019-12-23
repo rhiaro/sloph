@@ -20,7 +20,11 @@
     <div class="stat-box"><div style="width: <?=$consume_stats["width"]?>;" class="<?=$consume_stats["color"]?>"></div></div>
     <p>Last exercised <?=time_ago($exercise_stats["published"])?></p>
     <div class="stat-box"><div style="width: <?=$exercise_stats["width"]?>;" class="<?=$exercise_stats["color"]?>"></div></div>
-    <p>Monthly budget <?=$budget_stats["perc"]?>% used (<a href="<?=$budget_stats["uri"]?>">last spent</a> <?=$budget_stats["cost"]?> on <?=$budget_stats["content"]?>)</p>
+    <?if(isset($budget_status["uri"])):?>
+      <p>Monthly budget <?=$budget_stats["perc"]?>% used (<a href="<?=$budget_stats["uri"]?>">last spent</a> <?=$budget_stats["cost"]?> on <?=$budget_stats["content"]?>)</p>
+    <?else:?>
+      <p>Budget: nothing spent so far this month</p>
+    <?endif?>
     <div class="stat-box"><div style="width: <?=$budget_stats["width"]?>;" class="<?=$budget_stats["color"]?>"></div></div>
     <p>Words written this month (<?=$words_stats["value"]?> of posts and fiction)</p>
     <div class="stat-box"><div style="width: <?=$words_stats["width"]?>;" class="<?=$words_stats["color"]?>"></div></div>

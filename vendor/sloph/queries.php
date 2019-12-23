@@ -106,7 +106,7 @@ function construct_and_sort($ep, $uris, $sort="as:published"){
 function construct_last_of_type($ep, $type, $sort="as:published"){
   $q = query_select_s_type($type, $sort, "DESC", 1);
   $res = execute_query($ep, $q);
-  if($res){
+  if($res && !empty($res["rows"])){
     $uri = select_to_list($res);
     $obj = execute_query($ep, query_construct($uri[0]));
     return $obj;
@@ -321,9 +321,11 @@ function query_select_s_type($type, $sort="as:published", $dir="DESC", $limit=0,
     $q .= "  ?s $sort ?sort .";
   }
   $q .= "  }
-}";
+}
+";
   if(isset($sort)){
-    $q .= "ORDER BY $dir(?sort)";
+    $q .= "ORDER BY $dir(?sort)
+";
   }
   if($limit > 0){
     $q .= "LIMIT $limit";

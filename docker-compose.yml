@@ -14,7 +14,7 @@ services:
       - /home/rhiaro/Documents/rhiaro/sloph/mysql:/etc/mysql/mysql.conf.d
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin
     environment:
       - PMA_ARBITRARY=1
@@ -23,6 +23,8 @@ services:
       - 8080:80
     volumes:
       - /sessions
+      - /home/rhiaro/Documents/rhiaro/sloph/php/php.ini:/usr/local/etc/php/php.ini
+      - /home/rhiaro/Documents/rhiaro/sloph/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
 
   sloph:
     build: ./php

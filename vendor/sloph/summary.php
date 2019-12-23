@@ -5,7 +5,8 @@ function get_posts($ep, $from, $to){
   if($res){
     return $res;
   }else{
-    var_dump($res);
+    // var_dump($res);
+    // echo "hello";
     return array();
   }
 }
@@ -144,7 +145,11 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $out['cheapest'] = $cheapest;
     $out['dearest'] = $dearest;
     $out['free'] = $free;
-    $out['meaneur'] = number_format($out['totaleur'] / $out['total'], 2);
+    if($out['total'] == 0){
+      $out['meaneur'] = 0;
+    }else{
+      $out['meaneur'] = number_format($out['totaleur'] / $out['total'], 2);
+    }
     $out['expensed'] = number_format($out['expensed'], 2);
 
     $out['currencies'] = array_unique($out['currencies']);
@@ -235,8 +240,13 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     if(isset($tags["$tagp/takeaway"])){
         $take = $tags["$tagp/takeaway"];
     }else{ $take = 0; }
-    $restp = $rest / $food * 100;
-    $takep = $take / $food * 100;
+    if($food != 0){
+      $restp = $rest / $food * 100;
+      $takep = $take / $food * 100;
+    }else{
+      $restp = 0;
+      $takep = 0;
+    }
 
     $out['food']['total'] = $food;
     $out['food']['foodEur'] = number_format($out['food']['foodEur'], 2);
