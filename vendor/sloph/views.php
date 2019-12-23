@@ -295,13 +295,14 @@ function calculate_budget_stats($ep, $posts){
   }
 
   $acqs = get_type($posts, "asext:Acquire");
-  reset($acqs);
-  $latest[key($acqs)] = $acqs[key($acqs)];
-
-  $stats["cost"] = get_value($latest, "asext:cost");
-  $stats["content"] = get_value($latest, "as:content");
-  $stats["uri"] = key($latest);
-  $stats["perc"] = $percent;
+  if(!empty($acqs)){
+    reset($acqs);
+    $latest[key($acqs)] = $acqs[key($acqs)];
+    $stats["cost"] = get_value($latest, "asext:cost");
+    $stats["content"] = get_value($latest, "as:content");
+    $stats["uri"] = key($latest);
+    $stats["perc"] = $percent;
+  }
 
   return $stats;
 }
