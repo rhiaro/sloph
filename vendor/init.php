@@ -3,6 +3,7 @@
 require_once("JsonLD/Exception/JsonLdException.php");
 require_once("JsonLD/Quad.php");
 require_once("JsonLD/Processor.php");
+require_once("JsonLD/DocumentLoaderInterface.php");
 require_once("JsonLD/FileGetContentsLoader.php");
 require_once("JsonLD/RemoteDocument.php");
 require_once("JsonLD/JsonLD.php");
