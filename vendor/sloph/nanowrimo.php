@@ -3,7 +3,8 @@ require_once('../init.php');
 
 function get_novel_data($ep){
   $novels = array(
-     "2018" => "https://rhiaro.co.uk/birds"
+     "2019" => "https://rhiaro.co.uk/quest-for-brothers-2"
+    ,"2018" => "https://rhiaro.co.uk/birds"
     ,"2017" => "https://rhiaro.co.uk/of-the-moon"
     ,"2013" => "https://rhiaro.co.uk/beyond"
     ,"2012" => "https://rhiaro.co.uk/quest-for-brothers"
@@ -59,7 +60,12 @@ function nanowrimo_yet($ep){
     }
 
     $out["big"] = "YES || $current_count / 50,000 $msg";
-    $out["small"] = "Hear me out. NaNoWriMo is usually in November, but in 2018 I'm doing it in October because I have lots of travel plus a 10 day <a href=\"https://dhamma.org\">Vipassana</a> retreat planned in November.";
+
+    if($year == "2018" && $month == "10"){
+      $out["small"] = "Hear me out. NaNoWriMo is usually in November, but in 2018 I'm doing it in October because I have lots of travel plus a 10 day <a href=\"https://dhamma.org\">Vipassana</a> retreat planned in November.";
+    }else{
+      $out["small"] = "";
+    }
 
   }elseif($year == "2018" && $month == "11"){
     $out["big"] = "YES .. but I did it last month.";
