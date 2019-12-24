@@ -180,6 +180,7 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $out['transitEur'] = 0;
     foreach($transit_posts as $uri => $post){
         $eur = get_value(array($uri=>$post), "asext:amountEur");
+        if(empty($eur)){ $eur = 0; }
         $out['transitEur'] += $eur;
     }
     $transit_tags = tally_tags($transit_posts, true);
@@ -211,11 +212,17 @@ function aggregate_acquires($posts, $from, $to, $alltags){
         $tags = get_values(array($uri=>$post), "as:tag");
 
         if(in_array("$tagp/shelter", $tags)){
+          $st = get_value(array($uri => $post), "as:startTime");
+          $et = get_value(array($uri => $post), "as:endTime");
+          if(isset($st)){ $st = new DateTime($st); }else{ $st = null; }
+          if(isset($et)){ $et = new DateTime($et); }else{ $et = null; }
           $out['accom'][] = array(
               "uri" => $uri,
               "content" => get_value(array($uri => $post), "as:content"),
               "date" => get_value(array($uri => $post), "as:published"),
-              "cost" => get_value(array($uri => $post), "asext:cost")
+              "cost" => get_value(array($uri => $post), "asext:cost"),
+              "startTime" => $st,
+              "endTime" => $et
           );
         }else{
           $out['accomother'][] = array(

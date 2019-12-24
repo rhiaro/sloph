@@ -32,17 +32,17 @@
       and was <a href="<?=$checkins['top'][count($checkins['top'])-1]['location']?>"><?=$checkins['top'][count($checkins['top'])-1]['label']?></a> for <?=$checkins['top'][count($checkins['top'])-1]['duration']?>.
       </p>
 
-      <p>I spent &euro;<?=$acquires['transitEur']?> on <a href="https://rhiaro.co.uk/tags/transit">transit</a>/<a href="https://rhiaro.co.uk/tags/transport">transport</a>, over <?=$acquires['transitNum']?> journeys<?=$acquires['transitMeans']?>.</p>
+      <p>I spent &euro;<?=number_format($acquires['transitEur'], 2)?> on <a href="https://rhiaro.co.uk/tags/transit">transit</a>/<a href="https://rhiaro.co.uk/tags/transport">transport</a>, over <?=$acquires['transitNum']?> journeys<?=$acquires['transitMeans']?>.</p>
 
       <p>I planned x journeys, to y different places. I travelled primarily by x, followed by y and z. Some places I visited are a, b, c, d, e and f.</p>
 
       <h2 id="shelter">Shelter</h2>
 
       <?if(!empty($acquires['accom'])):?>
-        <p>I lay my head in (approximately; logs may be incomplete) <?=count($acquires['accom'])?> different places:</p>
+        <p>I lay my head in <?=count($acquires['accom'])?> different places:</p>
         <ul>
           <?foreach($acquires['accom'] as $accom):?>
-            <li><a href="<?=$accom['uri']?>"><?=$accom['content']?></a> (<?=$accom['cost']?>)</li>
+            <li><?=!empty($accom['startTime']) ? $accom['startTime']->format("jS M Y").' ' : ''?><?=!empty($accom['endTime']) ? 'to '.$accom['endTime']->format("jS M Y").': ' : ''?><a href="<?=$accom['uri']?>"><?=$accom['content']?></a> (<?=$accom['cost']?>)</li>
           <?endforeach?>
         </ul>
       <?else:?>
@@ -57,7 +57,7 @@
         </ul>
       <?endif?>
 
-      <p>I spent &euro;<?=$acquires['accomEur']?> in total, averaging &euro;<?=$acquires['accomMean']?> per night, and &euro;<?=$acquires['accomMonth']?> per month.</p>
+      <p>I spent &euro;<?=number_format($acquires['accomEur'], 2)?> in total, averaging &euro;<?=number_format($acquires['accomMean'], 2)?> per night, and &euro;<?=number_format($acquires['accomMonth'], 2)?> per month.</p>
 
       <h2 id="consumption">Consumption</h2>
       <p>I logged <?=$consumes['total']?> meals or snacks, an average of <?=number_format($consumes['day'], 1)?> per day. The thing I consumed most was <?=$consumes['top']?>, followed by <?=$consumes['toptags']?>. I consumed <?=$consumes['top']?> on average <?=number_format($consumes['topday'], 1)?> times per day.</p>
@@ -67,13 +67,13 @@
       <p>One random thing I ate was <?=$consumes['random']?>. You can see everything at <a href="/eats">/eats</a>.</p>
 
       <h2 id="acquisitions">Acquisitions</h2>
-      <p>I purchased or otherwise acquired something on <?=$acquires['total']?> occasions, spending a total of approximately &euro;<?=$acquires['totaleur']?>. I used <?=count($acquires['currencies'])?> different currencies (<?=implode(", ", $acquires['currencies'])?>). This is an average expenditure of &euro;<?=$acquires['day']?> per day, &euro;<?=$acquires['week']?> per week, or &euro;<?=$acquires['month']?> per month. </p>
+      <p>I purchased or otherwise acquired something on <?=$acquires['total']?> occasions, spending a total of approximately &euro;<?=number_format($acquires['totaleur'], 2)?>. I used <?=count($acquires['currencies'])?> different currencies (<?=implode(", ", $acquires['currencies'])?>). This is an average expenditure of &euro;<?=$acquires['day']?> per day, &euro;<?=$acquires['week']?> per week, or &euro;<?=$acquires['month']?> per month. </p>
 
       <?if(!empty($acquires['toptags'])):?>
         <p>Some things I acquired the most often were <?=$acquires['toptags']?>. </p>
       <?endif?>
 
-      <p>On <?=$acquires['free']?> occasions I got something for free. I expensed &euro;<?=$acquires['expensed']?> of stuff for work. The most expensive thing I bought was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['dearest']['content']?></a> (&euro;<?=$acquires['dearest']['amountEur']?>) and the cheapest thing (which wasn't free) was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['cheapest']['content']?></a> (&euro;<?=$acquires['cheapest']['amountEur']?>). I spent on average &euro;<?=$acquires['meaneur']?> per time.
+      <p>On <?=$acquires['free']?> occasions I got something for free. I expensed &euro;<?=$acquires['expensed']?> of stuff for work. The most expensive thing I bought was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['dearest']['content']?></a> (&euro;<?=number_format($acquires['dearest']['amountEur'], 2)?>) and the cheapest thing (which wasn't free) was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['cheapest']['content']?></a> (&euro;<?=number_format($acquires['cheapest']['amountEur'], 2)?>). I spent on average &euro;<?=$acquires['meaneur']?> per time.
       <?if(!empty($acquires['othertags'])):?>
         Three other random categories of expenditure are: <?=$acquires['othertags']?>.
       <?endif?>
