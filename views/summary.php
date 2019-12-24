@@ -29,7 +29,7 @@
 
       <h2 id="shelter">Shelter</h2>
 
-      <?if(!empty($accom)):?>
+      <?if(!empty($acquires['accom'])):?>
         <p>I lay my head in (approximately; logs may be incomplete) <?=count($acquires['accom'])?> different places:</p>
         <ul>
           <?foreach($acquires['accom'] as $accom):?>
