@@ -208,13 +208,23 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     foreach($accom_posts as $uri => $post){
         $eur = get_value(array($uri=>$post), "asext:amountEur");
         $out['accomEur'] += $eur;
+        $tags = get_values(array($uri=>$post), "as:tag");
 
-        $out['accom'][] = array(
+        if(in_array("$tagp/shelter", $tags)){
+          $out['accom'][] = array(
+              "uri" => $uri,
+              "content" => get_value(array($uri => $post), "as:content"),
+              "date" => get_value(array($uri => $post), "as:published"),
+              "cost" => get_value(array($uri => $post), "asext:cost")
+          );
+        }else{
+          $out['accomother'][] = array(
             "uri" => $uri,
             "content" => get_value(array($uri => $post), "as:content"),
             "date" => get_value(array($uri => $post), "as:published"),
             "cost" => get_value(array($uri => $post), "asext:cost")
         );
+        }
     }
     if($days > 0){
         $out['accomMean'] = number_format($out['accomEur'] / $days, 2);

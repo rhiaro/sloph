@@ -48,6 +48,14 @@
       <?else:?>
         <p>No logs for where I stayed yet during this time.</p>
       <?endif?>
+      <?if(!empty($acquires['accomother'])):?>
+        <p>And also used:</p>
+        <ul>
+          <?foreach($acquires['accomother'] as $accomother):?>
+            <li><a href="<?=$accomother['uri']?>"><?=$accomother['content']?></a> (<?=$accomother['cost']?>)</li>
+          <?endforeach?>
+        </ul>
+      <?endif?>
 
       <p>I spent &euro;<?=$acquires['accomEur']?> in total, averaging &euro;<?=$acquires['accomMean']?> per night, and &euro;<?=$acquires['accomMonth']?> per month.</p>
 
