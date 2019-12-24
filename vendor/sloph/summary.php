@@ -327,6 +327,15 @@ function aggregate_writing($posts, $from, $to, $alltags){
   $adds = get_type($posts, "as:Add");
   $typed = array_merge($articles, $notes, $adds);
 
+  $reviewposts = array();
+  foreach($posts as $uri => $post){
+    $tags = get_values(array($uri=>$post), "as:tag");
+    if(is_array($tags) && in_array("https://rhiaro.co.uk/tags/week+in+review", $tags)){
+      $reviewposts[$uri]['name'] = get_value(array($uri=>$post), "as:name");
+    }
+  }
+  $out['reviewposts'] = $reviewposts;
+
   global $ep;
   $wrotewords = 0;
   $wroteposts = array();
@@ -341,6 +350,7 @@ function aggregate_writing($posts, $from, $to, $alltags){
   $out['total'] = count($typed);
   $out['articles'] = count($articles);
   $out['notes'] = count($notes) + count($adds);
+  $out['reviews'] = count($reviewposts);
   $out['wrote'] = count($wroteposts);
   $out['wrotetotal'] = $wrotewords;
 
