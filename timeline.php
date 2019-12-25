@@ -55,7 +55,6 @@ try {
 
     $resource = $graph->resource($archive_uri);
 
-
     require_once('vendor/sloph/header_stats.php');
 
     $graph = $resource->getGraph();
@@ -63,23 +62,64 @@ try {
 
     $items = get_values($resource, "as:items");
     $timeline = array();
+    $now = new DateTime();
     foreach($items as $uri){
       $published = get_value(array($uri=>$resource[$uri]), "as:published");
       $timeline[$published] = $resource[$uri];
       $timeline[$published]["uri"] = $uri;
     }
-    krsort($timeline);
+    ksort($timeline);
     reset($timeline);
-    $i = 0;
-    while($i < count($timeline)){
-      $current = each($timeline);
-      $current_date = new DateTime($current["key"]);
-      $next = current($timeline);
-      $next_date = new DateTime(get_value(array($next["uri"] => $next), "as:published"));
-      $diff = $current_date->getTimestamp() - $next_date->getTimestamp();
-      $timeline[$current["key"]]["diff"] = $diff;
-      $i++;
+
+    $prev = array();
+
+    foreach($timeline as $date => $data){
+      // Starts with oldest
+      $this_date = new DateTime($date);
+      if(empty($prev)){
+        // It's the first one
+        // The height is the diff between this one and the next one;
+        //  we'll set that on the next round
+
+        // If it's a checkin get the color
+        if(has_type(array($date=>$data), "as:Arrive")){
+          $timeline[$date]["color"] = get_checkin_color(array($date=>$data), $locations);
+        }else{
+          // We dunno what the color is right now.. // TODO
+          $timeline[$date]["color"] = "silver";
+        }
+        $prev[$date] = $data;
+
+      }else{
+        // It's not the first one
+        // Set the height of the previous one
+        $prev_date = array_keys($prev)[0];
+        $prev_dt = new DateTime($prev_date);
+        $diff = $this_date->getTimestamp() - $prev_dt->getTimestamp();
+        $timeline[$prev_date]["diff"] = $diff;
+
+        // If it's a checkin change the color
+        if(has_type(array($date=>$data), "as:Arrive")){
+          $timeline[$date]["color"] = get_checkin_color(array($date=>$data), $locations);
+        }else{
+          // Keep the same color as previous
+          $timeline[$date]["color"] = $timeline[$prev_date]["color"];
+        }
+        // Move it on
+        unset($prev);
+        $prev[$date] = $data;
+      }
     }
+
+    // Flip the order so most recent is first.
+    krsort($timeline);
+    // Set the most recent one which got left out in the loop.
+    $latest_date = array_keys($timeline)[0];
+    $latest_dt = new DateTime($latest_date);
+    $current_location_color = get_checkin_color($last_checkin, $locations);
+    $diff_now = $now->getTimestamp() - $latest_dt->getTimestamp();
+    $timeline[$latest_date]["color"] = $current_location_color;
+    $timeline[$latest_date]["diff"] = $diff_now;
 
     include 'views/top.php';
     include 'views/header_stats.php';
