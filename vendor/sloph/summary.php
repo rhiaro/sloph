@@ -134,6 +134,7 @@ function aggregate_acquires($posts, $from, $to, $alltags){
         }
 
         $tags = get_values(array($uri=>$post), "as:tag");
+        if(empty($tags)) { $tags = array(); }
         if(in_array("$tagp/accommodation", $tags) || in_array("$tagp/shelter", $tags)){
             $accom_posts[$uri] = $post;
         }
