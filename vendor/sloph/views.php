@@ -58,6 +58,7 @@ function collection_items_graph($collection){
 /* Visual things      */
 /**********************/
 
+
 function get_main_theme($ep){
   $q = query_for_theme();
   $r = execute_query($ep, $q);
@@ -66,6 +67,19 @@ function get_main_theme($ep){
   }else{
     return array("color"=>"silver","image"=>"");
   }
+}
+
+function get_checkin_color($checkin, $locations=array()){
+  global $ep;
+  if(empty($locations)){
+    $locations = get_locations($ep);
+  }
+
+  $location_uri = get_value($checkin, "as:location");
+  $location_color = get_value(array($location_uri => $locations[$location_uri]), "view:color");
+
+  return $location_color;
+
 }
 
 function get_icon($resource){
