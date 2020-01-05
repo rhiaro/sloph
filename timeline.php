@@ -121,6 +121,36 @@ try {
     $timeline[$latest_date]["color"] = $current_location_color;
     $timeline[$latest_date]["diff"] = $diff_now;
 
+    $markers = array();
+
+    // Set the oldest one
+    $start_post = new DateTime(array_keys($timeline)[count($timeline)-1]);
+    $start_day = new DateTime($start_post->format("Y-m-d"));
+    $start_diff = $start_post->getTimestamp() - $start_day->getTimestamp();
+    $markers[$start->format(DATE_ATOM)]["date"] = $start_post;
+    $markers[$start->format(DATE_ATOM)]["atom"] = $start_post->format(DATE_ATOM);
+    $markers[$start->format(DATE_ATOM)]["diff"] = $start_diff;
+
+    // Set the most recent one
+    $now_day = new DateTime($now->format("Y-m-d"));
+    $now_day_atom = $now_day->format(DATE_ATOM);
+    $now_diff = $now->getTimestamp() - $now_day->getTimestamp();
+    $markers[$now_day_atom]["date"] = $now_day;
+    $markers[$now_day_atom]["atom"] = $now_day_atom;
+    $markers[$now_day_atom]["diff"] = $now_diff;
+
+    // Set the middle
+    $day = new DateTime($start_day->format(DATE_ATOM)." + 1 day");
+    while($day->getTimestamp() < $now_day->getTimestamp()){
+      $day_atom = $day->format(DATE_ATOM);
+      $markers[$day_atom]["date"] = $day;
+      $markers[$day_atom]["atom"] = $day_atom;
+      $markers[$day_atom]["diff"] = 1440*60;
+      $day = new DateTime($day->format("Y-m-d")." + 1 day");
+    }
+
+    krsort($markers);
+
     include 'views/top.php';
     include 'views/header_stats.php';
     include 'views/nav_header.php';

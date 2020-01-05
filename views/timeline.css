@@ -1,11 +1,25 @@
+.timebox {
+    width:100px;
+    float: left;
+}
+.time {
+    float: left;
+    color: white;
+    display: flex;
+}
 .bar {
     width: 20px;
+    float: left;
     background-color: silver;
 }
 .info {
-    overflow: hidden;
+    /*overflow: hidden;*/
     display: flex;
 }
-.info span {
+.info span, .time span {
     align-self: flex-end;
+}
+.time span {
+    padding: 0.4em;
+    background-color: #470229;
 }

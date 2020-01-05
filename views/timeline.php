@@ -1,8 +1,16 @@
 <article class="h-entry" typeof="as:Article" about="">
   <h1>Timeline</h1>
   <div class="w1of1"><div class="inner">
+    <div class="timebox">
+        <?foreach($markers as $date => $data):?>
+          <div class="time" style="height: <?=round($data['diff']/60)?>px">
+              <span><?=$data['date']->format("Y-m-d")?></span>
+              <!-- <span><?=$data['diff']?></span> -->
+          </div>
+        <?endforeach?>
+    </div>
     <?foreach($timeline as $date => $post):?>
-      <div class="w1of2 bar" style="height: <?=round($post['diff']/60)?>px; background-color: <?=$post['color']?>;">
+      <div class="bar" style="height: <?=round($post['diff']/60)?>px; background-color: <?=$post['color']?>;">
       </div>
       <div class="info" style="height: <?=round($post['diff']/60)?>px;" title="<?=$post["uri"]?>">
         <span title="<?=$post["uri"]?>">
