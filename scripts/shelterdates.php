@@ -98,5 +98,26 @@ $graph = execute_query($ep, $shelter_q);
         <p><input type="submit" value="save" name="save" /></p>
       </form>
     <?endforeach?>
+    </div>
+    <div class="w1of1" id="table">
+        <table>
+            <tr>
+                <th>Pub</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Descr</th>
+                <th>Country</th>
+            </tr>
+            <?foreach($graph as $uri => $post):?>
+                <tr>
+                    <td><?=get_value(array($uri=>$post), "as:published")?></td>
+                    <td><?=get_value(array($uri=>$post), "as:startTime")?></td>
+                    <td><?=get_value(array($uri=>$post), "as:endTime")?></td>
+                    <td><?=get_value(array($uri=>$post), "as:content")?></td>
+                    <td></td>
+                </tr>
+            <?endforeach?>
+        </table>
+    </div>
   </body>
 </html>
