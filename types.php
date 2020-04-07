@@ -81,20 +81,7 @@ $prev_uri = array_pop($item_uris);
 $name = ucfirst($_GET['type']);
 $nav_prep = array("next" => $next_uri, "prev" => $prev_uri);
 
-if($_GET['type'] == "where"){
-  // TODO: move this somewhere else
-  $where = get_resource($ep, $item_uris[0]);
-  // Temporary for checkins
-  $where->addLiteral($uri, 'view:banality', 5);
-  $where->addLiteral($uri, 'view:intimacy', 5);
-  $where->addLiteral($uri, 'view:wanderlust', 4);
-  $summary = make_checkin_summary($where->toRdfPhp(), $locations);
-  $where->addLiteral($uri, 'as:summary', $summary["string"]);
-
-  $g = $where;
-}else{
-  $g = get_container_dynamic_from_items($ep, $uri, $sort, $name, $item_uris, $total, $nav_prep);
-}
+$g = get_container_dynamic_from_items($ep, $uri, $sort, $name, $item_uris, $total, $nav_prep);
 
 $result = conneg($acceptheaders, $g);
 $content = $result['content'];
