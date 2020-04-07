@@ -499,7 +499,7 @@ function query_select_s_views($score, $limit=10){
 function query_select_s_next($uri, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
 
-  $q .= "SELECT ?s WHERE { \n";
+  $q .= "SELECT ?s ?d WHERE { \n";
   $q .= " GRAPH <$graph> {";
   $q .= "  ?s as:published ?d . \n";
   $q .= "  <$uri> as:published ?d2 . \n";
@@ -533,7 +533,7 @@ function query_select_one_of_type($type, $sort="as:published", $dir="DESC", $gra
 function query_select_s_next_of_type($uri, $type, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
 
-  $q .= "SELECT ?s WHERE { \n";
+  $q .= "SELECT ?s ?d WHERE { \n";
   $q .= " GRAPH <$graph> {";
   $q .= "  ?s as:published ?d . \n";
   $q .= "  ?s a $type . \n";
@@ -897,6 +897,22 @@ function query_select_last_time_at($location){
   ?p a as:Arrive .
   ?p as:published ?d .
   ?p as:location <$location> .
+}
+ORDER BY DESC(?d)
+LIMIT 1";
+  return $q;
+}
+
+function query_select_last_time_not_at($locations){
+  $q = get_prefixes();
+  $q .= "SELECT ?s ?d WHERE {
+  ?s a as:Arrive . 
+  ?s as:published ?d .
+  ?s as:location ?loc .";
+  foreach($locations as $location){
+    $q .= "FILTER(?loc != <$location>)";
+  }
+  $q .= "
 }
 ORDER BY DESC(?d)
 LIMIT 1";
