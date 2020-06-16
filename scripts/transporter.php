@@ -137,6 +137,7 @@ if(isset($_GET['add'])){
   if(!isset($_SESSION['items']) && isset($_GET['collection'])){
     $response = fetch_album($_GET['collection']);
     $collection = json_decode($response, true);
+    rsort($collection['items']);
     $_SESSION['items'] = $collection['items'];
   }
 
@@ -156,7 +157,7 @@ if(isset($_GET['add'])){
       var_dump(htmlentities($addq));
     }
   }
-  
+
   // Get all add posts
   $q = query_select_s_where(array("rdf:type" => "as:Add"), 0);
   $res = execute_query($ep, $q);
