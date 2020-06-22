@@ -153,7 +153,7 @@ function get_container_dynamic($ep, $uri, $query, $params, $content_type="text/h
   return $current;
 }
 
-function get_container_dynamic_from_items($ep, $uri, $sort="as:published", $name="", $items=array(), $total=0, $nav=array(), $nav_override=false){
+function get_container_dynamic_from_items($ep, $uri, $sort="as:published", $name="", $items=array(), $total=0, $nav=array(), $nav_override=false, $from_graph="https://blog.rhiaro.co.uk/"){
   
   // Page it!
   if(isset($_GET['before'])){
@@ -167,8 +167,9 @@ function get_container_dynamic_from_items($ep, $uri, $sort="as:published", $name
     $limit = 16;
   }
 
-  $collection_page = make_collection_page($ep, $uri, $items, $nav, $before, $limit, $sort);
+  $collection_page = make_collection_page($ep, $uri, $items, $nav, $before, $limit, $sort, $from_graph);
   $page_uri = $collection_page->getUri();
+
   $collection_page->addLiteral($uri, "as:name", $name);
   $collection_page->addLiteral($page_uri, "as:name", $name);
   $total_items = new EasyRdf_Literal($total, null, "xsd:nonNegativeInteger");
