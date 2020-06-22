@@ -21,7 +21,7 @@ function on_get($ep, $guest=false, $ct=null){
   $graph->parse($res, 'php');
   // echo $graph->dump();
   $result = conneg($acceptheaders, $graph);
-  
+
   return $result;
 
 }
@@ -39,20 +39,40 @@ function verify_token($token){
   return $response;
 }
 
+function graph_route($me, $incoming){
+  if($me != "https://rhiaro.co.uk/#me"){
+    $graph = "https://blog.rhiaro.co.uk/guest/";
+  }else{
+    $graph = "https://blog.rhiaro.co.uk/";
+  }
+
+  // TODO: this can't handle graphs with multiple resources of multiple types
+  //       .. last one wins.
+  //       .. but there shouldn't be any if the incoming data is AS2
+  $resources = $incoming->resources();
+  foreach($resources as $resource){
+    if(in_array("as:Place", $resource->types())){
+      $graph = "https://rhiaro.co.uk/places/";
+    }
+  }
+
+  return $graph;
+}
+
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
   // AUTH FIRST
   // Verify token
   $headers = apache_request_headers();
   if(isset($headers['Authorization'])) {
     $token = $headers['Authorization'];
-    
+
     /* !!!!! */
     if($token == $EP_KEY){
       $response = array("me"=>"https://rhiaro.co.uk/#me", "scope"=>"post", "issued_by"=>"localhost");
     }elseif($token == $GUEST_KEY){
       $response = array("me"=>"http://csarven.ca/#i", "scope"=>"post", "issued_by"=>"https://rhiaro.co.uk/sloph");
     }else{
-    /* !!!!! */  
+    /* !!!!! */
 
       $response = verify_token($token);
     }
@@ -86,20 +106,20 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(empty($post)){
       $post = $_POST;
     }
-    
+
     if(isset($post) && !empty($post)){
-    
+
     // Get content-type header
     if($headers["Content-Type"] == "application/x-www-form-urlencoded"){
       // if it's form-encoded convert to json-ld
       // TODO: actual conversion
       if(!isset($post["@context"])){ $post["@context"] = "https://rhiaro.co.uk/vocab"; }
       if(isset($post['access_token'])) unset($post['access_token']);
-    
+
     }elseif($headers["Content-Type"] == "application/activity+json"){
       // if it's activity+json add default context
       if(!isset($post["@context"])){ $post["@context"] = "https://www.w3.org/ns/activitystreams#"; }
-    
+
     }elseif($headers["Content-Type"] == "application/ld+json"){
       // pass
     }else{
@@ -107,14 +127,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
       echo "415: Unsupported media type";
       exit;
     }
-    
+
     // Find slug
     $slug = null;
-    if(isset($post['slug'])){ 
-      $slug = urlencode($post['slug']); 
+    if(isset($post['slug'])){
+      $slug = urlencode($post['slug']);
       unset($post['slug']);
     }elseif(isset($headers['Slug'])){
-      $slug = urlencode($headers['Slug']); 
+      $slug = urlencode($headers['Slug']);
     }
 
     // parse and validate
@@ -143,11 +163,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
     // TODO: add default data like author etc
     // insert
-    if($me != "https://rhiaro.co.uk/#me"){
-      $graph = "https://blog.rhiaro.co.uk/guest/";
-    }else{
-      $graph = "https://blog.rhiaro.co.uk/";
-    }
+    $graph = graph_route($me, $named);
     $ntriples = $named->serialise("ntriples");
     $q = query_insert_n($ntriples, $graph);
     $res = execute_query($ep, $q);
@@ -161,10 +177,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
       header("HTTP/1.1 400 Bad Request");
       echo "400: Nothing posted";
     }
-    
+
   }
 }elseif($_SERVER['REQUEST_METHOD'] === 'GET'){
-  
+
   $guest = false;
   if(isset($_GET['guest']) && $_GET['guest'] == '1'){
     $guest = true;
@@ -174,10 +190,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   $header = $result['header'];
   $content = $result['content'];
   if(gettype($content) == "string"){
-    
+
     header($header);
     echo $content;
-  
+
   }else{
     echo "<h1>rhiaro outbox</h1>";
     echo "<p>If you are a regular human, you probably want to look at <a href=\"https://rhiaro.co.uk/\">the homepage</a>..</p>";
