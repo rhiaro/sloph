@@ -1,4 +1,15 @@
-body {
-  font-family: Arial;
-  color: gray;
+article {
+  background-color: white;
+  padding: 1em;
+  margin-top: 1em; margin-bottom: 1em;
+  overflow: hidden;
+}
+article p, article li {
+  font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  line-height: 1.58;
+  font-weight: 400;
+  font-size: 21px;
+}
+article a {
+  color: inherit;
 }
