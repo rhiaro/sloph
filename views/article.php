@@ -1,5 +1,5 @@
 <article class="h-entry" typeof="as:Article" about="">
-  <?if(has_type($resource, 'as:Object') || has_type($resource, 'as:Event') || has_type($resource, 'as:Place') || has_type($resource, 'as:Article')):?>
+  <?if(has_type($resource, 'as:Object') || has_type($resource, 'as:Event') || has_type($resource, 'as:Article')):?>
     <h1 class="p-name" property="as:name"><?=get_value($resource, 'as:name')?></h1>
   <?endif?>
 
