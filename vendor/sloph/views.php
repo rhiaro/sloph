@@ -366,6 +366,7 @@ function stat_box($ep, $type, $posts=null){
 function get_locations($ep){
   $q = query_for_places();
   $r = execute_query($ep, $q);
+
   if($r){
     $g = new EasyRdf_Graph();
     $g->parse($r, 'php');
@@ -618,6 +619,7 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
 
   $items = construct_uris_in_graph($ep, $item_uris, $from_graph);
   $items_g = new EasyRdf_Graph();
+
   $items_g->parse($items, 'php');
   foreach($item_uris as $item){
     $page->addResource($page_uri, "as:items", $item);

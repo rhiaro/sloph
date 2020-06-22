@@ -30,6 +30,8 @@ $typemap = array("checkins" => "as:Arrive"
                 ,"words" => "asext:Write"
   );
 
+$typegraphs = array("places" => "https://rhiaro.co.uk/places/");
+
 if(!isset($_GET['type']) || !array_key_exists($_GET['type'], $typemap)){
   header("HTTP/1.1 404 Not Found");
   echo $_GET['type']."<br/>";
@@ -54,34 +56,43 @@ if(isset($_GET['limit']) && is_numeric($_GET['limit']) && $_GET['limit'] < 64){
   $limit = 16;
 }
 
-$qc = query_count_type($typemap[$_GET['type']]);
+if(!isset($typegraphs[$_GET['type']])){
+  $select_from_graph = "https://blog.rhiaro.co.uk/";
+}else{
+  $select_from_graph = $typegraphs[$_GET['type']];
+}
+
+$qc = query_count_type($typemap[$_GET['type']], $select_from_graph);
 $resc = execute_query($ep, $qc);
 $total = $resc["rows"][0]["c"];
 
 $next_uri = null;
 if(isset($_GET['before'])){
-  $q = query_select_prev_type($typemap[$_GET['type']], $_GET['before'], $sort, $limit, "https://blog.rhiaro.co.uk/");
+  $q = query_select_prev_type($typemap[$_GET['type']], $_GET['before'], $sort, $limit, $select_from_graph);
   
-  $next_q = query_select_next_type($typemap[$_GET['type']], $_GET['before'], $sort, $limit, "https://blog.rhiaro.co.uk/");
+  $next_q = query_select_next_type($typemap[$_GET['type']], $_GET['before'], $sort, $limit, $select_from_graph);
   $next_uris = select_to_list(execute_query($ep, $next_q));
   if(count($next_uris) > 0){
     $next_uri = $next_uris[count($next_uris)-1];
   }
 }else{
-  $q = query_select_s_type($typemap[$_GET['type']], $sort, "DESC", $limit+1, "https://blog.rhiaro.co.uk/");
+  $q = query_select_s_type($typemap[$_GET['type']], $sort, "DESC", $limit+1, $select_from_graph);
 }
 
 if($_GET["type"] == "bookmarks"){
   $vals = array("as:published" => "?published", "rdf:type" => "as:Add", "as:target" => "<https://rhiaro.co.uk/bookmarks/>");
   $q = query_select_s_where($vals, 0, "published");
 }
-
 $item_uris = select_to_list(execute_query($ep, $q));
-$prev_uri = array_pop($item_uris);
+
+$prev_uri = null;
+if(count($item_uris) > 1){
+  $prev_uri = array_pop($item_uris);
+}
 $name = ucfirst($_GET['type']);
 $nav_prep = array("next" => $next_uri, "prev" => $prev_uri);
 
-$g = get_container_dynamic_from_items($ep, $uri, $sort, $name, $item_uris, $total, $nav_prep);
+$g = get_container_dynamic_from_items($ep, $uri, $sort, $name, $item_uris, $total, $nav_prep, false, $select_from_graph);
 
 $result = conneg($acceptheaders, $g);
 $content = $result['content'];

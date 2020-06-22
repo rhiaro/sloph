@@ -1,12 +1,15 @@
-<? 
-$items = get_values($resource, 'as:items');
+<?
+$items = get_values($resource, 'as:items', $content->getUri());
+
 if($items == null){
   $items = array();
 }
 $itemsh = count($items);
-if(get_value($resource, 'as:partOf')){
-  $collection_uri = get_value($resource, 'as:partOf');
-  $itemsh .= " out of ".get_value(array($collection_uri => $resource[$collection_uri]), 'as:totalItems');
+
+if(get_value($resource, 'as:partOf', $content->getUri())){
+  $collection_uri = get_value($resource, 'as:partOf', $content->getUri());
+  $collection_g = array($collection_uri => $resource[$collection_uri]);
+  $itemsh .= " out of ".get_value($collection_g, 'as:totalItems', $collection_uri);
   $collection = array();
   foreach($items as $item){
     $collection[$item] = $resource[$item];

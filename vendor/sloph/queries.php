@@ -762,7 +762,7 @@ function query_count_added_items($collection){
 function query_count_type($type, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT COUNT(?s) AS ?c WHERE {
-  ?s rdf:type $type .
+  GRAPH <$graph> { ?s rdf:type $type . }
 }";
   return $q;
 }
