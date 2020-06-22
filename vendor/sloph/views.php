@@ -19,6 +19,8 @@ function view_router($resource){
       return 'collection';
     }elseif(has_type($resource, "asext:Write")){
       return 'words';
+    }elseif(has_type($resource, "as:Place")){
+      return 'place';
     }else{
       if(count($resource) > 1){
         return 'index';
