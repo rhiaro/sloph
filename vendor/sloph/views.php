@@ -806,7 +806,7 @@ function lat_lon_to_map($lat, $lon, $zoom=8){
   return $map;
 }
 function map_path($start, $end){
-  $map = "https://atlas.p3k.io/map/img?basemap=gray&width=800&height=240&path[]=[".$start[0].",".$start[1]."],[".$end[0].",".$end[1]."]&bezier=25";
+  $map = "https://atlas.p3k.io/map/img?basemap=stamen_terrain&attribution=none&width=800&height=240&path[]=[".$start[0].",".$start[1]."],[".$end[0].",".$end[1]."]&bezier=25";
   return $map;
 }
 
