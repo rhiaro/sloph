@@ -8,7 +8,7 @@ if(!isset($in_feed)){
     $in_feed = false;
 }
 $images = get_values($resource, 'as:image');
-if(count($images) < 1){
+if(!$images || count($images) < 1){
     $images = array_slice($objects, 0, 4);
 }
 if($in_feed){
