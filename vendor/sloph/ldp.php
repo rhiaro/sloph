@@ -288,14 +288,15 @@ function increment_slug($ep, $base, $path, $slug, $i=2){
 }
 
 function make_slug($resource){
-  if($resource->get("as:name") && $resource->get("as:name")->getValue() != ""){
-    $string = $resource->get("as:name")->getValue();
-  }elseif($resource->get("as:summary") && $resource->get("as:summary")->getValue() != ""){
-    $string = strip_tags($resource->get("as:summary")->getValue());
-  }elseif($resource->get("as:content") && $resource->get("as:content")->getValue() != ""){
-    $string = strip_tags($resource->get("as:content")->getValue());
-  }else{
-    $string = uniqid();
+  $string = uniqid();
+  if(!$resource->isA("asext:Consume") && !$resource->isA("asext:Acquire")){
+    if($resource->get("as:name") && $resource->get("as:name")->getValue() != ""){
+      $string = $resource->get("as:name")->getValue();
+    }elseif($resource->get("as:summary") && $resource->get("as:summary")->getValue() != ""){
+      $string = strip_tags($resource->get("as:summary")->getValue());
+    }elseif($resource->get("as:content") && $resource->get("as:content")->getValue() != ""){
+      $string = strip_tags($resource->get("as:content")->getValue());
+    }
   }
 
   $slug = substr(strtolower(str_replace(" ", "-", preg_replace("/[^\w\d \-]/ui", '',strip_tags($string)))), 0);
