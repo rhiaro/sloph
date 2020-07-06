@@ -41,8 +41,51 @@ function add_to_collection($ep, $post_uri, $collection_uri){
     
 }
 
-function update_tags_collection($ep, $post){
-    
+function update_tags_collection($ep, $post_graph){
+    // Get all tags from post
+    $tag_uris = array();
+    $tags_graph = new EasyRdf_Graph();
+    foreach($post_graph->resources() as $id => $data){
+        $tags = $post_graph->all($id, "as:tag");
+        foreach($tags as $tag){
+            $tag_uris[$tag->getUri()][] = $id;
+        }
+    }
+
+    // name tags that aren't named
+    $q = get_prefixes();
+    $q .= "SELECT ?tag WHERE { ";
+    $i = 1;
+    foreach($tag_uris as $tag => $tagged){
+        $q .= "  { <$tag> as:name ?name .  ?tag as:name ?name . }";
+        if($i < count($tag_uris)){
+          $q .= "  UNION ";
+        }
+        $i++;
+    }
+    $q .= "}";
+    $res = execute_query($ep, $q);
+    if($res){
+        $named_tags = select_to_list($res);
+        foreach($tag_uris as $tag => $tagged){
+            if(!in_array($tag, $named_tags)){
+                $name = str_replace("+", " ", str_replace("https://rhiaro.co.uk/tags/", "", $tag));
+                $tags_graph->addLiteral($tag, "as:name", $name);
+            }
+        }
+    }
+
+    // add post to tag collection
+    foreach($tag_uris as $tag => $tagged){
+        $tags_graph->addType($tag, "as:Collection");
+        foreach($tagged as $post){
+            $tags_graph->addResource($tag, "as:items", $post);
+        }
+    }
+    $ntriples = $tags_graph->serialise("ntriples");
+    $q = query_insert_n($ntriples, "https://rhiaro.co.uk/tags/");
+    $res = execute_query($ep, $q);
+    return $res;
 }
 
 function update_likes_collection($ep, $post){
