@@ -1,5 +1,6 @@
 <?
 require_once('../init.php');
+require_once('outbox_side_effects.php');
 
 function on_get($ep, $guest=false, $ct=null){
 
@@ -164,18 +165,29 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     // TODO: add default data like author etc
     // insert
     $graph = graph_route($me, $named);
-    $ntriples = $named->serialise("ntriples");
-    $q = query_insert_n($ntriples, $graph);
-    $res = execute_query($ep, $q);
-    if(isset($res["t_count"])){
-      header("HTTP/1.1 201 Created");
-      header("Location: ".$new_uri);
-      echo "201 Created: ".$new_uri;
+
+    // Do side effects
+    $side_effects_errors = array();
+    $update_tags_result = update_tags_collection($ep, $named);
+    if(!$update_tags_result){
+      $side_effects_errors["update_tags_collections"] = true;
     }
 
-    }else{
-      header("HTTP/1.1 400 Bad Request");
-      echo "400: Nothing posted";
+    // No errors with side effects, proceed with main insert.
+    if(empty($side_effects_errors)){
+      $ntriples = $named->serialise("ntriples");
+      $q = query_insert_n($ntriples, $graph);
+      $res = execute_query($ep, $q);
+      if(isset($res["t_count"])){
+        header("HTTP/1.1 201 Created");
+        header("Location: ".$new_uri);
+        echo "201 Created: ".$new_uri;
+      }
+
+      }else{
+        header("HTTP/1.1 400 Bad Request");
+        echo "400: Nothing posted";
+      }
     }
 
   }
