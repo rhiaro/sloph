@@ -76,7 +76,11 @@ function get_checkin_color($checkin, $locations=array()){
   }
 
   $location_uri = get_value($checkin, "as:location");
-  $location_color = get_value(array($location_uri => $locations[$location_uri]), "view:color");
+  if(isset($locations[$location_uri])){
+    $location_color = get_value(array($location_uri => $locations[$location_uri]), "view:color");
+  }else{
+    $location_color = "silver";
+  }
 
   return $location_color;
 
