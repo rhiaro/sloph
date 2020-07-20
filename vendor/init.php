@@ -20,7 +20,9 @@ require_once("JsonLD/TypedValue.php");
 
 require_once("easyrdf/easyrdf/lib/EasyRdf.php");
 include_once("ARC2/ARC2.php");
+
 include_once("dbsettings.php");
+require_once("cashcache/cashcache.php");
 
 /* MySQL and endpoint configuration */ 
 $config = array(

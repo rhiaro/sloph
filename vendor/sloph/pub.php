@@ -1,6 +1,5 @@
 <?
 require_once('../init.php');
-require_once('outbox_side_effects.php');
 
 function on_get($ep, $guest=false, $ct=null){
 
@@ -110,79 +109,87 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     if(isset($post) && !empty($post)){
 
-    // Get content-type header
-    if($headers["Content-Type"] == "application/x-www-form-urlencoded"){
-      // if it's form-encoded convert to json-ld
-      // TODO: actual conversion
-      if(!isset($post["@context"])){ $post["@context"] = "https://rhiaro.co.uk/vocab"; }
-      if(isset($post['access_token'])) unset($post['access_token']);
+      // Get content-type header
+      if($headers["Content-Type"] == "application/x-www-form-urlencoded"){
+        // if it's form-encoded convert to json-ld
+        // TODO: actual conversion
+        if(!isset($post["@context"])){ $post["@context"] = "https://rhiaro.co.uk/vocab"; }
+        if(isset($post['access_token'])) unset($post['access_token']);
 
-    }elseif($headers["Content-Type"] == "application/activity+json"){
-      // if it's activity+json add default context
-      if(!isset($post["@context"])){ $post["@context"] = "https://www.w3.org/ns/activitystreams#"; }
+      }elseif($headers["Content-Type"] == "application/activity+json"){
+        // if it's activity+json add default context
+        if(!isset($post["@context"])){ $post["@context"] = "https://www.w3.org/ns/activitystreams#"; }
 
-    }elseif($headers["Content-Type"] == "application/ld+json"){
-      // pass
-    }else{
-      header("HTTP/1.1 415 Unsupported Media Type");
-      echo "415: Unsupported media type";
-      exit;
-    }
+      }elseif($headers["Content-Type"] == "application/ld+json"){
+        // pass
+      }else{
+        header("HTTP/1.1 415 Unsupported Media Type");
+        echo "415: Unsupported media type";
+        exit;
+      }
 
-    // Find slug
-    $slug = null;
-    if(isset($post['slug'])){
-      $slug = urlencode($post['slug']);
-      unset($post['slug']);
-    }elseif(isset($headers['Slug'])){
-      $slug = urlencode($headers['Slug']);
-    }
+      // Find slug
+      $slug = null;
+      if(isset($post['slug'])){
+        $slug = urlencode($post['slug']);
+        unset($post['slug']);
+      }elseif(isset($headers['Slug'])){
+        $slug = urlencode($headers['Slug']);
+      }
 
-    // parse and validate
-    $data = json_encode($post);
-    if(!$data){
-      header("HTTP/1.1 400 Bad Request");
-      echo "400: Bad JSON-LD";
-      exit;
-    }
-    $g = new EasyRdf_Graph();
-    $g->parse($post, "jsonld");
-    $resources = $g->resources();
-    $named = new EasyRdf_Graph();
-    foreach($resources as $id => $data){
-      if($g->resource($id)->isBNode()){
-        $new_uri = make_uri($ep, $g->resource($id));
-        $s = new EasyRdf_Resource($new_uri);
-        $ps = $data->properties();
-        foreach($ps as $p){
-          $os = $g->all($id, $p);
-          foreach($os as $o){
-            $named->add($s, $p, $o);
+      // parse and validate
+      $data = json_encode($post);
+      if(!$data){
+        header("HTTP/1.1 400 Bad Request");
+        echo "400: Bad JSON-LD";
+        exit;
+      }
+      $g = new EasyRdf_Graph();
+      $g->parse($post, "jsonld");
+      $resources = $g->resources();
+      $named = new EasyRdf_Graph();
+      foreach($resources as $id => $data){
+        if($g->resource($id)->isBNode()){
+          $new_uri = make_uri($ep, $g->resource($id));
+          $s = new EasyRdf_Resource($new_uri);
+          $ps = $data->properties();
+          foreach($ps as $p){
+            $os = $g->all($id, $p);
+            foreach($os as $o){
+              $named->add($s, $p, $o);
+            }
           }
         }
       }
-    }
-    // TODO: add default data like author etc
-    // insert
-    $graph = graph_route($me, $named);
+      // TODO: add default data like author etc
+      // insert
+      $graph = graph_route($me, $named);
 
-    // Do side effects
-    $side_effects_errors = array();
-    $update_tags_result = update_tags_collection($ep, $named);
-    if(!$update_tags_result){
-      $side_effects_errors["update_tags_collections"] = true;
-    }
+      // Do side effects
+      $side_effects_errors = array();
 
-    // No errors with side effects, proceed with main insert.
-    if(empty($side_effects_errors)){
-      $ntriples = $named->serialise("ntriples");
-      $q = query_insert_n($ntriples, $graph);
-      $res = execute_query($ep, $q);
-      if(isset($res["t_count"])){
-        header("HTTP/1.1 201 Created");
-        header("Location: ".$new_uri);
-        echo "201 Created: ".$new_uri;
+      $update_tags_result = update_tags_collection($ep, $named);
+      if(!$update_tags_result){
+        $side_effects_errors["update_tags_collections"] = true;
       }
+
+      $currency_conversion_result = acquire_currency_conversion($named);
+      if(!$currency_conversion_result){
+        $side_effects_errors["acquire_currency_conversion"] = true;
+      }else{
+        $named = $currency_conversion_result;
+      }
+
+      // No errors with side effects, proceed with main insert.
+      if(empty($side_effects_errors)){
+        $ntriples = $named->serialise("ntriples");
+        $q = query_insert_n($ntriples, $graph);
+        $res = execute_query($ep, $q);
+        if(isset($res["t_count"])){
+          header("HTTP/1.1 201 Created");
+          header("Location: ".$new_uri);
+          echo "201 Created: ".$new_uri;
+        }
 
       }else{
         header("HTTP/1.1 400 Bad Request");
@@ -191,6 +198,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
 
   }
+
 }elseif($_SERVER['REQUEST_METHOD'] === 'GET'){
 
   $guest = false;
