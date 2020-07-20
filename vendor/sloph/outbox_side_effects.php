@@ -10,13 +10,13 @@ function create_create($ep, $object, $create_date=null){
     }else{
         $date = new DateTime($create_date);
     }
-    
+
     $g = new EasyRdf_Graph($create_uri);
     $g->addType('as:Create');
     $g->addResource('as:object', $object_uri);
     $g->addResource('as:actor', $_RHIARO);
     $g->addLiteral('as:published', $date);
-    
+
     // TODO: Copy addressing from object to create.
 
     $ttl = $g->serialize('turtle');
@@ -26,19 +26,19 @@ function create_create($ep, $object, $create_date=null){
 }
 
 function process_update($ep, $activity){
-    
+
 }
 
 function process_delete($ep, $activity){
-    
+
 }
 
 function process_undo($ep, $activity){
-    
+
 }
 
 function add_to_collection($ep, $post_uri, $collection_uri){
-    
+
 }
 
 function update_tags_collection($ep, $post_graph){
@@ -92,43 +92,145 @@ function update_tags_collection($ep, $post_graph){
 }
 
 function update_likes_collection($ep, $post){
-    
+
 }
 
 function update_liked_collection($ep, $post){
-    
+
 }
 
 function update_shares_collection($ep, $post){
-    
+
 }
 
 function update_shared_collection($ep, $post){
-    
+
 }
 
 function update_followers_collection($ep, $post){
-    
+
 }
 
 function update_following_collection($ep, $post){
-    
+
 }
 
 function update_blocked_collection($ep, $post){
-    
+
 }
 
 function add_published_date($ep, $post, $date){
-    
+
 }
 
 function add_modified_date($ep, $post, $date){
-    
+
 }
 
 function add_actor($ep, $post, $actor){
-    
+
+}
+
+/*******************************************************/
+/* Stuff that's more specific to sloph than general AP */
+/*******************************************************/
+
+/* Currency conversions for Acquire posts */
+function acquire_currency_conversion($post_graph){
+    $acquires = [];
+    foreach($post_graph->resources() as $id => $data){
+        if($data->isA("asext:Acquire")){
+            $acquires[] = $data->getUri();
+        }
+    }
+    if(empty($acquires)){
+        return true;
+    }
+    foreach($acquires as $uri){
+        $cost = structure_cost($post_graph->get($uri, "asext:cost")->getValue());
+        $amount = $cost["value"];
+        $currency = $cost["currency"];
+
+        if($amount == "0"){
+          $usd = $eur = $gbp = 0;
+        }else{
+            $date = $post_graph->get($uri, "as:published")->getValue();
+            $datef = $date->format("Y-m-d");
+
+            $eur = $post_graph->get($uri, "asext:amountEur");
+            if(isset($eur)) { $eur = $eur->getValue(); }
+            $usd = $post_graph->get($uri, "asext:amountUsd");
+            if(isset($usd)) { $usd = $usd->getValue(); }
+            $gbp = $post_graph->get($uri, "asext:amountGbp");
+            if(isset($gbp)) { $gbp = $gbp->getValue(); }
+
+            // Get conversion rates
+            $existing = read_rates($date);
+
+            // Check if EUR already posted
+            if(!isset($eur) && $currency == "EUR"){
+                $eur = $amount;
+            }
+            if(!isset($eur)){
+                // Get conversion rates for EUR
+                // Fetch and store exchange rate if not already
+                if(!isset($existing["EUR"][$currency])){
+                    $rates = get_fixer_rates($date, $currency);
+                    write_rates($date, $rates);
+                }
+                // Convert to EUR
+                $eur = convert_any_to_eur($amount, $currency, $date);
+            }
+
+            // Check if USD already posted
+            if(!isset($usd) && $currency == "USD"){
+                $usd = $amount;
+            }
+            // If EUR was set we can try to get USD from EUR
+            if(isset($eur) && !isset($usd)){
+                $usd = convert_eur_to_any($eur, "USD", $date);
+            }
+            if(!isset($usd)){
+                // Get conversion rates for USD
+                // Fetch and store exchange rate if not already
+                if(!isset($existing["USD"][$currency])){
+                    $usdrates = get_currencylayer_rates($date, $currency);
+                    write_rates($date, $usdrates, "USD");
+                }
+                // Convert to USD
+                $usd = convert_any_to_usd($amount, $currency, $date);
+            }
+
+            // If USD got set but EUR didn't, try to get EUR from USD
+            if(isset($usd) && !isset($eur)){
+                $eur = convert_any_to_eur($usd, "USD", $date);
+            }
+
+            // Check if GBP already posted
+            if(!isset($gbp) && $currency == "GBP"){
+                $gbp = $amount;
+            }
+            // If EUR was set we can try to get GBP from EUR
+            if(isset($eur) && !isset($gbp)){
+                $gbp = convert_eur_to_any($eur, "GBP", $date);
+            }
+            // If USD was set we can try to get GBP from USD
+            if(isset($usd) && !isset($gbp)){
+                $gbp = convert_eur_to_any($usd, "GBP", $date);
+            }
+
+        }
+        if(isset($eur)){
+            $post_graph->add($uri, "asext:amountEur", $eur);
+        }
+        if(isset($usd)){
+            $post_graph->add($uri, "asext:amountUsd", $usd);
+        }
+        if(isset($gbp)){
+            $post_graph->add($uri, "asext:amountGbp", $gbp);
+        }
+    }
+    return $post_graph;
 }
 
 ?>
