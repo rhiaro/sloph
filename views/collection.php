@@ -25,6 +25,7 @@ if(get_value($resource, 'as:partOf', $content->getUri())){
   }else{
     $sorted = get_and_sort($ep, $items);
   }
+  $prev_date = null;
   foreach($sorted as $uri => $resource){
     $resource = array($uri => $resource);
 
@@ -49,6 +50,7 @@ if(get_value($resource, 'as:partOf', $content->getUri())){
       echo "</article>";
     }else{
       include 'views/'.view_router($resource).'.php';
+      $prev_date = new DateTime(get_value($resource, 'as:published'));
     }
   }
 
