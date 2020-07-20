@@ -1,5 +1,4 @@
 <?
-require_once("settings.php");
 
 function get_fixer_rates($date, $currencies){
     // Rate limit: 1000 reqs/mo
@@ -40,6 +39,7 @@ function get_currencylayer_rates($date, $currencies){
         $currencies = explode(",", $currencies);
     }
     $currencies[] = "EUR";
+    $currencies[] = "GBP";
     $date = $date->format("Y-m-d");
     $endpoint = "http://apilayer.net/api/historical?access_key=$CURRENCYAPI&date=$date";
     $response = file_get_contents($endpoint);
