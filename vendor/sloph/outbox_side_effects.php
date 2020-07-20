@@ -144,7 +144,7 @@ function acquire_currency_conversion($post_graph){
         }
     }
     if(empty($acquires)){
-        return true;
+        return $post_graph;
     }
     foreach($acquires as $uri){
         $cost = structure_cost($post_graph->get($uri, "asext:cost")->getValue());
