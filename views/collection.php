@@ -25,7 +25,7 @@ if(get_value($resource, 'as:partOf', $content->getUri())){
   }else{
     $sorted = get_and_sort($ep, $items);
   }
-  $prev_date = null;
+  $prev_date = false;
   foreach($sorted as $uri => $resource){
     $resource = array($uri => $resource);
 
