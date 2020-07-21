@@ -75,6 +75,30 @@ summary {
   display: inline-block;
 }
 
+.stuffholder {
+  display: flex;
+  align-items: stretch;
+}
+.stuffholder time a {
+  background-color: #470229;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.4em;
+  display: inline;
+  line-height: 2;
+  text-decoration: none;
+}
+.stuffholder time a:hover {
+  text-decoration: underline;
+}
+.stuffholder p.desc{
+  flex-grow: 4;
+}
+.stuffholder p {
+  margin: 0;
+  padding-left: 0.4em;
+}
+
 aside {
   width: 33%;
   float: right;
