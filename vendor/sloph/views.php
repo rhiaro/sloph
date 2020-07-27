@@ -421,6 +421,15 @@ function count_items($ep, $collection){
   return $total_res["rows"][0]["c"];
 }
 
+function date_from_graph($graph, $subject, $predicate){
+  /* Expects a php graph */
+  if(!isset($graph[$subject])){
+    $graph = array($subject => $graph);
+  }
+  $date = get_value($graph, $predicate, $subject);
+  return new DateTime($date);
+}
+
 /***********************/
 /* Composite things    */
 /***********************/
