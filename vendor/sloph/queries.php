@@ -18,14 +18,14 @@ function execute_query($ep, $query){
 
 function select_to_list($result, $types=array(), $key=null){
   if(!is_array($types) || !isset($types) || empty($types)) { $types = false; }
-  
+
   if($key === null) { $var = $result['variables'][0]; }
   else { $var = $key; }
-  
+
   $list = array();
 
   if(in_array($var, $result['variables'])){
-    
+
     foreach($result['rows'] as $row){
       if(!$types || ($types && in_array($row[$var." type"], $types))){
         $list[] = $row[$var];
@@ -40,14 +40,14 @@ function select_to_list($result, $types=array(), $key=null){
 
 function select_to_list_sorted($result, $sortkey, $types=array(), $key=null){
   if(!is_array($types) || !isset($types) || empty($types)) { $types = false; }
-  
+
   if($key === null) { $var = $result['variables'][0]; }
   else { $var = $key; }
-  
+
   $list = array();
 
   if(in_array($var, $result['variables'])){
-    
+
     foreach($result['rows'] as $row){
       if(!$types || ($types && in_array($row[$var." type"], $types))){
         $list[$row[$sortkey]] = $row[$var];
@@ -141,7 +141,7 @@ LIMIT $limit
 }
 
 function query_construct_graph($graph){
-  $q = "CONSTRUCT { ?s ?p ?o . } 
+  $q = "CONSTRUCT { ?s ?p ?o . }
 WHERE { GRAPH <$graph> { ?s ?p ?o . } }";
   return $q;
 }
@@ -166,8 +166,8 @@ function query_construct_outbox($graph="https://blog.rhiaro.co.uk/"){
   ?s as:object ?object .
   ?s as:inReplyTo ?repl .
 }WHERE {
-  GRAPH <$graph> { 
-    ?s a ?t . 
+  GRAPH <$graph> {
+    ?s a ?t .
     ?s as:published ?d .
     OPTIONal { ?s as:target ?target . }
     OPTIONal { ?s as:object ?object . }
@@ -181,7 +181,7 @@ LIMIT 15000"; // Graph times out if I make it get everything
 
 
 function query_construct_uri_graph($uri, $graph){
-  $q = "CONSTRUCT { <$uri> ?p ?o . } 
+  $q = "CONSTRUCT { <$uri> ?p ?o . }
 WHERE { GRAPH <$graph> { <$uri> ?p ?o . } }";
   return $q;
 }
@@ -247,7 +247,7 @@ function construct_between($from, $to){
 
 function query_construct_collection_page($page_uri, $collection){
   $q = get_prefixes();
-  $q .= "CONSTRUCT { 
+  $q .= "CONSTRUCT {
   <$page_uri> a as:CollectionPage .
   <$page_uri> as:name ?name .
   <$page_uri> as:partOf <$collection> .
@@ -281,7 +281,7 @@ function query_construct_collections_from_adds(){
   OPTIONAL { ?coll rdf:type ?type . }
   OPTIONAL { ?coll as:image ?image . }
 }
-    "; 
+    ";
   return $q;
 }
 
@@ -293,7 +293,7 @@ function query_get_graphs(){
 }
 
 function query_select_s($limit=0, $graph="https://blog.rhiaro.co.uk/"){
-  
+
   if($graph === null){
     $graph = "?g";
   }else{
@@ -384,9 +384,9 @@ ORDER BY ASC(?d)";
 function query_select_count_between_type($from, $to, $type, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
   $q .= "SELECT COUNT(?s) AS ?c WHERE {
-  GRAPH <$graph> { 
-    ?s a $type . 
-    ?s as:published ?d . 
+  GRAPH <$graph> {
+    ?s a $type .
+    ?s as:published ?d .
   }
   FILTER(?d > \"$from\")
   FILTER(?d <= \"$to\")
@@ -424,7 +424,7 @@ function query_select_s_and_type_desc($limit=0, $graph="https://blog.rhiaro.co.u
   OPTIONAL { ?s a ?t }
   OPTIONAL { ?s as:location ?l }
   ?s as:published ?d .
-  FILTER ( ?d < \"$now\" ) . 
+  FILTER ( ?d < \"$now\" ) .
 }
 ORDER BY DESC(?d)";
   if($limit > 0){
@@ -483,7 +483,7 @@ function query_select_o_where($vals, $limit=0, $sort=null){
 function query_select_s_views($score, $limit=10){
   $q = get_prefixes();
   $ps = score_predicates();
-  
+
   $q .= "SELECT DISTINCT ?s WHERE { \n";
   foreach($ps as $i => $p){
     $q .= "  OPTIONAL { ?s ?$p ?v$i } \n";
@@ -618,7 +618,7 @@ LIMIT $count
 }
 
 function query_select_s_next_of_type_count($uri, $count=10, $type=null, $graph="https://blog.rhiaro.co.uk/"){
-  
+
   if($type === null){
     return query_select_s_next_count($uri, $count, $graph);
   }else{
@@ -768,7 +768,7 @@ function query_count_type($type, $graph="https://blog.rhiaro.co.uk/"){
 }
 
 function query_select_image($collection=null, $limit=1, $graph="https://blog.rhiaro.co.uk/"){
-  
+
   if(empty($collection)){
     $collection = "?coll";
   }else{
@@ -810,7 +810,7 @@ function query_select_tags(){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?tag ?name COUNT(?p) AS ?c WHERE {
   ?p as:tag ?tag .
-  OPTIONAL { ?tag as:name ?name . } 
+  OPTIONAL { ?tag as:name ?name . }
 }
 GROUP BY ?tag
 ORDER BY DESC(?c)";
@@ -906,7 +906,7 @@ LIMIT 1";
 function query_select_last_time_not_at($locations){
   $q = get_prefixes();
   $q .= "SELECT ?s ?d WHERE {
-  ?s a as:Arrive . 
+  ?s a as:Arrive .
   ?s as:published ?d .
   ?s as:location ?loc .";
   foreach($locations as $location){
@@ -919,17 +919,25 @@ LIMIT 1";
   return $q;
 }
 
-/* The count is unpredictable.. messed up when ?o is an array...
-function query_select_vars($vars, $vals, $limit=10, $sort=null){
+/*
+Select any number of return variables
+vars = predicate => ?var
+vals = predicate => "value"
+sort is a var not a predicate
+Note: limit only limits triples returned, not values by subject.
+*/
+function query_select_vars($vars, $vals, $limit=0, $sort=null, $graph="https://blog.rhiaro.co.uk/"){
   $q = get_prefixes();
-  $q .= "SELECT ?s ?".implode($vars, ' ?')." WHERE { \n";
+  $q .= "SELECT ?s ?".implode($vars, ' ?')." WHERE {
+  GRAPH <$graph> {\n";
   foreach($vars as $predicate => $var){
     $q .= "?s $predicate ?$var .\n";
   }
   foreach($vals as $predicate => $val){
     $q .= "?s $predicate $val .\n";
   }
-  $q .= "} ";
+  $q .= "  }
+} ";
   if(isset($sort)){
     $q .= "\nORDER BY DESC(?$sort)";
   }
@@ -939,18 +947,28 @@ function query_select_vars($vars, $vals, $limit=10, $sort=null){
   return $q;
 }
 
-function query_construct_vars($vars, $vals, $limit=10, $sort=null){
+/*
+Construct arbitrary return variables.
+See notes above
+*/
+function query_construct_vars($vars, $vals, $limit=0, $sort=null, $graph="https://blog.rhiaro.co.uk/"){
   $limit = $limit * count($vars);
   $q = get_prefixes();
-  $q .= "CONSTRUCT { ?s ?p ?o . } WHERE { \n
-    ?s ?p ?o . \n";
+  $q .= "CONSTRUCT { ";
+  foreach($vars as $predicate => $var){
+    $q .= "?s $predicate ?$var .\n";
+  }
+  $q .= "} WHERE {\n
+    GRAPH <$graph> {\n
+      ?s ?p ?o . \n";
   foreach($vars as $predicate => $var){
     $q .= "?s $predicate ?$var .\n";
   }
   foreach($vals as $predicate => $val){
     $q .= "?s $predicate $val .\n";
   }
-  $q .= "} ";
+  $q .= "  }\n
+} ";
   if(isset($sort)){
     $q .= "\nORDER BY DESC(?$sort)";
   }
@@ -959,7 +977,7 @@ function query_construct_vars($vars, $vals, $limit=10, $sort=null){
   }
   return $q;
 }
-*/
+
 
 function query_select_hasPrimaryTopic($uri){
   $q = get_prefixes();
@@ -1021,7 +1039,7 @@ function query_add_to_graph($uri, $graph, $from="?g"){
     $from = "<$from>";
   }
 
-  $q = "INSERT INTO <$graph> { <$uri> ?p ?o . } 
+  $q = "INSERT INTO <$graph> { <$uri> ?p ?o . }
 WHERE { GRAPH $from { <$uri> ?p ?o . } }";
   return $q;
 }
