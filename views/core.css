@@ -45,6 +45,7 @@ article {
 nav {
   text-align: center;
   overflow: hidden;
+  min-height: 32px;
 }
 nav p a {
   display: inline-block;
