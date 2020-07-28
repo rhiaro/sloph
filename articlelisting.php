@@ -37,7 +37,7 @@ function article_name($uri, $data){
   }
 }
 
-$monthname = array("01"=>"January", "02"=>"February", "03"=>"March", "04"=>"April", "05"=>"May", "06"=>"June", "07"=>"July", "08"=>"August", "09"=>"September", "10"=>"October", "11"=>"November", "12"=>"January");
+$monthname = array("01"=>"January", "02"=>"February", "03"=>"March", "04"=>"April", "05"=>"May", "06"=>"June", "07"=>"July", "08"=>"August", "09"=>"September", "10"=>"October", "11"=>"November", "12"=>"December");
 
 try {
   if(gettype($content) == "string"){
@@ -95,6 +95,9 @@ try {
 
     krsort($sorted_by_month);
 
+    // unset nav
+    $nav["next"] = $nav["prev"] = false;
+    include 'views/nav.php';
     include 'views/top.php';
 ?>
 <article class="h-entry" typeof="as:Article" about="">
@@ -140,9 +143,30 @@ try {
   var yearSelect = document.getElementById("yfilter");
   var monthSelect = document.getElementById("mfilter");
   var years = document.querySelectorAll("div");
-  var sub = document.querySelectorAll("input[type='submit']");
-  yearSelect.addEventListener("onChange", function(){
+  var months = document.querySelectorAll("ul");
+  var sub = document.querySelector("input[type='submit']");
+  sub.parentNode.removeChild(sub);
 
+  yearSelect.addEventListener("change", function(e){
+    years.forEach(function(ydiv){
+      if(ydiv.id != e.target.value && e.target.value != "0"){
+        ydiv.style.display = "none";
+      }else{
+        ydiv.style.display = "block";
+      }
+    });
+  });
+
+  monthSelect.addEventListener("change", function(e){
+    months.forEach(function(mdiv){
+      if(mdiv.id != e.target.value && e.target.value != "0"){
+        mdiv.style.display = "none";
+        mdiv.previousElementSibling.style.display = "none";
+      }else{
+        mdiv.style.display = "block";
+        mdiv.previousElementSibling.style.display = "block";
+      }
+    });
   });
 </script>
 <?
