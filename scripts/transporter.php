@@ -142,7 +142,7 @@ if(isset($_GET['add'])){
   }
 
   if(isset($_POST['engage'])){
-    $collection = $_GET['collection'];
+    $collection = $_POST['collection'];
     $items = $_POST['items'];
     $uri = $_POST['uri'];
     $published = $_POST['published'];
@@ -211,6 +211,8 @@ if(isset($_GET['add'])){
 
         <p><label for="content">Content</label></p>
         <p><textarea id="content" name="content" ></textarea></p>
+
+        <p><label for="collection">Collection</label>: <input type="text" value="<?=isset($_GET['collection']) ? $_GET['collection'] : ""?>" name="collection" id="collection" /></p>
 
         <p><input type="submit" value="Engage" name="engage" /></p>
 
