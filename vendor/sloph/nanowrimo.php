@@ -3,7 +3,8 @@ require_once('../init.php');
 
 function get_novel_data($ep){
   $novels = array(
-     "2019" => "https://rhiaro.co.uk/quest-for-brothers-2"
+     "2020" => "https://rhiaro.co.uk/dumping-sky"
+    ,"2019" => "https://rhiaro.co.uk/quest-for-brothers-2"
     ,"2018" => "https://rhiaro.co.uk/birds"
     ,"2017" => "https://rhiaro.co.uk/of-the-moon"
     ,"2013" => "https://rhiaro.co.uk/beyond"
