@@ -15,12 +15,12 @@ if(isset($_GET['q']) && $_GET['q'] != ""){
 }
 
 $uri = "https://rhiaro.co.uk/tags/";
-$g = new EasyRdf_Graph($uri);
-$g->add($uri, 'rdf:type', 'as:Collection');
-$g->add($uri, 'as:name', count($tags)." tags");
-$g->add($uri, 'view:stylesheet', 'views/base.css');
-$g->add($uri, 'view:stylesheet', 'views/search.css');
-$resource = $g->toRdfPhp();
+$content = new EasyRdf_Graph($uri);
+$content->add($uri, 'rdf:type', 'as:Collection');
+$content->add($uri, 'as:name', count($tags)." tags");
+$content->add($uri, 'view:stylesheet', 'views/base.css');
+$content->add($uri, 'view:stylesheet', 'views/search.css');
+$resource = $content->toRdfPhp();
 
 include 'views/top.php';
 
