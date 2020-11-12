@@ -5,7 +5,7 @@
   <?foreach($resource as $uri => $data):?>
     <?if(has_type(array($uri => $data), "as:Add")):?>
       <? $date = new DateTime(get_value(array($uri => $data), "as:published")); ?>
-      <p><time><a href="<?=$uri?>"><?=$date->format("l \\t\h\\e jS \o\\f F \a\\t g:ia (e)")?></a></time></p>
+      <p><time><a href="<?=$uri?>"><?=$date->format("l \\t\h\\e jS \o\\f F Y \a\\t g:ia (e)")?></a></time></p>
       <?=get_value(array($uri => $data), "as:content")?>
       <div class="photos-holder">
         <?foreach(get_values(array($uri => $data), "as:object") as $item):?>
@@ -14,5 +14,5 @@
       </div>
     <?endif?>
   <?endforeach?>
-  
+
 </article>

@@ -1,7 +1,7 @@
 <?
 unset($event); unset($h); unset($start); unset($end); unset($location); // Reset for in collections
 if(has_type($resource, 'as:Accept') || has_type($resource, 'as:Invite')){
-  
+
   if(get_value($resource, 'as:object')){
     $eventurl = get_value($resource, 'as:object');
   }elseif(get_value($resource, 'as:inReplyTo')){
@@ -9,10 +9,10 @@ if(has_type($resource, 'as:Accept') || has_type($resource, 'as:Invite')){
   }
   $event = get($ep, $eventurl);
   $event = $event['content'];
-  
+
   if($event && gettype($event) != "string"){
     $event = $event->toRdfPhp();
-    
+
     if(get_value($event, 'as:name')){ $h = get_value($event, 'as:name'); }
     if(get_value($event, 'as:startTime')){ $start = new DateTime(get_value($event, 'as:startTime')); }
     if(get_value($event, 'as:endTime')){ $end = new DateTime(get_value($event, 'as:endTime')); }
@@ -77,6 +77,6 @@ $date = new DateTime(get_value($resource, 'as:published'));
 
 
   <? include('tags.php'); ?>
-  
+
 
 </article>

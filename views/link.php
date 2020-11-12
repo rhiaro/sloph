@@ -12,7 +12,7 @@ if(has_type($resource, 'as:Announce')){
 }
 ?>
 <article>
-  <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("l \\t\h\\e jS \o\\f F \a\\t g:ia (e)")?></a></datetime></p>
+  <p><datetime><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("l \\t\h\\e jS \o\\f F Y \a\\t g:ia (e)")?></a></datetime></p>
   <div>
     <p>
       <a class="object<?=$linkclass?>" href="<?=get_value($resource, 'as:object')?>">
@@ -27,5 +27,5 @@ if(has_type($resource, 'as:Announce')){
   </div>
 
   <? include('tags.php'); ?>
-  
+
 </article>

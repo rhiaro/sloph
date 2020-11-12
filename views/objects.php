@@ -17,11 +17,11 @@ if($in_feed){
 ?>
 <article>
   <h2><span>&#128449;</span>Added <?=$count?> photos to album <a href="/photos/?album=<?=get_value($resource, 'as:target')?>"><?=get_name($ep, get_value($resource, 'as:target'))?></a>.</h2>
-  
+
   <?if(count($objects) > 8):?>
       <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
   <?endif?>
-  
+
   <div class="w1of1 clearfix">
     <?foreach($objects as $item):?>
       <img class="w1of4" src="<?=$_IMG?>200/0/<?=$item?>" alt="" />
@@ -38,9 +38,9 @@ if($in_feed){
   <? include('tags.php'); ?>
   <?if(get_value($resource, 'as:published')):?>
     <? $date = new DateTime(get_value($resource, 'as:published')); ?>
-    <p><time class="dt-published"><a property="as:published" class="u-url" href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("D jS \o\\f F \a\\t g:ia (e)")?></a></time></p>
+    <p><time class="dt-published"><a property="as:published" class="u-url" href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("D jS \o\\f F Y \a\\t g:ia (e)")?></a></time></p>
   <?endif?>
-  
+
 </article>
 <script>
   var proxyUrl ='<?=$_IMG?>';

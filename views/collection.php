@@ -42,7 +42,7 @@ if(get_value($resource, 'as:partOf', $content->getUri())){
       }
       if(get_value($location, 'blog:pastLabel')){
       ?>
-        <p><?=get_value($location, 'blog:pastLabel')?> at <?=$date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?></p>
+        <p><?=get_value($location, 'blog:pastLabel')?> at <?=$date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?></p>
       <?
       }else{
         include 'views/map.php';

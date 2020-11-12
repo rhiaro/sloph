@@ -29,9 +29,9 @@ if(isset($prev_date)){
 <article>
     <?if($show_date):?>
       <?if(isset($prev_date)):?>
-        <h2><time datetime="<?=$date->format(DATE_ATOM)?>"><?=$date->format("l \\t\h\\e jS \o\\f F")?></time></h2>
+        <h2><time datetime="<?=$date->format(DATE_ATOM)?>"><?=$date->format("l \\t\h\\e jS \o\\f F Y")?></time></h2>
       <?else:?>
-        <p><time class="dt-published"><a property="as:published" class="u-url" href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("D jS \o\\f F \a\\t g:ia (e)")?></a></time></p>
+        <p><time class="dt-published"><a property="as:published" class="u-url" href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("D jS \o\\f F Y \a\\t g:ia (e)")?></a></time></p>
       <?endif?>
     <?endif?>
     <div class="stuffholder">

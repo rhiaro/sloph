@@ -10,7 +10,7 @@
   }else{
     $location = $location_uri;
   }
-  
+
   $date = new DateTime(get_value($resource, 'as:published'));
 
   $n = nav($ep, $resource, "next", "as:Arrive");
@@ -25,8 +25,8 @@
 ?>
 <article>
   <?if(get_value($location, 'blog:pastLabel')):?>
-    <p> 
-      rhiaro <a href="<?=get_value($resource, 'as:location')?>"><?=isset($nextdate) ? get_value($location, 'blog:pastLabel') : get_value($location, 'blog:presentLabel')?></a> for 
+    <p>
+      rhiaro <a href="<?=get_value($resource, 'as:location')?>"><?=isset($nextdate) ? get_value($location, 'blog:pastLabel') : get_value($location, 'blog:presentLabel')?></a> for
       <?=($duration->y > 0) ? $duration->y . " years, " : ""?>
       <?=($duration->m > 0) ? $duration->m . " months, " : ""?>
       <?=($duration->d > 0) ? $duration->d . " days, " : ""?>
@@ -34,8 +34,8 @@
       <?=($duration->i > 0) ? $duration->i . " minutes, " : ""?>
       <?=($duration->s > 0) ? " and ".$duration->s." seconds" : ""?>
     </p>
-      from <?=$date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?> 
-      to <?=isset($nextdate) ? $nextdate->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F") : "now"?> 
+      from <?=$date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F")?>
+      to <?=isset($nextdate) ? $nextdate->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y") : "now"?>
 
   <?else:?>
     <? include 'map.php'; ?>
