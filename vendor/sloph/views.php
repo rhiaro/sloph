@@ -105,8 +105,10 @@ function get_icon_from_type($type, $skip=array()){
 function get_project_icons($ep){
   $icons = array(
     array(
-      array("name" => "Open Data Services", "uri" => "http://opendataservices.coop",
+      array("name" => "Open Data Services", "uri" => "https://opendataservices.coop",
         "icon" => "views/icon_ods.png", "color" => ""),
+      array("name" => "Digital Bazaar", "uri" => "https://digitalbazaar.com",
+        "icon" => "views/icon_db.png", "colour" => ""),
       array("name" => "NaNoWriMo", "uri" => "https://nanowrimo.org/participants/rhiaro",
         "icon" => "views/icon_nanowrimo.png", "color" => "white"),
     ),
