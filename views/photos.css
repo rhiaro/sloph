@@ -47,7 +47,7 @@
     bottom: 1em;
 }
 .photos p.count img {
-    height: 1em;
+    height: 1em; width: auto;
     padding-right: 0.4em;
     z-index: 2;
 }
