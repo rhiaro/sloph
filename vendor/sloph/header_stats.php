@@ -8,7 +8,7 @@
     if($locations != null){
       $locations = $locations->toRdfPhp();
     }
-    $tags = get_tags($ep);  
+    $tags = get_tags($ep);
 
     $last_checkin = construct_last_of_type($ep, "as:Arrive");
     $checkin_summary = make_checkin_summary($last_checkin, $locations);
@@ -28,8 +28,8 @@
     // TODO: get this from the store
     $resource->addLiteral('view:stylesheet', "views/home.css");
     $colorschemecss = "
-    header { 
-      background-image: url('https://i.amy.gy/headers/20180929_dahlia.jpg'); 
+    header {
+      background-image: url('https://i.amy.gy/headers/20180929_dahlia.jpg');
       background-color: #470229;
     }
     nav {
@@ -37,7 +37,7 @@
     }
     header h1 {
       color: #470229;
-    } 
+    }
     nav a {
       color: #470229;
     }

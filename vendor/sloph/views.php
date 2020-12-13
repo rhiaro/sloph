@@ -286,6 +286,12 @@ function calculate_budget_stats($ep, $posts){
   $tags = get_tags($ep);
   $acquires = aggregate_acquires($posts, $from, $to, $tags);
   $eur = $acquires["totaleur"];
+
+  // subtract gifts/donations and investment for budget purposes
+  $gifts = $acquires["giftsEur"];
+  $invest = $acquires["investEur"];
+  $eur = $eur - $gifts - $invest;
+
   $percent = round($eur / 1000 * 100);
 
   $stats["width"] = 100 - $percent."%";

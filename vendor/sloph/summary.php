@@ -92,6 +92,9 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $out['food']['groceriesEur'] = 0;
     $out['food']['foodEur'] = 0;
 
+    $out['giftsEur'] = 0;
+    $out['investEur'] = 0;
+
     foreach($typed as $uri => $post){
         $expensed = get_value(array($uri=>$post), "asext:expensedTo");
         $cost = get_value(array($uri=>$post), "asext:cost");
@@ -144,6 +147,13 @@ function aggregate_acquires($posts, $from, $to, $alltags){
         }
         if(in_array("$tagp/groceries", $tags)){
             $out['food']['groceriesEur'] += $eur;
+        }
+
+        if(in_array("$tagp/gift", $tags) || in_array("$tagp/donation", $tags)){
+          $out['giftsEur'] += $eur;
+        }
+        if(in_array("$tagp/investment", $tags)){
+          $out['investEur'] += $eur;
         }
     }
 
@@ -269,7 +279,6 @@ function aggregate_acquires($posts, $from, $to, $alltags){
       $restp = 0;
       $takep = 0;
     }
-    var_dump($food);
 
     $out['food']['total'] = $food;
     $out['food']['foodEur'] = number_format($out['food']['foodEur'], 2);
