@@ -57,7 +57,7 @@
         </ul>
       <?endif?>
 
-      <p>I spent &euro;<?=number_format($acquires['accomEur'], 2)?> in total, averaging &euro;<?=number_format($acquires['accomMean'], 2)?> per night, and &euro;<?=number_format($acquires['accomMonth'], 2)?> per month.</p>
+      <p>I spent &euro;<?=number_format($acquires['accomEur'], 2)?> in total, averaging &euro;<?=number_format($acquires['accomMean'], 2)?> per night<?=is_numeric($acquires['accomMonth']) ? ", and &euro;".number_format($acquires['accomMonth'], 2)." per month" : ""?>.</p>
 
       <h2 id="consumption">Consumption</h2>
       <p>I logged <?=$consumes['total']?> meals or snacks, an average of <?=number_format($consumes['day'], 1)?> per day. The thing I consumed most was <?=$consumes['top']?>, followed by <?=$consumes['toptags']?>. I consumed <?=$consumes['top']?> on average <?=number_format($consumes['topday'], 1)?> times per day.</p>
