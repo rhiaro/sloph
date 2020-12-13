@@ -250,10 +250,10 @@ function aggregate_acquires($posts, $from, $to, $alltags){
     $out['tags'] = count($tags);
 
     // Get specific stats about food purchases
-    if(array_key_exists("$tagp/food", $top)){
+    if(array_key_exists("$tagp/food", $tags)){
         $food = $tags["$tagp/food"];
     }else{ $food = 0; }
-    if(array_key_exists("$tagp/groceries", $top)){
+    if(array_key_exists("$tagp/groceries", $tags)){
         $groceries = $tags["$tagp/groceries"];
     }else{ $groceries = 0; }
     if(isset($tags["$tagp/restaurant"])){
@@ -269,6 +269,7 @@ function aggregate_acquires($posts, $from, $to, $alltags){
       $restp = 0;
       $takep = 0;
     }
+    var_dump($food);
 
     $out['food']['total'] = $food;
     $out['food']['foodEur'] = number_format($out['food']['foodEur'], 2);
