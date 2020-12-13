@@ -34,7 +34,7 @@
 
       <p>I spent &euro;<?=number_format($acquires['transitEur'], 2)?> on <a href="https://rhiaro.co.uk/tags/transit">transit</a>/<a href="https://rhiaro.co.uk/tags/transport">transport</a>, over <?=$acquires['transitNum']?> journeys<?=$acquires['transitMeans']?>.</p>
 
-      <p>I planned x journeys, to y different places. I travelled primarily by x, followed by y and z. Some places I visited are a, b, c, d, e and f.</p>
+      <!--<p>I planned x journeys, to y different places. I travelled primarily by x, followed by y and z. Some places I visited are a, b, c, d, e and f.</p>-->
 
       <h2 id="shelter">Shelter</h2>
 
