@@ -59,7 +59,8 @@ function plusproperty(){
       "https://www.w3.org/ns/activitystreams#" => array("name", "published", "updated", "summary", "content", "startTime", "endTime", "image", "inReplyTo", "location", "tag", "url", "to", "bto", "cc", "bcc", "duration", "actor", "object", "target", "origin", "result", "items", "relationship", "outbox", "inbox"),
       "https://terms.rhiaro.co.uk/as#" => array("cost", "wordCount", "expensedTo"),
       "https://terms.rhiaro.co.uk/view#" => array("banality", "intimacy", "tastiness", "informative", "wanderlust", "css", "color"),
-      "http://www.w3.org/2006/time#" => array("timeZone")
+      "http://www.w3.org/2006/time#" => array("timeZone"),
+      "http://www.w3.org/2002/07/owl#" => array("sameAs")
     );
   $out = '<p>';
   $out .= '  <label><select name="data[new]">';
