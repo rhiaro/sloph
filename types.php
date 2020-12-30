@@ -50,7 +50,7 @@ if($_GET['type'] == "places"){
   $sort = "as:published";
 }
 
-if(isset($_GET['limit']) && is_numeric($_GET['limit']) && $_GET['limit'] < 64){
+if(isset($_GET['limit']) && is_numeric($_GET['limit'])){
   $limit = $_GET['limit'];
 }else{
   $limit = 16;
