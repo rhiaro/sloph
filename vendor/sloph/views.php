@@ -185,10 +185,12 @@ function get_exercise_icon($tag){
 }
 
 function get_travel_icon_from_tags($tags){
-  foreach($tags as $tag){
-    $icon = get_travel_icon($tag);
-    if($icon){
-      return $icon;
+  if(is_array($tags)){
+    foreach($tags as $tag){
+      $icon = get_travel_icon($tag);
+      if($icon){
+        return $icon;
+      }
     }
   }
   return get_icon_from_type('as:Travel');
