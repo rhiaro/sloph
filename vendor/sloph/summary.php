@@ -454,4 +454,6 @@ function aggregate_socials($posts, $from, $to){
   return $out;
 }
 
+include "summary_travel.php";
+
 ?>
