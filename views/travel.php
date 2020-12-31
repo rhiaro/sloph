@@ -3,8 +3,8 @@
   $origin = get_value($resource, 'as:origin');
   $target = get_value($resource, 'as:target');
 
-  $q_origin = query_construct($origin);
-  $q_target = query_construct($target);
+  $q_origin = query_construct_uri_graph($origin, "https://rhiaro.co.uk/places/");
+  $q_target = query_construct_uri_graph($target, "https://rhiaro.co.uk/places/");
   $origin_res = execute_query($ep, $q_origin);
   $target_res = execute_query($ep, $q_target);
 
