@@ -9,6 +9,13 @@
     <?if(isset($outbox)):?>
       <link about="https://rhiaro.co.uk/#me" rel="as:outbox" href="<?=$outbox?>" />
     <?endif?>
+
+  <?if(isset($external_styles) && is_array($external_styles)):?>
+    <?foreach($external_styles as $style):?>
+      <link rel="stylesheet" type="text/css" href="<?=$style?>" />
+    <?endforeach?>
+  <?endif?>
+
     <? $styles = get_values($resource, 'view:stylesheet', $content->getUri()); ?>
   <?if(isset($styles) && is_array($styles)):?>
     <?foreach($styles as $style):?>
