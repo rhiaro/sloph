@@ -14,13 +14,15 @@ $graph = new EasyRdf_Graph($travelmap_uri);
 $graph->addType($travelmap_uri, "as:Collection");
 $graph->add($travelmap_uri, "as:name", "Travel log");
 $graph->add($travelmap_uri, "as:summary", "All the places I have travelled");
+$graph->add($travelmap_uri, "view:stylesheet", "views/sitrep/sitrep.css");
 
 $now = new DateTime();
 $start = new DateTime("2004-01-01");
 
 $res = get_travels($ep);
+$places = get_places($ep);
 $posts = time_in_places($res);
-// var_dump($posts);
+$data = generate_map_data($posts, $places);
 
 $result = conneg($acceptheaders, $graph);
 $header = $result['header'];
@@ -39,27 +41,43 @@ try {
     $g = $resource->getGraph();
     $resource = $g->toRdfPhp();
 
+    $external_styles = array("https://unpkg.com/leaflet@1.6.0/dist/leaflet.css");
+
     include 'views/top.php';
     include 'views/header_stats.php';
     include 'views/nav_header.php';
 ?>
 
-    <main class="wrapper w1of1">
+    <main class="w1of1">
 
-      <div id="archive">
-      <?foreach($posts as $place => $post):?>
-        <p>In <?=$place?>:</p>
-        <ul>
-          <?foreach($post["visits"] as $visit):?>
-            <li><?=$visit["startDate"]?> to <?=$visit["endDate"]?></li>
-          <?endforeach?>
-        </ul>
-      <?endforeach?>
-      </div>
-      <nav><p><a href="#top">top</a></p></nav>
+      <div id="themap"></div>
+
+      <article id="tablewrapper">
+      <table style="margin-left: auto; margin-right: auto;">
+        <thead>
+          <tr>
+            <th class="sort" data-sort="where">Where</th>
+            <th class="sort" data-sort="when">When</th>
+            <th class="sort" data-sort="until">Until</th>
+            <th class="sort" data-sort="for">For</th>
+          </tr>
+        </thead>
+        <tbody class="list" id="thetable"></tbody>
+      </table>
+    </article>
     </main>
 
+    <script>
+      data = <?=$data?>;
+    </script>
+
 <?
+    $scripts = array("https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+                    ,"https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"
+                    ,"https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"
+                    ,"views/sitrep/svg-icon.js"
+                    ,"views/sitrep/sitrep.js"
+                );
     include 'views/end.php';
   }
 }catch(Exception $e){
