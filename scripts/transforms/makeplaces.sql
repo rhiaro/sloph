@@ -167,8 +167,8 @@ INSERT INTO <https://rhiaro.co.uk/places/> {
 
     <https://rhiaro.co.uk/location/george-town-penang> a as:Place .
     <https://rhiaro.co.uk/location/george-town-penang> as:name "George Town, Penang, Malaysia" .
-    <https://rhiaro.co.uk/location/george-town-penang> as:latitude "19.300250" .
-    <https://rhiaro.co.uk/location/george-town-penang> as:longitude "-81.376000" .
+    <https://rhiaro.co.uk/location/george-town-penang> as:latitude "5.416667 " .
+    <https://rhiaro.co.uk/location/george-town-penang> as:longitude "100.316666" .
     <https://rhiaro.co.uk/location/george-town-penang> owl:sameAs <http://dbpedia.org/resource/George_Town,_Penang> .
 
 
