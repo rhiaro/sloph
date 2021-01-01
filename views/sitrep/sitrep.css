@@ -1,0 +1,37 @@
+
+#themap {
+    width: 100vw;
+    height: 60vh;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 1.0) 98%, transparent);
+}
+#themap h1 {
+    font-size: 1.6em;
+    margin: 0;
+}
+#themap p {
+    font-size: 1.2em;
+    margin: 0;
+}
+:target {
+    background-color: #d5fbd8;
+}
+table {
+    font-family: serif;
+    width: 100vw;
+    background-color: white;
+    max-width: 1200px;
+    margin-left: auto; margin-right: auto;
+}
+th {
+    font-weight: normal;
+    font-size: 1.4em;
+    padding: 0.4em;
+    text-align: left;
+    cursor: pointer;
+}
+td {
+    padding: 0.4em;
+}
+tr {
+    border-bottom: 1px solid #f2f2f2;
+}
