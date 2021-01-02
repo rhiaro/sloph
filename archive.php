@@ -16,8 +16,8 @@ $graph->add($archive_uri, "as:name", "Archive");
 $graph->add($archive_uri, "as:summary", "Contains links to collections of posts by date and by type.");
 
 $types_count = array(
-  "as:Article" => array("label" => "articles", "url" => "/articles"), 
-  "as:Note" => array("label" => "notes", "url" => "/notes"), 
+  "as:Article" => array("label" => "articles", "url" => "/articles"),
+  "as:Note" => array("label" => "notes", "url" => "/notes"),
   "as:Add" => array("label" => "photos and bookmarks", "url" => "/bookmarks"),
   "as:Arrive" => array("label" => "checkins", "url" => "/arrives"),
   "asext:Consume" => array("label" => "food logs", "url" => "/eats"),
@@ -25,7 +25,8 @@ $types_count = array(
   "as:Like" => array("label" => "likes", "url" => "/likes"),
   "as:Event" => array("label" => "events", "url" => "/events"),
   "as:Accept" => array("label" => "rsvps", "url" => "/rsvps"),
-  "asext:Write" => array("label" => "word count logs", "url" => "/words")
+  "asext:Write" => array("label" => "word count logs", "url" => "/words"),
+  "as:Travel" => array("label" => "travel plans", "url" => "/travel")
 );
 foreach($types_count as $type => $data){
   $q = query_count_type($type);
