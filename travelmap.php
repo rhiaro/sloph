@@ -73,8 +73,7 @@ try {
 
 <?
     $scripts = array("https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-                    ,"https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"
-                    ,"https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"
+                    ,"views/listjs/list.min.js"
                     ,"views/sitrep/svg-icon.js"
                     ,"views/sitrep/sitrep.js"
                 );
