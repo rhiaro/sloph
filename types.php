@@ -25,12 +25,14 @@ $typemap = array("checkins" => "as:Arrive"
                 ,"writes" => "as:Article"
                 ,"notes" => "as:Note"
                 ,"places" => "as:Place"
+                ,"travel" => "as:Travel"
                 ,"follows" => "as:Follow"
                 ,"where" => "as:Arrive"
                 ,"words" => "asext:Write"
   );
 
 $typegraphs = array("places" => "https://rhiaro.co.uk/places/");
+$typesorts = array("places" => "as:name", "travel" => "as:startTime");
 
 if(!isset($_GET['type']) || !array_key_exists($_GET['type'], $typemap)){
   header("HTTP/1.1 404 Not Found");
@@ -44,16 +46,16 @@ $locations = $locations->toRdfPhp();
 $tags = get_tags($ep);
 $in_feed = true;
 
-if($_GET['type'] == "places"){
-  $sort = "as:name";
-}else{
-  $sort = "as:published";
-}
-
 if(isset($_GET['limit']) && is_numeric($_GET['limit'])){
   $limit = $_GET['limit'];
 }else{
   $limit = 16;
+}
+
+if(!isset($typesorts[$_GET['type']])){
+  $sort = "as:published";
+}else{
+  $sort = $typesorts[$_GET['type']];
 }
 
 if(!isset($typegraphs[$_GET['type']])){

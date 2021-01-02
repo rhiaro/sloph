@@ -27,7 +27,7 @@ RewriteRule ^set(/)?$ /vendor/sloph/page.php [QSA,L]
 
 RewriteRule ^thesis(/)?$ https://rhiaro.github.io/thesis [L]
 
-RewriteRule ^(writes|likes|checkins|arrives|consumes|eats|acquires|stuff|events|bookmarks|reposts|rsvps|notes|places|follows|words)(/)?$ /types.php?type=$1 [QSA,L]
+RewriteRule ^(writes|likes|checkins|arrives|consumes|eats|acquires|stuff|events|bookmarks|reposts|rsvps|notes|places|follows|words|travel)(/)?$ /types.php?type=$1 [QSA,L]
 
 RewriteRule ^archive(/)?$ /archive.php [QSA,L]
 RewriteRule ^articles(/)?$ /articlelisting.php [QSA,L]
