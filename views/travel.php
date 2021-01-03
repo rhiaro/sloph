@@ -69,10 +69,15 @@
   <? include('tags.php'); ?>
 
   <?if($err):?>
-    <p class="fail"><em>Tried to get place information and maps from dbpedia, but could not connect :(</em></p>
+    <p class="fail"><em>Failed to get place information and map :(</em></p>
   <?endif?>
   <p class="w1of1"><img src="<?=$map?>" /></p>
-  <p>Leaving <a href="<?=get_value($resource, 'as:origin')?>"><?=$from_name?></a> at <?=$from_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?> and arriving in <a href="<?=get_value($resource, 'as:target')?>"><?=$to_name?></a> at <?=$to_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?></p>
+  <p>
+    <?=(get_value($resource, "asext:status")) ? "<del>" : ""?>
+    Leaving <a href="<?=get_value($resource, 'as:origin')?>"><?=$from_name?></a> at <?=$from_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?> and arriving in <a href="<?=get_value($resource, 'as:target')?>"><?=$to_name?></a> at <?=$to_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?>
+    <?=(get_value($resource, "asext:status")) ? "</del>" : ""?>
+    <?=(get_value($resource, "asext:status")) ? " <strong>".get_value($resource, "asext:status")."!</strong>" : ""?>
+  </p>
 
   <?=get_value($resource, 'as:content')?>
 
