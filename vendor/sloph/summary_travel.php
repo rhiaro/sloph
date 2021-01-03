@@ -48,25 +48,29 @@ function time_in_places($posts){
 
   foreach($filtered as $i => $post){
 
-    $origin = get_value(array($post["uri"]=>$post), "as:origin");
-    $departed = get_value(array($post["uri"]=>$post), "as:startTime");
-    if(isset($filtered[$i+1])){
-        $prev = $filtered[$i+1];
-        $target = get_value(array($prev["uri"]=>$prev), "as:target");
-        $arrived = get_value(array($prev["uri"]=>$prev), "as:endTime");
-        $prev_uri = $prev["uri"];
-    }else{
-        $target = $origin;
-        $arrived = "1990-08-10T05:00:00+01:00";
-        $prev_uri = "";
-    }
+    if(!get_value(array($post["uri"]=>$post), "asext:status")){
 
-    if($origin == $target){
-      $by_place[$origin]["visits"][] = array(
-                                            "startDate" => $arrived,
-                                            "endDate" => $departed,
-                                            "uris" => [$post["uri"], $prev_uri]
-                                            );
+        $origin = get_value(array($post["uri"]=>$post), "as:origin");
+        $departed = get_value(array($post["uri"]=>$post), "as:startTime");
+        if(isset($filtered[$i+1])){
+            $prev = $filtered[$i+1];
+            $target = get_value(array($prev["uri"]=>$prev), "as:target");
+            $arrived = get_value(array($prev["uri"]=>$prev), "as:endTime");
+            $prev_uri = $prev["uri"];
+        }else{
+            $target = $origin;
+            $arrived = "1990-08-10T05:00:00+01:00";
+            $prev_uri = "";
+        }
+
+        if($origin == $target){
+          $by_place[$origin]["visits"][] = array(
+                                                "startDate" => $arrived,
+                                                "endDate" => $departed,
+                                                "uris" => [$post["uri"], $prev_uri]
+                                                );
+        }
+
     }
 
   }
