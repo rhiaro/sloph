@@ -85,6 +85,7 @@ function index_by_origin($posts){
 
 function generate_map_data($visits, $places){
     $out = array();
+    ksort($visits);
     foreach($visits as $place => $data){
         if(isset($places[$place])){
             $name = get_value(array($place=>$places[$place]), "as:name");
@@ -99,7 +100,7 @@ function generate_map_data($visits, $places){
         }
     }
 
-    return json_encode($out, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    return $out;
 }
 
 ?>
