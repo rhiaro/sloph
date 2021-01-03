@@ -225,7 +225,7 @@ var options = {
 
 var placesTable = new List("tablewrapper", options);
 
-placesTable.sort("when", {
+placesTable.sort("until", {
     order: "desc"
 })
 
