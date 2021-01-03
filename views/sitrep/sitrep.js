@@ -135,6 +135,10 @@ map.on('click', function(e){
 });
 
 var table = document.getElementById("thetable");
+var existingRows = table.querySelectorAll("tbody tr");
+existingRows.forEach(function(row){
+    table.removeChild(row);
+});
 
 // data is from data.js
 data.forEach(function(place){
