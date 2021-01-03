@@ -17,6 +17,7 @@ if(isset($_GET['to'])){
 $posts = get_posts($ep, $from->format(DATE_ATOM), $to->format(DATE_ATOM));
 $tags = get_tags($ep);
 $locations = get_locations($ep);
+$places = get_places($ep);
 $locations = $locations->toRdfPhp();
 
 $checkins = aggregate_checkins($posts, $from, $to, $locations);
@@ -24,6 +25,8 @@ $acquires = aggregate_acquires($posts, $from, $to, $tags);
 $consumes = aggregate_consumes($posts, $from, $to, $tags);
 $writing = aggregate_writing($posts, $from, $to, $tags);
 $socials = aggregate_socials($posts, $from, $to);
+$travel = aggregate_travel($posts, $from, $to);
+
 $total = $checkins['total'] + $acquires['total'] + $consumes['total'] + $writing['total'] + $socials['total'];
 
 include("views/summary.php");

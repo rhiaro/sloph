@@ -107,4 +107,27 @@ function generate_map_data($visits, $places){
     return $out;
 }
 
+function aggregate_travel($posts){
+    $typed = get_type($posts, "as:Travel");
+    $out['total'] = count($typed);
+    $out['places'] = array();
+    $out['placecounts'] = array();
+
+    foreach($typed as $uri => $post){
+        $target = get_value(array($uri=>$post), "as:target");
+        $out['places'][] = get_value(array($uri=>$post), "as:origin");
+        $out['places'][] = $target;
+
+        if(isset($out['placecounts'][$target])){
+            $out['placecounts'][$target] += 1;
+        }else{
+            $out['placecounts'][$target] = 1;
+        }
+    }
+    arsort($out['placecounts']);
+    $out['places'] = array_unique($out['places']);
+
+    return $out;
+}
+
 ?>
