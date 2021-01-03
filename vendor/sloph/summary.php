@@ -448,8 +448,23 @@ function aggregate_socials($posts, $from, $to){
   // Likes
   // Shares
   // Bookmarks
+  // Photos
   // Follows?
-  $typed = array_merge(get_type($posts, "as:Like"), get_type($posts, "as:Announce"), get_type($posts, "as:Add"), get_type($posts, "as:Follow"));
+  $adds = get_type($posts, "as:Add");
+  $out['photos'] = 0;
+  $out['albums'] = [];
+  global $ep;
+  $albums = get_albums($ep);
+  foreach($adds as $uri => $add){
+    if(in_array(get_value(array($uri=>$add), "as:target"), $albums)){
+      $count = count(get_values(array($uri=>$add), "as:object"));
+      $out['photos'] += $count;
+      $out ['albums'][] = get_value(array($uri=>$add), "as:target");
+    }
+  }
+  $out['albums'] = array_unique($out['albums']);
+
+  $typed = array_merge(get_type($posts, "as:Like"), get_type($posts, "as:Announce"), $adds, get_type($posts, "as:Follow"));
   $out['total'] = count($typed);
   return $out;
 }

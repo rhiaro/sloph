@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="../views/core.css" />
   </head>
   <body>
-    <article>
-      <h1>from <?=$from->format("d M y")?> to <?=$to == $now ? "now" : $to->format("d M y")?></h1>
-      <p>I posted to my site <?=number_format($total)?> times.</p>
+    <article class="e-content">
+      <h1 class="p-name">from <?=$from->format("d M y")?> to <?=$to == $now ? "now" : $to->format("d M y")?></h1>
+      <p>I posted to my site <?=number_format($total)?> times. I posted <?=number_format($socials['photos'])?> individual <a href="/photos">photos</a> into <?=number_format(count($socials['albums']))?> different albums.</p>
 
       <?if($writing['reviews'] > 0):?>
         <p>Reviews:</p>
@@ -25,6 +25,18 @@
       <p>I wrote about <?=$writing['tags']?> different topics, with the most common being <?=$writing['toptags']?>.</p>
 
       <h2 id="travel">Travel</h2>
+
+      <p>I made <?=$travel['total']?> travel plans, for <?=count($travel['places'])?> different places. I spent &euro;<?=number_format($acquires['transitEur'], 2)?> on <a href="https://rhiaro.co.uk/tags/transit">transit</a>/<a href="https://rhiaro.co.uk/tags/transport">transport</a>, over <?=$acquires['transitNum']?> journeys<?=$acquires['transitMeans']?>.
+      The places I travelled to most often were
+      <? $i = 0; ?>
+      <?foreach($travel['placecounts'] as $place => $c):?>
+        <?if($i < 4):?>
+          <?=get_value(array($place => $places[$place]), "as:name")?> (<?=$c?> times)
+        <?endif?>
+        <? $i++; ?>
+      <?endforeach?>
+      </p>
+
       <p>I checked in <?=number_format($checkins['total'])?> times. I spent the most time <a href="<?=$checkins['top'][0]['location']?>"><?=$checkins['top'][0]['label']?></a>, which was <?=$checkins['top'][0]['duration']?>, followed by <?=$checkins['top'][1]['duration']?> <a href="<?=$checkins['top'][1]['location']?>"><?=$checkins['top'][1]['label']?></a>. I also spent
       <?for($i=2;$i<count($checkins['top'])-1;$i++):?>
         <?=$checkins['top'][$i]['duration']?> <a href="<?=$checkins['top'][$i]['location']?>"><?=$checkins['top'][$i]['label']?></a>;
@@ -32,9 +44,6 @@
       and was <a href="<?=$checkins['top'][count($checkins['top'])-1]['location']?>"><?=$checkins['top'][count($checkins['top'])-1]['label']?></a> for <?=$checkins['top'][count($checkins['top'])-1]['duration']?>.
       </p>
 
-      <p>I spent &euro;<?=number_format($acquires['transitEur'], 2)?> on <a href="https://rhiaro.co.uk/tags/transit">transit</a>/<a href="https://rhiaro.co.uk/tags/transport">transport</a>, over <?=$acquires['transitNum']?> journeys<?=$acquires['transitMeans']?>.</p>
-
-      <!--<p>I planned x journeys, to y different places. I travelled primarily by x, followed by y and z. Some places I visited are a, b, c, d, e and f.</p>-->
 
       <h2 id="shelter">Shelter</h2>
 

@@ -796,6 +796,16 @@ function query_for_places(){
   return $q;
 }
 
+function query_for_trips($place_uri){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { ?s ?p ?o . } WHERE {
+    ?s ?p ?o .
+    ?s a as:Travel .
+    { ?s as:target <$place_uri> . } UNION { ?s as:origin <$place_uri> . }
+}";
+  return $q;
+}
+
 function query_select_container_and_contents($container){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?c ?s ?p ?o WHERE {
@@ -814,6 +824,16 @@ function query_select_tags(){
 }
 GROUP BY ?tag
 ORDER BY DESC(?c)";
+  return $q;
+}
+
+function query_select_albums(){
+  $q = get_prefixes();
+  $q .= "SELECT DISTINCT ?album ?name ?descr WHERE {
+  ?album a asext:Album .
+  ?album as:name ?name .
+  ?album as:content ?descr .
+}";
   return $q;
 }
 

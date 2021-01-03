@@ -425,6 +425,13 @@ function get_tags($ep){
   return $tags;
 }
 
+function get_albums($ep){
+  $q = query_select_albums();
+  $res = execute_query($ep, $q);
+  $album_uris = select_to_list($res);
+  return $album_uris;
+}
+
 function count_items($ep, $collection){
   $total_q = query_count_items($collection);
   $total_res = execute_query($ep, $total_q);
