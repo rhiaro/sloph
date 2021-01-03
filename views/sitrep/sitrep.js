@@ -202,7 +202,7 @@ data.forEach(function(place){
     var datesThere = dateRangeStringList(whens);
     dayString = dayString + datesThere;
 
-    var marker = new L.Marker.SVGMarker(place.coordinates,{ 
+    var marker = new L.Marker.SVGMarker(place.coordinates,{
         iconOptions: { color: color, fillOpacity: 0.9, circleRatio: 0.3 }
     }).addTo(map);
     marker.color = color;

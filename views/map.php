@@ -30,8 +30,8 @@
 ?>
 
 <div class="map">
-  <img class="w1of2" src="<?=$map?>" />
-  <div class="w1of2">
+  <div class="w1of2"><div class="inner"><img src="<?=$map?>" /></div></div>
+  <div class="w1of2"><div class="inner">
     <?if(isset($dbpedia)):?>
       <p><?=$dbpedia->get($location, 'foaf:name') ? $dbpedia->get($location, 'foaf:name')->getValue() : str_replace("http://dbpedia.org/resource/", "", $location)?></p>
     <?endif?>
@@ -40,7 +40,7 @@
     <?if(get_value($resource, "as:summary")):?><p><?=get_value($resource, "as:summary")?></p><?endif?>
     <?if(get_value($resource, "as:content")):?><p><?=get_value($resource, "as:content")?></p><?endif?>
     <?if(get_value($resource, "owl:sameAs")):?><p><a target="_blank" href="<?=get_value($resource, "owl:sameAs")?>">more info</a></p><?endif?>
-  </div>
+  </div></div>
 
 </div>
 <? include 'tags.php'; ?>
