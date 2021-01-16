@@ -36,7 +36,7 @@ if(isset($prev_date)){
     <?endif?>
     <div class="stuffholder">
       <?if(isset($prev_date)):?>
-        <time datetime="<?=$date->format(DATE_ATOM)?>" title="<?=$date->format(DATE_ATOM)?>"><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("g:ia")?></a></time>
+        <time class="inline" datetime="<?=$date->format(DATE_ATOM)?>" title="<?=$date->format(DATE_ATOM)?>"><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("g:ia")?></a></time>
       <?endif?>
       <p class="desc"><?=get_value($resource, 'as:content') ? get_value($resource, 'as:content') : "" ?></p>
       <p class="cost">

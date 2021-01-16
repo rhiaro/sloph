@@ -79,16 +79,18 @@ summary {
   display: flex;
   align-items: stretch;
 }
-.stuffholder time a {
+time.inline {
+  display: inline;
+}
+time.inline a {
   background-color: #470229;
   color: #fff;
   font-weight: bold;
   padding: 0.4em;
-  display: inline;
   line-height: 2;
   text-decoration: none;
 }
-.stuffholder time a:hover {
+time.inline a:hover {
   text-decoration: underline;
 }
 .stuffholder p.desc{
