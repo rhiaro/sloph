@@ -5,7 +5,10 @@ if(!isset($nav)){
 ?>
 
 <nav>
-  <a href="/"><img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" /></a>
+  <a href="/">
+    <img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" />
+    <img src="https://rhiaro.co.uk/stash/dp1.png" alt="profile" />
+  </a>
 
   <?if($nav["next"]):?>
     <p><a class="right" href="<?=$nav["next"]?>">Next</a></p>

@@ -1,6 +1,7 @@
 <header>
   <div class="rhiaro">
     <img src="https://rhiaro.co.uk/stash/dp.png" id="me" />
+    <img src="https://rhiaro.co.uk/stash/dp1.png" id="me" />
   </div>
   <div class="projects">
     <h1><span>rhiaro</span></h1>

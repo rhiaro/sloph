@@ -61,15 +61,26 @@ nav a:hover {
 nav a.left { float: left; }
 nav a.right { float: right; }
 nav a img {
-  margin-bottom: -2em; 
+  margin-bottom: -2em;
   opacity: 0.6;
   margin-left: auto; margin-right: auto;
   float: none;
   width: 32px; height: 32px;
   margin-bottom: -2em;
+  display:inline;
 }
 nav a:hover img {
   opacity: 1;
+}
+/* needs two profile images */
+nav a img:last-child, header div.rhiaro img:last-child {
+  display: none;
+}
+nav a:hover img:last-child, header div.rhiaro:hover img:last-child {
+  display: inline;
+}
+nav a:hover img:first-child, header div.rhiaro:hover img:first-child {
+  display: none;
 }
 
 #me {

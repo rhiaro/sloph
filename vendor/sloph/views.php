@@ -109,6 +109,8 @@ function get_project_icons($ep){
         "icon" => "views/icon_ods.png", "color" => ""),
       array("name" => "Digital Bazaar", "uri" => "https://digitalbazaar.com",
         "icon" => "views/icon_db.png", "colour" => ""),
+      array("name" => "W3C Technical Architecture Group", "uri" => "https://www.w3.org/2001/tag/",
+        "icon" => "views/icon_tag.png", "color" => ""),
       array("name" => "NaNoWriMo", "uri" => "https://nanowrimo.org/participants/rhiaro",
         "icon" => "views/icon_nanowrimo.png", "color" => "white"),
     ),
