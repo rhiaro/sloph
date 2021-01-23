@@ -152,10 +152,12 @@ function aggregate_acquires($posts, $from, $to, $alltags){
         if(in_array("$tagp/gift", $tags) || in_array("$tagp/donation", $tags)){
           $out['giftsEur'] += $eur;
         }
-        if(in_array("$tagp/investment", $tags)){
+        if(in_array("$tagp/investment", $tags) || in_array("$tagp/invest", $tags)){
           $out['investEur'] += $eur;
         }
     }
+
+    $out['totaleur'] = $out['totaleur'] - $out['giftsEur'] - $out['investEur'];
 
     $out['cheapest'] = $cheapest;
     $out['dearest'] = $dearest;

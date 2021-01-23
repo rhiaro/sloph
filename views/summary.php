@@ -78,15 +78,15 @@
       <h2 id="acquisitions">Acquisitions</h2>
       <p>I purchased or otherwise acquired something on <?=$acquires['total']?> occasions, spending a total of approximately &euro;<?=number_format($acquires['totaleur'], 2)?>. I used <?=count($acquires['currencies'])?> different currencies (<?=implode(", ", $acquires['currencies'])?>). This is an average expenditure of &euro;<?=$acquires['day']?> per day, &euro;<?=$acquires['week']?> per week, or &euro;<?=$acquires['month']?> per month. </p>
 
+      <?if($acquires['giftsEur'] > 0):?>
+        <p>In addition, I gave &euro;<?=number_format($acquires['giftsEur'], 2)?> away in donations, or spent it on gifts<?=($acquires['investEur'] > 0) ? ", and" : ".</p>"?>
+      <?endif?>
+      <?if($acquires['investEur'] > 0):?>
+      <?=($acquires['giftsEur'] <= 0) ? "In addition, " : ""?>I used &euro;<?=number_format($acquires['investEur'], 2)?> towards some kind of investment.</p>
+      <?endif?>
+
       <?if(!empty($acquires['toptags'])):?>
-        <p>
-        <?if($acquires['giftsEur'] > 0):?>
-        I gave &euro;<?=number_format($acquires['giftsEur'], 2)?> away in donations, or spent it on gifts.
-        <?endif?>
-        <?if($acquires['investEur'] > 0):?>
-        I invested &euro;<?=number_format($acquires['investEur'])?>.
-        <?endif?>
-        Some things I acquired the most often were <?=$acquires['toptags']?>. </p>
+        <p>Some things I acquired the most often were <?=$acquires['toptags']?>. </p>
       <?endif?>
 
       <p>On <?=$acquires['free']?> occasions I got something for free. I expensed &euro;<?=$acquires['expensed']?> of stuff for work. The most expensive thing I bought was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['dearest']['content']?></a> (&euro;<?=number_format($acquires['dearest']['amountEur'], 2)?>) and the cheapest thing (which wasn't free) was <a href="<?=$acquires['dearest']['uri']?>"><?=$acquires['cheapest']['content']?></a> (&euro;<?=number_format($acquires['cheapest']['amountEur'], 2)?>). I spent on average &euro;<?=$acquires['meaneur']?> per time.
