@@ -1,7 +1,7 @@
 <header>
   <div class="rhiaro">
-    <img src="https://rhiaro.co.uk/stash/dp.png" id="me" />
-    <img src="https://rhiaro.co.uk/stash/dp1.png" id="me" />
+    <img src="https://rhiaro.co.uk/stash/dp.png" id="me" alt="closeup picture of me with a parrot in my face" />
+    <img src="https://rhiaro.co.uk/stash/dp1.png" id="me" alt="closeup picture of me with a parrot in my hair" />
   </div>
   <div class="projects">
     <h1><span>rhiaro</span></h1>
@@ -11,7 +11,7 @@
     <?foreach($project_icons as $group):?>
       <div>
         <?foreach($group as $project):?>
-          <a href="<?=$project["uri"]?>" class="project-box" title="<?=$project["name"]?>" style="background-color: <?=$project["color"]?>"><img src="/<?=$project["icon"]?>" alt="" title="<?=$project["name"]?>" /></a>
+          <a href="<?=$project["uri"]?>" class="project-box" title="<?=$project["name"]?>" style="background-color: <?=$project["color"]?>"><img src="/<?=$project["icon"]?>" alt="<?=$project["name"]?>" title="<?=$project["name"]?>" /></a>
         <?endforeach?>
       </div>
     <?endforeach?>
