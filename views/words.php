@@ -23,7 +23,7 @@ if(has_type($resource, 'as:Announce')){
       <?endif?>
     </p>
 
-    <?=get_value($resource, 'as:summary') ? "<p>".get_value($resource, 'as:summary')."</p>" : "" ?>
+    <!--<?=get_value($resource, 'as:summary') ? "<p>".get_value($resource, 'as:summary')."</p>" : "" ?>-->
     <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
   </div>
 

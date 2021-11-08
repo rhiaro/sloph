@@ -30,9 +30,9 @@ function get_novel_data($ep){
         $data[$year]["wordcount"] = nanowrimo_total($ep, $year);
       }
     }else{
-      $data[$year]["name"] = "No title";
-      $data[$year]["content"] = "<p>No data for $year :s</p>";
-      $data[$year]["wordcount"] = 0;
+      $data[$year]["name"] = "Untitled";
+      $data[$year]["content"] = "<p>No description data for $year :s</p>";
+      $data[$year]["wordcount"] = nanowrimo_total($ep, $year);
     }
   }
   return $data;
