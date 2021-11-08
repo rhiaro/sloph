@@ -289,7 +289,7 @@ function increment_slug($ep, $base, $path, $slug, $i=2){
 
 function make_slug($resource){
   $string = uniqid();
-  if(!$resource->isA("asext:Consume") && !$resource->isA("asext:Acquire")){
+  if(!$resource->isA("asext:Consume") && !$resource->isA("asext:Acquire") && !$resource->isA("asext:Write")){
     if($resource->get("as:name") && $resource->get("as:name")->getValue() != ""){
       $string = $resource->get("as:name")->getValue();
     }elseif($resource->get("as:summary") && $resource->get("as:summary")->getValue() != ""){
@@ -297,6 +297,11 @@ function make_slug($resource){
     }elseif($resource->get("as:content") && $resource->get("as:content")->getValue() != ""){
       $string = strip_tags($resource->get("as:content")->getValue());
     }
+  }
+  if($resource->isA("asext:Write") && in_array("https://rhiaro.co.uk/tags/nanowrimo", $resource->all("as:tag"))){
+    // Use today's date as slug only if nanowrimo
+    $date = new DateTime($resource->get("as:published"));
+    $string = $date->format("d");
   }
 
   $slug = substr(strtolower(str_replace(" ", "-", preg_replace("/[^\w\d \-]/ui", '',strip_tags($string)))), 0);
