@@ -884,8 +884,11 @@ function query_construct_adds($collection_uri){
   ?add ?p ?o .
 } WHERE {
   ?add as:target <$collection_uri> .
+  ?add as:published ?published .
   ?add ?p ?o .
-}";
+}
+ORDER BY ASC(?published)
+";
   return $q;
 }
 
