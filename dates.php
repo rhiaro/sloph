@@ -52,8 +52,11 @@ $typesar = array(
     "where" => array("as:Arrive"),
     "eats" => array("asext:Consume"),
     "notes" => array("as:Note"),
-    "words" => array("asext:Write")
+    "words" => array("asext:Write"),
+    "photos" => array("as:Add"),
+    "adds" => array("as:Add")
 );
+
 if(isset($_GET['t']) && array_key_exists($_GET['t'], $typesar)){
     $types = $typesar[$_GET['t']];
 }else{
