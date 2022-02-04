@@ -37,8 +37,15 @@ function process_undo($ep, $activity){
 
 }
 
-function add_to_collection($ep, $post_uri, $collection_uri){
-
+function add_to_collection($ep, $post_graph){
+    // TODO make this make the graph not do any actual inserts
+    $itemsq = query_insert_items($collection_uri, $item_uris);
+    $itemsr = execute_query($eq, $itemsq);
+    if($itemsr){
+        $dater = add_modified_date($ep, $collection_uri, $date);
+        return $dater;
+    }
+    return $itemsr;
 }
 
 function update_tags_collection($ep, $post_graph){
@@ -120,11 +127,15 @@ function update_blocked_collection($ep, $post){
 }
 
 function add_published_date($ep, $post, $date){
-
+    $q = query_insert_lit($post, "as:published", $date, "xsd:dateTime");
+    $r = execute_query($ep, $q);
+    return $r;
 }
 
 function add_modified_date($ep, $post, $date){
-
+    $q = query_insert_lit($post, "as:updated", $date, "xsd:dateTime");
+    $r = execute_query($ep, $q);
+    return $r;
 }
 
 function add_actor($ep, $post, $actor){

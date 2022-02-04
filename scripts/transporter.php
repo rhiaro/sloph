@@ -16,6 +16,7 @@ function fetch_album($url){
 }
 
 function update_album_date($ep, $album, $date){
+  // TODO - only update if it's in the future (backfilling photos upsets this)
   $delq = query_delete_objects($album, "as:updated");
   $delr = execute_query($ep, $delq);
   if($delr){

@@ -180,6 +180,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $named = $currency_conversion_result;
       }
 
+      $add_to_collection_result = add_to_collection($ep, $named){
+        if(!$add_to_collection_result){
+          $side_effects_errors["add_to_collection"] = true;
+        }
+      }
+
       // No errors with side effects, proceed with main insert.
       if(empty($side_effects_errors)){
         $ntriples = $named->serialise("ntriples");
