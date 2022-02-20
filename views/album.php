@@ -1,7 +1,12 @@
 <article class="h-entry" typeof="as:Article" about="">
   <h1><?=get_value($resource, "as:name")?></h1>
   <?=get_value($resource, "as:content")?>
-  <p><em>Contains <?=get_value($resource, "as:totalItems")?> photos, the last of which were added <?=time_ago(get_value($resource, "as:updated"))?>.</em></p>
+  <?if(get_value($resource, "as:totalItems")):?>
+    <p><em>Contains <?=get_value($resource, "as:totalItems")?> photos, the last of which were added <?=time_ago(get_value($resource, "as:updated"))?>.</em></p>
+  <?else:?>
+    <p class="w1of1"><a href="https://rhiaro.co.uk/photos?album=<?=$uri?>"><img src="<?=get_value($resource, "as:image")?>" /></a></p>
+    <p><a href="https://rhiaro.co.uk/photos?album=<?=$uri?>">Last updated <?=time_ago(get_value($resource, "as:updated"))?></a></p>
+  <?endif?>
   <?foreach($resource as $uri => $data):?>
     <?if(has_type(array($uri => $data), "as:Add")):?>
       <? $date = new DateTime(get_value(array($uri => $data), "as:published")); ?>

@@ -23,6 +23,7 @@ function public_graphs(){
     ,"https://rhiaro.co.uk/tags/"
     ,"https://rhiaro.co.uk/projects/"
     ,"https://rhiaro.co.uk/places/"
+    ,"https://rhiaro.co.uk/albums/"
   ];
 }
 

@@ -15,6 +15,8 @@ function view_router($resource){
       return 'stuff';
     }elseif(has_type($resource, "as:Invite") || has_type($resource, "as:Accept") || has_type($resource, "as:Event")){
       return 'event';
+    }elseif(has_type($resource, "asext:Album")){
+      return 'album';
     }elseif(has_type($resource, "as:Collection") || has_type($resource, "as:CollectionPage")){
       return 'collection';
     }elseif(has_type($resource, "asext:Write")){
@@ -33,7 +35,8 @@ function collection_sort_predicate($collection){
 
   $mapping = array(
     "https://rhiaro.co.uk/location" => "as:name",
-    "https://rhiaro.co.uk/locations" => "as:name"
+    "https://rhiaro.co.uk/locations" => "as:name",
+    "https://rhiaro.co.uk/albums" => "as:updated"
   );
   if(array_key_exists($collection, $mapping)){
     return $mapping[$collection];
