@@ -61,7 +61,7 @@ foreach($params as $p){
     $collectionparams[] = $p;
   }
 }
-if(count($collectionparams > 0)){
+if(count($collectionparams) > 0){
   $collectionuri .= "?".implode($collectionparams, "&");
 }
 
