@@ -2,6 +2,42 @@
 
 require_once('views.php');
 
+/* Helpers */
+
+function sparql_date($datetime){
+  $d = $datetime->format(DATE_ATOM);
+  return '"'.$d.'"^^xsd:dateTime';
+}
+
+function datenow(){
+  return sparql_date(new DateTime());
+}
+
+function not_in_future($s="?s"){
+  $now = datenow();
+  $q = "
+OPTIONAL { $s as:published ?date . }
+  FILTER(!BOUND(?date) || ?date < $now) .
+";
+  return $q;
+}
+
+function is_unique($ep, $uri, $future=True){
+  $q = get_prefixes();
+  $q .= "SELECT ?o WHERE {
+  <$uri> ?p ?o .";
+  if(!$future){
+    $q .= not_in_future("<$uri>");
+  }
+  $q .= "} LIMIT 1";
+  $res = $ep->query($q);
+  if(empty($res['result']['rows'])){
+    return true;
+  }else{
+    return false;
+  }
+}
+
 /* Running queries */
 
 function execute_query($ep, $query){
@@ -61,11 +97,11 @@ function select_to_list_sorted($result, $sortkey, $types=array(), $key=null){
   return array_values($list);
 }
 
-function construct_uris($ep, $uris){
+function construct_uris($ep, $uris, $future=False){
   $items = array();
   foreach($uris as $uri){
     if(is_string($uri)){
-      $q = query_construct($uri);
+      $q = query_construct($uri, $future);
       $r = execute_query($ep, $q);
       if($r){
         $items = array_merge($items, $r);
@@ -75,11 +111,11 @@ function construct_uris($ep, $uris){
   return $items;
 }
 
-function construct_uris_in_graph($ep, $uris, $graph){
+function construct_uris_in_graph($ep, $uris, $graph, $future=False){
   $items = array();
   foreach($uris as $uri){
     if(is_string($uri)){
-      $q = query_construct_uri_graph($uri, $graph);
+      $q = query_construct_uri_graph($uri, $graph, $future);
       $r = execute_query($ep, $q);
       if($r){
         $items = array_merge($items, $r);
@@ -89,8 +125,8 @@ function construct_uris_in_graph($ep, $uris, $graph){
   return $items;
 }
 
-function construct_and_sort($ep, $uris, $sort="as:published"){
-  $items = construct_uris($ep, $uris);
+function construct_and_sort($ep, $uris, $sort="as:published", $future=False){
+  $items = construct_uris($ep, $uris, $future);
   $order = array();
   foreach($items as $uri => $data){
     $order[$uri] = get_value(array($uri => $data), $sort);
@@ -103,8 +139,8 @@ function construct_and_sort($ep, $uris, $sort="as:published"){
   return $sorted;
 }
 
-function construct_last_of_type($ep, $type, $sort="as:published"){
-  $q = query_select_s_type($type, $sort, "DESC", 1);
+function construct_last_of_type($ep, $type, $sort="as:published", $future=False){
+  $q = query_select_s_type($type, $sort, "DESC", 1, "https://blog.rhiaro.co.uk/", $future);
   $res = execute_query($ep, $q);
   if($res && !empty($res["rows"])){
     $uri = select_to_list($res);
@@ -125,10 +161,15 @@ function get_prefixes(){
   return $q;
 }
 
-function query_construct($uri){
-  $q = "CONSTRUCT { <$uri> ?p ?o . }
-WHERE { <$uri> ?p ?o . }
-";
+function query_construct($uri, $future=False){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { <$uri> ?p ?o . }
+WHERE {
+  <$uri> ?p ?o . \n";
+  if(!$future){
+    $q .= not_in_future("<$uri>");
+  }
+  $q .= "}";
   return $q;
 }
 
@@ -140,9 +181,14 @@ LIMIT $limit
   return $q;
 }
 
-function query_construct_graph($graph){
-  $q = "CONSTRUCT { ?s ?p ?o . }
-WHERE { GRAPH <$graph> { ?s ?p ?o . } }";
+function query_construct_graph($graph, $future=False){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { ?s ?p ?o . }
+WHERE { GRAPH <$graph> { ?s ?p ?o . ";
+  if(!$future){
+    $q .= not_in_future();
+  }
+$q .= "} }";
   return $q;
 }
 
@@ -180,20 +226,34 @@ LIMIT 15000"; // Graph times out if I make it get everything
 }
 
 
-function query_construct_uri_graph($uri, $graph){
-  $q = "CONSTRUCT { <$uri> ?p ?o . }
-WHERE { GRAPH <$graph> { <$uri> ?p ?o . } }";
+function query_construct_uri_graph($uri, $graph, $future=False){
+  $q = get_prefixes();
+  $q .= "CONSTRUCT { <$uri> ?p ?o . }
+WHERE {
+  GRAPH <$graph> {
+    <$uri> ?p ?o .
+";
+  if(!$future){
+    $q .= not_in_future("<$uri>");
+  }
+  $q .= "  }
+}";
   return $q;
 }
 
-function query_construct_graphs($graphs){
+function query_construct_graphs($graphs, $future=False){
+  $q = get_prefixes();
   if(count($graphs) < 2){
-    return query_construct_graph($graphs[0]);
+    return query_construct_graph($graphs[0], $future);
   }
-  $q = "CONSTRUCT { ?s ?p ?o . } WHERE {";
+  $q .= "CONSTRUCT { ?s ?p ?o . } WHERE {";
   foreach($graphs as $graph){
     $i = 0;
-    $q .= "  { GRAPH <$graph> { ?s ?p ?o . } }";
+    $q .= "  { GRAPH <$graph> { ?s ?p ?o . ";
+    if(!$future){
+      $q .= not_in_future();
+    }
+    $q .= "} }";
     if($i < count($graphs)){
       $q .= "  UNION ";
     }
@@ -203,14 +263,19 @@ function query_construct_graphs($graphs){
   return $q;
 }
 
-function query_construct_uri_graphs($uri, $graphs){
+function query_construct_uri_graphs($uri, $graphs, $future=False){
+  $q = get_prefixes();
   if(count($graphs) < 2){
-    return query_construct_graph($graphs[0]);
+    return query_construct_graph($graphs[0], $future);
   }
-  $q = "CONSTRUCT { <$uri> ?p ?o . } WHERE {";
+  $q .= "CONSTRUCT { <$uri> ?p ?o . } WHERE {";
   foreach($graphs as $graph){
     $i = 0;
-    $q .= "  { GRAPH <$graph> { <$uri> ?p ?o . } }";
+    $q .= "  { GRAPH <$graph> { <$uri> ?p ?o . ";
+    if(!$future){
+      $q .= not_in_future("<$uri>");
+    }
+    $q .= "} }";
     if($i < count($graphs)){
       $q .= "  UNION ";
     }
@@ -220,12 +285,15 @@ function query_construct_uri_graphs($uri, $graphs){
   return $q;
 }
 
-function query_construct_type($type, $sort=null){
+function query_construct_type($type, $sort=null, $future=False){
   $q = get_prefixes();
   $q .= "CONSTRUCT { ?s ?p ?o . }
 WHERE { ?s ?p ?o. ?s a $type . ";
   if(isset($sort)){
     $q .= "?s $sort ?sort . ";
+  }
+  if(!$future){
+    $q .= not_in_future();
   }
   $q .="}";
   if(isset($sort)){
@@ -234,7 +302,11 @@ WHERE { ?s ?p ?o. ?s a $type . ";
   return $q;
 }
 
-function construct_between($from, $to){
+function construct_between($from, $to, $future=False){
+  if(!$future){
+    $from = force_present($from, DATE_ATOM);
+    $to = force_present($to, DATE_ATOM);
+  }
   $q = get_prefixes();
   $q .= "CONSTRUCT { ?s ?p ?o . } WHERE { ?s ?p ?o . \n";
   $q .= " ?s as:published ?d . \n";
@@ -292,7 +364,7 @@ function query_get_graphs(){
   return $q;
 }
 
-function query_select_s($limit=0, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s($limit=0, $graph="https://blog.rhiaro.co.uk/", $future=False){
 
   if($graph === null){
     $graph = "?g";
@@ -305,7 +377,11 @@ function query_select_s($limit=0, $graph="https://blog.rhiaro.co.uk/"){
     $q .= "?g ";
   }
   $q .= "WHERE {
-  GRAPH $graph { ?s ?p ?o . }
+  GRAPH $graph { ?s ?p ?o . \n";
+  if(!$future){
+    $q .= not_in_future();
+  }
+  $q .= "}
 }";
   if($limit > 0){
     $q .= "LIMIT $limit";
@@ -313,12 +389,15 @@ function query_select_s($limit=0, $graph="https://blog.rhiaro.co.uk/"){
   return $q;
 }
 
-function query_select_s_type($type, $sort="as:published", $dir="DESC", $limit=0, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_type($type, $sort="as:published", $dir="DESC", $limit=0, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {
   GRAPH <$graph> { ?s a $type .";
   if(isset($sort)){
     $q .= "  ?s $sort ?sort .";
+  }
+  if(!$future){
+    $q .= not_in_future();
   }
   $q .= "  }
 }
@@ -351,7 +430,11 @@ function query_select_s_type_sort($type, $sort="as:published", $dir="DESC", $lim
   return $q;
 }
 
-function query_select_s_between($from, $to, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_between($from, $to, $graph="https://blog.rhiaro.co.uk/", $future=False){
+  if(!$future){
+    $from = force_present($from, DATE_ATOM);
+    $to = force_present($to, DATE_ATOM);
+  }
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {
   GRAPH <$graph> { ?s as:published ?d . }
@@ -362,7 +445,11 @@ ORDER BY ASC(?d)";
   return $q;
 }
 
-function query_select_s_between_types($from, $to, $types, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_between_types($from, $to, $types, $graph="https://blog.rhiaro.co.uk/", $future=False){
+  if(!$future){
+    $from = force_present($from, DATE_ATOM);
+    $to = force_present($to, DATE_ATOM);
+  }
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s ?d WHERE {";
   foreach($types as $type){
@@ -381,7 +468,11 @@ ORDER BY ASC(?d)";
   return $q;
 }
 
-function query_select_count_between_type($from, $to, $type, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_count_between_type($from, $to, $type, $graph="https://blog.rhiaro.co.uk/", $future=False){
+  if(!$future){
+    $from = force_present($from, DATE_ATOM);
+    $to = force_present($to, DATE_ATOM);
+  }
   $q = get_prefixes();
   $q .= "SELECT COUNT(?s) AS ?c WHERE {
   GRAPH <$graph> {
@@ -402,11 +493,15 @@ function query_select_count_graph($graph="https://blog.rhiaro.co.uk/"){
   return $q;
 }
 
-function query_select_s_desc($limit=0, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_desc($limit=0, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {
   GRAPH <$graph> { ?s ?p ?o . }
-  ?s as:published ?d .
+  ?s as:published ?d .";
+  if(!$future){
+    $q .= "FILTER( ?d < ".datenow()." ) .";
+  }
+  $q .= "
 }
 ORDER BY DESC(?d)";
   if($limit > 0){
@@ -442,11 +537,14 @@ LIMIT $limit
   return $q;
 }
 
-function query_select_s_where($vals, $limit=10, $sort=null){
+function query_select_s_where($vals, $limit=10, $sort=null, $future=False){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE { \n";
   foreach($vals as $predicate => $val){
     $q .= "?s $predicate $val .\n";
+  }
+  if(!$future){
+    $q .= not_in_future();
   }
   $q .= "} ";
   if(isset($sort)){
@@ -496,7 +594,7 @@ function query_select_s_views($score, $limit=10){
   return $q;
 }
 
-function query_select_s_next($uri, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_next($uri, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
 
   $q .= "SELECT ?s ?d WHERE { \n";
@@ -505,6 +603,9 @@ function query_select_s_next($uri, $graph="https://blog.rhiaro.co.uk/"){
   $q .= "  <$uri> as:published ?d2 . \n";
   $q .= " }";
   $q .= "  FILTER ( ?d > ?d2 ) . \n";
+  if(!$future){
+    $q .= "  FILTER( ?d <= ".datenow()." ) . \n";
+  }
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
 ORDER BY ASC(?d)
@@ -514,6 +615,7 @@ LIMIT 1
 }
 
 function query_select_one_of_type($type, $sort="as:published", $dir="DESC", $graph="https://blog.rhiaro.co.uk/"){
+  // Deprecated?
   $q = get_prefixes();
   $q .= "SELECT ?s WHERE {
   GRAPH <$graph> {
@@ -530,7 +632,7 @@ function query_select_one_of_type($type, $sort="as:published", $dir="DESC", $gra
   return $q;
 }
 
-function query_select_s_next_of_type($uri, $type, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_next_of_type($uri, $type, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
 
   $q .= "SELECT ?s ?d WHERE { \n";
@@ -540,6 +642,9 @@ function query_select_s_next_of_type($uri, $type, $graph="https://blog.rhiaro.co
   $q .= "  <$uri> as:published ?d2 . \n";
   $q .= " }";
   $q .= "  FILTER ( ?d > ?d2 ) . \n";
+  if(!$future){
+    $q .= "  FILTER( ?d <= ".datenow()." ) . \n";
+  }
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
 ORDER BY ASC(?d)
@@ -548,7 +653,7 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_prev($uri, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_prev($uri, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
@@ -557,6 +662,9 @@ function query_select_s_prev($uri, $graph="https://blog.rhiaro.co.uk/"){
   $q .= "  <$uri> as:published ?d2 . \n";
   $q .= " }";
   $q .= "  FILTER ( ?d < ?d2 ) . \n";
+  if(!$future){
+    $q .= "  FILTER( ?d <= ".datenow()." ) . \n";
+  }
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
 ORDER BY DESC(?d)
@@ -565,7 +673,7 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_prev_of_type($uri, $type, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_prev_of_type($uri, $type, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
 
   $q .= "SELECT ?s WHERE { \n";
@@ -575,6 +683,9 @@ function query_select_s_prev_of_type($uri, $type, $graph="https://blog.rhiaro.co
   $q .= "  <$uri> as:published ?d2 . \n";
   $q .= " }";
   $q .= "  FILTER ( ?d < ?d2 ) . \n";
+  if(!$future){
+    $q .= "  FILTER( ?d <= ".datenow()." ) . \n";
+  }
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
 ORDER BY DESC(?d)
@@ -583,7 +694,7 @@ LIMIT 1
   return $q;
 }
 
-function query_select_s_next_count($uri, $count=10, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_next_count($uri, $count=10, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
 
   $q .= "SELECT DISTINCT ?s WHERE { \n";
@@ -592,6 +703,9 @@ function query_select_s_next_count($uri, $count=10, $graph="https://blog.rhiaro.
   $q .= "  <$uri> as:published ?d2 . \n";
   $q .= " }";
   $q .= "  FILTER ( ?d > ?d2 ) . \n";
+  if(!$future){
+    $q .= "  FILTER( ?d <= ".datenow()." ) . \n";
+  }
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
 ORDER BY ASC(?d)
@@ -600,7 +714,7 @@ LIMIT $count
   return $q;
 }
 
-function query_select_s_prev_count($uri, $count=10, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_prev_count($uri, $count=10, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
 
   $q .= "SELECT DISTINCT ?s WHERE { \n";
@@ -609,6 +723,9 @@ function query_select_s_prev_count($uri, $count=10, $graph="https://blog.rhiaro.
   $q .= "  <$uri> as:published ?d2 . \n";
   $q .= " }";
   $q .= "  FILTER ( ?d < ?d2 ) . \n";
+  if(!$future){
+    $q .= "  FILTER( ?d <= ".datenow()." ) . \n";
+  }
   $q .= "  FILTER ( <$uri> != ?s ) . \n";
   $q .= "}
 ORDER BY DESC(?d)
@@ -617,10 +734,10 @@ LIMIT $count
   return $q;
 }
 
-function query_select_s_next_of_type_count($uri, $count=10, $type=null, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_next_of_type_count($uri, $count=10, $type=null, $graph="https://blog.rhiaro.co.uk/", $future=False){
 
   if($type === null){
-    return query_select_s_next_count($uri, $count, $graph);
+    return query_select_s_next_count($uri, $count, $graph, $future);
   }else{
     $q = get_prefixes();
 
@@ -631,6 +748,9 @@ function query_select_s_next_of_type_count($uri, $count=10, $type=null, $graph="
     $q .= "  <$uri> as:published ?d2 . \n";
     $q .= " }";
     $q .= "  FILTER ( ?d > ?d2 ) . \n";
+    if(!$future){
+      $q .= "  FILTER( ?d <= ".datenow()." ) . \n";
+    }
     $q .= "  FILTER ( <$uri> != ?s ) . \n";
     $q .= "}
   ORDER BY ASC(?d)
@@ -640,9 +760,9 @@ function query_select_s_next_of_type_count($uri, $count=10, $type=null, $graph="
   }
 }
 
-function query_select_s_prev_of_type_count($uri, $count=10, $type=null, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_s_prev_of_type_count($uri, $count=10, $type=null, $graph="https://blog.rhiaro.co.uk/", $future=False){
   if($type === null){
-    return query_select_s_prev_count($uri, $count, $graph);
+    return query_select_s_prev_count($uri, $count, $graph, $future);
   }else{
     $q = get_prefixes();
 
@@ -653,6 +773,9 @@ function query_select_s_prev_of_type_count($uri, $count=10, $type=null, $graph="
     $q .= "  <$uri> as:published ?d2 . \n";
     $q .= " }";
     $q .= "  FILTER ( ?d < ?d2 ) . \n";
+    if(!$future){
+      $q .= "  FILTER( ?d <= ".datenow()." ) . \n";
+    }
     $q .= "  FILTER ( <$uri> != ?s ) . \n";
     $q .= "}
   ORDER BY DESC(?d)
@@ -662,7 +785,7 @@ function query_select_s_prev_of_type_count($uri, $count=10, $type=null, $graph="
   }
 }
 
-function query_select_next_items($collection, $after, $sortby="as:published", $count=16){
+function query_select_next_items($collection, $after, $sortby="as:published", $count=16, $future=False){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {
   <$collection> as:items ?s .
@@ -673,6 +796,9 @@ function query_select_next_items($collection, $after, $sortby="as:published", $c
   <$after> $sortby ?sortafter .
   FILTER ( ?sort > ?sortafter ) .\n";
   }
+  if(!$future){
+    $q .= not_in_future();
+  }
   $q .= "}
   ORDER BY ASC(?sort)";
   if($count > 0){
@@ -682,7 +808,7 @@ function query_select_next_items($collection, $after, $sortby="as:published", $c
   return $q;
 }
 
-function query_select_next_type($type, $before, $sortby="as:published", $count=16, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_next_type($type, $before, $sortby="as:published", $count=16, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE { GRAPH <$graph> {
   ?s rdf:type $type .
@@ -693,6 +819,9 @@ function query_select_next_type($type, $before, $sortby="as:published", $count=1
   <$before> $sortby ?sortafter .
   FILTER ( ?sort > ?sortafter ) .\n";
   }
+  if(!$future){
+    $q .= not_in_future();
+  }
   $q .= "}
   ORDER BY ASC(?sort)";
   if($count > 0){
@@ -702,7 +831,7 @@ function query_select_next_type($type, $before, $sortby="as:published", $count=1
   return $q;
 }
 
-function query_select_prev_type($type, $before, $sortby="as:published", $count=16, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_prev_type($type, $before, $sortby="as:published", $count=16, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE { GRAPH <$graph> {
   ?s rdf:type $type .
@@ -713,6 +842,9 @@ function query_select_prev_type($type, $before, $sortby="as:published", $count=1
   <$before> $sortby ?sortbefore .
   FILTER ( ?sort < ?sortbefore ) .\n";
   }
+  if(!$future){
+    $q .= not_in_future();
+  }
   $q .= "}
   ORDER BY DESC(?sort)";
   if($count > 0){
@@ -722,7 +854,7 @@ function query_select_prev_type($type, $before, $sortby="as:published", $count=1
   return $q;
 }
 
-function query_select_prev_items($collection, $before, $sortby="as:published", $count=16){
+function query_select_prev_items($collection, $before, $sortby="as:published", $count=16, $future=False){
   $q = get_prefixes();
   $q .= "SELECT DISTINCT ?s WHERE {
   <$collection> as:items ?s .
@@ -732,6 +864,9 @@ function query_select_prev_items($collection, $before, $sortby="as:published", $
     $q .=  "
   <$before> $sortby ?sortbefore .
   FILTER ( ?sort < ?sortbefore ) .\n";
+  }
+  if(!$future){
+    $q .= not_in_future();
   }
   $q .= "}
   ORDER BY DESC(?sort)";
@@ -796,11 +931,16 @@ function query_for_places(){
   return $q;
 }
 
-function query_for_trips($place_uri){
+function query_for_trips($place_uri, $future=False){
   $q = get_prefixes();
   $q .= "CONSTRUCT { ?s ?p ?o . } WHERE {
     ?s ?p ?o .
     ?s a as:Travel .
+";
+    if(!$future){
+      $q .= not_in_future();
+    }
+    $q .= "
     { ?s as:target <$place_uri> . } UNION { ?s as:origin <$place_uri> . }
 }";
   return $q;
@@ -878,17 +1018,19 @@ ORDER BY DESC(?updated)
   return $q;
 }
 
-function query_construct_adds($collection_uri){
+function query_construct_adds($collection_uri, $future=False){
   $q = get_prefixes();
   $q .= "CONSTRUCT {
   ?add ?p ?o .
 } WHERE {
   ?add as:target <$collection_uri> .
   ?add as:published ?published .
-  ?add ?p ?o .
-}
-ORDER BY ASC(?published)
-";
+  ?add ?p ?o .\n";
+  if(!$future){
+    $q .= "  FILTER ( ?published <= ".datenow()." ) .";
+  }
+  $q .= "}
+ORDER BY ASC(?published)";
   return $q;
 }
 
@@ -920,6 +1062,7 @@ function query_select_last_time_at($location){
   ?p a as:Arrive .
   ?p as:published ?d .
   ?p as:location <$location> .
+  FILTER ( ?d <= ".datenow()." )
 }
 ORDER BY DESC(?d)
 LIMIT 1";
@@ -931,6 +1074,7 @@ function query_select_last_time_not_at($locations){
   $q .= "SELECT ?s ?d WHERE {
   ?s a as:Arrive .
   ?s as:published ?d .
+  FILTER ( ?d <= ".datenow()." )
   ?s as:location ?loc .";
   foreach($locations as $location){
     $q .= "FILTER(?loc != <$location>)";
@@ -949,7 +1093,7 @@ vals = predicate => "value"
 sort is a var not a predicate
 Note: limit only limits triples returned, not values by subject.
 */
-function query_select_vars($vars, $vals, $limit=0, $sort=null, $graph="https://blog.rhiaro.co.uk/"){
+function query_select_vars($vars, $vals, $limit=0, $sort=null, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $q = get_prefixes();
   $q .= "SELECT ?s ?".implode($vars, ' ?')." WHERE {
   GRAPH <$graph> {\n";
@@ -958,6 +1102,9 @@ function query_select_vars($vars, $vals, $limit=0, $sort=null, $graph="https://b
   }
   foreach($vals as $predicate => $val){
     $q .= "?s $predicate $val .\n";
+  }
+  if(!$future){
+    $q .= not_in_future();
   }
   $q .= "  }
 } ";
@@ -974,7 +1121,7 @@ function query_select_vars($vars, $vals, $limit=0, $sort=null, $graph="https://b
 Construct arbitrary return variables.
 See notes above
 */
-function query_construct_vars($vars, $vals, $limit=0, $sort=null, $graph="https://blog.rhiaro.co.uk/"){
+function query_construct_vars($vars, $vals, $limit=0, $sort=null, $graph="https://blog.rhiaro.co.uk/", $future=False){
   $limit = $limit * count($vars);
   $q = get_prefixes();
   $q .= "CONSTRUCT { ";
@@ -989,6 +1136,9 @@ function query_construct_vars($vars, $vals, $limit=0, $sort=null, $graph="https:
   }
   foreach($vals as $predicate => $val){
     $q .= "?s $predicate $val .\n";
+  }
+  if(!$future){
+    $q .= not_in_future();
   }
   $q .= "  }\n
 } ";
