@@ -155,7 +155,7 @@ elseif(isset($_POST['data']) && count($_POST['data']) > 0){
 }
 
 
-$q = query_select_s(0, $graph);
+$q = query_select_s(0, $graph, True);
 if(isset($_GET['flag'])){
   if($_GET['flag'] == "doublecontents"){
     $q = "PREFIX as: <https://www.w3.org/ns/activitystreams#> .
@@ -197,7 +197,7 @@ if(isset($_GET['length']) && is_numeric($_GET['length'])){
 
 $uris = array_slice($_SESSION['uris'], $offset, $length);
 $posts = array();
-$posts = construct_uris_in_graph($ep, $uris, $graph);
+$posts = construct_uris_in_graph($ep, $uris, $graph, True);
 $graphs = graphs($ep);
 
 if(isset($_GET['flag']) && $_GET['flag'] == "notype"){

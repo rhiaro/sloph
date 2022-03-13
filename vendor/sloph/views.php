@@ -444,6 +444,33 @@ function date_from_graph($graph, $subject, $predicate){
   return new DateTime($date);
 }
 
+function published_in_future($graph, $subject){
+  /* php graph */
+  $date = date_from_graph($graph, $subject, "as:published");
+  return date_in_future($date);
+}
+
+function date_in_future($date){
+  if(!$date instanceof DateTime){
+    $date = new DateTime($date);
+  }
+  $now = new DateTime();
+  return $date > $now;
+}
+
+function force_present($date, $format=None){
+  if(date_in_future($date)){
+    $now = new DateTime();
+    if(!$format){
+      return $now;
+    }else{
+      return $now->format($format);
+    }
+  }else{
+    return $date;
+  }
+}
+
 /***********************/
 /* Composite things    */
 /***********************/
@@ -649,6 +676,7 @@ function make_collection_page($ep, $uri, $item_uris, $nav, $before=null, $limit=
   foreach($item_uris as $item){
     $page->addResource($page_uri, "as:items", $item);
   }
+
   $final = merge_graphs(array($page, $items_g), $page_uri);
   return $final;
 }

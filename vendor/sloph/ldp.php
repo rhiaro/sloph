@@ -45,6 +45,9 @@ function get_resource($ep, $uri){
     $collection = $graph->getUri();
     if(isset($_GET['before'])){
       $before = $_GET['before'];
+      if(is_unique($ep, $before, False)){ // Post doesn't exist in present
+        $before = null;
+      }
     }else{
       $before = null;
     }
@@ -324,15 +327,7 @@ function path_for_type($resource){
   return "";
 }
 
-function is_unique($ep, $uri){
-  $q = "SELECT ?o WHERE { <$uri> ?p ?o } LIMIT 1";
-  $res = $ep->query($q);
-  if(empty($res['result']['rows'])){
-    return true;
-  }else{
-    return false;
-  }
-}
+// is_unique was here
 
 function remove_stopwords($string){
   $stopwords = array("a", "all", "am", "an", "and", "are", "as", "at", "be","but", "by", "etc", "for", "go", "had", "has", "hasnt", "have", "he", "her", "hers", "him", "his", "how", "ie", "if", "in", "into", "is", "it", "its", "me", "my",  "nor", "not", "now", "of", "on", "or", "she", "so", "such", "than", "that", "the", "their", "them", "then", "these", "they", "this", "those", "to", "was", "which", "while", "will", "the", "your", "putting", "you", "might", "i");

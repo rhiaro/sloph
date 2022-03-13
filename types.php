@@ -69,10 +69,19 @@ $resc = execute_query($ep, $qc);
 $total = $resc["rows"][0]["c"];
 
 $next_uri = null;
+$before = null;
 if(isset($_GET['before'])){
-  $q = query_select_prev_type($typemap[$_GET['type']], $_GET['before'], $sort, $limit, $select_from_graph);
-  
-  $next_q = query_select_next_type($typemap[$_GET['type']], $_GET['before'], $sort, $limit, $select_from_graph);
+  $before = $_GET['before'];
+  if(is_unique($ep, $before, False)){ // Post doesn't exist in present
+    $before = null;
+    unset($_GET['before']);
+  }
+}
+
+if($before != null){
+  $q = query_select_prev_type($typemap[$_GET['type']], $before, $sort, $limit, $select_from_graph);
+
+  $next_q = query_select_next_type($typemap[$_GET['type']], $before, $sort, $limit, $select_from_graph);
   $next_uris = select_to_list(execute_query($ep, $next_q));
   if(count($next_uris) > 0){
     $next_uri = $next_uris[count($next_uris)-1];
