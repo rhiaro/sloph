@@ -38,12 +38,12 @@
     header h1 {
       color: #470229;
     }
-    nav a {
+    header a, nav a {
       color: #470229;
     }
-    nav li a:hover {
+    nav a:hover {
       color: #fff;
-      background-color: #470229;
+      background-color: #470229 !important;
     }
     footer {
       background-color: #470229;

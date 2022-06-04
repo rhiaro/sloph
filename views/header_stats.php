@@ -1,12 +1,12 @@
 <header>
-  <div class="rhiaro">
+  <div id="rhiaro">
     <img src="https://rhiaro.co.uk/stash/dp.png" id="me" alt="closeup picture of me with a parrot in my face" />
     <img src="https://rhiaro.co.uk/stash/dp1.png" id="me" alt="closeup picture of me with a parrot in my hair" />
   </div>
-  <div class="projects">
+  <div id="projects">
     <h1><span>rhiaro</span></h1>
-    <p><span>Timezone: <strong><?=current_timezone($ep);?></strong> (<?=$now->format("jS M H:i")?>)</span></p>
-    <p><span>Currently <strong><a href="<?=$checkin_summary["location_uri"]?>"><?=$checkin_summary["location"]?></a></strong> (for <a href="/where"><?=$checkin_summary["for"]?></a>)</span></p>
+    <p><span>Timezone: <strong><?=current_timezone($ep);?></strong></span> <span class="nobr"><?=$now->format("jS M H:i")?></span></p>
+    <p><a href="<?=$checkin_summary["location_uri"]?>">Currently <?=$checkin_summary["location"]?></a> <a href="/where" class="nobr">for <?=$checkin_summary["for"]?></a></p>
     <p><span style="opacity: 0.8">You may know me from..</span></p>
     <?foreach($project_icons as $group):?>
       <div>
@@ -16,7 +16,7 @@
       </div>
     <?endforeach?>
   </div>
-  <div class="stats">
+  <div id="stats">
     <p><a href="/eats">Last ate</a> <?=time_ago($consume_stats["published"])?> (<a href="<?=$consume_stats["uri"]?>"><?=$consume_stats["content"]?></a>)</p>
     <div class="stat-box"><div style="width: <?=$consume_stats["width"]?>;" class="<?=$consume_stats["color"]?>"></div></div>
     <p>Last exercised <?=time_ago($exercise_stats["published"])?></p>

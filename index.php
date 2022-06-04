@@ -52,8 +52,8 @@ try {
     $resource = $g->toRdfPhp();
 
     include 'views/top.php';
-    include 'views/header_stats.php';
     include 'views/nav_header.php';
+    include 'views/header_stats.php';
   ?>
 
     <main class="wrapper w1of1">
