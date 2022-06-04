@@ -6,6 +6,8 @@
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
 
+.nobr { white-space: nowrap; }
+
 /* Boxes */
 .boxes {
   overflow:hidden;
@@ -30,6 +32,20 @@
   border: 3px solid white;
 }
 
+/*html {scroll-behavior: smooth; }*/
+
+body {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main";
+}
+
+main {
+  grid-area: main;
+}
+
 article {
   margin-left: auto; margin-right: auto;
   width: 90%;
@@ -37,6 +53,12 @@ article {
 }
 
 @media screen and (min-width: 1024px) {
+  body {
+    grid-template-areas:
+    "header"
+    "nav"
+    "main";
+  }
   article {
     width: 50%;
   }
@@ -73,13 +95,13 @@ nav a:hover img {
   opacity: 1;
 }
 /* needs two profile images */
-nav a img:last-child, header div.rhiaro img:last-child {
+nav a img:last-child, header div#rhiaro img:last-child {
   display: none;
 }
-nav a:hover img:last-child, header div.rhiaro:hover img:last-child {
+nav a:hover img:last-child, header div#rhiaro:hover img:last-child {
   display: inline;
 }
-nav a:hover img:first-child, header div.rhiaro:hover img:first-child {
+nav a:hover img:first-child, header div#rhiaro:hover img:first-child {
   display: none;
 }
 
