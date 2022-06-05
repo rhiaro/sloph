@@ -27,7 +27,7 @@ if($in_feed){
       <img class="w1of4" src="<?=$_IMG?>200/0/<?=$item?>" alt="" />
     <?endforeach?>
     <?if($count > count($objects)):?>
-        <p class="more-btn"><em><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>">more</a> &gt;</em></p>
+        <p class="more btn"><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>">more</a></p>
     <?endif?>
   </div>
 
