@@ -21,33 +21,5 @@
     $project_icons = get_project_icons($ep);
 
     /* Views stuff */
-    if(!$resource->get('view:stylesheet')){
-      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
-    }
-    // Hardcoding some stuff for homepage..
-    // TODO: get this from the store
     $resource->addLiteral('view:stylesheet', "views/home.css");
-    $colorschemecss = "
-    header {
-      background-image: url('https://i.amy.gy/headers/20180929_dahlia.jpg');
-      background-color: #470229;
-    }
-    nav {
-      border-bottom: 2px solid #470229;
-    }
-    header h1 {
-      color: #470229;
-    }
-    header a, nav a {
-      color: #470229;
-    }
-    nav a:hover {
-      color: #fff;
-      background-color: #470229 !important;
-    }
-    footer {
-      background-color: #470229;
-    }
-    ";
-    $resource->addLiteral('view:css', $colorschemecss);
 ?>

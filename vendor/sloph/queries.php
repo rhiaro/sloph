@@ -923,6 +923,17 @@ LIMIT $limit";
 
 /* Specific queries */
 
+function query_for_theme($uri="https://rhiaro.co.uk/", $graph="https://rhiaro.co.uk/"){
+  $q = get_prefixes();
+  $q .= "SELECT ?color ?image WHERE {
+  GRAPH <$graph> { 
+    <$uri> as:image ?image .
+    <$uri> view:color ?color .
+  }
+}";
+  return $q;
+}
+
 function query_for_places(){
   $q = get_prefixes();
   $q .= "CONSTRUCT { ?s ?p ?o . } WHERE {

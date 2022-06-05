@@ -88,6 +88,10 @@ try {
 
     $resource = $graph->resource($archive_uri);
 
+    if(!$resource->get('view:stylesheet')){
+      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
+    }
+
     require_once('vendor/sloph/header_stats.php');
 
     $g = $resource->getGraph();

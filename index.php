@@ -26,6 +26,10 @@ try {
 
     $resource = $content->resource($relUri);
 
+    if(!$resource->get('view:stylesheet')){
+      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
+    }
+
     require_once('vendor/sloph/header_stats.php');
 
     // Massively overshoot on first count to balance out disproportionate number of notes vs articles vs adds
@@ -56,7 +60,7 @@ try {
     include 'views/header_stats.php';
   ?>
 
-    <main class="wrapper w1of1">
+    <main class="w1of1">
       <div id="latest">
         <?foreach($latest_posts as $uri => $data):?>
           <? $resource = array($uri => $data); ?>
