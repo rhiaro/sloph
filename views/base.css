@@ -1,3 +1,7 @@
+/**
+ * Visual things that may be overridden by other themes.
+**/
+
 body {
   font-family: Arial;
 }
@@ -45,40 +49,6 @@ summary {
   cursor: pointer;
 }
 
-.object, .object:visited, .object:hover {
-  text-decoration: none;
-  color: inherit;
-  padding: 0.6em;
-  font-size: 1.4em;
-  display: block;
-  opacity: 1; line-height: 1;
-}
-.like {
-  background-color: #fff6a4; opacity: 0.6;
-}
-.bookmark {
-  background-color: #b4e6ee; opacity: 0.6;
-}
-.repost {
-  background-color: #f6a400; opacity: 0.6;
-}
-.object span:first-of-type {
-  font-size: 3em; line-height: 0.8;
-}
-.tags {
-  font-family: sans-serif;
-  font-size: 1em;
-  list-style: none;
-  margin: 0; padding: 0;
-}
-.tags li {
-  display: inline-block;
-}
-
-.stuffholder {
-  display: flex;
-  align-items: stretch;
-}
 time.inline {
   display: inline;
 }
@@ -165,6 +135,87 @@ pre {
   overflow-x: auto;
 }
 
+
+.object, .object:visited, .object:hover {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.6em;
+  font-size: 1.4em;
+  display: block;
+  opacity: 1; line-height: 1;
+}
+.like {
+  background-color: #fff6a4; opacity: 0.6;
+}
+.bookmark {
+  background-color: #b4e6ee; opacity: 0.6;
+}
+.repost {
+  background-color: #f6a400; opacity: 0.6;
+}
+.object span:first-of-type {
+  font-size: 3em; line-height: 0.8;
+}
+.tags {
+  font-family: sans-serif;
+  font-size: 1em;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.tags a {
+  font-size: 0.8em;
+  text-decoration: none!important;
+  padding: 0.4em; margin: 0.4em 0.2em;
+  display: inline-block;
+  color: inherit;
+  border: 1px solid #ccc;
+}
+.tags a:hover {
+  background-color: #ccc;
+}
+.tags li {
+  display: inline-block;
+}
+
+.stuffholder {
+  display: flex;
+  align-items: stretch;
+}
+.stuff {
+  background-size: cover;
+  height: 264px; width: 264px; float: left;
+  margin: 0;
+}
+.stuff p {
+  display: none;
+}
+.stuff:hover p {
+  display: block;
+  background-color: #2d2d2d;
+  opacity: 0.6;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+}
+.stuff p {
+  margin: 0; padding: 0;
+}
+.stuff datetime {
+  font-size: 0.6em;
+  font-family: sans-serif;
+  color: white;
+  line-height: 1;
+}
+.stuff .cost {
+  font-size: 3em;
+}
+
+.map {
+  text-align: center;
+}
+
+
 .note {
   border-left: .5em solid #52E052;
   background: #E9FBE9;
@@ -173,4 +224,8 @@ pre {
   margin: 1em 0;
   padding: 1em 1.2em 0.5em;
   position: relative;
+}
+.wee {
+  font-size: 1em;
+  color: silver;
 }

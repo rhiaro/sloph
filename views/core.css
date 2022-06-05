@@ -1,3 +1,7 @@
+/**
+ * Structural things that apply everywhere.
+**/
+
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -8,61 +12,10 @@
 
 .nobr { white-space: nowrap; }
 
-/* Boxes */
-.boxes {
-  overflow:hidden;
-  text-align: center;
-}
-.box {
-  width: 32px; height: 32px;
-  margin: 2px; padding: 2px;
-  float: right;
-  color: white;
-  font-weight: bold; text-align: center; font-size: 1.6em;
-}
-.wrapper {
-  padding-top: 2em;
-}
-
-.wrapper h1 img {
-  margin: 0;
-  margin-bottom: -2.8em; margin-left: 2em;
-  width: 64px; 
-  /*margin-top: calc(-32px - 2em);*/
-  border: 3px solid white;
-}
-
-/*html {scroll-behavior: smooth; }*/
-
-body {
-  display: grid;
-  grid-template-areas:
-    "nav"
-    "header"
-    "main";
-}
-
-main {
-  grid-area: main;
-}
-
-article {
-  margin-left: auto; margin-right: auto;
-  width: 90%;
-  min-height: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-  body {
-    grid-template-areas:
-    "header"
-    "nav"
-    "main";
-  }
-  article {
-    width: 50%;
-  }
-}
+/**
+ * Non-homepage navigation
+ * TODO: sort this out.
+**/
 
 nav {
   text-align: center;
@@ -105,57 +58,45 @@ nav a:hover img:first-child, header div#rhiaro:hover img:first-child {
   display: none;
 }
 
-#me {
-  background-color: white;
+/**
+ * Grid
+**/
+
+body {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main";
 }
 
-#me article {
-  width: 64%;
-  border-bottom: 1px solid #eee;
-  padding: 2em;
-}
-#me a, #me a:visited {
-  text-decoration: underline;
-  color: inherit;
-}
-#me a:hover {
-  color: white;
-}
-#me time{
-  display: inline;
-}
-#me time a, #me time a:visited {
-  padding: 0.2em;
-  text-decoration: none;
+main {
+  grid-area: main;
 }
 
-#latest a img {
-  max-width: 100%;
-  width: 264px;
-  padding: 4px; border: 1px solid #ccc;
-  text-decoration: none;
-}
-#latest h1 {
-  font-size: 2em;
+article {
+  margin-left: auto; margin-right: auto;
+  width: 90%;
+  min-height: 100%;
 }
 
-.tags a {
-  font-size: 0.8em;
-  text-decoration: none!important;
-  padding: 0.4em; margin: 0.4em 0.2em;
-  display: inline-block;
-  color: inherit;
-  border: 1px solid #ccc;
-}
-.tags a:hover {
-  background-color: #ccc;
-}
-.wee {
-  font-size: 1em;
-  color: silver;
+@media screen and (min-width: 1024px) {
+  body {
+    grid-template-areas:
+    "header"
+    "nav"
+    "main";
+  }
+  article {
+    width: 50%;
+  }
 }
 
-/* Grid */
+/**
+ * Old Grid
+ * Need to keep this here for classes used in post content.
+**/
+
 .w1of1, .w1of2, .w1of3, .w1of4, .w1of5, .w1of7,
 .w2of3, .w3of4, .w2of5, .w3of5, .w4of5 {
     width: 100%;
@@ -204,37 +145,4 @@ article img {
 .imgholder img {
   width: auto; max-height: 90%;
   z-index: -1;
-}
-
-.stuff {
-  background-size: cover;
-  height: 264px; width: 264px; float: left;
-  margin: 0;
-}
-.stuff p {
-  display: none;
-}
-.stuff:hover p {
-  display: block;
-  background-color: #2d2d2d;
-  opacity: 0.6;
-  color: white;
-  font-size: 0.8em;
-  font-weight: bold;
-  text-align: center;
-}
-.stuff p {
-  margin: 0; padding: 0;
-}
-.stuff datetime {
-  font-size: 0.6em;
-  font-family: sans-serif;
-  color: white;
-  line-height: 1;
-}
-.stuff .cost {
-  font-size: 3em;
-}
-.map {
-  text-align: center;
 }
