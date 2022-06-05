@@ -10,6 +10,65 @@ a {
   transition: all 0.3s ease;
 }
 
+header {
+  background-width: 100%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  padding: 1em;
+}
+
+nav {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.4em;
+    text-transform: lowercase;
+}
+nav a {
+    display: block;
+    padding: 0.6em;
+    text-decoration: none;
+}
+nav a +ul {
+    padding: 0; margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s linear;
+}
+nav a:focus {
+    font-weight: bold;
+}
+nav a:focus +ul {
+    max-height: 20em;
+}
+nav ul a:hover {
+    background-color: silver;
+}
+@media screen and (min-width: 1024px) {
+  nav a {
+      display: none;
+  }
+  nav a +ul {
+      max-height: 20em;
+  }
+  nav ul li {
+      display: inline;
+  }
+  nav ul li a {
+      display: inline-block;
+      margin: 0.4em 0 0.4em 0;
+  }
+}
+
+#rhiaro {
+  text-align: center;
+  max-width: 32px;
+}
+#rhiaro img {
+  max-width: 100%;
+  border: 1px solid #fff;
+}
+
 article {
   background-color: white;
   padding: 1em;

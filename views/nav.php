@@ -2,14 +2,11 @@
 if(!isset($nav)){
   $nav = post_nav($ep, $ns, $resource);
 }
+require_once('header.php');
 ?>
-
+<main>
+<?if($nav["next"] || $nav["prev"] || $nav["nexttype"] || $nav["prevtype"]):?>
 <nav>
-  <a href="/">
-    <img src="https://rhiaro.co.uk/stash/dp.png" alt="profile" />
-    <img src="https://rhiaro.co.uk/stash/dp1.png" alt="profile" />
-  </a>
-
   <?if($nav["next"]):?>
     <p><a class="right" href="<?=$nav["next"]?>">Next</a></p>
   <?endif?>
@@ -27,3 +24,4 @@ if(!isset($nav)){
     <?endforeach?>
   <?endif?>
 </nav>
+<?endif?>

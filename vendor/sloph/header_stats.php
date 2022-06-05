@@ -20,6 +20,6 @@
 
     $project_icons = get_project_icons($ep);
 
-    /* Views stuff */
+    /* Views stuff for homepage header only */
     $resource->addLiteral('view:stylesheet', "views/home.css");
 ?>

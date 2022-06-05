@@ -60,14 +60,13 @@ try {
     include 'views/header_stats.php';
   ?>
 
-    <main class="w1of1">
+    <main>
       <div id="latest">
         <?foreach($latest_posts as $uri => $data):?>
           <? $resource = array($uri => $data); ?>
           <? include 'views/'.view_router($resource).'.php'; ?>
         <?endforeach?>
         <nav id="nav"><p><a href="<?=$next?>" id="prev" rel="prev">earlier</a></p></nav>
-        <nav><p><a href="#top">top</a></p></nav>
       </div>
     </main>
 

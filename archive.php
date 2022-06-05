@@ -92,23 +92,16 @@ try {
       $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
     }
 
-    require_once('vendor/sloph/header_stats.php');
-
     $g = $resource->getGraph();
     $resource = $g->toRdfPhp();
 
     include 'views/top.php';
-    include 'views/nav_header.php';
-    include 'views/header_stats.php';
+    include 'views/nav.php';
 ?>
 
-    <main class="wrapper w1of1">
-
-      <div id="archive">
-        <? include 'views/archive.php'; ?>
-      </div>
-      <nav><p><a href="#top">top</a></p></nav>
-    </main>
+    <div id="archive">
+      <? include 'views/archive.php'; ?>
+    </div>
 
 <?
     include 'views/end.php';

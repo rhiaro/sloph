@@ -1,6 +1,7 @@
 /**
  * Structural things that apply everywhere.
 **/
+html, body { height: 100%; }
 
 .clearfix:before,
 .clearfix:after {
@@ -48,13 +49,13 @@ nav a:hover img {
   opacity: 1;
 }
 /* needs two profile images */
-nav a img:last-child, header div#rhiaro img:last-child {
+header #rhiaro img:last-child {
   display: none;
 }
-nav a:hover img:last-child, header div#rhiaro:hover img:last-child {
+header #rhiaro:hover img:last-child {
   display: inline;
 }
-nav a:hover img:first-child, header div#rhiaro:hover img:first-child {
+header #rhiaro:hover img:first-child {
   display: none;
 }
 
@@ -67,11 +68,26 @@ body {
   grid-template-areas:
     "nav"
     "header"
-    "main";
+    "main"
+    "footer";
+  grid-template-rows: max-content max-content 1fr max-content;
+}
+
+header {
+  grid-area: header;
+}
+
+nav:first-of-type {
+  grid-area: nav;
 }
 
 main {
   grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  min-height: 1em;
 }
 
 article {
@@ -84,7 +100,8 @@ article {
     grid-template-areas:
     "header"
     "nav"
-    "main";
+    "main"
+    "footer";
   }
   article {
     width: 50%;
