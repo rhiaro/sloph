@@ -23,7 +23,7 @@ $graph->addLiteral($archive_uri, "view:stylesheet", "views/base.css");
 $graph->addLiteral($archive_uri, "view:stylesheet", "views/photos.css");
 
 if($album_data){
-  
+
   $graph->parse($album_data, 'php');
 
   $adds_q = query_construct_adds($archive_uri);
@@ -83,30 +83,23 @@ try {
 
     $resource = $graph->resource($archive_uri);
 
-    require_once('vendor/sloph/header_stats.php');
-
     $g = $resource->getGraph();
     $resource = $g->toRdfPhp();
 
     include 'views/top.php';
-    include 'views/nav_header.php';
-    include 'views/header_stats.php';
+    include 'views/nav.php';
 
 ?>
+    <div id="photos">
+      <?
+      if(!isset($album_data)){
+        include 'views/photos.php';
+      }else{
+        include 'views/album.php';
+      }
+      ?>
+    </div>
 
-    <main class="wrapper w1of1">
-
-      <div id="photos">
-        <?
-        if(!isset($album_data)){
-          include 'views/photos.php';
-        }else{
-          include 'views/album.php';
-        }
-        ?>
-      </div>
-      <nav><p><a href="#top">top</a></p></nav>
-    </main>
     <script>
       var proxyUrl ='<?=$_IMG?>';
     </script>

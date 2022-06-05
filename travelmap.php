@@ -37,20 +37,14 @@ try {
 
     $resource = $graph->resource($travelmap_uri);
 
-    require_once('vendor/sloph/header_stats.php');
-
     $g = $resource->getGraph();
     $resource = $g->toRdfPhp();
 
     $external_styles = array("https://unpkg.com/leaflet@1.6.0/dist/leaflet.css");
 
     include 'views/top.php';
-    include 'views/nav_header.php';
-    include 'views/header_stats.php';
+    include 'views/nav.php';
 ?>
-
-    <main class="w1of1">
-
       <div id="themap" style="display:none"></div>
 
       <article id="tablewrapper">
@@ -87,7 +81,6 @@ try {
         </tbody>
       </table>
     </article>
-    </main>
 
     <script>
       document.getElementById("themap").style.display = "block";
