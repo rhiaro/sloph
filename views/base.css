@@ -6,6 +6,10 @@ body {
   font-family: Arial;
 }
 
+a {
+  transition: all 0.3s ease;
+}
+
 article {
   background-color: white;
   padding: 1em;
@@ -62,13 +66,6 @@ time.inline a {
 }
 time.inline a:hover {
   text-decoration: underline;
-}
-.stuffholder p.desc{
-  flex-grow: 4;
-}
-.stuffholder p {
-  margin: 0;
-  padding-left: 0.4em;
 }
 
 aside {
@@ -181,6 +178,13 @@ pre {
   display: flex;
   align-items: stretch;
 }
+.stuffholder p.desc{
+  flex-grow: 4;
+}
+.stuffholder p {
+  margin: 0;
+  padding-left: 0.4em;
+}
 .stuff {
   background-size: cover;
   height: 264px; width: 264px; float: left;
@@ -216,6 +220,25 @@ pre {
 }
 
 
+.btn a {
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 0.4em;
+  background-color: silver;
+  color: white;
+  border: 2px solid silver;
+}
+.btn a:hover {
+  color: silver;
+  background-color: white;
+}
+.more {
+  text-align: right;
+  font-size: 1em;
+}
+.more a:after {
+  content: " >";
+}
 .note {
   border-left: .5em solid #52E052;
   background: #E9FBE9;
