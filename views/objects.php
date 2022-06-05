@@ -18,7 +18,7 @@ if($in_feed){
 <article>
   <h2><span>&#128449;</span>Added <?=$count?> photos to album <a href="/photos/?album=<?=get_value($resource, 'as:target')?>"><?=get_name($ep, get_value($resource, 'as:target'))?></a>.</h2>
 
-  <?if(count($objects) > 8):?>
+  <?if(count($objects) > 8 || $in_feed):?>
       <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
   <?endif?>
 
@@ -27,11 +27,11 @@ if($in_feed){
       <img class="w1of4" src="<?=$_IMG?>200/0/<?=$item?>" alt="" />
     <?endforeach?>
     <?if($count > count($objects)):?>
-        <p style="text-align: right"><em><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>">more</a> &gt;</em></p>
+        <p class="more-btn"><em><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>">more</a> &gt;</em></p>
     <?endif?>
   </div>
 
-  <?if(count($objects) <= 8):?>
+  <?if(count($objects) <= 8 && !$in_feed):?>
       <?=get_value($resource, 'as:content') ? "<p>".get_value($resource, 'as:content')."</p>" : "" ?>
   <?endif?>
 
