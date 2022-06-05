@@ -58,6 +58,16 @@ function collection_items_graph($collection){
 /* Visual things      */
 /**********************/
 
+function get_main_theme($ep){
+  $q = query_for_theme();
+  $r = execute_query($ep, $q);
+  if($r){
+    return $r["rows"][0];
+  }else{
+    return array("color"=>"silver","image"=>"");
+  }
+}
+
 function get_icon($resource){
   $types = get_values($resource, "rdf:type");
   foreach($types as $type){

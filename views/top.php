@@ -1,14 +1,20 @@
+<?
+$theme = get_main_theme($ep);
+$styles = get_values($resource, 'view:stylesheet', $content->getUri());
+$outbox = get_values("https://rhiaro.co.uk/#me", "as:outbox");
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?=get_value($resource, 'as:name', $content->getUri())?></title>
     <link rel="stylesheet" type="text/css" href="/views/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="/views/core.css" />
-    <? $outbox = get_values("https://rhiaro.co.uk/#me", "as:outbox"); ?>
-    <?if(isset($outbox)):?>
-      <link about="https://rhiaro.co.uk/#me" rel="as:outbox" href="<?=$outbox?>" />
-    <?endif?>
+
+  <?if(isset($outbox)):?>
+    <link about="https://rhiaro.co.uk/#me" rel="as:outbox" href="<?=$outbox?>" />
+  <?endif?>
 
   <?if(isset($external_styles) && is_array($external_styles)):?>
     <?foreach($external_styles as $style):?>
@@ -16,14 +22,23 @@
     <?endforeach?>
   <?endif?>
 
-    <? $styles = get_values($resource, 'view:stylesheet', $content->getUri()); ?>
   <?if(isset($styles) && is_array($styles)):?>
     <?foreach($styles as $style):?>
       <link rel="stylesheet" type="text/css" href="/<?=$style?>" />
     <?endforeach?>
   <?endif?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <style>
+
+      header { background-color: <?=$theme["color"]?>; background-image: url('<?=$theme["image"]?>'); }
+      header h1 { color: <?=$theme["color"]?>; }
+      nav { border-bottom: 2px solid <?=$theme["color"]?>; }
+      header a, nav a { color: <?=$theme["color"]?>; }
+      nav a:hover { color: #fff; background-color: <?=$theme["color"]?> !important; }
+      .btn a { background-color: <?=$theme["color"]?>; }
+      .btn a:hover { color: <?=$theme["color"]?>; }
+      footer { background-color: <?=$theme["color"]?>; }
+
       <?=get_value($resource, 'view:css')?>
     </style>
   </head>
