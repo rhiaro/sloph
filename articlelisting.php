@@ -96,81 +96,9 @@ try {
     krsort($sorted_by_month);
 
     // unset nav
-    $nav["next"] = $nav["prev"] = false;
-    include 'views/nav.php';
-    include 'views/top.php';
-?>
-<article class="h-entry" typeof="as:Article" about="">
-  <h1>Articles index</h1>
-  <form id="filter">
-    <label>Filter</label>
-    <select name="yfilter" id="yfilter">
-      <option value="0"<?=!isset($yinclude) ? " selected" : ""?>>all years</option>
-      <?foreach($y_filter_opts as $y):?>
-        <option value="<?=$y?>"<?=(isset($yinclude) && $yinclude==$y) ? " selected": ""?>><?=$y?></option>
-      <?endforeach?>
-    </select>
-    <select name="mfilter" id="mfilter">
-      <option value="0"<?=!isset($minclude) ? " selected" : ""?>>all months</option>
-      <?if(isset($yinclude)):?>
-        <?foreach($m_filter_opts[$yinclude] as $m):?>
-          <option value="<?=$m?>"<?=(isset($minclude) && $minclude==$m) ? " selected" : ""?>><?=$monthname[$m]?></option>
-        <?endforeach?>
-      <?else:?>
-        <?foreach($monthname as $m => $name):?>
-          <option value="<?=$m?>"<?=(isset($minclude) && $minclude==$m) ? " selected" : ""?>><?=$name?></option>
-        <?endforeach?>
-      <?endif?>
-    </select>
-    <input type="submit" value="filter" name="filter" />
-  </form>
-  <?foreach($sorted_by_month as $year => $months):?>
-    <div id="<?=$year?>">
-    <h2><?=$year?></h2>
-      <?foreach($months as $month => $articles):?>
-        <h3><?=$monthname[$month]?></h3>
-        <ul id="<?=$month?>">
-          <?foreach($articles as $uri => $data):?>
-            <li><a href="<?=$uri?>"><?=article_name($uri,$data)?></a></li>
-          <?endforeach?>
-        </ul>
-      <?endforeach?>
-    </div>
-  <?endforeach?>
-
-</article>
-<script>
-  var yearSelect = document.getElementById("yfilter");
-  var monthSelect = document.getElementById("mfilter");
-  var years = document.querySelectorAll("div");
-  var months = document.querySelectorAll("ul");
-  var sub = document.querySelector("input[type='submit']");
-  sub.parentNode.removeChild(sub);
-
-  yearSelect.addEventListener("change", function(e){
-    years.forEach(function(ydiv){
-      if(ydiv.id != e.target.value && e.target.value != "0"){
-        ydiv.style.display = "none";
-      }else{
-        ydiv.style.display = "block";
-      }
-    });
-  });
-
-  monthSelect.addEventListener("change", function(e){
-    months.forEach(function(mdiv){
-      if(mdiv.id != e.target.value && e.target.value != "0"){
-        mdiv.style.display = "none";
-        mdiv.previousElementSibling.style.display = "none";
-      }else{
-        mdiv.style.display = "block";
-        mdiv.previousElementSibling.style.display = "block";
-      }
-    });
-  });
-</script>
-<?
-    include 'views/end.php';
+    $nav["next"] = $nav["prev"] = $nav["nexttype"] = $nav["prevtype"] = false;
+    $includes = array("listing_articles.php");
+    include 'views/page_template.php';
   }
 }catch(Exception $e){
   var_dump($e);

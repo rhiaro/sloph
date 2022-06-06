@@ -118,12 +118,8 @@ try {
     $resource = merge_graphs(array(new EasyRdf_Graph($styled), $content), $content->getUri());
     $resource = $resource->toRdfPhp();
 
-    include 'views/top.php';
-    include 'views/nav.php';
-    include 'views/'.view_router($resource).'.php';
-    include 'views/nav.php';
-    include 'views/end.php';
-
+    $includes = array(view_router($resource).'.php');
+    include 'views/page_template.php';
   }
 }catch(Exception $e){
   var_dump($e);

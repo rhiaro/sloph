@@ -22,24 +22,7 @@ $content->add($uri, 'view:stylesheet', 'views/base.css');
 $content->add($uri, 'view:stylesheet', 'views/search.css');
 $resource = $content->toRdfPhp();
 
-include 'views/top.php';
-
-?>
-<article>
-	<h1><?=count($tags)?> tags</h1>
-	<form>
-		<p>
-			<input type="text" placeholder="Search" name="q" id="tagsearch" /> 
-			<input type="submit" value="Search" id="searchsubmit" />
-		</p>
-	</form>
-	<ul class="tags" id="tagslist">
-	<?foreach($tags as $uri => $tag):?>
-		<li><a href="<?=$uri?>"><?=$tag['name']?> (<?=$tag['count']?>)</a></li>
-	<?endforeach?>
-	</ul>
-</article>
-<?
+$includes = array('listing_tags.php');
 $scripts = ["/views/tagsearch.js"];
-include 'views/end.php';
+include 'views/page_template.php';
 ?>

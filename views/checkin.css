@@ -1,24 +1,21 @@
-@import url('polaroid.css'); /*  - how to get different css for specific checkins?*/
+@import url('base.css'); /* this is a hack */
 article {
   text-align: center;
 }
-article p { 
-  font-size: 1.6em; 
+article p {
+  font-size: 1.6em;
   margin: 0;
-}
-article p.tags { 
-  font-size: 1em; 
-  text-align: left;
 }
 article a, article a:visited {
   text-decoration: none;
   color: inherit;
 }
-
 article a:hover {
   background-color: white;
 }
-
+a.btn {
+  padding: 0.2em;
+}
 .map {
   font-size: 0.8em;
 }
