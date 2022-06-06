@@ -95,16 +95,8 @@ try {
     $g = $resource->getGraph();
     $resource = $g->toRdfPhp();
 
-    include 'views/top.php';
-    include 'views/nav.php';
-?>
-
-    <div id="archive">
-      <? include 'views/archive.php'; ?>
-    </div>
-
-<?
-    include 'views/end.php';
+    $includes = array('listing_archive.php');
+    include 'views/page_template.php';
   }
 }catch(Exception $e){
   var_dump($e);

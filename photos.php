@@ -86,26 +86,13 @@ try {
     $g = $resource->getGraph();
     $resource = $g->toRdfPhp();
 
-    include 'views/top.php';
-    include 'views/nav.php';
-
-?>
-    <div id="photos">
-      <?
-      if(!isset($album_data)){
-        include 'views/photos.php';
-      }else{
-        include 'views/album.php';
-      }
-      ?>
-    </div>
-
-    <script>
-      var proxyUrl ='<?=$_IMG?>';
-    </script>
-    <?
-    $scripts = array("/views/images.js");
-    include 'views/end.php';
+    if(!isset($album_data)){
+      $includes = array('listing_photos.php');
+    }else{
+      $includes = array('album.php');
+      $scripts = array("/views/images.js");
+    }
+    include 'views/page_template.php';
   }
 }catch(Exception $e){
   var_dump($e);

@@ -61,7 +61,7 @@ function collection_items_graph($collection){
 function get_main_theme($ep){
   $q = query_for_theme();
   $r = execute_query($ep, $q);
-  if($r){
+  if($r["rows"]){
     return $r["rows"][0];
   }else{
     return array("color"=>"silver","image"=>"");
@@ -964,13 +964,13 @@ function set_views($ep, $resource){
 
   // Background colour for places and checkins
   if($resource->get('view:color') && !$resource->get('view:css')){
-    $resource->addLiteral('view:css', "body { background-color: ".$resource->get('view:color')."; }\n");
+    $resource->addLiteral('view:css', "h1 { color: ".$resource->get('view:color')."; }\n");
   }
   if($resource->isA('as:Arrive')){
     $loc = get($ep, $resource->get('as:location'));
     $loc = $loc['content'];
     if($loc){
-      $resource->addLiteral('view:css', "body { background-color: ".$loc->get($resource->get('as:location'), 'view:color')."; }\n");
+      $resource->addLiteral('view:css', ".btn { background-color: ".$loc->get($resource->get('as:location'), 'view:color')."; }\n");
     }
   }
   return $resource;

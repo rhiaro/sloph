@@ -37,15 +37,9 @@ try {
     $g = $resource->getGraph();
     $resource = $g->toRdfPhp();
 
-    include 'views/top.php';
-    include 'views/nav.php';
-?>
-    <div id="contact">
-      <? include 'views/article.php'; ?>
-    </div>
+    $includes = array('article.php');
+    include 'views/page_template.php';
 
-<?
-    include 'views/end.php';
   }
 }catch(Exception $e){
   var_dump($e);

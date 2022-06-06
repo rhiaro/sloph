@@ -2,9 +2,7 @@
 if(!isset($nav)){
   $nav = post_nav($ep, $ns, $resource);
 }
-require_once('header.php');
 ?>
-<main>
 <?if($nav["next"] || $nav["prev"] || $nav["nexttype"] || $nav["prevtype"]):?>
 <nav>
   <?if($nav["next"]):?>

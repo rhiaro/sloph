@@ -60,25 +60,26 @@
 
 <article>
   <h1><?=get_value($resource, 'as:name') ? get_value($resource, 'as:name') : "Travel plan"?> <?=get_travel_icon_from_tags(get_values($resource, 'as:tag'))?></h1>
-  <p>Made on 
-    <datetime>
-      <a href="<?=str_replace("https://rhiaro.co.uk/", "", get_uri($resource))?>"><?=$date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?></a>
-    </datetime>
-    <?=get_value($resource, 'asext:cost') ? " at a cost of ".get_value($resource, 'asext:cost') : ""?>
-  </p>
-  <? include('tags.php'); ?>
 
-  <?if($err):?>
-    <p class="fail"><em>Failed to get place information and map :(</em></p>
-  <?endif?>
-  <p class="w1of1"><img src="<?=$map?>" /></p>
   <p>
     <?=(get_value($resource, "asext:status")) ? "<del>" : ""?>
     Leaving <a href="<?=get_value($resource, 'as:origin')?>"><?=$from_name?></a> at <?=$from_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?> and arriving in <a href="<?=get_value($resource, 'as:target')?>"><?=$to_name?></a> at <?=$to_date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?>
     <?=(get_value($resource, "asext:status")) ? "</del>" : ""?>
     <?=(get_value($resource, "asext:status")) ? " <strong>".get_value($resource, "asext:status")."!</strong>" : ""?>
   </p>
-
   <?=get_value($resource, 'as:content')?>
+    <?=get_value($resource, 'asext:cost') ? " at a cost of ".get_value($resource, 'asext:cost') : ""?>
+
+  <?if($err):?>
+    <p class="fail"><em>Failed to get place information and map :(</em></p>
+  <?endif?>
+  <p class="w1of1"><img src="<?=$map?>" /></p>
+
+  <p>
+    <time>
+      Plan made or recorded at <a href="<?=str_replace("https://rhiaro.co.uk/", "", get_uri($resource))?>"><?=$date->format("g:ia (e) \o\\n l \\t\h\\e jS \o\\f F Y")?></a>
+    </time>
+  </p>
+  <? include('tags.php'); ?>
 
 </article>

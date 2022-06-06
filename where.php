@@ -38,7 +38,7 @@ if($r2){
     $nothome = $r2["rows"][0]["s"];
     $q3 = query_select_s_next_of_type($nothome, "as:Arrive");
     $r3 = execute_query($ep, $q3);
-    if($r3){
+    if($r3["rows"]){
         $now = new DateTime();
         $date = new DateTime($r3["rows"][0]["d"]);
         $homefor = time_diff_to_human($date, $now);
@@ -58,22 +58,8 @@ try {
     $resource = merge_graphs(array(new EasyRdf_Graph($styled), $content), $content->getUri());
     $resource = $resource->toRdfPhp();
 
-    include 'views/top.php';
-    include 'views/nav.php';
-    include 'views/'.view_router($resource).'.php';
-
-    if(isset($homefor)){
-?>
-<article>
-    <div style="border: 1px solid white; opacity: 0.6; margin-top: 2em; margin-bottom: 2em; padding: 0.6em">
-it has been <p><?=$homefor?></p> since rhiaro last went outside
-    </div>
-</article>
-<?
-    }
-    include 'views/nav.php';
-    include 'views/end.php';
-
+    $includes = array(view_router($resource).'.php');
+    include 'views/page_template.php';
   }
 }catch(Exception $e){
   var_dump($e);

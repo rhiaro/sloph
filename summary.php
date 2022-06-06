@@ -1,6 +1,19 @@
 <?
+session_start();
 require_once("vendor/init.php");
 require_once("vendor/sloph/summary.php");
+
+$headers = apache_request_headers();
+$ct = $headers["Accept"];
+$acceptheaders = new AcceptHeader($ct);
+
+$base = "https://rhiaro.co.uk";
+
+$summary_uri = "https://rhiaro.co.uk/summary";
+$graph = new EasyRdf_Graph($summary_uri);
+$graph->addType($summary_uri, "as:Article");
+$graph->add($summary_uri, "as:name", "Summary");
+$graph->add($summary_uri, "as:summary", "Aggregation of various logs between two dates.");
 
 $now = new DateTime();
 if(isset($_GET['from'])){
@@ -29,6 +42,31 @@ $travel = aggregate_travel($posts, $from, $to);
 
 $total = $checkins['total'] + $acquires['total'] + $consumes['total'] + $writing['total'] + $socials['total'];
 
-include("views/summary.php");
+$result = conneg($acceptheaders, $graph);
+$header = $result['header'];
+$content = $result['content'];
+
+try {
+  if(gettype($content) == "string"){
+    header($header);
+    echo $content;
+  }else{
+
+    $resource = $graph->resource($summary_uri);
+
+    if(!$resource->get('view:stylesheet')){
+      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
+    }
+
+    $g = $resource->getGraph();
+    $resource = $g->toRdfPhp();
+
+    $includes = array('listing_summary.php');
+    include 'views/page_template.php';
+
+  }
+}catch(Exception $e){
+  var_dump($e);
+}
 
 ?>

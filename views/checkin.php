@@ -45,8 +45,8 @@ if(isset($prev_date)){
     <time class="inline" datetime="<?=$date->format(DATE_ATOM)?>" title="<?=$date->format(DATE_ATOM)?>"><a href="<?=str_replace("https://rhiaro.co.uk", "", get_uri($resource))?>"><?=$date->format("g:ia")?></a></time>
   <?endif?>
   <?if(get_value($location, 'blog:pastLabel')):?>
-    <p style="display:inline">
-      <a href="<?=get_value($resource, 'as:location')?>"><?=isset($nextdate) ? get_value($location, 'blog:pastLabel') : get_value($location, 'blog:presentLabel')?></a> for
+    <p style="display: inline;">rhiaro
+      <a class="btn" href="<?=get_value($resource, 'as:location')?>"><?=isset($nextdate) ? get_value($location, 'blog:pastLabel') : get_value($location, 'blog:presentLabel')?></a> for
       <?=($duration->y > 0) ? $duration->y . " years, " : ""?>
       <?=($duration->m > 0) ? $duration->m . " months, " : ""?>
       <?=($duration->d > 0) ? $duration->d . " days, " : ""?>
@@ -65,6 +65,12 @@ if(isset($prev_date)){
 
   <?if(get_values($resource, 'as:tag')):?>
 
+  <?endif?>
+
+  <?if(isset($homefor)):?>
+    <div style="border: 1px solid white; opacity: 0.6; margin-top: 2em; margin-bottom: 2em; padding: 0.6em">
+it has been <p><?=$homefor?></p> since rhiaro last went outside
+    </div>
   <?endif?>
 
 </article>

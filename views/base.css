@@ -1,5 +1,7 @@
 /**
- * Visual things that may be overridden by other themes.
+ * Fallback things in case no other theme is present.
+ * Anything that should always show regardless of theme
+ * should be in core.css. However, this is not currently the case.
 **/
 
 body {
@@ -58,6 +60,14 @@ nav ul a:hover {
       display: inline-block;
       margin: 0.4em 0 0.4em 0;
   }
+}
+
+main nav {
+  font-size: 1em;
+  border-bottom: 0;
+}
+main nav p {
+  margin: 0;
 }
 
 #rhiaro {

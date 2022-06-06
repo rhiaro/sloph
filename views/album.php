@@ -16,3 +16,6 @@
   <?endforeach?>
 
 </article>
+<script>
+  var proxyUrl ='<?=$_IMG?>';
+</script>
