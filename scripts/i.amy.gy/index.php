@@ -53,7 +53,7 @@ foreach($acceptheaders as $accept){
     <h1>Photo albums</h1>
     <ul>
     <?foreach($coll["items"] as $i):?>
-      <li><a href="https://rhiaro.co.uk/photos?album=<?=$i?>"><?=$i?></a></li>
+      <li><a href="https://rhiaro.co.uk/photos?album=<?=$i?>/"><?=$i?></a></li>
     <?endforeach?>
     </ul>
   </body>
