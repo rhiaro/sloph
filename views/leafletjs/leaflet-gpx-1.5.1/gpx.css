@@ -1,0 +1,12 @@
+.gpx { width: 100%; margin: 1em auto; }
+.gpx article { width: 100%; margin: 0; padding: 0; }
+.gpx header { padding: 0.5em; }
+.gpx h3 { margin: 0; padding: 0; font-weight: bold; }
+.gpx .start { font-size: smaller; color: #444; }
+.gpx .map { border: 1px #888 solid; border-left: none; border-right: none;
+  width: 100%; height: 500px; margin: 0; }
+.gpx footer { background: #f0f0f0; padding: 0.5em; }
+.gpx ul.info { list-style: none; margin: 0; padding: 0; font-size: smaller; }
+.gpx ul.info li { color: #666; padding: 2px; display: inline; }
+.gpx ul.info li span { color: black; }
+.hidden { display: none; }
