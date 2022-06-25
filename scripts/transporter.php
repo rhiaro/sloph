@@ -1,4 +1,5 @@
 <?
+echo phpinfo();
 require_once('../vendor/init.php');
 
 $now = new DateTime();
@@ -13,6 +14,12 @@ function fetch_album($url){
   $response = curl_exec($ch);
   curl_close($ch);
   return $response;
+}
+
+function fetch_albums(){
+  $r = fetch_album("https://i.amy.gy/");
+  $c = json_decode($r, true);
+  return $c["items"];
 }
 
 function update_album_date($ep, $album, $date){
@@ -134,6 +141,9 @@ foreach($collection['items'] as $img){
 
 if(isset($_GET['add'])){
 
+  // Get albums as seen by i.amy.gy
+  $albums = fetch_albums();
+
   if(!isset($_SESSION['items']) && isset($_GET['collection'])){
     $response = fetch_album($_GET['collection']);
     $collection = json_decode($response, true);
@@ -167,6 +177,13 @@ if(isset($_GET['add'])){
     $ra = execute_query($ep, $qa);
     $adds[$r['s']] = $ra[$r['s']];
   }
+
+  // Get albums as seen by rhiaro.co.uk 
+  // HERENOW - idea is to list how many unadded photos there are in each album
+  // $q_cols = query_construct_collections_from_adds();
+  // $r_cols = execute_query($ep, $q_cols);
+  // krsort($r_cols);
+  // var_dump($r_cols);
 }
 
 /*********************************************************************************/
@@ -182,7 +199,9 @@ if(isset($_GET['add'])){
     <link rel="stylesheet" href="../views/core.css" />
     <style type="text/css">
     img { width: 300px; }
-    input[type=text], textarea { width: 50%; padding: 0.6em; }
+    form { padding: 1em; }
+    .fields { max-width: 800px; margin-left: auto; margin-right: auto; }
+    input[type=text], input[type=submit], textarea { padding: 0.6em; width:  97%; }
     </style>
   </head>
   <body>
@@ -192,29 +211,35 @@ if(isset($_GET['add'])){
         <a href="?add=1">Add</a> | <a href="?">Attach</a>
       </p>
     </nav>
-
+    <main>
     <?if(isset($_GET['add'])):?>
 
       <h1>Add</h1>
 
-      <form>
+      <form id="album" class="fields">
         <p>
-          <label for="collection">Collection</label>: <input type="text" value="<?=isset($_GET['collection']) ? $_GET['collection'] : "https://i.amy.gy/"?>" id="collection" name="collection" />
+          <label for="collection">Collection</label>:
+          <select id="collection" name="collection">
+            <?foreach($albums as $album):?>
+              <option value="<?=$album."/"?>"<?=isset($_GET['collection']) && $album."/" == $_GET['collection'] ? " selected" : ""?>><?=str_replace("https://i.amy.gy/", "", $album)?></option>
+            <?endforeach?>
+          </select>
           <input type="submit" value="Fetch" name="add" />
         </p>
       </form>
 
       <form class="w1of1" method="post" id="adds">
+        <div class="fields">
+          <p><label for="published">Published</label>: <input type="text" value="<?=$now->format(DATE_ATOM)?>" name="published" id="published" /></p>
+          <p><label for="uri">URI</label>: <input type="text" value="https://rhiaro.co.uk/<?=$now->format("Y")?>/<?=$now->format("m")?>/<?=uniqid()?>" name="uri" id="uri" /></p>
 
-        <p><label for="published">Published</label>: <input type="text" value="<?=$now->format(DATE_ATOM)?>" name="published" id="published" /></p>
-        <p><label for="uri">URI</label>: <input type="text" value="https://rhiaro.co.uk/<?=$now->format("Y")?>/<?=$now->format("m")?>/<?=uniqid()?>" name="uri" id="uri" /></p>
+          <p><label for="content">Content</label>:
+          <textarea id="content" name="content" ></textarea></p>
 
-        <p><label for="content">Content</label></p>
-        <p><textarea id="content" name="content" ></textarea></p>
+          <p><label for="collection">Collection</label>: <input type="text" value="<?=isset($_GET['collection']) ? $_GET['collection'] : ""?>" name="collection" id="collection" /></p>
 
-        <p><label for="collection">Collection</label>: <input type="text" value="<?=isset($_GET['collection']) ? $_GET['collection'] : ""?>" name="collection" id="collection" /></p>
-
-        <p><input type="submit" value="Engage" name="engage" /></p>
+          <p><input type="submit" value="Engage" name="engage" /></p>
+        </div>
 
         <?if(isset($_SESSION['items'])):?>
           <?foreach($_SESSION['items'] as $item):?>
@@ -230,7 +255,7 @@ if(isset($_GET['add'])){
             }
             ?>
             <div style="float:left;<?=!in_array($item, $added) ? " font-weight: bold;" : ""?>">
-              <p><input type="checkbox" name="items[]" value="<?=$item?>" id="<?=$item?>" /> <label for="<?=$item?>"><a href="<?=$item?>"><?=$item?></a> <br/>
+              <p><input type="checkbox" name="items[]" value="<?=$item?>" id="<?=$item?>" /> <label for="<?=$item?>"><a target="_blank" href="<?=$item?>"><?=$item?></a> <br/>
               <?if(!in_array($item, $added)):?>
                 <img src="<?=$_IMG?>200/0/<?=$item?>" />
               <?endif?>
@@ -242,14 +267,6 @@ if(isset($_GET['add'])){
         <p><input type="submit" value="Engage" name="engage" /></p>
 
       </form>
-      <? //var_dump($adds);?>
-      <?if(isset($adds)):?>
-        <ul>
-          <?foreach($adds as $auri => $add):?>
-            <li><a href="<?=$auri?>"><?=isset($add["https://www.w3.org/ns/activitystreams#summary"]) ? $add["https://www.w3.org/ns/activitystreams#summary"][0]["value"] : $auri?></a></li>
-          <?endforeach?>
-        </ul>
-      <?endif?>
 
     <?else:?>
       <h1><a href="?month=<?=$_GET['month']?>"><?=$_GET['month']?></a></h1>
@@ -288,6 +305,7 @@ if(isset($_GET['add'])){
 
       </form>
     <?endif?>
+    </main>
   
   </body>
 </html>
