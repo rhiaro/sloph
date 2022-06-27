@@ -1,4 +1,7 @@
 <?
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once("AcceptHeader.php");
 
 function make_collection(){
@@ -13,7 +16,16 @@ function make_collection(){
               , "items" => array()
               );
   foreach($dirs as $dir){
-    $coll["items"][] = $cur.$dir;
+    $imgs = glob($dir."/IMG_*_*.jpg", GLOB_BRACE);
+    if(!empty($imgs)){
+      rsort($imgs);
+      $latest = str_ireplace(".jpg", "", str_ireplace("_hdr", "", explode("/IMG_", $imgs[0])));
+      $updated = DateTime::createFromFormat("Ymd_His", $latest[1]);
+      $coll["items"][] = array("id" => $cur.$dir."/",
+                               "totalItems" => count($imgs),
+                               "updated" => $updated->format(DATE_ATOM)
+                                );
+    }
   }
   return $coll;
 }
@@ -53,7 +65,7 @@ foreach($acceptheaders as $accept){
     <h1>Photo albums</h1>
     <ul>
     <?foreach($coll["items"] as $i):?>
-      <li><a href="https://rhiaro.co.uk/photos?album=<?=$i?>/"><?=$i?></a></li>
+      <li><a href="https://rhiaro.co.uk/photos?album=<?=$i["id"]?>/"><?=$i["id"]?> (<?=$i["totalItems"]?> photos, last updated <?=$i["updated"]?>)</a></li>
     <?endforeach?>
     </ul>
   </body>
