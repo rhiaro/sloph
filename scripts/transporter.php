@@ -1,5 +1,9 @@
 <?
+ini_set('memory_limit', '256M');
 session_start();
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 require_once('../vendor/init.php');
 
 $now = new DateTime();
@@ -141,7 +145,7 @@ foreach($collection['items'] as $img){
 
 if(isset($_GET['add'])){
 
-  if(!isset($_SESSION['items']) && isset($_GET['collection'])){
+  if((!isset($_SESSION['items']) && isset($_GET['collection'])) || $_GET['add'] == 'Fetch'){
     $response = fetch_album($_GET['collection']);
     $collection = json_decode($response, true);
     rsort($collection['items']);
