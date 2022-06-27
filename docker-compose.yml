@@ -33,5 +33,6 @@ services:
     volumes:
       - /home/rhiaro/Documents/rhiaro/sloph:/var/www/html
       - /home/rhiaro/Documents/rhiaro/apps:/var/www/html/apps
+      - /home/rhiaro/Documents/rhiaro/sloph/php/php.ini:/usr/local/etc/php/php.ini
     depends_on:
       - mysql
