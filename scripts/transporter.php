@@ -1,5 +1,5 @@
 <?
-echo phpinfo();
+session_start();
 require_once('../vendor/init.php');
 
 $now = new DateTime();
@@ -141,9 +141,6 @@ foreach($collection['items'] as $img){
 
 if(isset($_GET['add'])){
 
-  // Get albums as seen by i.amy.gy
-  $albums = fetch_albums();
-
   if(!isset($_SESSION['items']) && isset($_GET['collection'])){
     $response = fetch_album($_GET['collection']);
     $collection = json_decode($response, true);
@@ -178,12 +175,38 @@ if(isset($_GET['add'])){
     $adds[$r['s']] = $ra[$r['s']];
   }
 
-  // Get albums as seen by rhiaro.co.uk 
-  // HERENOW - idea is to list how many unadded photos there are in each album
-  // $q_cols = query_construct_collections_from_adds();
-  // $r_cols = execute_query($ep, $q_cols);
-  // krsort($r_cols);
-  // var_dump($r_cols);
+  if(!isset($_SESSION['albums'])){
+    // Get albums as seen by i.amy.gy
+    $albums = fetch_albums();
+
+    // Get albums as seen by rhiaro.co.uk
+    $q_cols = query_construct_collections_from_adds();
+    $r_cols = execute_query($ep, $q_cols);
+    unset($r_cols["https://rhiaro.co.uk/bookmarks/"]);
+
+    $sorted = array();
+    foreach($albums as $album){
+      if(array_key_exists($album["id"], $r_cols)){
+        $added = get_values(array($album["id"] => $r_cols[$album["id"]]), "as:items");
+      }else{
+        $added = array();
+      }
+      if(count($added) < $album["totalItems"]){
+        $sorted[$album["id"]] = array(
+          "total" => $album["totalItems"],
+          "added" => count($added),
+          "updated" => $album["updated"]
+        );
+      }
+    }
+    uasort($sorted, function ($a, $b) {
+      return strtotime($b["updated"]) - strtotime($a["updated"]);
+    });
+    $_SESSION['albums'] = $sorted;
+  }else{
+    $sorted = $_SESSION['albums'];
+  }
+
 }
 
 /*********************************************************************************/
@@ -220,8 +243,8 @@ if(isset($_GET['add'])){
         <p>
           <label for="collection">Collection</label>:
           <select id="collection" name="collection">
-            <?foreach($albums as $album):?>
-              <option value="<?=$album."/"?>"<?=isset($_GET['collection']) && $album."/" == $_GET['collection'] ? " selected" : ""?>><?=str_replace("https://i.amy.gy/", "", $album)?></option>
+            <?foreach($sorted as $uri => $counts):?>
+              <option value="<?=$uri?>"<?=isset($_GET['collection']) && $uri == $_GET['collection'] ? " selected" : ""?>><?=str_replace("https://i.amy.gy/", "", $uri)?> (<?=$counts["added"]?> out of <?=$counts["total"]?>)</option>
             <?endforeach?>
           </select>
           <input type="submit" value="Fetch" name="add" />
