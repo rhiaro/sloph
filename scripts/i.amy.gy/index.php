@@ -19,8 +19,14 @@ function make_collection(){
     $imgs = glob($dir."/IMG_*_*.jpg", GLOB_BRACE);
     if(!empty($imgs)){
       rsort($imgs);
-      $latest = str_ireplace("_1.jpg", "", str_ireplace(".jpg", "", str_ireplace("_hdr", "", explode("/IMG_", $imgs[0]))));
-      $updated = DateTime::createFromFormat("Ymd_His", $latest[1]);
+      $img_date = explode("/IMG_",$imgs[0]);
+      $latest = strtr($img_date[1], array(
+                                      "_1.jpg" => "",
+                                      "_2.jpg" => "",
+                                      ".jpg" => "",
+                                      "_hdr" => ""
+                                    ));
+      $updated = DateTime::createFromFormat("Ymd_His", $latest);
       if($updated){
         $coll["items"][] = array("id" => $cur.$dir."/",
                                  "totalItems" => count($imgs),
