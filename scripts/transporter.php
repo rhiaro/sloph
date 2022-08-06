@@ -88,6 +88,10 @@ function in_add($resource, $add){
   return false;
 }
 
+if(isset($_GET['reset'])){
+  unset($_SESSION);
+}
+
 /*********************************************************************************/
 /* Add to Acquire posts */
 
