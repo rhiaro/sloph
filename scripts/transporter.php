@@ -88,6 +88,13 @@ function in_add($resource, $add){
   return false;
 }
 
+function get_objects_added($ep){
+  $q = query_select_image(null,0);
+  $r = execute_query($ep, $q);
+  $added = select_to_list($r);
+  return $added;
+}
+
 if(isset($_GET['reset'])){
   unset($_SESSION);
 }
@@ -149,6 +156,8 @@ foreach($collection['items'] as $img){
 
 if(isset($_GET['add'])){
 
+  $added = get_objects_added($ep);
+
   if((!isset($_SESSION['items']) && isset($_GET['collection'])) || $_GET['add'] == 'Fetch'){
     $response = fetch_album($_GET['collection']);
     $collection = json_decode($response, true);
@@ -171,16 +180,6 @@ if(isset($_GET['add'])){
     }else{
       var_dump(htmlentities($addq));
     }
-  }
-
-  // Get all add posts
-  $q = query_select_s_where(array("rdf:type" => "as:Add"), 0);
-  $res = execute_query($ep, $q);
-  $adds = array();
-  foreach($res['rows'] as $r){
-    $qa = query_construct($r['s']);
-    $ra = execute_query($ep, $qa);
-    $adds[$r['s']] = $ra[$r['s']];
   }
 
   if(!isset($_SESSION['albums'])){
@@ -218,7 +217,6 @@ if(isset($_GET['add'])){
 }
 
 /*********************************************************************************/
-
 ?>
 
 <!doctype html>
@@ -274,17 +272,6 @@ if(isset($_GET['add'])){
 
         <?if(isset($_SESSION['items'])):?>
           <?foreach($_SESSION['items'] as $item):?>
-            <?
-            if(isset($adds)){
-              $added = array();
-              foreach($adds as $add){
-                if(in_add($item, $add)){
-                  $added[] = $item;
-                  break;
-                }
-              }
-            }
-            ?>
             <div style="float:left;<?=!in_array($item, $added) ? " font-weight: bold;" : ""?>">
               <p><input type="checkbox" name="items[]" value="<?=$item?>" id="<?=$item?>" /> <label for="<?=$item?>"><a target="_blank" href="<?=$item?>"><?=$item?></a> <br/>
               <?if(!in_array($item, $added)):?>
