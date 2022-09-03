@@ -915,9 +915,11 @@ function query_select_image($collection=null, $limit=1, $graph="https://blog.rhi
   ?add a as:Add .
   ?add as:target $collection .
   ?add as:object ?img .
-}
+}";
+  if($limit > 0){
+    $q .= "
 LIMIT $limit";
-
+  }
   return $q;
 }
 
