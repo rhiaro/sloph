@@ -5,6 +5,7 @@ session_start();
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 require_once('../vendor/init.php');
+require_once('../vendor/sloph/outbox_side_effects.php');
 
 $now = new DateTime();
 $posts = array();
@@ -95,6 +96,19 @@ function get_objects_added($ep){
   return $added;
 }
 
+function make_tags($input_array){
+  $base = "https://rhiaro.co.uk/tags/";
+  $tags_string = $input_array["string"];
+  unset($input_array["string"]);
+  $tags = explode(",", $tags_string);
+  foreach($tags as $tag){
+    if(strlen(trim($tag)) > 0){
+        $input_array[] = $base.urlencode(trim($tag));
+    }
+  }
+  return $input_array;
+}
+
 if(isset($_GET['reset'])){
   unset($_SESSION);
 }
@@ -157,6 +171,18 @@ foreach($collection['items'] as $img){
 if(isset($_GET['add'])){
 
   $added = get_objects_added($ep);
+  $tags = array(
+                "foraging" => "https://rhiaro.co.uk/tags/foraging",
+                "food" => "https://rhiaro.co.uk/tags/food",
+                "vegan" => "https://rhiaro.co.uk/tags/vegan",
+                "gardening" => "https://rhiaro.co.uk/tags/gardening",
+                "diy" => "https://rhiaro.co.uk/tags/diy",
+                "crochet" => "https://rhiaro.co.uk/tags/crochet",
+                "fife" => "https://rhiaro.co.uk/tags/fife",
+                "travel" => "https://rhiaro.co.uk/tags/travel",
+                "hiking" => "https://rhiaro.co.uk/tags/hiking",
+                "walkies" => "https://rhiaro.co.uk/tags/walkies"
+              );
 
   if((!isset($_SESSION['items']) && isset($_GET['collection'])) || $_GET['add'] == 'Fetch'){
     $response = fetch_album($_GET['collection']);
@@ -171,13 +197,22 @@ if(isset($_GET['add'])){
     $uri = $_POST['uri'];
     $published = $_POST['published'];
     $summary = "Amy added ".count($items)." photos to ".$collection;
+    $post_tags = make_tags($_POST['tags']);
     if(isset($_POST['content'])){ $content = $_POST['content']; }else{ $content = ""; }
-    $addq = query_insert_add($uri, $collection, $items, $published, $summary, $content);
+
+    $addq = query_insert_add($uri, $collection, $items, $published, $summary, $post_tags, $content);
     $addr = execute_query($ep, $addq);
     if($addr){
-      echo "saved";
+      $success = true;
       $updatealbum = update_album_date($ep, $collection, $published);
+      $post_graph = new EasyRdf_Graph($uri);
+      foreach($post_tags as $tag){
+        $post_graph->addResource($uri, "as:tag", $tag);
+      }
+      $updatetags = update_tags_collection($ep, $post_graph);
+      unset($_POST);
     }else{
+      $success = false;
       var_dump(htmlentities($addq));
     }
   }
@@ -231,6 +266,7 @@ if(isset($_GET['add'])){
     form { padding: 1em; }
     .fields { max-width: 800px; margin-left: auto; margin-right: auto; }
     input[type=text], input[type=submit], textarea { padding: 0.6em; width:  97%; }
+    .success { text-align: center; border: 3px solid forestgreen; background-color: palegreen; padding: 1em 0 1em 0; }
     </style>
   </head>
   <body>
@@ -244,6 +280,10 @@ if(isset($_GET['add'])){
     <?if(isset($_GET['add'])):?>
 
       <h1>Add</h1>
+
+      <?if(isset($success) && $success == true):?>
+        <p class="success">Saved</p>
+      <?endif?>
 
       <form id="album" class="fields">
         <p>
@@ -264,6 +304,21 @@ if(isset($_GET['add'])){
 
           <p><label for="content">Content</label>:
           <textarea id="content" name="content" ></textarea></p>
+
+          <p>
+            <label for="tags">Tags</label>
+            <input type="text" name="tags[string]" id="tags"<?=(isset($_POST['tags']['string'])) ? ' value="'.$_POST['tags']['string'].'"' : ''?> />
+          </p>
+          <?if(isset($tags)):?>
+            <p>
+              <label></label>
+              <span>
+                <?foreach($tags as $label => $tag):?>
+                  <input type="checkbox" value="<?=$tag?>" name="tags[]" id="<?=$label?>"<?=(in_array($tag, $_POST['tags'])) ? " checked" : ""?> /> <label for="<?=$label?>"><?=$label?></label>
+                <?endforeach?>
+              </span>
+            </p>
+          <?endif?>
 
           <p><label for="collection">Collection</label>: <input type="text" value="<?=isset($_GET['collection']) ? $_GET['collection'] : ""?>" name="collection" id="collection" /></p>
 

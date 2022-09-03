@@ -1248,7 +1248,7 @@ function query_insert_items($collection, $items, $graph="https://blog.rhiaro.co.
   return $q;
 }
 
-function query_insert_add($uri, $collection, $items, $published, $summary, $content="", $graph="https://blog.rhiaro.co.uk/"){
+function query_insert_add($uri, $collection, $items, $published, $summary, $tags, $content="", $graph="https://blog.rhiaro.co.uk/"){
 
   $q = get_prefixes();
   $q .= "INSERT INTO <$graph> { ";
@@ -1262,6 +1262,12 @@ function query_insert_add($uri, $collection, $items, $published, $summary, $cont
   $q .= "  <$uri> as:object ";
   foreach($items as $item){
     $q .= "<$item>, ";
+  }
+  $q = rtrim($q, ", ");
+  $q .= ".";
+  $q .= "<$uri> as:tag ";
+  foreach($tags as $tag){
+    $q .= "<$tag>, ";
   }
   $q = rtrim($q, ", ");
   $q .= " . }";
