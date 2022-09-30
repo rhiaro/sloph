@@ -137,7 +137,7 @@ if(isset($_GET['engage'])){
 }
 
 // Get all acquire posts in one month
-$q = query_select_s_where(array("rdf:type" => "asext:Acquire"), 0);
+$q = query_select_s_where(array("rdf:type" => "asext:Acquire", "as:published" => "?pub"), 0, "pub");
 $res = execute_query($ep, $q);
 foreach($res['rows'] as $r){
   $m = rhiaro_url_to_date($r['s'])["m"];
