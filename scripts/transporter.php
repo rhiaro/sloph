@@ -267,6 +267,7 @@ if(isset($_GET['add'])){
     .fields { max-width: 800px; margin-left: auto; margin-right: auto; }
     input[type=text], input[type=submit], textarea { padding: 0.6em; width:  97%; }
     .success { text-align: center; border: 3px solid forestgreen; background-color: palegreen; padding: 1em 0 1em 0; }
+    input:checked + label { background-color: orange; }
     </style>
   </head>
   <body>
@@ -282,7 +283,7 @@ if(isset($_GET['add'])){
       <h1>Add</h1>
 
       <?if(isset($success) && $success == true):?>
-        <p class="success">Saved</p>
+        <p class="success">Saved<?=isset($uri) ? " <a href=\"$uri\">".$summary."</a>" : ""?></p>
       <?endif?>
 
       <form id="album" class="fields">
