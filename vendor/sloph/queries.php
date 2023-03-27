@@ -13,10 +13,10 @@ function datenow(){
   return sparql_date(new DateTime());
 }
 
-function not_in_future($s="?s"){
+function not_in_future($s="?s", $p="as:published"){
   $now = datenow();
   $q = "
-OPTIONAL { $s as:published ?date . }
+OPTIONAL { $s $p ?date . }
   FILTER(!BOUND(?date) || ?date < $now) .
 ";
   return $q;
