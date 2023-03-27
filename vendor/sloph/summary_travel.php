@@ -25,11 +25,15 @@ function get_places($ep){
 }
 
 function time_in_places($posts){
+  $now = new DateTime();
   $filtered = array();
   foreach($posts as $uri => $post){
     $origin = get_value(array($uri=>$post), "as:origin");
     $target = get_value(array($uri=>$post), "as:target");
-    if($origin && $target){
+    $end = get_value(array($uri=>$post), "as:endTime");
+    $endTime = new DateTime($end);
+
+    if($origin && $target && $endTime <= $now){
         $post["uri"] = $uri;
         $filtered[] = $post;
     }
@@ -39,7 +43,6 @@ function time_in_places($posts){
   // final/current place
   $final = get_value(array($filtered[0]["uri"]=>$filtered[0]), "as:target");
   $final_date = get_value(array($filtered[0]["uri"]=>$filtered[0]), "as:endTime");
-  $now = new DateTime();
   $by_place[$final]["visits"][] = array(
                                     "startDate" => $final_date,
                                     "endDate" => $now->format(DATE_ATOM),
