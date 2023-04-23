@@ -9,6 +9,7 @@ $q .= "SELECT * WHERE {
   ?uri as:startTime ?starttime .
   OPTIONAL { ?uri as:endTime ?endtime . }
   ?uri as:summary ?summary .
+  OPTIONAL { ?uri asext:status ?status . }
   ?start a as:Place .
   ?start as:name ?startname .
   ?start as:latitude ?startlat .
@@ -17,12 +18,14 @@ $q .= "SELECT * WHERE {
   ?end as:name ?endname .
   ?end as:latitude ?endlat .
   ?end as:longitude ?endlon .
-}";
+}
+ORDER BY ASC(?starttime)";
 $r = execute_query($ep, $q);
 
 $data = array();
 foreach($r["rows"] as $row){
-  $data[$row["uri"]] = array(
+  if(!isset($row["status"])){
+    $data[$row["uri"]] = array(
                           "from" => array("name"=>$row["startname"],
                                           "lat"=>$row["startlat"],
                                           "lon"=>$row["startlon"],
@@ -33,6 +36,8 @@ foreach($r["rows"] as $row){
                                           "date"=>$row["endtime"]),
                           "text" => $row["summary"]
                             );
+
+  }
 
 }
 
@@ -61,10 +66,11 @@ foreach($r["rows"] as $row){
     </main>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://rhiaro.co.uk/views/sitrep/svg-icon.js"></script>
+    <script src="https://makinacorpus.github.io/Leaflet.TextPath/leaflet.textpath.js"></script>
     <script>
       document.getElementById("themap").style.display = "block";
       // document.getElementById("noscript").style.display = "none";
-      
+
       // Map
 
       var layer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -75,6 +81,21 @@ foreach($r["rows"] as $row){
           zoom: 4
       });
       map.addLayer(layer);
+
+      // Journeys
+
+      var latlngs = [
+        <?foreach($data as $uri => $journey):?>
+          [<?=$journey["from"]["lat"]?>,<?=$journey["from"]["lon"]?>], //<?=$journey["text"]?>
+
+        <?endforeach?>
+      ];
+      var polyline = L.polyline(latlngs, {color: 'green'})
+      polyline.setText('  ►  ', {repeat: true, attributes: {fill: 'green'}});
+      polyline.addTo(map);
+      map.fitBounds(polyline.getBounds());
+
+
     </script>
   </body>
 </html>
