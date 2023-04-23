@@ -17,8 +17,8 @@ $now = new DateTime();
 $start = new DateTime("-1 month");
 
 $types = array(
-  "as:Arrive", 
-  "asext:Consume", 
+  "as:Arrive",
+  "asext:Consume",
   "asext:Acquire",
   "as:Note",
   "as:Article",
@@ -27,7 +27,13 @@ $types = array(
 $from = $start->format(DATE_ATOM);
 $to = $now->format(DATE_ATOM);
 $q = query_select_s_between_types($from, $to, $types);
-$item_uris = select_to_list_sorted(execute_query($ep, $q), 'd');
+$q2 = query_select_s_between_types($from, $to, array("as:Travel"), "https://blog.rhiaro.co.uk/", False, "as:startTime");
+$q3 = query_select_s_between_types($from, $to, array("as:Travel"), "https://blog.rhiaro.co.uk/", False, "as:endTime");
+
+$l1 = select_to_list_sorted(execute_query($ep, $q), 'd');
+$l2 = select_to_list_sorted(execute_query($ep, $q2), 'd');
+$l3 = select_to_list_sorted(execute_query($ep, $q3), 'd');
+$item_uris = array_merge($l1, $l2,$l3);
 
 $next_uri = $prev_uri = "#";
 $nav = array("next" => $next_uri, "prev" => $prev_uri);
@@ -57,6 +63,10 @@ try {
 
     require_once('vendor/sloph/header_stats.php');
 
+    if(!$resource->get('view:stylesheet')){
+      $resource->addLiteral('view:stylesheet', "views/".get_style($resource).".css");
+    }
+
     $graph = $resource->getGraph();
     $resource = $graph->toRdfPhp();
 
@@ -64,9 +74,13 @@ try {
     $timeline = array();
     $now = new DateTime();
     foreach($items as $uri){
-      $published = get_value(array($uri=>$resource[$uri]), "as:published");
-      $timeline[$published] = $resource[$uri];
-      $timeline[$published]["uri"] = $uri;
+      if(has_type(array($uri=>$resource[$uri]), "as:Travel")){
+        $sortdate = get_value(array($uri=>$resource[$uri]), "as:startTime");
+      }else{
+        $sortdate = get_value(array($uri=>$resource[$uri]), "as:published");
+      }
+      $timeline[$sortdate] = $resource[$uri];
+      $timeline[$sortdate]["uri"] = $uri;
     }
     ksort($timeline);
     reset($timeline);
@@ -151,22 +165,11 @@ try {
 
     krsort($markers);
 
-    include 'views/top.php';
-    include 'views/header_stats.php';
-    include 'views/nav_header.php';
-?>
+    $includes = array('views/timeline.php');
+    include 'views/page_template.php';
 
-    <main class="wrapper w1of1">
-
-      <div id="archive">
-        <? include 'views/timeline.php'; ?>
-      </div>
-      <nav><p><a href="#top">top</a></p></nav>
-    </main>
-
-<?
-    include 'views/end.php';
   }
+
 }catch(Exception $e){
   var_dump($e);
 }
