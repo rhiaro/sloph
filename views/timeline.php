@@ -15,11 +15,13 @@
       <div class="info" style="height: <?=round($post['diff']/60)?>px;" title="<?=$post["uri"]?>">
         <span title="<?=$post["uri"]?>">
         <?if(!has_type(array($post["uri"]=>$post), "as:Arrive")):?>
-          &lt; 
-            <?if(!has_type(array($post["uri"]=>$post), "as:Note") && !has_type(array($post["uri"]=>$post), "as:Article") && !has_type(array($post["uri"]=>$post), "as:Add")):?>
-                <?=get_value(array($post["uri"]=>$post), "as:content")?>
-            <?else:?>
+          &lt;
+            <?if(has_type(array($post["uri"]=>$post), "as:Travel")):?>
+                <?=get_value(array($post["uri"]=>$post), "as:summary")?>
+            <?elseif(has_type(array($post["uri"]=>$post), "as:Note") || has_type(array($post["uri"]=>$post), "as:Article") || has_type(array($post["uri"]=>$post), "as:Add")):?>
                 <a href="<?=$post["uri"]?>">Words</a>
+            <?else:?>
+                <?=get_value(array($post["uri"]=>$post), "as:content")?>
             <?endif?>
             <?=get_value(array($post["uri"]=>$post), "as:published")?>
         <?endif?>
