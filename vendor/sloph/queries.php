@@ -445,7 +445,7 @@ ORDER BY ASC(?d)";
   return $q;
 }
 
-function query_select_s_between_types($from, $to, $types, $graph="https://blog.rhiaro.co.uk/", $future=False){
+function query_select_s_between_types($from, $to, $types, $graph="https://blog.rhiaro.co.uk/", $future=False, $p="as:published"){
   if(!$future){
     $from = force_present($from, DATE_ATOM);
     $to = force_present($to, DATE_ATOM);
@@ -454,7 +454,7 @@ function query_select_s_between_types($from, $to, $types, $graph="https://blog.r
   $q .= "SELECT DISTINCT ?s ?d WHERE {";
   foreach($types as $type){
     $i = 0;
-    $q .= "  { GRAPH <$graph> { ?s a $type . ?s as:published ?d . } }";
+    $q .= "  { GRAPH <$graph> { ?s a $type . ?s $p ?d . } }";
     if($i < count($types)){
       $q .= "  UNION ";
     }
