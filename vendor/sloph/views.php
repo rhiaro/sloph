@@ -117,12 +117,12 @@ function get_project_icons($ep){
     array(
       array("name" => "Open Data Services (2018-now)", "uri" => "https://opendataservices.coop",
         "icon" => "views/icon_ods.png", "color" => ""),
-      array("name" => "Digital Bazaar (2018-now)", "uri" => "https://digitalbazaar.com",
-        "icon" => "views/icon_db.png", "colour" => ""),
       array("name" => "W3C Technical Architecture Group (Jan 2021-now)", "uri" => "https://www.w3.org/2001/tag/",
         "icon" => "views/icon_tag.png", "color" => ""),
       array("name" => "NaNoWriMo", "uri" => "https://nanowrimo.org/participants/rhiaro",
-        "icon" => "views/icon_nanowrimo.png", "color" => "white"),
+        "icon" => "views/icon_nanowrimo.png", "color" => "white", "rel"=>"me"),
+      array("name" => "mastodon", "uri" => "https://toot.cat/@rhiaro",
+        "icon" => "views/icon_masto.svg", "color" => "", "rel"=>"me"),
     ),
     array(
       array("name" => "Social Web Protocols (editor)", "uri" => "https://w3.org/TR/social-web-protocols/",
@@ -137,6 +137,8 @@ function get_project_icons($ep){
         "icon" => "views/icon_do.png", "color" => "white"),
       array("name" => "Indieweb (bystander)", "uri" => "https://indieweb.org/User:Rhiaro.co.uk",
         "icon" => "views/icon_iwc.png", "color" => "white"),
+      array("name" => "Digital Bazaar (2018-2021)", "uri" => "https://digitalbazaar.com",
+        "icon" => "views/icon_db.png", "colour" => ""),
     ),
     array(
       array("name" => "OCCRP (2017-2018)", "uri" => "https://occrp.org",

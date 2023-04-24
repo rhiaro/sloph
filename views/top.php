@@ -18,6 +18,9 @@ if(!$title){
     <title><?=$title?></title>
     <link rel="stylesheet" type="text/css" href="/views/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="/views/core.css" />
+    <link href="https://toot.cat/@rhiaro" rel="me"/>
+    <link href="https://twitter.com/rhiaro" rel="me"/>
+    <link href="https://github.com/rhiaro" rel="me"/>
 
   <?if(isset($outbox)):?>
     <link about="https://rhiaro.co.uk/#me" rel="as:outbox" href="<?=$outbox?>" />

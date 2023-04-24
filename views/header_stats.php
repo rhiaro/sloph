@@ -11,7 +11,7 @@
     <?foreach($project_icons as $group):?>
       <div>
         <?foreach($group as $project):?>
-          <a href="<?=$project["uri"]?>" class="project-box" title="<?=$project["name"]?>" style="background-color: <?=$project["color"]?>"><img src="/<?=$project["icon"]?>" alt="<?=$project["name"]?>" title="<?=$project["name"]?>" /></a>
+          <a href="<?=$project["uri"]?>" class="project-box" title="<?=$project["name"]?>" style="background-color: <?=$project["color"]?>"<?=isset($project["rel"]) ? " rel=\"".$project["rel"]."\"" : "" ?>><img src="/<?=$project["icon"]?>" alt="<?=$project["name"]?>" title="<?=$project["name"]?>" /></a>
         <?endforeach?>
       </div>
     <?endforeach?>
